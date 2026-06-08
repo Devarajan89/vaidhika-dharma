@@ -71,5 +71,10 @@ export default defineConfig({
           customCss: ['./src/styles/global.css', './src/fonts/font-face.css'],
       }),
   ],
-  vite: { plugins: [tailwindcss()] },
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      tsconfigPaths: true,
+    },
+  },
 });
