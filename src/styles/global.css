@@ -1,0 +1,195 @@
+@layer base, starlight, theme, components, utilities;
+
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+
+  /* Font families */
+  --font-sans: 'Siddhanta','NotoSerifTamil', sans-serif;
+
+  /* Color palettes */
+  --color-accent-200: #ffe19c;
+  --color-accent-600: #cb0003;
+  --color-accent-900: #650001;
+  --color-accent-950: #460a07;
+  --color-gray-100: #fff5e5;
+  --color-gray-200: #ffebca;
+  --color-gray-300: #ffe0ae;
+  --color-gray-400: #b3821c;
+  --color-gray-500: #745100;
+  --color-gray-700: #362501;
+  --color-gray-800: #352300;
+  --color-gray-900: #221500;
+}
+
+.header:where(.astro-vrdttmbt) {
+  background-color: var(--sl-color-gray-5);
+}
+h1:where(.astro-jbfsktt5) {
+    font-size: clamp(var(--sl-text-2xl), calc(0.25rem + 5vw), var(--sl-text-4xl));
+}
+
+/*logo styles*/
+.site-title:where(.astro-m46x6ez3) {
+    align-items: center;
+    gap: var(--sl-nav-gap);
+    row-gap: 1.5rem;
+    column-gap: 0.5rem;
+    font-size: var(--sl-text-h4);
+	  font-weight: normal;
+    font-family: 'Samarkan';
+}
+
+.sl-container:where(.astro-7nkwcw3z) {
+    padding: 2rem;
+}
+.home-intro {
+  text-align: center;
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  color: var(--sl-color-gray-2);
+}
+
+.home-intro p {
+  margin: 0;
+}
+
+.home-search-hint {
+  margin-top: 0.75rem !important;
+  font-size: 0.875rem;
+  color: var(--sl-color-gray-3);
+}
+
+.home-section-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sl-color-gray-3);
+  margin: 0.75rem 0 0.25rem;
+}
+
+.home-section-label:first-child {
+  margin-top: 0;
+}
+
+/* Main container styles */
+/* Main Layout */
+.main-container {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.content-column {
+  flex: 7; /* 70% */
+  min-width: 0;
+}
+
+.side-column {
+  flex: 3; /* 30% */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: calc(var(--sl-nav-height) + 1rem);
+  align-self: flex-start;
+  margin: 0;
+}
+/* Shared Card Styles */
+
+.card-grid:where(.astro-zntqmydn) {
+  margin: 1rem 0 1.5rem 0;
+}
+
+.custom-card {
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(23, 23, 23, 0.1);
+  overflow: hidden;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .side-column {
+    position: static;
+    width: 100%;
+  }
+
+  .custom-card {
+    max-width: 100%;
+  }
+}
+
+/* Hr Line */
+body {
+  --hr-line-offset: 25%;
+  --hr-color: lightsalmon;
+}
+
+:root hr {
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+          to right,
+          transparent,
+          var(--hr-color) calc(50% - var(--hr-line-offset)),
+          var(--hr-color) calc(50% + var(--hr-line-offset)),
+          transparent
+  );
+}
+/* Badge */
+.danger:where(.astro-avdet4wd) {
+  --sl-color-bg-badge: var(--sl-color-accent);
+}
+.small:where(.astro-avdet4wd) {
+  font-size: 0.6rem;
+  border: 0px;
+}
+
+/* LinkCard */
+.link-list:where(.astro-sisxfkyq) li {
+  color: var(--sl-color-gray-2);
+}
+
+/* Mobile sidebar */
+.mobile-preferences:where(.astro-wu23bvmt) {
+  border-top: 2px solid var(--sl-color-gray-6);
+  border-bottom: 3px solid var(--sl-color-gray-6);
+  padding: 0.1rem 0;
+}
+
+/* Doc heading */
+.content-panel:where(.astro-7nkwcw3z) {
+  padding: 0.5rem var(--sl-content-pad-x);
+}
+
+/* Doc Content heading */
+.sl-markdown-content :not(h1, h2, h3, h4, h5, h6, .sl-heading-wrapper) + :is(.sl-heading-wrapper) {
+  margin-top: 1em;
+}
+
+/* Locale List */
+.sl-banner:where(.astro-laz2plt2) {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sl-banner:where(.astro-laz2plt2) {
+     display: block;
+    --__sl-banner-text: var(--sl-color-banner-text, var(--sl-color-text-invert));
+    padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+    background-color: var(--sl-color-banner-bg, var(--sl-color-bg-accent));
+    color: var(--__sl-banner-text);
+    line-height: var(--sl-line-height-headings);
+    text-align: center;
+    text-wrap: balance;
+    box-shadow: var(--sl-shadow-sm);
+  }
+}

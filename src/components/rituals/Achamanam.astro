@@ -1,0 +1,173 @@
+---
+import type { HomeLocale } from '../../data/home';
+
+interface Props {
+	locale?: HomeLocale;
+	variant?: 'full' | 'compact';
+}
+
+const { locale = 'root', variant = 'full' } = Astro.props;
+
+const saBlock = {
+	title: 'आचमनं',
+	waterInstruction: null,
+	mantras: ['ओं अच्युताय नम​:', 'ओं अनन्ताय नम​:', 'ओं गोविन्दाय नम​:'],
+	touchInstruction: null,
+	triplets: [
+		['केशव', 'नारायण', 'माधव'],
+		['गोविन्द', 'विष्णु', 'मधुसूदन'],
+		['त्रिविक्रम', 'वामन', 'श्रीधर'],
+		['हृषीकेश​', 'पद्मनाभ​', 'दामोदरा'],
+	],
+} as const;
+
+const blocks = {
+	root: {
+		full: {
+			title: 'Ācamanaṃ',
+			waterInstruction:
+				'Take water thrice with Uttarani in the right hand and consume it with the following mantra.',
+			mantras: ['Oṃ acyutāya nama​:', 'Oṃ anantāya nama​:', 'Oṃ govindāya nama​:'],
+			touchInstruction:
+				'Touch the respective limbs with the fingers of the right hand as per the Nāmas below.',
+			namas: [
+				{ nama: 'Keśava', finger: 'Thumb', limb: 'Right cheek' },
+				{ nama: 'Nārāyaṇa', finger: 'Thumb', limb: 'Left cheek' },
+				{ nama: 'Mādhava', finger: 'Ring', limb: 'Right eye' },
+				{ nama: 'Govinda', finger: 'Ring', limb: 'Left eye' },
+				{ nama: 'Viṣṇu', finger: 'Index', limb: 'Right nostril' },
+				{ nama: 'Madhusūdana', finger: 'Index', limb: 'Left nostril' },
+				{ nama: 'Trivikrama', finger: 'Little', limb: 'Right ear' },
+				{ nama: 'Vāmana', finger: 'Little', limb: 'Left ear' },
+				{ nama: 'Śrīdhara', finger: 'Middle', limb: 'Right shoulder' },
+				{ nama: 'Hṛṣīkeśa', finger: 'Middle', limb: 'Left shoulder' },
+				{ nama: 'Padmanābha', finger: 'Four fingers', limb: 'Chest' },
+				{ nama: 'Dāmodarā', finger: 'All five fingers', limb: 'Head' },
+			],
+		},
+		compact: {
+			title: 'ācamanaṃ',
+			waterInstruction: null,
+			mantras: ['Oṃ acyutāya nama​:', 'Oṃ anantāya nama​:', 'Oṃ govindāya nama​:'],
+			touchInstruction: null,
+			pairs: [
+				['keśava', 'nārāyaṇa'],
+				['mādhava', 'govinda'],
+				['viṣṇu', 'madhusūdana'],
+				['trivikrama', 'vāmana'],
+				['śrīdhara', 'hṛṣīkeśa​'],
+				['padmanābha​', 'dāmodarā'],
+			],
+		},
+	},
+	sa: {
+		full: saBlock,
+		compact: saBlock,
+	},
+} as const;
+
+const block = blocks[locale === 'ta' ? 'root' : locale][variant];
+const isFullGrid = 'namas' in block && block.namas;
+const isPairGrid = 'pairs' in block && block.pairs;
+const isTripletGrid = 'triplets' in block && block.triplets;
+---
+
+<div class="achamanam">
+	<h5>{block.title}</h5>
+
+	{block.waterInstruction && <p><em>{block.waterInstruction}</em></p>}
+
+	<table>
+		<tbody>
+			<tr>
+				{block.mantras.map((mantra) => (
+					<td>{mantra}</td>
+				))}
+			</tr>
+		</tbody>
+	</table>
+
+	{block.touchInstruction && <p><em>{block.touchInstruction}</em></p>}
+
+	{
+		isFullGrid && (
+			<table>
+				<thead>
+					<tr>
+						<th>Nāma</th>
+						<th>Finger</th>
+						<th>Touch</th>
+					</tr>
+				</thead>
+				<tbody>
+					{block.namas!.map((row) => (
+						<tr>
+							<td>{row.nama}</td>
+							<td>{row.finger}</td>
+							<td>{row.limb}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		)
+	}
+
+	{
+		isPairGrid && (
+			<table>
+				<tbody>
+					{block.pairs!.map(([left, right]) => (
+						<tr>
+							<td>{left}</td>
+							<td>{right}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		)
+	}
+
+	{
+		isTripletGrid && (
+			<table>
+				<tbody>
+					{block.triplets!.map((row) => (
+						<tr>
+							{row.map((nama) => (
+								<td>{nama}</td>
+							))}
+						</tr>
+					))}
+				</tbody>
+			</table>
+		)
+	}
+</div>
+
+<style>
+	.achamanam {
+		margin: 0;
+	}
+
+	.achamanam h5 {
+		margin-top: 1.25em;
+		margin-bottom: 0.5em;
+	}
+
+	.achamanam p,
+	.achamanam table {
+		margin: 0.5em 0 1em;
+	}
+
+	.achamanam table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	.achamanam th,
+	.achamanam td {
+		border: 1px solid var(--sl-color-gray-5);
+		padding: 0.4rem 0.6rem;
+		text-align: left;
+	}
+</style>

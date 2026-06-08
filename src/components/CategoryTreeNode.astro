@@ -1,0 +1,50 @@
+---
+import { Badge } from '@astrojs/starlight/components';
+import type { CategoryNode } from '../data/categories';
+
+interface Props {
+	node: CategoryNode;
+	depth?: number;
+}
+
+const { node, depth = 0 } = Astro.props;
+const hasChildren = node.children && node.children.length > 0;
+---
+
+<li
+	class:list={[
+		'tree-node',
+		`tree-depth-${depth}`,
+		hasChildren && 'tree-node--branch',
+		!hasChildren && node.href && 'tree-node--link',
+		!hasChildren && !node.href && 'tree-node--entry',
+	]}
+	style={`--tree-depth: ${depth}`}
+>
+	{
+		hasChildren ? (
+			<details class="tree-branch" open={node.defaultOpen}>
+				<summary class="tree-summary">
+					<span class="tree-label">{node.label}</span>
+				</summary>
+				<ul class="tree-children">
+					{node.children!.map((child) => (
+						<Astro.self node={child} depth={depth + 1} />
+					))}
+				</ul>
+			</details>
+		) : node.href ? (
+			<a class="tree-link" href={node.href}>
+				<span class="tree-label">{node.label}</span>
+				<span class="tree-arrow" aria-hidden="true" />
+			</a>
+		) : (
+			<span class="tree-entry">
+				<span class="tree-label">{node.label}</span>
+				{node.badge && (
+					<Badge text={node.badge.text} variant={node.badge.variant ?? 'default'} size="small" />
+				)}
+			</span>
+		)
+	}
+</li>

@@ -1,0 +1,42 @@
+---
+title: Vedo'khilo Dharmamūlaṃ
+description: Vaidhika Dharma (Vaidhikadharma.org) helps to follow our religious way of life. Anushtanam (rituals), Dharma (ethics) and Swaadhyaya (study of the scriptures).
+template: splash
+lastUpdated: 2025-06-17
+tableOfContents: false
+hero:
+  tagline: Nārāyaṇaṃ padmabhuvaṃ vaśiṣṭhaṃ śaktiṃ ca tatputraṃ parāśaraṃ ca Vyāsaṃ śukaṃ gauḍpadaṃ mahāntaṃ govindayogīndraṃ athāsya śiṣyam .<br><br> Śrī śaṃkarācāryaṃ athāsya padmapādaṃ ca hastāmlakaṃ ca śiṣyam Taṃ toṭakaṃ vārttikakāramanyān asmad gurūn santatamānto'smi ..
+  image:
+    file: ../../assets/images/sankara.webp
+  actions:
+    - text: Nityakarma
+      link: /aswalayana-sandhyavandanam/
+      icon: right-arrow
+    - text: Veda Mantras
+      link: /rigveda-sukta-sangraha/
+      variant: secondary
+      icon: right-arrow
+---
+
+import CategoryTree from '/src/components/CategoryTree.astro';
+import HomeSidebar from '/src/components/HomeSidebar.astro';
+import HomeSearchHint from '/src/components/HomeSearchHint.astro';
+
+<div class="main-container">
+  <div class="content-column">
+    <h4 style={{textAlign: 'center', marginBottom: '1em'}}>śrī gurubhyo nama​:</h4>
+
+    <div class="home-intro">
+      <p>
+        Vaidhika Dharma is a guide to living the Vedic way — daily <em>anuṣṭhāna</em> (rituals),
+        <em>dharma</em> (right conduct), and <em>svādhyāya</em> (study of the scriptures).
+        Choose a section below to begin.
+      </p>
+      <HomeSearchHint locale="root" />
+    </div>
+
+    <CategoryTree locale="root" />
+  </div>
+
+  <HomeSidebar locale="root" />
+</div>

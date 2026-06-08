@@ -1,0 +1,77 @@
+---
+import { AstroFont } from "astro-font";
+---
+
+<head>
+    <AstroFont
+      config={[
+        {
+          name: "Samarkan",
+          src: [
+            {
+              style: 'normal',
+              path: './public/fonts/samarkan.ttf'
+            },
+            
+          ],
+          preload: true,
+          display: "swap",
+          selector: "body",
+          fallback: "sans-serif",
+        },
+        {
+          name: "Siddhanta",
+          src: [
+            {
+              style: 'normal',
+              path: './public/fonts/siddhanta.woff2'
+            },
+            {
+              style: 'normal',
+              path: './public/fonts/siddhanta.woff'
+            },
+            {
+              style: 'normal',
+              path: './public/fonts/siddhanta.ttf'
+            },
+            {
+              style: 'normal',
+              path: './public/fonts/siddhanta.svg'
+            },
+            
+          ],
+          preload: true,
+          display: "swap",
+          selector: "body",
+          fallback: "sans-serif",
+        },
+        {
+          name: "NotoSerifTamil",
+          src: [
+            {
+              style: 'normal',
+              path: './public/fonts/NotoSerifTamil.woff2'
+            },
+            {
+              style: 'normal',
+              path: './public/fonts/NotoSerifTamil.woff'
+            },
+            {
+              style: 'normal',
+              path: './public/fonts/NotoSerifTamil.ttf'
+            },
+            {
+              style: 'normal',
+              path: './public/fonts/NotoSerifTamil.svg'
+            },
+            
+          ],
+          preload: false,
+          display: "swap",
+          selector: "body",
+          fallback: "sans-serif",
+        },
+        
+      ]}
+    />
+</head>

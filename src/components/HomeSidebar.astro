@@ -1,0 +1,18 @@
+---
+import AboutSidebar from './AboutSidebar.astro';
+import QuoteCard from './QuoteCard.astro';
+import RecentUpdates from './RecentUpdates.astro';
+import type { HomeLocale } from '../data/home';
+
+interface Props {
+	locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+---
+
+<aside class="side-column">
+	<AboutSidebar locale={locale} />
+	<QuoteCard locale={locale} />
+	<RecentUpdates locale={locale} />
+</aside>

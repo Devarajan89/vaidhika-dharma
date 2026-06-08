@@ -1,0 +1,47 @@
+---
+import { Card } from '@astrojs/starlight/components';
+import type { HomeLocale } from '../data/home';
+import { homeContent } from '../data/home';
+
+interface Props {
+	locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+const { aboutTitle, aboutBody } = homeContent[locale];
+---
+
+<div class="about-card custom-card">
+	<Card title={aboutTitle} icon="information">
+		<div class="about-card__body">
+			{aboutBody.map((paragraph) => <p>{paragraph}</p>)}
+		</div>
+	</Card>
+</div>
+
+<style>
+	.about-card :global(.card) {
+		background-color: var(--card-bg, var(--sl-color-gray-6));
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 1rem;
+		padding: 1.25rem;
+		box-shadow: 0 2px 6px rgba(35, 21, 0, 0.05);
+	}
+
+	:global(:root[data-theme='light']) .about-card {
+		--card-bg: var(--color-gray-100);
+	}
+
+	.about-card__body {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		font-size: 0.9rem;
+		line-height: 1.65;
+		color: var(--sl-color-gray-2);
+	}
+
+	.about-card__body p {
+		margin: 0;
+	}
+</style>

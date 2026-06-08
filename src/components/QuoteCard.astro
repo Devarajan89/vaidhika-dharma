@@ -1,0 +1,55 @@
+---
+import { Card } from '@astrojs/starlight/components';
+import type { HomeLocale } from '../data/home';
+import { getQuoteOfDay, homeContent } from '../data/home';
+
+interface Props {
+	locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+const { quoteTitle } = homeContent[locale];
+const quote = getQuoteOfDay(locale);
+---
+
+<div class="quote-card custom-card">
+	<Card title={quoteTitle} icon="star">
+		<blockquote>
+			<p>{quote.text}</p>
+			<footer>— {quote.source}</footer>
+		</blockquote>
+	</Card>
+</div>
+
+<style>
+	.quote-card :global(.card) {
+		background-color: var(--card-bg, var(--sl-color-gray-6));
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 1rem;
+		padding: 1.25rem;
+		box-shadow: 0 2px 6px rgba(35, 21, 0, 0.05);
+	}
+
+	:global(:root[data-theme='light']) .quote-card {
+		--card-bg: var(--color-gray-100);
+	}
+
+	.quote-card blockquote {
+		margin: 0;
+		padding: 0;
+		border: none;
+		font-style: italic;
+		color: var(--sl-color-gray-1);
+		line-height: 1.7;
+	}
+
+	.quote-card blockquote p {
+		margin: 0 0 0.75rem;
+	}
+
+	.quote-card footer {
+		font-style: normal;
+		font-size: 0.8rem;
+		color: var(--sl-color-gray-3);
+	}
+</style>

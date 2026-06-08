@@ -1,0 +1,129 @@
+---
+import { getCollection } from 'astro:content';
+import { Card } from '@astrojs/starlight/components';
+import type { HomeLocale } from '../data/home';
+import { homeContent } from '../data/home';
+
+interface Props {
+	locale: HomeLocale;
+	limit?: number;
+}
+
+const { locale, limit = 5 } = Astro.props;
+const { recentTitle } = homeContent[locale];
+
+const allDocs = await getCollection('docs');
+
+function matchesLocale(id: string): boolean {
+	if (locale === 'root') return !id.startsWith('sa/') && !id.startsWith('ta/');
+	return id.startsWith(`${locale}/`);
+}
+
+function isContentPage(id: string): boolean {
+	return id !== 'index' && !id.endsWith('/index');
+}
+
+function getPageUrl(slug: string | undefined, id: string): string {
+	const path = slug ?? id;
+	return `/${path}/`;
+}
+
+function formatDate(date: Date): string {
+	return date.toLocaleDateString(
+		locale === 'sa' ? 'hi-IN' : locale === 'ta' ? 'ta-IN' : 'en-IN',
+		{ year: 'numeric', month: 'short', day: 'numeric' }
+	);
+}
+
+const recent = allDocs
+	.filter((entry) => matchesLocale(entry.id) && isContentPage(entry.id))
+	.filter((entry) => entry.data.lastUpdated instanceof Date)
+	.sort((a, b) => {
+		const aDate = a.data.lastUpdated as Date;
+		const bDate = b.data.lastUpdated as Date;
+		return bDate.getTime() - aDate.getTime();
+	})
+	.slice(0, limit);
+---
+
+<div class="recent-updates custom-card">
+	<Card title={recentTitle} icon="calendar">
+		{
+			recent.length > 0 ? (
+				<ul class="recent-updates__list">
+					{recent.map((entry) => (
+						<li>
+							<a href={getPageUrl(entry.data.slug, entry.id)}>
+								<span class="recent-updates__title">{entry.data.title}</span>
+								<time datetime={(entry.data.lastUpdated as Date).toISOString()}>
+									{formatDate(entry.data.lastUpdated as Date)}
+								</time>
+							</a>
+						</li>
+					))}
+				</ul>
+			) : (
+				<p class="recent-updates__empty">No updates yet.</p>
+			)
+		}
+	</Card>
+</div>
+
+<style>
+	.recent-updates :global(.card) {
+		background-color: var(--card-bg, var(--sl-color-gray-6));
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 1rem;
+		padding: 1.25rem;
+		box-shadow: 0 2px 6px rgba(35, 21, 0, 0.05);
+	}
+
+	:global(:root[data-theme='light']) .recent-updates {
+		--card-bg: var(--color-gray-100);
+	}
+
+	.recent-updates__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.recent-updates__list li {
+		border-bottom: 1px solid var(--sl-color-gray-5);
+		padding: 0.5rem 0;
+	}
+
+	.recent-updates__list li:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.recent-updates__list a {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+		text-decoration: none;
+		color: inherit;
+		transition: color 0.2s ease;
+	}
+
+	.recent-updates__list a:hover {
+		color: var(--sl-color-accent);
+	}
+
+	.recent-updates__title {
+		font-size: 0.875rem;
+		line-height: 1.4;
+	}
+
+	.recent-updates__list time {
+		font-size: 0.75rem;
+		color: var(--sl-color-gray-3);
+	}
+
+	.recent-updates__empty {
+		margin: 0;
+		font-size: 0.875rem;
+		color: var(--sl-color-gray-3);
+	}
+</style>

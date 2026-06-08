@@ -1,0 +1,39 @@
+---
+import { Card as StarlightCard } from '@astrojs/starlight/components';
+export type Props = Parameters<typeof StarlightCard>[0];
+---
+
+<div class="landing-card">
+	<StarlightCard {...Astro.props}><slot /></StarlightCard>
+</div>
+
+<style>
+  .landing-card {
+    display: contents;
+    color: var(--color-gray-900);
+  }
+
+  :global(:root[data-theme='light']) .landing-card {
+    --card-bg: var(--color-gray-100); /* Soft, warm background */
+  }
+
+  .landing-card :global(.card) {
+    background-color: var(--card-bg);
+    border: 1px solid var(--color-gray-300);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(35, 21, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .landing-card :global(.card:hover) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(35, 21, 0, 0.1);
+  }
+
+  .landing-card :global(.card > *) {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
