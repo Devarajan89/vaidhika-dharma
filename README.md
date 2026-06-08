@@ -27,7 +27,7 @@ Vaidhika Dharma preserves and shares authentic Dharmic knowledge — Vedic ritua
 
 ## Local development
 
-**Requirements:** Node.js 18+ and npm.
+**Requirements:** Node.js 22.12+ and npm.
 
 ```bash
 git clone <repository-url>
