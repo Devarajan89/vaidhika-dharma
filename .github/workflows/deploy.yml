@@ -2,7 +2,7 @@ name: Deploy to Public Site
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -21,6 +21,8 @@ jobs:
 
       - name: Install and build
         uses: withastro/action@v3
+        with:
+          node-version: 22
 
       - name: Publish dist to public repository
         uses: peaceiris/actions-gh-pages@v4
