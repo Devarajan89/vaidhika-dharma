@@ -108,9 +108,19 @@ Add this under **Settings → Secrets and variables → Actions** on `vaidhika-d
 
 | Secret | Purpose |
 |--------|---------|
-| `PUBLIC_REPO_DEPLOY_TOKEN` | GitHub PAT with **write** access to `Devarajan89/vaidhika-dharma` |
+| `PUBLIC_REPO_DEPLOY_KEY` | SSH private key with **write** access to `Devarajan89/vaidhika-dharma` |
 
-Create a [fine-grained personal access token](https://github.com/settings/tokens?type=beta) scoped to the public repo with **Contents: Read and write**, or a classic PAT with the `repo` scope.
+Generate a deploy key and wire it up:
+
+```bash
+ssh-keygen -t ed25519 -C "vaidhika-dharma-deploy" -f deploy_key -N ""
+```
+
+1. Copy `deploy_key.pub` → public repo **Settings → Deploy keys → Add deploy key** (enable **Allow write access**)
+2. Copy the full contents of `deploy_key` (private key) → private repo secret `PUBLIC_REPO_DEPLOY_KEY`
+3. Delete the local `deploy_key` and `deploy_key.pub` files after saving them
+
+The workflow pushes over SSH (`git@github.com:...`) via `webfactory/ssh-agent`, not HTTPS, to avoid PAT URL encoding errors.
 
 ### GitHub Pages (public repo)
 

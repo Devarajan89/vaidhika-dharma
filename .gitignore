@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# deploy keys (never commit)
+deploy_key
+deploy_key.pub
