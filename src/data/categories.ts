@@ -13,99 +13,148 @@ export interface CategoryNode {
 	defaultOpen?: boolean;
 }
 
+const rigvedaSuktaSangraha: CategoryNode[] = [
+	{ label: 'ब्रह्मणस्पति सूक्तम्', href: '/brahmanaspati-suktam/' },
+	{ label: 'गणपति सूक्तम्', href: '/ganapathy-suktam/' },
+	{ label: 'पञ्च रुद्रम्', href: '/pancha-rudram/' },
+	{ label: 'स्वस्ति सूक्तम्', href: '/swasti-suktam/' },
+];
+
+const yajushaMantraRatnakaram: CategoryNode[] = [
+	{ label: 'भाग्य सूक्तम्', href: '/bhagya-suktam/' },
+	{ label: 'भू सूक्तम्', href: '/bhu-suktam/' },
+	{ label: 'ब्रह्म सूक्तम्', href: '/brahma-suktam/' },
+	{ label: 'चमक प्रश्नः', href: '/chamakam/' },
+	{ label: 'दुर्गा सूक्तम्', href: '/durga-suktam/' },
+	{ label: 'गणपति अथर्वशीर्षं', href: '/ganapathy-atharvasirsham/' },
+	{ label: 'गणेश प्रार्थना', href: '/ganesha-prarthana/' },
+	{ label: 'मेधा सूक्तम्', href: '/medha-suktam/' },
+	{ label: 'नारायण सूक्तम्', href: '/narayana-suktam/' },
+	{ label: 'नवग्रह सूक्तम्', href: '/navagraha-suktam/' },
+	{ label: 'नीळा सूक्तम्', href: '/nila-suktam/' },
+	{ label: 'पवमान सूक्तम्', href: '/pavamana-suktam/' },
+	{ label: 'पुरुष सूक्तम्', href: '/purusha-suktam/' },
+	{ label: 'श्री रुद्र लघुन्यासः', href: '/sri-rudra-laghunyasa/' },
+	{ label: 'श्री रुद्र प्रश्नः', href: '/sri-rudra-prashnah/' },
+	{ label: 'रुद्र सूक्तम्', href: '/rudra-suktam/' },
+	{ label: 'सरस्वती प्रार्थना', href: '/saraswathi-prarthana/' },
+	{ label: 'सर्प सूक्तम्', href: '/sarpa-suktam/' },
+	{ label: 'श्री सूक्तम्', href: '/sri-suktam/' },
+	{ label: 'वाक् सूक्तम्', href: '/vak-suktam/' },
+	{ label: 'विष्णु सूक्तम्', href: '/vishnu-suktam/' },
+];
+
+const iastRigvedaSuktaSangraha: CategoryNode[] = [
+	{ label: 'Brahmaṇaspati Sūktam', href: '/iast/brahmanaspati-suktam/' },
+	{ label: 'Gaṇapati Sūktam', href: '/iast/ganapathy-suktam/' },
+	{ label: 'Pañca Rudram', href: '/iast/pancha-rudram/' },
+	{ label: 'Svasti Sūktam', href: '/iast/swasti-suktam/' },
+];
+
+const iastYajushaMantraRatnakaram: CategoryNode[] = [
+	{ label: 'Bhāgya Sūktam', href: '/iast/bhagya-suktam/' },
+	{ label: 'Bhū Sūktam', href: '/iast/bhu-suktam/' },
+	{ label: 'Brahma Sūktam', href: '/iast/brahma-suktam/' },
+	{ label: 'Camakam', href: '/iast/chamakam/' },
+	{ label: 'Durgā Sūktam', href: '/iast/durga-suktam/' },
+	{ label: 'Gaṇapati Atharvaśīrṣam', href: '/iast/ganapathy-atharvasirsham/' },
+	{ label: 'Gaṇeśa Prārthanā', href: '/iast/ganesha-prarthana/' },
+	{ label: 'Medhā Sūktam', href: '/iast/medha-suktam/' },
+	{ label: 'Nārāyaṇa Sūktam', href: '/iast/narayana-suktam/' },
+	{ label: 'Navagraha Sūktam', href: '/iast/navagraha-suktam/' },
+	{ label: 'Nīlā Sūktam', href: '/iast/nila-suktam/' },
+	{ label: 'Pavamāna Sūktam', href: '/iast/pavamana-suktam/' },
+	{ label: 'Puruṣa Sūktam', href: '/iast/purusha-suktam/' },
+	{ label: 'Śrī Rudra Laghunyāsaḥ', href: '/iast/sri-rudra-laghunyasa/' },
+	{ label: 'Śrī Rudra Praśnaḥ', href: '/iast/sri-rudra-prashnah/' },
+	{ label: 'Rudra Sūktam', href: '/iast/rudra-suktam/' },
+	{ label: 'Sarasvatī Prārthanā', href: '/iast/saraswathi-prarthana/' },
+	{ label: 'Sarpa Sūktam', href: '/iast/sarpa-suktam/' },
+	{ label: 'Śrī Sūktam', href: '/iast/sri-suktam/' },
+	{ label: 'Vāk Sūktam', href: '/iast/vak-suktam/' },
+	{ label: 'Viṣṇu Sūktam', href: '/iast/vishnu-suktam/' },
+];
+
+const sandhyaTimeLinks = {
+	root: {
+		aswalayana: [
+			{ label: 'प्रातः सन्ध्या', href: '/aswalayana-sandhyavandanam/prata/' },
+			{ label: 'माध्यान्हिकम्', href: '/aswalayana-sandhyavandanam/madhyahnika/' },
+			{ label: 'सायं सन्ध्या', href: '/aswalayana-sandhyavandanam/sayam/' },
+		],
+		apastamba: [
+			{ label: 'प्रातः सन्ध्या', href: '/apastamba-sandhyavandanam/prata/' },
+			{ label: 'माध्यान्हिकम्', href: '/apastamba-sandhyavandanam/madhyahnika/' },
+			{ label: 'सायं सन्ध्या', href: '/apastamba-sandhyavandanam/sayam/' },
+		],
+	},
+	iast: {
+		aswalayana: [
+			{ label: 'Prataḥ sandhyā', href: '/iast/aswalayana-sandhyavandanam/prata/' },
+			{ label: 'Madhyāhnika', href: '/iast/aswalayana-sandhyavandanam/madhyahnika/' },
+			{ label: 'Sāyam sandhyā', href: '/iast/aswalayana-sandhyavandanam/sayam/' },
+		],
+		apastamba: [
+			{ label: 'Prataḥ sandhyā', href: '/iast/apastamba-sandhyavandanam/prata/' },
+			{ label: 'Madhyāhnika', href: '/iast/apastamba-sandhyavandanam/madhyahnika/' },
+			{ label: 'Sāyam sandhyā', href: '/iast/apastamba-sandhyavandanam/sayam/' },
+		],
+	},
+} as const;
+
 export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 	root: [
-		{
-			label: 'Nityakarma',
-			defaultOpen: true,
-			children: [
-				{
-					label: 'Aswalayana (Ṛgveda)',
-					defaultOpen: true,
-					children: [
-						{ label: 'Brahmayagyam', href: '/aswalayana-brahmayagyam/' },
-						{ label: 'Sandhyavandanam', href: '/aswalayana-sandhyavandanam/' },
-						{ label: 'Samidadhanam', href: '/aswalayana-samidadhanam/' },
-					],
-				},
-				{
-					label: 'Apastamba (Kṛṣṇa Yajurveda)',
-					defaultOpen: true,
-					children: [
-						{ label: 'Brahmayagyam', href: '/apastamba-brahmayagyam/' },
-						{ label: 'Sandhyavandanam', href: '/apastamba-sandhyavandanam/' },
-						{ label: 'Samidadhanam', href: '/apastamba-samidadhanam/' },
-					],
-				},
-			],
-		},
-		{
-			label: 'Veda Mantras',
-			defaultOpen: true,
-			children: [
-				{ label: 'Rigveda Sukta Sangraha', href: '/rigveda-sukta-sangraha/' },
-				{ label: 'Yajusha Mantra Ratnakaram', href: '/yajusha-mantra-ratnakaram/' },
-			],
-		},
-		{
-			label: 'Samhita',
-			children: [
-				{
-					label: 'Shakala Samhita (Rigveda)',
-					badge: { text: 'In Progress', variant: 'danger' },
-				},
-			],
-		},
-		{
-			label: 'Brahmanam',
-			children: [
-				{
-					label: 'Aitareya Brahmanam (Rigveda)',
-					badge: { text: 'In Progress', variant: 'danger' },
-				},
-			],
-		},
-		{
-			label: 'Upanishad',
-			children: [
-				{
-					label: 'Aitareyopanishad (Rigveda)',
-					badge: { text: 'In Progress', variant: 'danger' },
-				},
-			],
-		},
-	],
-	sa: [
 		{
 			label: 'नित्यकर्म​',
 			defaultOpen: true,
 			children: [
 				{
-					label: 'आश्वलायन (ऋग्वेद)',
+					label: 'ब्रह्मयज्ञम्',
 					defaultOpen: true,
 					children: [
-						{ label: 'ब्रह्मयज्ञम्', href: '/sa/aswalayana-brahmayagyam/' },
-						{ label: 'सन्ध्यावन्दनम्​', href: '/sa/aswalayana-sandhyavandanam/' },
-						{ label: 'समिदाधानम्', href: '/sa/aswalayana-samidadhanam/' },
+						{ label: 'आश्वलायन (ऋग्वेद)', href: '/aswalayana-brahmayagyam/' },
 					],
 				},
 				{
-					label: 'आपस्तम्ब (कृष्ण यजुर्वेद)',
+					label: 'सन्ध्यावन्दनम्​',
 					defaultOpen: true,
 					children: [
-						{ label: 'ब्रह्मयज्ञम्', href: '/sa/apastamba-brahmayagyam/' },
-						{ label: 'सन्ध्यावन्दनम्', href: '/sa/apastamba-sandhyavandanam/' },
-						{ label: 'समिदाधानम्', href: '/sa/apastamba-samidadhanam/' },
+						{
+							label: 'आश्वलायन (ऋग्वेद)',
+							defaultOpen: true,
+							children: sandhyaTimeLinks.root.aswalayana,
+						},
+						{
+							label: 'आपस्तम्ब (कृष्ण यजुर्वेद)',
+							defaultOpen: true,
+							children: sandhyaTimeLinks.root.apastamba,
+						},
+					],
+				},
+				{
+					label: 'समिदाधानम्',
+					defaultOpen: true,
+					children: [
+						{ label: 'आश्वलायन (ऋग्वेद)', href: '/aswalayana-samidadhanam/' },
+						{ label: 'आपस्तम्ब (कृष्ण यजुर्वेद)', href: '/apastamba-samidadhanam/' },
 					],
 				},
 			],
 		},
 		{
-			label: 'वेद मन्त्रा:',
+			label: 'वेद मन्त्राः',
 			defaultOpen: true,
 			children: [
-				{ label: 'ऋग्वेद सूक्त संग्रह​:', href: '/sa/rigveda-sukta-sangraha/' },
-				{ label: 'याजुष मन्त्र रत्नाकरम्', href: '/sa/yajusha-mantra-ratnakaram/' },
+				{
+					label: 'ऋग्वेद सूक्त संग्रह​:',
+					defaultOpen: true,
+					children: rigvedaSuktaSangraha,
+				},
+				{
+					label: 'याजुष मन्त्र रत्नाकरम्',
+					defaultOpen: true,
+					children: yajushaMantraRatnakaram,
+				},
 			],
 		},
 		{
@@ -136,65 +185,88 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			],
 		},
 	],
-	ta: [
+	iast: [
 		{
-			label: 'நித்ய கர்ம',
+			label: 'Nityakarma',
 			defaultOpen: true,
 			children: [
 				{
-					label: 'ஆஶ்வலாயன (ரிக்³வேதம்)',
+					label: 'Brahmayagyam',
 					defaultOpen: true,
 					children: [
-						{ label: 'ப்ருஹ்மயஞ்யம்', href: '/ta/aswalayana-brahmayagyam/' },
-						{ label: 'ஸந்த்யாவந்தனம்', href: '/ta/aswalayana-sandhyavandanam/' },
-						{ label: 'ஸமிதாதானம்', href: '/ta/aswalayana-samidadhanam/' },
+						{ label: 'Ashvalayana (Ṛgveda)', href: '/iast/aswalayana-brahmayagyam/' },
+						{ label: 'Apastamba (Kṛṣṇa Yajurveda)', href: '/iast/apastamba-brahmayagyam/' },
 					],
 				},
 				{
-					label: 'ஆபஸ்தம்ப (க்ருஷ்ண யஜுர்)',
+					label: 'Sandhyavandanam',
 					defaultOpen: true,
 					children: [
-						{ label: 'ப்ருஹ்மயஞ்யம்', href: '/ta/apastamba-brahmayagyam/' },
-						{ label: 'ஸந்த்யாவந்தனம்', href: '/ta/apastamba-sandhyavandanam/' },
-						{ label: 'ஸமிதாதானம்', href: '/ta/apastamba-samidadhanam/' },
+						{
+							label: 'Ashvalayana (Ṛgveda)',
+							defaultOpen: true,
+							children: sandhyaTimeLinks.iast.aswalayana,
+						},
+						{
+							label: 'Apastamba (Kṛṣṇa Yajurveda)',
+							defaultOpen: true,
+							children: sandhyaTimeLinks.iast.apastamba,
+						},
+					],
+				},
+				{
+					label: 'Samidadhanam',
+					defaultOpen: true,
+					children: [
+						{ label: 'Ashvalayana (Ṛgveda)', href: '/iast/aswalayana-samidadhanam/' },
+						{ label: 'Apastamba (Kṛṣṇa Yajurveda)', href: '/iast/apastamba-samidadhanam/' },
 					],
 				},
 			],
 		},
 		{
-			label: 'வேத மந்த்ரா:',
+			label: 'Veda Mantras',
 			defaultOpen: true,
 			children: [
-				{ label: 'ருக்வேத ஸூக்த ஸங்க்ரஹ​:', href: '/ta/rigveda-sukta-sangraha/' },
-				{ label: 'யாஜுஷ மந்த்ர ரத்னாகரம்', href: '/ta/yajusha-mantra-ratnakaram/' },
-			],
-		},
-		{
-			label: 'ஸம்ஹிதா:',
-			children: [
 				{
-					label: 'ஶாகல ஸம்ஹிதா (ருக்வேத)',
-					badge: { text: 'Upcoming', variant: 'danger' },
+					label: 'Rigveda Sukta Sangraha',
+					defaultOpen: true,
+					children: iastRigvedaSuktaSangraha,
+				},
+				{
+					label: 'Yajusha Mantra Ratnakaram',
+					defaultOpen: true,
+					children: iastYajushaMantraRatnakaram,
 				},
 			],
 		},
 		{
-			label: 'ப்ராஹ்மனம்',
+			label: 'Samhita',
 			children: [
 				{
-					label: 'ஐதரேய ப்ராஹ்மனம் (ருக்வேத)',
+					label: 'Shakala Samhita (Rigveda)',
 					badge: { text: 'In Progress', variant: 'danger' },
 				},
 			],
 		},
 		{
-			label: 'உபநிஷத்',
+			label: 'Brahmanam',
 			children: [
 				{
-					label: 'ஐதரேயோபநிஷத் (ருக்வேத)',
+					label: 'Aitareya Brahmanam (Rigveda)',
+					badge: { text: 'In Progress', variant: 'danger' },
+				},
+			],
+		},
+		{
+			label: 'Upanishad',
+			children: [
+				{
+					label: 'Aitareyopanishad (Rigveda)',
 					badge: { text: 'In Progress', variant: 'danger' },
 				},
 			],
 		},
 	],
+	ta: [],
 };

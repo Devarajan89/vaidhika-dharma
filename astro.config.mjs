@@ -6,6 +6,13 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://vaidhikadharma.org',
 
+  redirects: {
+    '/aswalayana-sandhyavandanam': '/aswalayana-sandhyavandanam/prata',
+    '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
+    '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',
+    '/iast/apastamba-sandhyavandanam': '/iast/apastamba-sandhyavandanam/prata',
+  },
+
   integrations: [
       starlight({
           title: 'Vaidhika Dharma',
@@ -24,25 +31,27 @@ export default defineConfig({
           components: {
               Hero: './src/components/Hero.astro',
               Sidebar: './src/components/Sidebar.astro',
+              LastUpdated: './src/components/LastUpdated.astro',
+              PageTitle: './src/components/PageTitle.astro',
+              Footer: './src/components/Footer.astro',
           },
           routeMiddleware: './src/route-middleware.ts',
           defaultLocale: 'root',
           locales: {
               root: {
+                  label: 'देवनागरी',
+                  lang: 'sa'
+              },
+              iast: {
                   label: 'IAST',
                   lang: 'en'
-              },
-              sa: {
-                  label: 'देवनागरि',
-                  lang: 'sa'
               }
           },
           sidebar: [
               {
-                  label: 'Nithya Karma',
+                  label: 'नित्य कर्म​',
                   translations: {
-                      sa: 'नित्यकर्म​',
-                      ta: 'நித்ய கர்ம',
+                      en: 'nitya karma​',
                   },
                   items: [
                       {
@@ -54,10 +63,9 @@ export default defineConfig({
                   ],
               },
               {
-                  label: 'Veda Mantra',
+                  label: 'वेद मन्त्राः',
                   translations: {
-                      sa: 'वेद मन्त्रा:',
-                      ta: 'வேத மந்த்ரா:',
+                      en: 'veda mantrāḥ',
                   },
                   items: [
                       {
