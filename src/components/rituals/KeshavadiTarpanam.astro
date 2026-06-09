@@ -1,0 +1,75 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+	titleVariant?: 'default' | 'navagraha';
+	showAfterNote?: boolean;
+}
+
+const { locale = 'root', titleVariant = 'default', showAfterNote = false } = Astro.props;
+
+const titles = {
+	root: {
+		default: 'केशवादि तर्पणं',
+		navagraha: 'नवग्रह​ - केशवादि तर्पणं',
+	},
+	iast: {
+		default: 'Keśavādi tarpaṇaṃ',
+		navagraha: 'navagraha​ - Keśavādi tarpaṇaṃ',
+	},
+} as const;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const rowsIast = [
+	['1.Ādityaṃ tarpayāmi', '2.Somam tarpayāmi', '3.Aṅgārakam tarpayāmi'],
+	['4.Budhaṃ tarpayāmi', '5.Bṛhaspatiṃ tarpayāmi', '6.Śukraṃ tarpayāmi'],
+	['7.Śanaiścaraṃ tarpayāmi', '8.Rāhuṃ tarpayāmi', '9.Ketuṃ tarpayāmi'],
+	['10.Keśavaṃ tarpayāmi', '11.Nārāyaṇaṃ tarpayāmi', '12.Mādhavaṃ tarpayāmi'],
+	['13.Govindaṃ tarpayāmi', '14.Viṣṇuṃ tarpayāmi', '15.Madhusūdanaṃ tarpayāmi'],
+	['16.Trivikramaṃ tarpayāmi', '17.Vāmanaṃ tarpayāmi', '18.Śrīdharaṃ tarpayāmi'],
+	['19.Hṛṣīkeśaṃ tarpayāmi', '20.Padmanābhaṃ tarpayāmi', '21.Dāmodaraṃ tarpayāmi'],
+];
+
+const rowsRoot = [
+	['१. आदित्यं तर्पयामि', '२.सोमम् तर्पयामि', '३.अङ्गारकम् तर्पयामि'],
+	['४.बुधं तर्पयामि', '५.बृहस्पतिं तर्पयामि', '६.शुक्रं तर्पयामि'],
+	['७.शनैश्चरं तर्पयामि', '८.राहुं तर्पयामि', '९.केतुं तर्पयामि'],
+	['१०.केशवं तर्पयामि', '११.नारायणं तर्पयामि', '१२.माधवं तर्पयामि'],
+	['१३.गोविन्दं तर्पयामि', '१४.विष्णुं तर्पयामि', '१५.मधुसूदनं तर्पयामि'],
+	['१६.त्रिविक्रमं तर्पयामि', '१७.वामनं तर्पयामि', '१८.श्रीधरं तर्पयामि'],
+	['१९.हृषीकेशं तर्पयामि', '२०.पद्मनाभं तर्पयामि', '२१.दामोदरं तर्पयामि'],
+];
+
+const instruction =
+	localeKey === 'iast'
+		? 'Recite the following mantras and drop the water in the tīrtha vessel with the tips of your fingers at each tarpayami.'
+		: null;
+
+const afterNote =
+	localeKey === 'root' && showAfterNote ? 'इति जलेन नव - द्वादश च तर्पणानि कृत्वा' : null;
+
+const rows = localeKey === 'iast' ? rowsIast : rowsRoot;
+---
+
+<div class="ritual-step keshavadi-tarpanam">
+	<h5>{titles[localeKey][titleVariant]}</h5>
+
+	{instruction && <p><em>{instruction}</em></p>}
+
+	<table>
+		<tbody>
+			{rows.map((cells) => (
+				<tr>
+					{cells.map((cell) => (
+						<td>{cell}</td>
+					))}
+				</tr>
+			))}
+		</tbody>
+	</table>
+
+	{afterNote && <p><em>{afterNote}</em></p>}
+</div>

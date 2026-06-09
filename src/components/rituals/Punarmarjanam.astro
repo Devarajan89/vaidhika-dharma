@@ -1,0 +1,118 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+type RitualVariant = 'aswalayana' | 'apastamba';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+}
+
+const { locale = 'root', variant } = Astro.props;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const blocks = {
+	root: {
+		aswalayana: {
+			title: 'पुनर्माजनम्',
+			meta: '**दधिक्राव्ण​: इत्यस्य मन्त्रस्य । वामदेव ऋषि: । दधिक्रावा देवता | अनुष्टुप् छन्द​: - अपां प्रोक्षणे विनियोग​:**',
+			lines: [
+				'द॒धिक्राव्णो॑ अकार्षं जि॒ष्णो रश्व॑स्य वा॒जि न॑: । सु॒र॒भिनो॒ मुका॑कर॒त् प्रण॒ आयूं॑षि तारिषत् ॥',
+				'आपो॒हिष्ठा म॑यो॒भुव॒स्तान॑ ऊ॒र्जे द॑धात न । म॒हेरना॑य॒ चक्ष॑से ॥ योव॑श्शि॒वत॑मो॒ रस॒स्तस्य॑ भाजय ते॒ह न॑: । उ॒श॒तीरि॑व मा॒तर॑: ॥ तस्मा॒ अर॑ङ्गमामवो॒ यस्य॒क्षया॑य॒ जिन्व॑थ । आपो॑ ज॒नय॑था च न: ॥',
+			],
+			afterSprinkle: 'इति शिरसि प्रोक्ष्य​',
+			om: 'ओं भूर्भुव॒स्व॑: ।',
+			afterSwirl: 'इति आत्मानं परिषिच्य​',
+		},
+		apastamba: {
+			title: 'पुनर्माजनम्',
+			meta: null,
+			lines: [
+				'द॒धिक्राव्णो॑ अकार्षम् । जि॒ष्णो रश्व॑स्य वा॒जि न॑: । सु॒र॒भिनो॒ मुका॑करत् । प्रण॒ आयूꣳ॑षि  तारिषत् ॥',
+				'आपो॒हिष्ठा म॑यो॒भुव॑: । ता न॑ ऊ॒र्जे द॑धात न । म॒हेरणा॑य॒ चक्ष॑से ॥ योव॑श्शि॒वत॑मो॒ र​​स॑: ।  त​स्य॑ भाजय ते॒ह न॑: । उ॒श॒तीरि॑व मा॒तर॑: ॥ तस्मा॒ अर॑ङ्ग​मामव: । यस्य॒क्षया॑य॒ जिन्व॑थ । आपो॑ ज॒नय॑था च न: ॥',
+			],
+			afterSprinkle: 'इति शिरसि प्रोक्ष्य​',
+			omBlockquote: true,
+			om: 'ओं भूर्भुव॒:सुव॑: ।',
+			afterSwirl: 'इति आत्मानं परिषिच्य​',
+		},
+	},
+	iast: {
+		aswalayana: {
+			title: 'Punarmājanam',
+			instruction:
+				'With an uttaraṇī, take water and sprinkle it on the head with the ring finger of the right hand.',
+			meta: '**dadhikrāvṇa​: ityasya mantrasya . vāmadeva ṛṣi: . dadhikrāvā devatā | anuṣṭup chanda​: - apāṃ prokṣaṇe viniyoga​:**',
+			lines: [
+				'Da̱dhikrāvṇo̍ akārṣam ji̱ṣṇo raśva̍sya vā̱ji na̍: . Su̱ra̱bhino̱ mukā̍kara̱t praṇa̱ āyū̍ṃṣi tāriṣat ..',
+				'Āpo̱hiṣṭhā ma̍yo̱bhuva̱stāna̍ ū̱rje da̍dhāta na . Ma̱heranā̍ya̱ cakṣa̍se .. Yova̍śśi̱vata̍mo̱ rasa̱stasya̍ bhājaya te̱ha na̍: . U̱śa̱tīri̍va mā̱tara̍: .. Tasmā̱ araṅ\'gamāmavo̱ yasya̱kṣayā̍ya̱ jinva̍tha . Āpo̍ ja̱naya̍thā ca na: ..',
+			],
+			swirlFirst: true,
+			om: 'Oṃ bhūrbhuva̱sva:',
+		},
+		apastamba: {
+			title: 'Punarmājanam',
+			instruction:
+				'With an uttaraṇī, take water and sprinkle it on the head with the ring finger of the right hand.',
+			meta: null,
+			lines: [
+				'Da̱dhikrāvṇo̍ akārṣam . Ji̱ṣṇo raśva̍sya vā̱ji na̍: . Su̱ra̱bhino̱ mukā̍karat . Praṇa̱ āyūgͫ̍mṣi  tāriṣat ..',
+				'Āpo̱hiṣṭhā ma̍yo̱bhuva̍: . Tā na̍ ū̱rje da̍dhāta na . Ma̱heraṇā̍ya̱ cakṣa̍se .. Yova̍śśi̱vata̍mo̱ ra​​sa̍: .  Ta​sya̍ bhājaya te̱ha na̍: . U̱śa̱tīri̍va mā̱tara̍: .. Tasmā̱ ara̍ṅga​māmava: . Yasya̱kṣayā̍ya̱ jinva̍tha . Āpo̍ ja̱naya̍thā ca na: ..',
+			],
+			swirlFirst: false,
+			om: 'Oṃ bhūrbhuva̱:suva̍: .',
+			swirlNote: 'Swirl the water around the head thoroughly.',
+		},
+	},
+} as const;
+
+const block = blocks[localeKey][variant];
+---
+
+<div class="ritual-step punarmarjanam">
+	<h5>{block.title}</h5>
+
+	{'instruction' in block && block.instruction && <p><em>{block.instruction}</em></p>}
+
+	{block.meta && <p class="ritual-meta" set:html={block.meta} />}
+
+	<blockquote>
+		{block.lines.map((line) => (
+			<p>{line}</p>
+		))}
+	</blockquote>
+
+	{localeKey === 'root' && (
+		<>
+			<p><em>{block.afterSprinkle}</em></p>
+			{'omBlockquote' in block && block.omBlockquote ? (
+				<blockquote>
+					<p>{block.om}</p>
+				</blockquote>
+			) : (
+				<p>{block.om}</p>
+			)}
+			<p><em>{block.afterSwirl}</em></p>
+		</>
+	)}
+
+	{localeKey === 'iast' && block.swirlFirst && (
+		<>
+			<p><em>Swirl the water around the head thoroughly.</em></p>
+			<blockquote>
+				<p>{block.om}</p>
+			</blockquote>
+		</>
+	)}
+
+	{localeKey === 'iast' && !block.swirlFirst && (
+		<>
+			<blockquote>
+				<p>{block.om}</p>
+			</blockquote>
+			<p><em>Swirl the water around the head thoroughly.</em></p>
+		</>
+	)}
+</div>

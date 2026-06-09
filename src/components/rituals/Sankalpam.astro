@@ -1,0 +1,174 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+type SankalpaTime = 'prata' | 'sayam' | 'madhyahnika';
+type SankalpaPurpose = 'sandhya' | 'prayaschitta-arghya' | 'gayatri-japa' | 'upasthana';
+type RitualVariant = 'aswalayana' | 'apastamba';
+
+interface Props {
+	locale?: HomeLocale;
+	time: SankalpaTime;
+	purpose?: SankalpaPurpose;
+	variant?: RitualVariant;
+	instructionFirst?: boolean;
+}
+
+const {
+	locale = 'root',
+	time,
+	purpose = 'sandhya',
+	variant = 'apastamba',
+	instructionFirst = false,
+} = Astro.props;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const titles = {
+	root: {
+		sandhya: 'सङ्कल्पम्',
+		'prayaschitta-arghya': 'प्रायश्चित्त अर्घ्यं',
+		'gayatri-japa': 'सङ्कल्पम्',
+		upasthana: 'सङ्कल्पम् - उपस्थानं',
+	},
+	iast: {
+		sandhya: 'Saṅkalpam',
+		'prayaschitta-arghya': 'Prāyaścitta arghyaṃ',
+		'gayatri-japa': 'Saṅkalpam',
+		upasthana: 'Saṅkalpam - upasthānaṃ',
+	},
+} as const;
+
+const instruction =
+	localeKey === 'iast'
+		? 'Perform saṅkalpa with the right and left palms cupped on the right thigh.'
+		: null;
+
+const afterNote = localeKey === 'root' && purpose === 'sandhya' ? 'इति सङ्कल्प्य​' : null;
+
+const mantras: Record<
+	typeof localeKey,
+	Record<RitualVariant, Record<SankalpaPurpose, Record<SankalpaTime, string>>>
+> = {
+	root: {
+		apastamba: {
+			sandhya: {
+				prata: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्यां उपासिष्ये।',
+				sayam: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थ्तं सायं संध्यां उपासिष्ये ।',
+				madhyahnika: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं माध्यान्हिकं करिष्ये ।',
+			},
+			'prayaschitta-arghya': {
+				prata: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्या कालातीत प्रायश्चित्त अर्घ्यप्रदानं करिष्ये  ॥',
+				sayam: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं सायं सन्ध्या कालातीत प्रायश्चित्त अर्घ्यप्रदानं करिष्ये  ॥',
+				madhyahnika:
+					'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं माध्याऩ्हिक कालातीत प्रायश्चित्त अर्घ्यप्रदानं करिष्ये  ॥',
+			},
+			'gayatri-japa': {
+				prata: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्याङ्ग यथा शक्ति गायत्रि महामंत्र जपं करिष्ये  ॥',
+				sayam: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं सायं संध्याङ्ग यथा शक्ति गायत्रि महामंत्र जपं करिष्ये  ॥',
+				madhyahnika:
+					'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं माध्याऩ्हिक संध्याङ्ग यथा शक्ति गायत्रि महामंत्र जपं करिष्ये  ॥',
+			},
+			upasthana: {
+				prata: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्या गायत्री उपस्थानं करिष्ये ॥',
+				sayam: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं सायं सन्ध्या गायत्री उपस्थानं करिष्ये ॥',
+				madhyahnika:
+					'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं माध्याऩ्हिक सन्ध्या गायत्री उपस्थानं करिष्ये ॥',
+			},
+		},
+		aswalayana: {
+			sandhya: {
+				prata: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्यां उपासिष्ये ।',
+				sayam: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं सायं सन्ध्यां उपासिष्ये ।',
+				madhyahnika: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं माध्यान्हिकं करिष्ये ।',
+			},
+			'prayaschitta-arghya': {
+				prata: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्या कालातीत प्रायश्चित्त अर्घ्यप्रदानं करिष्ये  ॥',
+				sayam: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्या कालातीत प्रायश्चित्त अर्घ्यप्रदानं करिष्ये  ॥',
+				madhyahnika:
+					'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं माध्यान्हिक​ कालातीत प्रायश्चित्त अर्घ्यप्रदानं करिष्ये  ॥',
+			},
+			'gayatri-japa': {
+				prata: '',
+				sayam: '',
+				madhyahnika: '',
+			},
+			upasthana: {
+				prata: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं प्रात: सन्ध्या उपस्थानं करिष्ये ॥',
+				sayam: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं सायं सन्ध्या उपस्थानं करिष्ये ॥',
+				madhyahnika: 'ममोपात्त समस्त दुरित क्षयद्वारा श्री परमेश्वर प्रीत्यर्थं माध्यान्हिक​ उपस्थानं करिष्ये ॥',
+			},
+		},
+	},
+	iast: {
+		apastamba: {
+			sandhya: {
+				prata: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ prāta: sandhyāṃ upāsiṣye .',
+				sayam: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Sāyam sandhyāṃ upāsiṣye .',
+				madhyahnika:
+					'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Mādhyāṉhika  sandhyāṃ upāsiṣye .',
+			},
+			'prayaschitta-arghya': {
+				prata: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ prāta: sandhyā kālātīta prāyaścitta arghyapradānaṃ kariṣye  ..',
+				sayam: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Sāyam sandhyā kālātīta prāyaścitta arghyapradānaṃ kariṣye  ..',
+				madhyahnika:
+					'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Mādhyāṉhika kālātīta prāyaścitta arghyapradānaṃ kariṣye  ..',
+			},
+			'gayatri-japa': {
+				prata: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ prāta: sandhyāṅga yathā śakti gāyatri mahāmantra japaṃ kariṣye  ..',
+				sayam: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Sāyam sandhyāṅga yathā śakti gāyatri mahāmantra japaṃ kariṣye  ..',
+				madhyahnika:
+					'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Mādhyāṉhika  yathā śakti gāyatri mahāmantra japaṃ kariṣye  ..',
+			},
+			upasthana: {
+				prata: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ prāta: sandhyā gāyatrī upasthānaṃ kariṣye ..',
+				sayam: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Sāyam sandhyā gāyatrī upasthānaṃ kariṣye ..',
+				madhyahnika:
+					'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ Mādhyāṉhika  gāyatrī upasthānaṃ kariṣye ..',
+			},
+		},
+		aswalayana: {
+			sandhya: {
+				prata: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ prāta: sandhyāṃ upāsiṣye .',
+				sayam: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ sāyaṃ sandhyāṃ upāsiṣye .',
+				madhyahnika:
+					'mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ mādhyānhikaṃ kariṣye .',
+			},
+			'prayaschitta-arghya': {
+				prata: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ prāta: sandhyā kālātīta prāyaścitta arghyapradānaṃ kariṣye  ..',
+				sayam: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ sāyaṃ sandhyā kālātīta prāyaścitta arghyapradānaṃ kariṣye  ..',
+				madhyahnika:
+					'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ mādhyānhika kālātīta prāyaścitta arghyapradānaṃ kariṣye  ..',
+			},
+			'gayatri-japa': {
+				prata: '',
+				sayam: '',
+				madhyahnika: '',
+			},
+			upasthana: {
+				prata: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ prāta: sandhyā upasthānaṃ kariṣye ..',
+				sayam: 'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ sāyaṃ sandhyā upasthānaṃ kariṣye ..',
+				madhyahnika:
+					'Mamopātta samasta durita kṣayadvārā śrī parameśvara prītyarthaṃ mādhyānhika upasthānaṃ kariṣye ..',
+			},
+		},
+	},
+};
+
+const mantra = mantras[localeKey][variant][purpose][time];
+const title = titles[localeKey][purpose];
+---
+
+<div class="ritual-step sankalpam">
+	<h5>{title}</h5>
+
+	{instructionFirst && instruction && <p><em>{instruction}</em></p>}
+
+	<blockquote>
+		<p>{mantra}</p>
+	</blockquote>
+
+	{!instructionFirst && instruction && <p><em>{instruction}</em></p>}
+
+	{afterNote && <p><em>{afterNote}</em></p>}
+</div>

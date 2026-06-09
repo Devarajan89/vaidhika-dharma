@@ -1,0 +1,65 @@
+---
+import type { HomeLocale } from '../../data/home';
+import type { RitualVariant } from './sandhya-types';
+import { toLocaleKey } from './sandhya-types';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+}
+
+const { locale = 'root', variant } = Astro.props;
+const localeKey = toLocaleKey(locale);
+
+const titles = { root: 'ध्यानम्', iast: 'Dhyānam' } as const;
+
+const blocks = {
+	root: {
+		aswalayana: {
+			lines: [
+				'मुक्ता - विद्रुम - हेम - नील - धवलच्छायैर्मुखैस्त्रीक्षणै: युक्तामिंदुकला-निबद्धरत्ऩमकुटाम् तत्त्वार्थ - वर्णात्मिकाम् । गायत्रीं  वरदाभयांकुश - कशा​:शुभ्रम्गपालं गदां शंखं - चक्र - मथारविंदयुगलं हस्तैर्वहंतीं भजे ॥',
+				'यो देवस्सवितास्माकं धियो धर्मादि गोचराः । प्रेरयेत्तस्य यद्भर्गस्तद्वरेण्य उपास्महे ॥',
+			],
+			afterNote: 'इति सावित्रीमूर्तिध्यानं कृत्वा​',
+		},
+		apastamba: {
+			lines: [
+				'मुक्ता - विद्रुम - हेम - नील - धवलच्छायैर्मुखैस्त्रीक्षणै: युक्तामिंदुकला-निबद्धरत्ऩमकुटाम् तत्त्वार्थ - वर्णात्मिकाम् ।',
+				'गायत्रीं  वरदाभयांकुश - कशा​:शुभ्रम्गपालं गदां',
+				'शंखं - चक्र - मथारविंदयुगलं हस्तैर्वहंतीं भजे ॥',
+			],
+			afterNote: 'इति सावित्रीमूर्तिध्यानं कृत्वा​',
+		},
+	},
+	iast: {
+		aswalayana: {
+			lines: [
+				'Muktā - vidruma - hema - nīla - dhavalacchāyairmukhaistrīkṣaṇai: yuktāmindukalā-nibaddharatṉamakuṭām tattvārtha - varṇātmikām . Gāyatrīṃ  varadābhayāṅkuśa - kaśā​:śubhramgapālaṃ gadāṃ śaṅkhaṃ - cakra - mathāravindayugalaṃ hastairvahantīṃ bhaje ..',
+				'yo devassavitāsmākaṃ dhiyo dharmādi gocarāḥ . prerayettasya yadbhargastadvareṇya upāsmahe ..',
+			],
+		},
+		apastamba: {
+			lines: [
+				'Muktā - vidruma - hema - nīla - dhavalacchāyairmukhaistrīkṣaṇai: yuktāmindukalā-nibaddharatṉamakuṭām tattvārtha - varṇātmikām .',
+				'Gāyatrīṃ  varadābhayāṅkuśa - kaśā​:śubhramgapālaṃ gadāṃ',
+				'śaṅkhaṃ - cakra - mathāravindayugalaṃ hastairvahantīṃ bhaje ..',
+			],
+		},
+	},
+} as const;
+
+const block = blocks[localeKey][variant];
+---
+
+<div class="ritual-step dhyanam">
+	<h5>{titles[localeKey]}</h5>
+
+	<blockquote>
+		{block.lines.map((line) => (
+			<p>{line}</p>
+		))}
+	</blockquote>
+
+	{'afterNote' in block && block.afterNote && <p><em>{block.afterNote}</em></p>}
+</div>

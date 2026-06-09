@@ -1,0 +1,46 @@
+---
+import type { HomeLocale } from '../../data/home';
+import { toLocaleKey } from './sandhya-types';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+	showPinch?: boolean;
+	pinchFirst?: boolean;
+}
+
+const { locale = 'root', showPinch = false, pinchFirst = false } = Astro.props;
+const localeKey = toLocaleKey(locale);
+
+const pinchInstruction =
+	'Pinch both sides of the forehead three times with both hands.';
+
+const titles = { root: 'श्री गणपति ध्यानं', iast: 'Śrī gaṇapati dhyānaṃ' } as const;
+
+const mantraLines = {
+	root: [
+		'शुक्लां बरधरं विष्णुं शशिवर्णं चतुर्भुजम् ।',
+		'प्रसन्न वदनं ध्यायेत् सर्व विध्नोप शांतये ॥',
+	],
+	iast: [
+		'Śuklāṃ baradharaṃ viṣṇuṃ śaśivarṇaṃ caturbhujam .',
+		'Prasanna vadanaṃ dhyāyet sarva vighnopa śāntaye ..',
+	],
+} as const;
+
+const lines = mantraLines[localeKey];
+---
+
+<div class="ritual-step ganapati-dhyanam">
+	<h5>{titles[localeKey]}</h5>
+
+	{showPinch && pinchFirst && <p><em>{pinchInstruction}</em></p>}
+
+	<blockquote>
+		{lines.map((line) => (
+			<p>{line}</p>
+		))}
+	</blockquote>
+
+	{showPinch && !pinchFirst && <p><em>{pinchInstruction}</em></p>}
+</div>

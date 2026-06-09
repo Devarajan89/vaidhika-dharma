@@ -1,0 +1,58 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const titles = { root: 'गायत्री न्यासम्', iast: 'Gāyatri nyāsam' } as const;
+
+const instruction = {
+	iast: 'While reciting the following mantras, touch the aṅga (parts) indicated for each mantra.',
+} as const;
+
+const items = {
+	iast: [
+		'Viṣvāmitra ṛṣi: (Head),',
+		'savitā devatā (Chest),',
+		'nicrut gāyatrī chanda​: (Nose tip)',
+	],
+} as const;
+
+const meta = {
+	root: '**विष्वामित्र ऋषि:, सविता देवता, निच्रुत् गायत्री छंद​:**',
+} as const;
+---
+
+<div class="ritual-step gayatri-nyasam">
+	<h5>{titles[localeKey]}</h5>
+
+	{localeKey === 'iast' && <p><em>{instruction.iast}</em></p>}
+
+	{localeKey === 'iast' ? (
+		<ul>
+			{items.iast.map((item) => (
+				<li>{item}</li>
+			))}
+		</ul>
+	) : (
+		<p class="ritual-meta" set:html={meta.root} />
+	)}
+</div>
+
+<style>
+	.gayatri-nyasam ul {
+		margin: 0.5em 0 1em;
+		padding-left: 1.25rem;
+	}
+
+	.gayatri-nyasam li {
+		margin: 0.35em 0;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+</style>

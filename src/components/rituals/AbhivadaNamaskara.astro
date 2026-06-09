@@ -1,0 +1,63 @@
+---
+import type { HomeLocale } from '../../data/home';
+import type { RitualVariant } from './sandhya-types';
+import { toLocaleKey } from './sandhya-types';
+import './ritual-styles.css';
+
+type AbhivadaPhase = 'default' | 'before-upasthana' | 'after-upasthana';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+	phase?: AbhivadaPhase;
+}
+
+const { locale = 'root', variant, phase = 'default' } = Astro.props;
+const localeKey = toLocaleKey(locale);
+
+const titles = { root: 'अभिवाद नमस्कार​:', iast: 'Abhivāda namaskāra​:' } as const;
+
+const instructions = {
+	iast: {
+		aswalayana: 'Perform abhivādana and namaskāra.',
+		apastamba: {
+			'before-upasthana': 'Perform abhivādana and namaskāra.',
+			'after-upasthana': 'Say Perform abhivādana and namaskāra.',
+		},
+	},
+} as const;
+
+const mantras = {
+	root: {
+		aswalayana:
+			'अभिवादये ___ त्रयार्षेय​/पञ्चार्षेय प्रवरान्वित ___ गोत्र​: ___ आश्वलायन सूत्र​: ___ ऋक्शाखाध्यायी ___ शर्मा नाम अहं अस्मि भो:।',
+		apastamba:
+			'अभिवादये ___ त्रयार्षेय​।पञ्चार्षेय प्रवरान्वित ___ गोत्र​: ___ आपस्तम्ब सूत्र​: ___ यजुश्शाखाध्यायी ___ शर्मा नाम अहं अस्मि भो:।',
+	},
+	iast: {
+		aswalayana:
+			'abhivādaye ___ trayārṣeya​/pañcārṣeya pravarānvita ___ gotra​: ___ āśvalāyana sūtra​: ___ ṛkśākhādhyāyī ___ śarmā nāma ahaṃ asmi bho:.',
+		apastamba:
+			'abhivādaye ___ trayārṣeya​/pañcārṣeya pravarānvita ___ gotra​: ___ āpastamba sūtra​: ___ yajuśśākhādhyāyī ___ śarmā nāma ahaṃ asmi bho:.',
+	},
+} as const;
+
+function getInstruction() {
+	if (localeKey !== 'iast') return null;
+	if (variant === 'aswalayana') return instructions.iast.aswalayana;
+	if (phase === 'after-upasthana') return instructions.iast.apastamba['after-upasthana'];
+	return instructions.iast.apastamba['before-upasthana'];
+}
+
+const instruction = getInstruction();
+---
+
+<div class="ritual-step abhivada-namaskara">
+	<h5>{titles[localeKey]}</h5>
+
+	{instruction && <p><em>{instruction}</em></p>}
+
+	<blockquote>
+		<p>{mantras[localeKey][variant]}</p>
+	</blockquote>
+</div>

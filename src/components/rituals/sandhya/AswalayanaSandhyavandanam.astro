@@ -1,0 +1,32 @@
+---
+import type { HomeLocale } from '../../../data/home';
+import SandhyavandanamPage from '../SandhyavandanamPage.astro';
+import AswalayanaPrataRootContent from './content/aswalayana-prata-root.astro';
+import AswalayanaMadhyahnikaRootContent from './content/aswalayana-madhyahnika-root.astro';
+import AswalayanaSayamRootContent from './content/aswalayana-sayam-root.astro';
+import AswalayanaPrataIastContent from './content/aswalayana-prata-iast.astro';
+import AswalayanaMadhyahnikaIastContent from './content/aswalayana-madhyahnika-iast.astro';
+import AswalayanaSayamIastContent from './content/aswalayana-sayam-iast.astro';
+
+interface Props {
+	locale?: HomeLocale;
+	time: 'prata' | 'madhyahnika' | 'sayam';
+}
+
+const { locale = 'root', time } = Astro.props;
+
+const fragments: Record<string, any> = {
+  'root:prata': AswalayanaPrataRootContent,
+  'root:madhyahnika': AswalayanaMadhyahnikaRootContent,
+  'root:sayam': AswalayanaSayamRootContent,
+  'iast:prata': AswalayanaPrataIastContent,
+  'iast:madhyahnika': AswalayanaMadhyahnikaIastContent,
+  'iast:sayam': AswalayanaSayamIastContent,
+};
+
+const Content = fragments[`${locale}:${time}`];
+---
+
+<SandhyavandanamPage locale={locale}>
+	{Content && <Content />}
+</SandhyavandanamPage>

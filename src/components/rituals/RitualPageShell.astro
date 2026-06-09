@@ -1,0 +1,114 @@
+---
+import type { HomeLocale } from '../../data/home';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const isIast = locale === 'iast' || locale === 'ta';
+
+const toggleLabels = isIast
+	? { show: 'Show instructions', hide: 'Mantras only' }
+	: { show: 'विधि दर्शय', hide: 'मन्त्र मात्रम्' };
+---
+
+<ritual-page-shell class="ritual-page-shell" data-locale={locale}>
+	<div class="ritual-page-shell__toolbar">
+		<button
+			type="button"
+			class="ritual-compact-toggle"
+			data-show-label={toggleLabels.show}
+			data-hide-label={toggleLabels.hide}
+			aria-pressed="false"
+		>
+			{toggleLabels.show}
+		</button>
+	</div>
+	<div class="ritual-page-shell__content">
+		<slot />
+	</div>
+</ritual-page-shell>
+
+<script>
+	class RitualPageShell extends HTMLElement {
+		private toggle?: HTMLButtonElement;
+		private storageKey = 'vaidhika-ritual-compact';
+
+		connectedCallback() {
+			this.toggle = this.querySelector('.ritual-compact-toggle') ?? undefined;
+			if (!this.toggle) return;
+
+			const saved = localStorage.getItem(this.storageKey) === 'true';
+			this.setCompact(saved);
+
+			this.toggle.addEventListener('click', () => {
+				const next = !this.classList.contains('is-compact');
+				this.setCompact(next);
+				localStorage.setItem(this.storageKey, String(next));
+			});
+		}
+
+		private setCompact(compact: boolean) {
+			this.classList.toggle('is-compact', compact);
+			if (!this.toggle) return;
+			this.toggle.setAttribute('aria-pressed', String(compact));
+			this.toggle.textContent = compact
+				? (this.toggle.dataset.hideLabel ?? '')
+				: (this.toggle.dataset.showLabel ?? '');
+		}
+	}
+
+	if (!customElements.get('ritual-page-shell')) {
+		customElements.define('ritual-page-shell', RitualPageShell);
+	}
+</script>
+
+<style>
+	.ritual-page-shell {
+		display: block;
+	}
+
+	.ritual-page-shell__toolbar {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0 0 1rem;
+	}
+
+	.ritual-compact-toggle {
+		padding: 0.35rem 0.85rem;
+		font: inherit;
+		font-size: 0.875rem;
+		font-weight: 500;
+		line-height: 1.35;
+		color: var(--sl-color-gray-2);
+		background: var(--sl-color-gray-7);
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.375rem;
+		cursor: pointer;
+		transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+	}
+
+	.ritual-compact-toggle:hover {
+		color: var(--sl-color-white);
+		border-color: var(--sl-color-accent);
+	}
+
+	:global([data-theme='light']) .ritual-compact-toggle {
+		background: var(--color-gray-100);
+		color: var(--color-gray-700);
+		border-color: var(--color-gray-300);
+	}
+
+	:global(.ritual-page-shell.is-compact .ritual-instruction),
+	:global(.ritual-page-shell.is-compact .sl-markdown-content p:has(> em:only-child)),
+	:global(.ritual-page-shell.is-compact .starlight-aside) {
+		display: none !important;
+	}
+
+	@media print {
+		.ritual-page-shell__toolbar {
+			display: none;
+		}
+	}
+</style>

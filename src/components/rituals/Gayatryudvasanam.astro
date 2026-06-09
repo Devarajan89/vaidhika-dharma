@@ -1,0 +1,43 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const titles = { root: 'गायत्र्युद्वासनम्', iast: 'gāyatryudvāsanam' } as const;
+
+const meta = {
+	root: '**उत्तम इत्यनुवाकस्य वामदेवः ऋषिः । अनुष्टुप् छन्दः । गायत्री देवता । गायत्री उद्वासने विनियोगः**',
+	iast: '**uttama ityanuvākasya vāmadevaḥ ṛṣiḥ . anuṣṭup chandaḥ . gāyatrī devatā . gāyatrī udvāsane viniyogaḥ**',
+} as const;
+
+const lines = {
+	root: [
+		'उ॒त्तमे॑ शिख॑रे दे॒वी॒ भू॒म्यां प॑र्वत॒ मूर्ध॑नि ।',
+		'ब्रा॒ह्मणेभ्यो ह्य॑नुज्ञा॒नं ग॒च्छ दे॑वि य॒थासु॑खम् ॥',
+	],
+	iast: [
+		'u̱ttame̍ śikha̍re de̱vī̱ bhū̱myāṃ pa̍rvata̱ mūrdha̍ni .',
+		'brā̱hmaṇebhyo hya̍nujñā̱naṃ ga̱ccha de̍vi ya̱thāsu̍kham ..',
+	],
+} as const;
+---
+
+<div class="ritual-step gayatryudvasanam">
+	<h5>{titles[localeKey]}</h5>
+
+	<p class="ritual-meta" set:html={meta[localeKey]} />
+
+	<blockquote>
+		{lines[localeKey].map((line) => (
+			<p>{line}</p>
+		))}
+	</blockquote>
+
+	{localeKey === 'root' && <p><em>इति गायत्रीं उद्यास्य​</em></p>}
+</div>

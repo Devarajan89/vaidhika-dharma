@@ -10,12 +10,12 @@ interface Props {
 }
 
 const { locale, limit = 5 } = Astro.props;
-const { recentTitle } = homeContent[locale];
+const { recentTitle } = homeContent;
 
 const allDocs = await getCollection('docs');
 
 function matchesLocale(id: string): boolean {
-	if (locale === 'root') return !id.startsWith('sa/') && !id.startsWith('ta/');
+	if (locale === 'root') return !id.startsWith('iast/') && !id.startsWith('ta/');
 	return id.startsWith(`${locale}/`);
 }
 
@@ -29,10 +29,11 @@ function getPageUrl(slug: string | undefined, id: string): string {
 }
 
 function formatDate(date: Date): string {
-	return date.toLocaleDateString(
-		locale === 'sa' ? 'hi-IN' : locale === 'ta' ? 'ta-IN' : 'en-IN',
-		{ year: 'numeric', month: 'short', day: 'numeric' }
-	);
+	return date.toLocaleDateString('en-IN', {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+	});
 }
 
 const recent = allDocs
@@ -46,7 +47,7 @@ const recent = allDocs
 	.slice(0, limit);
 ---
 
-<div class="recent-updates custom-card">
+<div class="recent-updates home-card">
 	<Card title={recentTitle} icon="calendar">
 		{
 			recent.length > 0 ? (
@@ -70,18 +71,6 @@ const recent = allDocs
 </div>
 
 <style>
-	.recent-updates :global(.card) {
-		background-color: var(--card-bg, var(--sl-color-gray-6));
-		border: 1px solid var(--sl-color-gray-5);
-		border-radius: 1rem;
-		padding: 1.25rem;
-		box-shadow: 0 2px 6px rgba(35, 21, 0, 0.05);
-	}
-
-	:global(:root[data-theme='light']) .recent-updates {
-		--card-bg: var(--color-gray-100);
-	}
-
 	.recent-updates__list {
 		list-style: none;
 		margin: 0;
@@ -112,8 +101,8 @@ const recent = allDocs
 	}
 
 	.recent-updates__title {
-		font-size: 0.875rem;
-		line-height: 1.4;
+		font-size: 0.9375rem;
+		line-height: 1.5;
 	}
 
 	.recent-updates__list time {

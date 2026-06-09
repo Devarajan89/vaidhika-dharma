@@ -1,0 +1,100 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+type RitualVariant = 'aswalayana' | 'apastamba';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+}
+
+const { locale = 'root', variant } = Astro.props;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const titles = { root: 'रक्षा धारणम्', iast: 'rakṣā dhāraṇam' } as const;
+
+const blocks = {
+	root: {
+		aswalayana: {
+			meta: '**अद्यानो देवेत्यस्य मन्त्रस्य । श्यावाश्व आत्रेय ऋषि: । सविता देवता - रक्षस्वीकरणे विनियोग​:**',
+			mantra: [
+				'अ॒द्यानो देवसवितः प्र॒जाव॑त्सावी॒स्सौभ॑गम् । परा॑ दु॒ष्वप्नि॑यं सुव ॥',
+				'विश्वा॑नि देव सवितर्दुरि॒तानि॒ परा॑सुव । यद्भ॒द्रं तन्म॒ आसु॑व ॥',
+			],
+			afterNote: 'जप स्थलं प्रोक्ष्य तन्मृदं हृदि धारयेत्',
+			arpanam: '॥ ओं तत्सत् ब्रह्मार्पणमस्तु ॥',
+		},
+		apastamba: {
+			kayenaSloka:
+				'कायेन वाचा मनसेंद्रियैर्वा बुद्ध्यात्म​नावा प्रक्रुते स्वभावात् । करोमि यद्यत्सकलं परस्मै नारायाणायेति समर्पयामि',
+			mantra: [
+				'अ॒द्यानो॑ देव सवित​: । प्र॒जाव॑त्सवी॒: सौभ॑गम् । परा॑ दु॒ष्वप्नि॑यम् सुव ।',
+				'विश्वा॑नि देव सवित​: । दुरि॒तानि॒ परा॑सुव । यद् भ॒द्रं तन्म॒ आसु॑व ।',
+			],
+			afterNote: 'जप स्थलं प्रोक्ष्य तन्मृदं हृदि धारयेत्',
+			arpanam: '॥ ओं तत्सत् ब्रह्मार्पणमस्तु ॥',
+		},
+	},
+	iast: {
+		aswalayana: {
+			instruction:
+				'Sprinkle water (prokṣaṇa) at the place where japa was performed, and apply the rakṣā.',
+			meta: '**adyāno devetyasya mantrasya . śyāvāśva ātreya ṛṣi: . savitā devatā - rakṣasvīkaraṇe viniyoga​:**',
+			mantra: [
+				'a̱dyāno devasavitaḥ pra̱jāva̍tsāvī̱ssaubha̍gam . parā̍ du̱ṣvapni̍yaṃ suva ..',
+				'viśvā̍ni deva savitarduri̱tāni̱ parā̍suva . yadbha̱draṃ tanma̱ āsu̍va ..',
+			],
+			arpanam: '|| Oṃ tatsat brahmārpaṇamastu ||',
+		},
+		apastamba: {
+			kayenaInstruction:
+				'Recite the following śloka, take a spoonful of uttaraṇī water in your right hand, and pour it on the ground.',
+			kayenaSloka:
+				'Kāyena vācā manasendriyairvā budhyātmanāvā prakrute svabhāvāt . Karomi yadyatsakalaṃ parasmai nārāyāṇāyeti samarpayāmi .',
+			sprinkleInstruction:
+				'Sprinkle the place of japa with water, chant the following mantra using that water, and apply tilaka on the forehead with the ring finger.',
+			mantra: [
+				'A̱dyāno̍ deva savita​: . Pra̱jāva̍tsavī̱: saubha̍gam . Parā̍ du̱ṣvapni̍yam suva .',
+				'Viśvā̍ni deva savita​: . Duri̱tāni̱ parā̍suva . Yad bha̱draṃ tanma̱ āsu̍va .',
+			],
+			arpanam: '|| Oṃ tatsat brahmārpaṇamastu ||',
+		},
+	},
+} as const;
+
+const block = blocks[localeKey][variant];
+---
+
+<div class="ritual-step raksha-dharanam">
+	{variant === 'aswalayana' && <h5>{titles[localeKey]}</h5>}
+
+	{'instruction' in block && block.instruction && <p><em>{block.instruction}</em></p>}
+
+	{'kayenaInstruction' in block && block.kayenaInstruction && (
+		<p><em>{block.kayenaInstruction}</em></p>
+	)}
+
+	{'kayenaSloka' in block && block.kayenaSloka && (
+		<blockquote>
+			<p>{block.kayenaSloka}</p>
+		</blockquote>
+	)}
+
+	{'sprinkleInstruction' in block && block.sprinkleInstruction && (
+		<p><em>{block.sprinkleInstruction}</em></p>
+	)}
+
+	{block.meta && <p class="ritual-meta" set:html={block.meta} />}
+
+	<blockquote>
+		{block.mantra.map((line) => (
+			<p>{line}</p>
+		))}
+	</blockquote>
+
+	{'afterNote' in block && block.afterNote && <p><em>{block.afterNote}</em></p>}
+
+	<p class="ritual-meta"><strong>{block.arpanam}</strong></p>
+</div>

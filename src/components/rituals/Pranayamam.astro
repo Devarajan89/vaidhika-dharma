@@ -1,0 +1,87 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+type RitualVariant = 'aswalayana' | 'apastamba';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+	showInstruction?: boolean;
+	instructionFirst?: boolean;
+	afterNote?: string;
+}
+
+const {
+	locale = 'root',
+	variant,
+	showInstruction = false,
+	instructionFirst = false,
+	afterNote,
+} = Astro.props;
+
+const blocks = {
+	root: {
+		aswalayana: {
+			title: 'प्राणायाम​:',
+			lines: [
+				'ऒं भू: ऒं भुव: ऒं स्व: ऒं मह: ऒं जन​: ऒं तप: ऒं सत्यं । ऒं तत्स॑वि॒तुर्वरे॑ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि । धियो॒ योन॑: प्रचो॒दया॑त् ॥',
+				'ऒं आपो॒ ज्योती॒रसो॒मृतं॒ ब्रह्म॒ भूर्भुव॒स्वरोम् ।',
+			],
+		},
+		apastamba: {
+			title: 'प्राणायाम​:',
+			lines: [
+				'ऒं भू: ऒं भुव: ओꣳसुव​: ऒं मह: ऒं जन​: ऒं तप: ऒं ꣳसत्यं । ऒं तत्स॑वि॒तुर्वरे᳚ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि । धियो॒ योन॑: प्रचो॒दया᳚त् ॥',
+				'ऒं आपो॒ ज्योती॒रसो॒म्रुतं॒ ब्रह्म॒ भूर्भुव॒सुव॒रोम् ।',
+			],
+		},
+	},
+	iast: {
+		aswalayana: {
+			title: 'Prāṇāyāma​:',
+			instruction:
+				'Cover the right side of the nose with the thumb and inhale through the left nostril. Then, cover the left side of the nose with the ring finger and exhale through the right nostril.',
+			lines: [
+				'Ŏṃ bhū: ŏṃ bhuva: ŏṃ sva: ŏṃ maha: ŏṃ jana​: ŏṃ tapa: ŏṃ satyaṃ . Ŏṃ tatsa̍vi̱turvare̍ṇya̱ṃ bhargo̍ de̱vasya̍ dhīmahi . Dhiyo̱ yona̍: praco̱dayā̍̍t ..',
+				'Ŏṃ āpo̱ jyotī̱raso̱mruta̱ṃ brahma̱ bhūrbhuva̱svarom .',
+			],
+		},
+		apastamba: {
+			title: 'Prāṇāyāma​:',
+			instruction:
+				'Cover the right side of the nose with the thumb and inhale through the left nostril. Then, cover the left side of the nose with the ring finger and exhale through the right nostril.',
+			lines: [
+				'Ŏṃ bhū: ŏṃ bhuva: ogͫmsuva​: ŏṃ maha: ŏṃ jana​: ŏṃ tapa: ŏṃ gͫmsatyaṃ . Ŏṃ tatsa̍vi̱turvare̎ṇya̱ṃ bhargo̍ de̱vasya̍ dhīmahi . Dhiyo̱ yona̍: praco̱dayā̎t ..',
+				'Ŏṃ āpo̱ jyotī̱raso̱mruta̱ṃ brahma̱ bhūrbhuva̱suva̱rom .',
+			],
+		},
+	},
+} as const;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+const block = blocks[localeKey][variant];
+const instruction = 'instruction' in block ? block.instruction : null;
+---
+
+<div class="ritual-step pranayamam">
+	<h5>{block.title}</h5>
+
+	{showInstruction && instructionFirst && instruction && (
+		<p class="ritual-instruction"><em>{instruction}</em></p>
+	)}
+
+	<blockquote>
+		{block.lines.map((line) => (
+			<p>{line}</p>
+		))}
+	</blockquote>
+
+	{showInstruction && !instructionFirst && instruction && (
+		<p class="ritual-instruction"><em>{instruction}</em></p>
+	)}
+
+	{afterNote && (
+		<p class="ritual-instruction"><em>{afterNote}</em></p>
+	)}
+</div>
