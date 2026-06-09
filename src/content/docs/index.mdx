@@ -1,42 +1,25 @@
 ---
-title: Vedo'khilo Dharmamūlaṃ
+title: वेदोऽखिलो धर्ममूलं
+slug: index
 description: Vaidhika Dharma (Vaidhikadharma.org) helps to follow our religious way of life. Anushtanam (rituals), Dharma (ethics) and Swaadhyaya (study of the scriptures).
 template: splash
-lastUpdated: 2025-06-17
+lastUpdated: 2025-06-16
 tableOfContents: false
 hero:
-  tagline: Nārāyaṇaṃ padmabhuvaṃ vaśiṣṭhaṃ śaktiṃ ca tatputraṃ parāśaraṃ ca Vyāsaṃ śukaṃ gauḍpadaṃ mahāntaṃ govindayogīndraṃ athāsya śiṣyam .<br><br> Śrī śaṃkarācāryaṃ athāsya padmapādaṃ ca hastāmlakaṃ ca śiṣyam Taṃ toṭakaṃ vārttikakāramanyān asmad gurūn santatamānto'smi ..
+  tagline: नारायणं पद्मभुवं वशिष्ठं शक्तिं च तत्पुत्रं पराशरं च व्यासं शुकं गौडपदं महान्तं गोविन्दयोगीन्द्रं अथास्य शिष्यम् ।<br />
+           श्री शंकराचार्यं अथास्य पद्मपादं च हस्तामलकं च शिष्यम् तं तोटकं वार्त्तिककारमन्यान् अस्मद् गुरून् सन्ततमानतोऽस्मि ॥
   image:
     file: ../../assets/images/sankara.webp
   actions:
-    - text: Nityakarma
-      link: /aswalayana-sandhyavandanam/
+    - text: नित्यकर्म
+      link: /aswalayana-sandhyavandanam/prata/
       icon: right-arrow
-    - text: Veda Mantras
-      link: /rigveda-sukta-sangraha/
+    - text: "वेद मन्त्राः"
+      link: /brahmanaspati-suktam/
       variant: secondary
       icon: right-arrow
 ---
 
-import CategoryTree from '/src/components/CategoryTree.astro';
-import HomeSidebar from '/src/components/HomeSidebar.astro';
-import HomeSearchHint from '/src/components/HomeSearchHint.astro';
+import HomePage from '/src/components/HomePage.astro';
 
-<div class="main-container">
-  <div class="content-column">
-    <h4 style={{textAlign: 'center', marginBottom: '1em'}}>śrī gurubhyo nama​:</h4>
-
-    <div class="home-intro">
-      <p>
-        Vaidhika Dharma is a guide to living the Vedic way — daily <em>anuṣṭhāna</em> (rituals),
-        <em>dharma</em> (right conduct), and <em>svādhyāya</em> (study of the scriptures).
-        Choose a section below to begin.
-      </p>
-      <HomeSearchHint locale="root" />
-    </div>
-
-    <CategoryTree locale="root" />
-  </div>
-
-  <HomeSidebar locale="root" />
-</div>
+<HomePage locale="root" salutation="श्री गुरुभ्यो नम:" />

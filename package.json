@@ -7,9 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:clean": "rm -rf .astro node_modules/.astro && astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "sync": "astro sync",
     "astro": "astro"
   },
   "dependencies": {
