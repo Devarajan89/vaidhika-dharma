@@ -1,0 +1,61 @@
+---
+import type { HomeLocale } from '../../data/home';
+import type { RitualVariant } from './sandhya-types';
+import { toLocaleKey } from './sandhya-types';
+import { getBrahmayagyaTarpanaBlocks } from './brahmayagya-tarpana-data';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+	variant?: RitualVariant;
+}
+
+const { locale = 'root', variant = 'aswalayana' } = Astro.props;
+const blocks = getBrahmayagyaTarpanaBlocks(toLocaleKey(locale), variant);
+
+function stripEmphasis(text: string): string {
+	return text.replace(/^\*+|\*+$/g, '').trim();
+}
+---
+
+<div class="ritual-step brahmayagya-tarpanam">
+	{
+		blocks.map((block) => (
+			<div class="tarpana-block">
+				{block.instruction && (
+					<p>
+						<em>{stripEmphasis(block.instruction)}</em>
+					</p>
+				)}
+				{block.label && <p class="ritual-meta">{block.label}</p>}
+				{block.note && (
+					<p>
+						<em>{stripEmphasis(block.note)}</em>
+					</p>
+				)}
+				<table>
+					<tbody>
+						{block.rows.map((row) => (
+							<tr>
+								{row.map((cell) => {
+									const colspan = row.length === 1 && block.columns > 1 ? block.columns : undefined;
+									return cell.includes('<') ? (
+										<td colspan={colspan} set:html={cell} />
+									) : (
+										<td colspan={colspan}>{cell}</td>
+									);
+								})}
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		))
+	}
+</div>
+
+<style>
+	.tarpana-block + .tarpana-block {
+		margin-top: 0.75em;
+	}
+</style>

@@ -80,8 +80,10 @@ if (image) {
 			display: grid;
 			grid-template-columns: 100%;
 			align-items: start;
-			gap: 1rem;
-			padding-bottom: 1rem;
+			gap: 1.25rem;
+			padding-bottom: 1.5rem;
+			margin-bottom: 0.5rem;
+			border-bottom: 1px solid var(--sl-color-gray-5);
 			overflow: visible;
 		}
 
@@ -120,8 +122,9 @@ if (image) {
 		}
 
 		.tagline {
-			font-size: clamp(var(--sl-text-base), calc(0.0625rem + 2vw), var(--sl-text-xl));
-			color: var(--sl-color-gray-2);
+			font-size: clamp(var(--sl-text-base), calc(0.0625rem + 2vw), var(--sl-text-lg));
+			line-height: 1.9;
+			color: var(--sl-color-gray-3);
 		}
 
 		.actions {

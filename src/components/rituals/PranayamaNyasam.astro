@@ -1,0 +1,57 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const titles = { root: 'प्राणायाम - न्यासं', iast: 'Prāṇāyāma  nyāsaṃ' } as const;
+
+const instruction = {
+	iast: 'While reciting the following mantras, touch the aṅga (parts) indicated for each mantra.',
+} as const;
+
+const items = {
+	root: [
+		'प्रणवस्य ऋषि: ब्रह्मा, देवी गायत्री छंद​:, परमात्मा देवता',
+		'भूरादि सप्त व्याह्रुतीनाम् अत्रि - भ्रुगु - कुत्स - वसिष्ठ - गौतम - काष्यप - आङ्गीरस​ ऋषय:',
+		'गायत्रि - उष्णिक् - अनुष्टुप् - ब्रुहती - पङ्ती - त्रिष्टुप् - जगत्यश्छ्न्दांसि',
+		'अग्नि - वायु - अर्क - वागीश - वरुण - इन्द्र - विश्वेदेवा देवता: प्राणायामे विनियोग:',
+	],
+	iast: [
+		'Praṇavasya ṛṣi: brahmā (Head), devī gāyatrī chanda​: (Nose tip), paramātmā devatā (Chest)',
+		'Bhūrādi sapta vyāhrutīnām atri - bhrugu - kutsa - vasiṣṭha - gautama - kāṣyapa - āṅgīrasa​ ṛṣaya: (Head)',
+		'Gāyatri - uṣṇik - anuṣṭup - bruhatī - paṅtī - triṣṭup - jagatyaśchndāṃsi (Nose tip)',
+		'Agni - vāyu - arka - vāgīśa - varuṇa - indra - viśvedevā devatā: (Chest) prāṇāyāme viniyoga:',
+	],
+} as const;
+---
+
+<div class="ritual-step pranayama-nyasam">
+	<h5>{titles[localeKey]}</h5>
+
+	{localeKey === 'iast' && <p><em>{instruction.iast}</em></p>}
+
+	<ul>
+		{items[localeKey].map((item) => (
+			<li>{item}</li>
+		))}
+	</ul>
+</div>
+
+<style>
+	.pranayama-nyasam ul {
+		margin: 0.5em 0 1em;
+		padding-left: 1.25rem;
+	}
+
+	.pranayama-nyasam li {
+		margin: 0.35em 0;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+</style>

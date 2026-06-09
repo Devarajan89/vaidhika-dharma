@@ -1,0 +1,16 @@
+---
+import type { HomeLocale } from '../../data/home';
+import RitualNote from '../RitualNote.astro';
+import RitualPageShell from './RitualPageShell.astro';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+---
+
+<RitualPageShell {locale}>
+	<RitualNote {locale} />
+	<slot />
+</RitualPageShell>

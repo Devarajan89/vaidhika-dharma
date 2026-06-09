@@ -1,5 +1,6 @@
 ---
 import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
 
 interface Props {
 	locale?: HomeLocale;
@@ -23,6 +24,10 @@ const saBlock = {
 
 const blocks = {
 	root: {
+		full: saBlock,
+		compact: saBlock,
+	},
+	iast: {
 		full: {
 			title: 'Ācamanaṃ',
 			waterInstruction:
@@ -60,114 +65,94 @@ const blocks = {
 			],
 		},
 	},
-	sa: {
-		full: saBlock,
-		compact: saBlock,
-	},
 } as const;
 
-const block = blocks[locale === 'ta' ? 'root' : locale][variant];
+const block = blocks[locale === 'ta' ? 'iast' : locale][variant];
 const isFullGrid = 'namas' in block && block.namas;
 const isPairGrid = 'pairs' in block && block.pairs;
 const isTripletGrid = 'triplets' in block && block.triplets;
 ---
 
-<div class="achamanam">
+<div class="ritual-step achamanam">
 	<h5>{block.title}</h5>
 
-	{block.waterInstruction && <p><em>{block.waterInstruction}</em></p>}
+	{block.waterInstruction && (
+		<p class="ritual-instruction"><em>{block.waterInstruction}</em></p>
+	)}
 
-	<table>
-		<tbody>
-			<tr>
-				{block.mantras.map((mantra) => (
-					<td>{mantra}</td>
-				))}
-			</tr>
-		</tbody>
-	</table>
+	<div class="ritual-table-wrap">
+		<table>
+			<tbody>
+				<tr>
+					{block.mantras.map((mantra) => (
+						<td>{mantra}</td>
+					))}
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
-	{block.touchInstruction && <p><em>{block.touchInstruction}</em></p>}
+	{block.touchInstruction && (
+		<p class="ritual-instruction"><em>{block.touchInstruction}</em></p>
+	)}
 
 	{
 		isFullGrid && (
-			<table>
-				<thead>
-					<tr>
-						<th>Nāma</th>
-						<th>Finger</th>
-						<th>Touch</th>
-					</tr>
-				</thead>
-				<tbody>
-					{block.namas!.map((row) => (
+			<div class="ritual-table-wrap">
+				<table>
+					<thead>
 						<tr>
-							<td>{row.nama}</td>
-							<td>{row.finger}</td>
-							<td>{row.limb}</td>
+							<th>Nāma</th>
+							<th>Finger</th>
+							<th>Touch</th>
 						</tr>
-					))}
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						{block.namas!.map((row) => (
+							<tr>
+								<td>{row.nama}</td>
+								<td>{row.finger}</td>
+								<td>{row.limb}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
 		)
 	}
 
 	{
 		isPairGrid && (
-			<table>
-				<tbody>
-					{block.pairs!.map(([left, right]) => (
-						<tr>
-							<td>{left}</td>
-							<td>{right}</td>
-						</tr>
-					))}
-				</tbody>
-			</table>
+			<div class="ritual-table-wrap">
+				<table>
+					<tbody>
+						{block.pairs!.map(([left, right]) => (
+							<tr>
+								<td>{left}</td>
+								<td>{right}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
 		)
 	}
 
 	{
 		isTripletGrid && (
-			<table>
-				<tbody>
-					{block.triplets!.map((row) => (
-						<tr>
-							{row.map((nama) => (
-								<td>{nama}</td>
-							))}
-						</tr>
-					))}
-				</tbody>
-			</table>
+			<div class="ritual-table-wrap">
+				<table>
+					<tbody>
+						{block.triplets!.map((row) => (
+							<tr>
+								{row.map((nama) => (
+									<td>{nama}</td>
+								))}
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
 		)
 	}
 </div>
-
-<style>
-	.achamanam {
-		margin: 0;
-	}
-
-	.achamanam h5 {
-		margin-top: 1.25em;
-		margin-bottom: 0.5em;
-	}
-
-	.achamanam p,
-	.achamanam table {
-		margin: 0.5em 0 1em;
-	}
-
-	.achamanam table {
-		width: 100%;
-		border-collapse: collapse;
-	}
-
-	.achamanam th,
-	.achamanam td {
-		border: 1px solid var(--sl-color-gray-5);
-		padding: 0.4rem 0.6rem;
-		text-align: left;
-	}
-</style>

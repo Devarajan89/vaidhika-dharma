@@ -1,0 +1,31 @@
+---
+import type { HomeLocale } from '../../data/home';
+import type { RitualVariant, SandhyaTime } from './sandhya-types';
+import { toLocaleKey } from './sandhya-types';
+import { getPrashanamBlock } from './prashanam-data';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+	time?: SandhyaTime;
+}
+
+const { locale = 'root', variant, time = 'prata' } = Astro.props;
+const localeKey = toLocaleKey(locale);
+const block = getPrashanamBlock(localeKey, variant, time);
+---
+
+<div class="ritual-step prashanam">
+	<h5>{block.title}</h5>
+
+	{block.instruction && <p><em>{block.instruction}</em></p>}
+
+	{block.meta && <p class="ritual-meta" set:html={block.meta} />}
+
+	<blockquote>
+		<p>{block.mantra}</p>
+	</blockquote>
+
+	{block.afterNote && <p><em>{block.afterNote}</em></p>}
+</div>

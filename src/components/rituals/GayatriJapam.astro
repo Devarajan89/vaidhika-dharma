@@ -1,0 +1,37 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const titles = { root: 'गायत्री जपम्', iast: 'Gāyatrī japam' } as const;
+
+const mantra = {
+	root: 'ऒं तत्स॑वि॒तुर्वरे॑ण्यं॒ भर्गो॑ दे॒वस्य॑ धीमहि । धियो॒ योन॑: प्रचो॒दया॑॑त् ॥',
+	iast: 'Ŏṃ tatsa̍vi̱turvare̍ṇya̱ṃ bhargo̍ de̱vasya̍ dhīmahi . Dhiyo̱ yona̍: praco̱dayā̍̍t ..',
+} as const;
+
+const afterNote = {
+	root: 'कणिष्ठिकामूलमारभ्य प्रादक्षिण्येन गणयन् यथासङ्कल्पं पन्चावसानं गायत्री मन्त्रं जपेत्',
+	iast: 'Chant 108, 64, or 32 times—or at least 16 times—and then perform prāṇāyāma.',
+} as const;
+---
+
+<div class="ritual-step gayatri-japam">
+	<h5>{titles[localeKey]}</h5>
+
+	<blockquote>
+		<p>{mantra[localeKey]}</p>
+	</blockquote>
+
+	{localeKey === 'iast' ? (
+		<p><strong>{afterNote.iast}</strong></p>
+	) : (
+		<p><em>{afterNote.root}</em></p>
+	)}
+</div>

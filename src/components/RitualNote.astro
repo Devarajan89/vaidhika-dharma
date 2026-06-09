@@ -1,0 +1,27 @@
+---
+import Aside from '../../node_modules/@astrojs/starlight/user-components/Aside.astro';
+import type { HomeLocale } from '../data/home';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+
+const copy = {
+	root: {
+		title: 'सूचना',
+		body: 'मन्त्रोच्चारणे स्वरशिक्षणं गुरोः समीपे एव कर्तव्यम् ।',
+	},
+	iast: {
+		title: 'Note',
+		body: "It is important to learn the svaras for chanting the mantras from one's Guru.",
+	},
+} as const;
+
+const { title, body } = copy[locale === 'ta' ? 'iast' : locale];
+---
+
+<Aside type="caution" {title}>
+	{body}
+</Aside>

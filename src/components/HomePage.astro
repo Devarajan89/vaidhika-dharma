@@ -1,0 +1,35 @@
+---
+import CategoryTree from './CategoryTree.astro';
+import HomeSearchHint from './HomeSearchHint.astro';
+import HomeSidebar from './HomeSidebar.astro';
+import type { HomeLocale } from '../data/home';
+
+interface Props {
+	locale: HomeLocale;
+	salutation: string;
+}
+
+const { locale, salutation } = Astro.props;
+---
+
+<div class="main-container">
+	<div class="content-column">
+		<header class="home-header">
+			<p class="home-salutation">{salutation}</p>
+			<div class="home-intro">
+				<p>
+					Vaidhika Dharma is a guide to living the Vedic way — daily <em>anuṣṭhāna</em> (rituals),
+					<em>dharma</em> (right conduct), and <em>svādhyāya</em> (study of the scriptures).
+				</p>
+				<HomeSearchHint />
+			</div>
+		</header>
+
+		<section class="home-browse" aria-labelledby="home-browse-heading">
+			<h2 id="home-browse-heading" class="home-browse__heading">Browse</h2>
+			<CategoryTree locale={locale} />
+		</section>
+	</div>
+
+	<HomeSidebar locale={locale} />
+</div>

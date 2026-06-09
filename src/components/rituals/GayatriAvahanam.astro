@@ -1,0 +1,159 @@
+---
+import type { HomeLocale } from '../../data/home';
+import './ritual-styles.css';
+
+type RitualVariant = 'aswalayana' | 'apastamba';
+type SandhyaTime = 'prata' | 'madhyahnika' | 'sayam';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+	time?: SandhyaTime;
+}
+
+const { locale = 'root', variant, time = 'prata' } = Astro.props;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+
+const titles = { root: 'गायत्री आवाहनम्', iast: 'Gāyatrī āvāhanam' } as const;
+
+const japaViniyoga = {
+	root: {
+		prata: '**विष्वामित्र ऋषि: । सविता देवता । निचृत् गायत्री छंद​: - प्रात​: सन्ध्या जपे विनियोग​:**',
+		madhyahnika: '**विष्वामित्र ऋषि: । सविता देवता । निचृत् गायत्री छंद​: - प्रात​: सन्ध्या जपे विनियोग​:**',
+		sayam: '**विष्वामित्र ऋषि: । सविता देवता । निचृत् गायत्री छंद​: - प्रात​: सन्ध्या जपे विनियोग​:**',
+	},
+	iast: {
+		prata: '**viṣvāmitra ṛṣi: . savitā devatā . nicṛt gāyatrī chaṃda​: - prāta​: sandhyā jape viniyoga​:**',
+		madhyahnika: '**viṣvāmitra ṛṣi: . savitā devatā . nicṛt gāyatrī chaṃda​: - prāta​: sandhyā jape viniyoga​:**',
+		sayam: '**viṣvāmitra ṛṣi: . savitā devatā . nicṛt gāyatrī chaṃda​: - prāta​: sandhyā jape viniyoga​:**',
+	},
+} as const;
+
+const blocks = {
+	root: {
+		aswalayana: {
+			avahanaMeta:
+				'**आयात्विति अनुवाकस्य वामदेव ऋषि: । अनुष्टुप् छंद​: । गायत्री देवता - गायत्री आवाहने विनियोग:**',
+			mantra: [
+				'आया॑तु॒ वर॑दा दे॒वि॒ अ॒क्षरं॑ ब्रह्म॒ सम्मि॑तम् । गा॒य॒त्री॑म् छंद॑सांमा॒तेतम् ब्र॑ह्म जु॒षस्व॑मे ॥',
+				'ओजो॑सि॒ - सहो॑सि॒ - बल॑मसि॒ - भ्राजो॑सि - दे॒वाना॒म् धाम॒नामा॑सि॒ - विश्व॑मसि वि॒श्वायु॒: सर्व॑मसि स॒र्वायुरभिभूरोम्',
+			],
+			inviteItems: [
+				'गायत्रीं आवाहयामि',
+				'सावित्रीं आवाहयामि',
+				'सरस्वतीं आवाहयामि',
+			],
+			afterInvite: 'इति गायत्रीं सूर्य मण्डले स्वहृदये वा आवाह्य​',
+		},
+		apastamba: {
+			avahanaMeta:
+				'**आयात्विति अनुवाकस्य वामदेव ऋषि:, अनुष्टुप् छंद​:, गायत्री देवता आवाहने विनियोग:**',
+			mantra: [
+				'आया॑तु॒ वर॑दा दे॒वि॒ अ॒क्षरं॑ ब्रह्म॒ सम्मि॑तम् । गा॒य॒त्री॑म् छंद॑सांमा॒तेतम् ब्र॑ह्म जु॒षस्व॑मे ॥',
+				'ओजो॑सि॒ - सहो॑सि॒ - बल॑मसि॒ - भ्राजो॑सि - दे॒वाना॒म् धाम॒नामा॑सि॒ - विश्व॑मसि वि॒श्वायु॒: सर्व॑मसि स॒र्वायुरभिभूरोम्',
+			],
+			inviteItems: [
+				'गायत्रीं आवाहयामि',
+				'सावित्रीं आवाहयामि',
+				'सरस्वतीं आवाहयामि',
+			],
+			afterInvite: 'इति गायत्रीं सूर्य मण्डले स्वहृदये वा आवाह्य​',
+		},
+	},
+	iast: {
+		aswalayana: {
+			instruction:
+				'While reciting the following mantras, touch the aṅga (parts) indicated for each mantra.',
+			avahanaMeta:
+				'**āyātviti anuvākasya vāmadeva ṛṣi: . anuṣṭup chaṃda​: . gāyatrī devatā - gāyatrī āvāhane viniyoga:**',
+			mantra: [
+				'Āyā̍tu̱ vara̍dā de̱vi̱ a̱kṣara̍ṃ brahma̱ sammi̍tam . Gā̱ya̱trī̍m chanda̍sāṃmā̱tetam bra̍hma ju̱ṣasva̍me ..',
+				'Ojo̍si̱ - saho̍si̱ - bala̍masi̱ - bhrājo̍si - de̱vānā̱m dhāma̱nāmā̍si̱ - viśva̍masi vi̱śvāyu̱: sarva̍masi sa̱rvāyurabhibhūrom',
+			],
+			inviteInstruction:
+				'Bring both palms together as if inviting, while saying "avahayami."',
+			inviteItems: [
+				'Gāyatrīṃ āvāhayāmi',
+				'sāvitrīṃ āvāhayāmi',
+				'sarasvatīṃ āvāhayāmi',
+			],
+		},
+		apastamba: {
+			instruction:
+				'While reciting the following mantras, touch the aṅga (parts) indicated for each mantra.',
+			avahanaMetaInline:
+				'Āyātviti anuvākasya vāmadeva ṛṣi: (Head), anuṣṭup chanda​: (Nose tip), gāyatrī devatā (Chest) āvāhane viniyoga:',
+			mantra: [
+				'Āyā̍tu̱ vara̍dā de̱vi̱ a̱kṣara̍ṃ brahma̱ sammi̍tam . Gā̱ya̱trī̍m chanda̍sāṃmā̱tetam bra̍hma ju̱ṣasva̍me ..',
+				'Ojo̍si̱ - saho̍si̱ - bala̍masi̱ - bhrājo̍si - de̱vānā̱m dhāma̱nāmā̍si̱ - viśva̍masi vi̱śvāyu̱: sarva̍masi sa̱rvāyurabhibhūrom',
+			],
+			inviteInstruction:
+				'Bring both palms together as if inviting, while saying "avahayami."',
+			inviteItems: [
+				'Gāyatrīṃ āvāhayāmi',
+				'sāvitrīṃ āvāhayāmi',
+				'sarasvatīṃ āvāhayāmi',
+			],
+		},
+	},
+} as const;
+
+const block = blocks[localeKey][variant];
+---
+
+<div class="ritual-step gayatri-avahanam">
+	<h5>{titles[localeKey]}</h5>
+
+	{'instruction' in block && block.instruction && <p><em>{block.instruction}</em></p>}
+
+	{'avahanaMeta' in block && block.avahanaMeta && (
+		<p class="ritual-meta" set:html={block.avahanaMeta} />
+	)}
+
+	{'avahanaMetaInline' in block && block.avahanaMetaInline ? (
+		<blockquote>
+			<p>{block.avahanaMetaInline}</p>
+			{block.mantra.map((line) => (
+				<p>{line}</p>
+			))}
+		</blockquote>
+	) : (
+		<blockquote>
+			{block.mantra.map((line) => (
+				<p>{line}</p>
+			))}
+		</blockquote>
+	)}
+
+	{'inviteInstruction' in block && block.inviteInstruction && (
+		<p><em>{block.inviteInstruction}</em></p>
+	)}
+
+	<ul class="ritual-list">
+		{block.inviteItems.map((item) => (
+			<li>{item}</li>
+		))}
+	</ul>
+
+	{'afterInvite' in block && block.afterInvite && (
+		<p><em>{block.afterInvite}</em></p>
+	)}
+
+	{variant === 'aswalayana' && (
+		<p class="ritual-meta" set:html={japaViniyoga[localeKey][time]} />
+	)}
+</div>
+
+<style>
+	.gayatri-avahanam .ritual-list {
+		margin: 0.5em 0 1em;
+		padding-left: 1.25rem;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+
+	.gayatri-avahanam .ritual-list li {
+		margin: 0.15em 0;
+	}
+</style>

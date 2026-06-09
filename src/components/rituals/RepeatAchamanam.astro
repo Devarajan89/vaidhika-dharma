@@ -1,0 +1,76 @@
+---
+import type { HomeLocale } from '../../data/home';
+import Achamanam from './Achamanam.astro';
+
+interface Props {
+	locale?: HomeLocale;
+	label?: string;
+	open?: boolean;
+}
+
+const { locale = 'root', label, open = false } = Astro.props;
+
+const defaultLabels = {
+	root: 'आचमनं — पुनः',
+	iast: 'Ācamanaṃ — repeat',
+} as const;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+const summary = label ?? defaultLabels[localeKey];
+---
+
+<details class="ritual-repeat-step" open={open}>
+	<summary>{summary}</summary>
+	<Achamanam locale={locale} variant="compact" />
+</details>
+
+<style>
+	.ritual-repeat-step {
+		margin: 0.75em 0 1em;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background: var(--sl-color-gray-7);
+		overflow: hidden;
+	}
+
+	:global([data-theme='light']) .ritual-repeat-step {
+		background: var(--color-gray-100);
+		border-color: var(--color-gray-300);
+	}
+
+	.ritual-repeat-step summary {
+		padding: 0.55rem 0.85rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+		cursor: pointer;
+		list-style: none;
+	}
+
+	.ritual-repeat-step summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.ritual-repeat-step[open] summary {
+		border-bottom: 1px solid var(--sl-color-gray-5);
+	}
+
+	.ritual-repeat-step :global(.achamanam) {
+		padding: 0.5rem 0.85rem 0.85rem;
+	}
+
+	@media print {
+		.ritual-repeat-step {
+			border: none;
+			background: none;
+		}
+
+		.ritual-repeat-step summary {
+			display: none;
+		}
+
+		.ritual-repeat-step :global(.achamanam) {
+			padding: 0;
+		}
+	}
+</style>

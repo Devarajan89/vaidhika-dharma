@@ -1,0 +1,24 @@
+---
+import RitualNote from '../RitualNote.astro';
+import VerseNav from './VerseNav.astro';
+import type { HomeLocale } from '../../data/home';
+
+interface Props {
+	locale?: HomeLocale;
+	showVerseNav?: boolean;
+}
+
+const { locale = 'root', showVerseNav = false } = Astro.props;
+---
+
+<div class="sukta-page">
+	<RitualNote {locale} />
+	{showVerseNav && <VerseNav {locale} />}
+	<slot />
+</div>
+
+<style>
+	.sukta-page :global(.starlight-aside) {
+		margin-bottom: 1.5rem;
+	}
+</style>

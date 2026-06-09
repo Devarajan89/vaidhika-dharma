@@ -1,0 +1,77 @@
+.ritual-step {
+	margin: 0;
+}
+
+.ritual-step h5 {
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+}
+
+.ritual-step p {
+	margin: 0.5em 0;
+}
+
+.ritual-step p em {
+	color: var(--sl-color-gray-3);
+	font-style: italic;
+	font-size: 0.9375rem;
+}
+
+.ritual-step .ritual-instruction {
+	margin: 0.5em 0;
+}
+
+.ritual-step .ritual-table-wrap {
+	overflow-x: auto;
+	margin: 0.5em 0 1em;
+	-webkit-overflow-scrolling: touch;
+}
+
+.ritual-step .ritual-table-wrap table {
+	margin: 0;
+	min-width: 16rem;
+}
+
+.ritual-step blockquote {
+	margin: 0.5em 0 1em;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+.ritual-step blockquote p {
+	margin: 0;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.ritual-step .ritual-meta {
+	font-size: 0.9375rem;
+	font-weight: 600;
+	color: var(--sl-color-gray-2);
+	margin: 0.5em 0;
+}
+
+.ritual-step table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.9375rem;
+	line-height: 1.55;
+	margin: 0.5em 0 1em;
+}
+
+.ritual-step th,
+.ritual-step td {
+	border: 1px solid var(--sl-color-gray-5);
+	padding: 0.55rem 0.75rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+.ritual-step tbody tr:nth-child(even) {
+	background: var(--sl-color-gray-7);
+}
+
+:global([data-theme='light']) .ritual-step tbody tr:nth-child(even) {
+	background: var(--color-gray-100);
+}

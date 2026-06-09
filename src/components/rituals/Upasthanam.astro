@@ -1,0 +1,75 @@
+---
+import type { HomeLocale } from '../../data/home';
+import {
+	getUpasthanaBlock,
+	type RitualVariant,
+	type SandhyaTime,
+} from './upasthanam-data';
+import './ritual-styles.css';
+
+interface Props {
+	locale?: HomeLocale;
+	variant: RitualVariant;
+	time?: SandhyaTime;
+}
+
+const { locale = 'root', variant, time = 'prata' } = Astro.props;
+
+const localeKey = locale === 'ta' ? 'iast' : locale;
+const block = getUpasthanaBlock(localeKey, variant, time);
+---
+
+<div class="ritual-step upasthanam">
+	{variant === 'aswalayana' && <h5>{block.title}</h5>}
+
+	{block.instruction && <p><em>{block.instruction}</em></p>}
+
+	{block.opening?.map((section) => (
+		<>
+			{section.meta && <p class="ritual-meta" set:html={section.meta} />}
+			<blockquote>
+				{section.lines.map((line) => (
+					<p>{line}</p>
+				))}
+			</blockquote>
+			{section.afterNote && <p><em>{section.afterNote}</em></p>}
+		</>
+	))}
+
+	{block.shared?.map((section) => (
+		<>
+			{section.beforeNote && <p><em>{section.beforeNote}</em></p>}
+			{section.meta && <p class="ritual-meta" set:html={section.meta} />}
+			<blockquote>
+				{section.lines.map((line) => (
+					<p>{line}</p>
+				))}
+			</blockquote>
+		</>
+	))}
+
+	{block.directionIntro && <p><em>{block.directionIntro}</em></p>}
+
+	<table>
+		<tbody>
+			{block.directionRows.map((row) => (
+				<tr>
+					{row.cells.map((cell) => (
+						<td>{cell}</td>
+					))}
+				</tr>
+			))}
+		</tbody>
+	</table>
+
+	{block.slokas.map((sloka) => (
+		<>
+			{sloka.instruction && <p><em>{sloka.instruction}</em></p>}
+			<blockquote>
+				{sloka.text.split('\n').map((line) => (
+					<p>{line}</p>
+				))}
+			</blockquote>
+		</>
+	))}
+</div>

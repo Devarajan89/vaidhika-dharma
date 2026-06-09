@@ -8,11 +8,11 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-const { quoteTitle } = homeContent[locale];
+const { quoteTitle } = homeContent;
 const quote = getQuoteOfDay(locale);
 ---
 
-<div class="quote-card custom-card">
+<div class="quote-card home-card">
 	<Card title={quoteTitle} icon="star">
 		<blockquote>
 			<p>{quote.text}</p>
@@ -22,25 +22,14 @@ const quote = getQuoteOfDay(locale);
 </div>
 
 <style>
-	.quote-card :global(.card) {
-		background-color: var(--card-bg, var(--sl-color-gray-6));
-		border: 1px solid var(--sl-color-gray-5);
-		border-radius: 1rem;
-		padding: 1.25rem;
-		box-shadow: 0 2px 6px rgba(35, 21, 0, 0.05);
-	}
-
-	:global(:root[data-theme='light']) .quote-card {
-		--card-bg: var(--color-gray-100);
-	}
-
 	.quote-card blockquote {
 		margin: 0;
 		padding: 0;
 		border: none;
-		font-style: italic;
+		font-style: normal;
 		color: var(--sl-color-gray-1);
-		line-height: 1.7;
+		line-height: 1.85;
+		font-size: 1.1875rem;
 	}
 
 	.quote-card blockquote p {
@@ -49,7 +38,7 @@ const quote = getQuoteOfDay(locale);
 
 	.quote-card footer {
 		font-style: normal;
-		font-size: 0.8rem;
+		font-size: 0.8125rem;
 		color: var(--sl-color-gray-3);
 	}
 </style>
