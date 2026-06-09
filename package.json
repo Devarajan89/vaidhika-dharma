@@ -21,6 +21,7 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
+    "@vm75/inditrans": "^0.7.0",
     "autoprefixer": "^10.5.0",
     "postcss": "^8.5.15",
     "tailwindcss": "^4.3.0"
