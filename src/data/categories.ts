@@ -13,6 +13,34 @@ export interface CategoryNode {
 	defaultOpen?: boolean;
 }
 
+const rigvedaShakalaSamhitaMandalas: CategoryNode[] = [
+	{ label: 'संपूर्ण सूची', href: '/rigveda-samhita/' },
+	{ label: 'प्रथम मण्डल', href: '/rigveda-samhita/#mandala-1' },
+	{ label: 'द्वितीय मण्डल', href: '/rigveda-samhita/#mandala-2' },
+	{ label: 'तृतीय मण्डल', href: '/rigveda-samhita/#mandala-3' },
+	{ label: 'चतुर्थ मण्डल', href: '/rigveda-samhita/#mandala-4' },
+	{ label: 'पञ्चम मण्डल', href: '/rigveda-samhita/#mandala-5' },
+	{ label: 'षष्ठ मण्डल', href: '/rigveda-samhita/#mandala-6' },
+	{ label: 'सप्तम मण्डल', href: '/rigveda-samhita/#mandala-7' },
+	{ label: 'अष्टम मण्डल', href: '/rigveda-samhita/#mandala-8' },
+	{ label: 'नवम मण्डल', href: '/rigveda-samhita/#mandala-9' },
+	{ label: 'दशम मण्डल', href: '/rigveda-samhita/#mandala-10' },
+];
+
+const iastRigvedaShakalaSamhitaMandalas: CategoryNode[] = [
+	{ label: 'Full Index', href: '/iast/rigveda-samhita/' },
+	{ label: 'Prathama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-1' },
+	{ label: 'Dvitīya Maṇḍala', href: '/iast/rigveda-samhita/#mandala-2' },
+	{ label: 'Tṛtīya Maṇḍala', href: '/iast/rigveda-samhita/#mandala-3' },
+	{ label: 'Caturtha Maṇḍala', href: '/iast/rigveda-samhita/#mandala-4' },
+	{ label: 'Pañcama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-5' },
+	{ label: 'Ṣaṣṭha Maṇḍala', href: '/iast/rigveda-samhita/#mandala-6' },
+	{ label: 'Saptama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-7' },
+	{ label: 'Aṣṭama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-8' },
+	{ label: 'Navama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-9' },
+	{ label: 'Daśama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-10' },
+];
+
 const rigvedaSuktaSangraha: CategoryNode[] = [
 	{ label: 'ब्रह्मणस्पति सूक्तम्', href: '/brahmanaspati-suktam/' },
 	{ label: 'गणपति सूक्तम्', href: '/ganapathy-suktam/' },
@@ -159,10 +187,12 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		},
 		{
 			label: 'संहिताः',
+			defaultOpen: true,
 			children: [
 				{
 					label: 'शाकल संहिता (ऋग्वेद)',
-					badge: { text: 'In Progress', variant: 'danger' },
+					defaultOpen: true,
+					children: rigvedaShakalaSamhitaMandalas,
 				},
 			],
 		},
@@ -242,10 +272,12 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		},
 		{
 			label: 'Samhita',
+			defaultOpen: true,
 			children: [
 				{
 					label: 'Shakala Samhita (Rigveda)',
-					badge: { text: 'In Progress', variant: 'danger' },
+					defaultOpen: true,
+					children: iastRigvedaShakalaSamhitaMandalas,
 				},
 			],
 		},
