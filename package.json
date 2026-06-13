@@ -12,6 +12,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "sync": "astro sync",
+    "generate:rigveda-suktas": "node scripts/generate-rigveda-suktas.mjs",
+    "generate:rigveda-suktas:all": "MANDALA_LIMIT=10 node scripts/generate-rigveda-suktas.mjs",
+    "generate:rigveda-suktas:root": "SKIP_IAST=1 node scripts/generate-rigveda-suktas.mjs",
     "astro": "astro"
   },
   "dependencies": {

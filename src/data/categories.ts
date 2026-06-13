@@ -27,6 +27,18 @@ const rigvedaShakalaSamhitaMandalas: CategoryNode[] = [
 	{ label: 'दशम मण्डल', href: '/rigveda-samhita/#mandala-10' },
 ];
 
+const kanvaSamhitaChapters: CategoryNode[] = [
+	{ label: 'संपूर्ण सूची', href: '/kanva-samhita/' },
+	{ label: 'प्रथमोऽध्यायः', href: '/kanva-samhita/chapter-01/' },
+	{ label: 'ईशावास्योपनिषद् (४०)', href: '/kanva-samhita/chapter-40/' },
+];
+
+const iastKanvaSamhitaChapters: CategoryNode[] = [
+	{ label: 'Full Index', href: '/iast/kanva-samhita/' },
+	{ label: 'Chapter 1', href: '/iast/kanva-samhita/chapter-01/' },
+	{ label: 'Īśā Upaniṣad (40)', href: '/iast/kanva-samhita/chapter-40/' },
+];
+
 const iastRigvedaShakalaSamhitaMandalas: CategoryNode[] = [
 	{ label: 'Full Index', href: '/iast/rigveda-samhita/' },
 	{ label: 'Prathama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-1' },
@@ -194,6 +206,11 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					defaultOpen: true,
 					children: rigvedaShakalaSamhitaMandalas,
 				},
+				{
+					label: 'काण्व संहिता (शुक्लयजुर्वेद)',
+					defaultOpen: true,
+					children: kanvaSamhitaChapters,
+				},
 			],
 		},
 		{
@@ -208,6 +225,10 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		{
 			label: 'उपनिषद्',
 			children: [
+				{
+					label: 'ईशावास्योपनिषद् (शुक्लयजुर्वेद)',
+					href: '/kanva-samhita/chapter-40/',
+				},
 				{
 					label: 'ऐतरेयोपनिषद् (ऋग्वेद)',
 					badge: { text: 'In Progress', variant: 'danger' },
@@ -279,6 +300,11 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					defaultOpen: true,
 					children: iastRigvedaShakalaSamhitaMandalas,
 				},
+				{
+					label: 'Kanva Samhita (Shukla Yajurveda)',
+					defaultOpen: true,
+					children: iastKanvaSamhitaChapters,
+				},
 			],
 		},
 		{
@@ -293,6 +319,10 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		{
 			label: 'Upanishad',
 			children: [
+				{
+					label: 'Īśāvāsya Upaniṣad (Shukla Yajurveda)',
+					href: '/iast/kanva-samhita/chapter-40/',
+				},
 				{
 					label: 'Aitareyopanishad (Rigveda)',
 					badge: { text: 'In Progress', variant: 'danger' },

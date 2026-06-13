@@ -11,6 +11,8 @@ export default defineConfig({
     '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
     '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',
     '/iast/apastamba-sandhyavandanam': '/iast/apastamba-sandhyavandanam/prata',
+    '/upanishads/isha-upanishad': '/kanva-samhita/chapter-40',
+    '/iast/upanishads/isha-upanishad': '/iast/kanva-samhita/chapter-40',
   },
 
   integrations: [
@@ -71,6 +73,20 @@ export default defineConfig({
                       {
                           autogenerate: {
                               directory: 'vedamantras',
+                          },
+                      },
+                  ],
+              },
+              {
+                  label: 'संहिताः',
+                  translations: {
+                      en: 'saṃhitāḥ',
+                  },
+                  items: [
+                      {
+                          autogenerate: {
+                              directory: 'samhitas',
+                              collapsed: true,
                           },
                       },
                   ],
