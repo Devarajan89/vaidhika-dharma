@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-47
 sidebar:
   label: '47 prayuñjatī'
   order: 47
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 47'
 lastUpdated: 2026-06-13
 ---

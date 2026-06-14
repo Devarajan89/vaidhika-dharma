@@ -1,140 +1,52 @@
 # Vaidhika Dharma
 
-**[vaidhikadharma.org](https://vaidhikadharma.org)** — a digital guide to the Vedic way of life: daily *anuṣṭhāna* (rituals), *dharma* (right conduct), and *svādhyāya* (study of the scriptures).
+**[vaidhikadharma.org](https://vaidhikadharma.org)** — a digital guide to the Vedic way of life: daily rituals (*nityakarma*), Vedic mantras, and scripture (*saṃhitā*).
 
-## About
-
-Vaidhika Dharma preserves and shares authentic Dharmic knowledge — Vedic rituals, mantras, and allied texts — in a form that is easy to read, search, and follow. Content is organized by tradition and practice, with support for multiple scripts and languages.
-
-## Features
-
-- **Nityakarma** — step-by-step ritual guides (e.g. sandhyāvandanam, brahmayajñam, samidhādhānam) for Āśvalāyana and Āpastamba traditions
-- **Veda Mantras** — curated mantra collections and references
-- **Multilingual** — IAST (default), Sanskrit (देवनागरी), and Tamil (தமிழ்) locales
-- **Reusable ritual blocks** — shared Astro components (e.g. `Achamanam`) to keep repeated ritual steps consistent across pages
-- **Search** — full-text search via Starlight / Pagefind
-
-## Tech stack
-
-| Layer | Technology |
-|-------|------------|
-| Framework | [Astro](https://astro.build) 6 |
-| Docs theme | [Starlight](https://starlight.astro.build) |
-| Styling | [Tailwind CSS](https://tailwindcss.com) 4 |
-| Content | Markdown / MDX in `src/content/docs/` |
-| Images | Sharp |
-| Hosting | GitHub Pages → [vaidhikadharma.org](https://vaidhikadharma.org) |
+Built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
 
 ## Local development
 
 **Requirements:** Node.js 22.12+ and npm.
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Devarajan89/vaidhika-dharma.git
 cd vaidhika-dharma
 npm install
 npm run dev
 ```
 
-Open [http://localhost:4321](http://localhost:4321). Other commands:
+Open [http://localhost:4321](http://localhost:4321).
 
 ```bash
-npm run build    # production build → dist/
-npm run preview  # serve the built site locally
+npm run build    # production build
+npm run preview  # preview the built site
 ```
 
-## Project structure
+## Repository
 
-```
-src/
-├── assets/              # logos, images
-├── components/          # Astro UI (Hero, Sidebar, CategoryTree, rituals/, …)
-├── content/
-│   ├── docs/            # main documentation
-│   │   ├── nityakarma/  # daily rituals (IAST)
-│   │   ├── vedamantras/
-│   │   ├── sa/          # Sanskrit locale
-│   │   └── ta/          # Tamil locale
-│   └── i18n/            # locale strings
-├── data/                # categories, homepage content
-├── fonts/
-└── styles/
-astro.config.mjs         # Starlight config, locales, sidebar
-```
+**https://github.com/Devarajan89/vaidhika-dharma**
 
-### Adding or editing content
-
-- Ritual pages live under `src/content/docs/nityakarma/` (and mirrored under `sa/` and `ta/`).
-- Use `.mdx` when a page needs Astro components (e.g. `<Achamanam />`, `<Achamanam locale="sa" />`).
-- English instructional text should be clear, grammatically correct, and use consistent transliteration (IAST).
-
-### Reusable ritual components
-
-Repeated ritual steps are defined once in `src/components/rituals/` and imported in MDX:
-
-```mdx
-import Achamanam from '/src/components/rituals/Achamanam.astro';
-
-<Achamanam />
-<Achamanam variant="compact" />
-<Achamanam locale="sa" />
-```
-
-## Repositories
-
-| Repository | Remote | Contents |
-|------------|--------|----------|
-| **Private (source)** | `git@github.com:Devarajan89/vaidhika-dharma-pvt.git` | Full Astro/Starlight project — develop and push here |
-| **Public (site only)** | `git@github.com:Devarajan89/vaidhika-dharma.git` | Built static files only (`dist/`); updated by CI, not by hand |
-
-```bash
-# One-time: point your local clone at the private repo
-git remote add origin git@github.com:Devarajan89/vaidhika-dharma-pvt.git
-git push -u origin main
-```
-
-Do not push source code to the public repository. Only the GitHub Action publishes there.
+Source code and deployment live in this single repository.
 
 ## Deployment
 
-Pushes to `main` on the **private** repo trigger [.github/workflows/deploy.yml](.github/workflows/deploy.yml):
+Pushes to `main` run [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which builds the site and pushes the contents of `dist/` to the **`vd`** branch.
 
-1. Check out the private repository and run `npm run build`
-2. Push the contents of `dist/` to the `main` branch of `Devarajan89/vaidhika-dharma`
+| Branch | Contents |
+|--------|----------|
+| `main` | Source code |
+| `vd` | Built static site (updated by CI) |
 
-### Required secret (private repo)
+**One-time setup** on the repository:
 
-Add this under **Settings → Secrets and variables → Actions** on `vaidhika-dharma-pvt`:
+1. **Settings → Pages → Build and deployment** — deploy from branch **`vd`**, folder **`/` (root)**
+2. **Settings → Pages → Custom domain** — set `vaidhikadharma.org` (a `CNAME` file is included in the build)
 
-| Secret | Purpose |
-|--------|---------|
-| `PUBLIC_REPO_DEPLOY_KEY` | SSH private key with **write** access to `Devarajan89/vaidhika-dharma` |
-
-Generate a deploy key and wire it up:
-
-```bash
-ssh-keygen -t ed25519 -C "vaidhika-dharma-deploy" -f deploy_key -N ""
-```
-
-1. Copy `deploy_key.pub` → public repo **Settings → Deploy keys → Add deploy key** (enable **Allow write access**)
-2. Copy the full contents of `deploy_key` (private key) → private repo secret `PUBLIC_REPO_DEPLOY_KEY`
-3. Delete the local `deploy_key` and `deploy_key.pub` files after saving them
-
-The workflow pushes over SSH (`git@github.com:...`) via `webfactory/ssh-agent`, not HTTPS, to avoid PAT URL encoding errors.
-
-### GitHub Pages (public repo)
-
-On `Devarajan89/vaidhika-dharma`, set **Settings → Pages → Build and deployment** to deploy from the **`main`** branch, folder **`/` (root)**. The custom domain [vaidhikadharma.org](https://vaidhikadharma.org) should be configured on that repository.
+No deploy keys or second repository are required.
 
 ## Contributing
 
-Contributions are welcome.
-
-- **Content** — translations, ritual corrections, or new guides via pull request
-- **Code** — UI improvements, components, accessibility, or bug fixes
-- **Feedback** — open an issue with suggestions or corrections
-
-Please keep changes focused and match existing naming, transliteration, and file layout conventions.
+Pull requests are welcome for content corrections, translations, and improvements. Please keep changes focused and match existing conventions.
 
 ## Connect
 
@@ -143,8 +55,4 @@ Please keep changes focused and match existing naming, transliteration, and file
 
 ## License
 
-Content is shared under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — free for non-commercial use with attribution.
-
----
-
-*ॐ सर्वं ज्ञानप्लावितं मङ्गलम्।*
+Content is shared under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).

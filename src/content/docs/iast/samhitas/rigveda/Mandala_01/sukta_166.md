@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-166
 sidebar:
   label: '166 tannu'
   order: 166
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 166'
 lastUpdated: 2026-06-13
 ---

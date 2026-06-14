@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-150
 sidebar:
   label: '150 पुरु'
   order: 150
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 150'
 lastUpdated: 2026-06-13
 ---

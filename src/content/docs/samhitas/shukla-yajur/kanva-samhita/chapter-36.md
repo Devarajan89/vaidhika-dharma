@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-36
 sidebar:
   label: '36 ऋच वाच'
   order: 36
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — षट्त्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

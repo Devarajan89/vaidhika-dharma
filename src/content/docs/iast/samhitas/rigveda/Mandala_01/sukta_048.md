@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-48
 sidebar:
   label: '48 saha'
   order: 48
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 48'
 lastUpdated: 2026-06-13
 ---

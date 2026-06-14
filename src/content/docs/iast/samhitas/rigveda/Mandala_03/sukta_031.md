@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-31
 sidebar:
   label: '31 śāsad'
   order: 31
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 31'
 lastUpdated: 2026-06-13
 ---

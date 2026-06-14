@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-36
 sidebar:
   label: '36 ya'
   order: 36
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 36'
 lastUpdated: 2026-06-13
 ---

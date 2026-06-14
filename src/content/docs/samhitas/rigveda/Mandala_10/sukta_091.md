@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-91
 sidebar:
   label: '91 विश्वस्य'
   order: 91
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 91'
 lastUpdated: 2026-06-13
 ---

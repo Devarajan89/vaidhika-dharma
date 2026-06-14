@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-52
 sidebar:
   label: '52 प्रति'
   order: 52
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 52'
 lastUpdated: 2026-06-13
 ---

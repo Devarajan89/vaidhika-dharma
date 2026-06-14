@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-185
 sidebar:
   label: '185 विश्व'
   order: 185
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 185'
 lastUpdated: 2026-06-13
 ---

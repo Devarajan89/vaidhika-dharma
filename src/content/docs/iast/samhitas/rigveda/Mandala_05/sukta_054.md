@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-54
 sidebar:
   label: '54 gharmastubhe'
   order: 54
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 54'
 lastUpdated: 2026-06-13
 ---

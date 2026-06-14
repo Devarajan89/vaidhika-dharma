@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-38
 sidebar:
   label: '38 देवस्य त्वा'
   order: 38
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — अष्टात्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

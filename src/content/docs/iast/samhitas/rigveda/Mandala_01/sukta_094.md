@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-94
 sidebar:
   label: '94 bhadrā'
   order: 94
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 94'
 lastUpdated: 2026-06-13
 ---

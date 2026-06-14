@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-81
 sidebar:
   label: '81 युञ्जते'
   order: 81
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 81'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-101
 sidebar:
   label: '101 प्र'
   order: 101
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 101'
 lastUpdated: 2026-06-13
 ---

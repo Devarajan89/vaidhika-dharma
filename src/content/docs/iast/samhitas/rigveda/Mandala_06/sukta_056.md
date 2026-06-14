@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-56
 sidebar:
   label: '56 ya'
   order: 56
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 56'
 lastUpdated: 2026-06-13
 ---

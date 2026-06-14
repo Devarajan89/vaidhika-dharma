@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-33
 sidebar:
   label: '33 यज्जाग्रतो दूरमुदैति'
   order: 33
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — त्रयस्त्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-140
 sidebar:
   label: '140 अग्ने'
   order: 140
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 140'
 lastUpdated: 2026-06-13
 ---

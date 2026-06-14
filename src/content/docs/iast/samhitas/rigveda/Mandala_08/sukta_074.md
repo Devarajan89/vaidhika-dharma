@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-74
 sidebar:
   label: '74 viśoviśo'
   order: 74
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 74'
 lastUpdated: 2026-06-13
 ---

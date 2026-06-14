@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-81
 sidebar:
   label: '81 apo'
   order: 81
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 81'
 lastUpdated: 2026-06-13
 ---

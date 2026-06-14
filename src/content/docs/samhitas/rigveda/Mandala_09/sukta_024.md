@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-24
 sidebar:
   label: '24 प्र'
   order: 24
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 24'
 lastUpdated: 2026-06-13
 ---

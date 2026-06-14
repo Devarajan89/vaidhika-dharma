@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-14
 sidebar:
   label: '14 vidyudratha'
   order: 14
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 14'
 lastUpdated: 2026-06-13
 ---

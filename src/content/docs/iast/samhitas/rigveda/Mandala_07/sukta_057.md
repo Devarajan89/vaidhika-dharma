@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-57
 sidebar:
   label: '57 ye'
   order: 57
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 57'
 lastUpdated: 2026-06-13
 ---

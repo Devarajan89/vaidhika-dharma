@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-28
 sidebar:
   label: '28 ye'
   order: 28
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 28'
 lastUpdated: 2026-06-13
 ---

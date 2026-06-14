@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-184
 sidebar:
   label: '184 विष्णुर्योनि'
   order: 184
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 184'
 lastUpdated: 2026-06-13
 ---

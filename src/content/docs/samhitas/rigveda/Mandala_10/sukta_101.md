@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-101
 sidebar:
   label: '101 दधिक्रामग्निमुषस'
   order: 101
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 101'
 lastUpdated: 2026-06-13
 ---

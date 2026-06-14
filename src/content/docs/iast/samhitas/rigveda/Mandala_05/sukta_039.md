@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-39
 sidebar:
   label: '39 yadindra'
   order: 39
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 39'
 lastUpdated: 2026-06-13
 ---

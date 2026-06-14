@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-66
 sidebar:
   label: '66 मर्तेष्वन्यद्दोहसे'
   order: 66
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 66'
 lastUpdated: 2026-06-13
 ---

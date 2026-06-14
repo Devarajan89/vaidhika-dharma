@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-118
 sidebar:
   label: '118 अग्ने'
   order: 118
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 118'
 lastUpdated: 2026-06-13
 ---

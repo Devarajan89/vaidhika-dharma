@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-40
 sidebar:
   label: '40 īśā vāsyamida'
   order: 40
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Īśāvāsya Upaniṣad — Śukla Yajur Veda, Chapter 40'
 lastUpdated: 2026-06-14
 ---

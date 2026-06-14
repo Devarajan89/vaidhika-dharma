@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-44
 sidebar:
   label: '44 जुषाण'
   order: 44
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 44'
 lastUpdated: 2026-06-13
 ---

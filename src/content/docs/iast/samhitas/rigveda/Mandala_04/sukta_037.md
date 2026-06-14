@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-37
 sidebar:
   label: '37 yathā'
   order: 37
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 37'
 lastUpdated: 2026-06-13
 ---

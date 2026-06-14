@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-38
 sidebar:
   label: '38 devasya tvā'
   order: 38
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 38'
 lastUpdated: 2026-06-14
 ---

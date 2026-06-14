@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-89
 sidebar:
   label: '89 bṛhadindrāya'
   order: 89
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 89'
 lastUpdated: 2026-06-13
 ---

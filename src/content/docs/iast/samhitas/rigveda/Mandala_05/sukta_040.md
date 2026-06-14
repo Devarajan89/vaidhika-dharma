@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-40
 sidebar:
   label: '40 ā'
   order: 40
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 40'
 lastUpdated: 2026-06-13
 ---

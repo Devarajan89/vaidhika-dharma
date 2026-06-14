@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-77
 sidebar:
   label: '77 jajñāno'
   order: 77
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 77'
 lastUpdated: 2026-06-13
 ---

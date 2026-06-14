@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-102
 sidebar:
   label: '102 त्वमग्ने'
   order: 102
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 102'
 lastUpdated: 2026-06-13
 ---

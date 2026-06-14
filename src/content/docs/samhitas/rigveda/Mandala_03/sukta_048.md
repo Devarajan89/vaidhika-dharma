@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-48
 sidebar:
   label: '48 सद्यो'
   order: 48
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 48'
 lastUpdated: 2026-06-13
 ---

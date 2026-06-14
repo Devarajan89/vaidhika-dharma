@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-142
 sidebar:
   label: '142 भद्र'
   order: 142
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 142'
 lastUpdated: 2026-06-13
 ---

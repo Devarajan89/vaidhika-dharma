@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-2/sukta-40
 sidebar:
   label: '40 jātau'
   order: 40
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Dvitīya Maṇḍala, Sūktam 40'
 lastUpdated: 2026-06-13
 ---

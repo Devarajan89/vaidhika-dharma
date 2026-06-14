@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-08
 sidebar:
   label: '8 kadā cana'
   order: 8
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 8'
 lastUpdated: 2026-06-14
 ---

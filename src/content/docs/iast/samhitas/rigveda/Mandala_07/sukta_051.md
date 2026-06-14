@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-51
 sidebar:
   label: '51 anāgāstve'
   order: 51
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 51'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-165
 sidebar:
   label: '165 तस्मा'
   order: 165
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 165'
 lastUpdated: 2026-06-13
 ---

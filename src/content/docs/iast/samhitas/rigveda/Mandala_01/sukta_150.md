@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-150
 sidebar:
   label: '150 puru'
   order: 150
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 150'
 lastUpdated: 2026-06-13
 ---

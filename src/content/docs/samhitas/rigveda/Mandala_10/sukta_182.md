@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-182
 sidebar:
   label: '182 बृहस्पतिर्नयतु'
   order: 182
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 182'
 lastUpdated: 2026-06-13
 ---

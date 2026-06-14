@@ -2,11 +2,31 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
+import { samhitasSidebarGroup } from './src/data/samhitas-sidebar.mjs';
+
+const rigvedaMandalaRedirects = Object.fromEntries(
+  Array.from({ length: 10 }, (_, index) => {
+    const mandala = index + 1;
+    const folder = `Mandala_${String(mandala).padStart(2, '0')}`;
+    return [
+      [`/rigveda-samhita/${folder}`, `/rigveda-samhita/mandala-${mandala}/`],
+      [`/rigveda-samhita/${folder}/`, `/rigveda-samhita/mandala-${mandala}/`],
+      [`/iast/rigveda-samhita/${folder}`, `/iast/rigveda-samhita/mandala-${mandala}/`],
+      [`/iast/rigveda-samhita/${folder}/`, `/iast/rigveda-samhita/mandala-${mandala}/`],
+    ];
+  }).flat(),
+);
 
 export default defineConfig({
   site: 'https://vaidhikadharma.org',
 
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport',
+  },
+
   redirects: {
+    ...rigvedaMandalaRedirects,
     '/aswalayana-sandhyavandanam': '/aswalayana-sandhyavandanam/prata',
     '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
     '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',
@@ -82,17 +102,22 @@ export default defineConfig({
                   translations: {
                       en: 'saṃhitāḥ',
                   },
-                  items: [
-                      {
-                          autogenerate: {
-                              directory: 'samhitas',
-                              collapsed: true,
-                          },
-                      },
-                  ],
+                  items: samhitasSidebarGroup.items,
               },
           ],
           customCss: ['./src/styles/global.css', './src/fonts/font-face.css'],
+          head: [
+            {
+              tag: 'link',
+              attrs: {
+                rel: 'preload',
+                href: '/fonts/siddhanta.woff2',
+                as: 'font',
+                type: 'font/woff2',
+                crossorigin: 'anonymous',
+              },
+            },
+          ],
       }),
   ],
   vite: {

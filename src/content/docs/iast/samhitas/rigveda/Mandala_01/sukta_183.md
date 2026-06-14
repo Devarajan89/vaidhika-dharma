@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-183
 sidebar:
   label: '183 ta'
   order: 183
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 183'
 lastUpdated: 2026-06-13
 ---

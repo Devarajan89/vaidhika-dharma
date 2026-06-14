@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-32
 sidebar:
   label: '32 प्रप्रुथ्या'
   order: 32
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 32'
 lastUpdated: 2026-06-13
 ---

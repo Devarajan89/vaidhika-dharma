@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-89
 sidebar:
   label: '89 इन्द्र'
   order: 89
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 89'
 lastUpdated: 2026-06-13
 ---

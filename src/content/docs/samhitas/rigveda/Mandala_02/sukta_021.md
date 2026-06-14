@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-2/sukta-21
 sidebar:
   label: '21 विश्वजिते'
   order: 21
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 2, सूक्तम् 21'
 lastUpdated: 2026-06-13
 ---

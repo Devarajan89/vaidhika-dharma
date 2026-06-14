@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-38
 sidebar:
   label: '38 udu'
   order: 38
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 38'
 lastUpdated: 2026-06-13
 ---

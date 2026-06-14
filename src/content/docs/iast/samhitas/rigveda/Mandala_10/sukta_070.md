@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-70
 sidebar:
   label: '70 varṣmanpṛthivyā'
   order: 70
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 70'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-101
 sidebar:
   label: '101 ऋधगित्था'
   order: 101
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 101'
 lastUpdated: 2026-06-13
 ---

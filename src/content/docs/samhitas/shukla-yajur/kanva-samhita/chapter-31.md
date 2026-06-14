@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-31
 sidebar:
   label: '31 समिद्धो अञ्जन्कृदर'
   order: 31
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — एकत्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

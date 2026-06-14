@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-51
 sidebar:
   label: '51 carṣaṇīdhṛta'
   order: 51
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 51'
 lastUpdated: 2026-06-13
 ---

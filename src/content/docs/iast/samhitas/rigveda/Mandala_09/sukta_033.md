@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-33
 sidebar:
   label: '33 pra'
   order: 33
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 33'
 lastUpdated: 2026-06-13
 ---

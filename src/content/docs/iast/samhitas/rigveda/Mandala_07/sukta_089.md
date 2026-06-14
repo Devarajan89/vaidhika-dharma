@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-89
 sidebar:
   label: '89 mo'
   order: 89
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 89'
 lastUpdated: 2026-06-13
 ---

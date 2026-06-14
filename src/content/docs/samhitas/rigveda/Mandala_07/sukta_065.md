@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-65
 sidebar:
   label: '65 ययोरसुर्य१मक्षित'
   order: 65
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 65'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-70
 sidebar:
   label: '70 purūruṇā'
   order: 70
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 70'
 lastUpdated: 2026-06-13
 ---

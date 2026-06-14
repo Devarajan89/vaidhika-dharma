@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-169
 sidebar:
   label: '169 मयोभूर्वातो'
   order: 169
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 169'
 lastUpdated: 2026-06-13
 ---

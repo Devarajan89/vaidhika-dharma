@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-16
 sidebar:
   label: '16 agne jātānpraṇudā'
   order: 16
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 16'
 lastUpdated: 2026-06-14
 ---

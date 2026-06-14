@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-27
 sidebar:
   label: '27 śāda dadbhiravakā'
   order: 27
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 27'
 lastUpdated: 2026-06-14
 ---

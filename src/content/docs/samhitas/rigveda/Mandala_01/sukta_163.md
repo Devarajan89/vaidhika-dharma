@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-163
 sidebar:
   label: '163 श्येनस्य'
   order: 163
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 163'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-58
 sidebar:
   label: '58 समुद्रादूर्मिर्मधुमा'
   order: 58
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 58'
 lastUpdated: 2026-06-13
 ---

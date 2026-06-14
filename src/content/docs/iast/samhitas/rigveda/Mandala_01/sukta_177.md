@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-177
 sidebar:
   label: '177 stuta'
   order: 177
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 177'
 lastUpdated: 2026-06-13
 ---

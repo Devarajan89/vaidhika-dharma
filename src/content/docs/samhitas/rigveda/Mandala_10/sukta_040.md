@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-40
 sidebar:
   label: '40 प्रातर्यावाण'
   order: 40
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 40'
 lastUpdated: 2026-06-13
 ---

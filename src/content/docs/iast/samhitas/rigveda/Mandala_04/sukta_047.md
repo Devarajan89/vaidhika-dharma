@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-47
 sidebar:
   label: '47 vāyo'
   order: 47
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 47'
 lastUpdated: 2026-06-13
 ---

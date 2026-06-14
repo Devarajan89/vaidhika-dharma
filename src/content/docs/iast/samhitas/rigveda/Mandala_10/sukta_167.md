@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-167
 sidebar:
   label: '167 tubhyedamindra'
   order: 167
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 167'
 lastUpdated: 2026-06-13
 ---

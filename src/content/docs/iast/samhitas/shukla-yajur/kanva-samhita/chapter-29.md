@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-29
 sidebar:
   label: '29 samāstvāgna ṛtavo'
   order: 29
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 29'
 lastUpdated: 2026-06-14
 ---

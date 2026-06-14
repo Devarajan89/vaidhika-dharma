@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-6
 sidebar:
   label: '6 युञ्जन्ति'
   order: 6
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 6'
 lastUpdated: 2026-06-13
 ---

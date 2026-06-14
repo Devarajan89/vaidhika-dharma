@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-37
 sidebar:
   label: '37 अर्वाग्रथ'
   order: 37
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 37'
 lastUpdated: 2026-06-13
 ---

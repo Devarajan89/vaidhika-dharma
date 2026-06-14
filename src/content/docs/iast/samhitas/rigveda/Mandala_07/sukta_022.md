@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-22
 sidebar:
   label: '22 pibā'
   order: 22
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 22'
 lastUpdated: 2026-06-13
 ---

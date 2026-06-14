@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-47
 sidebar:
   label: '47 वायो'
   order: 47
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 47'
 lastUpdated: 2026-06-13
 ---

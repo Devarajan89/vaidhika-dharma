@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-02
 sidebar:
   label: '2 कृष्णोस्याखरेष्ठोऽग्नये त्वा'
   order: 2
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — द्वितीयोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

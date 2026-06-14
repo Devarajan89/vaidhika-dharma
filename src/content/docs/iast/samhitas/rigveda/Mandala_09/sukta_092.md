@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-92
 sidebar:
   label: '92 āpacchlokamindriya'
   order: 92
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 92'
 lastUpdated: 2026-06-13
 ---

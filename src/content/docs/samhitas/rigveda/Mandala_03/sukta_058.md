@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-58
 sidebar:
   label: '58 धेनु'
   order: 58
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 58'
 lastUpdated: 2026-06-13
 ---

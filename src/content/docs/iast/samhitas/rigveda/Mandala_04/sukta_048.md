@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-48
 sidebar:
   label: '48 vāyavā'
   order: 48
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 48'
 lastUpdated: 2026-06-13
 ---

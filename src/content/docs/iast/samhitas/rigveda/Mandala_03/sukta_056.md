@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-56
 sidebar:
   label: '56 na'
   order: 56
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 56'
 lastUpdated: 2026-06-13
 ---

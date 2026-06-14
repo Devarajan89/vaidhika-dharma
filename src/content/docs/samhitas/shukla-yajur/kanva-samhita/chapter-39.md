@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-39
 sidebar:
   label: '39 स्वाहा प्राणेभ्य'
   order: 39
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — एकोणचत्वारिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

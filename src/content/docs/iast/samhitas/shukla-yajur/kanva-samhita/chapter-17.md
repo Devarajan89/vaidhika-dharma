@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-17
 sidebar:
   label: '17 namaste rudra'
   order: 17
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 17'
 lastUpdated: 2026-06-14
 ---

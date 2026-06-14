@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-110
 sidebar:
   label: '110 tata'
   order: 110
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 110'
 lastUpdated: 2026-06-13
 ---

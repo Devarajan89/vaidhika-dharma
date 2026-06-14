@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-135
 sidebar:
   label: '135 स्तीर्ण'
   order: 135
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 135'
 lastUpdated: 2026-06-13
 ---

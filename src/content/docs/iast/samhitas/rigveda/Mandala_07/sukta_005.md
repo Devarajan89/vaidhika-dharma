@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-5
 sidebar:
   label: '5 yo'
   order: 5
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 5'
 lastUpdated: 2026-06-13
 ---

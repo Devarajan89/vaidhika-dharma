@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-134
 sidebar:
   label: '134 आ'
   order: 134
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 134'
 lastUpdated: 2026-06-13
 ---

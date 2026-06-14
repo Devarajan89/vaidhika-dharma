@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-38
 sidebar:
   label: '38 yajñasya'
   order: 38
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 38'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-56
 sidebar:
   label: '56 यत्'
   order: 56
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 56'
 lastUpdated: 2026-06-13
 ---

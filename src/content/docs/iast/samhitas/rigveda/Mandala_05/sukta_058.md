@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-58
 sidebar:
   label: '58 tamu'
   order: 58
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 58'
 lastUpdated: 2026-06-13
 ---

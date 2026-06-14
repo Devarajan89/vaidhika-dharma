@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-47
 sidebar:
   label: '47 āpo'
   order: 47
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 47'
 lastUpdated: 2026-06-13
 ---

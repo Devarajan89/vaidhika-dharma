@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-64
 sidebar:
   label: '64 vṛṣā'
   order: 64
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 64'
 lastUpdated: 2026-06-13
 ---

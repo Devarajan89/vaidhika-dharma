@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-12
 sidebar:
   label: '12 madhye'
   order: 12
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 12'
 lastUpdated: 2026-06-13
 ---

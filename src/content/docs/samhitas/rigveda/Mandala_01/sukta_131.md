@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-131
 sidebar:
   label: '131 इन्द्राय'
   order: 131
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 131'
 lastUpdated: 2026-06-13
 ---

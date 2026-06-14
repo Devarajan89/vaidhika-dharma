@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-169
 sidebar:
   label: '169 sa'
   order: 169
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 169'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-17
 sidebar:
   label: '17 प्र'
   order: 17
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 17'
 lastUpdated: 2026-06-13
 ---

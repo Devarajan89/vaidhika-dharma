@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-63
 sidebar:
   label: '63 sa'
   order: 63
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 63'
 lastUpdated: 2026-06-13
 ---

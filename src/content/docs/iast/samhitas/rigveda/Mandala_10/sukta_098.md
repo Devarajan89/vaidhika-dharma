@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-98
 sidebar:
   label: '98 ādityairvā'
   order: 98
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 98'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-27
 sidebar:
   label: '27 pra'
   order: 27
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 27'
 lastUpdated: 2026-06-13
 ---

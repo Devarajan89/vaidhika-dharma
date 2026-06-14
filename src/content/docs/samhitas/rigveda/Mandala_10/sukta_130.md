@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-130
 sidebar:
   label: '130 यो'
   order: 130
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 130'
 lastUpdated: 2026-06-13
 ---

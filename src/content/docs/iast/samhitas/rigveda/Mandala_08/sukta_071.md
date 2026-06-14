@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-71
 sidebar:
   label: '71 tva'
   order: 71
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 71'
 lastUpdated: 2026-06-13
 ---

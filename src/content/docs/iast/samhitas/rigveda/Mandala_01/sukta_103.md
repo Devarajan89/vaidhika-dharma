@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-103
 sidebar:
   label: '103 kṣamedamanyad'
   order: 103
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 103'
 lastUpdated: 2026-06-13
 ---

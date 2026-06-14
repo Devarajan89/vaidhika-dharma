@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-75
 sidebar:
   label: '75 abhi'
   order: 75
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 75'
 lastUpdated: 2026-06-13
 ---

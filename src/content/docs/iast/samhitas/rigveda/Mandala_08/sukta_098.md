@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-98
 sidebar:
   label: '98 indrāya'
   order: 98
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 98'
 lastUpdated: 2026-06-13
 ---

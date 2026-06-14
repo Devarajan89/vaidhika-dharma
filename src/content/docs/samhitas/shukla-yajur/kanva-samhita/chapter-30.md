@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-30
 sidebar:
   label: '30 होता यक्षत्समिधेन्द्रमिळस्पदे'
   order: 30
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — त्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

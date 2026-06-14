@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-38
 sidebar:
   label: '38 यज्ञस्य'
   order: 38
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 38'
 lastUpdated: 2026-06-13
 ---

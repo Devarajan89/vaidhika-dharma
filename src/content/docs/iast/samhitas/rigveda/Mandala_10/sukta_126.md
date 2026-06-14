@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-126
 sidebar:
   label: '126 na'
   order: 126
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 126'
 lastUpdated: 2026-06-13
 ---

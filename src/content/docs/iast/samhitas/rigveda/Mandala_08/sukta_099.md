@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-99
 sidebar:
   label: '99 tvāmidā'
   order: 99
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 99'
 lastUpdated: 2026-06-13
 ---

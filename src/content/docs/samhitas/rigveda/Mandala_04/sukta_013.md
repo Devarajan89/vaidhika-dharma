@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-13
 sidebar:
   label: '13 प्रत्यग्निरुषसामग्रमख्यद्'
   order: 13
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 13'
 lastUpdated: 2026-06-13
 ---

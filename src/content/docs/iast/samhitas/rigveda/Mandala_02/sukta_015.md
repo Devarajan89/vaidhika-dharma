@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-2/sukta-15
 sidebar:
   label: '15 pra'
   order: 15
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Dvitīya Maṇḍala, Sūktam 15'
 lastUpdated: 2026-06-13
 ---

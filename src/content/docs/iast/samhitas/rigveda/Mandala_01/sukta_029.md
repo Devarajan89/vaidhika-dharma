@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-29
 sidebar:
   label: '29 ā'
   order: 29
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 29'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-48
 sidebar:
   label: '48 aha'
   order: 48
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 48'
 lastUpdated: 2026-06-13
 ---

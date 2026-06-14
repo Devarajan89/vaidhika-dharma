@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-143
 sidebar:
   label: '143 apā'
   order: 143
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 143'
 lastUpdated: 2026-06-13
 ---

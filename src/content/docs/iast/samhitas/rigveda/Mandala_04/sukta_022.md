@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-22
 sidebar:
   label: '22 yanna'
   order: 22
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 22'
 lastUpdated: 2026-06-13
 ---

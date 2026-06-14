@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-32
 sidebar:
   label: '32 asyājarāso damāmaritrā'
   order: 32
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 32'
 lastUpdated: 2026-06-14
 ---

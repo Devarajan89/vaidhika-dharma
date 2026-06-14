@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-94
 sidebar:
   label: '94 इय'
   order: 94
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 94'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-70
 sidebar:
   label: '70 वर्ष्मन्पृथिव्या'
   order: 70
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 70'
 lastUpdated: 2026-06-13
 ---

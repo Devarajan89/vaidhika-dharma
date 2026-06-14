@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-1
 sidebar:
   label: '1 agnimīl̤e'
   order: 1
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 1'
 lastUpdated: 2026-06-13
 ---

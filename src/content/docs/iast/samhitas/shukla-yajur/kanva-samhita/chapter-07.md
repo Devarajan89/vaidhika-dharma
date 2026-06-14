@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-07
 sidebar:
   label: '7 vācaspataye pavasva'
   order: 7
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 7'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-9
 sidebar:
   label: '9 अग्ने'
   order: 9
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 9'
 lastUpdated: 2026-06-13
 ---

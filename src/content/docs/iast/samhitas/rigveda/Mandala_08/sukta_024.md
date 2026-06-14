@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-24
 sidebar:
   label: '24 sakhāya'
   order: 24
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 24'
 lastUpdated: 2026-06-13
 ---

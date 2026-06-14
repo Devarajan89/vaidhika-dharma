@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-39
 sidebar:
   label: '39 कस्य'
   order: 39
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 39'
 lastUpdated: 2026-06-13
 ---

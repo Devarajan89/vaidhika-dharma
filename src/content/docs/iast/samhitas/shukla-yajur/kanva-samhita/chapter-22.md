@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-22
 sidebar:
   label: '22 yaddevā devahel̤ana'
   order: 22
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 22'
 lastUpdated: 2026-06-14
 ---

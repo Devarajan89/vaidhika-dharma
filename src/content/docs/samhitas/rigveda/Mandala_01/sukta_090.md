@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-90
 sidebar:
   label: '90 ऋजुनीती'
   order: 90
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 90'
 lastUpdated: 2026-06-13
 ---

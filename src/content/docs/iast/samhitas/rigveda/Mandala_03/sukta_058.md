@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-58
 sidebar:
   label: '58 dhenu'
   order: 58
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 58'
 lastUpdated: 2026-06-13
 ---

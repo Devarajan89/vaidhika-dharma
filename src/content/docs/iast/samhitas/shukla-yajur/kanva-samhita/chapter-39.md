@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-39
 sidebar:
   label: '39 svāhā prāṇebhya'
   order: 39
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 39'
 lastUpdated: 2026-06-14
 ---

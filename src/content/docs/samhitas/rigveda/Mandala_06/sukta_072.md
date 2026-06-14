@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-72
 sidebar:
   label: '72 इन्द्रासोमा'
   order: 72
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 72'
 lastUpdated: 2026-06-13
 ---

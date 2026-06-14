@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-6
 sidebar:
   label: '6 vṛścadvana'
   order: 6
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 6'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-08
 sidebar:
   label: '8 कदा चन'
   order: 8
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — अष्टमोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

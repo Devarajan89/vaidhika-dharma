@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-121
 sidebar:
   label: '121 kaditthā'
   order: 121
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 121'
 lastUpdated: 2026-06-13
 ---

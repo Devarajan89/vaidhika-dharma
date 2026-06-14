@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-65
 sidebar:
   label: '65 hinvanti'
   order: 65
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 65'
 lastUpdated: 2026-06-13
 ---

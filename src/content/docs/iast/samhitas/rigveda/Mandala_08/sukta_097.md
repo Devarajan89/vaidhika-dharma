@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-97
 sidebar:
   label: '97 yā'
   order: 97
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 97'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-145
 sidebar:
   label: '145 imā'
   order: 145
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 145'
 lastUpdated: 2026-06-13
 ---

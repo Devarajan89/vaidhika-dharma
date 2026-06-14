@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-26
 sidebar:
   label: '26 अश्वस्तूपरो गोमृगस्ते'
   order: 26
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — षड्विंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

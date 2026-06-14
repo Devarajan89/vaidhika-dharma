@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-146
 sidebar:
   label: '146 trimūrdhāna'
   order: 146
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 146'
 lastUpdated: 2026-06-13
 ---

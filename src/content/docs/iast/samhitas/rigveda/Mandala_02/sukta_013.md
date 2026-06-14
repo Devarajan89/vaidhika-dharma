@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-2/sukta-13
 sidebar:
   label: '13 ṛturjanitrī'
   order: 13
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Dvitīya Maṇḍala, Sūktam 13'
 lastUpdated: 2026-06-13
 ---

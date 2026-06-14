@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-67
 sidebar:
   label: '67 turīya'
   order: 67
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 67'
 lastUpdated: 2026-06-13
 ---

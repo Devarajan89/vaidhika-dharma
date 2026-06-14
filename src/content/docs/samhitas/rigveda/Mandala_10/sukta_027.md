@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-27
 sidebar:
   label: '27 अनाशीर्दामहमस्मि'
   order: 27
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 27'
 lastUpdated: 2026-06-13
 ---

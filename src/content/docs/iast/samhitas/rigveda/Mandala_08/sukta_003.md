@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-3
 sidebar:
   label: '3 pibā'
   order: 3
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 3'
 lastUpdated: 2026-06-13
 ---

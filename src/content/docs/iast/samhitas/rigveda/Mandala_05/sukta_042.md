@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-42
 sidebar:
   label: '42 pra'
   order: 42
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 42'
 lastUpdated: 2026-06-13
 ---

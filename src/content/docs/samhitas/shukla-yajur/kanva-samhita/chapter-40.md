@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-40
 sidebar:
   label: '40 ईशा वास्यमिद'
   order: 40
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'ईशावास्योपनिषद् — शुक्लयजुः काण्वसंहिता चत्वारिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-27
 sidebar:
   label: '27 traivṛṣṇo'
   order: 27
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 27'
 lastUpdated: 2026-06-13
 ---

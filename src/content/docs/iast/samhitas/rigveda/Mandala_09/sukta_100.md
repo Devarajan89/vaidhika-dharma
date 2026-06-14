@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-100
 sidebar:
   label: '100 abhī'
   order: 100
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 100'
 lastUpdated: 2026-06-13
 ---

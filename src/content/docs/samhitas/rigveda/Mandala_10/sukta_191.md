@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-191
 sidebar:
   label: '191 ससमिद्युवसे'
   order: 191
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 191'
 lastUpdated: 2026-06-13
 ---

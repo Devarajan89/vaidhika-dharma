@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-23
 sidebar:
   label: '23 यद्'
   order: 23
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 23'
 lastUpdated: 2026-06-13
 ---

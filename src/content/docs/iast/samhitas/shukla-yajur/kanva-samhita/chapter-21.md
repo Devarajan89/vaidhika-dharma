@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-21
 sidebar:
   label: '21 svādvī tvā'
   order: 21
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 21'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-174
 sidebar:
   label: '174 tva'
   order: 174
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 174'
 lastUpdated: 2026-06-13
 ---

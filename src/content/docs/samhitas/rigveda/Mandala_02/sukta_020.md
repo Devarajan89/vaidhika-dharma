@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-2/sukta-20
 sidebar:
   label: '20 विपन्यवो'
   order: 20
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 2, सूक्तम् 20'
 lastUpdated: 2026-06-13
 ---

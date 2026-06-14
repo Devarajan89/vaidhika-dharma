@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-35
 sidebar:
   label: '35 ह्वयाम्यग्नि'
   order: 35
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 35'
 lastUpdated: 2026-06-13
 ---

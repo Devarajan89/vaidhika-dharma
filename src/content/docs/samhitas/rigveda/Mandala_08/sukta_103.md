@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-103
 sidebar:
   label: '103 अदर्शि'
   order: 103
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 103'
 lastUpdated: 2026-06-13
 ---

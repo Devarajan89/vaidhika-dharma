@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-82
 sidebar:
   label: '82 yadā'
   order: 82
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 82'
 lastUpdated: 2026-06-13
 ---

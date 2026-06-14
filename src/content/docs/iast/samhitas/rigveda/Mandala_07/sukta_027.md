@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-27
 sidebar:
   label: '27 indra'
   order: 27
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 27'
 lastUpdated: 2026-06-13
 ---

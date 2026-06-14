@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-37
 sidebar:
   label: '37 अभि'
   order: 37
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 37'
 lastUpdated: 2026-06-13
 ---

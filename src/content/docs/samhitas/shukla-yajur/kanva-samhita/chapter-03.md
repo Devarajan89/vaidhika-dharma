@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-03
 sidebar:
   label: '3 समिधाग्नि दुवस्यत'
   order: 3
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — तृतीयोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

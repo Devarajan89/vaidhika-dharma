@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-6
 sidebar:
   label: '6 mahā'
   order: 6
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 6'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-60
 sidebar:
   label: '60 yābhirmāyābhi'
   order: 60
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 60'
 lastUpdated: 2026-06-13
 ---

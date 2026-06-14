@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-181
 sidebar:
   label: '181 कदु'
   order: 181
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 181'
 lastUpdated: 2026-06-13
 ---

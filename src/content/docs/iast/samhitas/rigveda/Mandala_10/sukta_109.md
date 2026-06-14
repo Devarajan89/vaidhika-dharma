@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-109
 sidebar:
   label: '109 te''vadanprathamā'
   order: 109
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 109'
 lastUpdated: 2026-06-13
 ---

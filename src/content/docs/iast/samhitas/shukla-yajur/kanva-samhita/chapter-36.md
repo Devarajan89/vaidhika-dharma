@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-36
 sidebar:
   label: '36 ṛca vāca'
   order: 36
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 36'
 lastUpdated: 2026-06-14
 ---

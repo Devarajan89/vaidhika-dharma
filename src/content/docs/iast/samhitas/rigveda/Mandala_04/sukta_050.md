@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-50
 sidebar:
   label: '50 yastastambha'
   order: 50
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 50'
 lastUpdated: 2026-06-13
 ---

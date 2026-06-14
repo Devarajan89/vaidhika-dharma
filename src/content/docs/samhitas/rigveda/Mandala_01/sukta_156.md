@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-156
 sidebar:
   label: '156 अधा'
   order: 156
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 156'
 lastUpdated: 2026-06-13
 ---

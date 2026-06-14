@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-69
 sidebar:
   label: '69 प्रप्र'
   order: 69
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 69'
 lastUpdated: 2026-06-13
 ---

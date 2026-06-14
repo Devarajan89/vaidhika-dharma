@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-69
 sidebar:
   label: '69 bhadrā'
   order: 69
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 69'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-187
 sidebar:
   label: '187 प्राग्नये'
   order: 187
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 187'
 lastUpdated: 2026-06-13
 ---

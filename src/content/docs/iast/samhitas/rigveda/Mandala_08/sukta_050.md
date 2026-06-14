@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-50
 sidebar:
   label: '50 pra'
   order: 50
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 50'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-21
 sidebar:
   label: '21 stokānāmagne'
   order: 21
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 21'
 lastUpdated: 2026-06-13
 ---

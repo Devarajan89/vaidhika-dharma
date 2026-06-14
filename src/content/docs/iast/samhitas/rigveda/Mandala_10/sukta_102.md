@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-102
 sidebar:
   label: '102 asminnājau'
   order: 102
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 102'
 lastUpdated: 2026-06-13
 ---

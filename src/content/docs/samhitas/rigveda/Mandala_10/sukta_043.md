@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-43
 sidebar:
   label: '43 अच्छा'
   order: 43
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 43'
 lastUpdated: 2026-06-13
 ---

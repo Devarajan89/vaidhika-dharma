@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-58
 sidebar:
   label: '58 samudrādūrmirmadhumā'
   order: 58
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 58'
 lastUpdated: 2026-06-13
 ---

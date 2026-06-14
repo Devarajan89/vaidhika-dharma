@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-176
 sidebar:
   label: '176 प्र'
   order: 176
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 176'
 lastUpdated: 2026-06-13
 ---

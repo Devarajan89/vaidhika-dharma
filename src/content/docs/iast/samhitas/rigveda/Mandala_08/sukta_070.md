@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-70
 sidebar:
   label: '70 yo'
   order: 70
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 70'
 lastUpdated: 2026-06-13
 ---

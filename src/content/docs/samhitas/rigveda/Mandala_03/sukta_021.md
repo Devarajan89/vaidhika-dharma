@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-21
 sidebar:
   label: '21 स्तोकानामग्ने'
   order: 21
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 21'
 lastUpdated: 2026-06-13
 ---

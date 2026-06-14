@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-8
 sidebar:
   label: '8 यदूर्ध्वस्तिष्ठा'
   order: 8
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 8'
 lastUpdated: 2026-06-13
 ---

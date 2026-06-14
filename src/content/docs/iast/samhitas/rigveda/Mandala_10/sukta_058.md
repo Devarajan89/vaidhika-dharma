@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-58
 sidebar:
   label: '58 yatte'
   order: 58
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 58'
 lastUpdated: 2026-06-13
 ---

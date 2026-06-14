@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-163
 sidebar:
   label: '163 śyenasya'
   order: 163
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 163'
 lastUpdated: 2026-06-13
 ---

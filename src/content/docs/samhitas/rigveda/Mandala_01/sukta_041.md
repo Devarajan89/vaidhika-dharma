@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-41
 sidebar:
   label: '41 य'
   order: 41
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 41'
 lastUpdated: 2026-06-13
 ---

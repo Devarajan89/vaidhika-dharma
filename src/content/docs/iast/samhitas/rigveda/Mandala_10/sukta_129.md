@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-129
 sidebar:
   label: '129 nāsadāsīnno'
   order: 129
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 129'
 lastUpdated: 2026-06-13
 ---

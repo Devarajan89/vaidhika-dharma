@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-122
 sidebar:
   label: '122 स'
   order: 122
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 122'
 lastUpdated: 2026-06-13
 ---

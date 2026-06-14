@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-8
 sidebar:
   label: '8 आ'
   order: 8
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 8'
 lastUpdated: 2026-06-13
 ---

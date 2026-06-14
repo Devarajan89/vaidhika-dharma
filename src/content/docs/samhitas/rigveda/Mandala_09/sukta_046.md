@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-46
 sidebar:
   label: '46 असृग्रन्देववीतयेऽत्यास'
   order: 46
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 46'
 lastUpdated: 2026-06-13
 ---

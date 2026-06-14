@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-12
 sidebar:
   label: '12 युञ्जान प्रथम'
   order: 12
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — द्वादशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

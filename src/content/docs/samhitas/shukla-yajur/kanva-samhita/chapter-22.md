@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-22
 sidebar:
   label: '22 यद्देवा देवहेळन'
   order: 22
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — द्वाविंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

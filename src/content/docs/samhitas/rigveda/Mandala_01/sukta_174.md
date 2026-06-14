@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-174
 sidebar:
   label: '174 त्व'
   order: 174
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 174'
 lastUpdated: 2026-06-13
 ---

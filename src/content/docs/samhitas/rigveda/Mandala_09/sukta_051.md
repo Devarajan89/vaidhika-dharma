@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-51
 sidebar:
   label: '51 अध्वर्यो'
   order: 51
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 51'
 lastUpdated: 2026-06-13
 ---

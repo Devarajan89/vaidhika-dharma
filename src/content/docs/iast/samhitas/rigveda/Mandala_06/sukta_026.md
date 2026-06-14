@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-26
 sidebar:
   label: '26 śrudhī'
   order: 26
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 26'
 lastUpdated: 2026-06-13
 ---

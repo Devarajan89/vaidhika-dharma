@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-106
 sidebar:
   label: '106 ubhā'
   order: 106
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 106'
 lastUpdated: 2026-06-13
 ---

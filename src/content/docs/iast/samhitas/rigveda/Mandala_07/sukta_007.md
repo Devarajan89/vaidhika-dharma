@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-7
 sidebar:
   label: '7 bhavā'
   order: 7
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 7'
 lastUpdated: 2026-06-13
 ---

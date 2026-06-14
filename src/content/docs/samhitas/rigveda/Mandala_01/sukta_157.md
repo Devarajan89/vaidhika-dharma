@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-157
 sidebar:
   label: '157 अबोध्यग्निर्ज्म'
   order: 157
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 157'
 lastUpdated: 2026-06-13
 ---

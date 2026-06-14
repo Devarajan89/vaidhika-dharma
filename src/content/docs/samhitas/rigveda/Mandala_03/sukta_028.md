@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-28
 sidebar:
   label: '28 अग्ने'
   order: 28
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 28'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-42
 sidebar:
   label: '42 जनयन्रोचना'
   order: 42
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 42'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-26
 sidebar:
   label: '26 अग्ने'
   order: 26
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 26'
 lastUpdated: 2026-06-13
 ---

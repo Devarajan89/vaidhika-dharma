@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-20
 sidebar:
   label: '20 ta'
   order: 20
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 20'
 lastUpdated: 2026-06-13
 ---

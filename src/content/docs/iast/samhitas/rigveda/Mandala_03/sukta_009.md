@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-9
 sidebar:
   label: '9 apā'
   order: 9
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 9'
 lastUpdated: 2026-06-13
 ---

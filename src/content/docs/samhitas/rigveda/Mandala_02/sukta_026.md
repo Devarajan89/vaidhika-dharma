@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-2/sukta-26
 sidebar:
   label: '26 सुप्रावीरिद्'
   order: 26
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 2, सूक्तम् 26'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-21
 sidebar:
   label: '21 asāvi'
   order: 21
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 21'
 lastUpdated: 2026-06-13
 ---

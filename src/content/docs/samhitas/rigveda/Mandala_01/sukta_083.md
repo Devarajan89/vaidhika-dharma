@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-83
 sidebar:
   label: '83 अश्वावति'
   order: 83
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 83'
 lastUpdated: 2026-06-13
 ---

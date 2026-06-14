@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-32
 sidebar:
   label: '32 अस्याजरासो दमामरित्रा'
   order: 32
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — द्वात्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

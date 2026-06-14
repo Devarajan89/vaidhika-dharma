@@ -1,21 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
 import { getDocRelatedLinks } from '../data/doc-related-links';
+import docCache from '../data/doc-cache.json';
 
 const { entry, locale } = Astro.locals.starlightRoute;
-const allDocs = await getCollection('docs');
-
-const slugToTitle = new Map<string, string>();
-for (const doc of allDocs) {
-	const custom = doc.data.slug;
-	const slug =
-		custom === 'index'
-			? ''
-			: custom === 'iast/index'
-				? 'iast'
-				: (custom ?? doc.id);
-	slugToTitle.set(slug, doc.data.title);
-}
+const slugToTitle = new Map(Object.entries(docCache.slugToTitle));
 
 const related = getDocRelatedLinks(entry, locale, slugToTitle);
 

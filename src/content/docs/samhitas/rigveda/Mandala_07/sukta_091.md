@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-91
 sidebar:
   label: '91 कुविदङ्ग'
   order: 91
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 91'
 lastUpdated: 2026-06-13
 ---

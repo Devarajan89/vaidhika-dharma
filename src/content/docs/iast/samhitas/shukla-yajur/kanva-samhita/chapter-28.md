@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-28
 sidebar:
   label: '28 agniśca pṛthivī'
   order: 28
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 28'
 lastUpdated: 2026-06-14
 ---

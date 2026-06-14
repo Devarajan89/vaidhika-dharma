@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-3
 sidebar:
   label: '3 इनो'
   order: 3
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 3'
 lastUpdated: 2026-06-13
 ---

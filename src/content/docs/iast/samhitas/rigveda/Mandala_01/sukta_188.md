@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-188
 sidebar:
   label: '188 samiddho'
   order: 188
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 188'
 lastUpdated: 2026-06-13
 ---

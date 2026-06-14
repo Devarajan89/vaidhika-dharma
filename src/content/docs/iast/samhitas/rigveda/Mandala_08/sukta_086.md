@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-86
 sidebar:
   label: '86 tā'
   order: 86
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 86'
 lastUpdated: 2026-06-13
 ---

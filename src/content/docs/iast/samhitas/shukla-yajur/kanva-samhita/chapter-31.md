@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-31
 sidebar:
   label: '31 samiddho añjankṛdara'
   order: 31
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 31'
 lastUpdated: 2026-06-14
 ---

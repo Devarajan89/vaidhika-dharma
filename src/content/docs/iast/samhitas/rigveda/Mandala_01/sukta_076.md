@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-76
 sidebar:
   label: '76 kā'
   order: 76
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 76'
 lastUpdated: 2026-06-13
 ---

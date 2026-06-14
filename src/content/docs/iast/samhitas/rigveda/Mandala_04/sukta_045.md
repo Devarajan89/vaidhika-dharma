@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-45
 sidebar:
   label: '45 pṛkṣāso'
   order: 45
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 45'
 lastUpdated: 2026-06-13
 ---

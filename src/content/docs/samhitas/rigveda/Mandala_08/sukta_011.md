@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-11
 sidebar:
   label: '11 त्वमग्ने'
   order: 11
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 11'
 lastUpdated: 2026-06-13
 ---

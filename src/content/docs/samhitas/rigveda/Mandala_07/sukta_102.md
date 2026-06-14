@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-102
 sidebar:
   label: '102 पर्जन्याय'
   order: 102
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 102'
 lastUpdated: 2026-06-13
 ---

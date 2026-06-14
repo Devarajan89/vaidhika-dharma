@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-79
 sidebar:
   label: '79 acodaso'
   order: 79
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 79'
 lastUpdated: 2026-06-13
 ---

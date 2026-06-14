@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-8
 sidebar:
   label: '8 दिवश्चिदन्ता'
   order: 8
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 8'
 lastUpdated: 2026-06-13
 ---

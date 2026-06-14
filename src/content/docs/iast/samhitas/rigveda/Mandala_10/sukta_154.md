@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-154
 sidebar:
   label: '154 soma'
   order: 154
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 154'
 lastUpdated: 2026-06-13
 ---

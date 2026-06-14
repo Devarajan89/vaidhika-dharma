@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-52
 sidebar:
   label: '52 pra'
   order: 52
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 52'
 lastUpdated: 2026-06-13
 ---

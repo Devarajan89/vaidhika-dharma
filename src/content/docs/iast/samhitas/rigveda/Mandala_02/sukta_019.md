@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-2/sukta-19
 sidebar:
   label: '19 yasminnindra'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Dvitīya Maṇḍala, Sūktam 19'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-109
 sidebar:
   label: '109 vi'
   order: 109
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 109'
 lastUpdated: 2026-06-13
 ---

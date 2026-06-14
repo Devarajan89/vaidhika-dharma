@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-14
 sidebar:
   label: '14 मयि गृह्णाम्यग्रे'
   order: 14
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — चतुर्दशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

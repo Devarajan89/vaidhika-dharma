@@ -306,9 +306,7 @@ function renderChapterMarkdown({
 		'sidebar:',
 		`  label: ${yamlQuote(sidebarLabel)}`,
 		`  order: ${chapterNumber}`,
-		'tableOfContents:',
-		'  minHeadingLevel: 2',
-		'  maxHeadingLevel: 2',
+		'tableOfContents: false',
 		`description: ${yamlQuote(description)}`,
 		`lastUpdated: ${LAST_UPDATED}`,
 		'---',
@@ -346,55 +344,15 @@ function renderChapterMarkdown({
  * @param {object} options
  */
 function renderIndexMarkdown({ locale, slug, title, description, outputPath, chapters }) {
-	const overviewRows = chapters
-		.map((chapter) => {
-			const fileName = chapterFileName(chapter.number);
-			if (!chapter.parsed) {
-				const missingLabel = locale === 'iast' ? '— (missing)' : '— (अनुपलब्ध)';
-				return `| ${chapter.number} | ${missingLabel} | ${missingLabel} |`;
-			}
-			const firstWords =
-				locale === 'iast' && chapter.firstWordsIast
-					? chapter.firstWordsIast
-					: indexFirstWordsLabel(chapter.parsed.verses[0]?.text ?? '', locale);
-			const mantraLabel = String(chapter.parsed.verseCount);
-			return `| [${chapter.number}](#chapter-${chapter.number}) | ${mantraLabel} | [${firstWords}](${fileName}#mantra-1) |`;
-		})
-		.join('\n');
-
-	const chapterSections = chapters
-		.filter((chapter) => chapter.parsed)
-		.map((chapter) => {
-			const fileName = chapterFileName(chapter.number);
-			const sectionTitle =
-				locale === 'iast' ? `Adhyāya ${chapter.number}` : `अध्याय ${chapter.number}`;
-			const mantraRows = chapter.parsed.verses
-				.map((verse) => {
-					const firstWords = indexFirstWordsLabel(verse.text, locale);
-					return `| ${chapter.number} | ${verse.number} | [${firstWords}](${fileName}#mantra-${verse.number}) |`;
-				})
-				.join('\n');
-
-			return [
-				`## ${sectionTitle} {#chapter-${chapter.number}}`,
-				'',
-				getIndexChapterTocHeader(locale),
-				`|--------:|-------:|-------------|`,
-				mantraRows,
-				'',
-			].join('\n');
-		})
-		.join('\n');
-
 	const intro =
 		locale === 'iast'
-			? 'Complete index of the Vājasaneyi Kanva Saṃhitā (Śukla Yajur Veda) across 40 adhyāyas.'
-			: 'शुक्लयजुः काण्वसंहितायाः चत्वारिंशत् अध्यायानां सूची।';
+			? 'Browse all adhyāyas of the Kanva Saṃhitā. Select an adhyāya to view its mantra index.'
+			: 'काण्वसंहितायाः चत्वारिंशत् अध्यायाः। मन्त्र सूची द्रष्टुं अध्यायं चिनुत।';
 
 	const overviewHeader =
 		locale === 'iast'
-			? '| Adhyāya | Mantras | Opening Mantra |'
-			: '| अध्याय | मन्त्राः | प्रथम मन्त्र |';
+			? '| Adhyāya | Mantras | Index |'
+			: '| अध्याय | मन्त्राः | सूची |';
 
 	const frontmatter = [
 		'---',
@@ -403,13 +361,25 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		'sidebar:',
 		`  label: ${yamlQuote(locale === 'iast' ? 'Kanva Saṃhitā' : 'काण्व संहिता')}`,
 		`  order: 1`,
-		'tableOfContents:',
-		'  minHeadingLevel: 2',
-		'  maxHeadingLevel: 2',
+		'tableOfContents: false',
 		`description: ${yamlQuote(description)}`,
 		`lastUpdated: ${LAST_UPDATED}`,
 		'---',
 	].join('\n');
+
+	const overviewRows = chapters
+		.map((chapter) => {
+			const fileName = chapterFileName(chapter.number);
+			const indexFile = `chapter-${String(chapter.number).padStart(2, '0')}-index`;
+			if (!chapter.parsed) {
+				const missingLabel = locale === 'iast' ? '— (missing)' : '— (अनुपलब्ध)';
+				return `| ${chapter.number} | ${missingLabel} | ${missingLabel} |`;
+			}
+			const mantraLabel = String(chapter.parsed.verseCount);
+			const indexLabel = locale === 'iast' ? 'Mantra index' : 'मन्त्र सूची';
+			return `| [${chapter.number}](${fileName}/) | ${mantraLabel} | [${indexLabel}](${indexFile}/) |`;
+		})
+		.join('\n');
 
 	const body = [
 		frontmatter,
@@ -421,15 +391,50 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		locale === 'iast' ? '## Adhyāyas' : '## अध्यायाः',
 		'',
 		overviewHeader,
-		'|--------:|--------:|----------------|',
+		locale === 'iast' ? '|--------:|--------:|:-----|' : '|--------:|--------:|:----|',
 		overviewRows,
-		'',
-		chapterSections.trimEnd(),
 		'',
 	].join('\n');
 
 	fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 	fs.writeFileSync(outputPath, body, 'utf8');
+
+	for (const chapter of chapters.filter((entry) => entry.parsed)) {
+		const indexFile = `chapter-${String(chapter.number).padStart(2, '0')}-index.md`;
+		const indexPath = path.join(path.dirname(outputPath), indexFile);
+		const sectionTitle =
+			locale === 'iast' ? `Adhyāya ${chapter.number}` : `अध्याय ${chapter.number}`;
+		const fileName = chapterFileName(chapter.number);
+		const mantraRows = chapter.parsed.verses
+			.map((verse) => {
+				const firstWords = indexFirstWordsLabel(verse.text, locale);
+				return `| ${chapter.number} | ${verse.number} | [${firstWords}](${fileName}#mantra-${verse.number}) |`;
+			})
+			.join('\n');
+		const slugPrefix = locale === 'iast' ? 'iast/kanva-samhita' : 'kanva-samhita';
+		const indexFrontmatter = [
+			'---',
+			`title: ${yamlQuote(locale === 'iast' ? `Adhyāya ${chapter.number} — Mantra Index` : `अध्याय ${chapter.number} — मन्त्र सूची`)}`,
+			`slug: ${slugPrefix}/chapter-${chapter.number}-index`,
+			'sidebar:',
+			'  hidden: true',
+			'tableOfContents: false',
+			`description: ${yamlQuote(locale === 'iast' ? `Kanva Saṃhitā — Adhyāya ${chapter.number} mantra index.` : `काण्व संहिता — अध्याय ${chapter.number} मन्त्र सूची।`)}`,
+			`lastUpdated: ${LAST_UPDATED}`,
+			'---',
+		].join('\n');
+		const indexBody = [
+			indexFrontmatter,
+			'',
+			`## ${sectionTitle} {#chapter-${chapter.number}}`,
+			'',
+			getIndexChapterTocHeader(locale),
+			`|--------:|-------:|-------------|`,
+			mantraRows,
+			'',
+		].join('\n');
+		fs.writeFileSync(indexPath, indexBody, 'utf8');
+	}
 }
 
 /**

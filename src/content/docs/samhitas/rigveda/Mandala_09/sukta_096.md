@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-96
 sidebar:
   label: '96 भद्रान्कृण्वन्निन्द्रहवान्त्सखिभ्य'
   order: 96
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 96'
 lastUpdated: 2026-06-13
 ---

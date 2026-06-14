@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-68
 sidebar:
   label: '68 बर्हिषदो'
   order: 68
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 68'
 lastUpdated: 2026-06-13
 ---

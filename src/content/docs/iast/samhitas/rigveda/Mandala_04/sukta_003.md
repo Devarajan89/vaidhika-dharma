@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-3
 sidebar:
   label: '3 agni'
   order: 3
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 3'
 lastUpdated: 2026-06-13
 ---

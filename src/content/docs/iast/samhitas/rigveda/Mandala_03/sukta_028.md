@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-28
 sidebar:
   label: '28 agne'
   order: 28
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 28'
 lastUpdated: 2026-06-13
 ---

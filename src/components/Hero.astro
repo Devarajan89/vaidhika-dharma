@@ -28,10 +28,13 @@ if (image) {
 		darkImage && (
 			<Image
 				src={darkImage}
+				widths={[320, 480, 640]}
+				sizes="(max-width: 50rem) 80vw, 20rem"
 				width={darkImage.width}
 				height={darkImage.height}
 				loading="eager"
 				decoding="async"
+				fetchpriority="high"
 				alt={image?.alt || ''}
 				class:list={['hero-image', { 'light:sl-hidden': Boolean(lightImage) }]}
 			/>
@@ -41,10 +44,13 @@ if (image) {
 		lightImage && (
 			<Image
 				src={lightImage}
+				widths={[320, 480, 640]}
+				sizes="(max-width: 50rem) 80vw, 20rem"
 				width={lightImage.width}
 				height={lightImage.height}
 				loading="eager"
 				decoding="async"
+				fetchpriority="high"
 				alt={image?.alt || ''}
 				class="hero-image dark:sl-hidden"
 			/>

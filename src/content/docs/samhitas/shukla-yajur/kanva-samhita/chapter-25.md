@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-25
 sidebar:
   label: '25 हिरण्यगर्भ समवर्तताग्रे'
   order: 25
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — पञ्चविंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

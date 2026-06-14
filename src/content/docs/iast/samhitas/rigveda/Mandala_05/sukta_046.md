@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-46
 sidebar:
   label: '46 nāsyā'
   order: 46
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 46'
 lastUpdated: 2026-06-13
 ---

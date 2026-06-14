@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-158
 sidebar:
   label: '158 sūryo'
   order: 158
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 158'
 lastUpdated: 2026-06-13
 ---

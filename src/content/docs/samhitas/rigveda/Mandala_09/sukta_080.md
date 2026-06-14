@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-80
 sidebar:
   label: '80 बृहस्पते'
   order: 80
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 80'
 lastUpdated: 2026-06-13
 ---

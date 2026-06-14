@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-25
 sidebar:
   label: '25 hiraṇyagarbha samavartatāgre'
   order: 25
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 25'
 lastUpdated: 2026-06-14
 ---

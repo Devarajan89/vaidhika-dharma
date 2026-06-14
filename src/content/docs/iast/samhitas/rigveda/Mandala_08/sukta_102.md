@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-102
 sidebar:
   label: '102 tvamagne'
   order: 102
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 102'
 lastUpdated: 2026-06-13
 ---

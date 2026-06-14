@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-56
 sidebar:
   label: '56 yat'
   order: 56
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 56'
 lastUpdated: 2026-06-13
 ---

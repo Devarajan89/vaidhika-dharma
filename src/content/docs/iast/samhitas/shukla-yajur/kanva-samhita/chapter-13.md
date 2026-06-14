@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-13
 sidebar:
   label: '13 dṛśāno rukma'
   order: 13
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 13'
 lastUpdated: 2026-06-14
 ---

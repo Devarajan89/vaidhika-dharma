@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-43
 sidebar:
   label: '43 yo'
   order: 43
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 43'
 lastUpdated: 2026-06-13
 ---

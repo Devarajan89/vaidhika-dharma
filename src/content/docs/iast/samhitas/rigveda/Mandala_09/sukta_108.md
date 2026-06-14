@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-108
 sidebar:
   label: '108 pavasva'
   order: 108
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 108'
 lastUpdated: 2026-06-13
 ---

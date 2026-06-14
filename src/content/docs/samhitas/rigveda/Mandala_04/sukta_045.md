@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-45
 sidebar:
   label: '45 पृक्षासो'
   order: 45
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 45'
 lastUpdated: 2026-06-13
 ---

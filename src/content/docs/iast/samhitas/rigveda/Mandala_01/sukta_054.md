@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-54
 sidebar:
   label: '54 mā'
   order: 54
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 54'
 lastUpdated: 2026-06-13
 ---

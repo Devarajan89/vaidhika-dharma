@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-168
 sidebar:
   label: '168 यज्ञायज्ञा'
   order: 168
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 168'
 lastUpdated: 2026-06-13
 ---

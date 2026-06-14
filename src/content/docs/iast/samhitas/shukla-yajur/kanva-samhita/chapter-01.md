@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-01
 sidebar:
   label: '1 oṃ   iṣe'
   order: 1
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 1'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-12
 sidebar:
   label: '12 yastvāmagna'
   order: 12
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 12'
 lastUpdated: 2026-06-13
 ---

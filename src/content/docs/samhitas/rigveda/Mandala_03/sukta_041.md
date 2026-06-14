@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-41
 sidebar:
   label: '41 आ'
   order: 41
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 41'
 lastUpdated: 2026-06-13
 ---

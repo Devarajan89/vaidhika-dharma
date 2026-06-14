@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-97
 sidebar:
   label: '97 यज्ञे'
   order: 97
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 97'
 lastUpdated: 2026-06-13
 ---

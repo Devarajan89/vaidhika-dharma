@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-78
 sidebar:
   label: '78 gṛbhṇāti'
   order: 78
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 78'
 lastUpdated: 2026-06-13
 ---

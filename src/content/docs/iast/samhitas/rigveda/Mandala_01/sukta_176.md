@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-176
 sidebar:
   label: '176 matsi'
   order: 176
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 176'
 lastUpdated: 2026-06-13
 ---

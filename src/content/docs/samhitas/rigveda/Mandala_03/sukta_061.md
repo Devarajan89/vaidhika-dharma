@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-61
 sidebar:
   label: '61 उषो'
   order: 61
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 61'
 lastUpdated: 2026-06-13
 ---
