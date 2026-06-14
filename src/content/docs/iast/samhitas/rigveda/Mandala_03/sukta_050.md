@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-50
 sidebar:
   label: '50 indra'
   order: 50
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 50'
 lastUpdated: 2026-06-13
 ---

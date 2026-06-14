@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-5
 sidebar:
   label: '5 vaiśvānarāya'
   order: 5
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 5'
 lastUpdated: 2026-06-13
 ---

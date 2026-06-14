@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-2/sukta-17
 sidebar:
   label: '17 tadasmai'
   order: 17
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Dvitīya Maṇḍala, Sūktam 17'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-95
 sidebar:
   label: '95 ā'
   order: 95
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 95'
 lastUpdated: 2026-06-13
 ---

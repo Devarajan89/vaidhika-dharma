@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-59
 sidebar:
   label: '59 hatāso'
   order: 59
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 59'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-18
 sidebar:
   label: '18 अश्मन्नूर्ज पर्वते'
   order: 18
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — अष्टादशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

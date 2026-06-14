@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-124
 sidebar:
   label: '124 ima'
   order: 124
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 124'
 lastUpdated: 2026-06-13
 ---

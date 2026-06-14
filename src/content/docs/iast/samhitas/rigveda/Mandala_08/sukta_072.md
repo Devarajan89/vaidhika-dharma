@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-72
 sidebar:
   label: '72 haviṣkṛṇudhvamā'
   order: 72
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 72'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-24
 sidebar:
   label: '24 तेजोऽसि शुक्रममृतमायुष्पा'
   order: 24
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — चतुर्विंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

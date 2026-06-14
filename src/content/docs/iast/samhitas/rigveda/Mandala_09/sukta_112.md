@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-112
 sidebar:
   label: '112 takṣā'
   order: 112
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 112'
 lastUpdated: 2026-06-13
 ---

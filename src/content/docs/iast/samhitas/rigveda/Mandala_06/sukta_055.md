@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-55
 sidebar:
   label: '55 ehi'
   order: 55
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 55'
 lastUpdated: 2026-06-13
 ---

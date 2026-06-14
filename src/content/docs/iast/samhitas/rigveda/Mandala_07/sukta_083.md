@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-83
 sidebar:
   label: '83 yuvā'
   order: 83
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 83'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-16
 sidebar:
   label: '16 enā'
   order: 16
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 16'
 lastUpdated: 2026-06-13
 ---

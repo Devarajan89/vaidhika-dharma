@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-52
 sidebar:
   label: '52 अत्य'
   order: 52
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 52'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-79
 sidebar:
   label: '79 सुसदृग्भिरुक्षभिर्भानुमश्रेद्वि'
   order: 79
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 79'
 lastUpdated: 2026-06-13
 ---

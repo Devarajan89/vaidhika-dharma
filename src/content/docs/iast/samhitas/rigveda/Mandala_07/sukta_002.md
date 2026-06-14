@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-2
 sidebar:
   label: '2 juṣasva'
   order: 2
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 2'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-19
 sidebar:
   label: '19 प्रति'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 19'
 lastUpdated: 2026-06-13
 ---

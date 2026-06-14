@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-26
 sidebar:
   label: '26 vaiśvānara'
   order: 26
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 26'
 lastUpdated: 2026-06-13
 ---

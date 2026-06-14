@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-189
 sidebar:
   label: '189 agne'
   order: 189
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 189'
 lastUpdated: 2026-06-13
 ---

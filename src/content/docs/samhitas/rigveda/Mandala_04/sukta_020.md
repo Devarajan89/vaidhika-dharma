@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-20
 sidebar:
   label: '20 ओजिष्ठेभिर्नृपतिर्वज्रबाहु'
   order: 20
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 20'
 lastUpdated: 2026-06-13
 ---

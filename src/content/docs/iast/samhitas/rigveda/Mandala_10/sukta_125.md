@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-125
 sidebar:
   label: '125 aha'
   order: 125
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 125'
 lastUpdated: 2026-06-13
 ---

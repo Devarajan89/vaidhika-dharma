@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-57
 sidebar:
   label: '57 mā'
   order: 57
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 57'
 lastUpdated: 2026-06-13
 ---

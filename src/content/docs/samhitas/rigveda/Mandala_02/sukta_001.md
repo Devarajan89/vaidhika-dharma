@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-2/sukta-1
 sidebar:
   label: '1 त्वमग्ने'
   order: 1
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 2, सूक्तम् 1'
 lastUpdated: 2026-06-13
 ---

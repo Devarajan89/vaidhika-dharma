@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-116
 sidebar:
   label: '116 नासत्याभ्या'
   order: 116
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 116'
 lastUpdated: 2026-06-13
 ---

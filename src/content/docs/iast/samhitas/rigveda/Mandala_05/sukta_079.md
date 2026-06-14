@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-79
 sidebar:
   label: '79 yathā'
   order: 79
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 79'
 lastUpdated: 2026-06-13
 ---

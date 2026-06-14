@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-159
 sidebar:
   label: '159 udasau'
   order: 159
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 159'
 lastUpdated: 2026-06-13
 ---

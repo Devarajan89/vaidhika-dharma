@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-149
 sidebar:
   label: '149 अश्वमिवाधुक्षद्धुनिमन्तरिक्षमतूर्ते'
   order: 149
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 149'
 lastUpdated: 2026-06-13
 ---

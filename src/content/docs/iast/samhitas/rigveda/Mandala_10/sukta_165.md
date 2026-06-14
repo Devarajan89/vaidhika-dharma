@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-165
 sidebar:
   label: '165 tasmā'
   order: 165
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 165'
 lastUpdated: 2026-06-13
 ---

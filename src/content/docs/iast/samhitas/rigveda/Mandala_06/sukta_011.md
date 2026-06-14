@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-11
 sidebar:
   label: '11 ā'
   order: 11
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 11'
 lastUpdated: 2026-06-13
 ---

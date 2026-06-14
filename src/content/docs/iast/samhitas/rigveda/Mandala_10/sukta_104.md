@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-104
 sidebar:
   label: '104 tubhya'
   order: 104
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 104'
 lastUpdated: 2026-06-13
 ---

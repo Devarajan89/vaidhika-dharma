@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-51
 sidebar:
   label: '51 idamu'
   order: 51
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 51'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-29
 sidebar:
   label: '29 aya'
   order: 29
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 29'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-49
 sidebar:
   label: '49 uṣo'
   order: 49
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 49'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-13
 sidebar:
   label: '13 दृशानो रुक्म'
   order: 13
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — त्रयोदशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

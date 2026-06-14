@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-57
 sidebar:
   label: '57 apāmiva'
   order: 57
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 57'
 lastUpdated: 2026-06-13
 ---

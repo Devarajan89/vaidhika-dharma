@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-64
 sidebar:
   label: '64 उत्त्वा'
   order: 64
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 64'
 lastUpdated: 2026-06-13
 ---

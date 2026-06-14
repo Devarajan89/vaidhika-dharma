@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-92
 sidebar:
   label: '92 आपच्छ्लोकमिन्द्रिय'
   order: 92
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 92'
 lastUpdated: 2026-06-13
 ---

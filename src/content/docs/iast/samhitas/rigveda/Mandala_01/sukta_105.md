@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-105
 sidebar:
   label: '105 na'
   order: 105
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 105'
 lastUpdated: 2026-06-13
 ---

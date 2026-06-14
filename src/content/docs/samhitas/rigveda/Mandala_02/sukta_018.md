@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-2/sukta-18
 sidebar:
   label: '18 प्राता'
   order: 18
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 2, सूक्तम् 18'
 lastUpdated: 2026-06-13
 ---

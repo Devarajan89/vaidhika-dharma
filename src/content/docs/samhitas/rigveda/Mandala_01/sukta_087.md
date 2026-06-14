@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-87
 sidebar:
   label: '87 जुष्टतमासो'
   order: 87
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 87'
 lastUpdated: 2026-06-13
 ---

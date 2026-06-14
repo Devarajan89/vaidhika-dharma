@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-18
 sidebar:
   label: '18 purudruho'
   order: 18
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 18'
 lastUpdated: 2026-06-13
 ---

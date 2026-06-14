@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-149
 sidebar:
   label: '149 aśvamivādhukṣaddhunimantarikṣamatūrte'
   order: 149
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 149'
 lastUpdated: 2026-06-13
 ---

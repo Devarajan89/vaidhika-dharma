@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-5
 sidebar:
   label: '5 समिद्धो'
   order: 5
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 5'
 lastUpdated: 2026-06-13
 ---

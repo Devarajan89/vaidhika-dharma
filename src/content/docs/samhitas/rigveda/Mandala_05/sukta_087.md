@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-87
 sidebar:
   label: '87 प्र'
   order: 87
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 87'
 lastUpdated: 2026-06-13
 ---

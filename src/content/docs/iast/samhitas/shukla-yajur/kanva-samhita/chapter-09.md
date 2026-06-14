@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-09
 sidebar:
   label: '9 prāṇāya me'
   order: 9
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 9'
 lastUpdated: 2026-06-14
 ---

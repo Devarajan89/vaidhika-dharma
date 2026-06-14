@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-80
 sidebar:
   label: '80 agni'
   order: 80
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 80'
 lastUpdated: 2026-06-13
 ---

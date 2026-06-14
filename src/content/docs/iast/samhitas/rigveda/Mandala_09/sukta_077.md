@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-77
 sidebar:
   label: '77 eṣa'
   order: 77
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 77'
 lastUpdated: 2026-06-13
 ---

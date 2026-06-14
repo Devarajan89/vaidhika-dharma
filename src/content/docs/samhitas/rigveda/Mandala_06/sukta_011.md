@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-11
 sidebar:
   label: '11 आ'
   order: 11
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 11'
 lastUpdated: 2026-06-13
 ---

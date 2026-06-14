@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-20
 sidebar:
   label: '20 ojiṣṭhebhirnṛpatirvajrabāhu'
   order: 20
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 20'
 lastUpdated: 2026-06-13
 ---

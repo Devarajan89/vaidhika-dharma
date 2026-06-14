@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-84
 sidebar:
   label: '84 preṣṭha'
   order: 84
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 84'
 lastUpdated: 2026-06-13
 ---

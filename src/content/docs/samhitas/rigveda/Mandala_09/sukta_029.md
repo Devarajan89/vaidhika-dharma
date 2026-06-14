@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-29
 sidebar:
   label: '29 प्रास्य'
   order: 29
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 29'
 lastUpdated: 2026-06-13
 ---

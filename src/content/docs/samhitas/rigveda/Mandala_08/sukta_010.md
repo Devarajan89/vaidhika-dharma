@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-10
 sidebar:
   label: '10 यत्स्थो'
   order: 10
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 10'
 lastUpdated: 2026-06-13
 ---

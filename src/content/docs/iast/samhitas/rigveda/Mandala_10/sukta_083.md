@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-83
 sidebar:
   label: '83 yaste'
   order: 83
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 83'
 lastUpdated: 2026-06-13
 ---

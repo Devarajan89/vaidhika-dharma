@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-181
 sidebar:
   label: '181 prathaśca'
   order: 181
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 181'
 lastUpdated: 2026-06-13
 ---

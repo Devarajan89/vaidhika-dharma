@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-136
 sidebar:
   label: '136 pra'
   order: 136
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 136'
 lastUpdated: 2026-06-13
 ---

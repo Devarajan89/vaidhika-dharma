@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-83
 sidebar:
   label: '83 pavitra'
   order: 83
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 83'
 lastUpdated: 2026-06-13
 ---

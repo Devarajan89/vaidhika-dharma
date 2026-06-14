@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-161
 sidebar:
   label: '161 ग्राहिर्जग्राह'
   order: 161
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 161'
 lastUpdated: 2026-06-13
 ---

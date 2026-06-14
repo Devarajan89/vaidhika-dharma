@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-32
 sidebar:
   label: '32 इन्द्रस्य'
   order: 32
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 32'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-121
 sidebar:
   label: '121 हिरण्यगर्भ'
   order: 121
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 121'
 lastUpdated: 2026-06-13
 ---

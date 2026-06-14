@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-19
 sidebar:
   label: '19 ima stanamūrjasvanta'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 19'
 lastUpdated: 2026-06-14
 ---

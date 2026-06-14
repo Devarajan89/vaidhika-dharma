@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-97
 sidebar:
   label: '97 apa'
   order: 97
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 97'
 lastUpdated: 2026-06-13
 ---

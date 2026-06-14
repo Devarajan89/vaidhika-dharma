@@ -6,7 +6,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
+    "prebuild": "node scripts/generate-doc-cache.mjs",
+    "dev": "node scripts/generate-doc-cache.mjs && astro dev",
     "dev:clean": "rm -rf .astro node_modules/.astro && astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -18,6 +19,9 @@
     "clean:kanva-samhita-data": "node scripts/clean-kanva-samhita-data.mjs",
     "generate:kanva-samhita": "node scripts/generate-kanva-samhita-chapters.mjs",
     "generate:kanva-samhita:index": "KANVA_INDEX_ONLY=1 node scripts/generate-kanva-samhita-chapters.mjs",
+    "clean:madhyandina-samhita-data": "node scripts/clean-madhyandina-samhita-data.mjs",
+    "generate:madhyandina-samhita": "node scripts/generate-madhyandina-samhita-chapters.mjs",
+    "generate:madhyandina-samhita:index": "MADHYANDINA_INDEX_ONLY=1 node scripts/generate-madhyandina-samhita-chapters.mjs",
     "astro": "astro"
   },
   "dependencies": {

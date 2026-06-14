@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-167
 sidebar:
   label: '167 सहस्र'
   order: 167
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 167'
 lastUpdated: 2026-06-13
 ---

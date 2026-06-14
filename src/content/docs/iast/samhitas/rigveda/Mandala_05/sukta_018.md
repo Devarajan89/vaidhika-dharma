@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-18
 sidebar:
   label: '18 prātaragni'
   order: 18
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 18'
 lastUpdated: 2026-06-13
 ---

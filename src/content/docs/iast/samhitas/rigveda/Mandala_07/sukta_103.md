@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-103
 sidebar:
   label: '103 vāca'
   order: 103
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 103'
 lastUpdated: 2026-06-13
 ---

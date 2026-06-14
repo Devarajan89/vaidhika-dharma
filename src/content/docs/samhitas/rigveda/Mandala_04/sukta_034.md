@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-34
 sidebar:
   label: '34 ऋभुर्विभ्वा'
   order: 34
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 34'
 lastUpdated: 2026-06-13
 ---

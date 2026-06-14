@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-05
 sidebar:
   label: '5 अग्नेस्तनूरसि विष्णवे'
   order: 5
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — पञ्चमोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-23
 sidebar:
   label: '23 ima me'
   order: 23
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 23'
 lastUpdated: 2026-06-14
 ---

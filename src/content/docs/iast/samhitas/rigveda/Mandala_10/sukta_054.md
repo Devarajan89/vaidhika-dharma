@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-54
 sidebar:
   label: '54 tā'
   order: 54
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 54'
 lastUpdated: 2026-06-13
 ---

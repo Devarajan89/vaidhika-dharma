@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-54
 sidebar:
   label: '54 घर्मस्तुभे'
   order: 54
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 54'
 lastUpdated: 2026-06-13
 ---

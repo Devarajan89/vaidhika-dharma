@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-18
 sidebar:
   label: '18 ida'
   order: 18
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 18'
 lastUpdated: 2026-06-13
 ---

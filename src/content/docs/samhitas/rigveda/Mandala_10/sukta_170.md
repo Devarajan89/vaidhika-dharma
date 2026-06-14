@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-170
 sidebar:
   label: '170 विभ्राड्बृहत्पिबतु'
   order: 170
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 170'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-25
 sidebar:
   label: '25 adhā'
   order: 25
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 25'
 lastUpdated: 2026-06-13
 ---

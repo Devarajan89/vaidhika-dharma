@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-60
 sidebar:
   label: '60 vahni'
   order: 60
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 60'
 lastUpdated: 2026-06-13
 ---

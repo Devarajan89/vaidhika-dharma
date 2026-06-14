@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-31
 sidebar:
   label: '31 प्र'
   order: 31
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 31'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-2/sukta-31
 sidebar:
   label: '31 asmāka'
   order: 31
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Dvitīya Maṇḍala, Sūktam 31'
 lastUpdated: 2026-06-13
 ---

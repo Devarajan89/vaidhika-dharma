@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-91
 sidebar:
   label: '91 कन्या३'
   order: 91
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 91'
 lastUpdated: 2026-06-13
 ---

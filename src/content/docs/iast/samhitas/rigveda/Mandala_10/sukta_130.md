@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-130
 sidebar:
   label: '130 yo'
   order: 130
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 130'
 lastUpdated: 2026-06-13
 ---

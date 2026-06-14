@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-31
 sidebar:
   label: '31 शासद्'
   order: 31
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 31'
 lastUpdated: 2026-06-13
 ---

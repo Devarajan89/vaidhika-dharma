@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-66
 sidebar:
   label: '66 pavasva'
   order: 66
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 66'
 lastUpdated: 2026-06-13
 ---

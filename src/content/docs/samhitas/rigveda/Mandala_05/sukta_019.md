@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-19
 sidebar:
   label: '19 अभ्यवस्था'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 19'
 lastUpdated: 2026-06-13
 ---

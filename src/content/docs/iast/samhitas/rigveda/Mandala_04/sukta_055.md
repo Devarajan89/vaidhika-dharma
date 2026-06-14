@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-55
 sidebar:
   label: '55 ko'
   order: 55
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 55'
 lastUpdated: 2026-06-13
 ---

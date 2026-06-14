@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-37
 sidebar:
   label: '37 समिद्धाग्निर्वनवत्'
   order: 37
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 37'
 lastUpdated: 2026-06-13
 ---

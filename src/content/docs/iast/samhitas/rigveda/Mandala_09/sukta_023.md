@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-23
 sidebar:
   label: '23 somā'
   order: 23
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 23'
 lastUpdated: 2026-06-13
 ---

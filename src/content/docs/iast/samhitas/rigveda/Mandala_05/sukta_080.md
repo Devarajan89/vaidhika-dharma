@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-80
 sidebar:
   label: '80 devīmuṣasa'
   order: 80
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 80'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-20
 sidebar:
   label: '20 वाजस्य नु'
   order: 20
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — विंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-119
 sidebar:
   label: '119 iti'
   order: 119
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 119'
 lastUpdated: 2026-06-13
 ---

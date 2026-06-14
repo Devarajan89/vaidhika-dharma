@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-96
 sidebar:
   label: '96 asmā'
   order: 96
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 96'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-34
 sidebar:
   label: '34 deva savita'
   order: 34
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 34'
 lastUpdated: 2026-06-14
 ---

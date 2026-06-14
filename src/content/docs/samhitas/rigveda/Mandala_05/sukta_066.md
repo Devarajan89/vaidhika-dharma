@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-66
 sidebar:
   label: '66 आ'
   order: 66
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 66'
 lastUpdated: 2026-06-13
 ---

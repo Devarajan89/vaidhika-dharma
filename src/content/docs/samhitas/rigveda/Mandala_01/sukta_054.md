@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-54
 sidebar:
   label: '54 मा'
   order: 54
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 54'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-81
 sidebar:
   label: '81 य'
   order: 81
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 81'
 lastUpdated: 2026-06-13
 ---

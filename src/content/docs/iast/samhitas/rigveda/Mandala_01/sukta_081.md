@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-81
 sidebar:
   label: '81 taminmahatsvājiṣūtemarbhe'
   order: 81
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 81'
 lastUpdated: 2026-06-13
 ---

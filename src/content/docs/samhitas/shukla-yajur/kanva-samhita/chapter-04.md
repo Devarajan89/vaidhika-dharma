@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-04
 sidebar:
   label: '4 एदमगन्म देवयजन'
   order: 4
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — चतुर्थोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

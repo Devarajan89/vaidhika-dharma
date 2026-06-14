@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-107
 sidebar:
   label: '107 ā'
   order: 107
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 107'
 lastUpdated: 2026-06-13
 ---

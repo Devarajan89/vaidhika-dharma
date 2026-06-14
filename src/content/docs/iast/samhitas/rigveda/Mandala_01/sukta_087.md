@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-87
 sidebar:
   label: '87 juṣṭatamāso'
   order: 87
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 87'
 lastUpdated: 2026-06-13
 ---

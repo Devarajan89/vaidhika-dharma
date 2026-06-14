@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-191
 sidebar:
   label: '191 16'
   order: 191
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 191'
 lastUpdated: 2026-06-13
 ---

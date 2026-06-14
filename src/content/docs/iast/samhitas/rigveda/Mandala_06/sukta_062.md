@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-62
 sidebar:
   label: '62 stuṣe'
   order: 62
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 62'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-147
 sidebar:
   label: '147 kathā'
   order: 147
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 147'
 lastUpdated: 2026-06-13
 ---

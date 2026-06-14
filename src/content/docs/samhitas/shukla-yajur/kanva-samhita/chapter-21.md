@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-21
 sidebar:
   label: '21 स्वाद्वी त्वा'
   order: 21
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — एकविंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

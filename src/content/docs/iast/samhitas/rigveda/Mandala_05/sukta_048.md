@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-48
 sidebar:
   label: '48 kadu'
   order: 48
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 48'
 lastUpdated: 2026-06-13
 ---

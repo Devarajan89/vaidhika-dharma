@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-98
 sidebar:
   label: '98 वैश्वानरस्य'
   order: 98
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 98'
 lastUpdated: 2026-06-13
 ---

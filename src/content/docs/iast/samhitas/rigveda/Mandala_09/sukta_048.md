@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-48
 sidebar:
   label: '48 ta'
   order: 48
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 48'
 lastUpdated: 2026-06-13
 ---

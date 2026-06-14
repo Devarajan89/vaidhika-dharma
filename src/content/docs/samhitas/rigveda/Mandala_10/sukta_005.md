@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-5
 sidebar:
   label: '5 सिषक्त्यूधर्निण्योरुपस्थ'
   order: 5
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 5'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-12
 sidebar:
   label: '12 चित्रभानु'
   order: 12
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 12'
 lastUpdated: 2026-06-13
 ---

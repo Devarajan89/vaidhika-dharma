@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-27
 sidebar:
   label: '27 इन्द्र'
   order: 27
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 27'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-87
 sidebar:
   label: '87 radatpatho'
   order: 87
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 87'
 lastUpdated: 2026-06-13
 ---

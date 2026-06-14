@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-35
 sidebar:
   label: '35 sahasraśīrṣā puruṣa'
   order: 35
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 35'
 lastUpdated: 2026-06-14
 ---

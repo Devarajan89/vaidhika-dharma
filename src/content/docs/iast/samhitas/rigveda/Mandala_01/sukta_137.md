@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-137
 sidebar:
   label: '137 suṣumā'
   order: 137
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 137'
 lastUpdated: 2026-06-13
 ---

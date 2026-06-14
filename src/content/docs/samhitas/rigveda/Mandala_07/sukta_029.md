@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-29
 sidebar:
   label: '29 अय'
   order: 29
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 29'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-168
 sidebar:
   label: '168 दिविस्पृग्यात्यरुणानि'
   order: 168
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 168'
 lastUpdated: 2026-06-13
 ---

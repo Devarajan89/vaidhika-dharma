@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-14
 sidebar:
   label: '14 mayi gṛhṇāmyagre'
   order: 14
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 14'
 lastUpdated: 2026-06-14
 ---

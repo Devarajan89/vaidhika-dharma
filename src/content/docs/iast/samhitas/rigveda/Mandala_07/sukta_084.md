@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-84
 sidebar:
   label: '84 ā'
   order: 84
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 84'
 lastUpdated: 2026-06-13
 ---

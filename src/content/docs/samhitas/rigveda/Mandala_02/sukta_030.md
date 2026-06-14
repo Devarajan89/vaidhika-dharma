@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-2/sukta-30
 sidebar:
   label: '30 ऋत'
   order: 30
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 2, सूक्तम् 30'
 lastUpdated: 2026-06-13
 ---

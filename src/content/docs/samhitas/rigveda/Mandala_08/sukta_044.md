@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-44
 sidebar:
   label: '44 समिधाग्नि'
   order: 44
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 44'
 lastUpdated: 2026-06-13
 ---

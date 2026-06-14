@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-101
 sidebar:
   label: '101 pra'
   order: 101
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 101'
 lastUpdated: 2026-06-13
 ---

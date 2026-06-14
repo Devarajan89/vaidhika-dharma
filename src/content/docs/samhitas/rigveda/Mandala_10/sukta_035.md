@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-35
 sidebar:
   label: '35 अबुध्रमु'
   order: 35
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 35'
 lastUpdated: 2026-06-13
 ---

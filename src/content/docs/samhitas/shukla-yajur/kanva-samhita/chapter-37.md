@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-37
 sidebar:
   label: '37 देवस्य त्वा'
   order: 37
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — सप्तत्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

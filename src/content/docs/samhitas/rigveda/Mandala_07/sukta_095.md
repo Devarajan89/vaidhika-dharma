@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-95
 sidebar:
   label: '95 प्रबाबधाना'
   order: 95
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 95'
 lastUpdated: 2026-06-13
 ---

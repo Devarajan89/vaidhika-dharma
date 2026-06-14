@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-12
 sidebar:
   label: '12 मध्ये'
   order: 12
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 12'
 lastUpdated: 2026-06-13
 ---

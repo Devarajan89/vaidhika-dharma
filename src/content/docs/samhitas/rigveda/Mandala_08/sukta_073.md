@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-73
 sidebar:
   label: '73 उदीराथामृतायते'
   order: 73
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 73'
 lastUpdated: 2026-06-13
 ---

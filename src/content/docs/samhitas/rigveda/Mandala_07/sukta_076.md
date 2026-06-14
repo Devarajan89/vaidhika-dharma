@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-76
 sidebar:
   label: '76 उदु'
   order: 76
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 76'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-187
 sidebar:
   label: '187 pitu'
   order: 187
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 187'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-56
 sidebar:
   label: '56 nakirhyeṣā'
   order: 56
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 56'
 lastUpdated: 2026-06-13
 ---

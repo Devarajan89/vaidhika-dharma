@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-35
 sidebar:
   label: '35 पिबास्यन्धो'
   order: 35
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 35'
 lastUpdated: 2026-06-13
 ---

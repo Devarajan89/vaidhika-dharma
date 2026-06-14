@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-80
 sidebar:
   label: '80 prati'
   order: 80
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 80'
 lastUpdated: 2026-06-13
 ---

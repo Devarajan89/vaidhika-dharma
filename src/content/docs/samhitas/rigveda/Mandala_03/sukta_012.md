@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-12
 sidebar:
   label: '12 इन्द्राग्नी'
   order: 12
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 12'
 lastUpdated: 2026-06-13
 ---

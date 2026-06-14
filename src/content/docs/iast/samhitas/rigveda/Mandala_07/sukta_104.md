@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-104
 sidebar:
   label: '104 indrāsomā'
   order: 104
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 104'
 lastUpdated: 2026-06-13
 ---

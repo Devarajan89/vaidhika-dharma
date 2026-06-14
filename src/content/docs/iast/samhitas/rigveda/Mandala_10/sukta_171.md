@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-171
 sidebar:
   label: '171 tva'
   order: 171
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 171'
 lastUpdated: 2026-06-13
 ---

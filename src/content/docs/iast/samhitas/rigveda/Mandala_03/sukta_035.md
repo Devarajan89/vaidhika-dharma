@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-35
 sidebar:
   label: '35 pibāsyandho'
   order: 35
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 35'
 lastUpdated: 2026-06-13
 ---

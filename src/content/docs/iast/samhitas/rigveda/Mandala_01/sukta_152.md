@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-152
 sidebar:
   label: '152 yuva'
   order: 152
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 152'
 lastUpdated: 2026-06-13
 ---

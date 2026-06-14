@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-95
 sidebar:
   label: '95 कनिक्रन्ति'
   order: 95
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 95'
 lastUpdated: 2026-06-13
 ---

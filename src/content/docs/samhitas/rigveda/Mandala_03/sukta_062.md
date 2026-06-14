@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-62
 sidebar:
   label: '62 क्व१'
   order: 62
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 62'
 lastUpdated: 2026-06-13
 ---

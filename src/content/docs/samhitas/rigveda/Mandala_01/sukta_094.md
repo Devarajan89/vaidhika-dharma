@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-94
 sidebar:
   label: '94 भद्रा'
   order: 94
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 94'
 lastUpdated: 2026-06-13
 ---

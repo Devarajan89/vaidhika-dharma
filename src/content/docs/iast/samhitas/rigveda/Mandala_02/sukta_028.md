@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-2/sukta-28
 sidebar:
   label: '28 ida'
   order: 28
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Dvitīya Maṇḍala, Sūktam 28'
 lastUpdated: 2026-06-13
 ---

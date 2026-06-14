@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-114
 sidebar:
   label: '114 gharmā'
   order: 114
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 114'
 lastUpdated: 2026-06-13
 ---

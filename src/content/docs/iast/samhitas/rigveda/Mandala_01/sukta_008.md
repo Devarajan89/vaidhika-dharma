@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-8
 sidebar:
   label: '8 endra'
   order: 8
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 8'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-71
 sidebar:
   label: '71 ā'
   order: 71
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 71'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-1
 sidebar:
   label: '1 abodhyagni'
   order: 1
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 1'
 lastUpdated: 2026-06-13
 ---

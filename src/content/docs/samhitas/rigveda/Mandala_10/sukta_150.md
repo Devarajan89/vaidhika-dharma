@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-150
 sidebar:
   label: '150 समिद्धश्चित्समिध्यसे'
   order: 150
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 150'
 lastUpdated: 2026-06-13
 ---

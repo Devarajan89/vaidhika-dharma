@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-18
 sidebar:
   label: '18 aśmannūrja parvate'
   order: 18
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 18'
 lastUpdated: 2026-06-14
 ---

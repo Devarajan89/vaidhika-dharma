@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-19
 sidebar:
   label: '19 prati'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 19'
 lastUpdated: 2026-06-13
 ---

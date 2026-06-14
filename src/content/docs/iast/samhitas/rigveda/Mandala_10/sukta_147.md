@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-147
 sidebar:
   label: '147 ubhe'
   order: 147
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 147'
 lastUpdated: 2026-06-13
 ---

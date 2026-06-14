@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-30
 sidebar:
   label: '30 nakirindra'
   order: 30
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 30'
 lastUpdated: 2026-06-13
 ---

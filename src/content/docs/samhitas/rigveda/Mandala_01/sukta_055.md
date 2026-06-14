@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-55
 sidebar:
   label: '55 दिवश्चिदस्य'
   order: 55
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 55'
 lastUpdated: 2026-06-13
 ---

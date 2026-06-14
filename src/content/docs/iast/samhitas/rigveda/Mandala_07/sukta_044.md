@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-44
 sidebar:
   label: '44 indra'
   order: 44
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 44'
 lastUpdated: 2026-06-13
 ---

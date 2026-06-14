@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-7
 sidebar:
   label: '7 mūrdhāna'
   order: 7
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 7'
 lastUpdated: 2026-06-13
 ---

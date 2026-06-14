@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-30
 sidebar:
   label: '30 इच्छन्ति'
   order: 30
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 30'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-10/sukta-157
 sidebar:
   label: '157 इमा'
   order: 157
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 10, सूक्तम् 157'
 lastUpdated: 2026-06-13
 ---

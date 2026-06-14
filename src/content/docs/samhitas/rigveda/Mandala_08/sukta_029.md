@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-29
 sidebar:
   label: '29 बभ्रुरेको'
   order: 29
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 29'
 lastUpdated: 2026-06-13
 ---

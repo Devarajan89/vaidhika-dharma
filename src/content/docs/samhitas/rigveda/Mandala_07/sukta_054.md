@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-54
 sidebar:
   label: '54 वास्तोष्पते'
   order: 54
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 54'
 lastUpdated: 2026-06-13
 ---

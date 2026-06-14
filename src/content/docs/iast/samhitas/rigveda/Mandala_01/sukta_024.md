@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-24
 sidebar:
   label: '24 kasya'
   order: 24
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 24'
 lastUpdated: 2026-06-13
 ---

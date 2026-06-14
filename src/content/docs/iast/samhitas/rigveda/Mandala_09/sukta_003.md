@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-9/sukta-3
 sidebar:
   label: '3 eṣa'
   order: 3
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Navama Maṇḍala, Sūktam 3'
 lastUpdated: 2026-06-13
 ---

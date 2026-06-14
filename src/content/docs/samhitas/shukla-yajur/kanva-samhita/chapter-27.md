@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-27
 sidebar:
   label: '27 शाद दद्भिरवका'
   order: 27
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — सप्तविंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

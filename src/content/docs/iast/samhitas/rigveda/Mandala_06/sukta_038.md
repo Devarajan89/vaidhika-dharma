@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-38
 sidebar:
   label: '38 apādita'
   order: 38
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 38'
 lastUpdated: 2026-06-13
 ---

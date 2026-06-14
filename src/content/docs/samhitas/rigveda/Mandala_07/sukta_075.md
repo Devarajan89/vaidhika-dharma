@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-75
 sidebar:
   label: '75 व्यु१षा'
   order: 75
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 75'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-68
 sidebar:
   label: '68 giribhrajo'
   order: 68
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 68'
 lastUpdated: 2026-06-13
 ---

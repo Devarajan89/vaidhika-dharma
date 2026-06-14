@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-17
 sidebar:
   label: '17 tva'
   order: 17
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 17'
 lastUpdated: 2026-06-13
 ---

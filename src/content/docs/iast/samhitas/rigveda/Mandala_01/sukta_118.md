@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-118
 sidebar:
   label: '118 ā'
   order: 118
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 118'
 lastUpdated: 2026-06-13
 ---

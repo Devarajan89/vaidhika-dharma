@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-44
 sidebar:
   label: '44 ta'
   order: 44
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 44'
 lastUpdated: 2026-06-13
 ---

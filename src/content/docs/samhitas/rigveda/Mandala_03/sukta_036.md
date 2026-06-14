@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-36
 sidebar:
   label: '36 सुतेसुते'
   order: 36
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 36'
 lastUpdated: 2026-06-13
 ---

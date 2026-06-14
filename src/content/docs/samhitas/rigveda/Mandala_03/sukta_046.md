@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-46
 sidebar:
   label: '46 युध्मस्य'
   order: 46
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 46'
 lastUpdated: 2026-06-13
 ---

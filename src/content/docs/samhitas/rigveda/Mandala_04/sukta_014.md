@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-14
 sidebar:
   label: '14 प्रत्यग्निरुषसो'
   order: 14
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 14'
 lastUpdated: 2026-06-13
 ---

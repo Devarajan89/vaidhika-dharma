@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-57
 sidebar:
   label: '57 इय'
   order: 57
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 57'
 lastUpdated: 2026-06-13
 ---

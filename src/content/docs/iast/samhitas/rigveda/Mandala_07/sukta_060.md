@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-60
 sidebar:
   label: '60 yadadya'
   order: 60
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 60'
 lastUpdated: 2026-06-13
 ---

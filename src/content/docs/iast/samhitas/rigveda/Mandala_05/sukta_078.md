@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-78
 sidebar:
   label: '78 aśvināveha'
   order: 78
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 78'
 lastUpdated: 2026-06-13
 ---

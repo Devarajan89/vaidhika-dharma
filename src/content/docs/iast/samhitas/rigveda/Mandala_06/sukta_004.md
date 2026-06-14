@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-4
 sidebar:
   label: '4 evā'
   order: 4
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 4'
 lastUpdated: 2026-06-13
 ---

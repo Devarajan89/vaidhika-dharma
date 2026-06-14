@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-24
 sidebar:
   label: '24 kā'
   order: 24
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 24'
 lastUpdated: 2026-06-13
 ---

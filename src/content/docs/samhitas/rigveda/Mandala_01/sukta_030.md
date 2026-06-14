@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-30
 sidebar:
   label: '30 आ'
   order: 30
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 30'
 lastUpdated: 2026-06-13
 ---

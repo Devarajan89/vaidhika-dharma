@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-101
 sidebar:
   label: '101 तिस्रो'
   order: 101
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 101'
 lastUpdated: 2026-06-13
 ---

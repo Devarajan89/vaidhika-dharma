@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-82
 sidebar:
   label: '82 ā'
   order: 82
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 82'
 lastUpdated: 2026-06-13
 ---

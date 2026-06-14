@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-175
 sidebar:
   label: '175 matsyapāyi'
   order: 175
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 175'
 lastUpdated: 2026-06-13
 ---

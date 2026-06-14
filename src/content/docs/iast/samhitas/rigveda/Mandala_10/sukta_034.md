@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-34
 sidebar:
   label: '34 prāvepā'
   order: 34
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 34'
 lastUpdated: 2026-06-13
 ---

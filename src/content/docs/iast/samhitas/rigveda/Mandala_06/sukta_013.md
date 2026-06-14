@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-13
 sidebar:
   label: '13 śruṣṭī'
   order: 13
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 13'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-11
 sidebar:
   label: '11 eṣa te'
   order: 11
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 11'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-54
 sidebar:
   label: '54 sa'
   order: 54
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 54'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-17
 sidebar:
   label: '17 नमस्ते रुद्र'
   order: 17
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — सप्तदशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-89
 sidebar:
   label: '89 devā'
   order: 89
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 89'
 lastUpdated: 2026-06-13
 ---

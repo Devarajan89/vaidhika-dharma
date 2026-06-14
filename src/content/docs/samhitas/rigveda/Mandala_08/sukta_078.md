@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-78
 sidebar:
   label: '78 पुरोळाश'
   order: 78
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 78'
 lastUpdated: 2026-06-13
 ---

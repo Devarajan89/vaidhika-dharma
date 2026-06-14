@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-03
 sidebar:
   label: '3 samidhāgni duvasyata'
   order: 3
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 3'
 lastUpdated: 2026-06-14
 ---

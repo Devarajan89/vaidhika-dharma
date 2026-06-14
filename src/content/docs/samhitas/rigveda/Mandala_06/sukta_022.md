@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-22
 sidebar:
   label: '22 य'
   order: 22
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 22'
 lastUpdated: 2026-06-13
 ---

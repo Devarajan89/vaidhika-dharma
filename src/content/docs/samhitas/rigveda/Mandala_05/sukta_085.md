@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-85
 sidebar:
   label: '85 प्र'
   order: 85
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 85'
 lastUpdated: 2026-06-13
 ---

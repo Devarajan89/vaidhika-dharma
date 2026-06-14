@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-29
 sidebar:
   label: '29 समास्त्वाग्न ऋतवो'
   order: 29
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — नवविंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

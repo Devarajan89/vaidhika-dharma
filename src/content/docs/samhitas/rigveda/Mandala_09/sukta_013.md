@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-13
 sidebar:
   label: '13 सोम'
   order: 13
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 13'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-6/sukta-48
 sidebar:
   label: '48 yajñāyajñā'
   order: 48
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Ṣaṣṭha Maṇḍala, Sūktam 48'
 lastUpdated: 2026-06-13
 ---

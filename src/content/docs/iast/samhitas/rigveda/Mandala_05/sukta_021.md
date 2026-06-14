@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-21
 sidebar:
   label: '21 manuṣvat'
   order: 21
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 21'
 lastUpdated: 2026-06-13
 ---

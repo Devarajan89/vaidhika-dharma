@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-122
 sidebar:
   label: '122 sa'
   order: 122
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 122'
 lastUpdated: 2026-06-13
 ---

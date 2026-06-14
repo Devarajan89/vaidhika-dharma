@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-26
 sidebar:
   label: '26 तस्मा'
   order: 26
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 26'
 lastUpdated: 2026-06-13
 ---

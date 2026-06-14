@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-01
 sidebar:
   label: '1 ओ३म्॥ इषे'
   order: 1
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — प्रथमोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

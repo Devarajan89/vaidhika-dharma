@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-33
 sidebar:
   label: '33 śvityañco'
   order: 33
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 33'
 lastUpdated: 2026-06-13
 ---

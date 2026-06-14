@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-145
 sidebar:
   label: '145 तस्मिन्'
   order: 145
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 145'
 lastUpdated: 2026-06-13
 ---

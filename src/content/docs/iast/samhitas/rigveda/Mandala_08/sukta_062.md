@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-62
 sidebar:
   label: '62 ukthairindrasya'
   order: 62
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 62'
 lastUpdated: 2026-06-13
 ---

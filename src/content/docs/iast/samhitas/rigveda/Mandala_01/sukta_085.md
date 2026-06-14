@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-85
 sidebar:
   label: '85 pra'
   order: 85
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 85'
 lastUpdated: 2026-06-13
 ---

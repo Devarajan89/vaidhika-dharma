@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-45
 sidebar:
   label: '45 ā'
   order: 45
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 45'
 lastUpdated: 2026-06-13
 ---

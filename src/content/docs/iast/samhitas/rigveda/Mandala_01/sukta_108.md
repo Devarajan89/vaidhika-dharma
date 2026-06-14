@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-108
 sidebar:
   label: '108 ya'
   order: 108
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 108'
 lastUpdated: 2026-06-13
 ---

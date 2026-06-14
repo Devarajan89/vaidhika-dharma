@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-80
 sidebar:
   label: '80 प्रति'
   order: 80
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 80'
 lastUpdated: 2026-06-13
 ---

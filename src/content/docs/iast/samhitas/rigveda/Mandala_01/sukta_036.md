@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-36
 sidebar:
   label: '36 agni'
   order: 36
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 36'
 lastUpdated: 2026-06-13
 ---

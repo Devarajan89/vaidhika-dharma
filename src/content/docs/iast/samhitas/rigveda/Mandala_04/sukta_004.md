@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-4
 sidebar:
   label: '4 tṛṣvīmanu'
   order: 4
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 4'
 lastUpdated: 2026-06-13
 ---

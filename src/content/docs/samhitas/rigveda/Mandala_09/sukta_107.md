@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-107
 sidebar:
   label: '107 दधन्वा'
   order: 107
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 107'
 lastUpdated: 2026-06-13
 ---

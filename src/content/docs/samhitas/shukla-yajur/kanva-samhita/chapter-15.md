@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-15
 sidebar:
   label: '15 ध्रुवक्षितिर्ध्रुवयोनिर्ध्रुवासि ध्रुव'
   order: 15
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — पञ्चदशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

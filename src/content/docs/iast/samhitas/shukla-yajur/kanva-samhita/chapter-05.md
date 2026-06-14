@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-05
 sidebar:
   label: '5 agnestanūrasi viṣṇave'
   order: 5
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 5'
 lastUpdated: 2026-06-14
 ---

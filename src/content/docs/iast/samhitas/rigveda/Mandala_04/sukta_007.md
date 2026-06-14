@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-4/sukta-7
 sidebar:
   label: '7 ayamiha'
   order: 7
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Caturtha Maṇḍala, Sūktam 7'
 lastUpdated: 2026-06-13
 ---

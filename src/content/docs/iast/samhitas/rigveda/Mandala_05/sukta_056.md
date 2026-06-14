@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-56
 sidebar:
   label: '56 agne'
   order: 56
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 56'
 lastUpdated: 2026-06-13
 ---

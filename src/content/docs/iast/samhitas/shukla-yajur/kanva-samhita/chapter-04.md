@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-04
 sidebar:
   label: '4 edamaganma devayajana'
   order: 4
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 4'
 lastUpdated: 2026-06-14
 ---

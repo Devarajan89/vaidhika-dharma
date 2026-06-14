@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-4
 sidebar:
   label: '4 एवा'
   order: 4
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 4'
 lastUpdated: 2026-06-13
 ---

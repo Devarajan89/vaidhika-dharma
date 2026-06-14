@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import { Card } from '@astrojs/starlight/components';
 import type { HomeLocale } from '../data/home';
 import { homeContent } from '../data/home';
+import docCache from '../data/doc-cache.json';
 
 interface Props {
 	locale: HomeLocale;
@@ -12,39 +12,20 @@ interface Props {
 const { locale, limit = 5 } = Astro.props;
 const { recentTitle } = homeContent;
 
-const allDocs = await getCollection('docs');
-
-function matchesLocale(id: string): boolean {
-	if (locale === 'root') return !id.startsWith('iast/') && !id.startsWith('ta/');
-	return id.startsWith(`${locale}/`);
-}
-
-function isContentPage(id: string): boolean {
-	return id !== 'index' && !id.endsWith('/index');
-}
-
 function getPageUrl(slug: string | undefined, id: string): string {
 	const path = slug ?? id;
 	return `/${path}/`;
 }
 
-function formatDate(date: Date): string {
-	return date.toLocaleDateString('en-IN', {
+function formatDate(dateStr: string): string {
+	return new Date(dateStr).toLocaleDateString('en-IN', {
 		year: 'numeric',
 		month: 'short',
 		day: 'numeric',
 	});
 }
 
-const recent = allDocs
-	.filter((entry) => matchesLocale(entry.id) && isContentPage(entry.id))
-	.filter((entry) => entry.data.lastUpdated instanceof Date)
-	.sort((a, b) => {
-		const aDate = a.data.lastUpdated as Date;
-		const bDate = b.data.lastUpdated as Date;
-		return bDate.getTime() - aDate.getTime();
-	})
-	.slice(0, limit);
+const recent = (docCache.recentByLocale[locale] ?? []).slice(0, limit);
 ---
 
 <div class="recent-updates home-card">
@@ -54,11 +35,9 @@ const recent = allDocs
 				<ul class="recent-updates__list">
 					{recent.map((entry) => (
 						<li>
-							<a href={getPageUrl(entry.data.slug, entry.id)}>
-								<span class="recent-updates__title">{entry.data.title}</span>
-								<time datetime={(entry.data.lastUpdated as Date).toISOString()}>
-									{formatDate(entry.data.lastUpdated as Date)}
-								</time>
+							<a href={getPageUrl(entry.slug, entry.id)}>
+								<span class="recent-updates__title">{entry.title}</span>
+								<time datetime={entry.lastUpdated}>{formatDate(entry.lastUpdated)}</time>
 							</a>
 						</li>
 					))}

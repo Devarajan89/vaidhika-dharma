@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-19
 sidebar:
   label: '19 इम स्तनमूर्जस्वन्त'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — नवदशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

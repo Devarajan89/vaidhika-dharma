@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-06
 sidebar:
   label: '6 devasya tvā'
   order: 6
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 6'
 lastUpdated: 2026-06-14
 ---

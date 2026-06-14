@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-175
 sidebar:
   label: '175 मत्स्यपायि'
   order: 175
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 175'
 lastUpdated: 2026-06-13
 ---

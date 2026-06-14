@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-104
 sidebar:
   label: '104 vimucyā'
   order: 104
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 104'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-61
 sidebar:
   label: '61 इयमददाद्रभसमृणच्युत'
   order: 61
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 61'
 lastUpdated: 2026-06-13
 ---

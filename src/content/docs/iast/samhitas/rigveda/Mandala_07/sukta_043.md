@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-43
 sidebar:
   label: '43 pra'
   order: 43
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 43'
 lastUpdated: 2026-06-13
 ---

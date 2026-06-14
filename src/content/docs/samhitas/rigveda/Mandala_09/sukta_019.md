@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-19
 sidebar:
   label: '19 यत्सोम'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 19'
 lastUpdated: 2026-06-13
 ---

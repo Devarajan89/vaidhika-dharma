@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-165
 sidebar:
   label: '165 kayā'
   order: 165
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 165'
 lastUpdated: 2026-06-13
 ---

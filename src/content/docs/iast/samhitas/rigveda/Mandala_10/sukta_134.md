@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-134
 sidebar:
   label: '134 mahānta'
   order: 134
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 134'
 lastUpdated: 2026-06-13
 ---

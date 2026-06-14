@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-55
 sidebar:
   label: '55 bhūrīdindrasya'
   order: 55
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 55'
 lastUpdated: 2026-06-13
 ---

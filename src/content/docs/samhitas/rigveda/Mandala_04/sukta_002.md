@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-4/sukta-2
 sidebar:
   label: '2 होता'
   order: 2
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 4, सूक्तम् 2'
 lastUpdated: 2026-06-13
 ---

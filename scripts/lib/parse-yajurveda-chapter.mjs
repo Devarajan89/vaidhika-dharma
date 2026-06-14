@@ -1,6 +1,8 @@
 const SVARA_RE = /[\u0900-\u0903\u0951-\u0954]/g;
 const LEADING_SPACE_RE = /^[ \t]+/gm;
-const VERSE_MARKER_RE = /॥([०-९0-9]+)(?:॥)?/g;
+const KANVA_VERSE_MARKER_RE = /॥([०-९0-9]+)(?:॥)?/g;
+const MADHYANDINA_VERSE_MARKER_RE = /।।\s*([०-९0-9]+)\s*।{0,2}/g;
+const VERSE_MARKER_RE = KANVA_VERSE_MARKER_RE;
 const PRIVATE_USE_RE = /[\uE000-\uF8FF\uFFFC]/g;
 const ORPHAN_NUMBER_LINE_RE = /^([०-९0-9]+(?:\([०-९0-9]+\))?)\s*$/;
 const ORPHAN_MARKER_LINE_RE = /^[०-९0-9]+(?:॥[०-९0-9]*)*\s*$/;
@@ -76,6 +78,7 @@ function isOrphanMarkerLine(line) {
 	if (ORPHAN_NUMBER_LINE_RE.test(trimmed)) return true;
 	if (/^[\d०-९\s()|]+$/.test(trimmed.replace(SVARA_RE, ''))) return true;
 	if (/^॥\s*[\d०-९]+/.test(trimmed)) return true;
+	if (/^।।\s*[\d०-९]+/.test(trimmed)) return true;
 
 	const withoutSvara = trimmed.replace(SVARA_RE, '');
 	const letters = withoutSvara.replace(/[०-९0-9()॥.\s|]/g, '');
@@ -127,10 +130,14 @@ function extractHeader(text) {
 	const headerLines = [];
 
 	for (const line of lines) {
-		headerLines.push(line);
 		if (/ध्यायः|ऽध्यायः|उपनिषद/.test(line)) {
+			headerLines.push(line);
 			break;
 		}
+		if (/।।\s*[०-९0-9]+|॥[०-९0-9]+/.test(line)) {
+			break;
+		}
+		headerLines.push(line);
 	}
 
 	return headerLines.join('\n').trim();
@@ -150,11 +157,17 @@ function stripLeadingOrphans(text) {
 		.trim();
 }
 
+function findVerseMarkers(body) {
+	const kanva = [...body.matchAll(KANVA_VERSE_MARKER_RE)];
+	if (kanva.length) return kanva;
+	return [...body.matchAll(MADHYANDINA_VERSE_MARKER_RE)];
+}
+
 /**
  * @param {string} text
  */
 function stripFooter(text) {
-	const footerMatch = text.search(/\n?॥\s*(?:इति|iti)/i);
+	const footerMatch = text.search(/\n?(?:॥|।।)\s*(?:इति|iti)/i);
 	if (footerMatch !== -1) {
 		return text.slice(0, footerMatch).trim();
 	}
@@ -206,7 +219,7 @@ export function parseYajurvedaChapter(text, options = {}) {
 	const normalized = prepareChapterText(text);
 	const header = extractHeader(normalized);
 	const body = normalized.slice(header.length).trim();
-	const matches = [...body.matchAll(VERSE_MARKER_RE)];
+	const matches = findVerseMarkers(body);
 
 	if (!matches.length) {
 		return { header, verses: [], firstWord: '', verseCount: 0 };

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-162
 sidebar:
   label: '162 yad'
   order: 162
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 162'
 lastUpdated: 2026-06-13
 ---

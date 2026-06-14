@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-96
 sidebar:
   label: '96 pra'
   order: 96
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 96'
 lastUpdated: 2026-06-13
 ---

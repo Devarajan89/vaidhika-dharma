@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-134
 sidebar:
   label: '134 ā'
   order: 134
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 134'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-79
 sidebar:
   label: '79 हिरण्यकेशो'
   order: 79
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 79'
 lastUpdated: 2026-06-13
 ---

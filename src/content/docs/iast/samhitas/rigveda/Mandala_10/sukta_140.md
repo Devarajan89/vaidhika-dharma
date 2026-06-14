@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-140
 sidebar:
   label: '140 agne'
   order: 140
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 140'
 lastUpdated: 2026-06-13
 ---

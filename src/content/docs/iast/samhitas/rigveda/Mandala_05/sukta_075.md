@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-75
 sidebar:
   label: '75 stotā'
   order: 75
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 75'
 lastUpdated: 2026-06-13
 ---

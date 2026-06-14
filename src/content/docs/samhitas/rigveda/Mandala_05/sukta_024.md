@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-5/sukta-24
 sidebar:
   label: '24 अग्ने'
   order: 24
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 5, सूक्तम् 24'
 lastUpdated: 2026-06-13
 ---

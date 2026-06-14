@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-3/sukta-34
 sidebar:
   label: '34 इन्द्र'
   order: 34
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 3, सूक्तम् 34'
 lastUpdated: 2026-06-13
 ---

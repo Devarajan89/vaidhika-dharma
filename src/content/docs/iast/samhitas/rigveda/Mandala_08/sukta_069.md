@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-8/sukta-69
 sidebar:
   label: '69 prapra'
   order: 69
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Aṣṭama Maṇḍala, Sūktam 69'
 lastUpdated: 2026-06-13
 ---

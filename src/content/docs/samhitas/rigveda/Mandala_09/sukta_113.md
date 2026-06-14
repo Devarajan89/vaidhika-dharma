@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-113
 sidebar:
   label: '113 बल'
   order: 113
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 113'
 lastUpdated: 2026-06-13
 ---

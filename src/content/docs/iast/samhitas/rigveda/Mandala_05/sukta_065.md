@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-65
 sidebar:
   label: '65 yaściketa'
   order: 65
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 65'
 lastUpdated: 2026-06-13
 ---

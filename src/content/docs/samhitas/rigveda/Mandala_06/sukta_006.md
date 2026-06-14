@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-6/sukta-6
 sidebar:
   label: '6 वृश्चद्वन'
   order: 6
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 6, सूक्तम् 6'
 lastUpdated: 2026-06-13
 ---

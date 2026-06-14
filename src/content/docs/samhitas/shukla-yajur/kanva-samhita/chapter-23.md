@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-23
 sidebar:
   label: '23 इम मे'
   order: 23
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — त्रयोविंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

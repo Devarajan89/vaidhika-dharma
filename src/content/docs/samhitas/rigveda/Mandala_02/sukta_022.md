@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-2/sukta-22
 sidebar:
   label: '22 त्रिकद्रुकेषु'
   order: 22
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 2, सूक्तम् 22'
 lastUpdated: 2026-06-13
 ---

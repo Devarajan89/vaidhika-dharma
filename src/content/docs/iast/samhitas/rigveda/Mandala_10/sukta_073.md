@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-73
 sidebar:
   label: '73 avardhannindra'
   order: 73
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 73'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-10
 sidebar:
   label: '10 o'
   order: 10
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 10'
 lastUpdated: 2026-06-13
 ---

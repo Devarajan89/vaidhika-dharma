@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-84
 sidebar:
   label: '84 प्रेष्ठ'
   order: 84
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 84'
 lastUpdated: 2026-06-13
 ---

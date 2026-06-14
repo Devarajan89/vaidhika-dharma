@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-28
 sidebar:
   label: '28 अग्निश्च पृथिवी'
   order: 28
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — अष्टाविंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---

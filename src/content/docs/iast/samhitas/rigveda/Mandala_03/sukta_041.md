@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-3/sukta-41
 sidebar:
   label: '41 ā'
   order: 41
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Tṛtīya Maṇḍala, Sūktam 41'
 lastUpdated: 2026-06-13
 ---

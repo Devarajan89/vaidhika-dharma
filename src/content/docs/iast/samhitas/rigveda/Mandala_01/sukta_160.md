@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-160
 sidebar:
   label: '160 te'
   order: 160
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 160'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-28
 sidebar:
   label: '28 brahmā'
   order: 28
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 28'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-86
 sidebar:
   label: '86 yatrāmadadvṛṣākapirarya'
   order: 86
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 86'
 lastUpdated: 2026-06-13
 ---

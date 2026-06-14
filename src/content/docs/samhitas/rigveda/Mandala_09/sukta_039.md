@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-9/sukta-39
 sidebar:
   label: '39 आशुरर्ष'
   order: 39
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 9, सूक्तम् 39'
 lastUpdated: 2026-06-13
 ---

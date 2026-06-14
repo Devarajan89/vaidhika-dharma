@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-19
 sidebar:
   label: '19 yastigmaśṛṅgo'
   order: 19
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 19'
 lastUpdated: 2026-06-13
 ---

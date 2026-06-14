@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-73
 sidebar:
   label: '73 rayirna'
   order: 73
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 73'
 lastUpdated: 2026-06-13
 ---

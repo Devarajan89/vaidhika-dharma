@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-26
 sidebar:
   label: '26 aśvastūparo gomṛgaste'
   order: 26
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 26'
 lastUpdated: 2026-06-14
 ---

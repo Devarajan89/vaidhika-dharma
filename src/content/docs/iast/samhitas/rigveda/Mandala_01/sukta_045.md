@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-45
 sidebar:
   label: '45 tvamagne'
   order: 45
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 45'
 lastUpdated: 2026-06-13
 ---

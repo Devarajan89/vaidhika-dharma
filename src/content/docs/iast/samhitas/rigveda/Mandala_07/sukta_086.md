@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-86
 sidebar:
   label: '86 pra'
   order: 86
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 86'
 lastUpdated: 2026-06-13
 ---

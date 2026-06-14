@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-1/sukta-131
 sidebar:
   label: '131 indrāya'
   order: 131
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Prathama Maṇḍala, Sūktam 131'
 lastUpdated: 2026-06-13
 ---

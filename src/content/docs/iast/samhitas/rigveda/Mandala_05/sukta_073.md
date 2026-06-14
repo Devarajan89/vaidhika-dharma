@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-5/sukta-73
 sidebar:
   label: '73 yadadya'
   order: 73
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Pañcama Maṇḍala, Sūktam 73'
 lastUpdated: 2026-06-13
 ---

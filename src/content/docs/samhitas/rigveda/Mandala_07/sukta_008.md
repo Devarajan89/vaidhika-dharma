@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-8
 sidebar:
   label: '8 इन्धे'
   order: 8
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 8'
 lastUpdated: 2026-06-13
 ---

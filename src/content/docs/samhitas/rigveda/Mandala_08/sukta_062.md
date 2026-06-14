@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-8/sukta-62
 sidebar:
   label: '62 उक्थैरिन्द्रस्य'
   order: 62
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 8, सूक्तम् 62'
 lastUpdated: 2026-06-13
 ---

@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-10/sukta-164
 sidebar:
   label: '164 apehi'
   order: 164
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Daśama Maṇḍala, Sūktam 164'
 lastUpdated: 2026-06-13
 ---

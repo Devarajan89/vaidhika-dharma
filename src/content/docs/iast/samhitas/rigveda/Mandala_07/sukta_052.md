@@ -4,9 +4,8 @@ slug: iast/rigveda-samhita/mandala-7/sukta-52
 sidebar:
   label: '52 ādityāso'
   order: 52
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'Ṛgveda Saṃhitā — Saptama Maṇḍala, Sūktam 52'
 lastUpdated: 2026-06-13
 ---

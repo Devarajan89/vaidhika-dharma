@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-1/sukta-118
 sidebar:
   label: '118 आ'
   order: 118
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 1, सूक्तम् 118'
 lastUpdated: 2026-06-13
 ---

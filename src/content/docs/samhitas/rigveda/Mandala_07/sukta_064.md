@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-64
 sidebar:
   label: '64 दिवि'
   order: 64
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 64'
 lastUpdated: 2026-06-13
 ---

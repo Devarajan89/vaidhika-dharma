@@ -4,9 +4,7 @@ slug: iast/kanva-samhita/chapter-10
 sidebar:
   label: '10 deva savita'
   order: 10
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 10'
 lastUpdated: 2026-06-14
 ---

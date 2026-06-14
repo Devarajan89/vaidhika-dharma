@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-3
 sidebar:
   label: '3 अग्नि'
   order: 3
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 3'
 lastUpdated: 2026-06-13
 ---

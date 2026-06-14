@@ -4,9 +4,8 @@ slug: rigveda-samhita/mandala-7/sukta-53
 sidebar:
   label: '53 ते'
   order: 53
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+  hidden: true
+tableOfContents: false
 description: 'ऋग्वेद संहिता — मण्डल 7, सूक्तम् 53'
 lastUpdated: 2026-06-13
 ---

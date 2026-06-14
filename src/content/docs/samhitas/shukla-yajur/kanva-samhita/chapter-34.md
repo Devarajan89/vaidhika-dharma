@@ -4,9 +4,7 @@ slug: kanva-samhita/chapter-34
 sidebar:
   label: '34 देव सवित'
   order: 34
-tableOfContents:
-  minHeadingLevel: 2
-  maxHeadingLevel: 2
+tableOfContents: false
 description: 'शुक्लयजुः काण्वसंहिता — चतुस्त्रिंशोऽध्यायः'
 lastUpdated: 2026-06-14
 ---
