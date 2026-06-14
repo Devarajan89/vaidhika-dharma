@@ -15,6 +15,9 @@
     "generate:rigveda-suktas": "node scripts/generate-rigveda-suktas.mjs",
     "generate:rigveda-suktas:all": "MANDALA_LIMIT=10 node scripts/generate-rigveda-suktas.mjs",
     "generate:rigveda-suktas:root": "SKIP_IAST=1 node scripts/generate-rigveda-suktas.mjs",
+    "clean:kanva-samhita-data": "node scripts/clean-kanva-samhita-data.mjs",
+    "generate:kanva-samhita": "node scripts/generate-kanva-samhita-chapters.mjs",
+    "generate:kanva-samhita:index": "KANVA_INDEX_ONLY=1 node scripts/generate-kanva-samhita-chapters.mjs",
     "astro": "astro"
   },
   "dependencies": {

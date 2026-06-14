@@ -3,6 +3,17 @@ const LEADING_SPACE_RE = /^[ \t]+/gm;
 const VERSE_MARKER_RE = /॥([०-९0-9]+)(?:॥)?/g;
 const PRIVATE_USE_RE = /[\uE000-\uF8FF\uFFFC]/g;
 const ORPHAN_NUMBER_LINE_RE = /^([०-९0-9]+(?:\([०-९0-9]+\))?)\s*$/;
+const ORPHAN_MARKER_LINE_RE = /^[०-९0-9]+(?:॥[०-९0-9]*)*\s*$/;
+const CHAPTER_FOOTER_RE = /॥\s*इति[\s\S]*?ध्यायः[\s\S]*?॥/g;
+const CHAPTER_RESTART_RE = /^[\s\u201c\u201d"]*अथ\s+[\u0900-\u097F\s]+ध्यायः/u;
+
+/**
+ * @param {string} tail
+ */
+function hasChapterRestart(tail) {
+	const stripped = tail.trim().replace(/^[०-९0-9\s]*(?:॥[०-९0-9]*)*\s*/, '');
+	return CHAPTER_RESTART_RE.test(stripped);
+}
 
 const DEVANAGARI_DIGIT_MAP = {
 	'०': '0',
@@ -57,6 +68,58 @@ function normalizeChapterText(text) {
 }
 
 /**
+ * @param {string} line
+ */
+function isOrphanMarkerLine(line) {
+	const trimmed = line.trim();
+	if (!trimmed) return true;
+	if (ORPHAN_NUMBER_LINE_RE.test(trimmed)) return true;
+	if (/^[\d०-९\s()|]+$/.test(trimmed.replace(SVARA_RE, ''))) return true;
+	if (/^॥\s*[\d०-९]+/.test(trimmed)) return true;
+
+	const withoutSvara = trimmed.replace(SVARA_RE, '');
+	const letters = withoutSvara.replace(/[०-९0-9()॥.\s|]/g, '');
+	if (!letters.length && /[०-९0-9]/.test(withoutSvara)) return true;
+
+	return false;
+}
+
+/**
+ * Remove a duplicated adhyāya body pasted after the first closing footer.
+ * @param {string} text
+ */
+export function truncateDuplicateChapterBody(text) {
+	const footerRe = new RegExp(CHAPTER_FOOTER_RE.source, 'g');
+	const match = footerRe.exec(text);
+	if (!match) return text;
+
+	const tail = text.slice(match.index + match[0].length);
+	if (!hasChapterRestart(tail)) {
+		return text;
+	}
+
+	return text.slice(0, match.index + match[0].length).trim();
+}
+
+/**
+ * @param {string} text
+ */
+export function prepareChapterText(text) {
+	return truncateDuplicateChapterBody(normalizeChapterText(text));
+}
+
+/**
+ * @param {string} text
+ */
+function stripVerseOrphanLines(text) {
+	return text
+		.split('\n')
+		.filter((line) => !isOrphanMarkerLine(line))
+		.join('\n')
+		.trim();
+}
+
+/**
  * @param {string} text
  */
 function extractHeader(text) {
@@ -65,7 +128,7 @@ function extractHeader(text) {
 
 	for (const line of lines) {
 		headerLines.push(line);
-		if (/ध्यायः|उपनिषद/.test(line)) {
+		if (/ध्यायः|ऽध्यायः|उपनिषद/.test(line)) {
 			break;
 		}
 	}
@@ -81,12 +144,7 @@ function stripLeadingOrphans(text) {
 		.split('\n')
 		.filter((line, index) => {
 			if (index > 2) return true;
-			const trimmed = line.trim();
-			if (!trimmed) return false;
-			if (ORPHAN_NUMBER_LINE_RE.test(trimmed)) return false;
-			if (/^[\d०-९\s()]+$/.test(trimmed)) return false;
-			if (/^॥\s*[\d०-९]+/.test(trimmed)) return false;
-			return true;
+			return !isOrphanMarkerLine(line);
 		})
 		.join('\n')
 		.trim();
@@ -121,10 +179,7 @@ function meaningfulVerseLines(verseText) {
 		.split('\n')
 		.map((line) => line.trim().replace(/^॥(?:[oō]?३?म्|OM)?॥?\s*/u, ''))
 		.filter((line) => {
-			if (!line) return false;
-			if (ORPHAN_NUMBER_LINE_RE.test(line)) return false;
-			if (/^[\d०-९\s()|]+$/.test(line.replace(SVARA_RE, ''))) return false;
-			if (/^॥/.test(line)) return false;
+			if (!line || isOrphanMarkerLine(line)) return false;
 			return /[\u0900-\u097F]/.test(line);
 		});
 }
@@ -148,7 +203,7 @@ export function extractFirstTwoWords(verseText) {
  * @returns {{ header: string; verses: { number: number; text: string }[]; firstWord: string; verseCount: number }}
  */
 export function parseYajurvedaChapter(text, options = {}) {
-	const normalized = normalizeChapterText(text);
+	const normalized = prepareChapterText(text);
 	const header = extractHeader(normalized);
 	const body = normalized.slice(header.length).trim();
 	const matches = [...body.matchAll(VERSE_MARKER_RE)];
@@ -165,6 +220,7 @@ export function parseYajurvedaChapter(text, options = {}) {
 		const end = matches[i].index;
 		let verseText = cleanVerseBody(body.slice(start, end));
 		verseText = stripLeadingOrphans(verseText);
+		verseText = stripVerseOrphanLines(verseText);
 		verseText = stripFooter(verseText);
 
 		if (!verseText || !/[\u0900-\u097F]/.test(verseText)) continue;
