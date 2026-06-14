@@ -1,31 +1,28 @@
-/* Logo title font */
+/* Logo title font — small file, loaded only for .site-title */
 @font-face {
   font-family: 'Samarkan';
   src: url('/fonts/samarkan.ttf') format('truetype');
   font-style: normal;
+  font-display: swap;
+  unicode-range: U+0900-097F, U+0020-007F;
 }
 
-/* Devanagari (Sanskrit) font */
+/* Devanagari (Sanskrit) font — woff2 only for fast load */
 @font-face {
-    font-family: 'Siddhanta';
-    src: url('/fonts/siddhanta.ttf') format('truetype'),
-         url('/fonts/siddhanta.woff2') format('woff2'),
-         url('/fonts/siddhanta.woff') format('woff'),
-         url('/fonts/siddhanta.svg#Siddhanta') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0900-097F, U+1CD0-1CFF, U+20B9, U+25CC;
+  font-family: 'Siddhanta';
+  src: url('/fonts/siddhanta.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+20B9, U+25CC;
 }
-/* Tamil font */
+
+/* Tamil font — woff2 only, downloaded only when Tamil chars appear on page */
 @font-face {
-    font-family: 'NotoSerifTamil';
-    src: url('/fonts/NotoSerifTamil.ttf') format('truetype'),
-         url('/fonts/NotoSerifTamil.woff2') format('woff2'),
-         url('/fonts/NotoSerifTamil.woff') format('woff'),
-         url('/fonts/NotoSerifTamil.svg#NotoSerifTamil') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-    unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
+  font-family: 'NotoSerifTamil';
+  src: url('/fonts/NotoSerifTamil.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
 }

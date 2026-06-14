@@ -1,3 +1,13 @@
+.ritual-step blockquote,
+.ritual-step .ritual-meta,
+.ritual-step td {
+	font-family: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
+}
+
+:global(.ritual-page-shell[data-locale='root']) .ritual-page-shell__content {
+	font-family: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
+}
+
 .ritual-step {
 	margin: 0;
 }

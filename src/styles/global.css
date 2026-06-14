@@ -6,8 +6,11 @@
 
 @theme {
 
-  /* Font families — script fonts with readable Latin fallback */
-  --font-sans: 'Siddhanta', 'NotoSerifTamil', ui-sans-serif, system-ui, 'Segoe UI', Georgia, serif;
+  /* Font families — Latin UI with script-specific fallbacks */
+  --font-latin: ui-sans-serif, system-ui, 'Segoe UI', Georgia, serif;
+  --font-sanskrit: 'Siddhanta', serif;
+  --font-tamil: 'NotoSerifTamil', serif;
+  --font-sans: var(--font-latin);
 
   /* Color palettes */
   --color-accent-200: #ffe19c;
@@ -26,7 +29,7 @@
 
 /* ── Readability: global typography ───────────────────────────── */
 :root {
-  --sl-font: 'Siddhanta', 'NotoSerifTamil', ui-sans-serif, system-ui, 'Segoe UI', Georgia, serif;
+  --sl-font: var(--font-latin);
   --sl-text-base: 1.0625rem;
   --sl-line-height: 1.75;
   --sl-line-height-headings: 1.35;
@@ -34,6 +37,20 @@
   --sl-sidebar-width: 20rem;
   --sl-mantra-size: 1.25rem;
   --sl-mantra-line-height: 2;
+}
+
+/* Devanagari locale — Siddhanta for site chrome and content */
+html[lang='sa'] {
+  --sl-font: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
+  --font-sans: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
+}
+
+/* Sanskrit mantra and scripture blocks (including mixed IAST pages) */
+.sl-markdown-content blockquote,
+.sl-markdown-content p:has(br):not(:has(> em:only-child)),
+:global(.sukta-verse),
+:global(.sukta-verse__text) {
+  font-family: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
 }
 
 body {
