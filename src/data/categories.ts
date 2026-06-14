@@ -13,45 +13,72 @@ export interface CategoryNode {
 	defaultOpen?: boolean;
 }
 
-const rigvedaShakalaSamhitaMandalas: CategoryNode[] = [
-	{ label: 'संपूर्ण सूची', href: '/rigveda-samhita/' },
-	{ label: 'प्रथम मण्डल', href: '/rigveda-samhita/#mandala-1' },
-	{ label: 'द्वितीय मण्डल', href: '/rigveda-samhita/#mandala-2' },
-	{ label: 'तृतीय मण्डल', href: '/rigveda-samhita/#mandala-3' },
-	{ label: 'चतुर्थ मण्डल', href: '/rigveda-samhita/#mandala-4' },
-	{ label: 'पञ्चम मण्डल', href: '/rigveda-samhita/#mandala-5' },
-	{ label: 'षष्ठ मण्डल', href: '/rigveda-samhita/#mandala-6' },
-	{ label: 'सप्तम मण्डल', href: '/rigveda-samhita/#mandala-7' },
-	{ label: 'अष्टम मण्डल', href: '/rigveda-samhita/#mandala-8' },
-	{ label: 'नवम मण्डल', href: '/rigveda-samhita/#mandala-9' },
-	{ label: 'दशम मण्डल', href: '/rigveda-samhita/#mandala-10' },
-];
+const RIGVEDA_MANDALA_LABELS = {
+	root: [
+		'प्रथम मण्डल',
+		'द्वितीय मण्डल',
+		'तृतीय मण्डल',
+		'चतुर्थ मण्डल',
+		'पञ्चम मण्डल',
+		'षष्ठ मण्डल',
+		'सप्तम मण्डल',
+		'अष्टम मण्डल',
+		'नवम मण्डल',
+		'दशम मण्डल',
+	],
+	iast: [
+		'Prathama Maṇḍala',
+		'Dvitīya Maṇḍala',
+		'Tṛtīya Maṇḍala',
+		'Caturtha Maṇḍala',
+		'Pañcama Maṇḍala',
+		'Ṣaṣṭha Maṇḍala',
+		'Saptama Maṇḍala',
+		'Aṣṭama Maṇḍala',
+		'Navama Maṇḍala',
+		'Daśama Maṇḍala',
+	],
+} as const;
 
-const kanvaSamhitaChapters: CategoryNode[] = [
-	{ label: 'संपूर्ण सूची', href: '/kanva-samhita/' },
-	{ label: 'प्रथमोऽध्यायः', href: '/kanva-samhita/chapter-01/' },
-	{ label: 'ईशावास्योपनिषद् (४०)', href: '/kanva-samhita/chapter-40/' },
-];
+function rigvedaSamhitaMandalas(locale: keyof typeof RIGVEDA_MANDALA_LABELS): CategoryNode[] {
+	const prefix = locale === 'iast' ? '/iast/rigveda-samhita' : '/rigveda-samhita';
+	return [
+		{ label: locale === 'iast' ? 'Full Index' : 'संपूर्ण सूची', href: `${prefix}/` },
+		...RIGVEDA_MANDALA_LABELS[locale].map((label, index) => ({
+			label,
+			href: `${prefix}/mandala-${index + 1}/`,
+		})),
+	];
+}
 
-const iastKanvaSamhitaChapters: CategoryNode[] = [
-	{ label: 'Full Index', href: '/iast/kanva-samhita/' },
-	{ label: 'Chapter 1', href: '/iast/kanva-samhita/chapter-01/' },
-	{ label: 'Īśā Upaniṣad (40)', href: '/iast/kanva-samhita/chapter-40/' },
-];
+const rigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('root');
 
-const iastRigvedaShakalaSamhitaMandalas: CategoryNode[] = [
-	{ label: 'Full Index', href: '/iast/rigveda-samhita/' },
-	{ label: 'Prathama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-1' },
-	{ label: 'Dvitīya Maṇḍala', href: '/iast/rigveda-samhita/#mandala-2' },
-	{ label: 'Tṛtīya Maṇḍala', href: '/iast/rigveda-samhita/#mandala-3' },
-	{ label: 'Caturtha Maṇḍala', href: '/iast/rigveda-samhita/#mandala-4' },
-	{ label: 'Pañcama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-5' },
-	{ label: 'Ṣaṣṭha Maṇḍala', href: '/iast/rigveda-samhita/#mandala-6' },
-	{ label: 'Saptama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-7' },
-	{ label: 'Aṣṭama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-8' },
-	{ label: 'Navama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-9' },
-	{ label: 'Daśama Maṇḍala', href: '/iast/rigveda-samhita/#mandala-10' },
-];
+const SAMHITA_ADHYAYA_COUNT = 40;
+
+function formatAdhyayaSlug(chapter: number): string {
+	return `chapter-${String(chapter).padStart(2, '0')}`;
+}
+
+function samhitaAdhyayas(samhita: 'kanva' | 'madhyandina', locale: 'root' | 'iast'): CategoryNode[] {
+	const prefix = locale === 'iast' ? `/iast/${samhita}-samhita` : `/${samhita}-samhita`;
+	return [
+		{ label: locale === 'iast' ? 'Full Index' : 'संपूर्ण सूची', href: `${prefix}/` },
+		...Array.from({ length: SAMHITA_ADHYAYA_COUNT }, (_, index) => {
+			const adhyaya = index + 1;
+			return {
+				label: locale === 'iast' ? `Adhyāya ${adhyaya}` : `अध्याय ${adhyaya}`,
+				href: `${prefix}/${formatAdhyayaSlug(adhyaya)}/`,
+			};
+		}),
+	];
+}
+
+const madhyandinaSamhitaChapters = samhitaAdhyayas('madhyandina', 'root');
+const iastMadhyandinaSamhitaChapters = samhitaAdhyayas('madhyandina', 'iast');
+const kanvaSamhitaChapters = samhitaAdhyayas('kanva', 'root');
+const iastKanvaSamhitaChapters = samhitaAdhyayas('kanva', 'iast');
+
+const iastRigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('iast');
 
 const rigvedaSuktaSangraha: CategoryNode[] = [
 	{ label: 'ब्रह्मणस्पति सूक्तम्', href: '/brahmanaspati-suktam/' },
@@ -211,6 +238,11 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					defaultOpen: true,
 					children: kanvaSamhitaChapters,
 				},
+				{
+					label: 'माध्यन्दिन संहिता (शुक्लयजुर्वेद)',
+					defaultOpen: true,
+					children: madhyandinaSamhitaChapters,
+				},
 			],
 		},
 		{
@@ -304,6 +336,11 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					label: 'Kanva Samhita (Shukla Yajurveda)',
 					defaultOpen: true,
 					children: iastKanvaSamhitaChapters,
+				},
+				{
+					label: 'Madhyandina Samhita (Shukla Yajurveda)',
+					defaultOpen: true,
+					children: iastMadhyandinaSamhitaChapters,
 				},
 			],
 		},
