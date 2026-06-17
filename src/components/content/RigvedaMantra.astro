@@ -1,0 +1,55 @@
+---
+import type { HomeLocale } from '../../data/home';
+import Verse from './Verse.astro';
+import {
+	getSamhitaVerseHref,
+	samhitaLinkLabel,
+	samhitaRefCode,
+	splitMantraPadas,
+	type VerseRecord,
+} from '../../lib/rigveda-corpus';
+
+interface Props {
+	mandala?: number;
+	sukta?: number;
+	verse?: number;
+	label: number;
+	text?: string;
+	verseRecord?: VerseRecord;
+	locale?: HomeLocale;
+}
+
+const { mandala, sukta, verse, label, text, verseRecord, locale = 'root' } = Astro.props;
+const displayText = text ?? verseRecord?.text ?? '';
+const padas = splitMantraPadas(displayText);
+const hasSamhitaRef =
+	mandala !== undefined && sukta !== undefined && verse !== undefined;
+const samhitaHref = hasSamhitaRef
+	? getSamhitaVerseHref(mandala!, sukta!, verse!, locale)
+	: undefined;
+const samhitaRef = hasSamhitaRef
+	? samhitaRefCode(mandala!, sukta!, verse!)
+	: undefined;
+const samhitaAriaLabel = hasSamhitaRef
+	? samhitaLinkLabel(mandala!, sukta!, verse!, locale)
+	: undefined;
+const lastPadaIndex = padas.length - 1;
+---
+
+<Verse number={hasSamhitaRef ? undefined : label} locale={locale} numberPosition="end">
+	{
+		padas.map((pada, index) => (
+			<p>
+				{pada}
+				{
+					index === lastPadaIndex && samhitaHref && samhitaRef && (
+						<span class="rigveda-mantra__ref-marker" aria-label={samhitaAriaLabel}>
+							{' '}
+							॥<a href={samhitaHref}>{samhitaRef}</a>॥
+						</span>
+					)
+				}
+			</p>
+		))
+	}
+</Verse>

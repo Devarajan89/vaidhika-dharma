@@ -32,22 +32,23 @@ function parseVerseNumber(value) {
  * @param {string} headerAndFirstVerse
  */
 function splitHeaderAndFirstVerse(headerAndFirstVerse) {
-	const headerBoundary = headerAndFirstVerse.search(/\n\s*\n/);
-	if (headerBoundary !== -1) {
-		return {
-			header: headerAndFirstVerse.slice(0, headerBoundary).trim(),
-			firstVerseText: headerAndFirstVerse.slice(headerBoundary).trim(),
-		};
-	}
+	const parts = headerAndFirstVerse
+		.split(/\n\s*\n/)
+		.map((part) => part.trim())
+		.filter(Boolean);
 
-	const parts = headerAndFirstVerse.split(/[।.]/).map((part) => part.trim()).filter(Boolean);
-	if (parts.length <= 3) {
+	if (parts.length <= 1) {
 		return { header: headerAndFirstVerse.trim(), firstVerseText: '' };
 	}
 
+	let mantraStart = parts.findIndex((part) => /[\u0951-\u0954]/.test(part));
+	if (mantraStart === -1) {
+		mantraStart = parts.length - 1;
+	}
+
 	return {
-		header: parts.slice(0, 3).join('। ') + '।',
-		firstVerseText: parts.slice(3).join('। '),
+		header: parts.slice(0, mantraStart).join('\n\n'),
+		firstVerseText: parts.slice(mantraStart).join('\n\n'),
 	};
 }
 
@@ -127,7 +128,7 @@ export function formatSuktaHeader(header) {
  */
 export function formatVerseCountLabel(count, locale) {
 	if (locale === 'iast') {
-		return count === 1 ? '1 verse' : `${count} verses`;
+		return count === 1 ? '1 mantra' : `${count} mantras`;
 	}
-	return count === 1 ? '१ श्लोकः' : `${count} श्लोकाः`;
+	return count === 1 ? '१ मन्त्रः' : `${count} मन्त्राः`;
 }

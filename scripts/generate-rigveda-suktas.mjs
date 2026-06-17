@@ -4,8 +4,8 @@ import {
 	extractFirstWord,
 	formatSuktaHeader,
 	formatVerseCountLabel,
-	parseRigvedaSukta,
 } from './lib/parse-rigveda-sukta.mjs';
+import { loadRigvedaCorpus, loadRigvedaSuktaIndex } from './lib/rigveda-corpus.mjs';
 import { transliterateDevanagari } from './lib/transliterate-devanagari.mjs';
 
 const ROOT = process.cwd();
@@ -198,6 +198,41 @@ function removeLegacyMandalaFiles() {
 	}
 }
 
+function loadMandalaSuktas(mandalaNumber) {
+	const { byKey } = loadRigvedaCorpus();
+	const suktaIndex = loadRigvedaSuktaIndex();
+
+	return Object.values(suktaIndex)
+		.filter((record) => record.mandala === mandalaNumber)
+		.sort((a, b) => a.sukta - b.sukta)
+		.map((record) => {
+			const verses = record.verses.map((verseNumber) => {
+				const key = `${record.mandala}:${record.sukta}:${verseNumber}`;
+				const verseRecord = byKey[key];
+				if (!verseRecord) {
+					throw new Error(`Missing verse record: ${key}`);
+				}
+				return {
+					number: verseNumber,
+					text: verseRecord.text,
+				};
+			});
+
+			const parsed = {
+				header: record.header,
+				verses,
+				firstWord: extractFirstWord(verses[0]?.text ?? ''),
+				verseCount: record.verseCount,
+			};
+
+			return {
+				mandala: record.mandala,
+				sukta: record.sukta,
+				parsed,
+			};
+		});
+}
+
 function generate() {
 	removeLegacyMandalaFiles();
 	removeMandalaDirs(mandalaLimit + 1);
@@ -211,8 +246,7 @@ function generate() {
 	const mandalasToGenerate = MANDALAS.filter((mandala) => mandala.number <= mandalaLimit);
 
 	for (const mandala of mandalasToGenerate) {
-		const jsonPath = path.join(DATA_DIR, `rigveda_mandala_${mandala.number}.json`);
-		const entries = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+		const entries = loadMandalaSuktas(mandala.number);
 		const rootMandalaDir = path.join(ROOT_DOCS, mandala.folder);
 		const iastMandalaDir = path.join(IAST_DOCS, mandala.folder);
 
@@ -228,7 +262,7 @@ function generate() {
 		}
 
 		for (const entry of entries) {
-			const parsed = parseRigvedaSukta(entry.text);
+			const parsed = entry.parsed;
 			if (!parsed.firstWord) {
 				parsed.firstWord = extractFirstWord(parsed.verses[0]?.text ?? '');
 			}

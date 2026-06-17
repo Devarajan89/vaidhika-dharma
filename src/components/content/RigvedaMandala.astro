@@ -1,0 +1,78 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import Verse from './Verse.astro';
+import type { HomeLocale } from '../../data/home';
+import { getMandalaSuktas, getSuktaVerses } from '../../lib/rigveda-corpus';
+import { splitMantraPadas } from '../../lib/rigveda-samhita';
+import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
+
+interface Props {
+	mandala: number;
+	locale?: HomeLocale;
+}
+
+const { mandala, locale = 'root' } = Astro.props;
+
+const suktaRecords = getMandalaSuktas(mandala);
+
+const sections = await Promise.all(
+	suktaRecords.map(async (suktaRecord) => {
+		const mantraRecords = getSuktaVerses(mandala, suktaRecord.sukta);
+		let header = suktaRecord.header;
+
+		if (locale === 'iast') {
+			header = suktaRecord.headerIast ?? (await transliterateDevanagari(header));
+		}
+
+		const verses = await Promise.all(
+			mantraRecords.map(async (record) => {
+				let text = record.text;
+				if (locale === 'iast') {
+					text = record.iast ?? (await transliterateDevanagari(record.text));
+				}
+				return {
+					number: record.verse,
+					text,
+				};
+			})
+		);
+
+		return {
+			sukta: suktaRecord.sukta,
+			header,
+			verses,
+		};
+	})
+);
+---
+
+<SuktaPage locale={locale} class="rigveda-samhita">
+	{
+		sections.map((section) => (
+			<section class="veda-sukta-block" id={`sukta-${section.sukta}`}>
+				<header class="veda-sukta-block__header">
+					<span class="veda-sukta-block__label">
+						{locale === 'iast'
+							? `Sūkta ${section.sukta}`
+							: `सूक्त ${section.sukta}`}
+					</span>
+					<p class="veda-sukta-block__title">{section.header}</p>
+				</header>
+				<div class="veda-sukta-block__mantras">
+					{section.verses.map((verse) => (
+						<Verse
+							number={verse.number}
+							locale={locale}
+							numberPosition="end"
+							id={`sukta-${section.sukta}-mantra-${verse.number}`}
+						>
+							{splitMantraPadas(verse.text).map((pada) => (
+								<p>{pada}</p>
+							))}
+						</Verse>
+					))}
+				</div>
+			</section>
+		))
+	}
+</SuktaPage>

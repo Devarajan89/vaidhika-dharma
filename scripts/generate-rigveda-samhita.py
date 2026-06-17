@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Rigveda samhita markdown docs from mandala JSON files."""
+"""Generate Rigveda samhita markdown docs from verse-index.json."""
 
 from __future__ import annotations
 
@@ -283,21 +283,41 @@ def parse_sukta_text(text: str) -> tuple[str, list[Verse]]:
 
 
 def load_mandala(mandala_number: int) -> list[Sukta]:
-    json_path = DATA_DIR / f"rigveda_mandala_{mandala_number}.json"
-    if not json_path.exists():
-        raise FileNotFoundError(f"Missing mandala JSON: {json_path}")
+    index_path = DATA_DIR / "verse-index.json"
+    if not index_path.exists():
+        raise FileNotFoundError(f"Missing verse index: {index_path}")
 
-    entries = json.loads(json_path.read_text(encoding="utf-8"))
+    index = json.loads(index_path.read_text(encoding="utf-8"))
+    verses = index.get("verses", index)
+    sukta_index = index.get("suktas", {})
+
     suktas: list[Sukta] = []
+    for key, record in sorted(
+        sukta_index.items(),
+        key=lambda item: (item[1]["mandala"], item[1]["sukta"]),
+    ):
+        if record["mandala"] != mandala_number:
+            continue
 
-    for entry in entries:
-        header, verses = parse_sukta_text(entry["text"])
+        parsed_verses: list[Verse] = []
+        for verse_number in record["verses"]:
+            verse_key = f"{record['mandala']}:{record['sukta']}:{verse_number}"
+            verse_record = verses[verse_key]
+            cleaned = clean_verse_body(verse_record["text"])
+            parsed_verses.append(
+                Verse(
+                    number=verse_number,
+                    text=cleaned,
+                    first_word=extract_first_word(cleaned),
+                )
+            )
+
         suktas.append(
             Sukta(
-                mandala=entry["mandala"],
-                number=entry["sukta"],
-                header=header,
-                verses=verses,
+                mandala=record["mandala"],
+                number=record["sukta"],
+                header=record["header"],
+                verses=parsed_verses,
             )
         )
 
@@ -309,7 +329,7 @@ def mandala_dir_name(mandala: int) -> str:
 
 
 def sukta_file_name(sukta: int) -> str:
-    return f"sukta_{sukta:03d}.md"
+    return f"sukta_{sukta:03d}.mdx"
 
 
 def yaml_quote(value: str) -> str:
@@ -318,8 +338,53 @@ def yaml_quote(value: str) -> str:
 
 def format_verse_count_label(count: int, locale: Locale) -> str:
     if locale == "iast":
-        return "1 verse" if count == 1 else f"{count} verses"
-    return "१ श्लोकः" if count == 1 else f"{count} श्लोकाः"
+        return "1 mantra" if count == 1 else f"{count} mantras"
+    return "१ मन्त्रः" if count == 1 else f"{count} मन्त्राः"
+
+
+def render_sukta_mdx(sukta: Sukta, locale: Locale) -> str:
+    return "\n".join(
+        [
+            render_sukta_frontmatter(sukta, locale),
+            "",
+            "import RigvedaSukta from '/src/components/content/RigvedaSukta.astro';",
+            "",
+            f'<RigvedaSukta mandala={{{sukta.mandala}}} sukta={{{sukta.number}}} locale="{locale}" />',
+            "",
+        ]
+    )
+
+
+def render_mandala_index_mdx(mandala: int, locale: Locale, sukta_count: int) -> str:
+    slug_prefix = "iast/rigveda-samhita" if locale == "iast" else "rigveda-samhita"
+    label = MANDALA_IAST_LABELS[mandala] if locale == "iast" else MANDALA_ROOT_LABELS[mandala]
+
+    if locale == "iast":
+        title = label
+        description = f"Ṛgveda Śākala Saṃhitā — {label} ({sukta_count} sūktas)."
+    else:
+        title = label
+        description = f"ऋग्वेद शाकल संहिता — {label} ({sukta_count} सूक्तानि)."
+
+    return "\n".join(
+        [
+            "---",
+            f"title: {yaml_quote(title)}",
+            f"slug: {slug_prefix}/mandala-{mandala}",
+            "sidebar:",
+            f"  label: {yaml_quote(label)}",
+            f"  order: {mandala}",
+            "tableOfContents: false",
+            f"description: {yaml_quote(description)}",
+            f"lastUpdated: {LAST_UPDATED}",
+            "---",
+            "",
+            "import RigvedaMandala from '/src/components/content/RigvedaMandala.astro';",
+            "",
+            f'<RigvedaMandala mandala={{{mandala}}} locale="{locale}" />',
+            "",
+        ]
+    )
 
 
 def render_sukta_frontmatter(sukta: Sukta, locale: Locale) -> str:
@@ -390,33 +455,7 @@ def transliterate_opening_words(
 
 
 def render_sukta_markdown(sukta: Sukta, locale: Locale) -> str:
-    header = format_sukta_header(sukta.header)
-    lines = [
-        render_sukta_frontmatter(sukta, locale),
-        "",
-        f"# Maṇḍala {sukta.mandala} — Sūktam {sukta.number}"
-        if locale == "iast"
-        else f"# Mandala {sukta.mandala} — Sukta {sukta.number}",
-        "",
-        f"**{header}**",
-        "",
-    ]
-
-    for verse in sukta.verses:
-        lines.extend(
-            [
-                "---",
-                "",
-                f"## Verse {verse.number}",
-                "",
-                f"**Mandala:** {sukta.mandala} | **Sukta:** {sukta.number} | **Verse:** {verse.number}",
-                "",
-                verse.text,
-                "",
-            ]
-        )
-
-    return "\n".join(lines).rstrip() + "\n"
+    return render_sukta_mdx(sukta, locale)
 
 
 def get_mandala_sukta_counts(suktas: list[Sukta]) -> dict[int, int]:
@@ -493,7 +532,7 @@ def render_table_of_contents(
                 ]
             )
 
-        link = f"[{display_words}]({mandala_dir_name(mandala)}/{sukta_file_name(sukta)}#verse-{verse})"
+        link = f"[{display_words}](mandala-{mandala}/#sukta-{sukta})"
         lines.append(f"| {mandala} | {sukta} | {verse} | {link} |")
 
     return "\n".join(lines).rstrip() + "\n"
@@ -542,9 +581,22 @@ def write_locale_outputs(
         mandala_path.mkdir(parents=True, exist_ok=True)
         output_file = mandala_path / sukta_file_name(localized_sukta.number)
         output_file.write_text(
-            render_sukta_markdown(localized_sukta, locale),
+            render_sukta_mdx(localized_sukta, locale),
             encoding="utf-8",
         )
+
+        mandala_index = mandala_path / "index.mdx"
+        mandala_index.write_text(
+            render_mandala_index_mdx(
+                localized_sukta.mandala,
+                locale,
+                sum(1 for item in suktas if item.mandala == localized_sukta.mandala),
+            ),
+            encoding="utf-8",
+        )
+        legacy_index = mandala_path / "index.md"
+        if legacy_index.is_file():
+            legacy_index.unlink()
 
     (output_dir / "index.md").write_text(
         render_table_of_contents(

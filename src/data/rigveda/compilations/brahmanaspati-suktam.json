@@ -1,0 +1,411 @@
+{
+  "id": "brahmanaspati-suktam",
+  "sections": [
+    {
+      "header": "मेधातिथिः काण्वः ॥ १ - ३ ब्रह्मणस्पतिः। ४ ब्रह्मणस्पतिरिन्द्रश्च सोमश्च। ५ ब्रह्मणस्पतिसोमेन्द्रदक्षिणाः ॥ १ विराड्गायत्री। २ गायत्री ३ पिपीलिकामध्यानिचृद्-गायत्री। ४ निचृद्गायत्री। ५ पादनिचृद्गायत्री ॥",
+      "mantras": [
+        {
+          "mandala": 1,
+          "sukta": 18,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 1,
+          "sukta": 18,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 1,
+          "sukta": 18,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 1,
+          "sukta": 18,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 1,
+          "sukta": 18,
+          "verse": 5,
+          "label": 5
+        }
+      ]
+    },
+    {
+      "header": "कण्वो घौरः ॥ बृहस्पतिः ॥ १, २, ८ निचृदुपरिष्टाद् बृहती। ३, ७ आर्चीत्रिष्टुप्। ४, ६ सतः पङ्क्तिर्निचृत्पङ्क्तिः। ५ पथ्याबृहती ॥",
+      "mantras": [
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 5,
+          "label": 5
+        },
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 6,
+          "label": 6
+        },
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 7,
+          "label": 7
+        },
+        {
+          "mandala": 1,
+          "sukta": 40,
+          "verse": 8,
+          "label": 8
+        }
+      ]
+    },
+    {
+      "header": "गृत्समदः ॥ १, ५, ९, ११, १७, १९ ब्रह्मणस्पतिः। २-४, ६-८, १०, १२-१६, १८ बृहस्पतिः ॥ १, ४, ५, १०-१२ जगती। २, ७-९, १३, १४ विराड्जगती। ३, ६, १६, १८ निचृज्जगती। १५, १७ भुरिक्त्रिष्टुप्। १९ निचृत्त्रिष्टुप् ॥",
+      "mantras": [
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 5,
+          "label": 5
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 6,
+          "label": 6
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 7,
+          "label": 7
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 8,
+          "label": 8
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 9,
+          "label": 9
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 10,
+          "label": 10
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 11,
+          "label": 11
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 12,
+          "label": 12
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 13,
+          "label": 13
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 14,
+          "label": 14
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 15,
+          "label": 15
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 16,
+          "label": 16
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 17,
+          "label": 17
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 18,
+          "label": 18
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 19,
+          "label": 19
+        }
+      ]
+    },
+    {
+      "header": "गृत्समदः ॥ १ - ११, १३ - १६ ब्रह्मणस्पतिः। १२ ब्रह्मणस्पतिरिन्द्रश्च ॥ १,७, ९, ११ निचृज्जगती; २, ३ त्रिष्टुप् ४, ५ स्वराट्त्रिष्टुप्। ६, ८, १४ जगती। १० स्वराड् जगती। १२, १६ निचृत्त्रिष्टुप् । १३ भुरिग्जगती। १५ भुरिक्त्रिष्टुप् ॥",
+      "mantras": [
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 5,
+          "label": 5
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 6,
+          "label": 6
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 7,
+          "label": 7
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 8,
+          "label": 8
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 9,
+          "label": 9
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 10,
+          "label": 10
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 11,
+          "label": 11
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 12,
+          "label": 12
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 13,
+          "label": 13
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 14,
+          "label": 14
+        },
+        {
+          "mandala": 2,
+          "sukta": 24,
+          "verse": 15,
+          "label": 15
+        },
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 19,
+          "label": 16
+        }
+      ]
+    },
+    {
+      "header": "गृत्समदः ॥ ब्रह्मणस्पतिः ॥ १, २ जगती। ३ निचृज्जगती। ४, ५ विराड्जगती ॥",
+      "mantras": [
+        {
+          "mandala": 2,
+          "sukta": 25,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 2,
+          "sukta": 25,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 2,
+          "sukta": 25,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 2,
+          "sukta": 25,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 2,
+          "sukta": 25,
+          "verse": 5,
+          "label": 5
+        }
+      ]
+    },
+    {
+      "header": "गृत्समदः ॥ ब्रह्मणस्पतिः ॥ १, ३ जगती। २, ४ निचृज्जगती ॥",
+      "mantras": [
+        {
+          "mandala": 2,
+          "sukta": 26,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 2,
+          "sukta": 26,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 2,
+          "sukta": 26,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 2,
+          "sukta": 26,
+          "verse": 4,
+          "label": 4
+        }
+      ]
+    },
+    {
+      "header": "वसिष्ठः ॥ इन्द्राब्रह्मणस्पती ॥ निचृत्रिष्टुप् ॥",
+      "mantras": [
+        {
+          "mandala": 7,
+          "sukta": 97,
+          "verse": 3,
+          "label": 1
+        },
+        {
+          "mandala": 7,
+          "sukta": 97,
+          "verse": 9,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "शिरिम्बिठो भारद्वाजः ॥ ब्रह्मणस्पतिः ॥ १ निचृदनुष्टुप् २ अनुष्टुप् ॥",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 155,
+          "verse": 2,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 155,
+          "verse": 3,
+          "label": 2
+        }
+      ]
+    }
+  ]
+}

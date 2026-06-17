@@ -1,0 +1,92 @@
+{
+  "id": "ganapathy-suktam",
+  "sections": [
+    {
+      "header": "गृत्समदो भार्गवः शौनकः ॥ ब्रह्मणस्पतिः ॥ जगती ॥",
+      "mantras": [
+        {
+          "mandala": 2,
+          "sukta": 23,
+          "verse": 1,
+          "label": 1
+        }
+      ]
+    },
+    {
+      "header": "वैरूपोनभःप्रभेदनः ॥ इन्द्रः ॥ त्रिष्टुप् ॥",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 112,
+          "verse": 9,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 112,
+          "verse": 10,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "कुसीदी काण्वः ॥ इन्द्रः ॥ गायत्री ॥",
+      "mantras": [
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 5,
+          "label": 5
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 6,
+          "label": 6
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 7,
+          "label": 7
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 8,
+          "label": 8
+        },
+        {
+          "mandala": 8,
+          "sukta": 81,
+          "verse": 13,
+          "label": 9
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import Verse from './Verse.astro';
+import type { HomeLocale } from '../../data/home';
+import { getSuktaRecord, getSuktaVerses } from '../../lib/rigveda-corpus';
+import { splitMantraPadas } from '../../lib/rigveda-samhita';
+import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
+
+interface Props {
+	mandala: number;
+	sukta: number;
+	locale?: HomeLocale;
+}
+
+const { mandala, sukta, locale = 'root' } = Astro.props;
+
+const suktaRecord = getSuktaRecord(mandala, sukta);
+if (!suktaRecord) {
+	throw new Error(`Ṛgveda saṃhitā: mandala ${mandala}, sukta ${sukta} not found`);
+}
+
+let header = suktaRecord.header;
+const mantraRecords = getSuktaVerses(mandala, sukta);
+
+/** @type {Record<number, string>} */
+const mantraTexts = {};
+
+for (const record of mantraRecords) {
+	if (locale === 'iast') {
+		mantraTexts[record.verse] = record.iast ?? (await transliterateDevanagari(record.text));
+	} else {
+		mantraTexts[record.verse] = record.text;
+	}
+}
+
+if (locale === 'iast') {
+	header = suktaRecord.headerIast ?? (await transliterateDevanagari(header));
+}
+---
+
+<SuktaPage locale={locale} class="rigveda-samhita">
+	<header class="veda-sukta-block__header veda-sukta-block__header--single">
+		<span class="veda-sukta-block__label">
+			{locale === 'iast' ? `Sūkta ${sukta}` : `सूक्त ${sukta}`}
+		</span>
+		<p class="veda-sukta-block__title">{header}</p>
+	</header>
+	<div class="veda-sukta-block__mantras">
+		{
+			mantraRecords.map((record) => (
+				<Verse number={record.verse} locale={locale} numberPosition="end">
+					{splitMantraPadas(mantraTexts[record.verse]).map((pada) => (
+						<p>{pada}</p>
+					))}
+				</Verse>
+			))
+		}
+	</div>
+</SuktaPage>

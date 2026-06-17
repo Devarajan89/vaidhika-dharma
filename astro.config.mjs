@@ -10,9 +10,7 @@ const rigvedaMandalaRedirects = Object.fromEntries(
     const folder = `Mandala_${String(mandala).padStart(2, '0')}`;
     return [
       [`/rigveda-samhita/${folder}`, `/rigveda-samhita/mandala-${mandala}/`],
-      [`/rigveda-samhita/${folder}/`, `/rigveda-samhita/mandala-${mandala}/`],
       [`/iast/rigveda-samhita/${folder}`, `/iast/rigveda-samhita/mandala-${mandala}/`],
-      [`/iast/rigveda-samhita/${folder}/`, `/iast/rigveda-samhita/mandala-${mandala}/`],
     ];
   }).flat(),
 );
@@ -111,9 +109,9 @@ export default defineConfig({
               tag: 'link',
               attrs: {
                 rel: 'preload',
-                href: '/fonts/siddhanta.woff2',
+                href: '/fonts/siddhanta.ttf',
                 as: 'font',
-                type: 'font/woff2',
+                type: 'font/ttf',
                 crossorigin: 'anonymous',
               },
             },
