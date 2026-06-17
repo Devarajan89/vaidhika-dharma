@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 36 — Mantra Index'
+title: 'Adhyāya 36 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-36-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 36 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 36 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 36 {#chapter-36}

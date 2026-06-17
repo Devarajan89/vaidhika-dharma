@@ -2,11 +2,20 @@
 import { Image } from 'astro:assets';
 import DraftContentNotice from 'virtual:starlight/components/DraftContentNotice';
 import LinkButton from '../../node_modules/@astrojs/starlight/user-components/LinkButton.astro';
+import { getHeroContent, resolveHomeLocale } from '../data/home';
 
 const PAGE_TITLE_ID = '_top';
 
 const { data } = Astro.locals.starlightRoute.entry;
-const { title = data.title, tagline, image, actions = [] } = data.hero || {};
+const isSplash = data.template === 'splash';
+const locale = resolveHomeLocale(Astro.locals.starlightRoute.locale);
+const localeHero = getHeroContent(locale);
+const frontmatterHero = data.hero ?? {};
+
+const title = isSplash ? localeHero.title : (frontmatterHero.title ?? data.title);
+const tagline = isSplash ? localeHero.tagline : frontmatterHero.tagline;
+const actions = isSplash ? localeHero.actions : (frontmatterHero.actions ?? []);
+const image = frontmatterHero.image;
 
 let darkImage: ImageMetadata | undefined;
 let lightImage: ImageMetadata | undefined;
@@ -68,7 +77,7 @@ if (image) {
 				<div class="sl-flex actions">
 					{actions.map(
 						({ attrs: { class: className, ...attrs } = {}, icon, link: href, text, variant }) => (
-							<LinkButton {href} {variant} icon={icon?.name} class:list={[className]} {...attrs}>
+							<LinkButton {href} {variant} icon={icon?.name ?? icon} class:list={[className]} {...attrs}>
 								{text}
 								{icon?.html && <Fragment set:html={icon.html} />}
 							</LinkButton>

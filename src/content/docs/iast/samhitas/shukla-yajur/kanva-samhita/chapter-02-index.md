@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 2 — Mantra Index'
+title: 'Adhyāya 2 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-2-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 2 mantra index (60 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 2 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 2 {#chapter-2}

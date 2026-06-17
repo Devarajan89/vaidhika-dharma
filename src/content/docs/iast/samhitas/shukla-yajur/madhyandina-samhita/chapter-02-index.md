@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 2 — Mantra Index'
+title: 'Adhyāya 2 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-2-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 2 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 2 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 2 {#chapter-2}

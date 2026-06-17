@@ -4,8 +4,8 @@ slug: kanva-samhita/chapter-36-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'काण्व संहिता — अध्याय 36 मन्त्र सूची (24 मन्त्राः).'
-lastUpdated: 2026-06-14
+description: 'काण्व संहिता — अध्याय 36 मन्त्र सूची।'
+lastUpdated: 2026-06-17
 ---
 
 ## अध्याय 36 {#chapter-36}

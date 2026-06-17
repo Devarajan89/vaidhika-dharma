@@ -1,15 +1,15 @@
 ---
-title: 'Vājasaneyi Kanva Saṃhitā — Chapter 30 (46 mantras)'
+title: 'Vājasaneyi Saṃhitā (Kāṇva) — Chapter 30 (46 mantras)'
 slug: iast/kanva-samhita/chapter-30
 sidebar:
   label: '30 hotā yakṣatsamidhendramil̤aspade'
   order: 30
 tableOfContents: false
-description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 30'
-lastUpdated: 2026-06-14
+description: 'Śukla Yajur Veda — Vājasaneyi Saṃhitā (Kāṇva), Chapter 30'
+lastUpdated: 2026-06-17
 ---
 
-# Vājasaneyi Kanva Saṃhitā — Chapter 30
+# Vājasaneyi Saṃhitā (Kāṇva) — Chapter 30
 
 **atha triṃśo'dhyāyaḥ |**
 
@@ -68,422 +68,330 @@ lastUpdated: 2026-06-14
 
 ---
 
-## Mantra 1 {#mantra-1}
-
-**Adhyāya:** 30 | **Mantra:** 1
+<a id="mantra-1"></a>
 
 hotā̍ yakṣatsa̱midhendra̍mi̱l̤aspa̱de nābhā̍ pṛthi̱vyā adhi̍ |
-di̱vo varṣma̱ntsami̍dhyata̱ oji̍ṣṭhaścarṣaṇī̱sahā̱ṃ vetvājya̍sya̱ hota̱ryaja̍
+di̱vo varṣma̱ntsami̍dhyata̱ oji̍ṣṭhaścarṣaṇī̱sahā̱ṃ vetvājya̍sya̱ hota̱ryaja̍ ||30.1||
 
 ---
 
-## Mantra 2 {#mantra-2}
-
-**Adhyāya:** 30 | **Mantra:** 2
+<a id="mantra-2"></a>
 
 hotā̍ yakṣa̱ttanū̱napā̍tamū̱tibhi̱rjetā̍ra̱mapa̍rājitam |
-indra̍ṃ de̱va sva̱rvida̍ṃ pa̱thibhi̱rmadhu̍mattamai̱rnarā̱śase̍na̱ teja̍sā̱ vetvājya̍sya̱ hota̱ryaja̍
+indra̍ṃ de̱va sva̱rvida̍ṃ pa̱thibhi̱rmadhu̍mattamai̱rnarā̱śase̍na̱ teja̍sā̱ vetvājya̍sya̱ hota̱ryaja̍ ||30.2||
 
 ---
 
-## Mantra 3 {#mantra-3}
-
-**Adhyāya:** 30 | **Mantra:** 3
+<a id="mantra-3"></a>
 
 hotā̍ yakṣa̱dil̤ā̍bhi̱rindra̍mīl̤i̱tamā̱juhvā̍na̱mama̍rtyam |
-de̱vo devai̱ḥ savī̍ryo̱ vajra̍hastaḥ puraṃda̱ro vetvājya̍sya̱ hota̱ryaja̍
+de̱vo devai̱ḥ savī̍ryo̱ vajra̍hastaḥ puraṃda̱ro vetvājya̍sya̱ hota̱ryaja̍ ||30.3||
 
 ---
 
-## Mantra 4 {#mantra-4}
-
-**Adhyāya:** 30 | **Mantra:** 4
+<a id="mantra-4"></a>
 
 hotā̱ yakṣa̍dba̱rhiṣīndra̍ṃ niṣadva̱raṃ vṛ̍ṣa̱bhaṃ naryā̍pasam |
-vasu̍bhī rudrairā̍di̱tyaiḥ su̱yugbhi̍rba̱rhirāsa̍da̱dvetvājya̍sya̱ hota̱ryaja̍
+vasu̍bhī rudrairā̍di̱tyaiḥ su̱yugbhi̍rba̱rhirāsa̍da̱dvetvājya̍sya̱ hota̱ryaja̍ ||30.4||
 
 ---
 
-## Mantra 5 {#mantra-5}
-
-**Adhyāya:** 30 | **Mantra:** 5
+<a id="mantra-5"></a>
 
 hotā̍ yakṣa̱dojo̱ na vī̱rya̱ saho̱ dvāra̱ indra̍mavardhayan |
-su̱prā̱ya̱ṇā a̱sminya̱jñe vi śra̍yantāmṛtā̱vṛdho̱ dvāra̱ indrā̍ya mī̱l̤ahuṣe̱ vyantvājya̍sya̱ hota̱ryaja̍
+su̱prā̱ya̱ṇā a̱sminya̱jñe vi śra̍yantāmṛtā̱vṛdho̱ dvāra̱ indrā̍ya mī̱l̤ahuṣe̱ vyantvājya̍sya̱ hota̱ryaja̍ ||30.5||
 
 ---
 
-## Mantra 6 {#mantra-6}
-
-**Adhyāya:** 30 | **Mantra:** 6
+<a id="mantra-6"></a>
 
 hotā̍ yakṣadu̱ṣe indra̍sya dhe̱nū su̱dughe̍ mā̱tarā̍ ma̱hī |
-sa̱vā̱tarau̱ na teja̍sā va̱tsamindra̍mavardhatāṃ vī̱tāmājya̍sya̱ hota̱ryaja̍
+sa̱vā̱tarau̱ na teja̍sā va̱tsamindra̍mavardhatāṃ vī̱tāmājya̍sya̱ hota̱ryaja̍ ||30.6||
 
 ---
 
-## Mantra 7 {#mantra-7}
-
-**Adhyāya:** 30 | **Mantra:** 7
+<a id="mantra-7"></a>
 
 hotā̍ yakṣa̱ddaivyā̱ hotā̍rā bhi̱ṣajā̱ sakhā̍yā ha̱viṣendra̍ṃ bhiṣajyataḥ |
-ka̱vī devau̱ prace̍tasā̱ indrā̍ya dhatta indri̱yaṃ vī̱tāmājya̍sya̱ hota̱ryaja̍
+ka̱vī devau̱ prace̍tasā̱ indrā̍ya dhatta indri̱yaṃ vī̱tāmājya̍sya̱ hota̱ryaja̍ ||30.7||
 
 ---
 
-## Mantra 8 {#mantra-8}
-
-**Adhyāya:** 30 | **Mantra:** 8
+<a id="mantra-8"></a>
 
 hotā̍ yakṣatti̱sro de̱vīrna bhe̍ṣa̱jaṃ traya̍stri̱dhāta̍vo̱'pasa̱ il̤ā̱ sara̍svatī̱ bhāra̍tī ma̱hīḥ |
-indra̍patnīrha̱viṣma̍tī̱rvyantvājya̍sya̱ hota̱ryaja̍
+indra̍patnīrha̱viṣma̍tī̱rvyantvājya̍sya̱ hota̱ryaja̍ ||30.8||
 
 ---
 
-## Mantra 9 {#mantra-9}
-
-**Adhyāya:** 30 | **Mantra:** 9
+<a id="mantra-9"></a>
 
 hotā̍ yakṣa̱ttvaṣṭā̍ra̱mindra̍ṃ de̱vaṃ bhi̱ṣaja̍ su̱yaja̍ṃ ghṛta̱śriya̍m |
-pu̱ru̱rūpa̍ su̱reta̍saṃ ma̱ghona̱mindrā̍ya̱ tvaṣṭā̱ dadha̍dindri̱yāṇi̱ vetvājya̍sya̱ hota̱ryaja̍
+pu̱ru̱rūpa̍ su̱reta̍saṃ ma̱ghona̱mindrā̍ya̱ tvaṣṭā̱ dadha̍dindri̱yāṇi̱ vetvājya̍sya̱ hota̱ryaja̍ ||30.9||
 
 ---
 
-## Mantra 10 {#mantra-10}
-
-**Adhyāya:** 30 | **Mantra:** 10
+<a id="mantra-10"></a>
 
 hotā̍ yakṣa̱dvana̱spati̍ śami̱tāra̍ śa̱takra̍tuṃ dhi̱yo jo̱ṣṭāra̍mindri̱yam |
-madhvā̍ sama̱ñjanpa̱thibhi̍ḥ su̱gebhi̱ḥ svadā̍ti ya̱jñaṃ madhu̍nā ghṛ̱tena̱ vetvājya̍sya̱ hota̱ryaja̍
+madhvā̍ sama̱ñjanpa̱thibhi̍ḥ su̱gebhi̱ḥ svadā̍ti ya̱jñaṃ madhu̍nā ghṛ̱tena̱ vetvājya̍sya̱ hota̱ryaja̍ ||30.10||
 
 ---
 
-## Mantra 11 {#mantra-11}
-
-**Adhyāya:** 30 | **Mantra:** 11
+<a id="mantra-11"></a>
 
 hotā̍ yakṣa̱dindra̱ svāhājya̍sya̱ svāhā̱ meda̍sa̱ḥ svāhā̍ sto̱kānā̱ svāhā̱ svāhā̍kṛtīnā̱ svāhā̍ ha̱vyasū̍ktīnām |
-svāhā̍ de̱vā ā̍jya̱pā ju̍ṣā̱ṇā indra̱ ājya̍sya̱ vyantu̱ hota̱ryaja̍
+svāhā̍ de̱vā ā̍jya̱pā ju̍ṣā̱ṇā indra̱ ājya̍sya̱ vyantu̱ hota̱ryaja̍ ||30.11||
 
 ---
 
-## Mantra 12 {#mantra-12}
-
-**Adhyāya:** 30 | **Mantra:** 12
+<a id="mantra-12"></a>
 
 de̱vaṃ ba̱rhirindra̍ sude̱vaṃ de̱vairvī̱rava̍tstī̱rṇaṃ vedyā̍mavardhayat |
-vasto̍rvṛ̱taṃ prāktorbhṛ̱ta rā̱yā ba̱rhiṣma̱to'tya̍gādvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+vasto̍rvṛ̱taṃ prāktorbhṛ̱ta rā̱yā ba̱rhiṣma̱to'tya̍gādvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.12||
 
 ---
 
-## Mantra 13 {#mantra-13}
-
-**Adhyāya:** 30 | **Mantra:** 13
+<a id="mantra-13"></a>
 
 de̱vīrdvāra̱ indra̍ saṃghā̱te vī̱ḍvīryāma̍nnavardhayan | ā va̱tsena̱ taru̍ṇena kumā̱reṇa̍ ca mīva̱tāpārvā̍ṇa
-re̱ṇuka̍kāṭaṃ nudantām̐ vasu̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍
+re̱ṇuka̍kāṭaṃ nudantām̐ vasu̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍ ||30.13||
 
 ---
 
-## Mantra 14 {#mantra-14}
-
-**Adhyāya:** 30 | **Mantra:** 14
+<a id="mantra-14"></a>
 
 de̱vī u̱ṣāsā̱naktendra̍ṃ ya̱jñe pra̍ya̱tya̍hvetām |
-daivī̱rviśa̱ḥ prāyā̍siṣṭā̱ suprī̍te̱ sudhi̍te vasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+daivī̱rviśa̱ḥ prāyā̍siṣṭā̱ suprī̍te̱ sudhi̍te vasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.14||
 
 ---
 
-## Mantra 15 {#mantra-15}
-
-**Adhyāya:** 30 | **Mantra:** 15
+<a id="mantra-15"></a>
 
 de̱vī joṣṭrī̱ vasu̍dhitī de̱vamindra̍mavardhatām | ayā̍vya̱nyāghā dveṣā̱syānyā va̍kṣa̱dvasu̱ vāryā̍ṇi̱
-yaja̍mānāya śikṣi̱te va̍su̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+yaja̍mānāya śikṣi̱te va̍su̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.15||
 
 ---
 
-## Mantra 16 {#mantra-16}
-
-**Adhyāya:** 30 | **Mantra:** 16
+<a id="mantra-16"></a>
 
 de̱vī ū̱rjāhu̍tī̱ dughe̱ paya̱sendra̍mavardhatām |
 iṣa̱mūrja̍ma̱nyā va̍kṣa̱tsagdhi̱ sapī̍tima̱nyā nave̍na̱ pūrva̱ṃ daya̍māne purā̱ṇena̱ nava̱madhā̍tā̱mūrja̍mū̱rjāhu̍tī
-ū̱rjaya̍māne̱ vasu̱ vāryā̍ṇi̱ yaja̍mānāya śikṣi̱te va̍su̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+ū̱rjaya̍māne̱ vasu̱ vāryā̍ṇi̱ yaja̍mānāya śikṣi̱te va̍su̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.16||
 
 ---
 
-## Mantra 17 {#mantra-17}
-
-**Adhyāya:** 30 | **Mantra:** 17
+<a id="mantra-17"></a>
 
 de̱vā de̍vyā̱ hotā̍rā de̱vamindra̍mavardhatām |
-ha̱tāgha̍śasā̱ ābhā̍rṣṭā̱ṃ vasu̱ vāryā̍ṇi̱ yaja̍mānāya śikṣi̱tau va̍su̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+ha̱tāgha̍śasā̱ ābhā̍rṣṭā̱ṃ vasu̱ vāryā̍ṇi̱ yaja̍mānāya śikṣi̱tau va̍su̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.17||
 
 ---
 
-## Mantra 18 {#mantra-18}
-
-**Adhyāya:** 30 | **Mantra:** 18
+<a id="mantra-18"></a>
 
 de̱vīsti̱srasti̱sro de̱vīḥ pati̱mindra̍mavardhayan |
 aspṛ̍kṣa̱dbhāra̍tī̱ diva̍ rudrairya̱jña sara̍sva̱tīl̤ā̱ vasu̍matī
-gṛ̱hānva̍su̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍
+gṛ̱hānva̍su̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍ ||30.18||
 
 ---
 
-## Mantra 19 {#mantra-19}
-
-**Adhyāya:** 30 | **Mantra:** 19
+<a id="mantra-19"></a>
 
 de̱va indro̱ narā̱śasa̍strivarū̱thastri̍bandhu̱ro de̱vamindra̍mavardhayat |
 śa̱tena̍ śitipṛ̱ṣṭhānā̱māhi̍taḥ sa̱hasre̍ṇa̱ pra va̍rtate mi̱trāvaru̱ṇeda̍sya ho̱tramarha̍to̱ bṛha̱spati̍
-sto̱trama̱śvinādhva̍ryavaṃ vasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+sto̱trama̱śvinādhva̍ryavaṃ vasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.19||
 
 ---
 
-## Mantra 20 {#mantra-20}
-
-**Adhyāya:** 30 | **Mantra:** 20
+<a id="mantra-20"></a>
 
 de̱vo devai̱rvana̱spati̱rhira̍ṇyaparṇo̱ madhu̍śākhaḥ supippa̱lo de̱vamindra̍mavardhayat |
-diva̱magre̍ṇāspṛkṣa̱dāntari̍kṣaṃ pṛthi̱vīma̍dṛhīdvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+diva̱magre̍ṇāspṛkṣa̱dāntari̍kṣaṃ pṛthi̱vīma̍dṛhīdvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.20||
 
 ---
 
-## Mantra 21 {#mantra-21}
-
-**Adhyāya:** 30 | **Mantra:** 21
+<a id="mantra-21"></a>
 
 de̱vaṃ ba̱rhirvāri̍tīnāṃ de̱vamindra̍mavardhayat |
-svā̱sa̱sthamindre̱ṇāsa̍nnama̱nyā ba̱rhīṣya̱bhya̍bhūdvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+svā̱sa̱sthamindre̱ṇāsa̍nnama̱nyā ba̱rhīṣya̱bhya̍bhūdvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.21||
 
 ---
 
-## Mantra 22 {#mantra-22}
-
-**Adhyāya:** 30 | **Mantra:** 22
+<a id="mantra-22"></a>
 
 de̱vo a̱gniḥ svi̍ṣṭa̱kṛdde̱vamindra̍mavardhayat |
-svi̍ṣṭaṃ ku̱rvan tsvi̍ṣṭa̱kṛtsvi̍ṣṭama̱dya ka̍rotu no vasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+svi̍ṣṭaṃ ku̱rvan tsvi̍ṣṭa̱kṛtsvi̍ṣṭama̱dya ka̍rotu no vasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.22||
 
 ---
 
-## Mantra 23 {#mantra-23}
-
-**Adhyāya:** 30 | **Mantra:** 23
+<a id="mantra-23"></a>
 
 a̱gnima̱dya hotā̍ramavṛṇītā̱yaṃ yaja̍māna̱ḥ paca̱npaktī̱ḥ paca̍npuro̱l̤āśa̍ṃ ba̱dhnannindrā̍ya̱ cchāga̍m |
 sū̱pa̱sthā a̱dya de̱vo vana̱spati̍rabhava̱dindrā̍ya̱ cchāge̍na |
-agha̱ttaṃ me̍da̱staḥ prati̍ paca̱tāgra̍bhī̱davī̍vṛdhatpuro̱l̤āśe̍na |tvāma̱dya ṛ̍ṣe
+agha̱ttaṃ me̍da̱staḥ prati̍ paca̱tāgra̍bhī̱davī̍vṛdhatpuro̱l̤āśe̍na |tvāma̱dya ṛ̍ṣe ||30.23||
 
 ---
 
-## Mantra 24 {#mantra-24}
-
-**Adhyāya:** 30 | **Mantra:** 24
+<a id="mantra-24"></a>
 
 hotā̍ yakṣatsamidhā̱naṃ ma̱hadyaśa̱ḥ susa̍middha̱ṃ vare̍ṇyama̱gnimindra̍ṃ vayo̱dhasa̍m |
-gā̱ya̱trīṃ chanda̍ indri̱yaṃ tryavi̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍
+gā̱ya̱trīṃ chanda̍ indri̱yaṃ tryavi̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍ ||30.24||
 
 ---
 
-## Mantra 25 {#mantra-25}
-
-**Adhyāya:** 30 | **Mantra:** 25
+<a id="mantra-25"></a>
 
 hotā̍ yakṣa̱ttanū̱napā̍tamu̱dbhida̱ṃ yaṃ garbha̱madi̍tirda̱dhe śuci̱mindra̍ṃ vayo̱dhasa̍m |
-u̱ṣṇiha̱ṃ chanda̍ indri̱yaṃ di̍tya̱vāha̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍
+u̱ṣṇiha̱ṃ chanda̍ indri̱yaṃ di̍tya̱vāha̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍ ||30.25||
 
 ---
 
-## Mantra 26 {#mantra-26}
-
-**Adhyāya:** 30 | **Mantra:** 26
+<a id="mantra-26"></a>
 
 hotā̍ yakṣadī̱l̤enya̍mīl̤i̱taṃ vṛ̍tra̱hanta̍ma̱mil̤ā̍bhi̱rīḍya̱ saha̱ḥ soma̱mindra̍ṃ vayo̱dhasa̍m |
-a̱nu̱ṣṭubha̱ṃ chanda̍ indri̱yaṃ pañcā̍vi̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍
+a̱nu̱ṣṭubha̱ṃ chanda̍ indri̱yaṃ pañcā̍vi̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍ ||30.26||
 
 ---
 
-## Mantra 27 {#mantra-27}
-
-**Adhyāya:** 30 | **Mantra:** 27
+<a id="mantra-27"></a>
 
 hotā̍ yakṣatsuba̱rhiṣa̍ṃ pūṣa̱ṇvanta̱mama̍rtya̱ sīda̍ntaṃ ba̱rhiṣi̍ pri̱ye̱'mṛtendra̍ṃ vayo̱dhasa̍m |
-bṛ̱ha̱tīṃ chanda̍ indri̱yaṃ tri̍va̱tsaṃ gāṃ va̍yo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍
+bṛ̱ha̱tīṃ chanda̍ indri̱yaṃ tri̍va̱tsaṃ gāṃ va̍yo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍ ||30.27||
 
 ---
 
-## Mantra 28 {#mantra-28}
-
-**Adhyāya:** 30 | **Mantra:** 28
+<a id="mantra-28"></a>
 
 hotā̍ yakṣa̱dvyaca̍svatīḥ suprāya̱ṇā ṛ̍tā̱vṛdho̱ dvāro̍ de̱vīrhi̍ra̱ṇyayī̍rbra̱hmāṇa̱mindra̍ṃ vayo̱dhasa̍m |
-pa̱ṅktiṃ chanda̍ i̱hendri̱yaṃ tu̍rya̱vāha̱ṃ gāṃ vayo̱ dadha̱dvyantvājya̍sya̱ hota̱ryaja̍
+pa̱ṅktiṃ chanda̍ i̱hendri̱yaṃ tu̍rya̱vāha̱ṃ gāṃ vayo̱ dadha̱dvyantvājya̍sya̱ hota̱ryaja̍ ||30.28||
 
 ---
 
-## Mantra 29 {#mantra-29}
-
-**Adhyāya:** 30 | **Mantra:** 29
+<a id="mantra-29"></a>
 
 hotā̍ yakṣatsu̱peśa̍sā suśi̱lpe bṛ̍ha̱tī u̱bhe nakto̱ṣāsā̱ na da̍rśa̱te viśva̱mindra̍ṃ vayo̱dhasa̍m |
-tri̱ṣṭubha̱ṃ chanda̍ i̱hendri̱yaṃ pa̍ṣṭha̱vāha̱ṃ gāṃ vayo̱ dadha̍dvī̱tāmājya̍sya̱ hota̱ryaja̍
+tri̱ṣṭubha̱ṃ chanda̍ i̱hendri̱yaṃ pa̍ṣṭha̱vāha̱ṃ gāṃ vayo̱ dadha̍dvī̱tāmājya̍sya̱ hota̱ryaja̍ ||30.29||
 
 ---
 
-## Mantra 30 {#mantra-30}
-
-**Adhyāya:** 30 | **Mantra:** 30
+<a id="mantra-30"></a>
 
 hotā̍ yakṣa̱tprace̍tasā de̱vānā̍mutta̱maṃ yaśo̱ hotā̍rā̱ daivyā̍ ka̱vī sa̱yujendra̍ṃ vayo̱dhasa̍m |
-jaga̍tī̱ṃ chanda̍ indri̱yama̍na̱ḍvāha̱ṃ gāṃ vayo̱ dadha̍dvī̱tāmājya̍sya̱ hota̱ryaja̍
+jaga̍tī̱ṃ chanda̍ indri̱yama̍na̱ḍvāha̱ṃ gāṃ vayo̱ dadha̍dvī̱tāmājya̍sya̱ hota̱ryaja̍ ||30.30||
 
 ---
 
-## Mantra 31 {#mantra-31}
-
-**Adhyāya:** 30 | **Mantra:** 31
+<a id="mantra-31"></a>
 
 hotā̍ yakṣa̱tpeśa̍svatīsti̱sro de̱vīrhi̍ra̱ṇyayī̱rbhāra̍tīrbṛha̱tīrma̱hīḥ pati̱mindra̍ṃ vayo̱dhasa̍m |
-vi̱rāja̱ṃ chanda̍ i̱hendri̱yaṃ dhe̱nuṃ gāṃ na vayo̱ dadha̱dvyantvājya̍sya̱ hota̱ryaja̍
+vi̱rāja̱ṃ chanda̍ i̱hendri̱yaṃ dhe̱nuṃ gāṃ na vayo̱ dadha̱dvyantvājya̍sya̱ hota̱ryaja̍ ||30.31||
 
 ---
 
-## Mantra 32 {#mantra-32}
-
-**Adhyāya:** 30 | **Mantra:** 32
+<a id="mantra-32"></a>
 
 hotā̍ yakṣatsu̱reta̍sa̱ṃ tvaṣṭā̍raṃ puṣṭi̱vardha̍na rū̱pāṇi̱ bibhra̍ta̱ṃ pṛtha̱k puṣṭi̱mindra̍ṃ vayo̱dhasa̍m |
-dvi̱pada̱ṃ chanda̍ indri̱yamu̱kṣāṇa̱ṃ gāṃ na vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍
+dvi̱pada̱ṃ chanda̍ indri̱yamu̱kṣāṇa̱ṃ gāṃ na vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍ ||30.32||
 
 ---
 
-## Mantra 33 {#mantra-33}
-
-**Adhyāya:** 30 | **Mantra:** 33
+<a id="mantra-33"></a>
 
 hotā̍ yakṣa̱dvana̱spati̍ śami̱tāra̍ śa̱takra̍tu̱
 hira̍ṇyaparṇamu̱kthina̍ raśa̱nāṃ bibhra̍taṃ va̱śiṃ bhaga̱mindra̍ṃ vayo̱dhasa̍m |
-ka̱kubha̱ṃ chanda̍ i̱hendri̱yaṃ va̱śāṃ ve̱hata̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍
+ka̱kubha̱ṃ chanda̍ i̱hendri̱yaṃ va̱śāṃ ve̱hata̱ṃ gāṃ vayo̱ dadha̱dvetvājya̍sya̱ hota̱ryaja̍ ||30.33||
 
 ---
 
-## Mantra 34 {#mantra-34}
-
-**Adhyāya:** 30 | **Mantra:** 34
+<a id="mantra-34"></a>
 
 hotā̍ yakṣa̱tsvāhā̍kṛtīra̱gniṃ gṛ̱hapa̍ti̱ṃ pṛtha̱gvaru̍ṇaṃ bheṣa̱jaṃ ka̱viṃ kṣa̱tramindra̍ṃ vayo̱dhasa̍m |
-ati̍cchandasa̱ṃ chanda̍ indri̱yaṃ bṛ̱hadṛ̍ṣa̱bhaṃ gāṃ vayo̱ dadha̱dvyantvājya̍sya̱ hota̱ryaja̍
+ati̍cchandasa̱ṃ chanda̍ indri̱yaṃ bṛ̱hadṛ̍ṣa̱bhaṃ gāṃ vayo̱ dadha̱dvyantvājya̍sya̱ hota̱ryaja̍ ||30.34||
 
 ---
 
-## Mantra 35 {#mantra-35}
-
-**Adhyāya:** 30 | **Mantra:** 35
+<a id="mantra-35"></a>
 
 de̱vaṃ ba̱rhirva̍yo̱dhasa̍ṃ de̱vamindra̍mavardhayat |
-gā̱ya̱tryā chanda̍sendri̱yaṃ cakṣu̱rindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+gā̱ya̱tryā chanda̍sendri̱yaṃ cakṣu̱rindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.35||
 
 ---
 
-## Mantra 36 {#mantra-36}
-
-**Adhyāya:** 30 | **Mantra:** 36
+<a id="mantra-36"></a>
 
 de̱vīrdvāro̍ vayo̱dhasa̱ śuci̱mindra̍mavardhayan |
-u̱ṣṇihā̱ chanda̍sendri̱yaṃ prā̱ṇamindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍
+u̱ṣṇihā̱ chanda̍sendri̱yaṃ prā̱ṇamindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍ ||30.36||
 
 ---
 
-## Mantra 37 {#mantra-37}
-
-**Adhyāya:** 30 | **Mantra:** 37
+<a id="mantra-37"></a>
 
 de̱vī u̱ṣāsā̱naktā̍ de̱vamindra̍ṃ vayo̱dhasa̍ṃ de̱vī de̱vama̍vardhatām |
-a̱nu̱ṣṭubhā̱ chanda̍sendri̱yaṃ bala̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+a̱nu̱ṣṭubhā̱ chanda̍sendri̱yaṃ bala̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.37||
 
 ---
 
-## Mantra 38 {#mantra-38}
-
-**Adhyāya:** 30 | **Mantra:** 38
+<a id="mantra-38"></a>
 
 de̱vī joṣṭrī̱ vasu̍dhitī de̱vamindra̍ṃ vayo̱dhasa̍ṃ de̱vī de̱vama̍vardhatām |
-bṛ̱ha̱tyā chanda̍sendri̱ya śrotra̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+bṛ̱ha̱tyā chanda̍sendri̱ya śrotra̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.38||
 
 ---
 
-## Mantra 39 {#mantra-39}
-
-**Adhyāya:** 30 | **Mantra:** 39
+<a id="mantra-39"></a>
 
 de̱vī ū̱rjāhu̍tī̱ dughe̍ su̱dughe̱ paya̱sendra̍ṃ vayo̱dhasa̍ṃ de̱vī de̱vama̍vardhatām |
-pa̱ṅktyā chanda̍sendri̱ya śu̱kramindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+pa̱ṅktyā chanda̍sendri̱ya śu̱kramindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.39||
 
 ---
 
-## Mantra 40 {#mantra-40}
-
-**Adhyāya:** 30 | **Mantra:** 40
+<a id="mantra-40"></a>
 
 de̱vā daivyā̱ hotā̍rā de̱vamindra̍ṃ vayo̱dhasa̍ṃ de̱vau de̱vama̍vardhatām |
-tri̱ṣṭubhā̱ chanda̍sendri̱yaṃ tviṣi̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍
+tri̱ṣṭubhā̱ chanda̍sendri̱yaṃ tviṣi̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vītā̱ṃ yaja̍ ||30.40||
 
 ---
 
-## Mantra 41 {#mantra-41}
-
-**Adhyāya:** 30 | **Mantra:** 41
+<a id="mantra-41"></a>
 
 de̱vīsti̱srasti̱sro de̱vīrva̍yo̱dhasa̱ṃ pati̱mindra̍mavardhayan |
-jaga̍tyā̱ chanda̍sendri̱ya śūṣa̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍
+jaga̍tyā̱ chanda̍sendri̱ya śūṣa̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vyantu̱ yaja̍ ||30.41||
 
 ---
 
-## Mantra 42 {#mantra-42}
-
-**Adhyāya:** 30 | **Mantra:** 42
+<a id="mantra-42"></a>
 
 de̱vo narā̱śaso̍ de̱vamindra̍ṃ vayo̱dhasa̍ṃ de̱vo de̱vama̍vardhayat |
-vi̱rājā̱ chanda̍sendri̱ya ru̱pamindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+vi̱rājā̱ chanda̍sendri̱ya ru̱pamindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.42||
 
 ---
 
-## Mantra 43 {#mantra-43}
-
-**Adhyāya:** 30 | **Mantra:** 43
+<a id="mantra-43"></a>
 
 de̱vo vana̱spati̍rde̱vamindra̍ṃ vayo̱dhasa̍ṃ de̱vo de̱vama̍vardhayat |
-dvi̱padā̱ chanda̍sendri̱yaṃ bhaga̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+dvi̱padā̱ chanda̍sendri̱yaṃ bhaga̱mindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.43||
 
 ---
 
-## Mantra 44 {#mantra-44}
-
-**Adhyāya:** 30 | **Mantra:** 44
+<a id="mantra-44"></a>
 
 de̱vaṃ ba̱rhirvāri̍tīnāṃ de̱vamindra̍ṃ vayo̱dhasa̍ṃ de̱vaṃ de̱vama̍vardhayat |
-ka̱kubhā̱ chanda̍sendri̱yaṃ yaśa̱ indre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+ka̱kubhā̱ chanda̍sendri̱yaṃ yaśa̱ indre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.44||
 
 ---
 
-## Mantra 45 {#mantra-45}
-
-**Adhyāya:** 30 | **Mantra:** 45
+<a id="mantra-45"></a>
 
 de̱vo a̱gniḥ svi̍ṣṭa̱kṛdde̱vamindra̍ṃ vayo̱dhasa̍ṃ de̱vo de̱vama̍vardhayat |
-ati̍cchandasā̱ chanda̍sendri̱yaṃ kṣa̱tramindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍
+ati̍cchandasā̱ chanda̍sendri̱yaṃ kṣa̱tramindre̱ vayo̱ dadha̍dvasu̱vane̍ vasu̱dheya̍sya vetu̱ yaja̍ ||30.45||
 
 ---
 
-## Mantra 46 {#mantra-46}
-
-**Adhyāya:** 30 | **Mantra:** 46
+<a id="mantra-46"></a>
 
 a̱gnima̱dya hotā̍ramavṛṇītā̱yaṃ yaja̍māna̱ḥ paca̱npaktī̱ḥ paca̍npuro̱l̤āśa̍ṃ ba̱dhnannindrā̍ya vayo̱dhase̱ chāga̍m |
 sū̱pa̱sthā a̱dya de̱vo vana̱spati̍rabhava̱dindrā̍ya vayo̱dhase̱ chāge̍na |
-agha̱ttaṃ me̍da̱staḥ prati̍paca̱tāgra̍bhī̱davī̍vṛdhatpuro̱l̤āśe̍na | tvāma̱dya ṛ̍ṣe
+agha̱ttaṃ me̍da̱staḥ prati̍paca̱tāgra̍bhī̱davī̍vṛdhatpuro̱l̤āśe̍na | tvāma̱dya ṛ̍ṣe ||30.46||
 
 ---

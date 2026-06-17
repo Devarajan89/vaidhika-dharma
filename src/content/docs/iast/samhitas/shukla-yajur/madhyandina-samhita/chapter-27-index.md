@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 27 — Mantra Index'
+title: 'Adhyāya 27 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-27-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 27 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 27 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 27 {#chapter-27}

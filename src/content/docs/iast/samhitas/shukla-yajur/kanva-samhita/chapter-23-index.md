@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 23 — Mantra Index'
+title: 'Adhyāya 23 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-23-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 23 mantra index (60 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 23 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 23 {#chapter-23}

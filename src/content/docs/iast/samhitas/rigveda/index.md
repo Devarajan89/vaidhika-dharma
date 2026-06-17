@@ -1,21 +1,21 @@
 ---
-title: 'Śākala Saṃhitā (Ṛgveda) — Index'
+title: 'Śākala saṃhitā (Ṛgveda) — Sūcī'
 slug: iast/rigveda-samhita
 sidebar:
-  label: 'Śākala Saṃhitā'
+  label: 'Śākala saṃhitā'
   order: 1
 tableOfContents: false
-description: 'Complete index of all 10,481 Rigveda mantras across 10 Maṇḍalas.'
+description: 'Ṛgveda śākala saṃhitāyāḥ daśa maṇḍaleṣu 10,481 mantrāṇām sūcī.'
 lastUpdated: 2026-06-13
 ---
 
-# Śākala Saṃhitā — Table of Contents
+# Śākala saṃhitā — Sūcī
 
-Browse all 10,481 mantras by Maṇḍala. Select a Maṇḍala to view its mantra index.
+10,481 mantrāṇi daśa maṇḍaleṣu. Mantra sūcīṃ draṣṭum maṇḍalaṃ cinut.
 
-## Śākala Saṃhitā — Maṇḍalas
+## Śākala saṃhitā — Maṇḍalāḥ
 
-| Maṇḍala | Sūktas |
+| Maṇḍala | Sūktāni |
 |---------|-------:|
 | [Prathama Maṇḍala](mandala-1/) | 191 |
 | [Dvitīya Maṇḍala](mandala-2/) | 43 |

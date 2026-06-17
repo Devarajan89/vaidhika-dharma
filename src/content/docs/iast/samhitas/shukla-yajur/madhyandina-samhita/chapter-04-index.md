@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 4 — Mantra Index'
+title: 'Adhyāya 4 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-4-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 4 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 4 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 4 {#chapter-4}

@@ -5,7 +5,7 @@ sidebar:
   hidden: true
 tableOfContents: false
 description: 'माध्यन्दिन संहिता — अध्याय 38 मन्त्र सूची।'
-lastUpdated: 2026-06-14
+lastUpdated: 2026-06-17
 ---
 
 ## अध्याय 38 {#chapter-38}

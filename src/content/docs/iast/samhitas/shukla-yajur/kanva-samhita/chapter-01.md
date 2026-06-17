@@ -1,15 +1,15 @@
 ---
-title: 'Vājasaneyi Kanva Saṃhitā — Chapter 1 (49 mantras)'
+title: 'Vājasaneyi Saṃhitā (Kāṇva) — Chapter 1 (49 mantras)'
 slug: iast/kanva-samhita/chapter-01
 sidebar:
   label: '1 oṃ   iṣe'
   order: 1
 tableOfContents: false
-description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 1'
-lastUpdated: 2026-06-14
+description: 'Śukla Yajur Veda — Vājasaneyi Saṃhitā (Kāṇva), Chapter 1'
+lastUpdated: 2026-06-17
 ---
 
-# Vājasaneyi Kanva Saṃhitā — Chapter 1
+# Vājasaneyi Saṃhitā (Kāṇva) — Chapter 1
 
 **atha prathamo daśakaḥ| atha prathamo'dhyāyaḥ|**
 
@@ -71,395 +71,297 @@ lastUpdated: 2026-06-14
 
 ---
 
-## Mantra 1 {#mantra-1}
+<a id="mantra-1"></a>
 
-**Adhyāya:** 1 | **Mantra:** 1
-
-||oṃ|| i̱ṣe tvo̱rje tvā̍ vā̱yava̍ stha| de̱vo va̍ḥ savi̱tā prārpa̍yatu̱ śreṣṭha̍tamāya̱ karma̍ṇe
+||oṃ|| i̱ṣe tvo̱rje tvā̍ vā̱yava̍ stha| de̱vo va̍ḥ savi̱tā prārpa̍yatu̱ śreṣṭha̍tamāya̱ karma̍ṇe ||1.1||
 
 ---
 
-## Mantra 2 {#mantra-2}
+<a id="mantra-2"></a>
 
-**Adhyāya:** 1 | **Mantra:** 2
-
-āpyā̍yadhvamaghnyā̱ indrā̍ya bhā̱gaṃ pra̱jāva̍tīranamī̱vā a̍ya̱kṣmāḥ| mā va̍ ste̱na ī̍śata̱ māghaśṛ̍ saḥ
+āpyā̍yadhvamaghnyā̱ indrā̍ya bhā̱gaṃ pra̱jāva̍tīranamī̱vā a̍ya̱kṣmāḥ| mā va̍ ste̱na ī̍śata̱ māghaśṛ̍ saḥ ||1.2||
 
 ---
 
-## Mantra 3 {#mantra-3}
+<a id="mantra-3"></a>
 
-**Adhyāya:** 1 | **Mantra:** 3
-
-dhru̱vā a̱smin gopa̍tau syāta ba̱hvīḥ| yaja̍mānasya pa̱śūn pā̍hi̱ vaso̍ḥ pa̱vitra̍masi
+dhru̱vā a̱smin gopa̍tau syāta ba̱hvīḥ| yaja̍mānasya pa̱śūn pā̍hi̱ vaso̍ḥ pa̱vitra̍masi ||1.3||
 
 ---
 
-## Mantra 4 {#mantra-4}
+<a id="mantra-4"></a>
 
-**Adhyāya:** 1 | **Mantra:** 4
-
-dyaura̍si pṛthi̱vya̍si māta̱riśva̍no gha̱rmo̍'si| vi̱śvadhā̍ḥ para̱meṇa̱ dhāmnā̍
+dyaura̍si pṛthi̱vya̍si māta̱riśva̍no gha̱rmo̍'si| vi̱śvadhā̍ḥ para̱meṇa̱ dhāmnā̍ ||1.4||
 
 ---
 
-## Mantra 5 {#mantra-5}
+<a id="mantra-5"></a>
 
-**Adhyāya:** 1 | **Mantra:** 5
-
-dṛha̍sva mā hvā̱rmā te̍ ya̱jñapa̍tirhvārṣīt |vaso̍ḥ pa̱vitra̍masi śa̱tadhā̍ra̱ṃ vaso̍ḥ pa̱vitra̍masi sa̱hasra̍dhāram
+dṛha̍sva mā hvā̱rmā te̍ ya̱jñapa̍tirhvārṣīt |vaso̍ḥ pa̱vitra̍masi śa̱tadhā̍ra̱ṃ vaso̍ḥ pa̱vitra̍masi sa̱hasra̍dhāram ||1.5||
 
 ---
 
-## Mantra 6 {#mantra-6}
-
-**Adhyāya:** 1 | **Mantra:** 6
+<a id="mantra-6"></a>
 
 de̱vastvā̍ savi̱tā pu̍nātu̱ vaso̍ḥ pa̱vitre̍ṇa śa̱tadhā̍reṇa| su̱pvā̱ kāma̍dhukṣaḥ || 3|| 6
-sā vi̱śvāyu̱ḥ sā vi̱śvaka̍rmā̱ sā vi̱śvadhā̍yāḥ|indra̍sya tvā bhā̱gṛ some̱nāta̍nakmi̱ viṣṇo̍ ha̱vyṛ ra̍kṣasva
+sā vi̱śvāyu̱ḥ sā vi̱śvaka̍rmā̱ sā vi̱śvadhā̍yāḥ|indra̍sya tvā bhā̱gṛ some̱nāta̍nakmi̱ viṣṇo̍ ha̱vyṛ ra̍kṣasva ||1.6||
 
 ---
 
-## Mantra 7 {#mantra-7}
+<a id="mantra-7"></a>
 
-**Adhyāya:** 1 | **Mantra:** 7
-
-agne̍ vratapate vra̱taṃ ca̍riṣyāmi̱ taccha̍keya̱ṃ tanme̍ rādhyatām | i̱dama̱hamanṛ̍tāt sa̱tyamupai̍mi
+agne̍ vratapate vra̱taṃ ca̍riṣyāmi̱ taccha̍keya̱ṃ tanme̍ rādhyatām | i̱dama̱hamanṛ̍tāt sa̱tyamupai̍mi ||1.7||
 
 ---
 
-## Mantra 8 {#mantra-8}
+<a id="mantra-8"></a>
 
-**Adhyāya:** 1 | **Mantra:** 8
-
-kastvā̍ yunakti̱ sa tvā̍ yunakti̱ kasmai̍ tvā yunakti̱ tasmai̍ tvā yunakti | karma̍ṇe vā̱ṃ veṣā̍ya vām
+kastvā̍ yunakti̱ sa tvā̍ yunakti̱ kasmai̍ tvā yunakti̱ tasmai̍ tvā yunakti | karma̍ṇe vā̱ṃ veṣā̍ya vām ||1.8||
 
 ---
 
-## Mantra 9 {#mantra-9}
+<a id="mantra-9"></a>
 
-**Adhyāya:** 1 | **Mantra:** 9
-
-pratyu̍ṣṭṛ̱ rakṣa̱ḥ pratyu̍ṣṭā̱ arā̍tayo̱ niṣṭa̍pta̱ rakṣo̱ niṣṭa̍ptā̱ arā̍tayaḥ | u̱rva̱ntari̍kṣa̱manve̍mi
+pratyu̍ṣṭṛ̱ rakṣa̱ḥ pratyu̍ṣṭā̱ arā̍tayo̱ niṣṭa̍pta̱ rakṣo̱ niṣṭa̍ptā̱ arā̍tayaḥ | u̱rva̱ntari̍kṣa̱manve̍mi ||1.9||
 
 ---
 
-## Mantra 10 {#mantra-10}
+<a id="mantra-10"></a>
 
-**Adhyāya:** 1 | **Mantra:** 10
-
-dhūra̍si̱ dhūrva̱ dhūrva̍nta̱ṃ dhūrva̱ taṃ yo̱smān dhūrva̍ti|dhūrva̱ taṃ yaṃ va̱yaṃ dhūrvā̍maḥ
+dhūra̍si̱ dhūrva̱ dhūrva̍nta̱ṃ dhūrva̱ taṃ yo̱smān dhūrva̍ti|dhūrva̱ taṃ yaṃ va̱yaṃ dhūrvā̍maḥ ||1.10||
 
 ---
 
-## Mantra 11 {#mantra-11}
+<a id="mantra-11"></a>
 
-**Adhyāya:** 1 | **Mantra:** 11
-
-de̱vānā̍masi̱ sasni̍tama̱ṃ vahni̍tama̱ṃ papri̍tama̱ṃ juṣṭa̍tamaṃ deva̱hūta̍mam|ahru̍tamasi havi̱rdhāna̱ṃ dṛha̍sva̱ mā hvā̱rmā te̍ ya̱jñapa̍tirhvārṣīt
+de̱vānā̍masi̱ sasni̍tama̱ṃ vahni̍tama̱ṃ papri̍tama̱ṃ juṣṭa̍tamaṃ deva̱hūta̍mam|ahru̍tamasi havi̱rdhāna̱ṃ dṛha̍sva̱ mā hvā̱rmā te̍ ya̱jñapa̍tirhvārṣīt ||1.11||
 
 ---
 
-## Mantra 12 {#mantra-12}
+<a id="mantra-12"></a>
 
-**Adhyāya:** 1 | **Mantra:** 12
-
-viṣṇu̍stvā kramatāmu̱ru vātā̱yāpa̍hata̱ rakṣo̱ yaccha̍ntā̱ṃ pañca̍|de̱vasya̍ tvā savi̱tuḥ pra̍sa̱ve̱śvino̍rbā̱hubhyā̍ṃ pū̱ṣṇo hastā̍bhyām
+viṣṇu̍stvā kramatāmu̱ru vātā̱yāpa̍hata̱ rakṣo̱ yaccha̍ntā̱ṃ pañca̍|de̱vasya̍ tvā savi̱tuḥ pra̍sa̱ve̱śvino̍rbā̱hubhyā̍ṃ pū̱ṣṇo hastā̍bhyām ||1.12||
 
 ---
 
-## Mantra 13 {#mantra-13}
+<a id="mantra-13"></a>
 
-**Adhyāya:** 1 | **Mantra:** 13
-
-a̱gnaye̱ juṣṭa̍ṃ gṛhṇāmya̱gnīṣomā̍bhyā̱ṃ juṣṭa̍ṃ gṛhṇāmi| bhū̱tāya̍ tvā̱ nārā̍taye̱ sva̍rabhi̱vikhye̍ṣam
+a̱gnaye̱ juṣṭa̍ṃ gṛhṇāmya̱gnīṣomā̍bhyā̱ṃ juṣṭa̍ṃ gṛhṇāmi| bhū̱tāya̍ tvā̱ nārā̍taye̱ sva̍rabhi̱vikhye̍ṣam ||1.13||
 
 ---
 
-## Mantra 14 {#mantra-14}
+<a id="mantra-14"></a>
 
-**Adhyāya:** 1 | **Mantra:** 14
-
-dṛha̍ntā̱ṃ duryā̍ḥ pṛthi̱vyāmu̱rva̱ntari̍kṣa̱manve̍mi|pṛ̱thi̱vyāstvā̱ nābhau̍ sādayā̱myadi̍tyā u̱pasthe̍|agne̍ ha̱vyara̍kṣasva
+dṛha̍ntā̱ṃ duryā̍ḥ pṛthi̱vyāmu̱rva̱ntari̍kṣa̱manve̍mi|pṛ̱thi̱vyāstvā̱ nābhau̍ sādayā̱myadi̍tyā u̱pasthe̍|agne̍ ha̱vyara̍kṣasva ||1.14||
 
 ---
 
-## Mantra 15 {#mantra-15}
+<a id="mantra-15"></a>
 
-**Adhyāya:** 1 | **Mantra:** 15
-
-pa̱vitre̍ stho vaiṣṇa̱vyau̍ sa̍vi̱turva̍ḥ prasa̱va utpu̍nā̱mi| achi̍dreṇa pa̱vitre̍ṇa̱ sūrya̍sya ra̱śmibhi̍ḥ
+pa̱vitre̍ stho vaiṣṇa̱vyau̍ sa̍vi̱turva̍ḥ prasa̱va utpu̍nā̱mi| achi̍dreṇa pa̱vitre̍ṇa̱ sūrya̍sya ra̱śmibhi̍ḥ ||1.15||
 
 ---
 
-## Mantra 16 {#mantra-16}
+<a id="mantra-16"></a>
 
-**Adhyāya:** 1 | **Mantra:** 16
-
-devī̍rāpo agreguvo agrepuvaḥ| agra̍ i̱mama̱dya ya̱jñaṃ na̍yata su̱dhātu̍ṃ ya̱jñapa̍tiṃ devā̱yuva̍m
+devī̍rāpo agreguvo agrepuvaḥ| agra̍ i̱mama̱dya ya̱jñaṃ na̍yata su̱dhātu̍ṃ ya̱jñapa̍tiṃ devā̱yuva̍m ||1.16||
 
 ---
 
-## Mantra 17 {#mantra-17}
+<a id="mantra-17"></a>
 
-**Adhyāya:** 1 | **Mantra:** 17
-
-yu̱ṣmā indro̍'vṛṇīta vṛtra̱tūrye̍ yū̱yamindra̍mavṛṇīdhvaṃ vṛtra̱tūrye̱ prokṣi̍tā stha |a̱gnaye̍ tvā̱ juṣṭa̱ṃ prokṣā̍mya̱gnīṣomā̍bhyāṃ tvā̱ juṣṭa̱ṃ prokṣā̍mi
+yu̱ṣmā indro̍'vṛṇīta vṛtra̱tūrye̍ yū̱yamindra̍mavṛṇīdhvaṃ vṛtra̱tūrye̱ prokṣi̍tā stha |a̱gnaye̍ tvā̱ juṣṭa̱ṃ prokṣā̍mya̱gnīṣomā̍bhyāṃ tvā̱ juṣṭa̱ṃ prokṣā̍mi ||1.17||
 
 ---
 
-## Mantra 18 {#mantra-18}
+<a id="mantra-18"></a>
 
-**Adhyāya:** 1 | **Mantra:** 18
-
-dai̍vyāya̱ karma̍ṇe śundhadhvaṃ devaya̱jyāyai̍| yadvo'śu̍ddhaḥ parāja̱ghānai̱tadva̱stacchu̍ndhāmi
+dai̍vyāya̱ karma̍ṇe śundhadhvaṃ devaya̱jyāyai̍| yadvo'śu̍ddhaḥ parāja̱ghānai̱tadva̱stacchu̍ndhāmi ||1.18||
 
 ---
 
-## Mantra 19 {#mantra-19}
+<a id="mantra-19"></a>
 
-**Adhyāya:** 1 | **Mantra:** 19
-
-śarmā̱syava̍dhūtṛ̱ rakṣo'va̍dhūtā̱ arā̍tayaḥ| adi̍tyā̱stvaga̍si̱ prati̱ tvādi̍tirvettu
+śarmā̱syava̍dhūtṛ̱ rakṣo'va̍dhūtā̱ arā̍tayaḥ| adi̍tyā̱stvaga̍si̱ prati̱ tvādi̍tirvettu ||1.19||
 
 ---
 
-## Mantra 20 {#mantra-20}
+<a id="mantra-20"></a>
 
-**Adhyāya:** 1 | **Mantra:** 20
-
-adri̍rasi vānaspa̱tyo grāvā̍si pṛ̱thubu̍dhnaḥ| prati̱ tvādi̍tyā̱stvagve̍ttu
+adri̍rasi vānaspa̱tyo grāvā̍si pṛ̱thubu̍dhnaḥ| prati̱ tvādi̍tyā̱stvagve̍ttu ||1.20||
 
 ---
 
-## Mantra 21 {#mantra-21}
+<a id="mantra-21"></a>
 
-**Adhyāya:** 1 | **Mantra:** 21
-
-a̱gnesta̱nūra̍si vā̱co vi̱sarja̍nam| de̱vavī̍taye tvā gṛhṇāmi
+a̱gnesta̱nūra̍si vā̱co vi̱sarja̍nam| de̱vavī̍taye tvā gṛhṇāmi ||1.21||
 
 ---
 
-## Mantra 22 {#mantra-22}
+<a id="mantra-22"></a>
 
-**Adhyāya:** 1 | **Mantra:** 22
-
-bṛ̱han grāvā̍si vānaspa̱tyaḥ sa i̱daṃ de̱vebhya̍ḥ| ha̱vya śa̍mīṣva su̱śami̍ śamīṣva̱ havi̍ṣkṛ̱dehi̍
+bṛ̱han grāvā̍si vānaspa̱tyaḥ sa i̱daṃ de̱vebhya̍ḥ| ha̱vya śa̍mīṣva su̱śami̍ śamīṣva̱ havi̍ṣkṛ̱dehi̍ ||1.22||
 
 ---
 
-## Mantra 23 {#mantra-23}
+<a id="mantra-23"></a>
 
-**Adhyāya:** 1 | **Mantra:** 23
-
-ku̱kku̱ṭo̍'si̱ madhu̍jihva̱ iṣa̱mūrja̱māva̍da| va̱yasa̍ṃghā̱te sa̍ṃghāte jeṣma
+ku̱kku̱ṭo̍'si̱ madhu̍jihva̱ iṣa̱mūrja̱māva̍da| va̱yasa̍ṃghā̱te sa̍ṃghāte jeṣma ||1.23||
 
 ---
 
-## Mantra 24 {#mantra-24}
+<a id="mantra-24"></a>
 
-**Adhyāya:** 1 | **Mantra:** 24
-
-va̱rṣavṛ̍ddhamasi̱ prati̍ tvā va̱rṣavṛ̍ddhaṃ vettu | parā̍pūta̱rakṣa̱ḥ prati̍pūtā̱ arā̍tayaḥ
+va̱rṣavṛ̍ddhamasi̱ prati̍ tvā va̱rṣavṛ̍ddhaṃ vettu | parā̍pūta̱rakṣa̱ḥ prati̍pūtā̱ arā̍tayaḥ ||1.24||
 
 ---
 
-## Mantra 25 {#mantra-25}
+<a id="mantra-25"></a>
 
-**Adhyāya:** 1 | **Mantra:** 25
-
-apa̍hatṛ̱ rakṣo̍ vā̱yurvo̱ vivi̍naktu|de̱vo va̍ḥ savi̱tā prati̍gṛhṇātu̱ hira̍ṇyapāṇi̱rachi̍dreṇa pā̱ṇinā̍
+apa̍hatṛ̱ rakṣo̍ vā̱yurvo̱ vivi̍naktu|de̱vo va̍ḥ savi̱tā prati̍gṛhṇātu̱ hira̍ṇyapāṇi̱rachi̍dreṇa pā̱ṇinā̍ ||1.25||
 
 ---
 
-## Mantra 26 {#mantra-26}
+<a id="mantra-26"></a>
 
-**Adhyāya:** 1 | **Mantra:** 26
-
-dhṛṣṭi̍ra̱syapā̍gne a̱gnimā̱māda̍ṃ jahi̱| niṣkra̱vyāda̍ se̱dhā de̍va̱yaja̍ṃ vaha
+dhṛṣṭi̍ra̱syapā̍gne a̱gnimā̱māda̍ṃ jahi̱| niṣkra̱vyāda̍ se̱dhā de̍va̱yaja̍ṃ vaha ||1.26||
 
 ---
 
-## Mantra 27 {#mantra-27}
+<a id="mantra-27"></a>
 
-**Adhyāya:** 1 | **Mantra:** 27
-
-dhru̱vama̍si pṛthi̱vīṃ dṛ̍ha ||bra̱hma̱vani̍ tvā kṣatra̱vani̍ sajāta̱vanyupa̍dadhāmi dviṣa̱to va̱dhāya̍
+dhru̱vama̍si pṛthi̱vīṃ dṛ̍ha ||bra̱hma̱vani̍ tvā kṣatra̱vani̍ sajāta̱vanyupa̍dadhāmi dviṣa̱to va̱dhāya̍ ||1.27||
 
 ---
 
-## Mantra 28 {#mantra-28}
+<a id="mantra-28"></a>
 
-**Adhyāya:** 1 | **Mantra:** 28
-
-agne̱ brahma̍ gṛbhṇīṣva dha̱ruṇa̍masya̱ntari̍kṣaṃ dṛha|bra̱hma̱vani̍ tvā kṣatra̱vani̍ sajāta̱vanyupa̍dadhāmi dviṣa̱to va̱dhāya̍|dha̱rtrama̍si̱ diva̍ṃ dṛha| bra̱hma̱vani̍ tvā kṣatra̱vani̍ sajāta̱vanyupa̍dadhāmi dviṣa̱to va̱dhāya̍
+agne̱ brahma̍ gṛbhṇīṣva dha̱ruṇa̍masya̱ntari̍kṣaṃ dṛha|bra̱hma̱vani̍ tvā kṣatra̱vani̍ sajāta̱vanyupa̍dadhāmi dviṣa̱to va̱dhāya̍|dha̱rtrama̍si̱ diva̍ṃ dṛha| bra̱hma̱vani̍ tvā kṣatra̱vani̍ sajāta̱vanyupa̍dadhāmi dviṣa̱to va̱dhāya̍ ||1.28||
 
 ---
 
-## Mantra 29 {#mantra-29}
+<a id="mantra-29"></a>
 
-**Adhyāya:** 1 | **Mantra:** 29
-
-viśvā̍bhya̱stvāśā̍bhya̱ upa̍dadhāmi dviṣa̱to va̱dhāya̍|cita̍ sthordhva̱cito̱ bhṛgū̍ṇā̱maṅgi̍rasā̱ṃ tapa̍sā tapyadhvam
+viśvā̍bhya̱stvāśā̍bhya̱ upa̍dadhāmi dviṣa̱to va̱dhāya̍|cita̍ sthordhva̱cito̱ bhṛgū̍ṇā̱maṅgi̍rasā̱ṃ tapa̍sā tapyadhvam ||1.29||
 
 ---
 
-## Mantra 30 {#mantra-30}
+<a id="mantra-30"></a>
 
-**Adhyāya:** 1 | **Mantra:** 30
-
-śarmā̱syava̍dhūta̱ rakṣo'va̍dhūtā̱ arā̍tayaḥ | adi̍tyā̱stvaga̍si̱ prati̱ tvādi̍tirvettu
+śarmā̱syava̍dhūta̱ rakṣo'va̍dhūtā̱ arā̍tayaḥ | adi̍tyā̱stvaga̍si̱ prati̱ tvādi̍tirvettu ||1.30||
 
 ---
 
-## Mantra 31 {#mantra-31}
+<a id="mantra-31"></a>
 
-**Adhyāya:** 1 | **Mantra:** 31
-
-dhi̱ṣaṇā̍si parva̱tī prati̱ tvādi̍tyā̱stvagve̍ttu |di̱vaska̍mbha̱nya̍si dhi̱ṣaṇā̍si pārvate̱yī prati̍ tvā parva̱tī ve̍ttu
+dhi̱ṣaṇā̍si parva̱tī prati̱ tvādi̍tyā̱stvagve̍ttu |di̱vaska̍mbha̱nya̍si dhi̱ṣaṇā̍si pārvate̱yī prati̍ tvā parva̱tī ve̍ttu ||1.31||
 
 ---
 
-## Mantra 32 {#mantra-32}
+<a id="mantra-32"></a>
 
-**Adhyāya:** 1 | **Mantra:** 32
-
-dhā̱nya̍masi dhinu̱hi de̱vāṃ dhi̍nu̱hi ya̱jñaṃ dhi̍nu̱hi ya̱jñapa̍tim| dhi̱nu̱hi mām̐ ya̍jña̱nya̍m
+dhā̱nya̍masi dhinu̱hi de̱vāṃ dhi̍nu̱hi ya̱jñaṃ dhi̍nu̱hi ya̱jñapa̍tim| dhi̱nu̱hi mām̐ ya̍jña̱nya̍m ||1.32||
 
 ---
 
-## Mantra 33 {#mantra-33}
+<a id="mantra-33"></a>
 
-**Adhyāya:** 1 | **Mantra:** 33
-
-prā̱ṇāya̍ tvodā̱nāya̍ tvā vyā̱nāya̍ tvā | dī̱rghāmanu̱ prasi̍ti̱māyu̍ṣe dhāṃ|de̱vo va̍ḥ savi̱tā prati̍gṛhṇātu̱ hira̍ṇyapāṇi̱rachi̍dreṇa pā̱ṇinā̍ | cakṣu̍ṣe tvā ma̱hīnā̱ṃ payo̍si
+prā̱ṇāya̍ tvodā̱nāya̍ tvā vyā̱nāya̍ tvā | dī̱rghāmanu̱ prasi̍ti̱māyu̍ṣe dhāṃ|de̱vo va̍ḥ savi̱tā prati̍gṛhṇātu̱ hira̍ṇyapāṇi̱rachi̍dreṇa pā̱ṇinā̍ | cakṣu̍ṣe tvā ma̱hīnā̱ṃ payo̍si ||1.33||
 
 ---
 
-## Mantra 34 {#mantra-34}
+<a id="mantra-34"></a>
 
-**Adhyāya:** 1 | **Mantra:** 34
-
-ve̱do̍si veda̱ yena̱ tvaṃ de̍va veda de̱vebhyo̍ ve̱do'bha̍vaḥ| tena̱ mahya̍ṃ ve̱do bha̍va
+ve̱do̍si veda̱ yena̱ tvaṃ de̍va veda de̱vebhyo̍ ve̱do'bha̍vaḥ| tena̱ mahya̍ṃ ve̱do bha̍va ||1.34||
 
 ---
 
-## Mantra 35 {#mantra-35}
+<a id="mantra-35"></a>
 
-**Adhyāya:** 1 | **Mantra:** 35
-
-de̱vasya̍ tvā savi̱tuḥ pra̍sa̱ve̱śvino̍rbā̱hubhyā̍ṃ pū̱ṣṇo hastā̍bhyām |saṃ va̍pāmi̱ samāpa̱ oṣa̍dhībhi̱ḥ samoṣa̍dhayo̱ rase̍na |sṛ re̱vatī̱rjaga̍tībhi̱ḥ saṃ madhu̍matī̱rmadhu̍matībhiḥ pṛcyantām |jana̍yatyai tvā̱ saṃ yau̍mi
+de̱vasya̍ tvā savi̱tuḥ pra̍sa̱ve̱śvino̍rbā̱hubhyā̍ṃ pū̱ṣṇo hastā̍bhyām |saṃ va̍pāmi̱ samāpa̱ oṣa̍dhībhi̱ḥ samoṣa̍dhayo̱ rase̍na |sṛ re̱vatī̱rjaga̍tībhi̱ḥ saṃ madhu̍matī̱rmadhu̍matībhiḥ pṛcyantām |jana̍yatyai tvā̱ saṃ yau̍mi ||1.35||
 
 ---
 
-## Mantra 36 {#mantra-36}
+<a id="mantra-36"></a>
 
-**Adhyāya:** 1 | **Mantra:** 36
-
-i̱dama̱gneri̱dama̱gnīṣoma̍yori̱ṣe tvā̍ | gha̱rmo̍si vi̱śvāyu̍ru̱rupra̍thā u̱ru pra̍thasvo̱ru te̍ ya̱jñapa̍tiḥ prathatām
+i̱dama̱gneri̱dama̱gnīṣoma̍yori̱ṣe tvā̍ | gha̱rmo̍si vi̱śvāyu̍ru̱rupra̍thā u̱ru pra̍thasvo̱ru te̍ ya̱jñapa̍tiḥ prathatām ||1.36||
 
 ---
 
-## Mantra 37 {#mantra-37}
+<a id="mantra-37"></a>
 
-**Adhyāya:** 1 | **Mantra:** 37
-
-a̱gniṣṭe̱ tvaca̱ṃ mā hi̍ sīda̱ntari̍ta̱ rakṣo̱ntari̍tā̱ arā̍tayaḥ|de̱vastvā̍ savi̱tā śra̍payatu̱ varṣi̱ṣṭhe'dhi̱ nāke̍
+a̱gniṣṭe̱ tvaca̱ṃ mā hi̍ sīda̱ntari̍ta̱ rakṣo̱ntari̍tā̱ arā̍tayaḥ|de̱vastvā̍ savi̱tā śra̍payatu̱ varṣi̱ṣṭhe'dhi̱ nāke̍ ||1.37||
 
 ---
 
-## Mantra 38 {#mantra-38}
+<a id="mantra-38"></a>
 
-**Adhyāya:** 1 | **Mantra:** 38
-
-mā bhe̱rmā saṃ vi̍kthā̱ ata̍merurya̱jño'ta̍meru̱ryaja̍mānasya pra̱jā bhū̍yāt |tri̱tāya̍ tvā dvi̱tāya̍ tvaika̱tāya̍ tvā
+mā bhe̱rmā saṃ vi̍kthā̱ ata̍merurya̱jño'ta̍meru̱ryaja̍mānasya pra̱jā bhū̍yāt |tri̱tāya̍ tvā dvi̱tāya̍ tvaika̱tāya̍ tvā ||1.38||
 
 ---
 
-## Mantra 39 {#mantra-39}
+<a id="mantra-39"></a>
 
-**Adhyāya:** 1 | **Mantra:** 39
-
-de̱vasya̍ tvā savi̱tuḥ pra̍sa̱ve̱śvino̍rbā̱hubhyā̍ṃ pū̱ṣṇo hastā̍bhyām | āda̍de'dhvara̱kṛta̍ṃ de̱vebhya̍ḥ |indra̍sya bā̱hura̍si̱ dakṣi̍ṇaḥ sa̱hasra̍bhṛṣṭiḥ śa̱tate̍jāḥ| vā̱yura̍si ti̱gmate̍jā dviṣa̱to va̱dhaḥ
+de̱vasya̍ tvā savi̱tuḥ pra̍sa̱ve̱śvino̍rbā̱hubhyā̍ṃ pū̱ṣṇo hastā̍bhyām | āda̍de'dhvara̱kṛta̍ṃ de̱vebhya̍ḥ |indra̍sya bā̱hura̍si̱ dakṣi̍ṇaḥ sa̱hasra̍bhṛṣṭiḥ śa̱tate̍jāḥ| vā̱yura̍si ti̱gmate̍jā dviṣa̱to va̱dhaḥ ||1.39||
 
 ---
 
-## Mantra 40 {#mantra-40}
+<a id="mantra-40"></a>
 
-**Adhyāya:** 1 | **Mantra:** 40
-
-pṛ̱thi̱vyai varmā̍si̱ pṛthi̍vi devayajani| oṣa̍dhyāste̱ mūla̱ṃ mā hṛ siṣam
+pṛ̱thi̱vyai varmā̍si̱ pṛthi̍vi devayajani| oṣa̍dhyāste̱ mūla̱ṃ mā hṛ siṣam ||1.40||
 
 ---
 
-## Mantra 41 {#mantra-41}
+<a id="mantra-41"></a>
 
-**Adhyāya:** 1 | **Mantra:** 41
-
-vra̱jaṃ ga̍ccha go̱ṣṭhāna̱ṃ varṣa̍tu te̱ dyaurba̍dhā̱na de̍va savitaḥ para̱masyā̍ṃ pṛthi̱vyṛ śa̱tena̱ pāśai̍ḥ|yo̱'smān dveṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmastamato̱ mā mau̍k
+vra̱jaṃ ga̍ccha go̱ṣṭhāna̱ṃ varṣa̍tu te̱ dyaurba̍dhā̱na de̍va savitaḥ para̱masyā̍ṃ pṛthi̱vyṛ śa̱tena̱ pāśai̍ḥ|yo̱'smān dveṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmastamato̱ mā mau̍k ||1.41||
 
 ---
 
-## Mantra 42 {#mantra-42}
+<a id="mantra-42"></a>
 
-**Adhyāya:** 1 | **Mantra:** 42
-
-apā̱raru̍ṃ vadhyāsaṃ pṛthi̱vyai de̍va̱yaja̍nāt|vra̱jaṃ ga̍cha go̱ṣṭhāna̱ṃ varṣa̍tu te̱ dyaurba̍dhā̱na de̍va savitaḥ para̱masyā̍ṃ pṛthi̱vyā śa̱tena̱ pāśai̍ḥ|yo̱'smān dveṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmastamato̱ mā mau̍k | ara̍ro̱ diva̱ṃ mā pa̍pto dra̱psaste̱ dyāṃ mā ska̍n |vra̱jaṃ ga̍cha go̱ṣṭhāna̍ṃ varṣa̍tu te̱ dyaurba̍dhā̱na de̍va savitaḥ para̱masyā̍ṃ pṛthi̱vyā śa̱tena̱ pāśai̍ḥ|yo̱'smān dveṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmastamato̱ mā mau̍k
+apā̱raru̍ṃ vadhyāsaṃ pṛthi̱vyai de̍va̱yaja̍nāt|vra̱jaṃ ga̍cha go̱ṣṭhāna̱ṃ varṣa̍tu te̱ dyaurba̍dhā̱na de̍va savitaḥ para̱masyā̍ṃ pṛthi̱vyā śa̱tena̱ pāśai̍ḥ|yo̱'smān dveṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmastamato̱ mā mau̍k | ara̍ro̱ diva̱ṃ mā pa̍pto dra̱psaste̱ dyāṃ mā ska̍n |vra̱jaṃ ga̍cha go̱ṣṭhāna̍ṃ varṣa̍tu te̱ dyaurba̍dhā̱na de̍va savitaḥ para̱masyā̍ṃ pṛthi̱vyā śa̱tena̱ pāśai̍ḥ|yo̱'smān dveṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmastamato̱ mā mau̍k ||1.42||
 
 ---
 
-## Mantra 43 {#mantra-43}
+<a id="mantra-43"></a>
 
-**Adhyāya:** 1 | **Mantra:** 43
-
-gā̱ya̱treṇa̍ tvā̱ chanda̍sā̱ pari̍gṛhṇāmi̱ traiṣṭu̍bhena tvā̱ chanda̍sā̱ pari̍gṛhṇāmi̱ jāga̍tena tvā̱ chanda̍sā̱ pari̍gṛhṇāmi |su̱kṣmā cāsi̍ śi̱vā cā̍si syo̱nā cāsi̍ su̱ṣadā̍ cāsi | ūrja̍svatī̱ cāsi̱ paya̍svatī ca
+gā̱ya̱treṇa̍ tvā̱ chanda̍sā̱ pari̍gṛhṇāmi̱ traiṣṭu̍bhena tvā̱ chanda̍sā̱ pari̍gṛhṇāmi̱ jāga̍tena tvā̱ chanda̍sā̱ pari̍gṛhṇāmi |su̱kṣmā cāsi̍ śi̱vā cā̍si syo̱nā cāsi̍ su̱ṣadā̍ cāsi | ūrja̍svatī̱ cāsi̱ paya̍svatī ca ||1.43||
 
 ---
 
-## Mantra 44 {#mantra-44}
+<a id="mantra-44"></a>
 
-**Adhyāya:** 1 | **Mantra:** 44
-
-pu̱rā krū̱rasya̍ vi̱sṛpo̍ virapśinnudā̱dāya̍ pṛthi̱vīṃ jī̱vadā̍num |yāmaira̍ya śca̱ndrama̍si sva̱dhābhi̱stāṃ dhīrā̍so anu̱diśya̍ yajante | dvi̱ṣa̱to va̱dho̍'si
+pu̱rā krū̱rasya̍ vi̱sṛpo̍ virapśinnudā̱dāya̍ pṛthi̱vīṃ jī̱vadā̍num |yāmaira̍ya śca̱ndrama̍si sva̱dhābhi̱stāṃ dhīrā̍so anu̱diśya̍ yajante | dvi̱ṣa̱to va̱dho̍'si ||1.44||
 
 ---
 
-## Mantra 45 {#mantra-45}
+<a id="mantra-45"></a>
 
-**Adhyāya:** 1 | **Mantra:** 45
-
-pratyu̍ṣṭṛ̱ rakṣa̱ḥ pratyu̍ṣṭā̱ arā̍tayo̱ niṣṭa̍pta̱ rakṣo̱ niṣṭa̍ptā̱ arā̍tayaḥ |ani̍śito'si sapatna̱kṣidvā̱jina̍ṃ tvā vāje̱dhyāyai̱ sammā̍rjmi |pratyu̍ṣṭṛ̱ rakṣa̱ḥ pratyu̍ṣṭā̱ arā̍tayo̱ niṣṭa̍pta̱rakṣo̱ niṣṭa̍ptā̱ arā̍tayaḥ |ani̍śitāsi sapatna̱kṣidvā̱jinī̍ṃ tvā vāje̱dhyāyai̱ sammā̍rjmi
+pratyu̍ṣṭṛ̱ rakṣa̱ḥ pratyu̍ṣṭā̱ arā̍tayo̱ niṣṭa̍pta̱ rakṣo̱ niṣṭa̍ptā̱ arā̍tayaḥ |ani̍śito'si sapatna̱kṣidvā̱jina̍ṃ tvā vāje̱dhyāyai̱ sammā̍rjmi |pratyu̍ṣṭṛ̱ rakṣa̱ḥ pratyu̍ṣṭā̱ arā̍tayo̱ niṣṭa̍pta̱rakṣo̱ niṣṭa̍ptā̱ arā̍tayaḥ |ani̍śitāsi sapatna̱kṣidvā̱jinī̍ṃ tvā vāje̱dhyāyai̱ sammā̍rjmi ||1.45||
 
 ---
 
-## Mantra 46 {#mantra-46}
+<a id="mantra-46"></a>
 
-**Adhyāya:** 1 | **Mantra:** 46
-
-adi̍tyai̱ rāsnā̍sīndrā̱ṇyai sa̱ṃnaha̍nam | viṣṇo̍rve̱ṣpo̍'syū̱rje tvāda̍bdhena tvā̱ cakṣu̱ṣāva̍paśyāmi
+adi̍tyai̱ rāsnā̍sīndrā̱ṇyai sa̱ṃnaha̍nam | viṣṇo̍rve̱ṣpo̍'syū̱rje tvāda̍bdhena tvā̱ cakṣu̱ṣāva̍paśyāmi ||1.46||
 
 ---
 
-## Mantra 47 {#mantra-47}
+<a id="mantra-47"></a>
 
-**Adhyāya:** 1 | **Mantra:** 47
-
-a̱gnerji̱hvāsi̍ su̱bhūrde̱vebhya̍ḥ | dhāmne̍ dhāmne bhava̱ yaju̍ṣe yajuṣe | sa̱vi̱tustvā̍ prasa̱va utpu̍nā̱myacchi̍dreṇa pa̱vitre̍ṇa̱ sūrya̍sya ra̱śmibhi̍ḥ |sa̱vi̱turva̍ḥ prasa̱va utpu̍nā̱myacchi̍dreṇa pa̱vitre̍ṇa̱ sūrya̍sya ra̱śmibhi̍ḥ
+a̱gnerji̱hvāsi̍ su̱bhūrde̱vebhya̍ḥ | dhāmne̍ dhāmne bhava̱ yaju̍ṣe yajuṣe | sa̱vi̱tustvā̍ prasa̱va utpu̍nā̱myacchi̍dreṇa pa̱vitre̍ṇa̱ sūrya̍sya ra̱śmibhi̍ḥ |sa̱vi̱turva̍ḥ prasa̱va utpu̍nā̱myacchi̍dreṇa pa̱vitre̍ṇa̱ sūrya̍sya ra̱śmibhi̍ḥ ||1.47||
 
 ---
 
-## Mantra 48 {#mantra-48}
+<a id="mantra-48"></a>
 
-**Adhyāya:** 1 | **Mantra:** 48
-
-tejo̍'si śu̱krama̍sya̱mṛta̍masi̱ dhāma̱ nāmā̍si| pri̱yaṃ de̱vānā̱manā̱dhṛṣṭaṃ deva̱yaja̍nam
+tejo̍'si śu̱krama̍sya̱mṛta̍masi̱ dhāma̱ nāmā̍si| pri̱yaṃ de̱vānā̱manā̱dhṛṣṭaṃ deva̱yaja̍nam ||1.48||
 
 ---
 
-## Mantra 49 {#mantra-49}
+<a id="mantra-49"></a>
 
-**Adhyāya:** 1 | **Mantra:** 49
-
-yaste̍ prā̱ṇaḥ pa̱śuṣu̱ pravi̍ṣṭo de̱vānā̍ṃ vi̱ṣṭhāmanu̱ yo vi̍tasthe|ā̱tma̱nvā̍ntso̍maghṛ̱tavā̱nhi bhū̱tvāgniṃ ga̍ccha̱ sva̱ryaja̍mānāya vinda
+yaste̍ prā̱ṇaḥ pa̱śuṣu̱ pravi̍ṣṭo de̱vānā̍ṃ vi̱ṣṭhāmanu̱ yo vi̍tasthe|ā̱tma̱nvā̍ntso̍maghṛ̱tavā̱nhi bhū̱tvāgniṃ ga̍ccha̱ sva̱ryaja̍mānāya vinda ||1.49||
 
 ---

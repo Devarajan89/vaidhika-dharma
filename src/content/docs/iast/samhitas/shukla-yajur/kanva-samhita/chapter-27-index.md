@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 27 — Mantra Index'
+title: 'Adhyāya 27 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-27-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 27 mantra index (45 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 27 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 27 {#chapter-27}

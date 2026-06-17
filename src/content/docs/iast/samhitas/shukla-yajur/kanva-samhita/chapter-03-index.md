@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 3 — Mantra Index'
+title: 'Adhyāya 3 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-3-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 3 mantra index (76 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 3 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 3 {#chapter-3}

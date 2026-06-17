@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 28 — Mantra Index'
+title: 'Adhyāya 28 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-28-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 28 mantra index (14 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 28 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 28 {#chapter-28}

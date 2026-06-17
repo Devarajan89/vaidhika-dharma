@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 13 — Mantra Index'
+title: 'Adhyāya 13 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-13-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 13 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 13 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 13 {#chapter-13}

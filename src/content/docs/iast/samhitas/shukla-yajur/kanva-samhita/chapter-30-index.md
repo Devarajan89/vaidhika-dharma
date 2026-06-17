@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 30 — Mantra Index'
+title: 'Adhyāya 30 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-30-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 30 mantra index (46 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 30 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 30 {#chapter-30}

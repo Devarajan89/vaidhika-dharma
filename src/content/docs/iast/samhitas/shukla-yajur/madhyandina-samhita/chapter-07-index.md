@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 7 — Mantra Index'
+title: 'Adhyāya 7 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-7-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 7 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 7 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 7 {#chapter-7}

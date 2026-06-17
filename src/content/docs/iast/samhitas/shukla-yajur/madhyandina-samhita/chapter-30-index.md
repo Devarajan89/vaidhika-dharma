@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 30 — Mantra Index'
+title: 'Adhyāya 30 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-30-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 30 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 30 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 30 {#chapter-30}

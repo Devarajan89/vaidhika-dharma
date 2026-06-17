@@ -41,29 +41,29 @@ function rigvedaMandalaItems() {
 /** Lightweight samhitas sidebar — mandala/chapter links only, no per-sukta autogenerate. */
 export const samhitasSidebarGroup = {
 	label: 'संहिताः',
-	translations: { en: 'saṃhitāḥ' },
+	translations: { en: 'Saṃhitāḥ' },
 	items: [
 		{
 			label: 'शाकल संहिता (ऋग्वेद)',
-			translations: { en: 'Śākala Saṃhitā (Ṛgveda)' },
+			translations: { en: 'Śākala saṃhitā (Ṛgveda)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Index' },
+					translations: { en: 'Sūcī' },
 					link: '/rigveda-samhita/',
 				},
 				...rigvedaMandalaItems(),
 			],
 		},
 		{
-			label: 'काण्व संहिता (शुक्लयजुः)',
-			translations: { en: 'Kanva Saṃhitā (Śukla Yajur)' },
+			label: 'वाजसनेयी संहिता (शुक्ल यजुः — काण्व)',
+			translations: { en: 'Vājasaneyi saṃhitā (Śukla yajur — Kāṇva)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Index' },
+					translations: { en: 'Sūcī' },
 					link: '/kanva-samhita/',
 				},
 				{
@@ -75,13 +75,13 @@ export const samhitasSidebarGroup = {
 			],
 		},
 		{
-			label: 'माध्यन्दिन संहिता (शुक्लयजुः)',
-			translations: { en: 'Madhyandina Saṃhitā (Śukla Yajur)' },
+			label: 'वाजसनेयी संहिता (शुक्ल यजुः — माध्यन्दिन)',
+			translations: { en: 'Vājasaneyi saṃhitā (Śukla yajur — Mādhyandina)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Index' },
+					translations: { en: 'Sūcī' },
 					link: '/madhyandina-samhita/',
 				},
 				{
@@ -91,6 +91,53 @@ export const samhitasSidebarGroup = {
 					},
 				},
 			],
+		},
+		{
+			label: 'तैत्तिरीय संहिता (कृष्णयजुः)',
+			translations: { en: 'Taittirīya saṃhitā (Kṛṣṇayajuḥ)' },
+			collapsed: true,
+			items: [
+				{
+					label: 'सूची',
+					translations: { en: 'Sūcī' },
+					link: '/taittiriya-samhita/',
+				},
+				{
+					autogenerate: {
+						directory: 'samhitas/krishna-yajur/taittiriya-samhita',
+						collapsed: true,
+					},
+				},
+			],
+		},
+	],
+};
+
+export const brahmanamSidebarGroup = {
+	label: 'ब्राह्मणाः',
+	translations: { en: 'Brāhmaṇāḥ' },
+	items: [
+		{
+			label: 'ऐतरेय ब्राह्मनम् (ऋग्वेद)',
+			translations: { en: 'Aitareya brāhmaṇam (Ṛgveda) — in progress' },
+			link: '/iast/',
+		},
+	],
+};
+
+export const upanishadsSidebarGroup = {
+	label: 'उपनिषदः',
+	translations: { en: 'Upaniṣadaḥ' },
+	items: [
+		{
+			label: 'ईशावास्योपनिषद् (शुक्लयजुर्वेद)',
+			translations: { en: 'Īśāvāsya upaniṣad (Śuklayajurveda)' },
+			link: '/kanva-samhita/chapter-40/',
+		},
+		{
+			label: 'ऐतरेयोपनिषद् (ऋग्वेद)',
+			translations: { en: 'Aitareya upaniṣad (Ṛgveda) — in progress' },
+			link: '/iast/',
 		},
 	],
 };

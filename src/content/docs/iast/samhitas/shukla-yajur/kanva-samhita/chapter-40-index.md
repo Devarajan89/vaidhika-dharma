@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 40 — Mantra Index'
+title: 'Adhyāya 40 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-40-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 40 mantra index (18 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 40 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 40 {#chapter-40}

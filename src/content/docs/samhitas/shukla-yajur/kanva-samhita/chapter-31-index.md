@@ -4,8 +4,8 @@ slug: kanva-samhita/chapter-31-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'काण्व संहिता — अध्याय 31 मन्त्र सूची (51 मन्त्राः).'
-lastUpdated: 2026-06-14
+description: 'काण्व संहिता — अध्याय 31 मन्त्र सूची।'
+lastUpdated: 2026-06-17
 ---
 
 ## अध्याय 31 {#chapter-31}

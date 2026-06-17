@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 18 — Mantra Index'
+title: 'Adhyāya 18 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-18-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 18 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 18 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 18 {#chapter-18}

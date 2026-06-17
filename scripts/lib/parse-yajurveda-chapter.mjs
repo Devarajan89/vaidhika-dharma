@@ -30,6 +30,46 @@ const DEVANAGARI_DIGIT_MAP = {
 	'९': '9',
 };
 
+const DEVANAGARI_DIGITS = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+
+/**
+ * @param {number} value
+ */
+export function toDevanagariNumber(value) {
+	return String(value)
+		.split('')
+		.map((digit) => DEVANAGARI_DIGITS[Number(digit)] ?? digit)
+		.join('');
+}
+
+/**
+ * @param {number} chapterNumber
+ * @param {number} verseNumber
+ * @param {'root' | 'iast'} locale
+ */
+export function formatChapterMantraMarker(chapterNumber, verseNumber, locale) {
+	if (locale === 'iast') {
+		return `||${chapterNumber}.${verseNumber}||`;
+	}
+	return `॥${toDevanagariNumber(chapterNumber)}.${toDevanagariNumber(verseNumber)}॥`;
+}
+
+/**
+ * @param {string} text
+ * @param {number} chapterNumber
+ * @param {number} verseNumber
+ * @param {'root' | 'iast'} locale
+ */
+export function appendChapterMantraMarker(text, chapterNumber, verseNumber, locale) {
+	const marker = formatChapterMantraMarker(chapterNumber, verseNumber, locale);
+	const lines = text.split('\n');
+	if (!lines.length) return marker;
+
+	const lastIndex = lines.length - 1;
+	lines[lastIndex] = `${lines[lastIndex].trimEnd()} ${marker}`;
+	return lines.join('\n');
+}
+
 /**
  * @param {string} value
  */

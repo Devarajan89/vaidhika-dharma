@@ -18,6 +18,7 @@ const COMPILATIONS = [
 	'ganapathy-suktam',
 	'pancha-rudra',
 	'swasti-suktam',
+	'a-no-bhadrauh-suktam',
 ];
 
 const HEADER_RE = /^\*\*(.+)\*\*$/;

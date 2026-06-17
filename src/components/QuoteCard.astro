@@ -1,14 +1,14 @@
 ---
 import { Card } from '@astrojs/starlight/components';
 import type { HomeLocale } from '../data/home';
-import { getQuoteOfDay, homeContent } from '../data/home';
+import { getHomeContent, getQuoteOfDay } from '../data/home';
 
 interface Props {
 	locale: HomeLocale;
 }
 
 const { locale } = Astro.props;
-const { quoteTitle } = homeContent;
+const { quoteTitle } = getHomeContent(locale);
 const quote = getQuoteOfDay(locale);
 ---
 

@@ -43,7 +43,7 @@ const RIGVEDA_MANDALA_LABELS = {
 function rigvedaSamhitaMandalas(locale: keyof typeof RIGVEDA_MANDALA_LABELS): CategoryNode[] {
 	const prefix = locale === 'iast' ? '/iast/rigveda-samhita' : '/rigveda-samhita';
 	return [
-		{ label: locale === 'iast' ? 'Full Index' : 'संपूर्ण सूची', href: `${prefix}/` },
+		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
 		...RIGVEDA_MANDALA_LABELS[locale].map((label, index) => ({
 			label,
 			href: `${prefix}/mandala-${index + 1}/`,
@@ -62,7 +62,7 @@ function formatAdhyayaSlug(chapter: number): string {
 function samhitaAdhyayas(samhita: 'kanva' | 'madhyandina', locale: 'root' | 'iast'): CategoryNode[] {
 	const prefix = locale === 'iast' ? `/iast/${samhita}-samhita` : `/${samhita}-samhita`;
 	return [
-		{ label: locale === 'iast' ? 'Full Index' : 'संपूर्ण सूची', href: `${prefix}/` },
+		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
 		...Array.from({ length: SAMHITA_ADHYAYA_COUNT }, (_, index) => {
 			const adhyaya = index + 1;
 			return {
@@ -78,6 +78,62 @@ const iastMadhyandinaSamhitaChapters = samhitaAdhyayas('madhyandina', 'iast');
 const kanvaSamhitaChapters = samhitaAdhyayas('kanva', 'root');
 const iastKanvaSamhitaChapters = samhitaAdhyayas('kanva', 'iast');
 
+const TAITTIRIYA_KANDA_COUNTS = [8, 6, 5, 7, 7, 6, 5];
+const TAITTIRIYA_KANDA_LABELS = {
+	root: [
+		'प्रथम काण्ड',
+		'द्वितीय काण्ड',
+		'तृतीय काण्ड',
+		'चतुर्थ काण्ड',
+		'पञ्चम काण्ड',
+		'षष्ठ काण्ड',
+		'सप्तम काण्ड',
+	],
+	iast: [
+		'Prathama kāṇḍa',
+		'Dvitīya kāṇḍa',
+		'Tṛtīya kāṇḍa',
+		'Caturtha kāṇḍa',
+		'Pañcama kāṇḍa',
+		'Ṣaṣṭha kāṇḍa',
+		'Saptama kāṇḍa',
+	],
+} as const;
+
+function taittiriyaSamhitaChapters(locale: keyof typeof TAITTIRIYA_KANDA_LABELS): CategoryNode[] {
+	const prefix = locale === 'iast' ? '/iast/taittiriya-samhita' : '/taittiriya-samhita';
+	let chapter = 1;
+
+	return [
+		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
+		...TAITTIRIYA_KANDA_LABELS[locale].map((kandaLabel, kandaIndex) => {
+			const prapathakaCount = TAITTIRIYA_KANDA_COUNTS[kandaIndex];
+			const kandaNumber = kandaIndex + 1;
+			const children = Array.from({ length: prapathakaCount }, (_, prapathakaIndex) => {
+				const prapathaka = prapathakaIndex + 1;
+				const currentChapter = chapter++;
+				return {
+					label:
+						locale === 'iast'
+							? `${kandaLabel} — prapāṭhaka ${prapathaka}`
+							: `${kandaLabel} — प्रपाठक ${prapathaka}`,
+					href: `${prefix}/${formatAdhyayaSlug(currentChapter)}/`,
+				};
+			});
+
+			return {
+				label: kandaLabel,
+				href: `${prefix}/kanda-${String(kandaNumber).padStart(2, '0')}/`,
+				defaultOpen: kandaNumber === 1,
+				children,
+			};
+		}),
+	];
+}
+
+const taittiriyaSamhitaPrapathakas = taittiriyaSamhitaChapters('root');
+const iastTaittiriyaSamhitaPrapathakas = taittiriyaSamhitaChapters('iast');
+
 const iastRigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('iast');
 
 const rigvedaSuktaSangraha: CategoryNode[] = [
@@ -85,6 +141,21 @@ const rigvedaSuktaSangraha: CategoryNode[] = [
 	{ label: 'गणपति सूक्तम्', href: '/ganapathy-suktam/' },
 	{ label: 'पञ्च रुद्रम्', href: '/pancha-rudram/' },
 	{ label: 'स्वस्ति सूक्तम्', href: '/swasti-suktam/' },
+	{ label: 'आ नो भद्राः सूक्तम्', href: '/a-no-bhadrauh-suktam/' },
+	{ label: 'औषधि सूक्तम्', href: '/oshadhi-suktam/' },
+	{ label: 'कुमार सूक्तम्', href: '/kumara-suktam/' },
+	{ label: 'देवी सूक्तम्', href: '/devi-suktam/' },
+	{ label: 'नासदीय सूक्तम्', href: '/nasadiya-suktam/' },
+	{ label: 'पितृ सूक्तम्', href: '/pitri-suktam/' },
+	{ label: 'पुरुष सूक्तम् (ऋग्वेद)', href: '/purusha-suktam-rig/' },
+	{ label: 'भाग्य (भग) सूक्तम्', href: '/bhaga-suktam/' },
+	{ label: 'मन्यु सूक्तम्', href: '/manyu-suktam/' },
+	{ label: 'रात्रि सूक्तम्', href: '/ratri-suktam/' },
+	{ label: 'वास्तु सूक्तम्', href: '/vastu-suktam/' },
+	{ label: 'श्रद्धा सूक्तम्', href: '/shraddha-suktam/' },
+	{ label: 'सरस्वती सूक्तम्', href: '/sarasvati-suktam/' },
+	{ label: 'संज्ञान सूक्तम्', href: '/samjnana-suktam/' },
+	{ label: 'हिरण्यगर्भ सूक्तम्', href: '/hiranyagarbha-suktam/' },
 ];
 
 const yajushaMantraRatnakaram: CategoryNode[] = [
@@ -116,6 +187,21 @@ const iastRigvedaSuktaSangraha: CategoryNode[] = [
 	{ label: 'Gaṇapati Sūktam', href: '/iast/ganapathy-suktam/' },
 	{ label: 'Pañca Rudram', href: '/iast/pancha-rudram/' },
 	{ label: 'Svasti Sūktam', href: '/iast/swasti-suktam/' },
+	{ label: 'Ā no bhadrāḥ Sūktam', href: '/iast/a-no-bhadrauh-suktam/' },
+	{ label: 'Auṣadhi Sūktam', href: '/iast/oshadhi-suktam/' },
+	{ label: 'Kumāra Sūktam', href: '/iast/kumara-suktam/' },
+	{ label: 'Devī Sūktam', href: '/iast/devi-suktam/' },
+	{ label: 'Nāsadīya Sūktam', href: '/iast/nasadiya-suktam/' },
+	{ label: 'Pitṛ Sūktam', href: '/iast/pitri-suktam/' },
+	{ label: 'Puruṣa Sūktam (Ṛgveda)', href: '/iast/purusha-suktam-rig/' },
+	{ label: 'Bhāgya (Bhaga) Sūktam', href: '/iast/bhaga-suktam/' },
+	{ label: 'Manyu Sūktam', href: '/iast/manyu-suktam/' },
+	{ label: 'Rātri Sūktam', href: '/iast/ratri-suktam/' },
+	{ label: 'Vāstu Sūktam', href: '/iast/vastu-suktam/' },
+	{ label: 'Śraddhā Sūktam', href: '/iast/shraddha-suktam/' },
+	{ label: 'Sarasvatī Sūktam', href: '/iast/sarasvati-suktam/' },
+	{ label: 'Saṃjñāna Sūktam', href: '/iast/samjnana-suktam/' },
+	{ label: 'Hiraṇyagarbha Sūktam', href: '/iast/hiranyagarbha-suktam/' },
 ];
 
 const iastYajushaMantraRatnakaram: CategoryNode[] = [
@@ -177,7 +263,7 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			children: [
 				{
 					label: 'ब्रह्मयज्ञम्',
-					defaultOpen: true,
+					defaultOpen: false,
 					children: [
 						{ label: 'आश्वलायन (ऋग्वेद)', href: '/aswalayana-brahmayagyam/' },
 					],
@@ -193,14 +279,14 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 						},
 						{
 							label: 'आपस्तम्ब (कृष्ण यजुर्वेद)',
-							defaultOpen: true,
+							defaultOpen: false,
 							children: sandhyaTimeLinks.root.apastamba,
 						},
 					],
 				},
 				{
 					label: 'समिदाधानम्',
-					defaultOpen: true,
+					defaultOpen: false,
 					children: [
 						{ label: 'आश्वलायन (ऋग्वेद)', href: '/aswalayana-samidadhanam/' },
 						{ label: 'आपस्तम्ब (कृष्ण यजुर्वेद)', href: '/apastamba-samidadhanam/' },
@@ -226,7 +312,7 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		},
 		{
 			label: 'संहिताः',
-			defaultOpen: true,
+			defaultOpen: false,
 			children: [
 				{
 					label: 'शाकल संहिता (ऋग्वेद)',
@@ -234,19 +320,24 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					children: rigvedaShakalaSamhitaMandalas,
 				},
 				{
-					label: 'काण्व संहिता (शुक्लयजुर्वेद)',
+					label: 'वाजसनेयी संहिता (शुक्ल यजुर्वेद — काण्व)',
 					defaultOpen: true,
 					children: kanvaSamhitaChapters,
 				},
 				{
-					label: 'माध्यन्दिन संहिता (शुक्लयजुर्वेद)',
+					label: 'वाजसनेयी संहिता (शुक्ल यजुर्वेद — माध्यन्दिन)',
 					defaultOpen: true,
 					children: madhyandinaSamhitaChapters,
+				},
+				{
+					label: 'तैत्तिरीय संहिता (कृष्णयजुर्वेद)',
+					defaultOpen: true,
+					children: taittiriyaSamhitaPrapathakas,
 				},
 			],
 		},
 		{
-			label: 'ब्राह्मनम्',
+			label: 'ब्राह्मणाः',
 			children: [
 				{
 					label: 'ऐतरेय ब्राह्मनम् (ऋग्वेद)',
@@ -255,7 +346,7 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			],
 		},
 		{
-			label: 'उपनिषद्',
+			label: 'उपनिषदः',
 			children: [
 				{
 					label: 'ईशावास्योपनिषद् (शुक्लयजुर्वेद)',
@@ -274,94 +365,99 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			defaultOpen: true,
 			children: [
 				{
-					label: 'Brahmayagyam',
-					defaultOpen: true,
+					label: 'Brahmayajñam',
+					defaultOpen: false,
 					children: [
-						{ label: 'Ashvalayana (Ṛgveda)', href: '/iast/aswalayana-brahmayagyam/' },
-						{ label: 'Apastamba (Kṛṣṇa Yajurveda)', href: '/iast/apastamba-brahmayagyam/' },
+						{ label: 'Aśvalāyana (Ṛgveda)', href: '/iast/aswalayana-brahmayagyam/' },
+						{ label: 'Āpastamba (Kṛṣṇa Yajurveda)', href: '/iast/apastamba-brahmayagyam/' },
 					],
 				},
 				{
-					label: 'Sandhyavandanam',
+					label: 'Sandhyāvandanam',
 					defaultOpen: true,
 					children: [
 						{
-							label: 'Ashvalayana (Ṛgveda)',
+							label: 'Aśvalāyana (Ṛgveda)',
 							defaultOpen: true,
 							children: sandhyaTimeLinks.iast.aswalayana,
 						},
 						{
-							label: 'Apastamba (Kṛṣṇa Yajurveda)',
-							defaultOpen: true,
+							label: 'Āpastamba (Kṛṣṇa Yajurveda)',
+							defaultOpen: false,
 							children: sandhyaTimeLinks.iast.apastamba,
 						},
 					],
 				},
 				{
-					label: 'Samidadhanam',
-					defaultOpen: true,
+					label: 'Samidādhānam',
+					defaultOpen: false,
 					children: [
-						{ label: 'Ashvalayana (Ṛgveda)', href: '/iast/aswalayana-samidadhanam/' },
-						{ label: 'Apastamba (Kṛṣṇa Yajurveda)', href: '/iast/apastamba-samidadhanam/' },
+						{ label: 'Aśvalāyana (Ṛgveda)', href: '/iast/aswalayana-samidadhanam/' },
+						{ label: 'Āpastamba (Kṛṣṇa Yajurveda)', href: '/iast/apastamba-samidadhanam/' },
 					],
 				},
 			],
 		},
 		{
-			label: 'Veda Mantras',
+			label: 'Veda mantrāḥ',
 			defaultOpen: true,
 			children: [
 				{
-					label: 'Rigveda Sukta Sangraha',
+					label: 'Ṛgveda sūkta saṅgraha:',
 					defaultOpen: true,
 					children: iastRigvedaSuktaSangraha,
 				},
 				{
-					label: 'Yajusha Mantra Ratnakaram',
+					label: 'Yājuṣa mantra ratnākaram',
 					defaultOpen: true,
 					children: iastYajushaMantraRatnakaram,
 				},
 			],
 		},
 		{
-			label: 'Samhita',
-			defaultOpen: true,
+			label: 'Saṃhitāḥ',
+			defaultOpen: false,
 			children: [
 				{
-					label: 'Shakala Samhita (Rigveda)',
+					label: 'Śākala saṃhitā (Ṛgveda)',
 					defaultOpen: true,
 					children: iastRigvedaShakalaSamhitaMandalas,
 				},
 				{
-					label: 'Kanva Samhita (Shukla Yajurveda)',
+					label: 'Vājasaneyi saṃhitā (Śuklayajurveda — Kāṇva)',
 					defaultOpen: true,
 					children: iastKanvaSamhitaChapters,
 				},
 				{
-					label: 'Madhyandina Samhita (Shukla Yajurveda)',
+					label: 'Vājasaneyi saṃhitā (Śuklayajurveda — Mādhyandina)',
 					defaultOpen: true,
 					children: iastMadhyandinaSamhitaChapters,
+				},
+				{
+					label: 'Taittirīya saṃhitā (Kṛṣṇayajurveda)',
+					defaultOpen: true,
+					children: iastTaittiriyaSamhitaPrapathakas,
 				},
 			],
 		},
 		{
-			label: 'Brahmanam',
+			label: 'Brāhmaṇāḥ',
 			children: [
 				{
-					label: 'Aitareya Brahmanam (Rigveda)',
+					label: 'Aitareya brāhmaṇam (Ṛgveda)',
 					badge: { text: 'In Progress', variant: 'danger' },
 				},
 			],
 		},
 		{
-			label: 'Upanishad',
+			label: 'Upaniṣadaḥ',
 			children: [
 				{
-					label: 'Īśāvāsya Upaniṣad (Shukla Yajurveda)',
+					label: 'Īśāvāsya upaniṣad (Śuklayajurveda)',
 					href: '/iast/kanva-samhita/chapter-40/',
 				},
 				{
-					label: 'Aitareyopanishad (Rigveda)',
+					label: 'Aitareya upaniṣad (Ṛgveda)',
 					badge: { text: 'In Progress', variant: 'danger' },
 				},
 			],

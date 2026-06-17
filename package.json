@@ -27,9 +27,16 @@
     "clean:madhyandina-samhita-data": "node scripts/clean-madhyandina-samhita-data.mjs",
     "generate:madhyandina-samhita": "node scripts/generate-madhyandina-samhita-chapters.mjs",
     "generate:madhyandina-samhita:index": "MADHYANDINA_INDEX_ONLY=1 node scripts/generate-madhyandina-samhita-chapters.mjs",
+    "fetch:taittiriya-samhita": "node scripts/fetch-taittiriya-samhita-data.mjs",
+    "create:rigveda-sangraha-suktas": "node scripts/create-rigveda-sangraha-suktas.mjs",
+    "generate:taittiriya-samhita": "node scripts/generate-taittiriya-samhita-chapters.mjs",
+    "generate:taittiriya-samhita:index": "TAITTIRIYA_INDEX_ONLY=1 node scripts/generate-taittiriya-samhita-chapters.mjs",
+    "generate:taittiriya-samhita:root": "TAITTIRIYA_SKIP_IAST=1 node scripts/generate-taittiriya-samhita-chapters.mjs",
+    "generate:taittiriya-samhita:iast": "TAITTIRIYA_IAST_ONLY=1 node scripts/generate-taittiriya-samhita-chapters.mjs",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "@astrojs/starlight": "^0.39.3",
     "@astrojs/starlight-tailwind": "^5.0.0",
     "@tailwindcss/vite": "^4.3.0",

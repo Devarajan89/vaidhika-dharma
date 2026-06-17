@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 5 — Mantra Index'
+title: 'Adhyāya 5 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-5-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 5 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 5 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 5 {#chapter-5}

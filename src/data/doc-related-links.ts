@@ -54,7 +54,18 @@ const SUkta_COLLECTIONS: Record<
 	rigveda: {
 		root: 'ऋग्वेद सूक्त संग्रह',
 		iast: 'Ṛgveda Sūkta Saṅgraha',
-		peers: ['brahmanaspati-suktam', 'ganapathy-suktam', 'swasti-suktam', 'pancha-rudram'],
+		peers: [
+			'brahmanaspati-suktam',
+			'ganapathy-suktam',
+			'swasti-suktam',
+			'a-no-bhadrauh-suktam',
+			'pancha-rudram',
+			'devi-suktam',
+			'nasadiya-suktam',
+			'purusha-suktam-rig',
+			'oshadhi-suktam',
+			'hiranyagarbha-suktam',
+		],
 	},
 	yajusha: {
 		root: 'याजुष मन्त्र रत्नाकरम्',

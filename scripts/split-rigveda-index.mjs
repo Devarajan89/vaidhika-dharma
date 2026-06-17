@@ -94,7 +94,7 @@ function renderMandalaIndexFrontmatter(mandala, locale) {
 	if (locale === 'iast') {
 		return [
 			'---',
-			`title: '${label} — Mantra Index'`,
+			`title: '${label} — Mantra sūcī'`,
 			`slug: ${slugPrefix}/mandala-${mandala}`,
 			'sidebar:',
 			`  label: '${label}'`,
@@ -135,13 +135,13 @@ function renderMainIndex(frontmatter, locale) {
 	const lines = [
 		fm,
 		'',
-		isIast ? '# Śākala Saṃhitā — Table of Contents' : '# शाकल संहिता — सूची',
+		isIast ? '# Śākala saṃhitā — Sūcī' : '# शाकल संहिता — सूची',
 		'',
 		isIast
-			? 'Browse all 10,481 mantras by Maṇḍala. Select a Maṇḍala to view its mantra index.'
+			? '10,481 mantrāṇi daśa maṇḍaleṣu. Mantra sūcīṃ draṣṭum maṇḍalaṃ cinut.'
 			: '१०,४८१ मन्त्राणि दश मण्डलेषु। मन्त्र सूची द्रष्टुं मण्डलं चिनुत।',
 		'',
-		isIast ? '## Śākala Saṃhitā — Maṇḍalas' : '## शाकल संहिता — मण्डलाः',
+		isIast ? '## Śākala saṃhitā — Maṇḍalāḥ' : '## शाकल संहिता — मण्डलाः',
 		'',
 		isIast ? '| Maṇḍala | Sūktas |' : '| मण्डल | सूक्तानि |',
 		isIast ? '|---------|-------:|' : '|-------|--------:|',

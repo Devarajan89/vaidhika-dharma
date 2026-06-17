@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 16 — Mantra Index'
+title: 'Adhyāya 16 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-16-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 16 mantra index (85 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 16 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 16 {#chapter-16}

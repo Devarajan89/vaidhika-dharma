@@ -2,14 +2,22 @@
 import CategoryTree from './CategoryTree.astro';
 import HomeSearchHint from './HomeSearchHint.astro';
 import HomeSidebar from './HomeSidebar.astro';
-import type { HomeLocale } from '../data/home';
+import {
+	getHomeContent,
+	getSalutation,
+	resolveHomeLocale,
+	type HomeLocale,
+} from '../data/home';
 
 interface Props {
-	locale: HomeLocale;
-	salutation: string;
+	locale?: HomeLocale;
+	salutation?: string;
 }
 
-const { locale, salutation } = Astro.props;
+const routeLocale = resolveHomeLocale(Astro.locals.starlightRoute.locale);
+const locale = Astro.props.locale ?? routeLocale;
+const salutation = Astro.props.salutation ?? getSalutation(locale);
+const { intro, browseHeading } = getHomeContent(locale);
 ---
 
 <div class="main-container">
@@ -17,16 +25,13 @@ const { locale, salutation } = Astro.props;
 		<header class="home-header">
 			<p class="home-salutation">{salutation}</p>
 			<div class="home-intro">
-				<p>
-					Vaidhika Dharma is a guide to living the Vedic way — daily <em>anuṣṭhāna</em> (rituals),
-					<em>dharma</em> (right conduct), and <em>svādhyāya</em> (study of the scriptures).
-				</p>
-				<HomeSearchHint />
+				<p>{intro}</p>
+				<HomeSearchHint locale={locale} />
 			</div>
 		</header>
 
 		<section class="home-browse" aria-labelledby="home-browse-heading">
-			<h2 id="home-browse-heading" class="home-browse__heading">Browse</h2>
+			<h2 id="home-browse-heading" class="home-browse__heading">{browseHeading}</h2>
 			<CategoryTree locale={locale} />
 		</section>
 	</div>

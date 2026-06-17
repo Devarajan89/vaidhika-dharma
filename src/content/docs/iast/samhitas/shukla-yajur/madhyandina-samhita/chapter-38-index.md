@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 38 — Mantra Index'
+title: 'Adhyāya 38 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-38-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 38 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 38 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 38 {#chapter-38}
