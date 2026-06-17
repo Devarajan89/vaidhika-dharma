@@ -1,0 +1,88 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import RigvedaMantra from './RigvedaMantra.astro';
+import type { HomeLocale } from '../../data/home';
+import {
+	getVerseRecord,
+	type CompilationMap,
+	type CompilationMantraRef,
+} from '../../lib/rigveda-corpus';
+import { transliterateDevanagariMap } from '../../lib/rigveda-transliterate';
+
+interface Props {
+	id: string;
+	locale?: HomeLocale;
+}
+
+const { id, locale = 'root' } = Astro.props;
+
+const compilationModules = import.meta.glob<{ default: CompilationMap }>(
+	'../../data/rigveda/compilations/*.json',
+	{ eager: true }
+);
+const compilationPath = `../../data/rigveda/compilations/${id}.json`;
+const compilation = compilationModules[compilationPath]?.default;
+
+if (!compilation) {
+	throw new Error(`Unknown Rigveda compilation: ${id}`);
+}
+
+/** @type {Record<string, string>} */
+const transliteratedTexts = {};
+
+if (locale === 'iast') {
+	const textsToTransliterate: Record<string, string> = {};
+
+	for (const section of compilation.sections) {
+		for (const mantra of section.mantras) {
+			const sourceText =
+				mantra.text ?? getVerseRecord(mantra.mandala!, mantra.sukta!, mantra.verse!)?.text;
+			if (sourceText) {
+				textsToTransliterate[`${section.header ?? 'section'}:${mantra.label}`] = sourceText;
+			}
+		}
+	}
+
+	Object.assign(transliteratedTexts, await transliterateDevanagariMap(textsToTransliterate));
+}
+
+function mantraKey(sectionHeader: string | null, mantra: CompilationMantraRef): string {
+	return `${sectionHeader ?? 'section'}:${mantra.label}`;
+}
+
+function resolveMantraText(
+	sectionHeader: string | null,
+	mantra: CompilationMantraRef
+): string | undefined {
+	if (locale === 'iast') {
+		return transliteratedTexts[mantraKey(sectionHeader, mantra)];
+	}
+	return mantra.text ?? getVerseRecord(mantra.mandala!, mantra.sukta!, mantra.verse!)?.text;
+}
+---
+
+<SuktaPage locale={locale}>
+	{
+		compilation.sections.map((section) => (
+			<section class="veda-compilation-section">
+				{section.header && (
+					<header class="veda-compilation-section__header">
+						<p class="veda-compilation-section__title">{section.header}</p>
+					</header>
+				)}
+				<div class="veda-compilation-section__mantras">
+					{section.mantras.map((mantra) => (
+						<RigvedaMantra
+							label={mantra.label}
+							mandala={mantra.mandala}
+							sukta={mantra.sukta}
+							verse={mantra.verse}
+							text={resolveMantraText(section.header, mantra)}
+							locale={locale}
+						/>
+					))}
+				</div>
+			</section>
+		))
+	}
+</SuktaPage>

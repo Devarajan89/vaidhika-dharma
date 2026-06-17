@@ -6,19 +6,42 @@ import type { HomeLocale } from '../../data/home';
 interface Props {
 	locale?: HomeLocale;
 	showVerseNav?: boolean;
+	class?: string;
 }
 
-const { locale = 'root', showVerseNav = false } = Astro.props;
+const { locale = 'root', showVerseNav = false, class: className } = Astro.props;
 ---
 
-<div class="sukta-page">
+<article class:list={['veda-corpus', 'sukta-page', 'rigveda-samhita', className]}>
 	<RitualNote {locale} />
 	{showVerseNav && <VerseNav {locale} />}
-	<slot />
-</div>
+	<div class="veda-corpus__body">
+		<slot />
+	</div>
+</article>
 
 <style>
-	.sukta-page :global(.starlight-aside) {
+	.veda-corpus {
+		--veda-accent: var(--sl-color-accent);
+		--veda-surface: var(--sl-color-gray-7);
+		--veda-border: var(--sl-color-gray-5);
+		--veda-text: var(--sl-color-gray-1);
+		max-width: 42rem;
+		margin-inline: auto;
+		font-family: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
+	}
+
+	:global([data-theme='light']) .veda-corpus {
+		--veda-surface: var(--color-gray-100);
+		--veda-border: var(--color-gray-300);
+		--veda-text: var(--color-gray-900);
+	}
+
+	.veda-corpus__body {
+		padding: 0.25rem 0 2rem;
+	}
+
+	.veda-corpus :global(.starlight-aside) {
 		margin-bottom: 1.5rem;
 	}
 </style>
