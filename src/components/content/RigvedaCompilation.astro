@@ -30,10 +30,17 @@ if (!compilation) {
 /** @type {Record<string, string>} */
 const transliteratedTexts = {};
 
+/** @type {Record<string, string>} */
+const transliteratedHeaders = {};
+
 if (locale === 'iast') {
 	const textsToTransliterate: Record<string, string> = {};
 
-	for (const section of compilation.sections) {
+	for (const [sectionIndex, section] of compilation.sections.entries()) {
+		if (section.header) {
+			textsToTransliterate[`header:${sectionIndex}`] = section.header;
+		}
+
 		for (const mantra of section.mantras) {
 			const sourceText =
 				mantra.text ?? getVerseRecord(mantra.mandala!, mantra.sukta!, mantra.verse!)?.text;
@@ -43,7 +50,14 @@ if (locale === 'iast') {
 		}
 	}
 
-	Object.assign(transliteratedTexts, await transliterateDevanagariMap(textsToTransliterate));
+	const translated = await transliterateDevanagariMap(textsToTransliterate);
+	for (const [key, value] of Object.entries(translated)) {
+		if (key.startsWith('header:')) {
+			transliteratedHeaders[key] = value;
+		} else {
+			transliteratedTexts[key] = value;
+		}
+	}
 }
 
 function mantraKey(sectionHeader: string | null, mantra: CompilationMantraRef): string {
@@ -59,15 +73,25 @@ function resolveMantraText(
 	}
 	return mantra.text ?? getVerseRecord(mantra.mandala!, mantra.sukta!, mantra.verse!)?.text;
 }
+
+function resolveSectionHeader(sectionIndex: number, header: string | null): string | null {
+	if (!header) return null;
+	if (locale === 'iast') {
+		return transliteratedHeaders[`header:${sectionIndex}`] ?? header;
+	}
+	return header;
+}
 ---
 
 <SuktaPage locale={locale}>
 	{
-		compilation.sections.map((section) => (
+		compilation.sections.map((section, sectionIndex) => (
 			<section class="veda-compilation-section">
 				{section.header && (
 					<header class="veda-compilation-section__header">
-						<p class="veda-compilation-section__title">{section.header}</p>
+						<p class="veda-compilation-section__title">
+							{resolveSectionHeader(sectionIndex, section.header)}
+						</p>
 					</header>
 				)}
 				<div class="veda-compilation-section__mantras">

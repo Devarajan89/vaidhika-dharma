@@ -1,0 +1,94 @@
+{
+  "id": "pitri-suktam",
+  "sections": [
+    {
+      "header": "१४ शङ्खो यामायनः।पितरः। त्रिष्टुप् ,११ जगती।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 5,
+          "label": 5
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 6,
+          "label": 6
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 7,
+          "label": 7
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 8,
+          "label": 8
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 9,
+          "label": 9
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 10,
+          "label": 10
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 11,
+          "label": 11
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 12,
+          "label": 12
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 13,
+          "label": 13
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 14,
+          "label": 14
+        }
+      ]
+    }
+  ]
+}

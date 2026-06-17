@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 34 — Mantra Index'
+title: 'Adhyāya 34 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-34-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 34 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 34 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 34 {#chapter-34}

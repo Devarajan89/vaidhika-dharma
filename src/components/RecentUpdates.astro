@@ -1,7 +1,7 @@
 ---
 import { Card } from '@astrojs/starlight/components';
 import type { HomeLocale } from '../data/home';
-import { homeContent } from '../data/home';
+import { getHomeContent } from '../data/home';
 import docCache from '../data/doc-cache.json';
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const { locale, limit = 5 } = Astro.props;
-const { recentTitle } = homeContent;
+const { recentTitle, recentEmpty } = getHomeContent(locale);
 
 function getPageUrl(slug: string | undefined, id: string): string {
 	const path = slug ?? id;
@@ -43,7 +43,7 @@ const recent = (docCache.recentByLocale[locale] ?? []).slice(0, limit);
 					))}
 				</ul>
 			) : (
-				<p class="recent-updates__empty">No updates yet.</p>
+				<p class="recent-updates__empty">{recentEmpty}</p>
 			)
 		}
 	</Card>

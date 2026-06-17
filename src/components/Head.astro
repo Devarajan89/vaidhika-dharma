@@ -1,0 +1,45 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+
+const { entry } = Astro.locals.starlightRoute;
+const site = Astro.site ?? new URL('https://vaidhikadharma.org');
+const slug = entry.data.slug ?? entry.id;
+const path = slug === 'index' ? '' : slug === 'iast/index' ? 'iast' : slug;
+const canonicalUrl = new URL(`${path}/`.replace(/\/+/g, '/'), site).href;
+const title = entry.data.title;
+const description =
+	entry.data.description ??
+	'Vaidhika Dharma — Vedic mantras, saṃhitās, nityakarma, and sūkta saṅgraha with svara.';
+const locale = Astro.currentLocale === 'iast' ? 'en' : 'sa';
+const inLanguage = locale === 'sa' ? 'sa-Deva' : 'en';
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'WebPage',
+	name: title,
+	description,
+	url: canonicalUrl,
+	inLanguage,
+	isPartOf: {
+		'@type': 'WebSite',
+		name: 'Vaidhika Dharma',
+		url: site.href,
+		description:
+			'Vedic mantras, Rigveda and Yajurveda saṃhitās, nityakarma, and sūkta compilations with svara marks.',
+	},
+};
+---
+
+<Default {...Astro.props} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Vaidhika Dharma" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:locale" content={locale === 'sa' ? 'sa_IN' : 'en_US'} />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

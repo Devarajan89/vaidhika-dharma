@@ -1,5 +1,13 @@
 ---
-import { homeContent } from '../data/home';
+import type { HomeLocale } from '../data/home';
+import { getHomeContent } from '../data/home';
+
+interface Props {
+	locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+const { searchHint } = getHomeContent(locale);
 ---
 
-<p class="home-search-hint">{homeContent.searchHint}</p>
+<p class="home-search-hint">{searchHint}</p>

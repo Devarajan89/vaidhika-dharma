@@ -4,8 +4,8 @@ slug: kanva-samhita/chapter-37-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'काण्व संहिता — अध्याय 37 मन्त्र सूची (20 मन्त्राः).'
-lastUpdated: 2026-06-14
+description: 'काण्व संहिता — अध्याय 37 मन्त्र सूची।'
+lastUpdated: 2026-06-17
 ---
 
 ## अध्याय 37 {#chapter-37}

@@ -4,8 +4,8 @@ slug: kanva-samhita/chapter-25-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'काण्व संहिता — अध्याय 25 मन्त्र सूची (67 मन्त्राः).'
-lastUpdated: 2026-06-14
+description: 'काण्व संहिता — अध्याय 25 मन्त्र सूची।'
+lastUpdated: 2026-06-17
 ---
 
 ## अध्याय 25 {#chapter-25}

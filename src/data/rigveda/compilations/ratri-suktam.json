@@ -1,0 +1,58 @@
+{
+  "id": "ratri-suktam",
+  "sections": [
+    {
+      "header": "८ कुशिकः सौभरः, रात्रिर्वा भारद्वाजी। रात्रिः। गायत्री।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 5,
+          "label": 5
+        },
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 6,
+          "label": 6
+        },
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 7,
+          "label": 7
+        },
+        {
+          "mandala": 10,
+          "sukta": 127,
+          "verse": 8,
+          "label": 8
+        }
+      ]
+    }
+  ]
+}

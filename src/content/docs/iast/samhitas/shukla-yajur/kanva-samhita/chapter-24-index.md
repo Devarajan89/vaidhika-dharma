@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 24 — Mantra Index'
+title: 'Adhyāya 24 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-24-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 24 mantra index (47 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 24 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 24 {#chapter-24}

@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 14 — Mantra Index'
+title: 'Adhyāya 14 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-14-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 14 mantra index (65 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 14 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 14 {#chapter-14}

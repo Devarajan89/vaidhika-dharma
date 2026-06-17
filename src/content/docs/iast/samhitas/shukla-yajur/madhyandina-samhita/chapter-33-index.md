@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 33 — Mantra Index'
+title: 'Adhyāya 33 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-33-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 33 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 33 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 33 {#chapter-33}

@@ -12,7 +12,7 @@ const { locale } = Astro.props;
 ---
 
 <aside class="side-column">
-	<AboutSidebar />
+	<AboutSidebar locale={locale} />
 	<QuoteCard locale={locale} />
 	<RecentUpdates locale={locale} />
 </aside>

@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 22 — Mantra Index'
+title: 'Adhyāya 22 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-22-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 22 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 22 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 22 {#chapter-22}

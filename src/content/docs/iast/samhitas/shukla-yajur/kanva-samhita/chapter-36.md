@@ -1,15 +1,15 @@
 ---
-title: 'Vājasaneyi Kanva Saṃhitā — Chapter 36 (24 mantras)'
+title: 'Vājasaneyi Saṃhitā (Kāṇva) — Chapter 36 (24 mantras)'
 slug: iast/kanva-samhita/chapter-36
 sidebar:
   label: '36 ṛca vāca'
   order: 36
 tableOfContents: false
-description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 36'
-lastUpdated: 2026-06-14
+description: 'Śukla Yajur Veda — Vājasaneyi Saṃhitā (Kāṇva), Chapter 36'
+lastUpdated: 2026-06-17
 ---
 
-# Vājasaneyi Kanva Saṃhitā — Chapter 36
+# Vājasaneyi Saṃhitā (Kāṇva) — Chapter 36
 
 **atha ṣaṭtriṃśo'dhyāyaḥ|**
 
@@ -46,205 +46,157 @@ lastUpdated: 2026-06-14
 
 ---
 
-## Mantra 1 {#mantra-1}
-
-**Adhyāya:** 36 | **Mantra:** 1
+<a id="mantra-1"></a>
 
 ṛca̱ṃ vāca̱ṃ pra pa̍dye̱ mano̱ yaju̱ḥ pra pa̍dye̱ sāma̍ prā̱ṇaṃ pra pa̍dye̱ cakṣu̱ḥ śrotra̱ṃ pra pa̍dye |
-vāgoja̍ḥ sa̱haujo̱ mayi̍ prāṇāpānau
+vāgoja̍ḥ sa̱haujo̱ mayi̍ prāṇāpānau ||36.1||
 
 ---
 
-## Mantra 2 {#mantra-2}
-
-**Adhyāya:** 36 | **Mantra:** 2
+<a id="mantra-2"></a>
 
 yanme̍ chi̱draṃ cakṣu̍ṣo̱ hṛda̍yasya̱ mana̍so̱ vāti̍tṛṇṇa̱ṃ bṛha̱spati̍rme̱ tadda̍dhātu |
-śaṃ no̍ bhavatu̱ bhuva̍nasya̱ yaspati̍ḥ
+śaṃ no̍ bhavatu̱ bhuva̍nasya̱ yaspati̍ḥ ||36.2||
 
 ---
 
-## Mantra 3 {#mantra-3}
+<a id="mantra-3"></a>
 
-**Adhyāya:** 36 | **Mantra:** 3
-
-bhūrbhuva̱ḥ sva̍ḥ | tatsa̍vi̱turvare̍ṇya̱ṃ bhargo̍ de̱vasya̍ dhīmahi | dhiyo̱ yo na̍ḥ praco̱dayā̍t
+bhūrbhuva̱ḥ sva̍ḥ | tatsa̍vi̱turvare̍ṇya̱ṃ bhargo̍ de̱vasya̍ dhīmahi | dhiyo̱ yo na̍ḥ praco̱dayā̍t ||36.3||
 
 ---
 
-## Mantra 4 {#mantra-4}
+<a id="mantra-4"></a>
 
-**Adhyāya:** 36 | **Mantra:** 4
-
-kayā̍ naści̱tra ā bhu̍vadū̱tī sa̱dāvṛ̍dha̱ḥ sakhā̍ | kayā̱ śaci̍ṣṭhayā vṛ̱tā
+kayā̍ naści̱tra ā bhu̍vadū̱tī sa̱dāvṛ̍dha̱ḥ sakhā̍ | kayā̱ śaci̍ṣṭhayā vṛ̱tā ||36.4||
 
 ---
 
-## Mantra 5 {#mantra-5}
+<a id="mantra-5"></a>
 
-**Adhyāya:** 36 | **Mantra:** 5
-
-kastvā̍ sa̱tyo madā̍nā̱ṃ ma hi̍ṣṭho matsa̱dandha̍saḥ | dṛ̱l̤ahā ci̍dā̱ruje̱ vasu̍
+kastvā̍ sa̱tyo madā̍nā̱ṃ ma hi̍ṣṭho matsa̱dandha̍saḥ | dṛ̱l̤ahā ci̍dā̱ruje̱ vasu̍ ||36.5||
 
 ---
 
-## Mantra 6 {#mantra-6}
+<a id="mantra-6"></a>
 
-**Adhyāya:** 36 | **Mantra:** 6
-
-a̱bhī ṣu ṇa̱ḥ sakhī̍nāmavi̱tā ja̍ritṝ̱ṇām | śa̱taṃ bha̍vāsyū̱tibhiḥ
+a̱bhī ṣu ṇa̱ḥ sakhī̍nāmavi̱tā ja̍ritṝ̱ṇām | śa̱taṃ bha̍vāsyū̱tibhiḥ ||36.6||
 
 ---
 
-## Mantra 7 {#mantra-7}
+<a id="mantra-7"></a>
 
-**Adhyāya:** 36 | **Mantra:** 7
-
-kayā̱ tvaṃ na̍ ū̱tyābhi pra ma̍ndase vṛṣan | ka̱yā sto̱tṛbhya̱ ā bha̍ra
+kayā̱ tvaṃ na̍ ū̱tyābhi pra ma̍ndase vṛṣan | ka̱yā sto̱tṛbhya̱ ā bha̍ra ||36.7||
 
 ---
 
-## Mantra 8 {#mantra-8}
+<a id="mantra-8"></a>
 
-**Adhyāya:** 36 | **Mantra:** 8
-
-indro̱ viśva̍sya rājati | śaṃ no̍ astu dvi̱pade̱ śaṃ catu̍ṣpade
+indro̱ viśva̍sya rājati | śaṃ no̍ astu dvi̱pade̱ śaṃ catu̍ṣpade ||36.8||
 
 ---
 
-## Mantra 9 {#mantra-9}
+<a id="mantra-9"></a>
 
-**Adhyāya:** 36 | **Mantra:** 9
-
-śaṃ no̍ mi̱traḥ śaṃ varu̍ṇa̱ḥ śaṃ no̍ bhavatvarya̱mā | śaṃ na̱ indro̱ bṛha̱spati̱ḥ śaṃ no̱ viṣṇu̍rurukra̱maḥ
+śaṃ no̍ mi̱traḥ śaṃ varu̍ṇa̱ḥ śaṃ no̍ bhavatvarya̱mā | śaṃ na̱ indro̱ bṛha̱spati̱ḥ śaṃ no̱ viṣṇu̍rurukra̱maḥ ||36.9||
 
 ---
 
-## Mantra 10 {#mantra-10}
+<a id="mantra-10"></a>
 
-**Adhyāya:** 36 | **Mantra:** 10
-
-śaṃ no̱ vāta̍ḥ pavatā̱  śaṃ na̍stapatu̱ sūrya̍ḥ | śaṃ na̱ḥ kani̍kradadde̱vaḥ pa̱rjanyo̍ a̱bhi va̍rṣatu
+śaṃ no̱ vāta̍ḥ pavatā̱  śaṃ na̍stapatu̱ sūrya̍ḥ | śaṃ na̱ḥ kani̍kradadde̱vaḥ pa̱rjanyo̍ a̱bhi va̍rṣatu ||36.10||
 
 ---
 
-## Mantra 11 {#mantra-11}
-
-**Adhyāya:** 36 | **Mantra:** 11
+<a id="mantra-11"></a>
 
 ahā̍ni̱ śaṃ bhava̍ntu na̱ḥ śa  rātrī̱ḥ prati̍ dhīyatām |
 śaṃ na̍ indrā̱gnī bha̍vatā̱mavo̍bhi̱ḥ śaṃ na̱ indrā̱varu̍ṇā rā̱taha̍vyā |
-śaṃ na̍ indrāpū̱ṣaṇā̱ vāja̍sātau̱ śamindrā̱somā̍ suvi̱tāya̱ śaṃ yoḥ
+śaṃ na̍ indrāpū̱ṣaṇā̱ vāja̍sātau̱ śamindrā̱somā̍ suvi̱tāya̱ śaṃ yoḥ ||36.11||
 
 ---
 
-## Mantra 12 {#mantra-12}
+<a id="mantra-12"></a>
 
-**Adhyāya:** 36 | **Mantra:** 12
-
-śaṃ no̍ de̱vīra̱bhiṣṭa̍ya̱ āpo̍ bhavantu pī̱taye̍ | śaṃ yora̱bhi sra̍vantu naḥ
+śaṃ no̍ de̱vīra̱bhiṣṭa̍ya̱ āpo̍ bhavantu pī̱taye̍ | śaṃ yora̱bhi sra̍vantu naḥ ||36.12||
 
 ---
 
-## Mantra 13 {#mantra-13}
+<a id="mantra-13"></a>
 
-**Adhyāya:** 36 | **Mantra:** 13
-
-syo̱nā pṛ̍thivi no bhavānṛkṣa̱rā ni̱veśa̍nī | yacchā̍ na̱ḥ śarma̍ sa̱prathā̍ḥ
+syo̱nā pṛ̍thivi no bhavānṛkṣa̱rā ni̱veśa̍nī | yacchā̍ na̱ḥ śarma̍ sa̱prathā̍ḥ ||36.13||
 
 ---
 
-## Mantra 14 {#mantra-14}
+<a id="mantra-14"></a>
 
-**Adhyāya:** 36 | **Mantra:** 14
-
-āpo̱ hi ṣṭhā ma̍yo̱bhuva̱stā na̍ ū̱rje da̍dhātana | ma̱he raṇā̍ya̱ cakṣa̍se
+āpo̱ hi ṣṭhā ma̍yo̱bhuva̱stā na̍ ū̱rje da̍dhātana | ma̱he raṇā̍ya̱ cakṣa̍se ||36.14||
 
 ---
 
-## Mantra 15 {#mantra-15}
+<a id="mantra-15"></a>
 
-**Adhyāya:** 36 | **Mantra:** 15
-
-yo va̍ḥ śi̱vata̍mo̱ rasa̱stasya̍ bhājayate̱ha na̍ḥ | u̱śa̱tīri̍va mā̱tara̍ḥ
+yo va̍ḥ śi̱vata̍mo̱ rasa̱stasya̍ bhājayate̱ha na̍ḥ | u̱śa̱tīri̍va mā̱tara̍ḥ ||36.15||
 
 ---
 
-## Mantra 16 {#mantra-16}
+<a id="mantra-16"></a>
 
-**Adhyāya:** 36 | **Mantra:** 16
-
-tasmā̱ ara̍ṃ gamāma vo̱ yasya̱ kṣayā̍ya̱ jinva̍tha | āpo̍ ja̱naya̍thā ca naḥ
+tasmā̱ ara̍ṃ gamāma vo̱ yasya̱ kṣayā̍ya̱ jinva̍tha | āpo̍ ja̱naya̍thā ca naḥ ||36.16||
 
 ---
 
-## Mantra 17 {#mantra-17}
-
-**Adhyāya:** 36 | **Mantra:** 17
+<a id="mantra-17"></a>
 
 dyau̱ḥ śānti̍ra̱ntari̍kṣa̱  śānti̍ḥ pṛthi̱vī śānti̱rāpa̱ḥ śānti̱roṣa̍dhaya̱ḥ śānti̍ḥ |
-vana̱spata̍ya̱ḥ śānti̱ śānti̍re̱va śānti̍ḥ
+vana̱spata̍ya̱ḥ śānti̱ śānti̍re̱va śānti̍ḥ ||36.17||
 
 ---
 
-## Mantra 18 {#mantra-18}
-
-**Adhyāya:** 36 | **Mantra:** 18
+<a id="mantra-18"></a>
 
 dṛte̱ dṛ ha̍ mā mi̱trasya̍ mā̱ cakṣu̍ṣā̱ sarvā̍ṇi bhū̱tāni̱ samī̍kṣantām |
-mi̱trasyā̱haṃ  cakṣu̍ṣā̱ sarvā̍ṇi bhū̱tāni̱ samī̍kṣe | mi̱trasya̱ cakṣu̍ṣā̱ samī̍kṣāmahe
+mi̱trasyā̱haṃ  cakṣu̍ṣā̱ sarvā̍ṇi bhū̱tāni̱ samī̍kṣe | mi̱trasya̱ cakṣu̍ṣā̱ samī̍kṣāmahe ||36.18||
 
 ---
 
-## Mantra 19 {#mantra-19}
+<a id="mantra-19"></a>
 
-**Adhyāya:** 36 | **Mantra:** 19
-
-dṛte̱ dṛ ha̍ mā | jyokte̍ sa̱ṃdṛśi̍ jīvyāsa̱ṃ jyokte̍ sa̱ṃdṛśi̍ jīvyāsam
+dṛte̱ dṛ ha̍ mā | jyokte̍ sa̱ṃdṛśi̍ jīvyāsa̱ṃ jyokte̍ sa̱ṃdṛśi̍ jīvyāsam ||36.19||
 
 ---
 
-## Mantra 20 {#mantra-20}
-
-**Adhyāya:** 36 | **Mantra:** 20
+<a id="mantra-20"></a>
 
 nama̍ste̱ hara̍se śo̱ciṣe̱ nama̍ste astva̱rciṣe̍ |
-a̱nyāste̍ a̱smatta̍pantu he̱taya̍ḥ pāva̱ko a̱smabhya̍  śi̱vo bha̍va
+a̱nyāste̍ a̱smatta̍pantu he̱taya̍ḥ pāva̱ko a̱smabhya̍  śi̱vo bha̍va ||36.20||
 
 ---
 
-## Mantra 21 {#mantra-21}
-
-**Adhyāya:** 36 | **Mantra:** 21
+<a id="mantra-21"></a>
 
 nama̍ste astu vi̱dyute̱ nama̍ste stanayi̱tnave̍ |
-nama̍ste bhagavannastu̱ yata̱ḥ sva̍ḥ sa̱mīha̍se
+nama̍ste bhagavannastu̱ yata̱ḥ sva̍ḥ sa̱mīha̍se ||36.21||
 
 ---
 
-## Mantra 22 {#mantra-22}
-
-**Adhyāya:** 36 | **Mantra:** 22
+<a id="mantra-22"></a>
 
 yato̍yataḥ sa̱mīha̍se̱ tato̍ no̱ abha̍yaṃ kuru |
-śaṃ na̍ḥ kuru pra̱jābhyo'bha̍yaṃ naḥ pa̱śubhya̍ḥ
+śaṃ na̍ḥ kuru pra̱jābhyo'bha̍yaṃ naḥ pa̱śubhya̍ḥ ||36.22||
 
 ---
 
-## Mantra 23 {#mantra-23}
-
-**Adhyāya:** 36 | **Mantra:** 23
+<a id="mantra-23"></a>
 
 su̱mi̱tri̱yā na̱ āpa̱ oṣa̍dhayaḥ santu durmitri̱yāstasmai̍ santu̱ |
-yo̱'smāndve̍ṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmaḥ
+yo̱'smāndve̍ṣṭi̱ yaṃ ca̍ va̱yaṃ dvi̱ṣmaḥ ||36.23||
 
 ---
 
-## Mantra 24 {#mantra-24}
-
-**Adhyāya:** 36 | **Mantra:** 24
+<a id="mantra-24"></a>
 
 taccakṣu̍rde̱vahi̍taṃ pu̱rastā̍cchu̱kramu̱ccara̍t |
-paśye̍ma śa̱rada̍ḥ śa̱taṃ jīve̍ma śa̱rada̍ḥ śa̱ta śṛṇu̍yāma śa̱rada̍ḥ śa̱tam
+paśye̍ma śa̱rada̍ḥ śa̱taṃ jīve̍ma śa̱rada̍ḥ śa̱ta śṛṇu̍yāma śa̱rada̍ḥ śa̱tam ||36.24||
 
 ---

@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 36 — Mantra Index'
+title: 'Adhyāya 36 — Mantra sūcī'
 slug: iast/kanva-samhita/chapter-36-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Kanva Saṃhitā — Adhyāya 36 mantra index (24 mantras).'
-lastUpdated: 2026-06-14
+description: 'Kāṇva saṃhitā — adhyāya 36 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 36 {#chapter-36}

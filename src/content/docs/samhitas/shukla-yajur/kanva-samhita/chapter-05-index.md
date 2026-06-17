@@ -4,8 +4,8 @@ slug: kanva-samhita/chapter-5-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'काण्व संहिता — अध्याय 5 मन्त्र सूची (55 मन्त्राः).'
-lastUpdated: 2026-06-14
+description: 'काण्व संहिता — अध्याय 5 मन्त्र सूची।'
+lastUpdated: 2026-06-17
 ---
 
 ## अध्याय 5 {#chapter-5}

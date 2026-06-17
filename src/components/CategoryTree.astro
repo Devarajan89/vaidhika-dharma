@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-const tree = categoryTrees[locale];
+const tree = categoryTrees[locale] ?? categoryTrees.root;
 ---
 
 <nav class="category-tree" aria-label="Site categories">
@@ -99,7 +99,7 @@ const tree = categoryTrees[locale];
 		padding: 1rem 1.25rem;
 		padding-left: calc(1.25rem + var(--tree-depth) * 0.5rem);
 		cursor: pointer;
-		font-weight: 600;
+		font-weight: 400;
 		font-size: 1.0625rem;
 		line-height: 1.4;
 		color: var(--sl-color-white);

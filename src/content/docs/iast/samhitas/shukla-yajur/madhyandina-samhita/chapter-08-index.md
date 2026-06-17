@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 8 — Mantra Index'
+title: 'Adhyāya 8 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-8-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 8 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 8 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 8 {#chapter-8}

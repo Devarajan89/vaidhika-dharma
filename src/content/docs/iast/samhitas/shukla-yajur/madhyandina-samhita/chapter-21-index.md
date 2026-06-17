@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 21 — Mantra Index'
+title: 'Adhyāya 21 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-21-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 21 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 21 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 21 {#chapter-21}

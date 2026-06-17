@@ -4,8 +4,8 @@ slug: kanva-samhita/chapter-39-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'काण्व संहिता — अध्याय 39 मन्त्र सूची (12 मन्त्राः).'
-lastUpdated: 2026-06-14
+description: 'काण्व संहिता — अध्याय 39 मन्त्र सूची।'
+lastUpdated: 2026-06-17
 ---
 
 ## अध्याय 39 {#chapter-39}

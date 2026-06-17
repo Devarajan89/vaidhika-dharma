@@ -1,8 +1,9 @@
 // @ts-nocheck
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { samhitasSidebarGroup } from './src/data/samhitas-sidebar.mjs';
+import { samhitasSidebarGroup, brahmanamSidebarGroup, upanishadsSidebarGroup } from './src/data/samhitas-sidebar.mjs';
 
 const rigvedaMandalaRedirects = Object.fromEntries(
   Array.from({ length: 10 }, (_, index) => {
@@ -36,6 +37,8 @@ export default defineConfig({
   integrations: [
       starlight({
           title: 'Vaidhika Dharma',
+          description:
+              'Vedic mantras with svara, Rigveda and Yajurveda saṃhitās, nityakarma rituals, and Ṛgveda sūkta saṅgraha — Vaidhika Dharma.',
           favicon: '/images/favicon.svg',
           logo: {
               light: './src/assets/logo-light.svg',
@@ -49,6 +52,7 @@ export default defineConfig({
               }
           ],
           components: {
+              Head: './src/components/Head.astro',
               Hero: './src/components/Hero.astro',
               Sidebar: './src/components/Sidebar.astro',
               LastUpdated: './src/components/LastUpdated.astro',
@@ -71,7 +75,7 @@ export default defineConfig({
               {
                   label: 'नित्य कर्म​',
                   translations: {
-                      en: 'nitya karma​',
+                      en: 'Nityakarma',
                   },
                   items: [
                       {
@@ -85,7 +89,7 @@ export default defineConfig({
               {
                   label: 'वेद मन्त्राः',
                   translations: {
-                      en: 'veda mantrāḥ',
+                      en: 'Veda mantrāḥ',
                   },
                   items: [
                       {
@@ -98,9 +102,23 @@ export default defineConfig({
               {
                   label: 'संहिताः',
                   translations: {
-                      en: 'saṃhitāḥ',
+                      en: 'Saṃhitāḥ',
                   },
                   items: samhitasSidebarGroup.items,
+              },
+              {
+                  label: 'ब्राह्मणाः',
+                  translations: {
+                      en: 'Brāhmaṇāḥ',
+                  },
+                  items: brahmanamSidebarGroup.items,
+              },
+              {
+                  label: 'उपनिषदः',
+                  translations: {
+                      en: 'Upaniṣadaḥ',
+                  },
+                  items: upanishadsSidebarGroup.items,
               },
           ],
           customCss: ['./src/styles/global.css', './src/fonts/font-face.css'],
@@ -116,6 +134,9 @@ export default defineConfig({
               },
             },
           ],
+      }),
+      sitemap({
+          filter: (page) => !page.includes('/404'),
       }),
   ],
   vite: {

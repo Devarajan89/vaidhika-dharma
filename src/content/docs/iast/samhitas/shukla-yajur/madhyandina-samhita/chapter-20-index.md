@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 20 — Mantra Index'
+title: 'Adhyāya 20 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-20-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 20 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 20 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 20 {#chapter-20}

@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 6 — Mantra Index'
+title: 'Adhyāya 6 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-6-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 6 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 6 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 6 {#chapter-6}

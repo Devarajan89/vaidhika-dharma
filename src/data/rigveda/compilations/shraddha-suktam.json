@@ -1,0 +1,40 @@
+{
+  "id": "shraddha-suktam",
+  "sections": [
+    {
+      "header": "श्रद्धा सूक्त ५ श्रद्धा कामायनी।श्रधा । अनुष्टुप्।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 151,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 151,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 10,
+          "sukta": 151,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 10,
+          "sukta": 151,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 10,
+          "sukta": 151,
+          "verse": 5,
+          "label": 5
+        }
+      ]
+    }
+  ]
+}

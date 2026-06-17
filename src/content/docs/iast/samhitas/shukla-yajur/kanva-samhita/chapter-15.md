@@ -1,15 +1,15 @@
 ---
-title: 'Vājasaneyi Kanva Saṃhitā — Chapter 15 (35 mantras)'
+title: 'Vājasaneyi Saṃhitā (Kāṇva) — Chapter 15 (35 mantras)'
 slug: iast/kanva-samhita/chapter-15
 sidebar:
   label: '15 dhruvakṣitirdhruvayonirdhruvāsi dhruva'
   order: 15
 tableOfContents: false
-description: 'Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter 15'
-lastUpdated: 2026-06-14
+description: 'Śukla Yajur Veda — Vājasaneyi Saṃhitā (Kāṇva), Chapter 15'
+lastUpdated: 2026-06-17
 ---
 
-# Vājasaneyi Kanva Saṃhitā — Chapter 15
+# Vājasaneyi Saṃhitā (Kāṇva) — Chapter 15
 
 **atha pañcadaśo'dhyāyaḥ**
 
@@ -57,58 +57,46 @@ lastUpdated: 2026-06-14
 
 ---
 
-## Mantra 1 {#mantra-1}
-
-**Adhyāya:** 15 | **Mantra:** 1
+<a id="mantra-1"></a>
 
 dhru̱vakṣi̍tirdhru̱vayo̍nirdhru̱vāsi̍ dhru̱vaṃ yoni̱māsī̍da sādhu̱yā |
-ukhya̍sya ke̱tuṃ pra̍tha̱maṃ ju̍ṣā̱ṇāśvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍
+ukhya̍sya ke̱tuṃ pra̍tha̱maṃ ju̍ṣā̱ṇāśvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ ||15.1||
 
 ---
 
-## Mantra 2 {#mantra-2}
-
-**Adhyāya:** 15 | **Mantra:** 2
+<a id="mantra-2"></a>
 
 ku̱lā̱yinī̍ ghṛ̱tava̍tī̱ pura̍ndhiḥ syo̱ne sī̍da̱ sada̍ne pṛthi̱vyāḥ |
-a̱bhi tvā̍ ru̱drā vasa̍vo gṛṇantvi̱mā brahma̍ pīpihi̱ saubha̍gāyā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍
+a̱bhi tvā̍ ru̱drā vasa̍vo gṛṇantvi̱mā brahma̍ pīpihi̱ saubha̍gāyā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ ||15.2||
 
 ---
 
-## Mantra 3 {#mantra-3}
-
-**Adhyāya:** 15 | **Mantra:** 3
+<a id="mantra-3"></a>
 
 svai̱rdakṣai̱rdakṣa̍pite̱ha sī̍da de̱vānā̍ su̱mne bṛ̍ha̱te raṇā̍ya |
-pi̱tevai̍dhi sū̱nava̱ ā su̱śevā̍ svāve̱śā ta̱nvā̱ saṃvi̍śasvā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍
+pi̱tevai̍dhi sū̱nava̱ ā su̱śevā̍ svāve̱śā ta̱nvā̱ saṃvi̍śasvā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ ||15.3||
 
 ---
 
-## Mantra 4 {#mantra-4}
-
-**Adhyāya:** 15 | **Mantra:** 4
+<a id="mantra-4"></a>
 
 pṛ̱thi̱vyāḥ purī̍ṣama̱syapso̱ nāma̱ tāṃ tvā̱ viśve̍ a̱bhigṛ̍ṇantu de̱vāḥ |
-stoma̍pṛṣṭhā ghṛ̱tava̍tī̱ha sī̍da pra̱jāva̍da̱sme dravi̱ṇāya̍jasvā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍
+stoma̍pṛṣṭhā ghṛ̱tava̍tī̱ha sī̍da pra̱jāva̍da̱sme dravi̱ṇāya̍jasvā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ ||15.4||
 
 ---
 
-## Mantra 5 {#mantra-5}
-
-**Adhyāya:** 15 | **Mantra:** 5
+<a id="mantra-5"></a>
 
 adi̍tyāstvā pṛ̱ṣṭhe sā̍dayāmya̱ntari̍kṣasya dha̱rtrīṃ vi̱ṣṭambha̍nīṃ di̱śāmadhi̍patnī̱ṃ bhuva̍nānām |
 ū̱rmirdra̱pso a̱pāma̍si vi̱śvaka̍rmā ta̱ ṛṣi̍ra̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ |
 śu̱kraśca̱ śuci̍śca̱ graiṣmā̍ ṛ̱tū a̱gnera̍ntaḥśle̱ṣo̍'si|
 kalpe̍tā̱ṃ dyāvā̍pṛthi̱vī kalpa̍ntā̱māpa̱ oṣa̍dhaya̱ḥ kalpa̍ntāma̱gnaya̱ḥ pṛtha̱ṅ mama̱ jyaiṣṭhyā̍ya̱ savra̍tāḥ |
 ye a̱gnaya̱ḥ sama̍naso'nta̱rā dyāvā̍pṛthi̱vī i̱me | grai̱ṣmā̍ ṛ̱tū a̍bhi̱kalpa̍mānā̱ indra̍miva de̱vā a̍bhi̱saṃvi̍śantu̱
-tayā̍ de̱vata̍yāṅgira̱svad dhru̱ve sī̍datam
+tayā̍ de̱vata̍yāṅgira̱svad dhru̱ve sī̍datam ||15.5||
 
 ---
 
-## Mantra 6 {#mantra-6}
-
-**Adhyāya:** 15 | **Mantra:** 6
+<a id="mantra-6"></a>
 
 sa̱jūrṛ̱tubhi̍ḥ sa̱jūrvi̱dhābhi̍ḥ sa̱jūrde̱vaiḥ sa̱jūrde̱vairva̍yonā̱dhaiḥ |
 a̱gnaye̍ tvā vaiśvāna̱rāyā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ |
@@ -119,93 +107,73 @@ a̱gnaye̍ tvā vaiśvāna̱rāyā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā�
 sa̱jūrṛ̱tubhi̍ḥ sa̱jūrvi̱dhābhi̍ḥ sa̱jūrā̍di̱tyaiḥ sa̱jūrde̱vairva̍yonā̱dhaiḥ |
 a̱gnaye̍ tvā vaiśvāna̱rāyā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ |
 sa̱jūrṛ̱tubhi̍ḥ sa̱jūrvi̱dhābhi̍ḥ sa̱jūrviśvai̍rde̱vaiḥ sa̱jūrde̱vairva̍yonā̱dhaiḥ |
-a̱gnaye̍ tvā vaiśvāna̱rāyā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍
+a̱gnaye̍ tvā vaiśvāna̱rāyā̱śvinā̍dhva̱ryū sā̍dayatāmi̱ha tvā̍ ||15.6||
 
 ---
 
-## Mantra 7 {#mantra-7}
+<a id="mantra-7"></a>
 
-**Adhyāya:** 15 | **Mantra:** 7
-
-prā̱ṇaṃ me̍ pāhyapā̱naṃ me̍ pāhi vyā̱naṃ me̍ pāhi | cakṣu̍rma u̱rvyā vibhā̍hi̱ śrotra̍ṃ me ślokaya
+prā̱ṇaṃ me̍ pāhyapā̱naṃ me̍ pāhi vyā̱naṃ me̍ pāhi | cakṣu̍rma u̱rvyā vibhā̍hi̱ śrotra̍ṃ me ślokaya ||15.7||
 
 ---
 
-## Mantra 8 {#mantra-8}
+<a id="mantra-8"></a>
 
-**Adhyāya:** 15 | **Mantra:** 8
-
-a̱paḥ pi̱nvauṣa̍dhīrjinva dvi̱pāda̍va̱ catu̍ṣpāt pāhi | di̱vo vṛṣṭi̱mera̍ya
+a̱paḥ pi̱nvauṣa̍dhīrjinva dvi̱pāda̍va̱ catu̍ṣpāt pāhi | di̱vo vṛṣṭi̱mera̍ya ||15.8||
 
 ---
 
-## Mantra 9 {#mantra-9}
-
-**Adhyāya:** 15 | **Mantra:** 9
+<a id="mantra-9"></a>
 
 mū̱rdhā vaya̍ḥ pra̱jāpa̍ti̱śchanda̍ḥ kṣa̱traṃ vayo̱ maya̍ṃda̱ṃ chanda̍ḥ |
-vi̱ṣṭa̱mbho vayo'dhi̍pati̱śchando̍ vi̱śvaka̍rmā̱ vaya̍ḥ parame̱ṣṭhī chanda̍ḥ
+vi̱ṣṭa̱mbho vayo'dhi̍pati̱śchando̍ vi̱śvaka̍rmā̱ vaya̍ḥ parame̱ṣṭhī chanda̍ḥ ||15.9||
 
 ---
 
-## Mantra 10 {#mantra-10}
-
-**Adhyāya:** 15 | **Mantra:** 10
+<a id="mantra-10"></a>
 
 ba̱sto vayo̍ viva̱laṃ chando̱ vṛṣṇi̱rvayo̍ viśā̱laṃ chanda̍ḥ |
-puru̍ṣo̱ vaya̍sta̱ndraṃ chando̍ vyā̱ghro vayo'nā̍dhṛṣṭa̱ṃ chanda̍ḥ
+puru̍ṣo̱ vaya̍sta̱ndraṃ chando̍ vyā̱ghro vayo'nā̍dhṛṣṭa̱ṃ chanda̍ḥ ||15.10||
 
 ---
 
-## Mantra 11 {#mantra-11}
-
-**Adhyāya:** 15 | **Mantra:** 11
+<a id="mantra-11"></a>
 
 si̱ho vaya̍ścha̱diśchanda̍ḥ paṣṭha̱vāḍvayo̍ bṛha̱tī chanda̍ḥ |
-u̱kṣā vaya̍ḥ ka̱kupchanda̍ḥ ṛṣa̱bho vaya̍ḥ sa̱tobṛ̍hatī̱ chanda̍ḥ
+u̱kṣā vaya̍ḥ ka̱kupchanda̍ḥ ṛṣa̱bho vaya̍ḥ sa̱tobṛ̍hatī̱ chanda̍ḥ ||15.11||
 
 ---
 
-## Mantra 12 {#mantra-12}
-
-**Adhyāya:** 15 | **Mantra:** 12
+<a id="mantra-12"></a>
 
 a̱na̱ḍvānvaya̍ḥ pa̱ṅktiśchando̍ dhe̱nurvayo̱ jaga̍tī̱ chanda̍ḥ |
-tryavi̱rvaya̍stri̱ṣṭup chando̍ ditya̱vāḍvayo̍ vi̱rāṭ chanda̍ḥ
+tryavi̱rvaya̍stri̱ṣṭup chando̍ ditya̱vāḍvayo̍ vi̱rāṭ chanda̍ḥ ||15.12||
 
 ---
 
-## Mantra 13 {#mantra-13}
-
-**Adhyāya:** 15 | **Mantra:** 13
+<a id="mantra-13"></a>
 
 pañcā̍vi̱rvayo̍ gāya̱trī chanda̍striva̱tso vaya̍ u̱ṣṇik chanda̍ḥ |
-tu̱rya̱vāḍvayo̍'nu̱ṣṭupchando  lo̱kaṃ pṛ̍ṇa̱ tā a̱syendra̱ṃ viśvā̍ḥ
+tu̱rya̱vāḍvayo̍'nu̱ṣṭupchando  lo̱kaṃ pṛ̍ṇa̱ tā a̱syendra̱ṃ viśvā̍ḥ ||15.13||
 
 ---
 
-## Mantra 14 {#mantra-14}
+<a id="mantra-14"></a>
 
-**Adhyāya:** 15 | **Mantra:** 14
-
-indrā̍gnī̱ avya̍thamānā̱miṣṭa̍kāṃ dṛhataṃ yu̱vam | pṛ̱ṣṭhena̱ dyāvā̍pṛthi̱vī a̱ntari̍kṣaṃ ca̱ vibā̍dhase
+indrā̍gnī̱ avya̍thamānā̱miṣṭa̍kāṃ dṛhataṃ yu̱vam | pṛ̱ṣṭhena̱ dyāvā̍pṛthi̱vī a̱ntari̍kṣaṃ ca̱ vibā̍dhase ||15.14||
 
 ---
 
-## Mantra 15 {#mantra-15}
-
-**Adhyāya:** 15 | **Mantra:** 15
+<a id="mantra-15"></a>
 
 vi̱śvaka̍rmā tvā sādayatva̱ntari̍kṣasya pṛ̱ṣṭhe vyaca̍svatī̱ṃ pratha̍svatīm |
 a̱ntari̍kṣaṃ yacchā̱ntari̍kṣaṃ dṛhā̱ntari̍kṣa̱ṃ mā hi̍sīḥ |
 viśva̍smai prā̱ṇāyā̍pā̱nāya̍ vyā̱nāyo̍dā̱nāya̍ prati̱ṣṭhāyai̍ ca̱ritrā̍ya |
-vā̱yuṣṭvā̱bhipā̍tu ma̱hyā sva̱styā cha̱rdiṣā̱ śanta̍mena̱ tayā̍ de̱vata̍yāṅgira̱svad dhru̱vā sī̍da
+vā̱yuṣṭvā̱bhipā̍tu ma̱hyā sva̱styā cha̱rdiṣā̱ śanta̍mena̱ tayā̍ de̱vata̍yāṅgira̱svad dhru̱vā sī̍da ||15.15||
 
 ---
 
-## Mantra 16 {#mantra-16}
-
-**Adhyāya:** 15 | **Mantra:** 16
+<a id="mantra-16"></a>
 
 rājñya̍si̱ prācī̱ digvi̱rāl̤a̍si̱ dakṣi̍ṇā̱ dik sa̱mrāl̤a̍si pra̱tīcī̱dik
 sva̱rāl̤a̱syudī̍cī̱ digadhi̍patnyasi bṛha̱tī dik |
@@ -220,136 +188,106 @@ i̱ṣaśco̱rjaśca̍ śāra̱dā ṛ̱tū a̱gnera̍ntaḥśle̱ṣo̍'si̱  |
 kalpe̍tā̱ṃ dyāvā̍pṛthi̱vī kalpa̍ntā̱pa̱ oṣa̍dhaya̱ḥ kalpa̍ntāma̱gnaya̱ḥ pṛtha̱ṅ mama̱ jyaiṣṭhyā̍ya̱ savra̍tāḥ |
 ye a̱gnaya̱ḥ sama̍naso'nta̱rā dyāvā̍pṛthi̱vī i̱me  |
 śā̱ra̱dā ṛ̱tū a̍bhi̱kalpa̍mānā̱ indra̍miva de̱vā a̍bhi̱saṃvi̍śantu̱
-tayā̍ de̱vata̍yāṅgira̱svad dhru̱ve sī̍datam
+tayā̍ de̱vata̍yāṅgira̱svad dhru̱ve sī̍datam ||15.16||
 
 ---
 
-## Mantra 17 {#mantra-17}
-
-**Adhyāya:** 15 | **Mantra:** 17
+<a id="mantra-17"></a>
 
 āyu̍rme pāhi prā̱ṇaṃ me̍ pāhyapā̱naṃ me̍ pāhi vyā̱naṃ me̍ pāhi |
-cakṣu̍rme pāhi̱ śrotra̍ṃ me pāhi̱ vāca̍ṃ me pinva̱ mano̍ me jinvā̱tmāna̍ṃ me pāhi̱ jyoti̍rme yaccha
+cakṣu̍rme pāhi̱ śrotra̍ṃ me pāhi̱ vāca̍ṃ me pinva̱ mano̍ me jinvā̱tmāna̍ṃ me pāhi̱ jyoti̍rme yaccha ||15.17||
 
 ---
 
-## Mantra 18 {#mantra-18}
+<a id="mantra-18"></a>
 
-**Adhyāya:** 15 | **Mantra:** 18
-
-mā chanda̍ḥ pra̱mā chanda̍ḥ prati̱mā chando̍ asrī̱vaya̱śchanda̍ḥ | pa̱ṅktiśchanda̍ u̱ṣṇik chanda̍ḥ
+mā chanda̍ḥ pra̱mā chanda̍ḥ prati̱mā chando̍ asrī̱vaya̱śchanda̍ḥ | pa̱ṅktiśchanda̍ u̱ṣṇik chanda̍ḥ ||15.18||
 
 ---
 
-## Mantra 19 {#mantra-19}
+<a id="mantra-19"></a>
 
-**Adhyāya:** 15 | **Mantra:** 19
-
-bṛ̱ha̱tī chando̍'nu̱ṣṭup chando̍ vi̱rāṭ chando̍ gā̍ya̱trī chanda̍ḥ | tri̱ṣṭup chando̱ jaga̍tī̱ chanda̍ḥ
+bṛ̱ha̱tī chando̍'nu̱ṣṭup chando̍ vi̱rāṭ chando̍ gā̍ya̱trī chanda̍ḥ | tri̱ṣṭup chando̱ jaga̍tī̱ chanda̍ḥ ||15.19||
 
 ---
 
-## Mantra 20 {#mantra-20}
-
-**Adhyāya:** 15 | **Mantra:** 20
+<a id="mantra-20"></a>
 
 pṛ̱thi̱vī chando̱'ntari̍kṣa̱ṃ chando̱ dyau̱śchanda̱ḥ samā̱śchanda̍ḥ |
-nakṣa̍trāṇi̱ chando̱ vāk chanda̍ḥ
+nakṣa̍trāṇi̱ chando̱ vāk chanda̍ḥ ||15.20||
 
 ---
 
-## Mantra 21 {#mantra-21}
+<a id="mantra-21"></a>
 
-**Adhyāya:** 15 | **Mantra:** 21
-
-mana̱śchanda̍ḥ kṛ̱ṣiśchando̱ hira̍ṇya̱ṃ chando̱ gauśchanda̍ḥ | a̱jāchando'śva̱śchanda̍ḥ
+mana̱śchanda̍ḥ kṛ̱ṣiśchando̱ hira̍ṇya̱ṃ chando̱ gauśchanda̍ḥ | a̱jāchando'śva̱śchanda̍ḥ ||15.21||
 
 ---
 
-## Mantra 22 {#mantra-22}
-
-**Adhyāya:** 15 | **Mantra:** 22
+<a id="mantra-22"></a>
 
 a̱gnirde̱vatā̱ vāto̍ de̱vatā̱ sūryo̍ de̱vatā̍ ca̱ndramā̍ de̱vatā̍ | vasa̍vo de̱vatā̍ ru̱drā de̱vatā̍ |
 ā̱di̱tyā de̱vatā̍ ma̱ruto̍ de̱vatā̱ viśve̍ de̱vā de̱vatā̱ bṛha̱spati̍rde̱vatā̍ |
-indro̍ de̱vatā̱ varu̍ṇo de̱vatā̍
+indro̍ de̱vatā̱ varu̍ṇo de̱vatā̍ ||15.22||
 
 ---
 
-## Mantra 23 {#mantra-23}
+<a id="mantra-23"></a>
 
-**Adhyāya:** 15 | **Mantra:** 23
-
-mū̱rdhāsi̱ rāḍ dhru̱vāsi̍ dha̱ruṇā̍ dha̱rtrya̍si̱ dhara̍ṇī | āyu̍ṣe tvā̱ varca̍se tvā kṛ̱ṣyai tvā̱ kṣemā̍ya tvā
+mū̱rdhāsi̱ rāḍ dhru̱vāsi̍ dha̱ruṇā̍ dha̱rtrya̍si̱ dhara̍ṇī | āyu̍ṣe tvā̱ varca̍se tvā kṛ̱ṣyai tvā̱ kṣemā̍ya tvā ||15.23||
 
 ---
 
-## Mantra 24 {#mantra-24}
-
-**Adhyāya:** 15 | **Mantra:** 24
+<a id="mantra-24"></a>
 
 yantrī̱ rāḍ ya̱ntrya̍si̱ yama̍nī dhru̱vāsi̱ dhari̍trī | i̱ṣe tvo̱rje tvā̍ ra̱yyai tvā̱ poṣā̍ya tvā |
-lo̱kaṃ pṛ̍ṇa  tā a̱syedra̱ṃ viśvā̍ḥ
+lo̱kaṃ pṛ̍ṇa  tā a̱syedra̱ṃ viśvā̍ḥ ||15.24||
 
 ---
 
-## Mantra 25 {#mantra-25}
-
-**Adhyāya:** 15 | **Mantra:** 25
+<a id="mantra-25"></a>
 
 ā̱śustri̱vṛdbhā̱ntaḥ pa̍ñcada̱śo vyo̍mā saptada̱śo dha̱ruṇa̍ ekavi̱śaḥ pratū̍rtiraṣṭāda̱śaḥ |
-tapo̍ navada̱śo'bhīva̱rtaḥ sa̍vi̱śo varco̍ dvāvi̱śaḥ sa̱ṃbhara̍ṇastrayovi̱śo yoni̍ścaturvi̱śaḥ
+tapo̍ navada̱śo'bhīva̱rtaḥ sa̍vi̱śo varco̍ dvāvi̱śaḥ sa̱ṃbhara̍ṇastrayovi̱śo yoni̍ścaturvi̱śaḥ ||15.25||
 
 ---
 
-## Mantra 26 {#mantra-26}
-
-**Adhyāya:** 15 | **Mantra:** 26
+<a id="mantra-26"></a>
 
 garbhā̍ḥ pañcavi̱śaḥ oja̍striṇa̱vaḥ kratu̍rekatri̱śaḥ pra̍ti̱ṣṭhā tra̍yastri̱śo bra̱dhnasya̍ vi̱ṣṭapa̍ṃ catustri̱śaḥ |
-nāka̍ḥ ṣaṭtri̱śo vi̍va̱rto̍'ṣṭācatvāri̱śo dha̱rtraṃ ca̍tuṣṭo̱maḥ
+nāka̍ḥ ṣaṭtri̱śo vi̍va̱rto̍'ṣṭācatvāri̱śo dha̱rtraṃ ca̍tuṣṭo̱maḥ ||15.26||
 
 ---
 
-## Mantra 27 {#mantra-27}
-
-**Adhyāya:** 15 | **Mantra:** 27
+<a id="mantra-27"></a>
 
 a̱gnerbhā̱go̍'si dī̱kṣāyā̱ ādhi̍patya̱ṃ brahma̍ spṛ̱taṃ tri̱vṛtstoma̍ḥ |
-indra̍sya bhā̱go̍si̱ viṣṇo̱rādhi̍patyaṃ kṣa̱tra spṛ̱taṃ pa̍ñcada̱śa stoma̍ḥ
+indra̍sya bhā̱go̍si̱ viṣṇo̱rādhi̍patyaṃ kṣa̱tra spṛ̱taṃ pa̍ñcada̱śa stoma̍ḥ ||15.27||
 
 ---
 
-## Mantra 28 {#mantra-28}
-
-**Adhyāya:** 15 | **Mantra:** 28
+<a id="mantra-28"></a>
 
 nṛ̱cakṣa̍sāṃ bhā̱go̍'si dhā̱turādhi̍patyaṃ ja̱nitra̍ spṛ̱ta sa̍ptada̱śa stoma̍ḥ |
-mi̱trasya̍ bhā̱go̍'si̱ varu̍ṇa̱syādhi̍patyaṃ di̱vo vṛṣṭi̱rvāta̍ spṛ̱ta e̍kavi̱śa stoma̍ḥ
+mi̱trasya̍ bhā̱go̍'si̱ varu̍ṇa̱syādhi̍patyaṃ di̱vo vṛṣṭi̱rvāta̍ spṛ̱ta e̍kavi̱śa stoma̍ḥ ||15.28||
 
 ---
 
-## Mantra 29 {#mantra-29}
-
-**Adhyāya:** 15 | **Mantra:** 29
+<a id="mantra-29"></a>
 
 vasū̍nāṃ bhā̱go̍'si ru̱drāṇā̱mādhi̍patya̱ṃ catu̍ṣpāt spṛ̱taṃ ca̍turvi̱śa stoma̍ḥ |
-ā̱di̱tyānā̍ṃ bhā̱go̍'si ma̱rutā̱mādhi̍patya̱ṃ garbhā̍ spṛ̱tāḥ pa̍ñcavi̱śa stoma̍ḥ
+ā̱di̱tyānā̍ṃ bhā̱go̍'si ma̱rutā̱mādhi̍patya̱ṃ garbhā̍ spṛ̱tāḥ pa̍ñcavi̱śa stoma̍ḥ ||15.29||
 
 ---
 
-## Mantra 30 {#mantra-30}
-
-**Adhyāya:** 15 | **Mantra:** 30
+<a id="mantra-30"></a>
 
 adi̍terbhā̱go̍'si pū̱ṣṇa ādhi̍patya̱moja̍ spṛ̱taṃ tri̍ṇa̱va stoma̍ḥ |
-de̱vasya̍ savi̱turbhā̱go̍'si̱ bṛha̱spate̱rādhi̍patya sa̱mīcī̱rdiśa̍ spṛ̱tāśca̍tuṣṭo̱ma stoma̍ḥ
+de̱vasya̍ savi̱turbhā̱go̍'si̱ bṛha̱spate̱rādhi̍patya sa̱mīcī̱rdiśa̍ spṛ̱tāśca̍tuṣṭo̱ma stoma̍ḥ ||15.30||
 
 ---
 
-## Mantra 31 {#mantra-31}
-
-**Adhyāya:** 15 | **Mantra:** 31
+<a id="mantra-31"></a>
 
 yavā̍nāṃ bhā̱go̱'syaya̍vānā̱mādhi̍patyaṃ pra̱jā spṛ̱tāśca̍tuścatvāri̱śa stoma̍ḥ |
 ṛ̱bhū̱ṇāṃ bhā̱go̍'si̱ viśve̍ṣāṃ de̱vānā̱mādhi̍patyaṃ bhū̱ta spṛ̱taṃ tra̍yastri̱śa stoma̍ḥ |
@@ -357,52 +295,44 @@ saha̍śca saha̱sya̍śca̱ haima̍ntikā ṛ̱tū a̱gnera̍ntaḥ śle̱ṣo�
 kalpe̍tā̱ṃ dyāvā̍pṛthi̱vī kalpa̍ntā̱māpa̱ oṣa̍dhaya̱ḥ kalpa̍ntāma̱gnaya̱ḥ pṛtha̱ṅ mama̱ jyaiṣṭhyā̍ya̱ savra̍tāḥ |
 ye a̱gnaya̱ḥ sama̍naso'nta̱rā dyāvā̍pṛthi̱vī i̱me |
 hai̍mantikā ṛ̱tū a̍bhi̱kalpa̍mānā̱ indra̍miva de̱vā a̍bhi̱saṃvi̍śantu̱
-tayā̍ de̱vata̍yāṅgira̱svad dhru̱ve sī̍datam
+tayā̍ de̱vata̍yāṅgira̱svad dhru̱ve sī̍datam ||15.31||
 
 ---
 
-## Mantra 32 {#mantra-32}
-
-**Adhyāya:** 15 | **Mantra:** 32
+<a id="mantra-32"></a>
 
 eka̍yāstuvata pra̱jā a̍dhīyanta pra̱jāpa̍ti̱radhi̍patirāsītti̱sṛbhi̍rastuvata̱
 brahmā̍sṛjyata̱ brahma̍ṇa̱spati̱radhi̍patirāsīt |
 pa̱ñcabhi̍rastuvata bhū̱tānya̍sṛjyanta bhū̱tānā̱ṃ pati̱radhi̍patirāsītsa̱ptabhi̍rastuvata
-sapta ṛ̱ṣayo̍'sṛjyanta dhā̱tādhi̍patirāsīt
+sapta ṛ̱ṣayo̍'sṛjyanta dhā̱tādhi̍patirāsīt ||15.32||
 
 ---
 
-## Mantra 33 {#mantra-33}
-
-**Adhyāya:** 15 | **Mantra:** 33
+<a id="mantra-33"></a>
 
 na̱vabhi̍rastuvata pi̱taro̍'sṛjya̱ntādi̍ti̱radhi̍patnyāsīdekāda̱śabhi̍rastuvata
 ṛ̱tavo̍'sṛjyantārta̱vā adhi̍pataya āsan |
 tra̱yo̱da̱śabhi̍rastuvata̱ māsā̍ asṛjyanta saṃvatsa̱ro'dhi̍patirāsītpañcada̱śabhi̍rastuvata
-kṣa̱trama̍sṛjya̱tendro'dhi̍patirāsīt
+kṣa̱trama̍sṛjya̱tendro'dhi̍patirāsīt ||15.33||
 
 ---
 
-## Mantra 34 {#mantra-34}
-
-**Adhyāya:** 15 | **Mantra:** 34
+<a id="mantra-34"></a>
 
 sa̱ptada̱śabhi̍rastuvata grā̱myāḥ pa̱śavo̍'sṛjyanta̱ bṛha̱spati̱radhi̍patirāsīnnavada̱śabhi̍rastuvata
 śūdrā̱ryā a̍sṛjyetāmahorā̱tre adhi̍patnī āstām |
 eka̍viśatyāstuva̱taika̍śaphāḥ pa̱śavo̍'sṛjyanta̱ varu̱ṇo'dhi̍patirāsī̱t |
-trayo̍viśatyāstuvata kṣu̱drāḥ pa̱śavo̍'sṛjyanta pū̱ṣādhi̍patirāsīt
+trayo̍viśatyāstuvata kṣu̱drāḥ pa̱śavo̍'sṛjyanta pū̱ṣādhi̍patirāsīt ||15.34||
 
 ---
 
-## Mantra 35 {#mantra-35}
-
-**Adhyāya:** 15 | **Mantra:** 35
+<a id="mantra-35"></a>
 
 pañca̍viśatyāstuvatāra̱ṇyāḥ pa̱śavo̍'sṛjyanta vā̱yuradhi̍patirāsītsa̱ptavi̍śatyāstuvata̱
 dyāvā̍pṛthi̱vī vyai̍tā̱ṃ vasa̍vo ru̱drā ā̍di̱tyā a̍nu̱vyā̍ya̱sta e̱vādhi̍pataya āsan |
 nava̍viśatyāstuvata̱ vana̱spata̍yo'sṛjyanta̱ somo'dhi̍patirāsī̱deka̍triśatāstuvata
 pra̱jā a̍sṛjyanta̱ yavā̱ścāya̍vā̱ścādhi̍pataya āsan |
 traya̍striśatāstuvata bhū̱tānya̍śāmyanpra̱jāpa̍tiḥ parame̱ṣṭhyadhi̍patirāsīt |
-lo̱kaṃ pṛ̍ṇa̱ tā a̱syendra̱ṃ viśvā̍ḥ
+lo̱kaṃ pṛ̍ṇa̱ tā a̱syendra̱ṃ viśvā̍ḥ ||15.35||
 
 ---

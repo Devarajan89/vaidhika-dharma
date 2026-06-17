@@ -1,8 +1,14 @@
 ---
 import { Card } from '@astrojs/starlight/components';
-import { homeContent } from '../data/home';
+import type { HomeLocale } from '../data/home';
+import { getHomeContent } from '../data/home';
 
-const { aboutTitle, aboutBody } = homeContent;
+interface Props {
+	locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+const { aboutTitle, aboutBody } = getHomeContent(locale);
 ---
 
 <div class="about-card home-card">

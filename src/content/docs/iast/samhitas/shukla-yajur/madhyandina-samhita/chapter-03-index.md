@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 3 — Mantra Index'
+title: 'Adhyāya 3 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-3-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 3 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 3 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 3 {#chapter-3}

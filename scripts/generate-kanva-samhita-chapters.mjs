@@ -4,6 +4,7 @@ import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import * as inditrans from '@vm75/inditrans';
 import {
+	appendChapterMantraMarker,
 	extractFirstTwoWords,
 	formatMantraCountLabel,
 	parseYajurvedaChapter,
@@ -160,15 +161,15 @@ function formatCountLabel(count, locale) {
 function getChapterTitle(chapter, locale) {
 	if (chapter === 40) {
 		return locale === 'iast'
-			? 'Īśā Upaniṣad — Vājasaneyi Kanva Saṃhitā'
-			: 'ईशावास्योपनिषद् — शुक्लयजुः काण्वसंहिता';
+			? 'Īśā Upaniṣad — Vājasaneyi Saṃhitā (Kāṇva)'
+			: 'ईशावास्योपनिषद् — वाजसनेयी संहिता (काण्व)';
 	}
 
 	const ordinal = CHAPTER_ORDINALS[chapter];
 	if (locale === 'iast') {
-		return `Vājasaneyi Kanva Saṃhitā — Chapter ${chapter}`;
+		return `Vājasaneyi Saṃhitā (Kāṇva) — Chapter ${chapter}`;
 	}
-	return `शुक्लयजुः काण्वसंहिता — ${ordinal}ोऽध्यायः`;
+	return `वाजसनेयी संहिता (काण्व) — ${ordinal}ोऽध्यायः`;
 }
 
 /**
@@ -178,36 +179,15 @@ function getChapterTitle(chapter, locale) {
 function getChapterDescription(chapter, locale) {
 	if (chapter === 40) {
 		return locale === 'iast'
-			? 'Īśāvāsya Upaniṣad — Śukla Yajur Veda, Chapter 40'
-			: 'ईशावास्योपनिषद् — शुक्लयजुः काण्वसंहिता चत्वारिंशोऽध्यायः';
+			? 'Īśāvāsya Upaniṣad — Vājasaneyi Saṃhitā (Kāṇva), Chapter 40'
+			: 'ईशावास्योपनिषद् — वाजसनेयी संहिता (काण्व) चत्वारिंशोऽध्यायः';
 	}
 
 	const ordinal = CHAPTER_ORDINALS[chapter];
 	if (locale === 'iast') {
-		return `Śukla Yajur Veda — Vājasaneyi Kanva Saṃhitā, Chapter ${chapter}`;
+		return `Śukla Yajur Veda — Vājasaneyi Saṃhitā (Kāṇva), Chapter ${chapter}`;
 	}
-	return `शुक्लयजुः काण्वसंहिता — ${ordinal}ोऽध्यायः`;
-}
-
-/**
- * @param {number} chapterNumber
- * @param {number} verseNumber
- * @param {'root' | 'iast'} locale
- */
-function getVerseMeta(chapterNumber, verseNumber, locale) {
-	if (locale === 'iast') {
-		return `**Adhyāya:** ${chapterNumber} | **Mantra:** ${verseNumber}`;
-	}
-	return `**अध्याय:** ${chapterNumber} | **मन्त्र:** ${verseNumber}`;
-}
-
-/**
- * @param {number} verseNumber
- * @param {'root' | 'iast'} locale
- */
-function getVerseHeading(verseNumber, locale) {
-	const label = locale === 'iast' ? 'Mantra' : 'मन्त्र';
-	return `## ${label} ${verseNumber} {#mantra-${verseNumber}}`;
+	return `शुक्ल यजुर्वेद — वाजसनेयी संहिता (काण्व), ${ordinal}ोऽध्यायः`;
 }
 
 /**
@@ -282,16 +262,13 @@ function renderChapterMarkdown({
 				locale === 'iast'
 					? transliterateLine(cleanForTransliteration(verse.text)).trim()
 					: verse.text;
-			return [
-				getVerseHeading(verse.number, locale),
-				'',
-				getVerseMeta(chapterNumber, verse.number, locale),
-				'',
+			const markedText = appendChapterMantraMarker(
 				text,
-				'',
-				'---',
-				'',
-			].join('\n');
+				chapterNumber,
+				verse.number,
+				locale
+			);
+			return [`<a id="mantra-${verse.number}"></a>`, '', markedText, '', '---', ''].join('\n');
 		})
 		.join('\n');
 
@@ -346,12 +323,12 @@ function renderChapterMarkdown({
 function renderIndexMarkdown({ locale, slug, title, description, outputPath, chapters }) {
 	const intro =
 		locale === 'iast'
-			? 'Browse all adhyāyas of the Kanva Saṃhitā. Select an adhyāya to view its mantra index.'
-			: 'काण्वसंहितायाः चत्वारिंशत् अध्यायाः। मन्त्र सूची द्रष्टुं अध्यायं चिनुत।';
+			? 'Vājasaneyi Saṃhitā (Kāṇva) — forty chapters. Select a chapter for the mantra index.'
+			: 'वाजसनेयी संहिता (काण्व) — चत्वारिंशत् अध्यायाः। मन्त्र सूची द्रष्टुं अध्यायं चिनुत।';
 
 	const overviewHeader =
 		locale === 'iast'
-			? '| Adhyāya | Mantras | Index |'
+			? '| Adhyāya | Mantrāḥ | Sūcī |'
 			: '| अध्याय | मन्त्राः | सूची |';
 
 	const frontmatter = [
@@ -359,7 +336,7 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		`title: ${yamlQuote(title)}`,
 		`slug: ${slug}`,
 		'sidebar:',
-		`  label: ${yamlQuote(locale === 'iast' ? 'Kanva Saṃhitā' : 'काण्व संहिता')}`,
+		`  label: ${yamlQuote(locale === 'iast' ? 'Vājasaneyi saṃhitā (Kāṇva)' : 'वाजसनेयी संहिता (काण्व)')}`,
 		`  order: 1`,
 		'tableOfContents: false',
 		`description: ${yamlQuote(description)}`,
@@ -376,7 +353,7 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 				return `| ${chapter.number} | ${missingLabel} | ${missingLabel} |`;
 			}
 			const mantraLabel = String(chapter.parsed.verseCount);
-			const indexLabel = locale === 'iast' ? 'Mantra index' : 'मन्त्र सूची';
+			const indexLabel = locale === 'iast' ? 'Mantra sūcī' : 'मन्त्र सूची';
 			return `| [${chapter.number}](${fileName}/) | ${mantraLabel} | [${indexLabel}](${indexFile}/) |`;
 		})
 		.join('\n');
@@ -388,7 +365,7 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		'',
 		intro,
 		'',
-		locale === 'iast' ? '## Adhyāyas' : '## अध्यायाः',
+		locale === 'iast' ? '## Adhyāyāḥ' : '## अध्यायाः',
 		'',
 		overviewHeader,
 		locale === 'iast' ? '|--------:|--------:|:-----|' : '|--------:|--------:|:----|',
@@ -414,12 +391,12 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		const slugPrefix = locale === 'iast' ? 'iast/kanva-samhita' : 'kanva-samhita';
 		const indexFrontmatter = [
 			'---',
-			`title: ${yamlQuote(locale === 'iast' ? `Adhyāya ${chapter.number} — Mantra Index` : `अध्याय ${chapter.number} — मन्त्र सूची`)}`,
+			`title: ${yamlQuote(locale === 'iast' ? `Adhyāya ${chapter.number} — Mantra sūcī` : `अध्याय ${chapter.number} — मन्त्र सूची`)}`,
 			`slug: ${slugPrefix}/chapter-${chapter.number}-index`,
 			'sidebar:',
 			'  hidden: true',
 			'tableOfContents: false',
-			`description: ${yamlQuote(locale === 'iast' ? `Kanva Saṃhitā — Adhyāya ${chapter.number} mantra index.` : `काण्व संहिता — अध्याय ${chapter.number} मन्त्र सूची।`)}`,
+			`description: ${yamlQuote(locale === 'iast' ? `Kāṇva saṃhitā — adhyāya ${chapter.number} mantra sūcī.` : `काण्व संहिता — अध्याय ${chapter.number} मन्त्र सूची।`)}`,
 			`lastUpdated: ${LAST_UPDATED}`,
 			'---',
 		].join('\n');
@@ -616,11 +593,11 @@ for (const locale of ['root', 'iast']) {
 		locale,
 		slug: isIast ? 'iast/kanva-samhita' : 'kanva-samhita',
 		title: isIast
-			? 'Vājasaneyi Kanva Saṃhitā — Index'
-			: 'शुक्लयजुः काण्वसंहिता — सूची',
+			? 'Śuklayajuḥ Vājasaneyi Saṃhitā (Kāṇva) — Sūcī'
+			: 'वाजसनेयी संहिता (शुक्ल यजुः — काण्व) — सूची',
 		description: isIast
-			? 'Complete index of the Vājasaneyi Kanva Saṃhitā (40 adhyāyas).'
-			: 'शुक्लयजुः काण्वसंहितायाः चत्वारिंशत् अध्यायानां सूची।',
+			? 'Vājasaneyi saṃhitā (Kāṇva) — index of forty chapters, Śukla Yajur Veda.'
+			: 'वाजसनेयी संहिता (शुक्ल यजुः — काण्व) — चत्वारिंशत् अध्यायानां सूची।',
 		outputPath: path.join(isIast ? IAST_CHAPTERS_DIR : ROOT_CHAPTERS_DIR, 'index.md'),
 		chapters: chapterSummaries,
 	});

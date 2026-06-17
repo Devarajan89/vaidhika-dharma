@@ -1,11 +1,11 @@
 ---
-title: 'Adhyāya 39 — Mantra Index'
+title: 'Adhyāya 39 — Mantra sūcī'
 slug: iast/madhyandina-samhita/chapter-39-index
 sidebar:
   hidden: true
 tableOfContents: false
-description: 'Madhyandina Saṃhitā — Adhyāya 39 mantra index.'
-lastUpdated: 2026-06-14
+description: 'Madhyandina saṃhitā — adhyāya 39 mantra sūcī.'
+lastUpdated: 2026-06-17
 ---
 
 ## Adhyāya 39 {#chapter-39}

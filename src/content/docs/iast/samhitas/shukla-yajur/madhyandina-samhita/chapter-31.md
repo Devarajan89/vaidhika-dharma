@@ -6,7 +6,7 @@ sidebar:
   order: 31
 tableOfContents: false
 description: 'Śukla Yajur Veda — Vājasaneyi Madhyandina Saṃhitā, Chapter 31'
-lastUpdated: 2026-06-14
+lastUpdated: 2026-06-17
 ---
 
 # Vājasaneyi Madhyandina Saṃhitā — Chapter 31
@@ -44,199 +44,155 @@ lastUpdated: 2026-06-14
 
 ---
 
-## Mantra 1 {#mantra-1}
+<a id="mantra-1"></a>
 
-**Adhyāya:** 31 | **Mantra:** 1
-
-sa bhūmi sa̱rvata̍ spṛ̱tvā'tya̍tiṣṭhaddaśāṅgu̱lam
+sa bhūmi sa̱rvata̍ spṛ̱tvā'tya̍tiṣṭhaddaśāṅgu̱lam ||31.1||
 
 ---
 
-## Mantra 2 {#mantra-2}
-
-**Adhyāya:** 31 | **Mantra:** 2
+<a id="mantra-2"></a>
 
 puru̍ṣa e̱veda sarva̱ṃ yadbhū̱taṃ yacca̍ bhā̱vya̱m |
-u̱tāmṛ̍ta̱tvasyeśā̍no̱ yadanne̍nāti̱roha̍ti
+u̱tāmṛ̍ta̱tvasyeśā̍no̱ yadanne̍nāti̱roha̍ti ||31.2||
 
 ---
 
-## Mantra 3 {#mantra-3}
-
-**Adhyāya:** 31 | **Mantra:** 3
+<a id="mantra-3"></a>
 
 e̱tāvā̍nasya mahi̱māto̱ jyāyā̍m̐śca̱ pūru̍ṣaḥ |
-pādo̍'sya̱ viśvā̍ bhū̱tāni̍ tri̱pāda̍syā̱mṛta̍ṃ di̱vi
+pādo̍'sya̱ viśvā̍ bhū̱tāni̍ tri̱pāda̍syā̱mṛta̍ṃ di̱vi ||31.3||
 
 ---
 
-## Mantra 4 {#mantra-4}
-
-**Adhyāya:** 31 | **Mantra:** 4
+<a id="mantra-4"></a>
 
 tri̱pādū̱rdhva udai̱tpuru̍ṣa̱: pādo̍'sye̱hābha̍va̱t puna̍: |
-tato̱ viṣva̱ṅ vya̱krāmatsāśanānaśa̱ne a̱bhi
+tato̱ viṣva̱ṅ vya̱krāmatsāśanānaśa̱ne a̱bhi ||31.4||
 
 ---
 
-## Mantra 5 {#mantra-5}
-
-**Adhyāya:** 31 | **Mantra:** 5
+<a id="mantra-5"></a>
 
 tato̍ vi̱rāḍa̍jāyata vi̱rājo̱ adhi̱ pūru̍ṣaḥ |
-sa jā̱to atya̍ricyata pa̱ścādbhūmi̱matho̍ pu̱raḥ
+sa jā̱to atya̍ricyata pa̱ścādbhūmi̱matho̍ pu̱raḥ ||31.5||
 
 ---
 
-## Mantra 6 {#mantra-6}
-
-**Adhyāya:** 31 | **Mantra:** 6
+<a id="mantra-6"></a>
 
 tasmā̍dya̱jñātsa̍rva̱huta̱: sambhṛ̍taṃ pṛṣadā̱jyam |
-pa̱śūm̐stām̐śca̍kre vāya̱vyā̱nāra̱ṇyā grā̱myāśca̱ ye
+pa̱śūm̐stām̐śca̍kre vāya̱vyā̱nāra̱ṇyā grā̱myāśca̱ ye ||31.6||
 
 ---
 
-## Mantra 7 {#mantra-7}
-
-**Adhyāya:** 31 | **Mantra:** 7
+<a id="mantra-7"></a>
 
 tasmā̍dya̱jñāt sa̍rva̱huta̱ ṛca̱: sāmā̍ni jajñire |
-chandāsi jajñire̱ tasmā̱dyaju̱stasmā̍dajāyata
+chandāsi jajñire̱ tasmā̱dyaju̱stasmā̍dajāyata ||31.7||
 
 ---
 
-## Mantra 8 {#mantra-8}
-
-**Adhyāya:** 31 | **Mantra:** 8
+<a id="mantra-8"></a>
 
 tasmā̱daśvā̍ ajāyanta̱ ye ke co̍bha̱yāda̍taḥ |
-gāvo̍ ha jajñire̱ tasmā̱ttasmā̍jjā̱tā a̍jā̱vaya̍:
+gāvo̍ ha jajñire̱ tasmā̱ttasmā̍jjā̱tā a̍jā̱vaya̍: ||31.8||
 
 ---
 
-## Mantra 9 {#mantra-9}
-
-**Adhyāya:** 31 | **Mantra:** 9
+<a id="mantra-9"></a>
 
 taṃ ya̱jñaṃ ba̱rhiṣi̱ praukṣa̱n puru̍ṣaṃ jā̱tama̍gra̱taḥ |
-tena̍ de̱vā a̍yajanta sā̱dhyā ṛṣa̍yaśca̱ ye
+tena̍ de̱vā a̍yajanta sā̱dhyā ṛṣa̍yaśca̱ ye ||31.9||
 
 ---
 
-## Mantra 10 {#mantra-10}
-
-**Adhyāya:** 31 | **Mantra:** 10
+<a id="mantra-10"></a>
 
 yatpuru̍ṣa̱ṃ vyada̍dhuḥ kati̱dhā vya̍kalpayan |
-mukha̱ṃ kima̍syāsī̱t kiṃ bā̱hū kimū̱rū pādā̍ ucyete
+mukha̱ṃ kima̍syāsī̱t kiṃ bā̱hū kimū̱rū pādā̍ ucyete ||31.10||
 
 ---
 
-## Mantra 11 {#mantra-11}
-
-**Adhyāya:** 31 | **Mantra:** 11
+<a id="mantra-11"></a>
 
 brā̱hma̱ṇo̱'sya̱ mukha̍māsīdbā̱hū rā̍ja̱nya̱: kṛ̱taḥ |
-ū̱rū tada̍sya̱ yadvai̍śyaḥ pa̱dbhyā śū̱dro a̍jāyata
+ū̱rū tada̍sya̱ yadvai̍śyaḥ pa̱dbhyā śū̱dro a̍jāyata ||31.11||
 
 ---
 
-## Mantra 12 {#mantra-12}
-
-**Adhyāya:** 31 | **Mantra:** 12
+<a id="mantra-12"></a>
 
 ca̱ndramā̱ mana̍so jā̱taścakṣo̱ḥ sūryo̍ ajāyata |
-śrotrā̍dvā̱yuśca̍ prā̱ṇaśca̱ mukhā̍da̱gnira̍jāyata
+śrotrā̍dvā̱yuśca̍ prā̱ṇaśca̱ mukhā̍da̱gnira̍jāyata ||31.12||
 
 ---
 
-## Mantra 13 {#mantra-13}
-
-**Adhyāya:** 31 | **Mantra:** 13
+<a id="mantra-13"></a>
 
 nābhyā̍ āsīda̱ntari̍kṣa śī̱rṣṇo dyau̱: sama̍vartata |
-pa̱dbhyāṃ bhūmi̱rdiśa̱: śrotrā̱ttathā̍ lo̱kām̐2 a̍kalpayan
+pa̱dbhyāṃ bhūmi̱rdiśa̱: śrotrā̱ttathā̍ lo̱kām̐2 a̍kalpayan ||31.13||
 
 ---
 
-## Mantra 14 {#mantra-14}
-
-**Adhyāya:** 31 | **Mantra:** 14
+<a id="mantra-14"></a>
 
 yatpuru̍ṣeṇa ha̱viṣā̍ de̱vā ya̱jñamata̍nvata |
-va̱sa̱nto̱'syāsī̱dājya̍ṃ grī̱ṣma i̱dhmaḥ śa̱raddha̱viḥ
+va̱sa̱nto̱'syāsī̱dājya̍ṃ grī̱ṣma i̱dhmaḥ śa̱raddha̱viḥ ||31.14||
 
 ---
 
-## Mantra 15 {#mantra-15}
-
-**Adhyāya:** 31 | **Mantra:** 15
+<a id="mantra-15"></a>
 
 sa̱ptāsyā̍san pari̱dhaya̱striḥ sa̱pta sa̱midha̍: kṛ̱tāḥ |
-de̱vā yadya̱jñaṃ ta̍nvā̱nā aba̍dhna̱n puru̍ṣaṃ pa̱śum
+de̱vā yadya̱jñaṃ ta̍nvā̱nā aba̍dhna̱n puru̍ṣaṃ pa̱śum ||31.15||
 
 ---
 
-## Mantra 16 {#mantra-16}
-
-**Adhyāya:** 31 | **Mantra:** 16
+<a id="mantra-16"></a>
 
 ya̱jñena̍ ya̱jñama̍yajanta de̱vāstāni̱ dharmā̍ṇi pratha̱mānyā̍san |
-te ha̱ nāka̍ṃ mahi̱māna̍: sacanta̱ yatra̱ pūrve̍ sā̱dhyāḥ santi̍ de̱vāḥ
+te ha̱ nāka̍ṃ mahi̱māna̍: sacanta̱ yatra̱ pūrve̍ sā̱dhyāḥ santi̍ de̱vāḥ ||31.16||
 
 ---
 
-## Mantra 17 {#mantra-17}
-
-**Adhyāya:** 31 | **Mantra:** 17
+<a id="mantra-17"></a>
 
 a̱dbhyaḥ sambhṛ̍taḥ pṛthivyai̱ rasā̍cca vi̱śvaka̍rmaṇa̱: sama̍varta̱tāgre̍ |
-tasya̱ tvaṣṭā̍ vi̱dadha̍drū̱pame̍ti̱ tanmartya̍sya deva̱tvamā̱jāna̱magre̍
+tasya̱ tvaṣṭā̍ vi̱dadha̍drū̱pame̍ti̱ tanmartya̍sya deva̱tvamā̱jāna̱magre̍ ||31.17||
 
 ---
 
-## Mantra 18 {#mantra-18}
-
-**Adhyāya:** 31 | **Mantra:** 18
+<a id="mantra-18"></a>
 
 vedā̱hame̱taṃ puru̍ṣaṃ ma̱hānta̍mādi̱tyava̍rṇa̱ṃ tama̍saḥ pa̱rastā̍t |
-tame̱va vi̍di̱tvāti̍ mṛ̱tyume̍ti̱ nānyaḥ panthā̍ vidya̱te'ya̍nāya
+tame̱va vi̍di̱tvāti̍ mṛ̱tyume̍ti̱ nānyaḥ panthā̍ vidya̱te'ya̍nāya ||31.18||
 
 ---
 
-## Mantra 19 {#mantra-19}
-
-**Adhyāya:** 31 | **Mantra:** 19
+<a id="mantra-19"></a>
 
 pra̱jāpa̍tiśca̱rati̱ garbhe̍ a̱ntarajā̍yamāno bahu̱dhā vi jā̍yate |
-tasya̱ yoni̱ṃ pari̍ paśyanti̱ dhīrā̱stasmi̍n ha tasthu̱rbhuva̍nāni̱ viśvā̍
+tasya̱ yoni̱ṃ pari̍ paśyanti̱ dhīrā̱stasmi̍n ha tasthu̱rbhuva̍nāni̱ viśvā̍ ||31.19||
 
 ---
 
-## Mantra 20 {#mantra-20}
-
-**Adhyāya:** 31 | **Mantra:** 20
+<a id="mantra-20"></a>
 
 yo de̱vebhya̍ ā̱tapa̍ti̱ yo de̱vānā̍ṃ pu̱rohi̍taḥ |
-pūrvo̱ yo de̱vebhyo̍ jā̱to namo̍ ru̱cāya̱ brāhma̍ye
+pūrvo̱ yo de̱vebhyo̍ jā̱to namo̍ ru̱cāya̱ brāhma̍ye ||31.20||
 
 ---
 
-## Mantra 21 {#mantra-21}
-
-**Adhyāya:** 31 | **Mantra:** 21
+<a id="mantra-21"></a>
 
 ru̱caṃ brā̱hmyaṃ ja̱naya̍nto de̱vā agre̱ tada̍bruvan |
-yastvai̱vaṃ brā̍hma̱ṇo vi̱dyāttasya̍ de̱vā a̍sa̱n vaśe̍
+yastvai̱vaṃ brā̍hma̱ṇo vi̱dyāttasya̍ de̱vā a̍sa̱n vaśe̍ ||31.21||
 
 ---
 
-## Mantra 22 {#mantra-22}
-
-**Adhyāya:** 31 | **Mantra:** 22
+<a id="mantra-22"></a>
 
 śrīśca̍ te la̱kṣmīśca̱ patnyā̍vahorā̱tre pā̱rśve nakṣa̍trāṇi rū̱pama̱śvinau̱ vyātta̍m |
-i̱ṣṇanni̍ṣāṇā̱muṃ ma̍ iṣāṇa sarvalo̱kaṃ ma̍ iṣāṇa
+i̱ṣṇanni̍ṣāṇā̱muṃ ma̍ iṣāṇa sarvalo̱kaṃ ma̍ iṣāṇa ||31.22||
 
 ---

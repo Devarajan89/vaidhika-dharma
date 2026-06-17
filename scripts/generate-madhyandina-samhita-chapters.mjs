@@ -4,6 +4,7 @@ import { spawnSync } from 'child_process';
 import { fileURLToPath } from 'url';
 import * as inditrans from '@vm75/inditrans';
 import {
+	appendChapterMantraMarker,
 	extractFirstTwoWords,
 	formatMantraCountLabel,
 	parseYajurvedaChapter,
@@ -161,15 +162,15 @@ function formatCountLabel(count, locale) {
 function getChapterTitle(chapter, locale) {
 	if (chapter === 40) {
 		return locale === 'iast'
-			? 'Īśā Upaniṣad — Vājasaneyi Madhyandina Saṃhitā'
-			: 'ईशावास्योपनिषद् — शुक्लयजुः माध्यन्दिनसंहिता';
+			? 'Īśā Upaniṣad — Vājasaneyi Saṃhitā (Mādhyandina)'
+			: 'ईशावास्योपनिषद् — वाजसनेयी संहिता (माध्यन्दिन)';
 	}
 
 	const ordinal = CHAPTER_ORDINALS[chapter];
 	if (locale === 'iast') {
-		return `Vājasaneyi Madhyandina Saṃhitā — Chapter ${chapter}`;
+		return `Vājasaneyi Saṃhitā (Mādhyandina) — Chapter ${chapter}`;
 	}
-	return `शुक्लयजुः माध्यन्दिनसंहिता — ${ordinal}ोऽध्यायः`;
+	return `वाजसनेयी संहिता (माध्यन्दिन) — ${ordinal}ोऽध्यायः`;
 }
 
 /**
@@ -179,36 +180,15 @@ function getChapterTitle(chapter, locale) {
 function getChapterDescription(chapter, locale) {
 	if (chapter === 40) {
 		return locale === 'iast'
-			? 'Īśāvāsya Upaniṣad — Śukla Yajur Veda, Madhyandina Chapter 40'
-			: 'ईशावास्योपनिषद् — शुक्लयजुः माध्यन्दिनसंहिता चत्वारिंशोऽध्यायः';
+			? 'Īśāvāsya Upaniṣad — Vājasaneyi Saṃhitā (Mādhyandina), Chapter 40'
+			: 'ईशावास्योपनिषद् — वाजसनेयी संहिता (माध्यन्दिन) चत्वारिंशोऽध्यायः';
 	}
 
 	const ordinal = CHAPTER_ORDINALS[chapter];
 	if (locale === 'iast') {
-		return `Śukla Yajur Veda — Vājasaneyi Madhyandina Saṃhitā, Chapter ${chapter}`;
+		return `Śukla Yajur Veda — Vājasaneyi Saṃhitā (Mādhyandina), Chapter ${chapter}`;
 	}
-	return `शुक्लयजुः माध्यन्दिनसंहिता — ${ordinal}ोऽध्यायः`;
-}
-
-/**
- * @param {number} chapterNumber
- * @param {number} verseNumber
- * @param {'root' | 'iast'} locale
- */
-function getVerseMeta(chapterNumber, verseNumber, locale) {
-	if (locale === 'iast') {
-		return `**Adhyāya:** ${chapterNumber} | **Mantra:** ${verseNumber}`;
-	}
-	return `**अध्याय:** ${chapterNumber} | **मन्त्र:** ${verseNumber}`;
-}
-
-/**
- * @param {number} verseNumber
- * @param {'root' | 'iast'} locale
- */
-function getVerseHeading(verseNumber, locale) {
-	const label = locale === 'iast' ? 'Mantra' : 'मन्त्र';
-	return `## ${label} ${verseNumber} {#mantra-${verseNumber}}`;
+	return `शुक्ल यजुर्वेद — वाजसनेयी संहिता (माध्यन्दिन), ${ordinal}ोऽध्यायः`;
 }
 
 /**
@@ -283,16 +263,13 @@ function renderChapterMarkdown({
 				locale === 'iast'
 					? transliterateLine(cleanForTransliteration(verse.text)).trim()
 					: verse.text;
-			return [
-				getVerseHeading(verse.number, locale),
-				'',
-				getVerseMeta(chapterNumber, verse.number, locale),
-				'',
+			const markedText = appendChapterMantraMarker(
 				text,
-				'',
-				'---',
-				'',
-			].join('\n');
+				chapterNumber,
+				verse.number,
+				locale
+			);
+			return [`<a id="mantra-${verse.number}"></a>`, '', markedText, '', '---', ''].join('\n');
 		})
 		.join('\n');
 
@@ -347,12 +324,12 @@ function renderChapterMarkdown({
 function renderIndexMarkdown({ locale, slug, title, description, outputPath, chapters }) {
 	const intro =
 		locale === 'iast'
-			? 'Browse all adhyāyas of the Madhyandina Saṃhitā. Select an adhyāya to view its mantra index.'
-			: 'माध्यन्दिनसंहितायाः चत्वारिंशत् अध्यायाः। मन्त्र सूची द्रष्टुं अध्यायं चिनुत।';
+			? 'Vājasaneyi Saṃhitā (Mādhyandina) — forty chapters. Select a chapter for the mantra index.'
+			: 'वाजसनेयी संहिता (माध्यन्दिन) — चत्वारिंशत् अध्यायाः। मन्त्र सूची द्रष्टुं अध्यायं चिनुत।';
 
 	const overviewHeader =
 		locale === 'iast'
-			? '| Adhyāya | Mantras | Index |'
+			? '| Adhyāya | Mantrāḥ | Sūcī |'
 			: '| अध्याय | मन्त्राः | सूची |';
 
 	const frontmatter = [
@@ -360,7 +337,7 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		`title: ${yamlQuote(title)}`,
 		`slug: ${slug}`,
 		'sidebar:',
-		`  label: ${yamlQuote(locale === 'iast' ? 'Madhyandina Saṃhitā' : 'माध्यन्दिन संहिता')}`,
+		`  label: ${yamlQuote(locale === 'iast' ? 'Vājasaneyi saṃhitā (Mādhyandina)' : 'वाजसनेयी संहिता (माध्यन्दिन)')}`,
 		`  order: 2`,
 		'tableOfContents: false',
 		`description: ${yamlQuote(description)}`,
@@ -377,7 +354,7 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 				return `| ${chapter.number} | ${missingLabel} | ${missingLabel} |`;
 			}
 			const mantraLabel = String(chapter.parsed.verseCount);
-			const indexLabel = locale === 'iast' ? 'Mantra index' : 'मन्त्र सूची';
+			const indexLabel = locale === 'iast' ? 'Mantra sūcī' : 'मन्त्र सूची';
 			return `| [${chapter.number}](${fileName}/) | ${mantraLabel} | [${indexLabel}](${indexFile}/) |`;
 		})
 		.join('\n');
@@ -389,7 +366,7 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		'',
 		intro,
 		'',
-		locale === 'iast' ? '## Adhyāyas' : '## अध्यायाः',
+		locale === 'iast' ? '## Adhyāyāḥ' : '## अध्यायाः',
 		'',
 		overviewHeader,
 		locale === 'iast' ? '|--------:|--------:|:-----|' : '|--------:|--------:|:----|',
@@ -415,12 +392,12 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		const slugPrefix = locale === 'iast' ? 'iast/madhyandina-samhita' : 'madhyandina-samhita';
 		const indexFrontmatter = [
 			'---',
-			`title: ${yamlQuote(locale === 'iast' ? `Adhyāya ${chapter.number} — Mantra Index` : `अध्याय ${chapter.number} — मन्त्र सूची`)}`,
+			`title: ${yamlQuote(locale === 'iast' ? `Adhyāya ${chapter.number} — Mantra sūcī` : `अध्याय ${chapter.number} — मन्त्र सूची`)}`,
 			`slug: ${slugPrefix}/chapter-${chapter.number}-index`,
 			'sidebar:',
 			'  hidden: true',
 			'tableOfContents: false',
-			`description: ${yamlQuote(locale === 'iast' ? `Madhyandina Saṃhitā — Adhyāya ${chapter.number} mantra index.` : `माध्यन्दिन संहिता — अध्याय ${chapter.number} मन्त्र सूची।`)}`,
+			`description: ${yamlQuote(locale === 'iast' ? `Madhyandina saṃhitā — adhyāya ${chapter.number} mantra sūcī.` : `माध्यन्दिन संहिता — अध्याय ${chapter.number} मन्त्र सूची।`)}`,
 			`lastUpdated: ${LAST_UPDATED}`,
 			'---',
 		].join('\n');
@@ -619,11 +596,11 @@ for (const locale of ['root', 'iast']) {
 		locale,
 		slug: isIast ? 'iast/madhyandina-samhita' : 'madhyandina-samhita',
 		title: isIast
-			? 'Vājasaneyi Madhyandina Saṃhitā — Index'
-			: 'शुक्लयजुः माध्यन्दिनसंहिता — सूची',
+			? 'Śuklayajuḥ Vājasaneyi Saṃhitā (Mādhyandina) — Sūcī'
+			: 'वाजसनेयी संहिता (शुक्ल यजुः — माध्यन्दिन) — सूची',
 		description: isIast
-			? 'Complete index of the Vājasaneyi Madhyandina Saṃhitā (40 adhyāyas).'
-			: 'शुक्लयजुः माध्यन्दिनसंहितायाः चत्वारिंशत् अध्यायानां सूची।',
+			? 'Vājasaneyi saṃhitā (Mādhyandina) — index of forty chapters, Śukla Yajur Veda.'
+			: 'वाजसनेयी संहिता (शुक्ल यजुः — माध्यन्दिन) — चत्वारिंशत् अध्यायानां सूची।',
 		outputPath: path.join(isIast ? IAST_CHAPTERS_DIR : ROOT_CHAPTERS_DIR, 'index.md'),
 		chapters: chapterSummaries,
 	});
