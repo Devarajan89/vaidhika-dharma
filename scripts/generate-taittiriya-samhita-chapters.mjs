@@ -197,7 +197,8 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 	const sections = TAITTIRIYA_KANDAS.map((kandaInfo) => {
 		const kandaChapters = chapters.filter((chapter) => chapter.kanda === kandaInfo.kanda);
 		const kandaTitle = isIast ? kandaInfo.iastLabel : kandaInfo.rootLabel;
-		const kandaLink = `kanda-${kandaInfo.kanda}`;
+		const basePath = isIast ? '/iast/taittiriya-samhita' : '/taittiriya-samhita';
+		const kandaLink = `${basePath}/kanda-${kandaInfo.kanda}`;
 		const overviewHeader = isIast
 			? '| Prapāṭhaka | Anuvākāḥ | Read |'
 			: '| प्रपाठक | अनुवाकाः | पाठ |';

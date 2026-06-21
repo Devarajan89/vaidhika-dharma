@@ -1,0 +1,85 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import Verse from './Verse.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
+import type { HomeLocale } from '../../data/home';
+import { splitMantraPadas } from '../../lib/rigveda-samhita';
+import { formatAnuvakaMarker } from '../../lib/yajurveda-samhita';
+import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
+import {
+	getMaitrayaniAnuvakaJumpItems,
+	getMaitrayaniPrapathakaPageNav,
+} from '../../lib/samhita-nav';
+import { getMaitrayaniChapter } from '../../lib/maitrayani-corpus';
+import { parseMaitrayaniPrapathaka } from '../../../scripts/lib/parse-maitrayani-prapathaka.mjs';
+import { chapterToKandaPrapathaka } from '../../../scripts/lib/maitrayani-samhita-structure.mjs';
+
+interface Props {
+	chapter: number;
+	locale?: HomeLocale;
+}
+
+const { chapter, locale = 'root' } = Astro.props;
+
+const entry = getMaitrayaniChapter(chapter);
+if (!entry) {
+	throw new Error(`Maitrāyaṇī saṃhitā: chapter ${chapter} not found`);
+}
+
+const parsed = parseMaitrayaniPrapathaka(entry.text, {
+	kanda: entry.kanda,
+	prapathaka: entry.prapathaka,
+});
+
+const { kanda, prapathaka, kandaInfo } = chapterToKandaPrapathaka(chapter);
+let header = parsed.header;
+
+/** @type {{ number: number; text: string }[]} */
+const verses = [];
+
+for (const verse of parsed.verses) {
+	verses.push({
+		number: verse.number,
+		text: locale === 'iast' ? await transliterateDevanagari(verse.text) : verse.text,
+	});
+}
+
+if (locale === 'iast' && header) {
+	header = await transliterateDevanagari(header);
+}
+
+const blockLabel =
+	locale === 'iast'
+		? `${kandaInfo.iastLabel}, prapāṭhaka ${prapathaka}`
+		: `${kandaInfo.rootLabel}, प्रपाठक ${prapathaka}`;
+const jumpItems = getMaitrayaniAnuvakaJumpItems(parsed.verseCount);
+const pageNav = getMaitrayaniPrapathakaPageNav(kanda, prapathaka, locale);
+const jumpTitle = locale === 'iast' ? 'Jump to anuvāka' : 'अनुवाकम् अनुगच्छ';
+---
+
+<SuktaPage {locale} class="rigveda-samhita">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={2} />
+	<header class="veda-sukta-block__header veda-sukta-block__header--single">
+		<span class="veda-sukta-block__label">{blockLabel}</span>
+		{header && <p class="veda-sukta-block__title">{header}</p>}
+	</header>
+	<div class="veda-sukta-block__mantras">
+		{
+			verses.map((verse) => (
+				<Verse
+					number={verse.number}
+					id={`anuvaka-${verse.number}`}
+					{locale}
+					numberPosition="end"
+					marker={formatAnuvakaMarker(kanda, prapathaka, verse.number, locale)}
+				>
+					{splitMantraPadas(verse.text).map((pada) => (
+						<p>{pada}</p>
+					))}
+				</Verse>
+			))
+		}
+	</div>
+	<SamhitaPageNav links={pageNav} {locale} />
+</SuktaPage>
