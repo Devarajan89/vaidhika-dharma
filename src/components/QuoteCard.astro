@@ -16,6 +16,7 @@ const quote = getQuoteOfDay(locale);
 	<Card title={quoteTitle} icon="star">
 		<blockquote>
 			<p>{quote.text}</p>
+			<p class="quote-meaning">{quote.meaning}</p>
 			<footer>— {quote.source}</footer>
 		</blockquote>
 	</Card>
@@ -34,6 +35,12 @@ const quote = getQuoteOfDay(locale);
 
 	.quote-card blockquote p {
 		margin: 0 0 0.75rem;
+	}
+
+	.quote-card .quote-meaning {
+		font-size: 0.9375rem;
+		color: var(--sl-color-gray-2);
+		line-height: 1.65;
 	}
 
 	.quote-card footer {

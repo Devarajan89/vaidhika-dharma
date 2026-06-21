@@ -1,0 +1,91 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import Verse from './Verse.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
+import type { HomeLocale } from '../../data/home';
+import { splitMantraPadas } from '../../lib/rigveda-samhita';
+import { formatChapterMantraMarker } from '../../lib/yajurveda-samhita';
+import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
+import {
+	getYajurvedaAdhyayaPageNav,
+	getYajurvedaMantraJumpItems,
+} from '../../lib/samhita-nav';
+import { parseYajurvedaChapter } from '../../../scripts/lib/parse-yajurveda-chapter.mjs';
+import { getAdhyayaBlockLabel } from '../../../scripts/lib/yajurveda-adhyaya-labels.mjs';
+import { expectedMantraCount as madhyandinaExpectedCount } from '../../../scripts/lib/madhyandina-samhita-counts.mjs';
+import { expectedMantraCount as kanvaExpectedCount } from '../../../scripts/lib/kanva-samhita-counts.mjs';
+import madhyandinaData from '../../data/shukla-yajur/madhyandina/vajasneyi_madhyadina_samhita.json';
+import kanvaData from '../../data/shukla-yajur/kanva/vajasneyi_kanva_samhita_chapters.json';
+
+interface Props {
+	tradition: 'madhyandina' | 'kanva';
+	chapter: number;
+	locale?: HomeLocale;
+}
+
+const { tradition, chapter, locale = 'root' } = Astro.props;
+
+const corpus = tradition === 'madhyandina' ? madhyandinaData : kanvaData;
+const expectedCount =
+	tradition === 'madhyandina'
+		? madhyandinaExpectedCount(chapter)
+		: kanvaExpectedCount(chapter);
+
+type ChapterEntry = { adhyaya?: number; chapter?: number; text: string };
+const entry = (corpus as ChapterEntry[]).find(
+	(item) => (item.adhyaya ?? item.chapter) === chapter
+);
+
+if (!entry) {
+	throw new Error(`${tradition} saṃhitā: chapter ${chapter} not found`);
+}
+
+const parsed = parseYajurvedaChapter(entry.text, { expectedVerses: expectedCount });
+let header = parsed.header;
+
+/** @type {{ number: number; text: string }[]} */
+const verses = [];
+
+for (const verse of parsed.verses) {
+	verses.push({
+		number: verse.number,
+		text: locale === 'iast' ? await transliterateDevanagari(verse.text) : verse.text,
+	});
+}
+
+if (locale === 'iast' && header) {
+	header = await transliterateDevanagari(header);
+}
+
+const blockLabel = getAdhyayaBlockLabel(chapter, locale);
+const jumpItems = getYajurvedaMantraJumpItems(parsed.verseCount);
+const pageNav = getYajurvedaAdhyayaPageNav(tradition, chapter, locale);
+const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
+---
+
+<SuktaPage {locale} class="rigveda-samhita">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={2} />
+	<header class="veda-sukta-block__header veda-sukta-block__header--single">
+		<span class="veda-sukta-block__label">{blockLabel}</span>
+		{header && <p class="veda-sukta-block__title">{header}</p>}
+	</header>
+	<div class="veda-sukta-block__mantras">
+		{
+			verses.map((verse) => (
+				<Verse
+					number={verse.number}
+					id={`mantra-${verse.number}`}
+					{locale}
+					numberPosition="end"
+					marker={formatChapterMantraMarker(chapter, verse.number, locale)}
+				>
+					{splitMantraPadas(verse.text).map((pada) => (
+						<p>{pada}</p>
+					))}
+				</Verse>
+			))
+		}
+	</div>
+	<SamhitaPageNav links={pageNav} {locale} />
+</SuktaPage>

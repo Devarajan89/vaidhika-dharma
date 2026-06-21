@@ -53,8 +53,41 @@ export function kandaPrapathakaToChapter(kandaNumber, prapathakaNumber) {
 }
 
 /**
+ * @param {number} kandaNumber
+ */
+export function kandaDirName(kandaNumber) {
+	return `Kanda_${String(kandaNumber).padStart(2, '0')}`;
+}
+
+/**
+ * @param {number} prapathakaNumber
+ */
+export function prapathakaDirName(prapathakaNumber) {
+	return `Prapathaka_${String(prapathakaNumber).padStart(2, '0')}`;
+}
+
+/**
+ * @param {number} kandaNumber
+ * @param {'root' | 'iast'} locale
+ */
+export function kandaSlug(kandaNumber, locale) {
+	const prefix = locale === 'iast' ? 'iast/taittiriya-samhita' : 'taittiriya-samhita';
+	return `${prefix}/kanda-${kandaNumber}`;
+}
+
+/**
+ * @param {number} kandaNumber
+ * @param {number} prapathakaNumber
+ * @param {'root' | 'iast'} locale
+ */
+export function prapathakaSlug(kandaNumber, prapathakaNumber, locale) {
+	return `${kandaSlug(kandaNumber, locale)}/prapathaka-${prapathakaNumber}`;
+}
+
+/**
  * @param {number} chapterNumber
+ * @deprecated Use kanda/prapathaka folder paths instead.
  */
 export function chapterFileName(chapterNumber) {
-	return `chapter-${String(chapterNumber).padStart(2, '0')}.md`;
+	return `chapter-${String(chapterNumber).padStart(2, '0')}.mdx`;
 }

@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { samhitasSidebarGroup, brahmanamSidebarGroup, upanishadsSidebarGroup } from './src/data/samhitas-sidebar.mjs';
+import { chapterToKandaPrapathaka, TAITTIRIYA_TOTAL_PRAPATHAKAS } from './scripts/lib/taittiriya-samhita-structure.mjs';
 
 const rigvedaMandalaRedirects = Object.fromEntries(
   Array.from({ length: 10 }, (_, index) => {
@@ -12,6 +13,31 @@ const rigvedaMandalaRedirects = Object.fromEntries(
     return [
       [`/rigveda-samhita/${folder}`, `/rigveda-samhita/mandala-${mandala}/`],
       [`/iast/rigveda-samhita/${folder}`, `/iast/rigveda-samhita/mandala-${mandala}/`],
+    ];
+  }).flat(),
+);
+
+const taittiriyaChapterRedirects = Object.fromEntries(
+  Array.from({ length: TAITTIRIYA_TOTAL_PRAPATHAKAS }, (_, index) => {
+    const chapter = index + 1;
+    const { kanda, prapathaka } = chapterToKandaPrapathaka(chapter);
+    const chapterSlug = `chapter-${String(chapter).padStart(2, '0')}`;
+    const target = `/taittiriya-samhita/kanda-${kanda}/prapathaka-${prapathaka}/`;
+    const iastTarget = `/iast/taittiriya-samhita/kanda-${kanda}/prapathaka-${prapathaka}/`;
+    return [
+      [`/taittiriya-samhita/${chapterSlug}`, target],
+      [`/iast/taittiriya-samhita/${chapterSlug}`, iastTarget],
+    ];
+  }).flat(),
+);
+
+const taittiriyaKandaRedirects = Object.fromEntries(
+  Array.from({ length: 7 }, (_, index) => {
+    const kanda = index + 1;
+    const padded = `kanda-${String(kanda).padStart(2, '0')}`;
+    return [
+      [`/taittiriya-samhita/${padded}`, `/taittiriya-samhita/kanda-${kanda}/`],
+      [`/iast/taittiriya-samhita/${padded}`, `/iast/taittiriya-samhita/kanda-${kanda}/`],
     ];
   }).flat(),
 );
@@ -26,6 +52,8 @@ export default defineConfig({
 
   redirects: {
     ...rigvedaMandalaRedirects,
+    ...taittiriyaChapterRedirects,
+    ...taittiriyaKandaRedirects,
     '/aswalayana-sandhyavandanam': '/aswalayana-sandhyavandanam/prata',
     '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
     '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',

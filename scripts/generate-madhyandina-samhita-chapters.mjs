@@ -10,6 +10,8 @@ import {
 	parseYajurvedaChapter,
 } from './lib/parse-yajurveda-chapter.mjs';
 import { expectedMantraCount } from './lib/madhyandina-samhita-counts.mjs';
+import { getAdhyayaSidebarLabel } from './lib/yajurveda-adhyaya-labels.mjs';
+import { renderSamhitaChapterMdx, chapterFileName } from './lib/render-samhita-chapter-mdx.mjs';
 import { transliterateDevanagari } from './lib/transliterate-devanagari.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -133,8 +135,8 @@ function yamlQuote(value) {
 /**
  * @param {number} chapter
  */
-function chapterFileName(chapter) {
-	return `chapter-${String(chapter).padStart(2, '0')}.md`;
+function chapterIndexFileName(chapter) {
+	return `chapter-${String(chapter).padStart(2, '0')}-index.md`;
 }
 
 /**
@@ -248,70 +250,16 @@ function renderChapterMarkdown({
 	outputPath,
 	parsed,
 }) {
-	const mantraLabel = formatCountLabel(parsed.verseCount, locale);
-	const fileName = path.basename(outputPath);
-	const tocRows = parsed.verses
-		.map((verse) => {
-			const firstWords = firstWordsLabel(verse.text, locale);
-			return `| ${verse.number} | [${firstWords}](${fileName}#mantra-${verse.number}) |`;
-		})
-		.join('\n');
-
-	const verseBlocks = parsed.verses
-		.map((verse) => {
-			const text =
-				locale === 'iast'
-					? transliterateLine(cleanForTransliteration(verse.text)).trim()
-					: verse.text;
-			const markedText = appendChapterMantraMarker(
-				text,
-				chapterNumber,
-				verse.number,
-				locale
-			);
-			return [`<a id="mantra-${verse.number}"></a>`, '', markedText, '', '---', ''].join('\n');
-		})
-		.join('\n');
-
-	const headerBlock = parsed.header
-		? `**${(locale === 'iast' ? transliterateLine(parsed.header) : parsed.header).replace(/\n/g, ' ')}**`
-		: '';
-
-	const frontmatter = [
-		'---',
-		`title: ${yamlQuote(`${title} (${mantraLabel})`)}`,
-		`slug: ${slug}`,
-		'sidebar:',
-		`  label: ${yamlQuote(sidebarLabel)}`,
-		`  order: ${chapterNumber}`,
-		'tableOfContents: false',
-		`description: ${yamlQuote(description)}`,
-		`lastUpdated: ${LAST_UPDATED}`,
-		'---',
-	].join('\n');
-
-	const body = [
-		frontmatter,
-		'',
-		`# ${title}`,
-		'',
-		headerBlock,
-		headerBlock ? '' : null,
-		'---',
-		'',
-		getMantrasSectionTitle(locale),
-		'',
-		getChapterTocHeader(locale),
-		'|-------:|-------------|',
-		tocRows,
-		'',
-		'---',
-		'',
-		verseBlocks.trimEnd(),
-		'',
-	]
-		.filter((line) => line !== null)
-		.join('\n');
+	const body = renderSamhitaChapterMdx({
+		component: 'madhyandina',
+		chapterNumber,
+		locale,
+		title: `${title} (${formatCountLabel(parsed.verseCount, locale)})`,
+		slug,
+		sidebarLabel,
+		description,
+		outputPath,
+	});
 
 	fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 	fs.writeFileSync(outputPath, body, 'utf8');
@@ -386,7 +334,7 @@ function renderIndexMarkdown({ locale, slug, title, description, outputPath, cha
 		const mantraRows = chapter.parsed.verses
 			.map((verse) => {
 				const firstWords = indexFirstWordsLabel(verse.text, locale);
-				return `| ${chapter.number} | ${verse.number} | [${firstWords}](${fileName}#mantra-${verse.number}) |`;
+				return `| ${chapter.number} | ${verse.number} | [${firstWords}](${fileName.replace(/\.mdx$/, '')}/#mantra-${verse.number}) |`;
 			})
 			.join('\n');
 		const slugPrefix = locale === 'iast' ? 'iast/madhyandina-samhita' : 'madhyandina-samhita';
@@ -488,7 +436,7 @@ if (isIastWorker) {
 		chapterNumber,
 		title: getChapterTitle(chapterNumber, 'iast'),
 		slug: `iast/madhyandina-samhita/chapter-${String(chapterNumber).padStart(2, '0')}`,
-		sidebarLabel: `${chapterNumber} ${firstWordsIast}`,
+		sidebarLabel: getAdhyayaSidebarLabel(chapterNumber, 'iast'),
 		description: getChapterDescription(chapterNumber, 'iast'),
 		outputPath,
 		parsed,
@@ -511,7 +459,7 @@ if (process.env.MADHYANDINA_ROOT_CHAPTER) {
 		chapterNumber,
 		title: getChapterTitle(chapterNumber, 'root'),
 		slug: `madhyandina-samhita/chapter-${String(chapterNumber).padStart(2, '0')}`,
-		sidebarLabel: `${chapterNumber} ${firstWordsRoot}`,
+		sidebarLabel: getAdhyayaSidebarLabel(chapterNumber, 'root'),
 		description: getChapterDescription(chapterNumber, 'root'),
 		outputPath,
 		parsed,
@@ -554,7 +502,7 @@ if (!indexOnly && !iastOnly) {
 			chapterNumber,
 			title: getChapterTitle(chapterNumber, 'root'),
 			slug: `madhyandina-samhita/chapter-${String(chapterNumber).padStart(2, '0')}`,
-			sidebarLabel: `${chapterNumber} ${summary.firstWordsRoot}`,
+			sidebarLabel: getAdhyayaSidebarLabel(chapterNumber, 'root'),
 			description: getChapterDescription(chapterNumber, 'root'),
 			outputPath,
 			parsed: summary.parsed,

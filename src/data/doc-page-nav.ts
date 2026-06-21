@@ -99,6 +99,11 @@ export function getDocPageNav(
 			};
 		}
 
+		const samhitaChips = getSamhitaContextChips(slug, isIast);
+		if (samhitaChips) {
+			return { localeSwitch, contextChips: samhitaChips };
+		}
+
 		return { localeSwitch };
 	}
 
@@ -129,6 +134,71 @@ export function getDocPageNav(
 				];
 
 	return { localeSwitch, trikalaLinks, contextChips };
+}
+
+function getSamhitaContextChips(slug: string, isIast: boolean): ContextChip[] | undefined {
+	const rigvedaMandala = slug.match(/^(?:iast\/)?rigveda-samhita\/mandala-(\d+)$/);
+	if (rigvedaMandala) {
+		const mandala = rigvedaMandala[1];
+		return [
+			{ label: isIast ? 'Ṛgveda · Śākala saṃhitā' : 'ऋग्वेद · शाकल संहिता' },
+			{ label: isIast ? `Maṇḍala ${mandala}` : `मण्डल ${mandala}` },
+		];
+	}
+
+	const rigvedaSukta = slug.match(/^(?:iast\/)?rigveda-samhita\/mandala-(\d+)\/sukta-(\d+)$/);
+	if (rigvedaSukta) {
+		return [
+			{ label: isIast ? 'Ṛgveda · Śākala saṃhitā' : 'ऋग्वेद · शाकल संहिता' },
+			{
+				label: isIast
+					? `Maṇḍala ${rigvedaSukta[1]} · Sūkta ${rigvedaSukta[2]}`
+					: `मण्डल ${rigvedaSukta[1]} · सूक्त ${rigvedaSukta[2]}`,
+			},
+		];
+	}
+
+	const yajurAdhyaya = slug.match(/^(?:iast\/)?(kanva|madhyandina)-samhita\/chapter-(\d+)$/);
+	if (yajurAdhyaya) {
+		const [, tradition, chapter] = yajurAdhyaya;
+		const traditionLabel =
+			tradition === 'kanva'
+				? isIast
+					? 'Vājasaneyi · Kāṇva'
+					: 'वाजसनेयी · काण्व'
+				: isIast
+					? 'Vājasaneyi · Mādhyandina'
+					: 'वाजसनेयी · माध्यन्दिन';
+		return [
+			{ label: isIast ? 'Śukla Yajurveda' : 'शुक्ल यजुर्वेद' },
+			{ label: traditionLabel },
+			{ label: isIast ? `Adhyāya ${chapter}` : `अध्याय ${chapter}` },
+		];
+	}
+
+	const taittiriyaKanda = slug.match(/^(?:iast\/)?taittiriya-samhita\/kanda-(\d+)$/);
+	if (taittiriyaKanda) {
+		return [
+			{ label: isIast ? 'Kṛṣṇa Yajurveda · Taittirīya' : 'कृष्ण यजुर्वेद · तैत्तिरीय' },
+			{ label: isIast ? `Kāṇḍa ${taittiriyaKanda[1]}` : `काण्ड ${taittiriyaKanda[1]}` },
+		];
+	}
+
+	const taittiriyaPrapathaka = slug.match(
+		/^(?:iast\/)?taittiriya-samhita\/kanda-(\d+)\/prapathaka-(\d+)$/
+	);
+	if (taittiriyaPrapathaka) {
+		return [
+			{ label: isIast ? 'Kṛṣṇa Yajurveda · Taittirīya' : 'कृष्ण यजुर्वेद · तैत्तिरीय' },
+			{
+				label: isIast
+					? `Kāṇḍa ${taittiriyaPrapathaka[1]} · Prapāṭhaka ${taittiriyaPrapathaka[2]}`
+					: `काण्ड ${taittiriyaPrapathaka[1]} · प्रपाठक ${taittiriyaPrapathaka[2]}`,
+			},
+		];
+	}
+
+	return undefined;
 }
 
 function getLocaleSwitch(slug: string, isIast: boolean): LocaleSwitch {

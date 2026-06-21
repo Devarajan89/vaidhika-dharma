@@ -1,0 +1,332 @@
+[
+	{
+		"text": {
+			"root": "ब्रह्म सत्यं जगन्मिथ्या",
+			"iast": "Brahma satyaṃ jagan mithyā"
+		},
+		"source": {
+			"root": "विवेकचूडामणि",
+			"iast": "Vivekacūḍāmaṇi"
+		},
+		"meaning": "Brahman alone is real; the world is illusory."
+	},
+	{
+		"text": {
+			"root": "तत्त्वमसि",
+			"iast": "Tat tvam asi"
+		},
+		"source": {
+			"root": "छान्दोग्योपनिषत् ६.८.७",
+			"iast": "Chāndogya upaniṣad 6.8.7"
+		},
+		"meaning": "You are That — your true Self is Brahman."
+	},
+	{
+		"text": {
+			"root": "अहं ब्रह्मास्मि",
+			"iast": "Ahaṃ brahmāsmi"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् १.४.१०",
+			"iast": "Bṛhadāraṇyaka upaniṣad 1.4.10"
+		},
+		"meaning": "I am Brahman — the Self is the Absolute."
+	},
+	{
+		"text": {
+			"root": "प्रज्ञानं ब्रह्म",
+			"iast": "Prajñānaṃ brahma"
+		},
+		"source": {
+			"root": "ऐतरेयोपनिषत् ३.३",
+			"iast": "Aitareya upaniṣad 3.3"
+		},
+		"meaning": "Pure consciousness is Brahman."
+	},
+	{
+		"text": {
+			"root": "अयमात्मा ब्रह्म",
+			"iast": "Ayam ātmā brahma"
+		},
+		"source": {
+			"root": "माण्डूक्योपनिषत् १.२",
+			"iast": "Māṇḍūkya upaniṣad 1.2"
+		},
+		"meaning": "This Self is Brahman."
+	},
+	{
+		"text": {
+			"root": "सर्वं खल्विदं ब्रह्म",
+			"iast": "Sarvaṃ khalv idaṃ brahma"
+		},
+		"source": {
+			"root": "छान्दोग्योपनिषत् ३.१४.१",
+			"iast": "Chāndogya upaniṣad 3.14.1"
+		},
+		"meaning": "All this is indeed Brahman."
+	},
+	{
+		"text": {
+			"root": "ईशावास्यमिदं सर्वम्",
+			"iast": "Īśāvāsyam idaṃ sarvam"
+		},
+		"source": {
+			"root": "ईशोपनिषत् १",
+			"iast": "Īśa upaniṣad 1"
+		},
+		"meaning": "All this is pervaded by the Lord."
+	},
+	{
+		"text": {
+			"root": "नेति नेति",
+			"iast": "Neti neti"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् २.३.६",
+			"iast": "Bṛhadāraṇyaka upaniṣad 2.3.6"
+		},
+		"meaning": "Not this, not that — Brahman is beyond words."
+	},
+	{
+		"text": {
+			"root": "सत्यं वद, धर्मं चर",
+			"iast": "Satyaṃ vada, dharmaṃ cara"
+		},
+		"source": {
+			"root": "तैत्तिरीयोपनिषत् १.११.१",
+			"iast": "Taittirīya upaniṣad 1.11.1"
+		},
+		"meaning": "Speak truth; live by dharma."
+	},
+	{
+		"text": {
+			"root": "उत्तिष्ठत जाग्रत",
+			"iast": "Uttiṣṭhata jāgrata"
+		},
+		"source": {
+			"root": "कठोपनिषत् १.३.१४",
+			"iast": "Kaṭha upaniṣad 1.3.14"
+		},
+		"meaning": "Arise, awake — seek Self-knowledge."
+	},
+	{
+		"text": {
+			"root": "श्रेयश्च प्रेयश्च",
+			"iast": "Śreyaś ca preyaś ca"
+		},
+		"source": {
+			"root": "कठोपनिषत् १.२.२",
+			"iast": "Kaṭha upaniṣad 1.2.2"
+		},
+		"meaning": "The good and the pleasant — the wise choose the good."
+	},
+	{
+		"text": {
+			"root": "येनाक्षरं पुरुषं वेद सत्यम्",
+			"iast": "Yenākṣaraṃ puruṣaṃ veda satyam"
+		},
+		"source": {
+			"root": "मुण्डकोपनिषत् १.२.१३",
+			"iast": "Muṇḍaka upaniṣad 1.2.13"
+		},
+		"meaning": "One who knows the Imperishable knows the Truth."
+	},
+	{
+		"text": {
+			"root": "यदेवेह तदमुत्र",
+			"iast": "Yadeveha tadamutra"
+		},
+		"source": {
+			"root": "ईशोपनिषत् १",
+			"iast": "Īśa upaniṣad 1"
+		},
+		"meaning": "What is here is also there — the One pervades all."
+	},
+	{
+		"text": {
+			"root": "यदिदं किञ्च",
+			"iast": "Yad idaṃ kiñca"
+		},
+		"source": {
+			"root": "तैत्तिरीयोपनिषत् २.१.१",
+			"iast": "Taittirīya upaniṣad 2.1.1"
+		},
+		"meaning": "Whatever exists in the world arises from Brahman."
+	},
+	{
+		"text": {
+			"root": "सोऽहं",
+			"iast": "So'ham"
+		},
+		"source": {
+			"root": "ईशोपनिषत् १६",
+			"iast": "Īśa upaniṣad 16"
+		},
+		"meaning": "I am That — the Self and Brahman are one."
+	},
+	{
+		"text": {
+			"root": "यदा सर्वे प्रमुच्यन्ते",
+			"iast": "Yadā sarve pramucyante"
+		},
+		"source": {
+			"root": "कठोपनिषत् २.३.१४",
+			"iast": "Kaṭha upaniṣad 2.3.14"
+		},
+		"meaning": "When all bonds fall away, one becomes immortal."
+	},
+	{
+		"text": {
+			"root": "नायमात्मा प्रवचनेन लभ्यः",
+			"iast": "Nāyam ātmā pravacanena labhyaḥ"
+		},
+		"source": {
+			"root": "कठोपनिषत् १.२.२३",
+			"iast": "Kaṭha upaniṣad 1.2.23"
+		},
+		"meaning": "The Self is not gained by speech alone, but by practice and dispassion."
+	},
+	{
+		"text": {
+			"root": "श्रवणायामुपसन्नः",
+			"iast": "Śravaṇāyām upasannaḥ"
+		},
+		"source": {
+			"root": "कठोपनिषत् १.२.२३",
+			"iast": "Kaṭha upaniṣad 1.2.23"
+		},
+		"meaning": "To one ready to listen, the guru teaches."
+	},
+	{
+		"text": {
+			"root": "यदा पश्यः पश्यते",
+			"iast": "Yadā paśyaḥ paśyate"
+		},
+		"source": {
+			"root": "कठोपनिषत् २.१.१०",
+			"iast": "Kaṭha upaniṣad 2.1.10"
+		},
+		"meaning": "When the seer sees the Self, suffering ends."
+	},
+	{
+		"text": {
+			"root": "यदा सर्वाणि भूतानि",
+			"iast": "Yadā sarvāṇi bhūtāni"
+		},
+		"source": {
+			"root": "ईशोपनिषत् ७",
+			"iast": "Īśa upaniṣad 7"
+		},
+		"meaning": "When all beings merge in the Self, whose death? whose grief?"
+	},
+	{
+		"text": {
+			"root": "असतो मा सद्गमय",
+			"iast": "Asato mā sad gamaya"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् १.३.२८",
+			"iast": "Bṛhadāraṇyaka upaniṣad 1.3.28"
+		},
+		"meaning": "Lead me from unreality to Reality."
+	},
+	{
+		"text": {
+			"root": "तमसो मा ज्योतिर्गमय",
+			"iast": "Tamaso mā jyotir gamaya"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् १.३.२८",
+			"iast": "Bṛhadāraṇyaka upaniṣad 1.3.28"
+		},
+		"meaning": "Lead me from darkness to Light."
+	},
+	{
+		"text": {
+			"root": "मृत्योर्मा अमृतं गमय",
+			"iast": "Mṛtyor mā amṛtaṃ gamaya"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् १.३.२८",
+			"iast": "Bṛhadāraṇyaka upaniṣad 1.3.28"
+		},
+		"meaning": "Lead me from death to Immortality."
+	},
+	{
+		"text": {
+			"root": "सत्यस्य सत्यम्",
+			"iast": "Satyasya satyam"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् २.१.२०",
+			"iast": "Bṛhadāraṇyaka upaniṣad 2.1.20"
+		},
+		"meaning": "The Truth of truth — Brahman is the supreme Reality."
+	},
+	{
+		"text": {
+			"root": "यतो वाचो निवर्तन्ते",
+			"iast": "Yato vāco nivartante"
+		},
+		"source": {
+			"root": "तैत्तिरीयोपनिषत् २.४.१",
+			"iast": "Taittirīya upaniṣad 2.4.1"
+		},
+		"meaning": "Where words turn back — that is Brahman."
+	},
+	{
+		"text": {
+			"root": "यदा वै विशेषं विनश्यति",
+			"iast": "Yadā vai viśeṣaṃ vinaśyati"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् ४.४.१९",
+			"iast": "Bṛhadāraṇyaka upaniṣad 4.4.19"
+		},
+		"meaning": "When distinction vanishes, fear of death is gone."
+	},
+	{
+		"text": {
+			"root": "आत्मा वा इदमेक एव",
+			"iast": "Ātmā vā idam eka eva"
+		},
+		"source": {
+			"root": "छान्दोग्योपनिषत् ७.२५.२",
+			"iast": "Chāndogya upaniṣad 7.25.2"
+		},
+		"meaning": "All this is verily the one Self alone."
+	},
+	{
+		"text": {
+			"root": "यदा हि नान्यथा पश्यति",
+			"iast": "Yadā hi nānyathā paśyati"
+		},
+		"source": {
+			"root": "बृहदारण्यकोपनिषत् ४.५.१५",
+			"iast": "Bṛhadāraṇyaka upaniṣad 4.5.15"
+		},
+		"meaning": "When one sees no other, whose fear? whose sorrow?"
+	},
+	{
+		"text": {
+			"root": "एकमेवाद्वितीयम्",
+			"iast": "Ekam evādvitīyam"
+		},
+		"source": {
+			"root": "छान्दोग्योपनिषत् ६.२.१",
+			"iast": "Chāndogya upaniṣad 6.2.1"
+		},
+		"meaning": "One alone was, without a second."
+	},
+	{
+		"text": {
+			"root": "येन रूपं रसं गन्धम्",
+			"iast": "Yena rūpaṃ rasaṃ gandham"
+		},
+		"source": {
+			"root": "केनोपनिषत् १.२",
+			"iast": "Kena upaniṣad 1.2"
+		},
+		"meaning": "By whom are form, taste, and scent perceived? That is Brahman."
+	}
+]

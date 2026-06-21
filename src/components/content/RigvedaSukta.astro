@@ -1,8 +1,14 @@
 ---
 import SuktaPage from './SuktaPage.astro';
 import Verse from './Verse.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
 import type { HomeLocale } from '../../data/home';
 import { getSuktaRecord, getSuktaVerses } from '../../lib/rigveda-corpus';
+import {
+	getRigvedaSuktaMantraJumpItems,
+	getRigvedaSuktaPageNav,
+} from '../../lib/samhita-nav';
 import { splitMantraPadas } from '../../lib/rigveda-samhita';
 import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
 
@@ -21,6 +27,9 @@ if (!suktaRecord) {
 
 let header = suktaRecord.header;
 const mantraRecords = getSuktaVerses(mandala, sukta);
+const jumpItems = getRigvedaSuktaMantraJumpItems(mandala, sukta, locale);
+const pageNav = getRigvedaSuktaPageNav(mandala, sukta, locale);
+const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
 
 /** @type {Record<number, string>} */
 const mantraTexts = {};
@@ -39,16 +48,22 @@ if (locale === 'iast') {
 ---
 
 <SuktaPage locale={locale} class="rigveda-samhita">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={2} />
 	<header class="veda-sukta-block__header veda-sukta-block__header--single">
 		<span class="veda-sukta-block__label">
 			{locale === 'iast' ? `Sūkta ${sukta}` : `सूक्त ${sukta}`}
 		</span>
-		<p class="veda-sukta-block__title">{header}</p>
+		{header && <p class="veda-sukta-block__title">{header}</p>}
 	</header>
 	<div class="veda-sukta-block__mantras">
 		{
 			mantraRecords.map((record) => (
-				<Verse number={record.verse} locale={locale} numberPosition="end">
+				<Verse
+					number={record.verse}
+					id={`mantra-${record.verse}`}
+					locale={locale}
+					numberPosition="end"
+				>
 					{splitMantraPadas(mantraTexts[record.verse]).map((pada) => (
 						<p>{pada}</p>
 					))}
@@ -56,4 +71,5 @@ if (locale === 'iast') {
 			))
 		}
 	</div>
+	<SamhitaPageNav links={pageNav} {locale} />
 </SuktaPage>
