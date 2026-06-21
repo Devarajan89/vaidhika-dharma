@@ -34,6 +34,10 @@
     "generate:taittiriya-samhita:index": "TAITTIRIYA_INDEX_ONLY=1 node scripts/generate-taittiriya-samhita-chapters.mjs",
     "generate:taittiriya-samhita:root": "TAITTIRIYA_SKIP_IAST=1 node scripts/generate-taittiriya-samhita-chapters.mjs",
     "generate:taittiriya-samhita:iast": "TAITTIRIYA_IAST_ONLY=1 node scripts/generate-taittiriya-samhita-chapters.mjs",
+    "fetch:maitrayani-samhita": "node scripts/fetch-maitrayani-samhita-data.mjs",
+    "generate:maitrayani-samhita": "node scripts/generate-maitrayani-kanda-indexes.mjs && node scripts/generate-maitrayani-samhita-chapters.mjs",
+    "generate:maitrayani-kanda-indexes": "node scripts/generate-maitrayani-kanda-indexes.mjs",
+    "generate:maitrayani-samhita:index": "node scripts/generate-maitrayani-samhita-chapters.mjs",
     "astro": "astro"
   },
   "dependencies": {

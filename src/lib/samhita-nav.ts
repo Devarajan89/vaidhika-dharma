@@ -4,6 +4,7 @@ import {
 	TAITTIRIYA_KANDAS,
 	kandaPrapathakaToChapter,
 } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
+import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
 
 export interface JumpNavItem {
 	id: string;
@@ -299,4 +300,100 @@ export function getTaittiriyaPrapathakaPageNav(
 
 export function getTaittiriyaGlobalChapter(kanda: number, prapathaka: number): number {
 	return kandaPrapathakaToChapter(kanda, prapathaka);
+}
+
+export function getMaitrayaniKandaHref(kanda: number, locale: HomeLocale): string {
+	return `${prefix(locale)}/maitrayani-samhita/kanda-${kanda}/`;
+}
+
+export function getMaitrayaniPrapathakaHref(
+	kanda: number,
+	prapathaka: number,
+	locale: HomeLocale
+): string {
+	return `${getMaitrayaniKandaHref(kanda, locale)}prapathaka-${prapathaka}/`;
+}
+
+export function getMaitrayaniKandaJumpItems(kanda: number, _locale: HomeLocale): JumpNavItem[] {
+	const kandaInfo = MAITRAYANI_KANDAS.find((entry) => entry.kanda === kanda);
+	if (!kandaInfo) return [];
+
+	return Array.from({ length: kandaInfo.prapathakaCount }, (_, index) => {
+		const prapathaka = index + 1;
+		return {
+			id: `prapathaka-${prapathaka}`,
+			label: String(prapathaka),
+		};
+	});
+}
+
+export function getMaitrayaniKandaPageNav(kanda: number, locale: HomeLocale): SamhitaPageNavLinks {
+	const up = {
+		href: `${prefix(locale)}/maitrayani-samhita/`,
+		label: locale === 'iast' ? 'Saṃhitā index' : 'संहिता सूची',
+	};
+	const nav: SamhitaPageNavLinks = { up };
+	const kandaIndex = MAITRAYANI_KANDAS.findIndex((entry) => entry.kanda === kanda);
+
+	if (kandaIndex > 0) {
+		const prevKanda = MAITRAYANI_KANDAS[kandaIndex - 1].kanda;
+		nav.prev = {
+			href: getMaitrayaniKandaHref(prevKanda, locale),
+			label:
+				locale === 'iast'
+					? MAITRAYANI_KANDAS[kandaIndex - 1].iastLabel
+					: MAITRAYANI_KANDAS[kandaIndex - 1].rootLabel,
+		};
+	}
+	if (kandaIndex >= 0 && kandaIndex < MAITRAYANI_KANDAS.length - 1) {
+		const nextKanda = MAITRAYANI_KANDAS[kandaIndex + 1].kanda;
+		nav.next = {
+			href: getMaitrayaniKandaHref(nextKanda, locale),
+			label:
+				locale === 'iast'
+					? MAITRAYANI_KANDAS[kandaIndex + 1].iastLabel
+					: MAITRAYANI_KANDAS[kandaIndex + 1].rootLabel,
+		};
+	}
+	return nav;
+}
+
+export function getMaitrayaniAnuvakaJumpItems(anuvakaCount: number): JumpNavItem[] {
+	return Array.from({ length: anuvakaCount }, (_, index) => ({
+		id: `anuvaka-${index + 1}`,
+		label: String(index + 1),
+	}));
+}
+
+export function getMaitrayaniPrapathakaPageNav(
+	kanda: number,
+	prapathaka: number,
+	locale: HomeLocale
+): SamhitaPageNavLinks {
+	const kandaInfo = MAITRAYANI_KANDAS.find((entry) => entry.kanda === kanda);
+	const up = {
+		href: getMaitrayaniKandaHref(kanda, locale),
+		label: kandaInfo
+			? locale === 'iast'
+				? kandaInfo.iastLabel
+				: kandaInfo.rootLabel
+			: locale === 'iast'
+				? `Kāṇḍa ${kanda}`
+				: `काण्ड ${kanda}`,
+	};
+	const nav: SamhitaPageNavLinks = { up };
+
+	if (prapathaka > 1) {
+		nav.prev = {
+			href: getMaitrayaniPrapathakaHref(kanda, prapathaka - 1, locale),
+			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka - 1}` : `प्रपाठक ${prapathaka - 1}`,
+		};
+	}
+	if (kandaInfo && prapathaka < kandaInfo.prapathakaCount) {
+		nav.next = {
+			href: getMaitrayaniPrapathakaHref(kanda, prapathaka + 1, locale),
+			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka + 1}` : `प्रपाठक ${prapathaka + 1}`,
+		};
+	}
+	return nav;
 }

@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { samhitasSidebarGroup, brahmanamSidebarGroup, upanishadsSidebarGroup } from './src/data/samhitas-sidebar.mjs';
 import { chapterToKandaPrapathaka, TAITTIRIYA_TOTAL_PRAPATHAKAS } from './scripts/lib/taittiriya-samhita-structure.mjs';
+import { MAITRAYANI_TOTAL_PRAPATHAKAS, chapterToKandaPrapathaka as maitrayaniChapterToKandaPrapathaka } from './scripts/lib/maitrayani-samhita-structure.mjs';
 
 const rigvedaMandalaRedirects = Object.fromEntries(
   Array.from({ length: 10 }, (_, index) => {
@@ -42,8 +43,34 @@ const taittiriyaKandaRedirects = Object.fromEntries(
   }).flat(),
 );
 
+const maitrayaniChapterRedirects = Object.fromEntries(
+  Array.from({ length: MAITRAYANI_TOTAL_PRAPATHAKAS }, (_, index) => {
+    const chapter = index + 1;
+    const { kanda, prapathaka } = maitrayaniChapterToKandaPrapathaka(chapter);
+    const chapterSlug = `chapter-${String(chapter).padStart(2, '0')}`;
+    const target = `/maitrayani-samhita/kanda-${kanda}/prapathaka-${prapathaka}/`;
+    const iastTarget = `/iast/maitrayani-samhita/kanda-${kanda}/prapathaka-${prapathaka}/`;
+    return [
+      [`/maitrayani-samhita/${chapterSlug}`, target],
+      [`/iast/maitrayani-samhita/${chapterSlug}`, iastTarget],
+    ];
+  }).flat(),
+);
+
+const maitrayaniKandaRedirects = Object.fromEntries(
+  Array.from({ length: 4 }, (_, index) => {
+    const kanda = index + 1;
+    const padded = `kanda-${String(kanda).padStart(2, '0')}`;
+    return [
+      [`/maitrayani-samhita/${padded}`, `/maitrayani-samhita/kanda-${kanda}/`],
+      [`/iast/maitrayani-samhita/${padded}`, `/iast/maitrayani-samhita/kanda-${kanda}/`],
+    ];
+  }).flat(),
+);
+
 export default defineConfig({
   site: 'https://vaidhikadharma.org',
+  trailingSlash: 'always',
 
   prefetch: {
     prefetchAll: true,
@@ -54,6 +81,8 @@ export default defineConfig({
     ...rigvedaMandalaRedirects,
     ...taittiriyaChapterRedirects,
     ...taittiriyaKandaRedirects,
+    ...maitrayaniChapterRedirects,
+    ...maitrayaniKandaRedirects,
     '/aswalayana-sandhyavandanam': '/aswalayana-sandhyavandanam/prata',
     '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
     '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',

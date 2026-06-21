@@ -1,4 +1,5 @@
 import { TAITTIRIYA_KANDAS } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
+import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
 
 const MANDALA_LABELS = {
 	root: [
@@ -43,6 +44,14 @@ function taittiriyaKandaItems() {
 		label: kandaInfo.rootLabel,
 		translations: { en: kandaInfo.iastLabel },
 		link: `/taittiriya-samhita/kanda-${kandaInfo.kanda}/`,
+	}));
+}
+
+function maitrayaniKandaItems() {
+	return MAITRAYANI_KANDAS.map((kandaInfo) => ({
+		label: kandaInfo.rootLabel,
+		translations: { en: kandaInfo.iastLabel },
+		link: `/maitrayani-samhita/kanda-${kandaInfo.kanda}/`,
 	}));
 }
 
@@ -111,6 +120,19 @@ export const samhitasSidebarGroup = {
 					link: '/taittiriya-samhita/',
 				},
 				...taittiriyaKandaItems(),
+			],
+		},
+		{
+			label: 'मैत्रायणी संहिता (कृष्णयजुः)',
+			translations: { en: 'Maitrāyaṇī saṃhitā (Kṛṣṇayajuḥ)' },
+			collapsed: true,
+			items: [
+				{
+					label: 'सूची',
+					translations: { en: 'Sūcī' },
+					link: '/maitrayani-samhita/',
+				},
+				...maitrayaniKandaItems(),
 			],
 		},
 	],

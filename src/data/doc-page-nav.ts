@@ -198,6 +198,28 @@ function getSamhitaContextChips(slug: string, isIast: boolean): ContextChip[] | 
 		];
 	}
 
+	const maitrayaniKanda = slug.match(/^(?:iast\/)?maitrayani-samhita\/kanda-(\d+)$/);
+	if (maitrayaniKanda) {
+		return [
+			{ label: isIast ? 'Kṛṣṇa Yajurveda · Maitrāyaṇī' : 'कृष्ण यजुर्वेद · मैत्रायणी' },
+			{ label: isIast ? `Kāṇḍa ${maitrayaniKanda[1]}` : `काण्ड ${maitrayaniKanda[1]}` },
+		];
+	}
+
+	const maitrayaniPrapathaka = slug.match(
+		/^(?:iast\/)?maitrayani-samhita\/kanda-(\d+)\/prapathaka-(\d+)$/
+	);
+	if (maitrayaniPrapathaka) {
+		return [
+			{ label: isIast ? 'Kṛṣṇa Yajurveda · Maitrāyaṇī' : 'कृष्ण यजुर्वेद · मैत्रायणी' },
+			{
+				label: isIast
+					? `Kāṇḍa ${maitrayaniPrapathaka[1]} · Prapāṭhaka ${maitrayaniPrapathaka[2]}`
+					: `काण्ड ${maitrayaniPrapathaka[1]} · प्रपाठक ${maitrayaniPrapathaka[2]}`,
+			},
+		];
+	}
+
 	return undefined;
 }
 
