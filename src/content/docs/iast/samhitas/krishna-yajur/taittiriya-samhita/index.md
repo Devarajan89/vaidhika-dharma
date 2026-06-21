@@ -6,7 +6,7 @@ sidebar:
   order: 1
 tableOfContents: false
 description: 'Kṛṣṇayajuḥ taittirīyasaṃhitāyāḥ sapta kāṇḍānāṃ sūcī.'
-lastUpdated: 2026-06-17
+lastUpdated: 2026-06-21
 ---
 
 # Kṛṣṇayajuḥ Taittirīyasaṃhitā — Sūcī
@@ -15,93 +15,93 @@ Taittirīyasaṃhitāyāḥ sapta kāṇḍāni, catvāriṃśat prapāṭhakā�
 
 ## Prathama kāṇḍa {#kanda-1}
 
-[Prathama kāṇḍa overview](kanda-01/)
+[Prathama kāṇḍa — full text](kanda-1/)
 
-| Prapāṭhaka | Anuvākāḥ | Sūcī |
+| Prapāṭhaka | Anuvākāḥ | Read |
 |--------:|--------:|:-----|
-| [1](chapter-01.md/) | 14 | [Anuvāka sūcī](chapter-01-index/) |
-| [2](chapter-02.md/) | 13 | [Anuvāka sūcī](chapter-02-index/) |
-| [3](chapter-03.md/) | 14 | [Anuvāka sūcī](chapter-03-index/) |
-| [4](chapter-04.md/) | 46 | [Anuvāka sūcī](chapter-04-index/) |
-| [5](chapter-05.md/) | 11 | [Anuvāka sūcī](chapter-05-index/) |
-| [6](chapter-06.md/) | 12 | [Anuvāka sūcī](chapter-06-index/) |
-| [7](chapter-07.md/) | 13 | [Anuvāka sūcī](chapter-07-index/) |
-| [8](chapter-08.md/) | 22 | [Anuvāka sūcī](chapter-08-index/) |
+| 1 | 14 | [Read](kanda-1/prapathaka-1/) |
+| 2 | 13 | [Read](kanda-1/prapathaka-2/) |
+| 3 | 14 | [Read](kanda-1/prapathaka-3/) |
+| 4 | 46 | [Read](kanda-1/prapathaka-4/) |
+| 5 | 11 | [Read](kanda-1/prapathaka-5/) |
+| 6 | 12 | [Read](kanda-1/prapathaka-6/) |
+| 7 | 13 | [Read](kanda-1/prapathaka-7/) |
+| 8 | 22 | [Read](kanda-1/prapathaka-8/) |
 
 ## Dvitīya kāṇḍa {#kanda-2}
 
-[Dvitīya kāṇḍa overview](kanda-02/)
+[Dvitīya kāṇḍa — full text](kanda-2/)
 
-| Prapāṭhaka | Anuvākāḥ | Sūcī |
+| Prapāṭhaka | Anuvākāḥ | Read |
 |--------:|--------:|:-----|
-| [1](chapter-09.md/) | 21 | [Anuvāka sūcī](chapter-09-index/) |
-| [2](chapter-10.md/) | 24 | [Anuvāka sūcī](chapter-10-index/) |
-| [3](chapter-11.md/) | 28 | [Anuvāka sūcī](chapter-11-index/) |
-| [4](chapter-12.md/) | 28 | [Anuvāka sūcī](chapter-12-index/) |
-| [5](chapter-13.md/) | 24 | [Anuvāka sūcī](chapter-13-index/) |
-| [6](chapter-14.md/) | 24 | [Anuvāka sūcī](chapter-14-index/) |
+| 1 | 21 | [Read](kanda-2/prapathaka-1/) |
+| 2 | 24 | [Read](kanda-2/prapathaka-2/) |
+| 3 | 28 | [Read](kanda-2/prapathaka-3/) |
+| 4 | 28 | [Read](kanda-2/prapathaka-4/) |
+| 5 | 24 | [Read](kanda-2/prapathaka-5/) |
+| 6 | 24 | [Read](kanda-2/prapathaka-6/) |
 
 ## Tṛtīya kāṇḍa {#kanda-3}
 
-[Tṛtīya kāṇḍa overview](kanda-03/)
+[Tṛtīya kāṇḍa — full text](kanda-3/)
 
-| Prapāṭhaka | Anuvākāḥ | Sūcī |
+| Prapāṭhaka | Anuvākāḥ | Read |
 |--------:|--------:|:-----|
-| [1](chapter-15.md/) | 22 | [Anuvāka sūcī](chapter-15-index/) |
-| [2](chapter-16.md/) | 22 | [Anuvāka sūcī](chapter-16-index/) |
-| [3](chapter-17.md/) | 22 | [Anuvāka sūcī](chapter-17-index/) |
-| [4](chapter-18.md/) | 22 | [Anuvāka sūcī](chapter-18-index/) |
-| [5](chapter-19.md/) | 22 | [Anuvāka sūcī](chapter-19-index/) |
+| 1 | 22 | [Read](kanda-3/prapathaka-1/) |
+| 2 | 22 | [Read](kanda-3/prapathaka-2/) |
+| 3 | 22 | [Read](kanda-3/prapathaka-3/) |
+| 4 | 22 | [Read](kanda-3/prapathaka-4/) |
+| 5 | 22 | [Read](kanda-3/prapathaka-5/) |
 
 ## Caturtha kāṇḍa {#kanda-4}
 
-[Caturtha kāṇḍa overview](kanda-04/)
+[Caturtha kāṇḍa — full text](kanda-4/)
 
-| Prapāṭhaka | Anuvākāḥ | Sūcī |
+| Prapāṭhaka | Anuvākāḥ | Read |
 |--------:|--------:|:-----|
-| [1](chapter-20.md/) | 22 | [Anuvāka sūcī](chapter-20-index/) |
-| [2](chapter-21.md/) | 22 | [Anuvāka sūcī](chapter-21-index/) |
-| [3](chapter-22.md/) | 26 | [Anuvāka sūcī](chapter-22-index/) |
-| [4](chapter-23.md/) | 24 | [Anuvāka sūcī](chapter-23-index/) |
-| [5](chapter-24.md/) | 22 | [Anuvāka sūcī](chapter-24-index/) |
-| [6](chapter-25.md/) | 18 | [Anuvāka sūcī](chapter-25-index/) |
-| [7](chapter-26.md/) | 30 | [Anuvāka sūcī](chapter-26-index/) |
+| 1 | 22 | [Read](kanda-4/prapathaka-1/) |
+| 2 | 22 | [Read](kanda-4/prapathaka-2/) |
+| 3 | 26 | [Read](kanda-4/prapathaka-3/) |
+| 4 | 24 | [Read](kanda-4/prapathaka-4/) |
+| 5 | 22 | [Read](kanda-4/prapathaka-5/) |
+| 6 | 18 | [Read](kanda-4/prapathaka-6/) |
+| 7 | 30 | [Read](kanda-4/prapathaka-7/) |
 
 ## Pañcama kāṇḍa {#kanda-5}
 
-[Pañcama kāṇḍa overview](kanda-05/)
+[Pañcama kāṇḍa — full text](kanda-5/)
 
-| Prapāṭhaka | Anuvākāḥ | Sūcī |
+| Prapāṭhaka | Anuvākāḥ | Read |
 |--------:|--------:|:-----|
-| [1](chapter-27.md/) | 22 | [Anuvāka sūcī](chapter-27-index/) |
-| [2](chapter-28.md/) | 24 | [Anuvāka sūcī](chapter-28-index/) |
-| [3](chapter-29.md/) | 24 | [Anuvāka sūcī](chapter-29-index/) |
-| [4](chapter-30.md/) | 24 | [Anuvāka sūcī](chapter-30-index/) |
-| [5](chapter-31.md/) | 43 | [Anuvāka sūcī](chapter-31-index/) |
-| [6](chapter-32.md/) | 45 | [Anuvāka sūcī](chapter-32-index/) |
-| [7](chapter-33.md/) | 51 | [Anuvāka sūcī](chapter-33-index/) |
+| 1 | 22 | [Read](kanda-5/prapathaka-1/) |
+| 2 | 24 | [Read](kanda-5/prapathaka-2/) |
+| 3 | 24 | [Read](kanda-5/prapathaka-3/) |
+| 4 | 24 | [Read](kanda-5/prapathaka-4/) |
+| 5 | 43 | [Read](kanda-5/prapathaka-5/) |
+| 6 | 45 | [Read](kanda-5/prapathaka-6/) |
+| 7 | 51 | [Read](kanda-5/prapathaka-7/) |
 
 ## Ṣaṣṭha kāṇḍa {#kanda-6}
 
-[Ṣaṣṭha kāṇḍa overview](kanda-06/)
+[Ṣaṣṭha kāṇḍa — full text](kanda-6/)
 
-| Prapāṭhaka | Anuvākāḥ | Sūcī |
+| Prapāṭhaka | Anuvākāḥ | Read |
 |--------:|--------:|:-----|
-| [1](chapter-34.md/) | 22 | [Anuvāka sūcī](chapter-34-index/) |
-| [2](chapter-35.md/) | 22 | [Anuvāka sūcī](chapter-35-index/) |
-| [3](chapter-36.md/) | 22 | [Anuvāka sūcī](chapter-36-index/) |
-| [4](chapter-37.md/) | 22 | [Anuvāka sūcī](chapter-37-index/) |
-| [5](chapter-38.md/) | 22 | [Anuvāka sūcī](chapter-38-index/) |
-| [6](chapter-39.md/) | 22 | [Anuvāka sūcī](chapter-39-index/) |
+| 1 | 22 | [Read](kanda-6/prapathaka-1/) |
+| 2 | 22 | [Read](kanda-6/prapathaka-2/) |
+| 3 | 22 | [Read](kanda-6/prapathaka-3/) |
+| 4 | 22 | [Read](kanda-6/prapathaka-4/) |
+| 5 | 22 | [Read](kanda-6/prapathaka-5/) |
+| 6 | 22 | [Read](kanda-6/prapathaka-6/) |
 
 ## Saptama kāṇḍa {#kanda-7}
 
-[Saptama kāṇḍa overview](kanda-07/)
+[Saptama kāṇḍa — full text](kanda-7/)
 
-| Prapāṭhaka | Anuvākāḥ | Sūcī |
+| Prapāṭhaka | Anuvākāḥ | Read |
 |--------:|--------:|:-----|
-| [1](chapter-40.md/) | 40 | [Anuvāka sūcī](chapter-40-index/) |
-| [2](chapter-41.md/) | 40 | [Anuvāka sūcī](chapter-41-index/) |
-| [3](chapter-42.md/) | 40 | [Anuvāka sūcī](chapter-42-index/) |
-| [4](chapter-43.md/) | 44 | [Anuvāka sūcī](chapter-43-index/) |
-| [5](chapter-44.md/) | 50 | [Anuvāka sūcī](chapter-44-index/) |
+| 1 | 40 | [Read](kanda-7/prapathaka-1/) |
+| 2 | 40 | [Read](kanda-7/prapathaka-2/) |
+| 3 | 40 | [Read](kanda-7/prapathaka-3/) |
+| 4 | 44 | [Read](kanda-7/prapathaka-4/) |
+| 5 | 50 | [Read](kanda-7/prapathaka-5/) |

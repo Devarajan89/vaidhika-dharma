@@ -1,8 +1,15 @@
 ---
 import SuktaPage from './SuktaPage.astro';
 import Verse from './Verse.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
 import type { HomeLocale } from '../../data/home';
 import { getMandalaSuktas, getSuktaVerses } from '../../lib/rigveda-corpus';
+import {
+	getRigvedaMandalaJumpItems,
+	getRigvedaMandalaPageNav,
+	getRigvedaSuktaHref,
+} from '../../lib/samhita-nav';
 import { splitMantraPadas } from '../../lib/rigveda-samhita';
 import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
 
@@ -14,6 +21,9 @@ interface Props {
 const { mandala, locale = 'root' } = Astro.props;
 
 const suktaRecords = getMandalaSuktas(mandala);
+const jumpItems = getRigvedaMandalaJumpItems(mandala, locale);
+const pageNav = getRigvedaMandalaPageNav(mandala, locale);
+const jumpTitle = locale === 'iast' ? 'Jump to sūkta' : 'सूक्तम् अनुगच्छ';
 
 const sections = await Promise.all(
 	suktaRecords.map(async (suktaRecord) => {
@@ -47,15 +57,19 @@ const sections = await Promise.all(
 ---
 
 <SuktaPage locale={locale} class="rigveda-samhita">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} />
 	{
 		sections.map((section) => (
 			<section class="veda-sukta-block" id={`sukta-${section.sukta}`}>
 				<header class="veda-sukta-block__header">
-					<span class="veda-sukta-block__label">
+					<a
+						class="veda-sukta-block__label veda-sukta-block__label--link"
+						href={getRigvedaSuktaHref(mandala, section.sukta, locale)}
+					>
 						{locale === 'iast'
 							? `Sūkta ${section.sukta}`
 							: `सूक्त ${section.sukta}`}
-					</span>
+					</a>
 					<p class="veda-sukta-block__title">{section.header}</p>
 				</header>
 				<div class="veda-sukta-block__mantras">
@@ -75,4 +89,5 @@ const sections = await Promise.all(
 			</section>
 		))
 	}
+	<SamhitaPageNav links={pageNav} {locale} />
 </SuktaPage>

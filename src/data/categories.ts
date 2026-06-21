@@ -78,7 +78,6 @@ const iastMadhyandinaSamhitaChapters = samhitaAdhyayas('madhyandina', 'iast');
 const kanvaSamhitaChapters = samhitaAdhyayas('kanva', 'root');
 const iastKanvaSamhitaChapters = samhitaAdhyayas('kanva', 'iast');
 
-const TAITTIRIYA_KANDA_COUNTS = [8, 6, 5, 7, 7, 6, 5];
 const TAITTIRIYA_KANDA_LABELS = {
 	root: [
 		'प्रथम काण्ड',
@@ -102,32 +101,13 @@ const TAITTIRIYA_KANDA_LABELS = {
 
 function taittiriyaSamhitaChapters(locale: keyof typeof TAITTIRIYA_KANDA_LABELS): CategoryNode[] {
 	const prefix = locale === 'iast' ? '/iast/taittiriya-samhita' : '/taittiriya-samhita';
-	let chapter = 1;
 
 	return [
 		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...TAITTIRIYA_KANDA_LABELS[locale].map((kandaLabel, kandaIndex) => {
-			const prapathakaCount = TAITTIRIYA_KANDA_COUNTS[kandaIndex];
-			const kandaNumber = kandaIndex + 1;
-			const children = Array.from({ length: prapathakaCount }, (_, prapathakaIndex) => {
-				const prapathaka = prapathakaIndex + 1;
-				const currentChapter = chapter++;
-				return {
-					label:
-						locale === 'iast'
-							? `${kandaLabel} — prapāṭhaka ${prapathaka}`
-							: `${kandaLabel} — प्रपाठक ${prapathaka}`,
-					href: `${prefix}/${formatAdhyayaSlug(currentChapter)}/`,
-				};
-			});
-
-			return {
-				label: kandaLabel,
-				href: `${prefix}/kanda-${String(kandaNumber).padStart(2, '0')}/`,
-				defaultOpen: kandaNumber === 1,
-				children,
-			};
-		}),
+		...TAITTIRIYA_KANDA_LABELS[locale].map((label, index) => ({
+			label,
+			href: `${prefix}/kanda-${index + 1}/`,
+		})),
 	];
 }
 

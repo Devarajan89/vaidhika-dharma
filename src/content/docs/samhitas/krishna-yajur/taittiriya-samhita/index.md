@@ -6,7 +6,7 @@ sidebar:
   order: 1
 tableOfContents: false
 description: 'कृष्णयजुः तैत्तिरीयसंहितायाः सप्त काण्डानां सूची।'
-lastUpdated: 2026-06-17
+lastUpdated: 2026-06-21
 ---
 
 # कृष्णयजुः तैत्तिरीयसंहिता — सूची
@@ -15,93 +15,93 @@ lastUpdated: 2026-06-17
 
 ## प्रथम काण्ड {#kanda-1}
 
-[प्रथम काण्ड सूची](kanda-01/)
+[प्रथम काण्ड — संपूर्ण पाठ](kanda-1/)
 
-| प्रपाठक | अनुवाकाः | सूची |
+| प्रपाठक | अनुवाकाः | पाठ |
 |--------:|--------:|:----|
-| [1](chapter-01.md/) | 14 | [अनुवाक सूची](chapter-01-index/) |
-| [2](chapter-02.md/) | 13 | [अनुवाक सूची](chapter-02-index/) |
-| [3](chapter-03.md/) | 14 | [अनुवाक सूची](chapter-03-index/) |
-| [4](chapter-04.md/) | 46 | [अनुवाक सूची](chapter-04-index/) |
-| [5](chapter-05.md/) | 11 | [अनुवाक सूची](chapter-05-index/) |
-| [6](chapter-06.md/) | 12 | [अनुवाक सूची](chapter-06-index/) |
-| [7](chapter-07.md/) | 13 | [अनुवाक सूची](chapter-07-index/) |
-| [8](chapter-08.md/) | 22 | [अनुवाक सूची](chapter-08-index/) |
+| 1 | 14 | [पाठ](kanda-1/prapathaka-1/) |
+| 2 | 13 | [पाठ](kanda-1/prapathaka-2/) |
+| 3 | 14 | [पाठ](kanda-1/prapathaka-3/) |
+| 4 | 46 | [पाठ](kanda-1/prapathaka-4/) |
+| 5 | 11 | [पाठ](kanda-1/prapathaka-5/) |
+| 6 | 12 | [पाठ](kanda-1/prapathaka-6/) |
+| 7 | 13 | [पाठ](kanda-1/prapathaka-7/) |
+| 8 | 22 | [पाठ](kanda-1/prapathaka-8/) |
 
 ## द्वितीय काण्ड {#kanda-2}
 
-[द्वितीय काण्ड सूची](kanda-02/)
+[द्वितीय काण्ड — संपूर्ण पाठ](kanda-2/)
 
-| प्रपाठक | अनुवाकाः | सूची |
+| प्रपाठक | अनुवाकाः | पाठ |
 |--------:|--------:|:----|
-| [1](chapter-09.md/) | 21 | [अनुवाक सूची](chapter-09-index/) |
-| [2](chapter-10.md/) | 24 | [अनुवाक सूची](chapter-10-index/) |
-| [3](chapter-11.md/) | 28 | [अनुवाक सूची](chapter-11-index/) |
-| [4](chapter-12.md/) | 28 | [अनुवाक सूची](chapter-12-index/) |
-| [5](chapter-13.md/) | 24 | [अनुवाक सूची](chapter-13-index/) |
-| [6](chapter-14.md/) | 24 | [अनुवाक सूची](chapter-14-index/) |
+| 1 | 21 | [पाठ](kanda-2/prapathaka-1/) |
+| 2 | 24 | [पाठ](kanda-2/prapathaka-2/) |
+| 3 | 28 | [पाठ](kanda-2/prapathaka-3/) |
+| 4 | 28 | [पाठ](kanda-2/prapathaka-4/) |
+| 5 | 24 | [पाठ](kanda-2/prapathaka-5/) |
+| 6 | 24 | [पाठ](kanda-2/prapathaka-6/) |
 
 ## तृतीय काण्ड {#kanda-3}
 
-[तृतीय काण्ड सूची](kanda-03/)
+[तृतीय काण्ड — संपूर्ण पाठ](kanda-3/)
 
-| प्रपाठक | अनुवाकाः | सूची |
+| प्रपाठक | अनुवाकाः | पाठ |
 |--------:|--------:|:----|
-| [1](chapter-15.md/) | 22 | [अनुवाक सूची](chapter-15-index/) |
-| [2](chapter-16.md/) | 22 | [अनुवाक सूची](chapter-16-index/) |
-| [3](chapter-17.md/) | 22 | [अनुवाक सूची](chapter-17-index/) |
-| [4](chapter-18.md/) | 22 | [अनुवाक सूची](chapter-18-index/) |
-| [5](chapter-19.md/) | 22 | [अनुवाक सूची](chapter-19-index/) |
+| 1 | 22 | [पाठ](kanda-3/prapathaka-1/) |
+| 2 | 22 | [पाठ](kanda-3/prapathaka-2/) |
+| 3 | 22 | [पाठ](kanda-3/prapathaka-3/) |
+| 4 | 22 | [पाठ](kanda-3/prapathaka-4/) |
+| 5 | 22 | [पाठ](kanda-3/prapathaka-5/) |
 
 ## चतुर्थ काण्ड {#kanda-4}
 
-[चतुर्थ काण्ड सूची](kanda-04/)
+[चतुर्थ काण्ड — संपूर्ण पाठ](kanda-4/)
 
-| प्रपाठक | अनुवाकाः | सूची |
+| प्रपाठक | अनुवाकाः | पाठ |
 |--------:|--------:|:----|
-| [1](chapter-20.md/) | 22 | [अनुवाक सूची](chapter-20-index/) |
-| [2](chapter-21.md/) | 22 | [अनुवाक सूची](chapter-21-index/) |
-| [3](chapter-22.md/) | 26 | [अनुवाक सूची](chapter-22-index/) |
-| [4](chapter-23.md/) | 24 | [अनुवाक सूची](chapter-23-index/) |
-| [5](chapter-24.md/) | 22 | [अनुवाक सूची](chapter-24-index/) |
-| [6](chapter-25.md/) | 18 | [अनुवाक सूची](chapter-25-index/) |
-| [7](chapter-26.md/) | 30 | [अनुवाक सूची](chapter-26-index/) |
+| 1 | 22 | [पाठ](kanda-4/prapathaka-1/) |
+| 2 | 22 | [पाठ](kanda-4/prapathaka-2/) |
+| 3 | 26 | [पाठ](kanda-4/prapathaka-3/) |
+| 4 | 24 | [पाठ](kanda-4/prapathaka-4/) |
+| 5 | 22 | [पाठ](kanda-4/prapathaka-5/) |
+| 6 | 18 | [पाठ](kanda-4/prapathaka-6/) |
+| 7 | 30 | [पाठ](kanda-4/prapathaka-7/) |
 
 ## पञ्चम काण्ड {#kanda-5}
 
-[पञ्चम काण्ड सूची](kanda-05/)
+[पञ्चम काण्ड — संपूर्ण पाठ](kanda-5/)
 
-| प्रपाठक | अनुवाकाः | सूची |
+| प्रपाठक | अनुवाकाः | पाठ |
 |--------:|--------:|:----|
-| [1](chapter-27.md/) | 22 | [अनुवाक सूची](chapter-27-index/) |
-| [2](chapter-28.md/) | 24 | [अनुवाक सूची](chapter-28-index/) |
-| [3](chapter-29.md/) | 24 | [अनुवाक सूची](chapter-29-index/) |
-| [4](chapter-30.md/) | 24 | [अनुवाक सूची](chapter-30-index/) |
-| [5](chapter-31.md/) | 43 | [अनुवाक सूची](chapter-31-index/) |
-| [6](chapter-32.md/) | 45 | [अनुवाक सूची](chapter-32-index/) |
-| [7](chapter-33.md/) | 51 | [अनुवाक सूची](chapter-33-index/) |
+| 1 | 22 | [पाठ](kanda-5/prapathaka-1/) |
+| 2 | 24 | [पाठ](kanda-5/prapathaka-2/) |
+| 3 | 24 | [पाठ](kanda-5/prapathaka-3/) |
+| 4 | 24 | [पाठ](kanda-5/prapathaka-4/) |
+| 5 | 43 | [पाठ](kanda-5/prapathaka-5/) |
+| 6 | 45 | [पाठ](kanda-5/prapathaka-6/) |
+| 7 | 51 | [पाठ](kanda-5/prapathaka-7/) |
 
 ## षष्ठ काण्ड {#kanda-6}
 
-[षष्ठ काण्ड सूची](kanda-06/)
+[षष्ठ काण्ड — संपूर्ण पाठ](kanda-6/)
 
-| प्रपाठक | अनुवाकाः | सूची |
+| प्रपाठक | अनुवाकाः | पाठ |
 |--------:|--------:|:----|
-| [1](chapter-34.md/) | 22 | [अनुवाक सूची](chapter-34-index/) |
-| [2](chapter-35.md/) | 22 | [अनुवाक सूची](chapter-35-index/) |
-| [3](chapter-36.md/) | 22 | [अनुवाक सूची](chapter-36-index/) |
-| [4](chapter-37.md/) | 22 | [अनुवाक सूची](chapter-37-index/) |
-| [5](chapter-38.md/) | 22 | [अनुवाक सूची](chapter-38-index/) |
-| [6](chapter-39.md/) | 22 | [अनुवाक सूची](chapter-39-index/) |
+| 1 | 22 | [पाठ](kanda-6/prapathaka-1/) |
+| 2 | 22 | [पाठ](kanda-6/prapathaka-2/) |
+| 3 | 22 | [पाठ](kanda-6/prapathaka-3/) |
+| 4 | 22 | [पाठ](kanda-6/prapathaka-4/) |
+| 5 | 22 | [पाठ](kanda-6/prapathaka-5/) |
+| 6 | 22 | [पाठ](kanda-6/prapathaka-6/) |
 
 ## सप्तम काण्ड {#kanda-7}
 
-[सप्तम काण्ड सूची](kanda-07/)
+[सप्तम काण्ड — संपूर्ण पाठ](kanda-7/)
 
-| प्रपाठक | अनुवाकाः | सूची |
+| प्रपाठक | अनुवाकाः | पाठ |
 |--------:|--------:|:----|
-| [1](chapter-40.md/) | 40 | [अनुवाक सूची](chapter-40-index/) |
-| [2](chapter-41.md/) | 40 | [अनुवाक सूची](chapter-41-index/) |
-| [3](chapter-42.md/) | 40 | [अनुवाक सूची](chapter-42-index/) |
-| [4](chapter-43.md/) | 44 | [अनुवाक सूची](chapter-43-index/) |
-| [5](chapter-44.md/) | 50 | [अनुवाक सूची](chapter-44-index/) |
+| 1 | 40 | [पाठ](kanda-7/prapathaka-1/) |
+| 2 | 40 | [पाठ](kanda-7/prapathaka-2/) |
+| 3 | 40 | [पाठ](kanda-7/prapathaka-3/) |
+| 4 | 44 | [पाठ](kanda-7/prapathaka-4/) |
+| 5 | 50 | [पाठ](kanda-7/prapathaka-5/) |

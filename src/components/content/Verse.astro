@@ -7,9 +7,10 @@ interface Props {
 	id?: string;
 	locale?: HomeLocale;
 	numberPosition?: 'start' | 'end';
+	marker?: string;
 }
 
-const { number, id, locale = 'root', numberPosition = 'end' } = Astro.props;
+const { number, id, locale = 'root', numberPosition = 'end', marker: markerOverride } = Astro.props;
 const mantraId =
 	id ?? (number !== undefined ? `verse-${number}` : undefined);
 const isIast = locale === 'iast' || locale === 'ta';
@@ -20,7 +21,8 @@ const mantraLabel =
 			: `मन्त्र ${number}`
 		: undefined;
 const marker =
-	number !== undefined ? formatMantraMarker(Number(number), locale) : undefined;
+	markerOverride ??
+	(number !== undefined ? formatMantraMarker(Number(number), locale) : undefined);
 ---
 
 <div class="veda-mantra" id={mantraId}>

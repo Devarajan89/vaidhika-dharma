@@ -1,0 +1,170 @@
+---
+import type { HomeLocale } from '../../data/home';
+import type { JumpNavItem } from '../../lib/samhita-nav';
+
+interface Props {
+	items: JumpNavItem[];
+	locale?: HomeLocale;
+	title?: string;
+	minItems?: number;
+	groupThreshold?: number;
+	groupSize?: number;
+}
+
+const {
+	items,
+	locale = 'root',
+	title,
+	minItems = 3,
+	groupThreshold = 24,
+	groupSize = 20,
+} = Astro.props;
+
+if (items.length < minItems) {
+	return null;
+}
+
+const isIast = locale === 'iast';
+const navTitle = title ?? (isIast ? 'Jump to section' : 'अनुभागम् अनुगच्छ');
+const useGroups = items.length > groupThreshold;
+const groups = useGroups
+	? Array.from({ length: Math.ceil(items.length / groupSize) }, (_, groupIndex) => {
+			const start = groupIndex * groupSize;
+			const slice = items.slice(start, start + groupSize);
+			const first = slice[0]?.label ?? String(start + 1);
+			const last = slice[slice.length - 1]?.label ?? String(start + slice.length);
+			return {
+				label: `${first}–${last}`,
+				items: slice,
+			};
+		})
+	: [{ label: '', items }];
+---
+
+<nav class="corpus-jump-nav" aria-label={navTitle}>
+	<p class="corpus-jump-nav__title">{navTitle}</p>
+	{
+		useGroups ? (
+			<div class="corpus-jump-nav__groups">
+				{groups.map((group) => (
+					<details class="corpus-jump-nav__group">
+						<summary>{group.label}</summary>
+						<ol class="corpus-jump-nav__list">
+							{group.items.map((item) => (
+								<li>
+									<a
+										href={item.href ?? `#${item.id}`}
+										class="corpus-jump-nav__chip"
+									>
+										{item.label}
+									</a>
+								</li>
+							))}
+						</ol>
+					</details>
+				))}
+			</div>
+		) : (
+			<ol class="corpus-jump-nav__list">
+				{items.map((item) => (
+					<li>
+						<a href={item.href ?? `#${item.id}`} class="corpus-jump-nav__chip">
+							{item.label}
+						</a>
+					</li>
+				))}
+			</ol>
+		)
+	}
+</nav>
+
+<style>
+	.corpus-jump-nav {
+		margin: 0 0 1.75rem;
+		padding: 0.85rem 1rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.625rem;
+		background: var(--sl-color-gray-7);
+	}
+
+	:global([data-theme='light']) .corpus-jump-nav {
+		background: var(--color-gray-100);
+		border-color: var(--color-gray-300);
+	}
+
+	.corpus-jump-nav__title {
+		margin: 0 0 0.65rem;
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: var(--sl-color-gray-3);
+	}
+
+	.corpus-jump-nav__groups {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+	}
+
+	.corpus-jump-nav__group {
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.375rem;
+		background: var(--sl-color-gray-6);
+	}
+
+	:global([data-theme='light']) .corpus-jump-nav__group {
+		background: var(--color-gray-50, #fff);
+	}
+
+	.corpus-jump-nav__group summary {
+		cursor: pointer;
+		padding: 0.45rem 0.65rem;
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: var(--sl-color-gray-2);
+		list-style: none;
+	}
+
+	.corpus-jump-nav__group summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.corpus-jump-nav__group[open] summary {
+		border-bottom: 1px solid var(--sl-color-gray-5);
+	}
+
+	.corpus-jump-nav__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin: 0;
+		padding: 0.55rem 0.65rem;
+		list-style: none;
+	}
+
+	.corpus-jump-nav__chip {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 2rem;
+		padding: 0.2rem 0.45rem;
+		font-size: 0.8125rem;
+		font-weight: 400;
+		text-decoration: none;
+		color: var(--sl-color-gray-2);
+		background: var(--sl-color-gray-6);
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.25rem;
+	}
+
+	.corpus-jump-nav__chip:hover {
+		color: var(--sl-color-white);
+		border-color: var(--sl-color-accent);
+		background: color-mix(in srgb, var(--sl-color-accent) 15%, var(--sl-color-gray-6));
+	}
+
+	@media print {
+		.corpus-jump-nav {
+			display: none;
+		}
+	}
+</style>

@@ -1,0 +1,150 @@
+---
+import type { HomeLocale } from '../../data/home';
+import type { SamhitaPageNavLinks } from '../../lib/samhita-nav';
+
+interface Props {
+	links: SamhitaPageNavLinks;
+	locale?: HomeLocale;
+}
+
+const { links, locale = 'root' } = Astro.props;
+const { prev, next, up, index } = links;
+
+if (!prev && !next && !up && !index) {
+	return null;
+}
+---
+
+<nav class="samhita-page-nav" aria-label={locale === 'iast' ? 'Saṃhitā navigation' : 'संहिता नेविगेशन'}>
+	<div class="samhita-page-nav__secondary">
+		{
+			up && (
+				<a class="samhita-page-nav__link samhita-page-nav__link--up" href={up.href}>
+					{up.label}
+				</a>
+			)
+		}
+		{
+			index && (
+				<a class="samhita-page-nav__link samhita-page-nav__link--index" href={index.href}>
+					{index.label}
+				</a>
+			)
+		}
+	</div>
+	<div class="samhita-page-nav__row">
+		{
+			prev ? (
+				<a class="samhita-page-nav__link samhita-page-nav__link--prev" href={prev.href}>
+					<span class="samhita-page-nav__dir">
+						{locale === 'iast' ? 'Previous' : 'पूर्व'}
+					</span>
+					<span class="samhita-page-nav__label">{prev.label}</span>
+				</a>
+			) : (
+				<span />
+			)
+		}
+		{
+			next ? (
+				<a class="samhita-page-nav__link samhita-page-nav__link--next" href={next.href}>
+					<span class="samhita-page-nav__dir">
+						{locale === 'iast' ? 'Next' : 'अग्रिम'}
+					</span>
+					<span class="samhita-page-nav__label">{next.label}</span>
+				</a>
+			) : (
+				<span />
+			)
+		}
+	</div>
+</nav>
+
+<style>
+	.samhita-page-nav {
+		margin: 2rem 0 0;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--sl-color-gray-5);
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+
+	.samhita-page-nav__secondary {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.samhita-page-nav__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
+	}
+
+	.samhita-page-nav__link {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+		padding: 0.65rem 0.85rem;
+		text-decoration: none;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background: var(--sl-color-gray-7);
+		color: var(--sl-color-gray-2);
+		transition:
+			border-color 0.15s ease,
+			color 0.15s ease,
+			background 0.15s ease;
+	}
+
+	:global([data-theme='light']) .samhita-page-nav__link {
+		background: var(--color-gray-100);
+		border-color: var(--color-gray-300);
+		color: var(--color-gray-800);
+	}
+
+	.samhita-page-nav__link:hover {
+		border-color: var(--sl-color-accent);
+		color: var(--sl-color-accent);
+	}
+
+	.samhita-page-nav__link--next {
+		text-align: right;
+		align-items: flex-end;
+	}
+
+	.samhita-page-nav__link--up,
+	.samhita-page-nav__link--index {
+		flex-direction: row;
+		align-items: center;
+		font-size: 0.875rem;
+	}
+
+	.samhita-page-nav__dir {
+		font-size: 0.75rem;
+		color: var(--sl-color-gray-3);
+	}
+
+	.samhita-page-nav__label {
+		font-size: 0.9375rem;
+		font-weight: 400;
+	}
+
+	@media (max-width: 40rem) {
+		.samhita-page-nav__row {
+			grid-template-columns: 1fr;
+		}
+
+		.samhita-page-nav__link--next {
+			text-align: left;
+			align-items: flex-start;
+		}
+	}
+
+	@media print {
+		.samhita-page-nav {
+			display: none;
+		}
+	}
+</style>

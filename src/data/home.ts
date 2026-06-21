@@ -1,8 +1,17 @@
+import homeQuotesData from './home-quotes.json';
+
 export type HomeLocale = 'root' | 'iast';
 
 export interface HomeQuote {
 	text: string;
 	source: string;
+	meaning: string;
+}
+
+interface HomeQuoteEntry {
+	text: Record<HomeLocale, string>;
+	source: Record<HomeLocale, string>;
+	meaning: string;
 }
 
 export interface HomeHeroAction {
@@ -70,18 +79,18 @@ export const heroContentByLocale: Record<HomeLocale, HomeHero> = {
 
 export const homeContentByLocale: Record<HomeLocale, HomeContent> = {
 	root: {
-		searchHint: 'उपरि अन्वेषणपट्टिकया मन्त्र, विधि, शास्त्राणि अन्विष्यन्ताम्।',
+		searchHint: 'Use the search bar above to find mantras, rituals, and scriptures.',
 		intro:
-			'वैदिकधर्मः वैदिकजीवनस्य मार्गदर्शकः — नित्यकर्म (दैनिक अनुष्ठान), धर्म (सदाचार), स्वाध्याय (शास्त्राध्ययन)।',
-		browseHeading: 'सञ्चयनम्',
-		aboutTitle: 'परिचय',
+			'Vaidhika Dharma guides Vedic living — nityakarma (daily practice), dharma (right conduct), and svādhyāya (study of the śāstras). Mantras are shown in IAST; switch to Devanagari for the native script view.',
+		browseHeading: 'Browse',
+		aboutTitle: 'About',
 		aboutBody: [
-			'वैदिकधर्मः वैदिकजीवनस्य मार्गं संरक्षितुं वितरितुं च समर्पितः — नित्यकर्म, धर्म, स्वाध्याय।',
-			'देवनागरी-IAST-रूपेण प्रस्तुतम्, येन साधकाः गुरुपरम्परया अनुष्ठानं कर्तुम् अर्हन्ति।',
+			'Vaidhika Dharma is dedicated to preserving and sharing the path of Vedic life — daily rituals (nityakarma), ethical conduct (dharma), and scriptural study (svādhyāya).',
+			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer.',
 		],
-		quoteTitle: 'अद्य श्लोकः',
-		recentTitle: 'सम्प्रति परिवर्तनानि',
-		recentEmpty: 'अद्य परिवर्तनानि न सन्ति।',
+		quoteTitle: 'Daily verse',
+		recentTitle: 'Recent updates',
+		recentEmpty: 'No updates today.',
 	},
 	iast: {
 		searchHint: 'Use the search bar above to find mantras, rituals, and scriptures.',
@@ -102,19 +111,17 @@ export const homeContentByLocale: Record<HomeLocale, HomeContent> = {
 /** @deprecated Use getHomeContent(locale) */
 export const homeContent: HomeContent = homeContentByLocale.root;
 
-export const homeQuotes: Record<HomeLocale, HomeQuote[]> = {
-	root: [
-		{ text: 'वेदोऽखिलो धर्ममूलम्', source: 'मनुस्मृति २.६' },
-		{ text: 'यतो धर्मस्ततो जयः', source: 'महाभारतम्' },
-		{ text: 'सत्यं वद धर्मं चर', source: 'तैत्तिरीयोपनिषत्' },
-		{ text: 'आचारः परमो धर्मः', source: 'परम्परा' },
-	],
-	iast: [
-		{ text: "Vedo'khilo dharmamūlam", source: 'Manu smṛti 2.6' },
-		{ text: 'Yato dharmas tato jayaḥ', source: 'Mahābhārata' },
-		{ text: 'Satyaṃ vada, dharmaṃ cara', source: 'Taittirīya upaniṣad' },
-		{ text: 'Ācāraḥ paramo dharmaḥ', source: 'Paramparā' },
-	],
+const homeQuotesByLocale: Record<HomeLocale, HomeQuote[]> = {
+	root: (homeQuotesData as HomeQuoteEntry[]).map((entry) => ({
+		text: entry.text.root,
+		source: entry.source.root,
+		meaning: entry.meaning,
+	})),
+	iast: (homeQuotesData as HomeQuoteEntry[]).map((entry) => ({
+		text: entry.text.iast,
+		source: entry.source.iast,
+		meaning: entry.meaning,
+	})),
 };
 
 export const salutationByLocale: Record<HomeLocale, string> = {
@@ -142,9 +149,13 @@ export function getSalutation(locale: HomeLocale): string {
 	return salutationByLocale[locale];
 }
 
-export function getQuoteOfDay(locale: HomeLocale): HomeQuote {
-	const quotes = homeQuotes[locale];
-	const start = new Date(new Date().getFullYear(), 0, 0);
-	const day = Math.floor((Date.now() - start.getTime()) / 86_400_000);
-	return quotes[day % quotes.length];
+/** Day-of-year index (0-based) for stable daily rotation. */
+export function getDayOfYear(date = new Date()): number {
+	const start = new Date(date.getFullYear(), 0, 0);
+	return Math.floor((date.getTime() - start.getTime()) / 86_400_000);
+}
+
+export function getQuoteOfDay(locale: HomeLocale, date = new Date()): HomeQuote {
+	const quotes = homeQuotesByLocale[locale];
+	return quotes[getDayOfYear(date) % quotes.length];
 }

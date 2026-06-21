@@ -1,3 +1,5 @@
+import { TAITTIRIYA_KANDAS } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
+
 const MANDALA_LABELS = {
 	root: [
 		'प्रथम मण्डल',
@@ -25,17 +27,23 @@ const MANDALA_LABELS = {
 	],
 };
 
-const MANDALA_COUNTS = [191, 43, 62, 58, 87, 75, 104, 102, 114, 191];
-
 function rigvedaMandalaItems() {
 	return MANDALA_LABELS.root.map((label, index) => {
 		const mandala = index + 1;
 		return {
-			label: `${label} (${MANDALA_COUNTS[index]})`,
-			translations: { en: `${MANDALA_LABELS.iast[index]} (${MANDALA_COUNTS[index]})` },
+			label,
+			translations: { en: MANDALA_LABELS.iast[index] },
 			link: `/rigveda-samhita/mandala-${mandala}/`,
 		};
 	});
+}
+
+function taittiriyaKandaItems() {
+	return TAITTIRIYA_KANDAS.map((kandaInfo) => ({
+		label: kandaInfo.rootLabel,
+		translations: { en: kandaInfo.iastLabel },
+		link: `/taittiriya-samhita/kanda-${kandaInfo.kanda}/`,
+	}));
 }
 
 /** Lightweight samhitas sidebar — mandala/chapter links only, no per-sukta autogenerate. */
@@ -102,12 +110,7 @@ export const samhitasSidebarGroup = {
 					translations: { en: 'Sūcī' },
 					link: '/taittiriya-samhita/',
 				},
-				{
-					autogenerate: {
-						directory: 'samhitas/krishna-yajur/taittiriya-samhita',
-						collapsed: true,
-					},
-				},
+				...taittiriyaKandaItems(),
 			],
 		},
 	],
