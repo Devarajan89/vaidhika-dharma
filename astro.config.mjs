@@ -73,8 +73,11 @@ export default defineConfig({
   trailingSlash: 'always',
 
   prefetch: {
-    prefetchAll: true,
-    defaultStrategy: 'viewport',
+    defaultStrategy: 'hover',
+  },
+
+  build: {
+    inlineStylesheets: 'always',
   },
 
   redirects: {
@@ -115,6 +118,7 @@ export default defineConfig({
               LastUpdated: './src/components/LastUpdated.astro',
               PageTitle: './src/components/PageTitle.astro',
               Footer: './src/components/Footer.astro',
+              Search: './src/components/Search.astro',
           },
           routeMiddleware: './src/route-middleware.ts',
           defaultLocale: 'root',
@@ -200,6 +204,9 @@ export default defineConfig({
     plugins: [tailwindcss()],
     resolve: {
       tsconfigPaths: true,
+    },
+    build: {
+      modulePreload: false,
     },
   },
 });

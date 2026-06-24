@@ -31,6 +31,15 @@ const jsonLd = {
 ---
 
 <Default {...Astro.props} />
+<style is:inline>
+	@font-face {
+		font-family: 'Samarkan';
+		src: url('/fonts/samarkan.ttf') format('truetype');
+		font-style: normal;
+		font-display: optional;
+		unicode-range: U+0900-097F, U+0020-007F;
+	}
+</style>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalUrl} />
 <meta property="og:type" content="website" />

@@ -471,15 +471,6 @@ body {
           transparent
   );
 }
-/* Badge */
-.danger:where(.astro-avdet4wd) {
-  --sl-color-bg-badge: var(--sl-color-accent);
-}
-.small:where(.astro-avdet4wd) {
-  font-size: 0.6rem;
-  border: 0px;
-}
-
 /* LinkCard */
 .link-list:where(.astro-sisxfkyq) li {
   color: var(--sl-color-gray-2);

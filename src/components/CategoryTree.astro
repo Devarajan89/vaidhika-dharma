@@ -224,6 +224,37 @@ const tree = categoryTrees[locale] ?? categoryTrees.root;
 		padding-right: 1rem;
 	}
 
+	:global(.tree-badge) {
+		flex-shrink: 0;
+		padding: 0.125rem 0.375rem;
+		font-size: 0.6rem;
+		font-weight: 600;
+		line-height: 1.4;
+		border-radius: 0.25rem;
+		background: var(--sl-color-bg-badge, var(--sl-color-gray-5));
+		color: var(--sl-color-text-badge, var(--sl-color-gray-1));
+	}
+
+	:global(.tree-badge--note) {
+		--sl-color-bg-badge: var(--sl-color-blue-high);
+		--sl-color-text-badge: var(--sl-color-blue);
+	}
+
+	:global(.tree-badge--danger) {
+		--sl-color-bg-badge: var(--sl-color-accent);
+		--sl-color-text-badge: var(--sl-color-text-invert);
+	}
+
+	:global(.tree-badge--success) {
+		--sl-color-bg-badge: var(--sl-color-green-high);
+		--sl-color-text-badge: var(--sl-color-green);
+	}
+
+	:global(.tree-badge--caution) {
+		--sl-color-bg-badge: var(--sl-color-orange-high);
+		--sl-color-text-badge: var(--sl-color-orange);
+	}
+
 	:global(.tree-arrow) {
 		width: 1rem;
 		height: 1rem;
