@@ -1,5 +1,6 @@
 import { TAITTIRIYA_KANDAS } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
+import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
 
 const MANDALA_LABELS = {
 	root: [
@@ -52,6 +53,14 @@ function maitrayaniKandaItems() {
 		label: kandaInfo.rootLabel,
 		translations: { en: kandaInfo.iastLabel },
 		link: `/maitrayani-samhita/kanda-${kandaInfo.kanda}/`,
+	}));
+}
+
+function aitareyaPanchikaItems() {
+	return AITAREYA_PANCHIKAS.map((panchikaInfo) => ({
+		label: panchikaInfo.rootLabel,
+		translations: { en: panchikaInfo.iastLabel },
+		link: `/aitareya-brahmana/panchika-${panchikaInfo.panchika}/`,
 	}));
 }
 
@@ -144,8 +153,16 @@ export const brahmanamSidebarGroup = {
 	items: [
 		{
 			label: 'ऐतरेय ब्राह्मनम् (ऋग्वेद)',
-			translations: { en: 'Aitareya brāhmaṇam (Ṛgveda) — in progress' },
-			link: '/iast/',
+			translations: { en: 'Aitareya brāhmaṇam (Ṛgveda)' },
+			collapsed: true,
+			items: [
+				{
+					label: 'सूची',
+					translations: { en: 'Sūcī' },
+					link: '/aitareya-brahmana/',
+				},
+				...aitareyaPanchikaItems(),
+			],
 		},
 	],
 };

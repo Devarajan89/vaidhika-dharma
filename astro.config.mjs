@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { samhitasSidebarGroup, brahmanamSidebarGroup, upanishadsSidebarGroup } from './src/data/samhitas-sidebar.mjs';
 import { chapterToKandaPrapathaka, TAITTIRIYA_TOTAL_PRAPATHAKAS } from './scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_TOTAL_PRAPATHAKAS, chapterToKandaPrapathaka as maitrayaniChapterToKandaPrapathaka } from './scripts/lib/maitrayani-samhita-structure.mjs';
+import { AITAREYA_PANCHIKAS } from './scripts/lib/aitareya-brahmana-structure.mjs';
 
 const rigvedaMandalaRedirects = Object.fromEntries(
   Array.from({ length: 10 }, (_, index) => {
@@ -68,13 +69,34 @@ const maitrayaniKandaRedirects = Object.fromEntries(
   }).flat(),
 );
 
+const aitareyaAstakaRedirects = Object.fromEntries(
+  AITAREYA_PANCHIKAS.flatMap((panchikaInfo) => {
+    const panchika = panchikaInfo.panchika;
+    const adhyayaRedirects = Array.from({ length: panchikaInfo.adhyayaCount }, (_, index) => {
+      const adhyaya = index + 1;
+      return [
+        [`/aitareya-brahmana/astaka-${panchika}/adhyaya-${adhyaya}`, `/aitareya-brahmana/panchika-${panchika}/adhyaya-${adhyaya}/`],
+        [`/iast/aitareya-brahmana/astaka-${panchika}/adhyaya-${adhyaya}`, `/iast/aitareya-brahmana/panchika-${panchika}/adhyaya-${adhyaya}/`],
+      ];
+    }).flat();
+    return [
+      [`/aitareya-brahmana/astaka-${panchika}`, `/aitareya-brahmana/panchika-${panchika}/`],
+      [`/iast/aitareya-brahmana/astaka-${panchika}`, `/iast/aitareya-brahmana/panchika-${panchika}/`],
+      ...adhyayaRedirects,
+    ];
+  }),
+);
+
 export default defineConfig({
   site: 'https://vaidhikadharma.org',
   trailingSlash: 'always',
 
   prefetch: {
-    prefetchAll: true,
-    defaultStrategy: 'viewport',
+    defaultStrategy: 'hover',
+  },
+
+  build: {
+    inlineStylesheets: 'always',
   },
 
   redirects: {
@@ -83,6 +105,7 @@ export default defineConfig({
     ...taittiriyaKandaRedirects,
     ...maitrayaniChapterRedirects,
     ...maitrayaniKandaRedirects,
+    ...aitareyaAstakaRedirects,
     '/aswalayana-sandhyavandanam': '/aswalayana-sandhyavandanam/prata',
     '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
     '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',
@@ -115,6 +138,7 @@ export default defineConfig({
               LastUpdated: './src/components/LastUpdated.astro',
               PageTitle: './src/components/PageTitle.astro',
               Footer: './src/components/Footer.astro',
+              Search: './src/components/Search.astro',
           },
           routeMiddleware: './src/route-middleware.ts',
           defaultLocale: 'root',
@@ -200,6 +224,9 @@ export default defineConfig({
     plugins: [tailwindcss()],
     resolve: {
       tsconfigPaths: true,
+    },
+    build: {
+      modulePreload: false,
     },
   },
 });

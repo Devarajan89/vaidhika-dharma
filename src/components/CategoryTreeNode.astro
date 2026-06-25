@@ -1,5 +1,4 @@
 ---
-import { Badge } from '@astrojs/starlight/components';
 import type { CategoryNode } from '../data/categories';
 
 interface Props {
@@ -42,7 +41,11 @@ const hasChildren = node.children && node.children.length > 0;
 			<span class="tree-entry">
 				<span class="tree-label">{node.label}</span>
 				{node.badge && (
-					<Badge text={node.badge.text} variant={node.badge.variant ?? 'default'} size="small" />
+					<span
+						class:list={['tree-badge', `tree-badge--${node.badge.variant ?? 'default'}`]}
+					>
+						{node.badge.text}
+					</span>
 				)}
 			</span>
 		)

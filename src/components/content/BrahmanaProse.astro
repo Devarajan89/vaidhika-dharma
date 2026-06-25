@@ -1,0 +1,27 @@
+---
+interface Props {
+	text: string;
+	id?: string;
+}
+
+const { text, id } = Astro.props;
+---
+
+<p class="brahmana-prose" id={id}>{text}</p>
+
+<style>
+	.brahmana-prose {
+		margin: 0 0 1.25rem;
+		font-family: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
+		font-size: var(--sl-mantra-size, 1.3125rem);
+		line-height: 1.85;
+		color: var(--veda-text, var(--sl-color-gray-1));
+		text-align: justify;
+		hyphens: auto;
+		letter-spacing: 0.01em;
+	}
+
+	.brahmana-prose:last-child {
+		margin-bottom: 0;
+	}
+</style>

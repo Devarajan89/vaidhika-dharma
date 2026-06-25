@@ -1,0 +1,31 @@
+<IfModule mod_headers.c>
+	# Astro fingerprinted assets — safe to cache for a year
+	<LocationMatch "^/_astro/">
+		Header set Cache-Control "public, max-age=31536000, immutable"
+	</LocationMatch>
+
+	# Fonts and images — rarely change
+	<LocationMatch "^/(fonts|images)/">
+		Header set Cache-Control "public, max-age=31536000"
+	</LocationMatch>
+
+	# Pagefind search index — refresh daily
+	<LocationMatch "^/pagefind/">
+		Header set Cache-Control "public, max-age=86400"
+	</LocationMatch>
+
+	# HTML — always revalidate
+	<FilesMatch "\.html$">
+		Header set Cache-Control "public, max-age=0, must-revalidate"
+	</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresByType text/css "access plus 1 year"
+	ExpiresByType application/javascript "access plus 1 year"
+	ExpiresByType image/webp "access plus 1 year"
+	ExpiresByType image/svg+xml "access plus 1 year"
+	ExpiresByType font/ttf "access plus 1 year"
+	ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>

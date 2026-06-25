@@ -1,4 +1,5 @@
 import type { HomeLocale } from './home';
+import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
 
 export interface CategoryBadge {
 	text: string;
@@ -138,6 +139,28 @@ function maitrayaniSamhitaChapters(locale: keyof typeof MAITRAYANI_KANDA_LABELS)
 
 const maitrayaniSamhitaPrapathakas = maitrayaniSamhitaChapters('root');
 const iastMaitrayaniSamhitaPrapathakas = maitrayaniSamhitaChapters('iast');
+
+function aitareyaBrahmanaPanchikas(locale: 'root' | 'iast'): CategoryNode[] {
+	const prefix = locale === 'iast' ? '/iast/aitareya-brahmana' : '/aitareya-brahmana';
+
+	return [
+		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
+		...AITAREYA_PANCHIKAS.map((panchikaInfo) => ({
+			label: locale === 'iast' ? panchikaInfo.iastLabel : panchikaInfo.rootLabel,
+			href: `${prefix}/panchika-${panchikaInfo.panchika}/`,
+			children: Array.from({ length: panchikaInfo.adhyayaCount }, (_, index) => {
+				const adhyaya = index + 1;
+				return {
+					label: locale === 'iast' ? `Adhyāya ${adhyaya}` : `अध्याय ${adhyaya}`,
+					href: `${prefix}/panchika-${panchikaInfo.panchika}/adhyaya-${adhyaya}/`,
+				};
+			}),
+		})),
+	];
+}
+
+const aitareyaBrahmanaPanchikasRoot = aitareyaBrahmanaPanchikas('root');
+const aitareyaBrahmanaPanchikasIast = aitareyaBrahmanaPanchikas('iast');
 
 const iastRigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('iast');
 
@@ -351,7 +374,8 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			children: [
 				{
 					label: 'ऐतरेय ब्राह्मनम् (ऋग्वेद)',
-					badge: { text: 'In Progress', variant: 'danger' },
+					defaultOpen: false,
+					children: aitareyaBrahmanaPanchikasRoot,
 				},
 			],
 		},
@@ -460,7 +484,8 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			children: [
 				{
 					label: 'Aitareya brāhmaṇam (Ṛgveda)',
-					badge: { text: 'In Progress', variant: 'danger' },
+					defaultOpen: false,
+					children: aitareyaBrahmanaPanchikasIast,
 				},
 			],
 		},
