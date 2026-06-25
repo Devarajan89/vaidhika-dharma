@@ -1,0 +1,107 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import Verse from './Verse.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import type { HomeLocale } from '../../data/home';
+import { splitMantraPadas } from '../../lib/rigveda-samhita';
+import { formatMantraMarker } from '../../lib/rigveda-samhita';
+import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
+import {
+	getUpanishadCorpus,
+	getUpanishadMantraJumpItems,
+	type UpanishadId,
+} from '../../lib/upanishad-corpus';
+
+interface Props {
+	id: UpanishadId;
+	locale?: HomeLocale;
+	blockLabel?: string;
+}
+
+const { id, locale = 'root', blockLabel: blockLabelOverride } = Astro.props;
+const corpus = getUpanishadCorpus(id);
+const blockLabel = blockLabelOverride ?? corpus.title ?? id;
+const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
+const jumpItems = getUpanishadMantraJumpItems(corpus.sections);
+
+let openingShanti = corpus.openingShanti;
+if (locale === 'iast' && openingShanti) {
+	openingShanti = await transliterateDevanagari(openingShanti);
+}
+
+const sections = [];
+for (const section of corpus.sections) {
+	const label =
+		locale === 'iast' ? await transliterateDevanagari(section.label) : section.label;
+	const verses = [];
+	for (const verse of section.verses) {
+		verses.push({
+			number: verse.number,
+			text: locale === 'iast' ? await transliterateDevanagari(verse.text) : verse.text,
+		});
+	}
+	sections.push({ ...section, label, verses });
+}
+---
+
+<SuktaPage {locale} class="rigveda-samhita veda-corpus">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={6} />
+	<header class="veda-sukta-block__header veda-sukta-block__header--single">
+		<span class="veda-sukta-block__label">{blockLabel}</span>
+	</header>
+	{
+		openingShanti && (
+			<section class="upanishad-shanti">
+				{splitMantraPadas(openingShanti).map((pada) => (
+					<p>{pada}</p>
+				))}
+			</section>
+		)
+	}
+	{
+		sections.map((section, sectionIndex) => (
+			<section class="veda-sukta-block upanishad-section">
+				<p class="upanishad-section__label">{section.label}</p>
+				<div class="veda-sukta-block__mantras">
+					{section.verses.map((verse) => (
+						<Verse
+							number={verse.number}
+							id={`mantra-${sectionIndex + 1}-${verse.number}`}
+							{locale}
+							numberPosition="end"
+							marker={formatMantraMarker(verse.number, locale)}
+						>
+							{splitMantraPadas(verse.text).map((pada) => (
+								<p>{pada}</p>
+							))}
+						</Verse>
+					))}
+				</div>
+			</section>
+		))
+	}
+</SuktaPage>
+
+<style>
+	.upanishad-shanti {
+		margin: 0 0 2rem;
+		padding-bottom: 1.25rem;
+		border-bottom: 1px solid var(--sl-color-gray-5);
+		font-family: var(--font-sanskrit), serif;
+		line-height: var(--sl-mantra-line-height);
+	}
+
+	.upanishad-section + .upanishad-section {
+		margin-top: 2.5rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--sl-color-gray-5);
+	}
+
+	.upanishad-section__label {
+		margin: 0 0 1.25rem;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		color: var(--sl-color-gray-3);
+	}
+</style>

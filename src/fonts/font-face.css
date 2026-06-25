@@ -1,3 +1,13 @@
+/* Site title / logo wordmark */
+@font-face {
+  font-family: 'Samarkan';
+  src: url('/fonts/samarkan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0900-097F, U+0020-007F;
+}
+
 /* Devanagari (Sanskrit) — full Siddhanta TTF (complete Vedic glyph set) */
 @font-face {
   font-family: 'Siddhanta';

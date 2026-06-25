@@ -326,15 +326,10 @@ h1:where(.astro-jbfsktt5) {
     font-size: clamp(var(--sl-text-2xl), calc(0.25rem + 5vw), var(--sl-text-4xl));
 }
 
-/*logo styles*/
-.site-title:where(.astro-m46x6ez3) {
-    align-items: center;
-    gap: var(--sl-nav-gap);
-    row-gap: 1.5rem;
-    column-gap: 0.5rem;
-    font-size: var(--sl-text-h4);
-	  font-weight: normal;
-    font-family: 'Samarkan';
+/* Logo wordmark — Samarkan (font loaded via font-face.css) */
+a.site-title {
+  font-family: 'Samarkan', var(--font-sanskrit), serif;
+  font-weight: normal;
 }
 
 .sl-container:where(.astro-7nkwcw3z) {
