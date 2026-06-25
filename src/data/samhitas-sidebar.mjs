@@ -172,14 +172,40 @@ export const upanishadsSidebarGroup = {
 	translations: { en: 'Upaniṣadaḥ' },
 	items: [
 		{
-			label: 'ईशावास्योपनिषद् (शुक्लयजुर्वेद)',
-			translations: { en: 'Īśāvāsya upaniṣad (Śuklayajurveda)' },
-			link: '/kanva-samhita/chapter-40/',
+			label: 'शुक्लयजुर्वेद',
+			translations: { en: 'Śuklayajurveda' },
+			collapsed: true,
+			items: [
+				{
+					label: 'ईशावास्योपनिषद्',
+					translations: { en: 'Īśāvāsyopaniṣad' },
+					link: '/isha-upanishad/',
+				},
+			],
 		},
 		{
-			label: 'ऐतरेयोपनिषद् (ऋग्वेद)',
-			translations: { en: 'Aitareya upaniṣad (Ṛgveda) — in progress' },
-			link: '/iast/',
+			label: 'सामवेद',
+			translations: { en: 'Sāmaveda' },
+			collapsed: true,
+			items: [
+				{
+					label: 'केनोपनिषत्',
+					translations: { en: 'Kenopaniṣad' },
+					link: '/kena-upanishad/',
+				},
+			],
+		},
+		{
+			label: 'कृष्णयजुर्वेद',
+			translations: { en: 'Kṛṣṇayajurveda' },
+			collapsed: true,
+			items: [
+				{
+					label: 'कठोपनिषत्',
+					translations: { en: 'Kaṭhopaniṣad' },
+					link: '/katha-upanishad/',
+				},
+			],
 		},
 	],
 };

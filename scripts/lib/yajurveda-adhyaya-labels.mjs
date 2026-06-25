@@ -91,9 +91,6 @@ export const CHAPTER_SIDEBAR_IAST = {
  * @param {YajurLocale} locale
  */
 export function getAdhyayaSidebarLabel(chapter, locale) {
-	if (chapter === 40) {
-		return locale === 'iast' ? 'Īśa upaniṣad' : 'ईशोपनिषद्';
-	}
 	if (locale === 'iast') {
 		return CHAPTER_SIDEBAR_IAST[chapter] ?? `Chapter ${chapter}`;
 	}
@@ -106,9 +103,6 @@ export function getAdhyayaSidebarLabel(chapter, locale) {
  * @param {YajurLocale} locale
  */
 export function getAdhyayaBlockLabel(chapter, locale) {
-	if (chapter === 40) {
-		return locale === 'iast' ? 'Īśa upaniṣad' : 'ईशोपनिषद्';
-	}
 	if (locale === 'iast') {
 		return CHAPTER_SIDEBAR_IAST[chapter] ?? `Adhyāya ${chapter}`;
 	}

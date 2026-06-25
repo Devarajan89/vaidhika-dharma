@@ -22,9 +22,12 @@ interface Props {
 	tradition: 'madhyandina' | 'kanva';
 	chapter: number;
 	locale?: HomeLocale;
+	blockLabel?: string;
+	hidePageNav?: boolean;
 }
 
-const { tradition, chapter, locale = 'root' } = Astro.props;
+const { tradition, chapter, locale = 'root', blockLabel: blockLabelOverride, hidePageNav = false } =
+	Astro.props;
 
 const corpus = tradition === 'madhyandina' ? madhyandinaData : kanvaData;
 const expectedCount =
@@ -58,7 +61,7 @@ if (locale === 'iast' && header) {
 	header = await transliterateDevanagari(header);
 }
 
-const blockLabel = getAdhyayaBlockLabel(chapter, locale);
+const blockLabel = blockLabelOverride ?? getAdhyayaBlockLabel(chapter, locale);
 const jumpItems = getYajurvedaMantraJumpItems(parsed.verseCount);
 const pageNav = getYajurvedaAdhyayaPageNav(tradition, chapter, locale);
 const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
@@ -87,5 +90,5 @@ const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम�
 			))
 		}
 	</div>
-	<SamhitaPageNav links={pageNav} {locale} />
+	{!hidePageNav && <SamhitaPageNav links={pageNav} {locale} />}
 </SuktaPage>

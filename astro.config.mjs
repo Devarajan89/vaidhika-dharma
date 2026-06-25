@@ -110,8 +110,12 @@ export default defineConfig({
     '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
     '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',
     '/iast/apastamba-sandhyavandanam': '/iast/apastamba-sandhyavandanam/prata',
-    '/upanishads/isha-upanishad': '/kanva-samhita/chapter-40',
-    '/iast/upanishads/isha-upanishad': '/iast/kanva-samhita/chapter-40',
+    '/upanishads/isha-upanishad': '/isha-upanishad',
+    '/iast/upanishads/isha-upanishad': '/iast/isha-upanishad',
+    '/upanishads/kena-upanishad': '/kena-upanishad',
+    '/iast/upanishads/kena-upanishad': '/iast/kena-upanishad',
+    '/upanishads/katha-upanishad': '/katha-upanishad',
+    '/iast/upanishads/katha-upanishad': '/iast/katha-upanishad',
   },
 
   integrations: [
@@ -199,6 +203,7 @@ export default defineConfig({
                   translations: {
                       en: 'Upaniṣadaḥ',
                   },
+                  collapsed: false,
                   items: upanishadsSidebarGroup.items,
               },
           ],

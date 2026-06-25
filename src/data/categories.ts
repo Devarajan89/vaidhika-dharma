@@ -384,7 +384,15 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			children: [
 				{
 					label: 'ईशावास्योपनिषद् (शुक्लयजुर्वेद)',
-					href: '/kanva-samhita/chapter-40/',
+					href: '/isha-upanishad/',
+				},
+				{
+					label: 'केनोपनिषत् (सामवेद)',
+					href: '/kena-upanishad/',
+				},
+				{
+					label: 'कठोपनिषत् (कृष्णयजुर्वेद)',
+					href: '/katha-upanishad/',
 				},
 				{
 					label: 'ऐतरेयोपनिषद् (ऋग्वेद)',
@@ -494,7 +502,15 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			children: [
 				{
 					label: 'Īśāvāsya upaniṣad (Śuklayajurveda)',
-					href: '/iast/kanva-samhita/chapter-40/',
+					href: '/iast/isha-upanishad/',
+				},
+				{
+					label: 'Kena upaniṣad (Sāmaveda)',
+					href: '/iast/kena-upanishad/',
+				},
+				{
+					label: 'Kaṭha upaniṣad (Kṛṣṇayajurveda)',
+					href: '/iast/katha-upanishad/',
 				},
 				{
 					label: 'Aitareya upaniṣad (Ṛgveda)',

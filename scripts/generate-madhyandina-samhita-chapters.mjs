@@ -162,12 +162,6 @@ function formatCountLabel(count, locale) {
  * @param {'root' | 'iast'} locale
  */
 function getChapterTitle(chapter, locale) {
-	if (chapter === 40) {
-		return locale === 'iast'
-			? 'Īśā Upaniṣad — Vājasaneyi Saṃhitā (Mādhyandina)'
-			: 'ईशावास्योपनिषद् — वाजसनेयी संहिता (माध्यन्दिन)';
-	}
-
 	const ordinal = CHAPTER_ORDINALS[chapter];
 	if (locale === 'iast') {
 		return `Vājasaneyi Saṃhitā (Mādhyandina) — Chapter ${chapter}`;
@@ -180,12 +174,6 @@ function getChapterTitle(chapter, locale) {
  * @param {'root' | 'iast'} locale
  */
 function getChapterDescription(chapter, locale) {
-	if (chapter === 40) {
-		return locale === 'iast'
-			? 'Īśāvāsya Upaniṣad — Vājasaneyi Saṃhitā (Mādhyandina), Chapter 40'
-			: 'ईशावास्योपनिषद् — वाजसनेयी संहिता (माध्यन्दिन) चत्वारिंशोऽध्यायः';
-	}
-
 	const ordinal = CHAPTER_ORDINALS[chapter];
 	if (locale === 'iast') {
 		return `Śukla Yajur Veda — Vājasaneyi Saṃhitā (Mādhyandina), Chapter ${chapter}`;
