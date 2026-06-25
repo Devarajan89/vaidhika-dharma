@@ -5,6 +5,7 @@ import {
 	kandaPrapathakaToChapter,
 } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
+import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
 
 export interface JumpNavItem {
 	id: string;
@@ -393,6 +394,103 @@ export function getMaitrayaniPrapathakaPageNav(
 		nav.next = {
 			href: getMaitrayaniPrapathakaHref(kanda, prapathaka + 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka + 1}` : `प्रपाठक ${prapathaka + 1}`,
+		};
+	}
+	return nav;
+}
+
+export function getAitareyaBrahmanaHref(locale: HomeLocale): string {
+	return `${prefix(locale)}/aitareya-brahmana/`;
+}
+
+export function getAitareyaPanchikaHref(panchika: number, locale: HomeLocale): string {
+	return `${prefix(locale)}/aitareya-brahmana/panchika-${panchika}/`;
+}
+
+export function getAitareyaAdhyayaHref(
+	panchika: number,
+	adhyaya: number,
+	locale: HomeLocale
+): string {
+	return `${getAitareyaPanchikaHref(panchika, locale)}adhyaya-${adhyaya}/`;
+}
+
+export function getAitareyaPanchikaJumpItems(panchika: number, _locale: HomeLocale): JumpNavItem[] {
+	return Array.from({ length: 5 }, (_, index) => {
+		const adhyaya = index + 1;
+		return {
+			id: `adhyaya-${adhyaya}`,
+			label: String(adhyaya),
+		};
+	});
+}
+
+export function getAitareyaPanchikaPageNav(panchika: number, locale: HomeLocale): SamhitaPageNavLinks {
+	const up = {
+		href: getAitareyaBrahmanaHref(locale),
+		label: locale === 'iast' ? 'Brāhmaṇa index' : 'ब्राह्मण सूची',
+	};
+	const nav: SamhitaPageNavLinks = { up };
+	const panchikaIndex = AITAREYA_PANCHIKAS.findIndex((entry) => entry.panchika === panchika);
+
+	if (panchikaIndex > 0) {
+		const prevPanchika = AITAREYA_PANCHIKAS[panchikaIndex - 1].panchika;
+		nav.prev = {
+			href: getAitareyaPanchikaHref(prevPanchika, locale),
+			label:
+				locale === 'iast'
+					? AITAREYA_PANCHIKAS[panchikaIndex - 1].iastLabel
+					: AITAREYA_PANCHIKAS[panchikaIndex - 1].rootLabel,
+		};
+	}
+	if (panchikaIndex >= 0 && panchikaIndex < AITAREYA_PANCHIKAS.length - 1) {
+		const nextPanchika = AITAREYA_PANCHIKAS[panchikaIndex + 1].panchika;
+		nav.next = {
+			href: getAitareyaPanchikaHref(nextPanchika, locale),
+			label:
+				locale === 'iast'
+					? AITAREYA_PANCHIKAS[panchikaIndex + 1].iastLabel
+					: AITAREYA_PANCHIKAS[panchikaIndex + 1].rootLabel,
+		};
+	}
+	return nav;
+}
+
+export function getAitareyaAdhyayaJumpItems(khandaCount: number): JumpNavItem[] {
+	return Array.from({ length: khandaCount }, (_, index) => ({
+		id: `khanda-${index + 1}`,
+		label: String(index + 1),
+	}));
+}
+
+export function getAitareyaAdhyayaPageNav(
+	panchika: number,
+	adhyaya: number,
+	locale: HomeLocale
+): SamhitaPageNavLinks {
+	const panchikaInfo = AITAREYA_PANCHIKAS.find((entry) => entry.panchika === panchika);
+	const up = {
+		href: getAitareyaPanchikaHref(panchika, locale),
+		label: panchikaInfo
+			? locale === 'iast'
+				? panchikaInfo.iastLabel
+				: panchikaInfo.rootLabel
+			: locale === 'iast'
+				? `Pañcikā ${panchika}`
+				: `पञ्चिका ${panchika}`,
+	};
+	const nav: SamhitaPageNavLinks = { up };
+
+	if (adhyaya > 1) {
+		nav.prev = {
+			href: getAitareyaAdhyayaHref(panchika, adhyaya - 1, locale),
+			label: locale === 'iast' ? `Adhyāya ${adhyaya - 1}` : `अध्याय ${adhyaya - 1}`,
+		};
+	}
+	if (adhyaya < 5) {
+		nav.next = {
+			href: getAitareyaAdhyayaHref(panchika, adhyaya + 1, locale),
+			label: locale === 'iast' ? `Adhyāya ${adhyaya + 1}` : `अध्याय ${adhyaya + 1}`,
 		};
 	}
 	return nav;
