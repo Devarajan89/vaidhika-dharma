@@ -1,0 +1,84 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import BrahmanaVerses from './BrahmanaVerses.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
+import type { HomeLocale } from '../../data/home';
+import {
+	getTaittiriyaBrahmanaPrapathakaHref,
+	getTaittiriyaBrahmanaAshtakaJumpItems,
+	getTaittiriyaBrahmanaAshtakaPageNav,
+} from '../../lib/samhita-nav';
+import { getTaittiriyaBrahmanaAshtakaPrapathakas } from '../../lib/taittiriya-brahmana-corpus';
+import { buildTaittiriyaBrahmanaAnuvakaBlocks } from '../../lib/taittiriya-brahmana-prose';
+import {
+	TAITTIRIYA_BRAHMANA_ASHTAKAS,
+	isKathakamPrapathaka,
+} from '../../../scripts/lib/taittiriya-brahmana-structure.mjs';
+
+interface Props {
+	ashtaka: number;
+	locale?: HomeLocale;
+}
+
+const { ashtaka, locale = 'root' } = Astro.props;
+
+const ashtakaInfo = TAITTIRIYA_BRAHMANA_ASHTAKAS.find((entry) => entry.ashtaka === ashtaka);
+if (!ashtakaInfo) {
+	throw new Error(`Taittirīya brāhmaṇam: āṣṭaka ${ashtaka} not found`);
+}
+
+const prapathakas = getTaittiriyaBrahmanaAshtakaPrapathakas(ashtaka);
+const jumpItems = getTaittiriyaBrahmanaAshtakaJumpItems(ashtaka, locale);
+const pageNav = getTaittiriyaBrahmanaAshtakaPageNav(ashtaka, locale);
+const jumpTitle = locale === 'iast' ? 'Jump to prapāṭhaka' : 'प्रपाठकम् अनुगच्छ';
+
+const sections = prapathakas.map((entry) => ({
+	prapathaka: entry.prapathaka,
+	globalPrapathaka: entry.globalPrapathaka,
+	anuvakas: buildTaittiriyaBrahmanaAnuvakaBlocks(entry.anuvakas, locale),
+}));
+---
+
+<SuktaPage {locale} class="rigveda-samhita veda-corpus brahmana-corpus">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} />
+	{
+		sections.map((section) => (
+			<section class="veda-sukta-block" id={`prapathaka-${section.prapathaka}`}>
+				<header class="veda-sukta-block__header">
+					<a
+						class="veda-sukta-block__label veda-sukta-block__label--link"
+						href={getTaittiriyaBrahmanaPrapathakaHref(ashtaka, section.prapathaka, locale)}
+					>
+						{locale === 'iast'
+							? `Prapāṭhaka ${section.prapathaka}${isKathakamPrapathaka(ashtaka, section.prapathaka) ? ' (Kāṭhakam)' : ''}`
+							: `प्रपाठक ${section.prapathaka}${isKathakamPrapathaka(ashtaka, section.prapathaka) ? ' (काठकम्)' : ''}`}
+					</a>
+				</header>
+				{section.anuvakas.map((anuvaka) => (
+					<div class="brahmana-khanda">
+						<p class="brahmana-khanda__label">
+							{locale === 'iast' ? `Anuvāka ${anuvaka.anuvaka}` : `अनुवाक ${anuvaka.anuvaka}`}
+						</p>
+						<BrahmanaVerses verses={anuvaka.verses} />
+					</div>
+				))}
+			</section>
+		))
+	}
+	<SamhitaPageNav links={pageNav} {locale} />
+</SuktaPage>
+
+<style>
+	.brahmana-khanda {
+		margin-bottom: 1.75rem;
+	}
+
+	.brahmana-khanda__label {
+		margin: 0 0 0.65rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		color: var(--sl-color-gray-3);
+	}
+</style>

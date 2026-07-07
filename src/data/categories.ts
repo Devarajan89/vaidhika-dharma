@@ -1,5 +1,6 @@
 import type { HomeLocale } from './home';
 import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
+import { TAITTIRIYA_BRAHMANA_ASHTAKAS, getPrapathakaDisplayLabel } from '../../scripts/lib/taittiriya-brahmana-structure.mjs';
 
 export interface CategoryBadge {
 	text: string;
@@ -161,6 +162,28 @@ function aitareyaBrahmanaPanchikas(locale: 'root' | 'iast'): CategoryNode[] {
 
 const aitareyaBrahmanaPanchikasRoot = aitareyaBrahmanaPanchikas('root');
 const aitareyaBrahmanaPanchikasIast = aitareyaBrahmanaPanchikas('iast');
+
+function taittiriyaBrahmanaAshtakas(locale: 'root' | 'iast'): CategoryNode[] {
+	const prefix = locale === 'iast' ? '/iast/taittiriya-brahmana' : '/taittiriya-brahmana';
+
+	return [
+		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
+		...TAITTIRIYA_BRAHMANA_ASHTAKAS.map((ashtakaInfo) => ({
+			label: locale === 'iast' ? ashtakaInfo.iastLabel : ashtakaInfo.rootLabel,
+			href: `${prefix}/ashtaka-${ashtakaInfo.ashtaka}/`,
+			children: Array.from({ length: ashtakaInfo.prapathakaCount }, (_, index) => {
+				const prapathaka = index + 1;
+				return {
+					label: getPrapathakaDisplayLabel(ashtakaInfo.ashtaka, prapathaka, locale),
+					href: `${prefix}/ashtaka-${ashtakaInfo.ashtaka}/prapathaka-${prapathaka}/`,
+				};
+			}),
+		})),
+	];
+}
+
+const taittiriyaBrahmanaAshtakasRoot = taittiriyaBrahmanaAshtakas('root');
+const taittiriyaBrahmanaAshtakasIast = taittiriyaBrahmanaAshtakas('iast');
 
 const iastRigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('iast');
 
@@ -377,6 +400,11 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					defaultOpen: false,
 					children: aitareyaBrahmanaPanchikasRoot,
 				},
+				{
+					label: 'तैत्तिरीय ब्राह्मणम् (कृष्णयजुर्वेद)',
+					defaultOpen: false,
+					children: taittiriyaBrahmanaAshtakasRoot,
+				},
 			],
 		},
 		{
@@ -494,6 +522,11 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					label: 'Aitareya brāhmaṇam (Ṛgveda)',
 					defaultOpen: false,
 					children: aitareyaBrahmanaPanchikasIast,
+				},
+				{
+					label: 'Taittirīya brāhmaṇam (Kṛṣṇayajurveda)',
+					defaultOpen: false,
+					children: taittiriyaBrahmanaAshtakasIast,
 				},
 			],
 		},

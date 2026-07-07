@@ -40,6 +40,8 @@
     "generate:maitrayani-samhita:index": "node scripts/generate-maitrayani-samhita-chapters.mjs",
     "fetch:aitareya-brahmana": "node scripts/fetch-aitareya-brahmana-data.mjs",
     "generate:aitareya-brahmana": "node scripts/generate-aitareya-astaka-indexes.mjs",
+    "fetch:taittiriya-brahmana": "node scripts/fetch-taittiriya-brahmana-data.mjs",
+    "generate:taittiriya-brahmana": "node scripts/generate-taittiriya-brahmana-indexes.mjs",
     "fetch:upanishads": "node scripts/fetch-upanishad-data.mjs",
     "astro": "astro"
   },

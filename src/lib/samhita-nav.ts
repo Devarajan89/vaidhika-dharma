@@ -6,6 +6,7 @@ import {
 } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
 import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
+import { TAITTIRIYA_BRAHMANA_ASHTAKAS } from '../../scripts/lib/taittiriya-brahmana-structure.mjs';
 
 export interface JumpNavItem {
 	id: string;
@@ -491,6 +492,111 @@ export function getAitareyaAdhyayaPageNav(
 		nav.next = {
 			href: getAitareyaAdhyayaHref(panchika, adhyaya + 1, locale),
 			label: locale === 'iast' ? `Adhyāya ${adhyaya + 1}` : `अध्याय ${adhyaya + 1}`,
+		};
+	}
+	return nav;
+}
+
+export function getTaittiriyaBrahmanaHref(locale: HomeLocale): string {
+	return `${prefix(locale)}/taittiriya-brahmana/`;
+}
+
+export function getTaittiriyaBrahmanaAshtakaHref(ashtaka: number, locale: HomeLocale): string {
+	return `${prefix(locale)}/taittiriya-brahmana/ashtaka-${ashtaka}/`;
+}
+
+export function getTaittiriyaBrahmanaPrapathakaHref(
+	ashtaka: number,
+	prapathaka: number,
+	locale: HomeLocale
+): string {
+	return `${getTaittiriyaBrahmanaAshtakaHref(ashtaka, locale)}prapathaka-${prapathaka}/`;
+}
+
+export function getTaittiriyaBrahmanaAshtakaJumpItems(
+	ashtaka: number,
+	_locale: HomeLocale
+): JumpNavItem[] {
+	const ashtakaInfo = TAITTIRIYA_BRAHMANA_ASHTAKAS.find((entry) => entry.ashtaka === ashtaka);
+	if (!ashtakaInfo) return [];
+	return Array.from({ length: ashtakaInfo.prapathakaCount }, (_, index) => {
+		const prapathaka = index + 1;
+		return {
+			id: `prapathaka-${prapathaka}`,
+			label: String(prapathaka),
+		};
+	});
+}
+
+export function getTaittiriyaBrahmanaAshtakaPageNav(
+	ashtaka: number,
+	locale: HomeLocale
+): SamhitaPageNavLinks {
+	const up = {
+		href: getTaittiriyaBrahmanaHref(locale),
+		label: locale === 'iast' ? 'Brāhmaṇa index' : 'ब्राह्मण सूची',
+	};
+	const nav: SamhitaPageNavLinks = { up };
+	const ashtakaIndex = TAITTIRIYA_BRAHMANA_ASHTAKAS.findIndex((entry) => entry.ashtaka === ashtaka);
+
+	if (ashtakaIndex > 0) {
+		const prevAshtaka = TAITTIRIYA_BRAHMANA_ASHTAKAS[ashtakaIndex - 1].ashtaka;
+		nav.prev = {
+			href: getTaittiriyaBrahmanaAshtakaHref(prevAshtaka, locale),
+			label:
+				locale === 'iast'
+					? TAITTIRIYA_BRAHMANA_ASHTAKAS[ashtakaIndex - 1].iastLabel
+					: TAITTIRIYA_BRAHMANA_ASHTAKAS[ashtakaIndex - 1].rootLabel,
+		};
+	}
+	if (ashtakaIndex >= 0 && ashtakaIndex < TAITTIRIYA_BRAHMANA_ASHTAKAS.length - 1) {
+		const nextAshtaka = TAITTIRIYA_BRAHMANA_ASHTAKAS[ashtakaIndex + 1].ashtaka;
+		nav.next = {
+			href: getTaittiriyaBrahmanaAshtakaHref(nextAshtaka, locale),
+			label:
+				locale === 'iast'
+					? TAITTIRIYA_BRAHMANA_ASHTAKAS[ashtakaIndex + 1].iastLabel
+					: TAITTIRIYA_BRAHMANA_ASHTAKAS[ashtakaIndex + 1].rootLabel,
+		};
+	}
+	return nav;
+}
+
+export function getTaittiriyaBrahmanaPrapathakaJumpItems(anuvakaCount: number): JumpNavItem[] {
+	return Array.from({ length: anuvakaCount }, (_, index) => ({
+		id: `anuvaka-${index + 1}`,
+		label: String(index + 1),
+	}));
+}
+
+export function getTaittiriyaBrahmanaPrapathakaPageNav(
+	ashtaka: number,
+	prapathaka: number,
+	locale: HomeLocale
+): SamhitaPageNavLinks {
+	const ashtakaInfo = TAITTIRIYA_BRAHMANA_ASHTAKAS.find((entry) => entry.ashtaka === ashtaka);
+	const up = {
+		href: getTaittiriyaBrahmanaAshtakaHref(ashtaka, locale),
+		label: ashtakaInfo
+			? locale === 'iast'
+				? ashtakaInfo.iastLabel
+				: ashtakaInfo.rootLabel
+			: locale === 'iast'
+				? `Āṣṭaka ${ashtaka}`
+				: `अष्टक ${ashtaka}`,
+	};
+	const nav: SamhitaPageNavLinks = { up };
+
+	if (prapathaka > 1) {
+		nav.prev = {
+			href: getTaittiriyaBrahmanaPrapathakaHref(ashtaka, prapathaka - 1, locale),
+			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka - 1}` : `प्रपाठक ${prapathaka - 1}`,
+		};
+	}
+	if (ashtakaInfo && prapathaka < ashtakaInfo.prapathakaCount) {
+		nav.next = {
+			href: getTaittiriyaBrahmanaPrapathakaHref(ashtaka, prapathaka + 1, locale),
+			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka + 1}` : `प्रपाठक ${prapathaka + 1}`,
 		};
 	}
 	return nav;

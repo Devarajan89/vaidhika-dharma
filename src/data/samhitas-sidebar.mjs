@@ -1,6 +1,7 @@
 import { TAITTIRIYA_KANDAS } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
 import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
+import { TAITTIRIYA_BRAHMANA_ASHTAKAS } from '../../scripts/lib/taittiriya-brahmana-structure.mjs';
 
 const MANDALA_LABELS = {
 	root: [
@@ -61,6 +62,14 @@ function aitareyaPanchikaItems() {
 		label: panchikaInfo.rootLabel,
 		translations: { en: panchikaInfo.iastLabel },
 		link: `/aitareya-brahmana/panchika-${panchikaInfo.panchika}/`,
+	}));
+}
+
+function taittiriyaBrahmanaAshtakaItems() {
+	return TAITTIRIYA_BRAHMANA_ASHTAKAS.map((ashtakaInfo) => ({
+		label: ashtakaInfo.rootLabel,
+		translations: { en: ashtakaInfo.iastLabel },
+		link: `/taittiriya-brahmana/ashtaka-${ashtakaInfo.ashtaka}/`,
 	}));
 }
 
@@ -162,6 +171,19 @@ export const brahmanamSidebarGroup = {
 					link: '/aitareya-brahmana/',
 				},
 				...aitareyaPanchikaItems(),
+			],
+		},
+		{
+			label: 'तैत्तिरीय ब्राह्मणम् (कृष्णयजुर्वेद)',
+			translations: { en: 'Taittirīya brāhmaṇam (Kṛṣṇayajurveda)' },
+			collapsed: true,
+			items: [
+				{
+					label: 'सूची',
+					translations: { en: 'Sūcī' },
+					link: '/taittiriya-brahmana/',
+				},
+				...taittiriyaBrahmanaAshtakaItems(),
 			],
 		},
 	],

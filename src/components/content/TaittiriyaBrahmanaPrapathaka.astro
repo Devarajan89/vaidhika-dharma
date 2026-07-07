@@ -1,0 +1,72 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import BrahmanaVerses from './BrahmanaVerses.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
+import type { HomeLocale } from '../../data/home';
+import {
+	getTaittiriyaBrahmanaPrapathakaJumpItems,
+	getTaittiriyaBrahmanaPrapathakaPageNav,
+} from '../../lib/samhita-nav';
+import { getTaittiriyaBrahmanaPrapathaka } from '../../lib/taittiriya-brahmana-corpus';
+import { buildTaittiriyaBrahmanaAnuvakaBlocks } from '../../lib/taittiriya-brahmana-prose';
+import {
+	prapathakaToAshtakaPrapathaka,
+	getPrapathakaDisplayLabel,
+} from '../../../scripts/lib/taittiriya-brahmana-structure.mjs';
+
+interface Props {
+	prapathaka: number;
+	locale?: HomeLocale;
+}
+
+const { prapathaka, locale = 'root' } = Astro.props;
+
+const entry = getTaittiriyaBrahmanaPrapathaka(prapathaka);
+if (!entry) {
+	throw new Error(`Taittirīya brāhmaṇam: prapāṭhaka ${prapathaka} not found`);
+}
+
+const { ashtaka, prapathaka: prapathakaInAshtaka, ashtakaInfo } =
+	prapathakaToAshtakaPrapathaka(prapathaka);
+const blockLabel =
+	locale === 'iast'
+		? `${ashtakaInfo.iastLabel}, ${getPrapathakaDisplayLabel(ashtaka, prapathakaInAshtaka, 'iast')}`
+		: `${ashtakaInfo.rootLabel}, ${getPrapathakaDisplayLabel(ashtaka, prapathakaInAshtaka, 'root')}`;
+const jumpItems = getTaittiriyaBrahmanaPrapathakaJumpItems(entry.anuvakas.length);
+const pageNav = getTaittiriyaBrahmanaPrapathakaPageNav(ashtaka, prapathakaInAshtaka, locale);
+const jumpTitle = locale === 'iast' ? 'Jump to anuvāka' : 'अनुवाकम् अनुगच्छ';
+const sections = buildTaittiriyaBrahmanaAnuvakaBlocks(entry.anuvakas, locale);
+---
+
+<SuktaPage {locale} class="rigveda-samhita veda-corpus brahmana-corpus">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={2} />
+	<header class="veda-sukta-block__header veda-sukta-block__header--single">
+		<span class="veda-sukta-block__label">{blockLabel}</span>
+	</header>
+	{
+		sections.map((section) => (
+			<section class="veda-sukta-block brahmana-khanda" id={`anuvaka-${section.anuvaka}`}>
+				<p class="brahmana-khanda__label">
+					{locale === 'iast' ? `Anuvāka ${section.anuvaka}` : `अनुवाक ${section.anuvaka}`}
+				</p>
+				<BrahmanaVerses verses={section.verses} />
+			</section>
+		))
+	}
+	<SamhitaPageNav links={pageNav} {locale} />
+</SuktaPage>
+
+<style>
+	.brahmana-khanda {
+		margin-bottom: 1.75rem;
+	}
+
+	.brahmana-khanda__label {
+		margin: 0 0 0.65rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		color: var(--sl-color-gray-3);
+	}
+</style>
