@@ -1,0 +1,50 @@
+---
+interface Verse {
+	number: number;
+	lines: string[];
+}
+
+interface Props {
+	verses: Verse[];
+}
+
+const { verses } = Astro.props;
+---
+
+<div class="brahmana-verses">
+	{
+		verses.map((verse) => (
+			<p class="brahmana-verse">
+				{verse.lines.map((line, index) => (
+					<>
+						{index > 0 && <br />}
+						{line}
+					</>
+				))}
+			</p>
+		))
+	}
+</div>
+
+<style>
+	.brahmana-verses {
+		margin: 0 0 1.25rem;
+	}
+
+	.brahmana-verses:last-child {
+		margin-bottom: 0;
+	}
+
+	.brahmana-verse {
+		margin: 0 0 0.85rem;
+		font-family: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
+		font-size: var(--sl-mantra-size, 1.3125rem);
+		line-height: 1.9;
+		color: var(--veda-text, var(--sl-color-gray-1));
+		letter-spacing: 0.01em;
+	}
+
+	.brahmana-verse:last-child {
+		margin-bottom: 0;
+	}
+</style>
