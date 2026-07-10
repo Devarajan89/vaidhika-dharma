@@ -1,6 +1,14 @@
 import type { HomeLocale } from './home';
 import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
 import { TAITTIRIYA_BRAHMANA_ASHTAKAS, getPrapathakaDisplayLabel } from '../../scripts/lib/taittiriya-brahmana-structure.mjs';
+import {
+	TAITTIRIYA_ARANYAKA_PRASHNAS,
+	getPrashnaDisplayLabel,
+} from '../../scripts/lib/taittiriya-aranyaka-structure.mjs';
+import {
+	AITAREYA_ARANYAKAS,
+	AITAREYA_ARANYAKA_ADHYAYAS,
+} from '../../scripts/lib/aitareya-aranyaka-structure.mjs';
 
 export interface CategoryBadge {
 	text: string;
@@ -184,6 +192,49 @@ function taittiriyaBrahmanaAshtakas(locale: 'root' | 'iast'): CategoryNode[] {
 
 const taittiriyaBrahmanaAshtakasRoot = taittiriyaBrahmanaAshtakas('root');
 const taittiriyaBrahmanaAshtakasIast = taittiriyaBrahmanaAshtakas('iast');
+
+function taittiriyaAranyakaPrashnas(locale: 'root' | 'iast'): CategoryNode[] {
+	const prefix = locale === 'iast' ? '/iast/taittiriya-aranyaka' : '/taittiriya-aranyaka';
+	return [
+		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
+		...TAITTIRIYA_ARANYAKA_PRASHNAS.map((info) => ({
+			label: getPrashnaDisplayLabel(info.prashna, locale),
+			href: `${prefix}/prashna-${info.prashna}/`,
+		})),
+	];
+}
+
+const taittiriyaAranyakaPrashnasRoot = taittiriyaAranyakaPrashnas('root');
+const taittiriyaAranyakaPrashnasIast = taittiriyaAranyakaPrashnas('iast');
+
+function aitareyaAranyakaSections(locale: 'root' | 'iast'): CategoryNode[] {
+	const prefix = locale === 'iast' ? '/iast/aitareya-aranyaka' : '/aitareya-aranyaka';
+	return [
+		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
+		...AITAREYA_ARANYAKAS.map((aranyakaInfo) => ({
+			label: locale === 'iast' ? aranyakaInfo.iastLabel : aranyakaInfo.rootLabel,
+			defaultOpen: false,
+			children: [
+				{
+					label: locale === 'iast' ? 'Overview' : 'सूची',
+					href: `${prefix}/aranyaka-${aranyakaInfo.aranyaka}/`,
+				},
+				...AITAREYA_ARANYAKA_ADHYAYAS.filter(
+					(entry) => entry.aranyaka === aranyakaInfo.aranyaka
+				).map((entry) => ({
+					label:
+						locale === 'iast'
+							? entry.iastLabel.split(', ').slice(1).join(', ') || entry.iastLabel
+							: entry.rootLabel.split(', ').slice(1).join(', ') || entry.rootLabel,
+					href: `${prefix}/aranyaka-${entry.aranyaka}/adhyaya-${entry.adhyaya}/`,
+				})),
+			],
+		})),
+	];
+}
+
+const aitareyaAranyakaSectionsRoot = aitareyaAranyakaSections('root');
+const aitareyaAranyakaSectionsIast = aitareyaAranyakaSections('iast');
 
 const iastRigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('iast');
 
@@ -408,6 +459,21 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			],
 		},
 		{
+			label: 'आरण्यकानि',
+			children: [
+				{
+					label: 'तैत्तिरीय आरण्यकम् (कृष्णयजुर्वेद)',
+					defaultOpen: false,
+					children: taittiriyaAranyakaPrashnasRoot,
+				},
+				{
+					label: 'ऐतरेय आरण्यकम् (ऋग्वेद)',
+					defaultOpen: false,
+					children: aitareyaAranyakaSectionsRoot,
+				},
+			],
+		},
+		{
 			label: 'उपनिषदः',
 			children: [
 				{
@@ -423,8 +489,16 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					href: '/katha-upanishad/',
 				},
 				{
+					label: 'तैत्तिरीयोपनिषत् (कृष्णयजुर्वेद)',
+					href: '/taittiriya-upanishad/',
+				},
+				{
+					label: 'महानारायणोपनिषत् (कृष्णयजुर्वेद)',
+					href: '/mahanarayana-upanishad/',
+				},
+				{
 					label: 'ऐतरेयोपनिषद् (ऋग्वेद)',
-					badge: { text: 'In Progress', variant: 'danger' },
+					href: '/aitareya-upanishad/',
 				},
 			],
 		},
@@ -531,6 +605,21 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			],
 		},
 		{
+			label: 'Āraṇyakāni',
+			children: [
+				{
+					label: 'Taittirīya āraṇyakam (Kṛṣṇayajurveda)',
+					defaultOpen: false,
+					children: taittiriyaAranyakaPrashnasIast,
+				},
+				{
+					label: 'Aitareya āraṇyakam (Ṛgveda)',
+					defaultOpen: false,
+					children: aitareyaAranyakaSectionsIast,
+				},
+			],
+		},
+		{
 			label: 'Upaniṣadaḥ',
 			children: [
 				{
@@ -546,8 +635,16 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					href: '/iast/katha-upanishad/',
 				},
 				{
+					label: 'Taittirīya upaniṣad (Kṛṣṇayajurveda)',
+					href: '/iast/taittiriya-upanishad/',
+				},
+				{
+					label: 'Mahānārāyaṇa upaniṣad (Kṛṣṇayajurveda)',
+					href: '/iast/mahanarayana-upanishad/',
+				},
+				{
 					label: 'Aitareya upaniṣad (Ṛgveda)',
-					badge: { text: 'In Progress', variant: 'danger' },
+					href: '/iast/aitareya-upanishad/',
 				},
 			],
 		},

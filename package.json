@@ -40,8 +40,13 @@
     "generate:maitrayani-samhita:index": "node scripts/generate-maitrayani-samhita-chapters.mjs",
     "fetch:aitareya-brahmana": "node scripts/fetch-aitareya-brahmana-data.mjs",
     "generate:aitareya-brahmana": "node scripts/generate-aitareya-astaka-indexes.mjs",
+    "fetch:aitareya-aranyaka": "node scripts/fetch-aitareya-aranyaka-data.mjs",
+    "fetch:aitareya-upanishad": "node scripts/fetch-aitareya-upanishad-data.mjs",
+    "generate:aitareya-aranyaka": "node scripts/generate-aitareya-aranyaka-indexes.mjs",
     "fetch:taittiriya-brahmana": "node scripts/fetch-taittiriya-brahmana-data.mjs",
     "generate:taittiriya-brahmana": "node scripts/generate-taittiriya-brahmana-indexes.mjs",
+    "fetch:taittiriya-aranyaka": "node scripts/fetch-taittiriya-aranyaka-data.mjs",
+    "generate:taittiriya-aranyaka": "node scripts/generate-taittiriya-aranyaka-indexes.mjs",
     "fetch:upanishads": "node scripts/fetch-upanishad-data.mjs",
     "astro": "astro"
   },

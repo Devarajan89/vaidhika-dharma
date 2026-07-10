@@ -37,7 +37,10 @@ for (const section of corpus.sections) {
 	for (const verse of section.verses) {
 		verses.push({
 			number: verse.number,
-			text: locale === 'iast' ? await transliterateDevanagari(verse.text) : verse.text,
+			text:
+				locale === 'iast'
+					? (verse.textIast ?? (await transliterateDevanagari(verse.text)))
+					: verse.text,
 		});
 	}
 	sections.push({ ...section, label, verses });
@@ -60,7 +63,10 @@ for (const section of corpus.sections) {
 	}
 	{
 		sections.map((section, sectionIndex) => (
-			<section class="veda-sukta-block upanishad-section">
+			<section
+				class="veda-sukta-block upanishad-section"
+				id={section.type || undefined}
+			>
 				<p class="upanishad-section__label">{section.label}</p>
 				<div class="veda-sukta-block__mantras">
 					{section.verses.map((verse) => (

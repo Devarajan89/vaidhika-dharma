@@ -3,7 +3,12 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { samhitasSidebarGroup, brahmanamSidebarGroup, upanishadsSidebarGroup } from './src/data/samhitas-sidebar.mjs';
+import {
+	samhitasSidebarGroup,
+	brahmanamSidebarGroup,
+	aranyakamSidebarGroup,
+	upanishadsSidebarGroup,
+} from './src/data/samhitas-sidebar.mjs';
 import { chapterToKandaPrapathaka, TAITTIRIYA_TOTAL_PRAPATHAKAS } from './scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_TOTAL_PRAPATHAKAS, chapterToKandaPrapathaka as maitrayaniChapterToKandaPrapathaka } from './scripts/lib/maitrayani-samhita-structure.mjs';
 import { AITAREYA_PANCHIKAS } from './scripts/lib/aitareya-brahmana-structure.mjs';
@@ -116,6 +121,12 @@ export default defineConfig({
     '/iast/upanishads/kena-upanishad': '/iast/kena-upanishad',
     '/upanishads/katha-upanishad': '/katha-upanishad',
     '/iast/upanishads/katha-upanishad': '/iast/katha-upanishad',
+    '/upanishads/taittiriya-upanishad': '/taittiriya-upanishad',
+    '/iast/upanishads/taittiriya-upanishad': '/iast/taittiriya-upanishad',
+    '/upanishads/mahanarayana-upanishad': '/mahanarayana-upanishad',
+    '/iast/upanishads/mahanarayana-upanishad': '/iast/mahanarayana-upanishad',
+    '/upanishads/aitareya-upanishad': '/aitareya-upanishad',
+    '/iast/upanishads/aitareya-upanishad': '/iast/aitareya-upanishad',
   },
 
   integrations: [
@@ -197,6 +208,13 @@ export default defineConfig({
                       en: 'Brāhmaṇāḥ',
                   },
                   items: brahmanamSidebarGroup.items,
+              },
+              {
+                  label: 'आरण्यकानि',
+                  translations: {
+                      en: 'Āraṇyakāni',
+                  },
+                  items: aranyakamSidebarGroup.items,
               },
               {
                   label: 'उपनिषदः',

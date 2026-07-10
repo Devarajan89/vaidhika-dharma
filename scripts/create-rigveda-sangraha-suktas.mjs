@@ -14,7 +14,7 @@ const IAST_SANGGRAHA = 'ṛgvedasūktasaṅgraha';
 /** @type {{ id: string; rootTitle: string; iastTitle: string; suktas: [number, number][]; order: number }[]} */
 const SUKTA_DEFS = [
 	{ id: 'oshadhi-suktam', rootTitle: 'औषधि सूक्तम्', iastTitle: 'Auṣadhi Sūktam', suktas: [[10, 97]], order: 10 },
-	{ id: 'kumara-suktam', rootTitle: 'कुमार सूक्तम्', iastTitle: 'Kumāra Sūktam', suktas: [[5, 2]], order: 11 },
+	{ id: 'kumara-suktam', rootTitle: 'कुमार सूक्तम्', iastTitle: 'Kumāra Sūktam', suktas: [[4, 15], [5, 2]], order: 11 },
 	{ id: 'devi-suktam', rootTitle: 'देवी सूक्तम्', iastTitle: 'Devī Sūktam', suktas: [[10, 125]], order: 12 },
 	{ id: 'nasadiya-suktam', rootTitle: 'नासदीय सूक्तम्', iastTitle: 'Nāsadīya Sūktam', suktas: [[10, 129]], order: 13 },
 	{ id: 'pitri-suktam', rootTitle: 'पितृ सूक्तम्', iastTitle: 'Pitṛ Sūktam', suktas: [[10, 15]], order: 14 },

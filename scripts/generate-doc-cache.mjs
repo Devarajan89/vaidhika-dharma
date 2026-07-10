@@ -79,9 +79,12 @@ function matchesLocale(id, locale) {
 	return pathId.startsWith(`${locale}/`) || pathId === `${locale}/index`;
 }
 
-function isContentPage(id) {
+function isContentPage(id, title) {
 	const pathId = id.replace(/\.(md|mdx)$/, '');
-	return pathId !== 'index' && !pathId.endsWith('/index');
+	if (pathId === 'index' || pathId === 'iast' || pathId === 'iast/index') return false;
+	if (pathId.endsWith('-index')) return false;
+	if (pathId.endsWith('/index') && title && /सूची/.test(title)) return false;
+	return true;
 }
 
 function main() {
@@ -111,7 +114,7 @@ function main() {
 	const recentByLocale = {};
 	for (const locale of ['root', 'iast']) {
 		recentByLocale[locale] = docs
-			.filter((doc) => matchesLocale(doc.id, locale) && isContentPage(doc.id))
+			.filter((doc) => matchesLocale(doc.id, locale) && isContentPage(doc.id, doc.title))
 			.sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
 			.slice(0, 10)
 			.map((doc) => ({
