@@ -6,7 +6,7 @@ sidebar:
   order: 1
 tableOfContents: false
 description: 'Prathamaṃ āraṇyakam'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # Prathamaṃ āraṇyakam

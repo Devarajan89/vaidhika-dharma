@@ -6,7 +6,7 @@ sidebar:
   order: 1
 tableOfContents: false
 description: 'प्रथमम् आरण्यकम्'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # प्रथमम् आरण्यकम्

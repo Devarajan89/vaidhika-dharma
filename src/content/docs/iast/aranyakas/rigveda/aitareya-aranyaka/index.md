@@ -6,7 +6,7 @@ sidebar:
   order: 1
 tableOfContents: false
 description: 'Aitareya āraṇyakam — Sūcī'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # Aitareya āraṇyakam — Sūcī

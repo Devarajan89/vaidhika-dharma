@@ -6,7 +6,7 @@ sidebar:
   order: 2
 tableOfContents: false
 description: 'Dvitīyam āraṇyakam'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # Dvitīyam āraṇyakam

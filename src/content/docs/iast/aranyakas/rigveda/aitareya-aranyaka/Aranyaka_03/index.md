@@ -6,7 +6,7 @@ sidebar:
   order: 3
 tableOfContents: false
 description: 'Tṛtīyam āraṇyakam'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # Tṛtīyam āraṇyakam

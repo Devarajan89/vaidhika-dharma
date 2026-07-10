@@ -6,7 +6,7 @@ sidebar:
   order: 4
 tableOfContents: false
 description: 'Caturtham āraṇyakam'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # Caturtham āraṇyakam

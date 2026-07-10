@@ -6,7 +6,7 @@ sidebar:
   order: 4
 tableOfContents: false
 description: 'चतुर्थम् आरण्यकम्'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # चतुर्थम् आरण्यकम्

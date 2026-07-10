@@ -6,7 +6,7 @@ sidebar:
   order: 2
 tableOfContents: false
 description: 'द्वितीयम् आरण्यकम्'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # द्वितीयम् आरण्यकम्

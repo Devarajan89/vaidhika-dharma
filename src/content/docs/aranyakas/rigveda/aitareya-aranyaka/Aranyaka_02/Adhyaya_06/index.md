@@ -5,7 +5,7 @@ sidebar:
   hidden: true
 tableOfContents: false
 description: 'द्वितीयम् आरण्यकम्, षष्ठोऽध्यायः — ऐतरेयोपनिषत् 3'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # द्वितीयम् आरण्यकम्, षष्ठोऽध्यायः — ऐतरेयोपनिषत् 3

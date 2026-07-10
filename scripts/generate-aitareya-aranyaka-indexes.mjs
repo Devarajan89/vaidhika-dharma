@@ -20,7 +20,6 @@ import { transliterateIastBatch } from './lib/transliterate-iast.mjs';
 
 const ROOT = process.cwd();
 const DATA_FILE = path.join(ROOT, 'src/data/rigveda/aitareya/aitareya_aranyaka_adhyayas.json');
-const UPANISHAD_DATA = path.join(ROOT, 'src/data/upanishads/aitareya.json');
 const LAST_UPDATED = new Date().toISOString().slice(0, 10);
 
 const BASES = [
@@ -39,7 +38,7 @@ function yamlQuote(value) {
  * @param {string} iast
  */
 function prepareIastSentence(iast) {
-	return joinIastProse(iast);
+	return joinIastProse(normalizeTitusIast(iast));
 }
 
 /**
@@ -293,25 +292,6 @@ if (chapters.length !== AITAREYA_ARANYAKA_TOTAL_ADHYAYAS) {
 	throw new Error(
 		`Expected ${AITAREYA_ARANYAKA_TOTAL_ADHYAYAS} adhyāyas in data file, found ${chapters.length}`
 	);
-}
-
-if (fs.existsSync(UPANISHAD_DATA)) {
-	const upanishad = JSON.parse(fs.readFileSync(UPANISHAD_DATA, 'utf8'));
-	const flatIast = upanishad.sections.flatMap((section) =>
-		section.verses.map((verse) => prepareIastSentence(verse.textIast))
-	);
-	const flatDeva = transliterateIastBatch(flatIast);
-	let cursor = 0;
-	upanishad.sections = upanishad.sections.map((section) => ({
-		...section,
-		verses: section.verses.map((verse) => {
-			const textIast = prepareIastSentence(verse.textIast);
-			const text = flatDeva[cursor++];
-			return { number: verse.number, text, textIast };
-		}),
-	}));
-	fs.writeFileSync(UPANISHAD_DATA, `${JSON.stringify(upanishad, null, 2)}\n`, 'utf8');
-	console.log(`Transliterated Upaniṣad data in ${UPANISHAD_DATA}`);
 }
 
 for (const { locale, dir } of BASES) {

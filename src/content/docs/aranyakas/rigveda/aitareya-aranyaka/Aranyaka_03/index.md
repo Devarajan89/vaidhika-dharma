@@ -6,7 +6,7 @@ sidebar:
   order: 3
 tableOfContents: false
 description: 'तृतीयम् आरण्यकम्'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # तृतीयम् आरण्यकम्

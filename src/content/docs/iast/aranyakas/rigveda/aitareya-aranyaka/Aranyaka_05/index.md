@@ -6,7 +6,7 @@ sidebar:
   order: 5
 tableOfContents: false
 description: 'Pañcamam āraṇyakam'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # Pañcamam āraṇyakam

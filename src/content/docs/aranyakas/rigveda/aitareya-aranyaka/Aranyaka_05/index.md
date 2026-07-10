@@ -6,7 +6,7 @@ sidebar:
   order: 5
 tableOfContents: false
 description: 'पञ्चमम् आरण्यकम्'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # पञ्चमम् आरण्यकम्

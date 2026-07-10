@@ -6,7 +6,7 @@ sidebar:
   order: 1
 tableOfContents: false
 description: 'ऐतरेय आरण्यकम् — सूची'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # ऐतरेय आरण्यकम् — सूची

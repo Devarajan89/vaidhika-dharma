@@ -5,7 +5,7 @@ sidebar:
   hidden: true
 tableOfContents: false
 description: 'Dvitīyam āraṇyakam, Ṣaṣṭha adhyāyaḥ — Aitareyopaniṣat 3'
-lastUpdated: 2026-07-09
+lastUpdated: 2026-07-10
 ---
 
 # Dvitīyam āraṇyakam, Ṣaṣṭha adhyāyaḥ — Aitareyopaniṣat 3

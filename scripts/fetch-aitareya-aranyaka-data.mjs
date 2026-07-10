@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import {
 	AITAREYA_ARANYAKA_TOTAL_ADHYAYAS,
-	AITAREYA_UPANISHAD_ADHYAYAS,
 	AITAREYA_ARANYAKA_SOURCE_URL,
 	aranyakaAdhyayaToGlobal,
 	globalToAranyakaAdhyaya,
@@ -19,7 +18,6 @@ const ARANYAKA_OUTPUT = path.join(
 	ROOT,
 	'src/data/rigveda/aitareya/aitareya_aranyaka_adhyayas.json'
 );
-const UPANISHAD_OUTPUT = path.join(ROOT, 'src/data/upanishads/aitareya.json');
 const TITUS_BASE = 'http://titus.uni-frankfurt.de/texte/etcs/ind/aind/ved/rv/aa/aa';
 const TITUS_FILES = 18;
 
@@ -158,45 +156,6 @@ async function main() {
 	fs.mkdirSync(path.dirname(ARANYAKA_OUTPUT), { recursive: true });
 	fs.writeFileSync(ARANYAKA_OUTPUT, JSON.stringify(output, null, 2), 'utf8');
 	console.log(`Wrote ${output.length} adhyāyas to ${ARANYAKA_OUTPUT}`);
-
-	const upanishadSections = AITAREYA_UPANISHAD_ADHYAYAS.map((entry) => {
-		const globalAdhyaya = aranyakaAdhyayaToGlobal(entry.aranyaka, entry.adhyaya);
-		const adhyayaEntry = output.find((item) => item.globalAdhyaya === globalAdhyaya);
-		if (!adhyayaEntry) {
-			throw new Error(`Missing Upaniṣad adhyāya ${globalAdhyaya}`);
-		}
-
-		return {
-			type: `chapter-${entry.chapter}`,
-			label:
-				entry.chapter === 1
-					? 'प्रथमोऽध्यायः'
-					: entry.chapter === 2
-						? 'द्वितीयोऽध्यायः'
-						: 'तृतीयोऽध्यायः',
-			verses: adhyayaEntry.khandas.map((khanda) => ({
-				number: khanda.khanda,
-				textIast: khanda.sentencesIast.join(' '),
-			})),
-		};
-	});
-
-	const upanishadPayload = {
-		id: 'aitareya',
-		source: AITAREYA_ARANYAKA_SOURCE_URL,
-		veda: { root: 'ऋग्वेद', iast: 'Ṛgveda' },
-		title: 'ऐतरेयोपनिषद्',
-		openingShanti: null,
-		mantraCount: upanishadSections.reduce((sum, section) => sum + section.verses.length, 0),
-		sections: upanishadSections,
-		fetchedAt: new Date().toISOString().slice(0, 10),
-	};
-
-	fs.mkdirSync(path.dirname(UPANISHAD_OUTPUT), { recursive: true });
-	fs.writeFileSync(UPANISHAD_OUTPUT, `${JSON.stringify(upanishadPayload, null, 2)}\n`, 'utf8');
-	console.log(
-		`Wrote ${UPANISHAD_OUTPUT} (${upanishadPayload.sections.length} chapters, ${upanishadPayload.mantraCount} paragraphs)`
-	);
 }
 
 main().catch((error) => {
