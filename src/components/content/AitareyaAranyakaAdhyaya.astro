@@ -1,0 +1,70 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import BrahmanaProse from './BrahmanaProse.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
+import type { HomeLocale } from '../../data/home';
+import {
+	getAitareyaAranyakaAdhyayaPageNav,
+	getAitareyaAranyakaAdhyayaJumpItems,
+} from '../../lib/samhita-nav';
+import { getAitareyaAranyakaAdhyaya } from '../../lib/aitareya-aranyaka-corpus';
+import { buildAitareyaKhandaBlocks } from '../../lib/aitareya-prose';
+import { globalToAranyakaAdhyaya } from '../../../scripts/lib/aitareya-aranyaka-structure.mjs';
+import { AITAREYA_ARANYAKA_ADHYAYAS } from '../../../scripts/lib/aitareya-aranyaka-structure.mjs';
+
+interface Props {
+	adhyaya: number;
+	locale?: HomeLocale;
+}
+
+const { adhyaya, locale = 'root' } = Astro.props;
+
+const entry = getAitareyaAranyakaAdhyaya(adhyaya);
+if (!entry) {
+	throw new Error(`Aitareya āraṇyakam: adhyāya ${adhyaya} not found`);
+}
+
+const { aranyaka, adhyaya: adhyayaInAranyaka } = globalToAranyakaAdhyaya(adhyaya);
+const adhyayaInfo = AITAREYA_ARANYAKA_ADHYAYAS.find(
+	(item) => item.globalAdhyaya === adhyaya
+);
+const blockLabel =
+	locale === 'iast' ? adhyayaInfo?.iastLabel ?? '' : adhyayaInfo?.rootLabel ?? '';
+const jumpItems = getAitareyaAranyakaAdhyayaJumpItems(entry.khandas.length);
+const pageNav = getAitareyaAranyakaAdhyayaPageNav(aranyaka, adhyayaInAranyaka, locale);
+const jumpTitle = locale === 'iast' ? 'Jump to khaṇḍa' : 'खण्डम् अनुगच्छ';
+const sections = buildAitareyaKhandaBlocks(entry.khandas, locale);
+---
+
+<SuktaPage {locale} class="rigveda-samhita veda-corpus brahmana-corpus">
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={2} />
+	<header class="veda-sukta-block__header veda-sukta-block__header--single">
+		<span class="veda-sukta-block__label">{blockLabel}</span>
+	</header>
+	{
+		sections.map((section) => (
+			<section class="veda-sukta-block brahmana-khanda" id={`khanda-${section.khanda}`}>
+				<p class="brahmana-khanda__label">
+					{locale === 'iast' ? `Khaṇḍa ${section.khanda}` : `खण्ड ${section.khanda}`}
+				</p>
+				<BrahmanaProse text={section.prose} />
+			</section>
+		))
+	}
+	<SamhitaPageNav links={pageNav} {locale} />
+</SuktaPage>
+
+<style>
+	.brahmana-khanda {
+		margin-bottom: 1.75rem;
+	}
+
+	.brahmana-khanda__label {
+		margin: 0 0 0.65rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		color: var(--sl-color-gray-3);
+	}
+</style>

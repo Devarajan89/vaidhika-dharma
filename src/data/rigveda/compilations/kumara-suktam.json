@@ -2,6 +2,71 @@
   "id": "kumara-suktam",
   "sections": [
     {
+      "header": "१० वामदेवो गौतमः। अग्निः, ७-८ सोमकः साहदेव्यः, ९-१० अश्विनौ। गायत्री।",
+      "mantras": [
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 2,
+          "label": 2
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 3,
+          "label": 3
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 4,
+          "label": 4
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 5,
+          "label": 5
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 6,
+          "label": 6
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 7,
+          "label": 7
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 8,
+          "label": 8
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 9,
+          "label": 9
+        },
+        {
+          "mandala": 4,
+          "sukta": 15,
+          "verse": 10,
+          "label": 10
+        }
+      ]
+    },
+    {
       "header": "१२ कुमार आत्रेयः, वृशो वा जानः, उभौ वा, २, ९ वृशो जानः। अग्निः। त्रिष्टुप्, १२ शक्वरी।",
       "mantras": [
         {

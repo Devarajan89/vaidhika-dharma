@@ -7,6 +7,17 @@ import {
 import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
 import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
 import { TAITTIRIYA_BRAHMANA_ASHTAKAS } from '../../scripts/lib/taittiriya-brahmana-structure.mjs';
+import {
+	TAITTIRIYA_ARANYAKA_PRASHNAS,
+	getPrashnaSidebarLabel,
+} from '../../scripts/lib/taittiriya-aranyaka-structure.mjs';
+import {
+	AITAREYA_ARANYAKAS,
+	AITAREYA_ARANYAKA_ADHYAYAS,
+	AITAREYA_ARANYAKA_TOTAL_ADHYAYAS,
+	aranyakaAdhyayaToGlobal,
+	globalToAranyakaAdhyaya,
+} from '../../scripts/lib/aitareya-aranyaka-structure.mjs';
 
 export interface JumpNavItem {
 	id: string;
@@ -597,6 +608,115 @@ export function getTaittiriyaBrahmanaPrapathakaPageNav(
 		nav.next = {
 			href: getTaittiriyaBrahmanaPrapathakaHref(ashtaka, prapathaka + 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka + 1}` : `प्रपाठक ${prapathaka + 1}`,
+		};
+	}
+	return nav;
+}
+
+export function getTaittiriyaAranyakaHref(locale: HomeLocale): string {
+	return `${prefix(locale)}/taittiriya-aranyaka/`;
+}
+
+export function getTaittiriyaAranyakaPrashnaHref(prashna: number, locale: HomeLocale): string {
+	return `${getTaittiriyaAranyakaHref(locale)}prashna-${prashna}/`;
+}
+
+export function getTaittiriyaAranyakaPrashnaJumpItems(anuvakaCount: number): JumpNavItem[] {
+	return Array.from({ length: anuvakaCount }, (_, index) => ({
+		id: `anuvaka-${index + 1}`,
+		label: String(index + 1),
+	}));
+}
+
+export function getTaittiriyaAranyakaPrashnaPageNav(
+	prashna: number,
+	locale: HomeLocale
+): SamhitaPageNavLinks {
+	const nav: SamhitaPageNavLinks = {
+		up: {
+			href: getTaittiriyaAranyakaHref(locale),
+			label: locale === 'iast' ? 'Taittirīya āraṇyakam' : 'तैत्तिरीय आरण्यकम्',
+		},
+	};
+
+	if (prashna > 1) {
+		nav.prev = {
+			href: getTaittiriyaAranyakaPrashnaHref(prashna - 1, locale),
+			label: getPrashnaSidebarLabel(prashna - 1, locale),
+		};
+	}
+	if (prashna < TAITTIRIYA_ARANYAKA_PRASHNAS.length) {
+		nav.next = {
+			href: getTaittiriyaAranyakaPrashnaHref(prashna + 1, locale),
+			label: getPrashnaSidebarLabel(prashna + 1, locale),
+		};
+	}
+	return nav;
+}
+
+export function getAitareyaAranyakaHref(locale: HomeLocale): string {
+	return `${prefix(locale)}/aitareya-aranyaka/`;
+}
+
+export function getAitareyaAranyakaAranyakaHref(aranyaka: number, locale: HomeLocale): string {
+	return `${getAitareyaAranyakaHref(locale)}aranyaka-${aranyaka}/`;
+}
+
+export function getAitareyaAranyakaAdhyayaHref(
+	aranyaka: number,
+	adhyaya: number,
+	locale: HomeLocale
+): string {
+	return `${getAitareyaAranyakaAranyakaHref(aranyaka, locale)}adhyaya-${adhyaya}/`;
+}
+
+export function getAitareyaAranyakaAdhyayaJumpItems(khandaCount: number): JumpNavItem[] {
+	return Array.from({ length: khandaCount }, (_, index) => ({
+		id: `khanda-${index + 1}`,
+		label: String(index + 1),
+	}));
+}
+
+export function getAitareyaAranyakaAdhyayaPageNav(
+	aranyaka: number,
+	adhyaya: number,
+	locale: HomeLocale
+): SamhitaPageNavLinks {
+	const globalAdhyaya = aranyakaAdhyayaToGlobal(aranyaka, adhyaya);
+	const nav: SamhitaPageNavLinks = {
+		up: {
+			href: getAitareyaAranyakaAranyakaHref(aranyaka, locale),
+			label:
+				AITAREYA_ARANYAKAS.find((entry) => entry.aranyaka === aranyaka)?.[
+					locale === 'iast' ? 'iastLabel' : 'rootLabel'
+				] ?? String(aranyaka),
+		},
+	};
+
+	if (globalAdhyaya > 1) {
+		const prev = globalToAranyakaAdhyaya(globalAdhyaya - 1);
+		const prevInfo = AITAREYA_ARANYAKA_ADHYAYAS.find(
+			(entry) => entry.globalAdhyaya === globalAdhyaya - 1
+		);
+		nav.prev = {
+			href: getAitareyaAranyakaAdhyayaHref(prev.aranyaka, prev.adhyaya, locale),
+			label:
+				locale === 'iast'
+					? (prevInfo?.iastLabel.split(', ').pop() ?? `Adhyāya ${prev.adhyaya}`)
+					: (prevInfo?.rootLabel.split(', ').pop() ?? `अध्याय ${prev.adhyaya}`),
+		};
+	}
+	if (globalAdhyaya < AITAREYA_ARANYAKA_TOTAL_ADHYAYAS) {
+		const next = globalToAranyakaAdhyaya(globalAdhyaya + 1);
+		const nextInfo = AITAREYA_ARANYAKA_ADHYAYAS.find(
+			(entry) => entry.globalAdhyaya === globalAdhyaya + 1
+		);
+		nav.next = {
+			href: getAitareyaAranyakaAdhyayaHref(next.aranyaka, next.adhyaya, locale),
+			label:
+				locale === 'iast'
+					? (nextInfo?.iastLabel.split(', ').pop() ?? `Adhyāya ${next.adhyaya}`)
+					: (nextInfo?.rootLabel.split(', ').pop() ?? `अध्याय ${next.adhyaya}`),
 		};
 	}
 	return nav;

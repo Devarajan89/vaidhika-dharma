@@ -1,0 +1,57 @@
+{
+  "id": "aitareya",
+  "source": "https://vedicreserve.miu.edu/aranyaka/aitareya_aranyaka.pdf",
+  "veda": {
+    "root": "ऋग्वेद",
+    "iast": "Ṛgveda"
+  },
+  "title": "ऐतरेयोपनिषद्",
+  "openingShanti": null,
+  "mantraCount": 5,
+  "sections": [
+    {
+      "type": "chapter-1",
+      "label": "प्रथमोऽध्यायः",
+      "verses": [
+        {
+          "number": 1,
+          "text": "आत्मावाइदमेकएवाग्रआसीन्नान्यत्किञ्चनमिषत्सईक्षतलोकान्नुसृजाइतिसैमाम्̇ल्लोकानसृजतअम्ब्ʰओमरीचीर्मरमापःअदोऽम्ब्ʰअःपरेणदिवंद्यौःप्रतिष्ट्ʰआअन्तरिक्षंमरीचयःपृत्ʰइवीमरोयाअद्ʰअस्तात्ताआपःसईक्षतैमेनुलोकालोकपालान्नुसृजाइतिसोऽद्ब्ʰयएवपुरुषंसमुद्द्ʰऋत्यामूर्च्ʰअयत्तमब्ʰयतपत्तस्याब्ʰइतप्तस्यमुक्ʰअंनिरब्ʰइद्यतयत्ʰआण्डंमुक्ʰआद्वाग्वाचोऽग्निःनासिकेप्राणाद्वायुःअक्षिणीनिरब्ʰइद्येतामक्षीब्ʰयांआदित्यःकर्णौनिरब्ʰइद्येतांकर्णाब्ʰयांश्रोत्रंश्रोत्राद्दिशःत्वङ्निरब्ʰइद्यतत्वचालोमानिलोमब्ʰयओषद्ʰइवनस्पतयःहृदयंनिरब्ʰइद्यतहृदयान्मनोमनसश्चन्द्रमाःनाब्ʰइर्निरब्ʰइद्यतनाब्ʰयाअपानोऽपानान्मृत्युःशिश्नंनिरब्ʰइद्यतशिश्नाद्रेतोरेतसआपः१",
+          "textIast": "ātmāvāidamekaevāgraāsīnnānyatkiñcanamiṣatsaīkṣatalokānnusr̥jāitisaimāṁllokānasr̥jataambʰomarīcīrmaramāpaḥado'mbʰaḥpareṇadivaṃdyauḥpratiṣṭʰāantarikṣaṃmarīcayaḥpr̥tʰivīmaroyāadʰastāttāāpaḥsaīkṣataimenulokālokapālānnusr̥jāitiso'dbʰyaevapuruṣaṃsamuddʰr̥tyā/mūrcʰayattamabʰyatapattasyābʰitaptasyamukʰaṃnirabʰidyatayatʰāṇḍaṃmukʰādvāgvāco'gniḥnāsikeprāṇādvāyuḥakṣiṇīnirabʰidyetāmakṣībʰyāṃādityaḥkarṇaunirabʰidyetāṃkarṇābʰyāṃśrotraṃśrotrāddiśaḥtvaṅnirabʰidyatatvacālomānilomabʰyaoṣadʰivanaspatayaḥhr̥dayaṃnirabʰidyatahr̥dayānmanomanasaścandramāḥnābʰirnirabʰidyatanābʰyāapāno'pānānmr̥tyuḥśiśnaṃnirabʰidyataśiśnādretoretasaāpaḥ1"
+        },
+        {
+          "number": 2,
+          "text": "ताएतादेवताःसृष्टाअस्मिन्महत्यर्णवेप्रापतंस्तमशनापिपासाब्ʰयामन्ववार्जत्ताएनमब्रुवन्नायतनंनःप्रजानीहियस्मिन्प्रतिष्ट्ʰइताअन्नमदामेतिताब्ʰयोगामानयत्ताअब्रुवन्नवैनोऽयमलमितिताब्ʰयोऽश्वमानयत्ताअब्रुवन्नवैनोऽयमलमितिताब्ʰयःपुरुषमानयत्ताअब्रुवन्सुकृतंवतेतिपुरुषोवावसुकृतंताअब्रवीद्यत्ʰआयतनंप्रविशतेतिअग्निर्वाग्ब्ʰऊत्वामुक्ʰअंप्राविशद्वायुःप्राणोब्ʰऊत्वानासिकेप्राविशदादित्यश्चक्षुर्ब्ʰऊत्वाक्षिणीप्राविशद्दिशःश्रोत्रंब्ʰऊत्वाकर्णौप्राविशन्नोषद्ʰइवनस्पतयोलोमानिब्ʰऊत्वात्वचंप्राविशंश्चन्द्रमामनोब्ʰऊत्वाहृदयंप्राविशन्मृत्युरपानोब्ʰऊत्वानाब्ʰइंप्राविशदापोरेतोब्ʰऊत्वाशिश्नंप्राविशन्तमशनापिपासेअब्रूतामावाब्ʰयामब्ʰइप्रजानीहीतितेअब्रवीदेतास्वेववांदेवतास्वाब्ʰअजाम्येतासुब्ʰआगिन्यौकरोमीतितस्माद्यस्यैकस्यैचदेवतायैहविर्गृह्यतेब्ʰआगिन्यावेवास्यामशनापिपासेब्ʰअवतः२",
+          "textIast": "tāetādevatāḥsr̥ṣṭāasminmahatyarṇaveprāpataṃstamaśanāpipā/sābʰyāmanvavārjattāenamabruvannāyatanaṃnaḥprajānīhiyasmi/npratiṣṭʰitāannamadāmetitābʰyogāmānayattāabruvannavaino'yamalamititābʰyo'śvamānayattāabruvannavaino'yama/lamititābʰyaḥpuruṣamānayattāabruvansukr̥taṃvatetipuruṣovāvasukr̥taṃtāabravīdyatʰāyatanaṃpraviśatetiagnirvāgbʰūtvāmukʰaṃprāviśadvāyuḥprāṇobʰūtvānāsikeprāviśadādityaścakṣu/rbʰūtvākṣiṇīprāviśaddiśaḥśrotraṃbʰūtvākarṇauprāviśannoṣadʰivana/spatayolomānibʰūtvātvacaṃprāviśaṃścandramāmanobʰūtvāhr̥dayaṃprāviśanmr̥tyurapānobʰūtvānābʰiṃprāviśadāporetobʰūtvāśiśnaṃprāviśantamaśanāpipāseabrūtāmāvābʰyāmabʰiprajānīhītiteabravīdetāsvevavāṃdevatāsvābʰajāmyetāsubʰāginyaukaromītitasmādyasyaikasyaicadevatāyaihavirgr̥hyatebʰāginyāvevāsyāmaśa/nāpipāsebʰavataḥ2"
+        },
+        {
+          "number": 3,
+          "text": "सईक्षतैमेनुलोकाश्चलोकपालाश्चअन्नमेब्ʰयःसृजाइतिसोऽपोऽब्ʰयतपत्ताब्ʰयोऽब्ʰइतप्ताब्ʰयोमूर्तिरजायतयावैसामूर्तिरजायतान्नंवैतत्तदेनत्सृष्टंतद्वाचाजिग्ʰऋक्षत्तन्नाशक्नोद्वाचाग्रहीतुम्सयद्द्ʰऐनद्वाचाग्रहैष्यदब्ʰइव्याहृत्यहैवान्नमत्रप्स्यत्तत्प्राणेनाजिग्ʰऋक्षत्तन्नाशक्नोत्प्राणेनग्रहीतुम्सयद्द्ʰऐनत्प्राणेनाग्रहैष्यदब्ʰइप्राण्यहैवान्नमत्रप्स्यत्तच्चक्षुषाजिग्ʰऋक्षत्तन्नाशक्नोच्चक्षुषाग्रहीतुम्सयद्द्ʰऐनच्चक्षुषाग्रहैष्यद्दृष्ट्वाहैवान्नमत्रप्स्यत्तच्च्ʰरोत्रेणाजिग्ʰऋक्षत्तन्नाशक्नोच्च्ʰरोत्रेणग्रहीतुम्सयद्द्ʰऐनच्च्ʰरोत्रेणाग्रहैष्यच्तत्त्वचाजिग्ʰऋक्षत्तन्नाशक्नोत्त्वचाग्रहीतुम्सयद्द्ʰऐनत्त्वचाग्रहैष्यत्स्पृष्ट्वाहैवान्नमत्रप्स्यत्तन्मनसाजिग्ʰऋक्षत्तन्नाशक्नोन्मनसाग्रहीतुम्सयद्द्ʰऐनन्मनसाग्रहैष्यद्द्ʰयात्वाहैवान्नमत्रप्स्यत्तच्च्ʰइश्नेनाजिग्ʰऋक्षत्तन्नाशक्नोच्च्ʰइश्नेनग्रहीतुम्सयद्द्ʰऐनच्च्ʰइश्नेनाग्रहैष्यद्विसृज्यहैवान्नमत्रप्स्यत्तदपानेनाजिग्ʰऋक्षत्तदावयत्सैषोग्रहोयद्वायुरन्नायुर्वाएषयद्वायुःसईक्षतकत्ʰअंन्विदंमदृतेस्यादितिसईक्षतकतरेणप्रपद्याइतिसईक्षतयदिवाचाब्ʰइव्याहृतंयदिप्राणेनाब्ʰइप्राणितंयदिचक्षुषादृष्टंयदिश्रोत्रेणश्रुतंयदित्वचास्पृष्टंयदिमनसाद्ʰयातंयद्यपानेनाब्ʰयपानितंयदिशिश्नेनविसृष्टमत्ʰअकोऽहमितिसएतमेवसीमानंविदार्यैतयाद्वाराप्रापद्यतसैषाविदृतिर्नामद्वास्तदेतन्नान्दनम्तस्यत्रयआवसत्ʰआस्त्रयःस्वप्नाअयमावसत्ʰओऽयमावसत्ʰओऽयमावसत्ʰऐतिसजातोब्ʰऊतान्यब्ʰइव्यैक्षत्किमिहान्यंवावदिषदितिसएतमेवपुरुषंब्रह्मततममपश्यतिदमदर्शमिती३म्̇तस्मादिदंद्रोनामैदंद्रोहवैनामतमिदंद्रंसन्तमिन्द्रैत्याचक्षतेपरोक्षेणपरोक्षप्रियाइवहिदेवाःपरोक्षप्रियाइवहिदेवाः३",
+          "textIast": "saīkṣataimenulokāścalokapālāścaannamebʰyaḥsr̥jāitiso'po'bʰyatapattābʰyo'bʰitaptābʰyomūrtirajāyatayāvaisāmūrtirajāyatānnaṃvaitattadenatsr̥ṣṭaṃtadvācāji/gʰr̥kṣattannāśaknodvācāgrahītumsayaddʰainadvācāgrahaiṣyadabʰivyāhr̥tyahaivānnamatrapsyattatprāṇenājigʰr̥kṣattannāśaknotprāṇenagrahītumsayaddʰainatprāṇenāgrahaiṣyadabʰiprāṇyahaivānnamatrapsyattaccakṣuṣāji/gʰr̥kṣattannāśaknoccakṣuṣāgrahītumsayaddʰainaccakṣuṣāgrahaiṣyaddr̥ṣṭvāhaivā/nnamatrapsyattaccʰrotreṇājigʰr̥kṣattannāśaknoccʰrotreṇagrahītumsayaddʰainaccʰrotreṇāgrahaiṣyactattvacājigʰr̥kṣatta/nnāśaknottvacāgrahītumsayaddʰainattvacāgrahaiṣyatspr̥ṣṭvāhaivānna/matrapsyattanmanasājigʰr̥kṣattannāśaknonmanasāgrahītumsayaddʰainanmanasāgrahaiṣyaddʰyātvāhaivānnamatrapsyattaccʰiśnenājigʰr̥kṣa/ttannāśaknoccʰiśnenagrahītumsayaddʰainaccʰiśnenāgrahaiṣyadvisr̥jyahaivānnamatrapsyattadapānenājigʰr̥kṣattadāvayatsaiṣograhoyadvāyurannāyurvāeṣayadvāyuḥsaīkṣatakatʰaṃnvidaṃmadr̥tesyāditisaīkṣatakatareṇaprapadyāitisaīkṣatayadivācābʰivyāhr̥taṃyadiprāṇenābʰiprāṇitaṃyadicakṣuṣādr̥ṣṭaṃyadiśrotreṇaśrutaṃyaditvacāspr̥ṣṭaṃyadimanasādʰyātaṃyadyapānenā/bʰyapānitaṃyadiśiśnenavisr̥ṣṭamatʰako'hamitisaetamevasīmānaṃvidāryaitayādvārāprāpadyatasaiṣāvidr̥tirnāmadvāsta/detannāndanamtasyatrayaāvasatʰāstrayaḥsvapnāayamāvasatʰo'yamāvasatʰo'yamāvasatʰaitisajātobʰūtānyabʰivyaikṣa/tkimihānyaṃvāvadiṣaditisaetamevapuruṣaṃbrahmatatamamapa/śyatidamadarśamitī3ṁtasmādidaṃdronāmaidaṃdrohavaināmatamidaṃdraṃsantamindraityācakṣateparokṣeṇaparokṣapriyāivahidevāḥparokṣapriyāivahidevāḥ3"
+        }
+      ]
+    },
+    {
+      "type": "chapter-2",
+      "label": "द्वितीयोऽध्यायः",
+      "verses": [
+        {
+          "number": 1,
+          "text": "पुरुषेहवाअयमादितोगर्ब्ʰओब्ʰअवतियदेतद्रेतस्तदेतत्सर्वेब्ʰयोऽङ्गेब्ʰयस्तेजःसंब्ʰऊतम्तद्यदास्त्रियांसिञ्चत्यत्ʰऐनज्जनयतितदस्यप्रत्ʰअमंजन्मतत्स्त्रियाआत्मब्ʰऊयंगच्ʰअतियत्ʰआस्वमङ्गंतत्ʰआतस्मादेनांनहिनस्तिसास्यैतमात्मानमत्रगतंब्ʰआवयतिसाब्ʰआवयित्रीब्ʰआवयितव्याब्ʰअवतितंस्त्रीगर्ब्ʰअंबिब्ʰअर्तिसोऽग्रएवकुमारंजन्मनोऽग्रेऽद्ʰइब्ʰआवयतिसयत्कुमारंजन्मनोऽग्रेऽद्ʰइब्ʰआवयत्यात्मानमेवतद्ब्ʰआवयतिएषांलोकानांसंतत्याएवंसंतताहीमेलोकाःतदस्यद्वितीयंजन्मसोऽस्यायमात्मापुण्येब्ʰयःकर्मब्ʰयःप्रतिद्ʰईयतेअत्ʰआस्यायमितरआत्माकृतकृत्योवयोगतःप्रैतिसैतःप्रयन्नेवपुनर्जायतेतदस्यतृतीयंजन्मतदुक्तमृषिणाइतिगर्ब्ʰअएवैतच्च्ʰअयानोवामदेवएवमुवाचसएवंविद्वानस्माच्च्ʰअरीरब्ʰएदादूर्द्ʰवौत्क्रम्यामुष्मिन्स्वर्गेलोकेसर्वान्कामानाप्त्वामृतःसमब्ʰअवत्समब्ʰअवत्",
+          "textIast": "puruṣehavāayamāditogarbʰobʰavatiyadetadretastadeta/tsarvebʰyo'ṅgebʰyastejaḥsaṃbʰūtamtadyadāstriyāṃsiñcatyatʰainajjanayatitadasyapratʰamaṃjanmatatstriyāātmabʰūyaṃgacʰatiyatʰāsvamaṅgaṃtatʰātasmādenāṃnahinastisāsyaita/mātmānamatragataṃbʰāvayatisābʰāvayitrībʰāvayitavyābʰavatitaṃstrīgarbʰaṃbibʰartiso'graevakumāraṃjanmano'gre'dʰibʰāva/yatisayatkumāraṃjanmano'gre'dʰibʰāvayatyātmānamevatadbʰāva/yatieṣāṃlokānāṃsaṃtatyāevaṃsaṃtatāhīmelokāḥtadasyadvitīyaṃjanmaso'syāyamātmāpuṇyebʰyaḥkarmabʰyaḥpratidʰīyateatʰāsyāyamitaraātmākr̥takr̥tyovayogataḥpraitisaitaḥprayannevapunarjāyatetadasyatr̥tīyaṃjanmataduktamr̥/ṣiṇāitigarbʰaevaitaccʰayānovāmadevaevamuvācasaevaṃvidvānasmā/ccʰarīrabʰedādūrdʰvautkramyāmuṣminsvargelokesarvānkāmānāptvā/mr̥taḥsamabʰavatsamabʰavat"
+        }
+      ]
+    },
+    {
+      "type": "chapter-3",
+      "label": "तृतीयोऽध्यायः",
+      "verses": [
+        {
+          "number": 1,
+          "text": "कोऽयमात्मेतिवयमुपास्महेकतरःसआत्मायेनवापश्यतियेनवावाचम्व्याकरोतियेनवास्वादुचास्वादुचविजानातियदेतद्द्ʰऋदयंमनश्चैतत्संज्ञानमाज्ञानंविज्ञानंप्रज्ञानंमेद्ʰआदृष्टिर्द्ʰऋतिर्मतिर्मनीषाजूतिःस्मृतिःसंकल्पःक्रतुरसुंकामोवशैतिसर्वाण्येवैतानिप्रज्ञानस्यनामद्ʰएयानिब्ʰअवन्तिएषब्रह्मएषैन्द्रएषप्रजापतिरेतेसर्वेदेवाइमानिचपञ्चमहाब्ʰऊतानिपृत्ʰइवीवायुराकाशआपोज्योतींषीत्येतानीमानिचक्षुद्रमिश्राणीवबीजानीतराणिचेतराणिचाण्डजानिचजारुजानिचस्वेदजानिचोद्ब्ʰइज्जानिहस्तिनोयत्किञ्चेदंप्राणिजङ्गमंचपतत्रिचयच्चस्त्ʰआवरंसर्वंतत्प्रज्ञानेत्रंप्रज्ञानेप्रतिष्ट्ʰइतंप्रज्ञानेत्रोलोकःप्रज्ञाप्रतिष्ट्ʰआप्रज्ञानंब्रह्मसएतेनप्रज्ञेनात्मनास्माम्̇ल्लोकादुत्क्रम्यामुष्मिन्स्वर्गेलोकेसर्वान्कामानाप्त्वामृतःसमब्ʰअवत्समब्ʰअवत्",
+          "textIast": "ko'yamātmetivayamupāsmahekataraḥsaātmāyenavāpaśyatiyenavāvācamvyākarotiyenavāsvāducāsvāducavijānātiyadetaddʰr̥dayaṃmanaścaitatsaṃjñānamājñānaṃvijñānaṃprajñānaṃmedʰādr̥ṣṭi/rdʰr̥tirmatirmanīṣājūtiḥsmr̥tiḥsaṃkalpaḥkraturasuṃkāmovaśaitisarvāṇyevaitāniprajñānasyanāmadʰeyānibʰavantieṣabrahmaeṣaindraeṣaprajāpatiretesarvedevāimānicapañcamahā/bʰūtānipr̥tʰivīvāyurākāśaāpojyotīṃṣītyetānīmānicakṣudramiśrāṇīvabījānītarāṇicetarāṇicāṇḍajānicajārujānicasvedajānicodbʰijjānihastinoyatkiñcedaṃprāṇijaṅgamaṃcapatatricayaccastʰāvaraṃsarvaṃtatprajñānetraṃprajñānepratiṣṭʰitaṃprajñānetrolokaḥprajñāpratiṣṭʰāprajñānaṃbrahmasaetenaprajñenātmanāsmāṁllokādutkra/myāmuṣminsvargelokesarvānkāmānāptvāmr̥taḥsamabʰavatsama/bʰavat"
+        }
+      ]
+    }
+  ],
+  "fetchedAt": "2026-07-09"
+}

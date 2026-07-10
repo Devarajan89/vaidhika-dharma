@@ -16,8 +16,8 @@ const SECTION_MARKER_RE =
 	/^\s*॥?\s*इति\s+(?:केनोपनिषदि|काठकोपनिषदि)\s+[^॥\n]+?\s*॥/gmu;
 const PREAMBLE_TITLE_RE = /॥\s*अथ\s+([^॥]+?)\s*॥/;
 const METADATA_LINE_RE = /^%/;
-const ENGLISH_PART_RE = /^\s*Part\s+[IVX]+\s*$/i;
-const ENGLISH_CANTO_RE = /^\s*Canto\s+[IVX]+\s*$/i;
+const ENGLISH_PART_RE = /^\s*Part\s+[IVX]+\s*$/im;
+const ENGLISH_CANTO_RE = /^\s*Canto\s+[IVX]+\s*$/im;
 const VAR_NOTE_RE = /\s+var\s+[^\n।॥]+/g;
 const HR_SPLIT_RE = /<hr\b[^>]*>/gi;
 const HR_MARKER = '\n\n§§HR§§\n\n';
@@ -106,12 +106,12 @@ function parseVersesFromChunk(chunk) {
 function parseSectionLabel(marker) {
 	const trimmed = marker.trim();
 	const kathaMatch = trimmed.match(
-		/काठकोपनिषदि\s+((?:प्रथम|द्वितीय)ाध्याये)\s+((?:प्रथम|द्वितीया|तृतीया)\s+वल्ली)/u
+		/काठकोपनिषदि\s+((?:प्रथम|द्वितीय)ाध्याये)\s+((?:प्रथम[ा]?|द्वितीया|तृतीया)\s+वल्ली)/u
 	);
 	if (kathaMatch) {
 		return {
 			type: 'valli',
-			label: `${kathaMatch[1]} ${kathaMatch[2]}`,
+			label: `काठकोपनिषदि ${kathaMatch[1]} ${kathaMatch[2]}`,
 		};
 	}
 

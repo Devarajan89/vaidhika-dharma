@@ -1,11 +1,15 @@
 import kenaData from '../data/upanishads/kena.json';
 import kathaData from '../data/upanishads/katha.json';
+import taittiriyaData from '../data/upanishads/taittiriya.json';
+import mahanarayanaData from '../data/upanishads/mahanarayana.json';
+import aitareyaData from '../data/upanishads/aitareya.json';
 
-export type UpanishadId = 'kena' | 'katha';
+export type UpanishadId = 'kena' | 'katha' | 'taittiriya' | 'mahanarayana' | 'aitareya';
 
 export type UpanishadVerse = {
 	number: number;
 	text: string;
+	textIast?: string;
 };
 
 export type UpanishadSection = {
@@ -28,6 +32,9 @@ export type UpanishadCorpus = {
 const CORPUS_BY_ID: Record<UpanishadId, UpanishadCorpus> = {
 	kena: kenaData as UpanishadCorpus,
 	katha: kathaData as UpanishadCorpus,
+	taittiriya: taittiriyaData as UpanishadCorpus,
+	mahanarayana: mahanarayanaData as UpanishadCorpus,
+	aitareya: aitareyaData as UpanishadCorpus,
 };
 
 export function getUpanishadCorpus(id: UpanishadId): UpanishadCorpus {
