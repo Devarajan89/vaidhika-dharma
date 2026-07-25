@@ -47,11 +47,32 @@ export function cleanTaittiriyaBrahmanaTexLine(text) {
 		.replace(/\\ip\b/g, '')
 		.replace(/\\clearpage\b/g, '')
 		.replace(/\\-/g, '')
+		.replace(/\\\\/g, '')
 		.replace(/\{[\u200B-\u200D\uFEFF]*\}/g, '')
 		.replace(/\{\}/g, '')
 		.replace(/\\[a-zA-Z]+\*?/g, '')
 		.replace(/[ \t]+/g, ' ')
 		.trim();
+}
+
+/**
+ * Join TeX source lines into display text. Soft-hyphen wraps (`…स्-` + `तप…`)
+ * are rejoined without the hyphen; other breaks stay as newlines.
+ * @param {string[]} lines
+ */
+export function joinTexProseLines(lines) {
+	/** @type {string[]} */
+	const parts = [];
+	for (const line of lines) {
+		if (!line) continue;
+		const prev = parts[parts.length - 1];
+		if (prev && /-$/.test(prev) && !/^\s/.test(line)) {
+			parts[parts.length - 1] = `${prev.slice(0, -1)}${line}`;
+		} else {
+			parts.push(line);
+		}
+	}
+	return parts.join('\n');
 }
 
 /**

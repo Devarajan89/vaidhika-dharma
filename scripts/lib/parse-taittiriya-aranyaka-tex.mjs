@@ -1,4 +1,7 @@
-import { cleanTaittiriyaBrahmanaTexLine } from './parse-taittiriya-brahmana-tex.mjs';
+import {
+	cleanTaittiriyaBrahmanaTexLine,
+	joinTexProseLines,
+} from './parse-taittiriya-brahmana-tex.mjs';
 
 const DEVANAGARI_DIGIT_MAP = {
 	'०': '0',
@@ -194,7 +197,7 @@ export function parseTaittiriyaUpanishadTex(tex) {
 			const anuvakas = parseAnuvakasFromBody(body);
 			verses = anuvakas.map((anuvaka) => ({
 				number: anuvaka.anuvaka,
-				text: anuvaka.verses.flatMap((verse) => verse.lines).join('\n'),
+				text: joinTexProseLines(anuvaka.verses.flatMap((verse) => verse.lines)),
 			}));
 		} else {
 			// Drop leading unnumbered śānti (common before Brahmānanda / Bhṛgu).
@@ -209,7 +212,7 @@ export function parseTaittiriyaUpanishadTex(tex) {
 			);
 			verses = parsed.map((verse, index) => ({
 				number: verse.number > 0 ? verse.number : index + 1,
-				text: verse.lines.join('\n'),
+				text: joinTexProseLines(verse.lines),
 			}));
 		}
 
@@ -260,11 +263,13 @@ export function parseMahanarayanaUpanishadTex(tex) {
 				anuvakas.length > 0
 					? anuvakas.map((anuvaka) => ({
 							number: anuvaka.anuvaka,
-							text: anuvaka.verses.flatMap((verse) => verse.lines).join('\n'),
+							text: joinTexProseLines(
+								anuvaka.verses.flatMap((verse) => verse.lines)
+							),
 						}))
 					: parseVerses(chunk).map((verse) => ({
 							number: verse.number,
-							text: verse.lines.join('\n'),
+							text: joinTexProseLines(verse.lines),
 						}));
 
 			if (verses.some((verse) => verse.text.trim())) {
@@ -282,7 +287,7 @@ export function parseMahanarayanaUpanishadTex(tex) {
 			label: 'महानारायणोपनिषत्',
 			verses: anuvakas.map((anuvaka) => ({
 				number: anuvaka.anuvaka,
-				text: anuvaka.verses.flatMap((verse) => verse.lines).join('\n'),
+				text: joinTexProseLines(anuvaka.verses.flatMap((verse) => verse.lines)),
 			})),
 		});
 	}
