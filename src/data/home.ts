@@ -31,6 +31,7 @@ export interface HomeContent {
 	searchHint: string;
 	intro: string;
 	browseHeading: string;
+	shortcutsHeading: string;
 	aboutTitle: string;
 	aboutBody: string[];
 	quoteTitle: string;
@@ -79,28 +80,32 @@ export const heroContentByLocale: Record<HomeLocale, HomeHero> = {
 
 export const homeContentByLocale: Record<HomeLocale, HomeContent> = {
 	root: {
-		searchHint: 'Use the search bar above to find mantras, rituals, and scriptures.',
+		searchHint:
+			'Search for mantras and rituals — try rudram, sandhyā, or puruṣa. Shortcuts appear as you type.',
 		intro:
-			'Vaidhika Dharma guides Vedic living — nityakarma (daily practice), dharma (right conduct), and svādhyāya (study of the śāstras). Mantras are shown in IAST; switch to Devanagari for the native script view.',
+			'Vaidhika Dharma guides Vedic living — nityakarma (daily practice), dharma (right conduct), and svādhyāya (study of the śāstras). Mantras are shown in Devanagari; switch to IAST for Latin transliteration.',
 		browseHeading: 'Browse',
+		shortcutsHeading: 'Daily practice',
 		aboutTitle: 'About',
 		aboutBody: [
 			'Vaidhika Dharma is dedicated to preserving and sharing the path of Vedic life — daily rituals (nityakarma), ethical conduct (dharma), and scriptural study (svādhyāya).',
-			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer.',
+			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer. Key nityakarma pages also work offline after the first visit.',
 		],
 		quoteTitle: 'Daily verse',
 		recentTitle: 'Recent updates',
 		recentEmpty: 'No updates today.',
 	},
 	iast: {
-		searchHint: 'Use the search bar above to find mantras, rituals, and scriptures.',
+		searchHint:
+			'Search for mantras and rituals — try rudram, sandhyā, or puruṣa. Shortcuts appear as you type.',
 		intro:
 			'Vaidhika Dharma guides Vedic living — nityakarma (daily practice), dharma (right conduct), and svādhyāya (study of the śāstras). Mantras are shown in IAST; switch to Devanagari for the native script view.',
 		browseHeading: 'Browse',
+		shortcutsHeading: 'Daily practice',
 		aboutTitle: 'About',
 		aboutBody: [
 			'Vaidhika Dharma is dedicated to preserving and sharing the path of Vedic life — daily rituals (nityakarma), ethical conduct (dharma), and scriptural study (svādhyāya).',
-			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer.',
+			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer. Key nityakarma pages also work offline after the first visit.',
 		],
 		quoteTitle: 'Daily verse',
 		recentTitle: 'Recent updates',

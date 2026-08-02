@@ -6,8 +6,8 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "prebuild": "node scripts/generate-doc-cache.mjs",
-    "dev": "node scripts/generate-doc-cache.mjs && astro dev",
+    "prebuild": "node scripts/generate-doc-cache.mjs && node scripts/generate-offline-pack.mjs",
+    "dev": "node scripts/generate-doc-cache.mjs && node scripts/generate-offline-pack.mjs && astro dev",
     "dev:clean": "rm -rf .astro node_modules/.astro && astro dev",
     "start": "astro dev",
     "build": "astro build",

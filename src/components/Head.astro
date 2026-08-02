@@ -1,5 +1,6 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
+import { buildPageJsonLd } from '../lib/structured-data';
 
 const { entry } = Astro.locals.starlightRoute;
 const site = Astro.site ?? new URL('https://vaidhikadharma.org');
@@ -13,26 +14,25 @@ const description =
 const locale = Astro.currentLocale === 'iast' ? 'en' : 'sa';
 const inLanguage = locale === 'sa' ? 'sa-Deva' : 'en';
 
-const jsonLd = {
-	'@context': 'https://schema.org',
-	'@type': 'WebPage',
-	name: title,
+const jsonLd = buildPageJsonLd({
+	title,
 	description,
-	url: canonicalUrl,
+	canonicalUrl,
+	siteUrl: site.href,
 	inLanguage,
-	isPartOf: {
-		'@type': 'WebSite',
-		name: 'Vaidhika Dharma',
-		url: site.href,
-		description:
-			'Vedic mantras, Rigveda and Yajurveda saṃhitās, nityakarma, and sūkta compilations with svara marks.',
-	},
-};
+	slug: String(slug),
+});
 ---
 
 <Default {...Astro.props} />
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalUrl} />
+<link rel="manifest" href="/manifest.webmanifest" />
+<meta name="theme-color" content="#cb0003" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="Vaidhika Dharma" />
+<link rel="apple-touch-icon" href="/images/favicon.svg" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Vaidhika Dharma" />
 <meta property="og:title" content={title} />
@@ -43,3 +43,19 @@ const jsonLd = {
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLFCLRJNG3" is:inline></script>
+<script is:inline>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+	gtag('config', 'G-FLFCLRJNG3');
+</script>
+<script is:inline>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', () => {
+			navigator.serviceWorker.register('/sw.js').catch(() => {});
+		});
+	}
+</script>
