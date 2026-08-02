@@ -1,6 +1,7 @@
 ---
 import CategoryTree from './CategoryTree.astro';
 import HomeSearchHint from './HomeSearchHint.astro';
+import HomeShortcuts from './HomeShortcuts.astro';
 import HomeSidebar from './HomeSidebar.astro';
 import {
 	getHomeContent,
@@ -29,6 +30,8 @@ const { intro, browseHeading } = getHomeContent(locale);
 				<HomeSearchHint locale={locale} />
 			</div>
 		</header>
+
+		<HomeShortcuts locale={locale} />
 
 		<section class="home-browse" aria-labelledby="home-browse-heading">
 			<h2 id="home-browse-heading" class="home-browse__heading">{browseHeading}</h2>

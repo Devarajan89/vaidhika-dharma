@@ -1,7 +1,10 @@
 ---
 import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
 import project from 'virtual:starlight/project-context';
+import { SEARCH_FEATURED_HINTS, SEARCH_SYNONYMS } from '../data/search-synonyms';
+import { resolveHomeLocale } from '../data/home';
 
+const locale = resolveHomeLocale(Astro.locals.starlightRoute.locale);
 const pagefindTranslations = {
 	placeholder: Astro.locals.t('search.label'),
 	...Object.fromEntries(
@@ -11,8 +14,27 @@ const pagefindTranslations = {
 	),
 };
 
-const dataAttributes: DOMStringMap = { 'data-translations': JSON.stringify(pagefindTranslations) };
+const synonymPayload = SEARCH_SYNONYMS.map((entry) => ({
+	aliases: entry.aliases,
+	query: entry.query,
+	label: entry.label[locale],
+	href: entry.href[locale],
+}));
+
+const featuredHints = SEARCH_FEATURED_HINTS.map((entry) => ({
+	alias: entry.alias,
+	label: entry.label[locale],
+	href: entry.href[locale],
+}));
+
+const dataAttributes: DOMStringMap = {
+	'data-translations': JSON.stringify(pagefindTranslations),
+	'data-synonyms': JSON.stringify(synonymPayload),
+};
 if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash'] = '';
+
+const shortcutsHeading = locale === 'root' ? 'शीघ्र मार्गाः' : 'Quick links';
+const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try searching';
 ---
 
 <site-search class={Astro.props.class} {...dataAttributes}>
@@ -45,6 +67,26 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 				) : (
 					<div class="search-container">
 						<div id="starlight__search" />
+						<div class="search-shortcuts" data-search-shortcuts>
+							<p class="search-shortcuts__heading">{tryHeading}</p>
+							<ul class="search-shortcuts__chips">
+								{featuredHints.map((hint) => (
+									<li>
+										<button type="button" data-search-query={hint.alias}>
+											{hint.label}
+										</button>
+									</li>
+								))}
+							</ul>
+							<p class="search-shortcuts__heading">{shortcutsHeading}</p>
+							<ul class="search-shortcuts__links" data-synonym-links>
+								{featuredHints.map((hint) => (
+									<li>
+										<a href={hint.href}>{hint.label.split('→').pop()?.trim() ?? hint.label}</a>
+									</li>
+								))}
+							</ul>
+						</div>
 					</div>
 				)
 			}
@@ -75,6 +117,24 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 
 <script>
 	import { pagefindUserConfig } from 'virtual:starlight/pagefind-config';
+	import { resolveSearchTerm } from '../data/search-synonyms';
+
+	type SynonymEntry = {
+		aliases: string[];
+		query: string;
+		label: string;
+		href: string;
+	};
+
+	function normalizeAlias(value: string): string {
+		return value
+			.trim()
+			.toLowerCase()
+			.normalize('NFKD')
+			.replace(/[\u0300-\u036f]/g, '')
+			.replace(/[^\p{L}\p{N}\s]+/gu, ' ')
+			.replace(/\s+/g, ' ');
+	}
 
 	class SiteSearch extends HTMLElement {
 		constructor() {
@@ -83,15 +143,79 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 			const closeBtn = this.querySelector<HTMLButtonElement>('button[data-close-modal]')!;
 			const dialog = this.querySelector('dialog')!;
 			const dialogFrame = this.querySelector('.dialog-frame')!;
+			const shortcuts = this.querySelector<HTMLElement>('[data-search-shortcuts]');
+			const synonymLinks = this.querySelector<HTMLElement>('[data-synonym-links]');
 
 			let translations = {};
+			let synonymEntries: SynonymEntry[] = [];
 			try {
 				translations = JSON.parse(this.dataset.translations || '{}');
+			} catch {}
+			try {
+				synonymEntries = JSON.parse(this.dataset.synonyms || '[]');
 			} catch {}
 
 			const shouldStrip = this.dataset.stripTrailingSlash !== undefined;
 			const stripTrailingSlash = (path: string) => path.replace(/(.)\/(#.*)?$/, '$1$2');
 			const formatURL = shouldStrip ? stripTrailingSlash : (path: string) => path;
+
+			const matchSynonyms = (term: string, limit = 5) => {
+				const normalized = normalizeAlias(term);
+				if (!normalized || normalized.length < 2) return [];
+				const matches: SynonymEntry[] = [];
+				for (const entry of synonymEntries) {
+					const hit = entry.aliases.some((alias) => {
+						const aliasNorm = normalizeAlias(alias);
+						return aliasNorm.includes(normalized) || normalized.includes(aliasNorm);
+					});
+					if (hit) {
+						matches.push(entry);
+						if (matches.length >= limit) break;
+					}
+				}
+				return matches;
+			};
+
+			const renderSynonymLinks = (term: string) => {
+				if (!synonymLinks) return;
+				const matches = matchSynonyms(term);
+				if (!matches.length) {
+					synonymLinks.hidden = term.trim().length >= 2;
+					return;
+				}
+				synonymLinks.hidden = false;
+				synonymLinks.innerHTML = matches
+					.map(
+						(entry) =>
+							`<li><a href="${entry.href}">${entry.label}</a></li>`
+					)
+					.join('');
+			};
+
+			const setSearchQuery = (query: string) => {
+				const input = this.querySelector<HTMLInputElement>('.pagefind-ui__search-input');
+				if (!input) return;
+				input.value = query;
+				input.dispatchEvent(new Event('input', { bubbles: true }));
+				input.focus();
+			};
+
+			const bindShortcutUi = () => {
+				shortcuts?.querySelectorAll<HTMLButtonElement>('[data-search-query]').forEach((button) => {
+					button.addEventListener('click', () => {
+						const query = button.dataset.searchQuery;
+						if (query) setSearchQuery(query);
+					});
+				});
+
+				const input = this.querySelector<HTMLInputElement>('.pagefind-ui__search-input');
+				input?.addEventListener('input', () => {
+					const value = input.value.trim();
+					if (shortcuts) shortcuts.hidden = value.length > 0 && matchSynonyms(value).length === 0;
+					if (shortcuts && value.length === 0) shortcuts.hidden = false;
+					renderSynonymLinks(value);
+				});
+			};
 
 			let pagefindReady: Promise<void> | undefined;
 			const ensurePagefind = () => {
@@ -109,6 +233,7 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 						showImages: false,
 						translations,
 						showSubResults: true,
+						processTerm: (term: string) => resolveSearchTerm(term),
 						processResult: (result: { url: string; sub_results: Array<{ url: string }> }) => {
 							result.url = formatURL(result.url);
 							result.sub_results = result.sub_results.map((sub_result) => {
@@ -117,6 +242,7 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 							});
 						},
 					});
+					bindShortcutUi();
 				})();
 				return pagefindReady;
 			};
@@ -274,6 +400,67 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 			--pagefind-ui-border-width: 1px;
 			--pagefind-ui-tag: var(--sl-color-gray-5);
 			--sl-search-cancel-space: 5rem;
+		}
+
+		.search-container {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			width: 100%;
+		}
+
+		.search-shortcuts {
+			padding-top: 0.25rem;
+			border-top: 1px solid var(--sl-color-gray-5);
+		}
+
+		.search-shortcuts[hidden] {
+			display: none;
+		}
+
+		.search-shortcuts__heading {
+			margin: 0.75rem 0 0.5rem;
+			font-size: 0.75rem;
+			font-weight: 600;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			color: var(--sl-color-gray-3);
+		}
+
+		.search-shortcuts__heading:first-child {
+			margin-top: 0;
+		}
+
+		.search-shortcuts__chips,
+		.search-shortcuts__links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.search-shortcuts__chips button,
+		.search-shortcuts__links a {
+			display: inline-flex;
+			align-items: center;
+			padding: 0.35rem 0.7rem;
+			border: 1px solid var(--sl-color-gray-5);
+			border-radius: 0.375rem;
+			background: var(--sl-color-black);
+			color: var(--sl-color-gray-2);
+			font: inherit;
+			font-size: 0.875rem;
+			line-height: 1.3;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		.search-shortcuts__chips button:hover,
+		.search-shortcuts__links a:hover {
+			border-color: var(--sl-color-accent);
+			color: var(--sl-color-white);
 		}
 
 		:root[data-theme='light'] #starlight__search {

@@ -1,0 +1,28 @@
+---
+import type { HomeLocale } from '../data/home';
+import { getHomeContent } from '../data/home';
+import { getHomeShortcuts } from '../data/home-shortcuts';
+
+interface Props {
+	locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+const { shortcutsHeading } = getHomeContent(locale);
+const shortcuts = getHomeShortcuts(locale);
+---
+
+<section class="home-shortcuts" aria-labelledby="home-shortcuts-heading">
+	<h2 id="home-shortcuts-heading" class="home-shortcuts__heading">{shortcutsHeading}</h2>
+	<ul class="home-shortcuts__list">
+		{
+			shortcuts.map((item) => (
+				<li>
+					<a class="home-shortcuts__link" href={item.href} data-group={item.group}>
+						{item.label}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</section>
