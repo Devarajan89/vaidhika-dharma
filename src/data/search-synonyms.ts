@@ -180,6 +180,20 @@ export const SEARCH_SYNONYMS: SearchSynonym[] = [
 		href: { root: '/katha-upanishad/', iast: '/iast/katha-upanishad/' },
 	},
 	{
+		aliases: [
+			'prashnopanishad',
+			'prashna upanishad',
+			'prasna upanishad',
+			'prasna',
+			'pippalada',
+			'प्रश्नोपनिषद्',
+			'प्रश्नोपनिषत्',
+		],
+		query: 'prashna',
+		label: { root: 'प्रश्नोपनिषत्', iast: 'Praśnopaniṣad' },
+		href: { root: '/prashna-upanishad/', iast: '/iast/prashna-upanishad/' },
+	},
+	{
 		aliases: ['taittiriya upanishad', 'taittiriyopanishad', 'तैत्तिरीयोपनिषद्'],
 		query: 'taittiriya upanishad',
 		label: { root: 'तैत्तिरीयोपनिषत्', iast: 'Taittirīyopaniṣad' },

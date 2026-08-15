@@ -331,3 +331,98 @@ export function parseAitareyaUpanishadHtml(html) {
 
 	return parseAitareyaUpanishadSections(text.replace(/\n{3,}/g, '\n\n').trim());
 }
+
+const PRASHNA_HEADLINE_MARKER = '§§PRASHNA§§';
+const PRASHNA_TITLE_RE = /<h2[^>]*itemprop=["']name["'][^>]*>([\s\S]*?)<\/h2>/i;
+const PRASHNA_HEADLINE_RE = /<h2[^>]*itemprop=["']headline["'][^>]*>([\s\S]*?)<\/h2>/gi;
+const PRASHNA_END_RE = /इति\s+प्रश्नोपनिषदि\s+[^\n॥]*प्रश्नः\s*॥/gu;
+const PRASHNA_VERSE_END_RE = /॥\s*([०-९0-9]+)\.([०-९0-9]+)\s*॥/g;
+const PRASHNA_SHANTI_RE = /ॐ\s+भद्रं कर्णेभिः[\s\S]*?ॐ\s+शान्तिः\s+शान्तिः\s+शान्तिः\s*॥/u;
+const PRASHNA_LABEL_RE = /^\s*((?:प्रथम|द्वितीय|तृतीय|चतुर्थ|पञ्चम|षष्ठ)ः?\s*प्रश्नः)/u;
+
+/**
+ * @param {string} chunk
+ */
+function parsePrashnaVerses(chunk) {
+	/** @type {{ number: number; text: string }[]} */
+	const verses = [];
+	let lastIndex = 0;
+	let match;
+
+	PRASHNA_VERSE_END_RE.lastIndex = 0;
+	while ((match = PRASHNA_VERSE_END_RE.exec(chunk)) !== null) {
+		const number = parseDevanagariNumber(match[2]);
+		const text = cleanVerseText(chunk.slice(lastIndex, match.index));
+		if (text) {
+			verses.push({ number, text });
+		}
+		lastIndex = match.index + match[0].length;
+	}
+
+	return verses;
+}
+
+/**
+ * @param {string} html
+ */
+export function parsePrashnaUpanishadHtml(html) {
+	const match = html.match(/<pre[^>]*id=["']content["'][^>]*>([\s\S]*?)<\/pre>/i);
+	if (!match) {
+		throw new Error('Could not locate <pre id="content"> in Praśna Upaniṣad source HTML');
+	}
+
+	let text = match[1];
+	const titleMatch = text.match(PRASHNA_TITLE_RE);
+	const title = titleMatch ? titleMatch[1].replace(/<[^>]+>/g, '').trim() : 'प्रश्नोपनिषत्';
+	text = text.replace(PRASHNA_TITLE_RE, '\n');
+	text = text.replace(PRASHNA_HEADLINE_RE, `\n${PRASHNA_HEADLINE_MARKER}$1\n`);
+	text = text.replace(HR_SPLIT_RE, '\n\n');
+	text = text.replace(/<br\s*\/?>/gi, '\n');
+	text = text.replace(/<[^>]+>/g, '');
+	text = text
+		.replace(/&nbsp;/g, ' ')
+		.replace(/&amp;/g, '&')
+		.replace(/&lt;/g, '<')
+		.replace(/&gt;/g, '>')
+		.replace(/\r/g, '');
+
+	const metadataIndex = text.search(/\n% Text title/m);
+	if (metadataIndex >= 0) {
+		text = text.slice(0, metadataIndex);
+	}
+
+	text = text.replace(/\n{3,}/g, '\n\n').trim();
+	const openingShanti = text.match(PRASHNA_SHANTI_RE)?.[0]?.trim() ?? null;
+
+	/** @type {{ label: string; type: string; verses: { number: number; text: string }[] }[]} */
+	const sections = [];
+	const parts = text
+		.split(PRASHNA_HEADLINE_MARKER)
+		.map((part) => part.trim())
+		.filter(Boolean);
+
+	for (const part of parts) {
+		const labelMatch = part.match(PRASHNA_LABEL_RE);
+		if (!labelMatch) continue;
+
+		const body = part
+			.replace(PRASHNA_END_RE, '')
+			.replace(PRASHNA_LABEL_RE, '')
+			.replace(/^[\s।.]+/, '')
+			.trim();
+		const verses = parsePrashnaVerses(body);
+		if (!verses.length) continue;
+
+		sections.push({
+			type: `prashna-${sections.length + 1}`,
+			label: labelMatch[1].replace(/\s+/g, ' ').trim(),
+			verses,
+		});
+	}
+
+	return {
+		title,
+		openingShanti,
+		sections,
+	};
+}

@@ -122,6 +122,8 @@ export default defineConfig({
     '/iast/upanishads/kena-upanishad': '/iast/kena-upanishad',
     '/upanishads/katha-upanishad': '/katha-upanishad',
     '/iast/upanishads/katha-upanishad': '/iast/katha-upanishad',
+    '/upanishads/prashna-upanishad': '/prashna-upanishad',
+    '/iast/upanishads/prashna-upanishad': '/iast/prashna-upanishad',
     '/upanishads/taittiriya-upanishad': '/taittiriya-upanishad',
     '/iast/upanishads/taittiriya-upanishad': '/iast/taittiriya-upanishad',
     '/upanishads/mahanarayana-upanishad': '/mahanarayana-upanishad',

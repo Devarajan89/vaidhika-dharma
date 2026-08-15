@@ -47,6 +47,7 @@ const SEGMENT_LABELS: Record<string, string> = {
 	'isha-upanishad': 'Īśāvāsyopaniṣad',
 	'kena-upanishad': 'Kenopaniṣad',
 	'katha-upanishad': 'Kaṭhopaniṣad',
+	'prashna-upanishad': 'Praśnopaniṣad',
 	'taittiriya-upanishad': 'Taittirīyopaniṣad',
 	'mahanarayana-upanishad': 'Mahānārāyaṇa Upaniṣad',
 	'aitareya-upanishad': 'Aitareyopaniṣad',

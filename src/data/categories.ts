@@ -489,6 +489,10 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 					href: '/katha-upanishad/',
 				},
 				{
+					label: 'प्रश्नोपनिषत् (अथर्ववेद)',
+					href: '/prashna-upanishad/',
+				},
+				{
 					label: 'तैत्तिरीयोपनिषत् (कृष्णयजुर्वेद)',
 					href: '/taittiriya-upanishad/',
 				},
@@ -633,6 +637,10 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 				{
 					label: 'Kaṭha upaniṣad (Kṛṣṇayajurveda)',
 					href: '/iast/katha-upanishad/',
+				},
+				{
+					label: 'Praśnopaniṣat (Atharvaveda)',
+					href: '/iast/prashna-upanishad/',
 				},
 				{
 					label: 'Taittirīya upaniṣad (Kṛṣṇayajurveda)',

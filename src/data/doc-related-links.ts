@@ -89,6 +89,7 @@ const UPANISHAD_SLUGS = [
 	'isha-upanishad',
 	'kena-upanishad',
 	'katha-upanishad',
+	'prashna-upanishad',
 	'taittiriya-upanishad',
 	'mahanarayana-upanishad',
 	'aitareya-upanishad',

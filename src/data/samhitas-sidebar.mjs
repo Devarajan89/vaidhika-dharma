@@ -291,6 +291,18 @@ export const upanishadsSidebarGroup = {
 			],
 		},
 		{
+			label: 'अथर्ववेद',
+			translations: { en: 'Atharvaveda' },
+			collapsed: true,
+			items: [
+				{
+					label: 'प्रश्नोपनिषत्',
+					translations: { en: 'Praśnopaniṣat' },
+					link: '/prashna-upanishad/',
+				},
+			],
+		},
+		{
 			label: 'कृष्णयजुर्वेद',
 			translations: { en: 'Kṛṣṇayajurveda' },
 			collapsed: true,

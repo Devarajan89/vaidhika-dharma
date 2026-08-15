@@ -42,6 +42,7 @@ Sitemap: https://vaidhikadharma.org/sitemap-index.xml
 - Īśāvāsyopaniṣad: https://vaidhikadharma.org/isha-upanishad/
 - Kenopaniṣad: https://vaidhikadharma.org/kena-upanishad/
 - Kaṭhopaniṣad: https://vaidhikadharma.org/katha-upanishad/
+- Praśnopaniṣad: https://vaidhikadharma.org/prashna-upanishad/
 - Taittirīyopaniṣad: https://vaidhikadharma.org/taittiriya-upanishad/
 - Mahānārāyaṇa Upaniṣad: https://vaidhikadharma.org/mahanarayana-upanishad/
 - Aitareyopaniṣad: https://vaidhikadharma.org/aitareya-upanishad/
