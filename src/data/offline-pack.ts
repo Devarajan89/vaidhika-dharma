@@ -50,6 +50,6 @@ export const OFFLINE_PACK_URLS = [
 export const OFFLINE_ASSET_URLS = [
 	'/manifest.webmanifest',
 	'/images/favicon.svg',
-	'/fonts/siddhanta.ttf',
-	'/fonts/samarkan.ttf',
+	'/fonts/siddhanta.woff2',
+	'/fonts/samarkan.woff2',
 ] as const;

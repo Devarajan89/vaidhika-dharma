@@ -41,12 +41,14 @@
 }
 
 /* Devanagari locale — Siddhanta for site chrome and content */
-html[lang='sa'] {
+html[lang='sa'],
+html[lang='sa-Deva'] {
   --sl-font: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
   --font-sans: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
 }
 
-html[lang='sa'] .sl-markdown-content {
+html[lang='sa'] .sl-markdown-content,
+html[lang='sa-Deva'] .sl-markdown-content {
   font-family: var(--font-sanskrit), var(--font-tamil), var(--font-latin);
 }
 

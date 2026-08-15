@@ -56,10 +56,11 @@ export function getRigvedaSuktaHref(
 	return `${getRigvedaMandalaHref(mandala, locale)}sukta-${sukta}/`;
 }
 
-export function getRigvedaMandalaJumpItems(mandala: number, _locale: HomeLocale): JumpNavItem[] {
+export function getRigvedaMandalaJumpItems(mandala: number, locale: HomeLocale): JumpNavItem[] {
 	return getMandalaSuktas(mandala).map((record) => ({
 		id: `sukta-${record.sukta}`,
 		label: String(record.sukta),
+		href: getRigvedaSuktaHref(mandala, record.sukta, locale),
 	}));
 }
 
@@ -227,7 +228,7 @@ export function getTaittiriyaPrapathakaHref(
 	return `${getTaittiriyaKandaHref(kanda, locale)}prapathaka-${prapathaka}/`;
 }
 
-export function getTaittiriyaKandaJumpItems(kanda: number, _locale: HomeLocale): JumpNavItem[] {
+export function getTaittiriyaKandaJumpItems(kanda: number, locale: HomeLocale): JumpNavItem[] {
 	const kandaInfo = TAITTIRIYA_KANDAS.find((entry) => entry.kanda === kanda);
 	if (!kandaInfo) return [];
 
@@ -236,6 +237,7 @@ export function getTaittiriyaKandaJumpItems(kanda: number, _locale: HomeLocale):
 		return {
 			id: `prapathaka-${prapathaka}`,
 			label: String(prapathaka),
+			href: getTaittiriyaPrapathakaHref(kanda, prapathaka, locale),
 		};
 	});
 }
@@ -327,7 +329,7 @@ export function getMaitrayaniPrapathakaHref(
 	return `${getMaitrayaniKandaHref(kanda, locale)}prapathaka-${prapathaka}/`;
 }
 
-export function getMaitrayaniKandaJumpItems(kanda: number, _locale: HomeLocale): JumpNavItem[] {
+export function getMaitrayaniKandaJumpItems(kanda: number, locale: HomeLocale): JumpNavItem[] {
 	const kandaInfo = MAITRAYANI_KANDAS.find((entry) => entry.kanda === kanda);
 	if (!kandaInfo) return [];
 
@@ -336,6 +338,7 @@ export function getMaitrayaniKandaJumpItems(kanda: number, _locale: HomeLocale):
 		return {
 			id: `prapathaka-${prapathaka}`,
 			label: String(prapathaka),
+			href: getMaitrayaniPrapathakaHref(kanda, prapathaka, locale),
 		};
 	});
 }

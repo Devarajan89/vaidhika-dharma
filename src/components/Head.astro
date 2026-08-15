@@ -1,7 +1,8 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
-import { buildPageJsonLd, getSeriesName } from '../lib/structured-data';
+import { buildPageJsonLd, getSeriesName, getSeriesTitle } from '../lib/structured-data';
 import {
+	buildDocumentTitle,
 	buildSeoDescription,
 	isIastSlug,
 	ogImageUrl,
@@ -13,8 +14,8 @@ const site = Astro.site ?? new URL('https://vaidhikadharma.org');
 const slug = String(entry.data.slug ?? entry.id);
 const path = slugPath(slug);
 const canonicalUrl = new URL(path === '' ? '/' : `/${path}/`.replace(/\/+/g, '/'), site).href;
-const title = entry.data.title;
 const isIast = isIastSlug(slug, Astro.locals.starlightRoute.locale);
+const title = buildDocumentTitle(entry.data.title, slug, getSeriesTitle(slug, isIast));
 const description = buildSeoDescription(
 	title,
 	entry.data.description,

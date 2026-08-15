@@ -20,6 +20,7 @@ export interface SeoHeadState {
 	lastUpdated?: Date;
 	isHome: boolean;
 	noindex: boolean;
+	documentTitle?: string;
 }
 
 const GENERIC_DESCRIPTION =
@@ -28,6 +29,19 @@ const GENERIC_DESCRIPTION =
 const HREFLANG_MAP: Record<string, string> = {
 	sa: 'sa-Deva',
 	en: 'sa-Latn',
+};
+
+export const SITE_TITLE = 'Vaidhika Dharma';
+
+export const SIDDHANTA_PRELOAD: SeoHeadItem = {
+	tag: 'link',
+	attrs: {
+		rel: 'preload',
+		href: '/fonts/siddhanta.woff2',
+		as: 'font',
+		type: 'font/woff2',
+		crossorigin: 'anonymous',
+	},
 };
 
 export function isCollectionSlug(slug: string): boolean {
@@ -106,6 +120,25 @@ export function buildSeoDescription(
 	return truncateMeta(`${parts.join(' — ')}. ${script}.`);
 }
 
+function titleAlreadyHasSeries(title: string, series: string): boolean {
+	const normalizedTitle = title.normalize('NFC').toLowerCase();
+	const tokens = series
+		.split(/[()—,–-]/)
+		.map((part) => part.trim().normalize('NFC').toLowerCase())
+		.filter((part) => part.length >= 4);
+	return tokens.some((token) => normalizedTitle.includes(token));
+}
+
+export function buildDocumentTitle(
+	title: string,
+	slug: string,
+	seriesTitle?: string | null
+): string {
+	if (isHomeSlug(slug) || !seriesTitle) return title;
+	if (titleAlreadyHasSeries(title, seriesTitle)) return title;
+	return `${title} — ${seriesTitle}`;
+}
+
 function upsertMeta(
 	head: SeoHeadItem[],
 	attrKey: 'name' | 'property',
@@ -133,9 +166,18 @@ function patchHreflang(head: SeoHeadItem[]): void {
 	}
 }
 
+function patchDocumentTitle(head: SeoHeadItem[], documentTitle: string, siteName: string): void {
+	const content = documentTitle === siteName ? siteName : `${documentTitle} | ${siteName}`;
+	const index = head.findIndex((item) => item.tag === 'title');
+	const entry: SeoHeadItem = { tag: 'title', content };
+	if (index >= 0) head[index] = entry;
+	else head.push(entry);
+}
+
 export function applySeoHead(state: SeoHeadState): void {
 	const { head } = state;
 	const description = state.description ?? '';
+	const documentTitle = state.documentTitle ?? state.title;
 	const robots = state.noindex
 		? 'noindex, follow'
 		: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
@@ -143,9 +185,10 @@ export function applySeoHead(state: SeoHeadState): void {
 	const ogLocale = state.isHome || !isIastSlug(state.slug, state.locale) ? 'sa_IN' : 'en_US';
 	const ogLocaleAlternate = ogLocale === 'sa_IN' ? 'en_US' : 'sa_IN';
 
+	patchDocumentTitle(head, documentTitle, SITE_TITLE);
 	upsertMeta(head, 'name', 'description', description);
 	upsertMeta(head, 'property', 'og:description', description);
-	upsertMeta(head, 'property', 'og:title', state.title);
+	upsertMeta(head, 'property', 'og:title', documentTitle);
 	upsertMeta(head, 'property', 'og:type', state.isHome ? 'website' : 'article');
 	upsertMeta(head, 'property', 'og:url', state.canonicalUrl);
 	upsertMeta(head, 'property', 'og:locale', ogLocale);
@@ -157,7 +200,7 @@ export function applySeoHead(state: SeoHeadState): void {
 	upsertMeta(head, 'property', 'og:image:height', String(OG_IMAGE_HEIGHT));
 	upsertMeta(head, 'property', 'og:image:alt', 'Vaidhika Dharma — Vedic mantras and nityakarma');
 	upsertMeta(head, 'name', 'twitter:card', 'summary_large_image');
-	upsertMeta(head, 'name', 'twitter:title', state.title);
+	upsertMeta(head, 'name', 'twitter:title', documentTitle);
 	upsertMeta(head, 'name', 'twitter:description', description);
 	upsertMeta(head, 'name', 'twitter:image', image);
 	upsertMeta(head, 'name', 'robots', robots);

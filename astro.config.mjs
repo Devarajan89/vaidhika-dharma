@@ -102,7 +102,7 @@ export default defineConfig({
   },
 
   build: {
-    inlineStylesheets: 'always',
+    inlineStylesheets: 'auto',
   },
 
   redirects: {
@@ -167,14 +167,14 @@ export default defineConfig({
               },
               iast: {
                   label: 'IAST',
-                  lang: 'en'
+                  lang: 'sa-Latn'
               }
           },
           sidebar: [
               {
                   label: 'नित्य कर्म​',
                   translations: {
-                      en: 'Nityakarma',
+                      'sa-Latn': 'Nityakarma',
                   },
                   items: [
                       {
@@ -188,7 +188,7 @@ export default defineConfig({
               {
                   label: 'वेद मन्त्राः',
                   translations: {
-                      en: 'Veda mantrāḥ',
+                      'sa-Latn': 'Veda mantrāḥ',
                   },
                   items: [
                       {
@@ -201,46 +201,34 @@ export default defineConfig({
               {
                   label: 'संहिताः',
                   translations: {
-                      en: 'Saṃhitāḥ',
+                      'sa-Latn': 'Saṃhitāḥ',
                   },
                   items: samhitasSidebarGroup.items,
               },
               {
                   label: 'ब्राह्मणाः',
                   translations: {
-                      en: 'Brāhmaṇāḥ',
+                      'sa-Latn': 'Brāhmaṇāḥ',
                   },
                   items: brahmanamSidebarGroup.items,
               },
               {
                   label: 'आरण्यकानि',
                   translations: {
-                      en: 'Āraṇyakāni',
+                      'sa-Latn': 'Āraṇyakāni',
                   },
                   items: aranyakamSidebarGroup.items,
               },
               {
                   label: 'उपनिषदः',
                   translations: {
-                      en: 'Upaniṣadaḥ',
+                      'sa-Latn': 'Upaniṣadaḥ',
                   },
                   collapsed: false,
                   items: upanishadsSidebarGroup.items,
               },
           ],
           customCss: ['./src/styles/global.css', './src/fonts/font-face.css'],
-          head: [
-            {
-              tag: 'link',
-              attrs: {
-                rel: 'preload',
-                href: '/fonts/siddhanta.ttf',
-                as: 'font',
-                type: 'font/ttf',
-                crossorigin: 'anonymous',
-              },
-            },
-          ],
       }),
       sitemap({
           filter: sitemapFilter,

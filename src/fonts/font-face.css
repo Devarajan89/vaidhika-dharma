@@ -1,20 +1,21 @@
 /* Site title / logo wordmark */
 @font-face {
   font-family: 'Samarkan';
-  src: url('/fonts/samarkan.ttf') format('truetype');
+  src: url('/fonts/samarkan.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
   unicode-range: U+0900-097F, U+0020-007F;
 }
 
-/* Devanagari (Sanskrit) — full Siddhanta TTF (complete Vedic glyph set) */
+/* Devanagari (Sanskrit) — Siddhanta with Vedic extensions */
 @font-face {
   font-family: 'Siddhanta';
-  src: url('/fonts/siddhanta.ttf') format('truetype');
+  src: url('/fonts/siddhanta.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+A8E0-A8FF, U+A830-A83F;
 }
 
 /* Tamil font — woff2 only, downloaded only when Tamil chars appear on page */

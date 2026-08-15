@@ -1,0 +1,98 @@
+---
+import type { HomeLocale } from '../../data/home';
+
+export interface CorpusIndexRow {
+	id: string;
+	href: string;
+	label: string;
+	detail?: string;
+	count: number;
+}
+
+interface Props {
+	locale?: HomeLocale;
+	rows: CorpusIndexRow[];
+	labelHeader?: string;
+	detailHeader?: string;
+	countHeader?: string;
+}
+
+const { locale = 'root', rows, labelHeader, detailHeader, countHeader } = Astro.props;
+const isIast = locale === 'iast';
+const labelCol = labelHeader ?? (isIast ? 'Section' : 'अनुभागः');
+const detailCol = detailHeader ?? (isIast ? 'Opening' : 'आदिः');
+const countCol = countHeader ?? (isIast ? 'Mantras' : 'मन्त्राः');
+---
+
+<div class="corpus-index">
+	<table class="corpus-index__table">
+		<thead>
+			<tr>
+				<th scope="col">{labelCol}</th>
+				<th scope="col">{detailCol}</th>
+				<th scope="col" class="corpus-index__count">{countCol}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{
+				rows.map((row) => (
+					<tr id={row.id}>
+						<th scope="row">
+							<a href={row.href}>{row.label}</a>
+						</th>
+						<td>{row.detail ?? ''}</td>
+						<td class="corpus-index__count">{row.count}</td>
+					</tr>
+				))
+			}
+		</tbody>
+	</table>
+</div>
+
+<style>
+	.corpus-index {
+		margin: 0 0 2rem;
+		overflow-x: auto;
+	}
+
+	.corpus-index__table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+	}
+
+	.corpus-index__table th,
+	.corpus-index__table td {
+		padding: 0.5rem 0.7rem;
+		border-bottom: 1px solid var(--sl-color-gray-5);
+		text-align: start;
+		vertical-align: top;
+	}
+
+	.corpus-index__table thead th {
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+		border-bottom-width: 2px;
+	}
+
+	.corpus-index__table tbody th {
+		font-weight: 400;
+		white-space: nowrap;
+	}
+
+	.corpus-index__table a {
+		text-decoration: none;
+		color: var(--sl-color-accent);
+	}
+
+	.corpus-index__table a:hover {
+		text-decoration: underline;
+	}
+
+	.corpus-index__count {
+		text-align: end;
+		white-space: nowrap;
+		width: 1%;
+	}
+</style>

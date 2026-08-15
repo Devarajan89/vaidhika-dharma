@@ -1,10 +1,7 @@
 import { TAITTIRIYA_KANDAS } from '../../scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_KANDAS } from '../../scripts/lib/maitrayani-samhita-structure.mjs';
 import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
-import {
-	AITAREYA_ARANYAKAS,
-	AITAREYA_ARANYAKA_ADHYAYAS,
-} from '../../scripts/lib/aitareya-aranyaka-structure.mjs';
+import { AITAREYA_ARANYAKAS } from '../../scripts/lib/aitareya-aranyaka-structure.mjs';
 import { TAITTIRIYA_BRAHMANA_ASHTAKAS } from '../../scripts/lib/taittiriya-brahmana-structure.mjs';
 import {
 	TAITTIRIYA_ARANYAKA_PRASHNAS,
@@ -43,7 +40,7 @@ function rigvedaMandalaItems() {
 		const mandala = index + 1;
 		return {
 			label,
-			translations: { en: MANDALA_LABELS.iast[index] },
+			translations: { 'sa-Latn': MANDALA_LABELS.iast[index] },
 			link: `/rigveda-samhita/mandala-${mandala}/`,
 		};
 	});
@@ -52,7 +49,7 @@ function rigvedaMandalaItems() {
 function taittiriyaKandaItems() {
 	return TAITTIRIYA_KANDAS.map((kandaInfo) => ({
 		label: kandaInfo.rootLabel,
-		translations: { en: kandaInfo.iastLabel },
+		translations: { 'sa-Latn': kandaInfo.iastLabel },
 		link: `/taittiriya-samhita/kanda-${kandaInfo.kanda}/`,
 	}));
 }
@@ -60,7 +57,7 @@ function taittiriyaKandaItems() {
 function maitrayaniKandaItems() {
 	return MAITRAYANI_KANDAS.map((kandaInfo) => ({
 		label: kandaInfo.rootLabel,
-		translations: { en: kandaInfo.iastLabel },
+		translations: { 'sa-Latn': kandaInfo.iastLabel },
 		link: `/maitrayani-samhita/kanda-${kandaInfo.kanda}/`,
 	}));
 }
@@ -68,7 +65,7 @@ function maitrayaniKandaItems() {
 function aitareyaPanchikaItems() {
 	return AITAREYA_PANCHIKAS.map((panchikaInfo) => ({
 		label: panchikaInfo.rootLabel,
-		translations: { en: panchikaInfo.iastLabel },
+		translations: { 'sa-Latn': panchikaInfo.iastLabel },
 		link: `/aitareya-brahmana/panchika-${panchikaInfo.panchika}/`,
 	}));
 }
@@ -76,7 +73,7 @@ function aitareyaPanchikaItems() {
 function taittiriyaBrahmanaAshtakaItems() {
 	return TAITTIRIYA_BRAHMANA_ASHTAKAS.map((ashtakaInfo) => ({
 		label: ashtakaInfo.rootLabel,
-		translations: { en: ashtakaInfo.iastLabel },
+		translations: { 'sa-Latn': ashtakaInfo.iastLabel },
 		link: `/taittiriya-brahmana/ashtaka-${ashtakaInfo.ashtaka}/`,
 	}));
 }
@@ -84,16 +81,16 @@ function taittiriyaBrahmanaAshtakaItems() {
 /** Lightweight samhitas sidebar — mandala/chapter links only, no per-sukta autogenerate. */
 export const samhitasSidebarGroup = {
 	label: 'संहिताः',
-	translations: { en: 'Saṃhitāḥ' },
+	translations: { 'sa-Latn': 'Saṃhitāḥ' },
 	items: [
 		{
 			label: 'शाकल संहिता (ऋग्वेद)',
-			translations: { en: 'Śākala saṃhitā (Ṛgveda)' },
+			translations: { 'sa-Latn': 'Śākala saṃhitā (Ṛgveda)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/rigveda-samhita/',
 				},
 				...rigvedaMandalaItems(),
@@ -101,48 +98,36 @@ export const samhitasSidebarGroup = {
 		},
 		{
 			label: 'वाजसनेयी संहिता (शुक्ल यजुः — काण्व)',
-			translations: { en: 'Vājasaneyi saṃhitā (Śukla yajur — Kāṇva)' },
+			translations: { 'sa-Latn': 'Vājasaneyi saṃhitā (Śukla yajur — Kāṇva)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/kanva-samhita/',
-				},
-				{
-					autogenerate: {
-						directory: 'samhitas/shukla-yajur/kanva-samhita',
-						collapsed: true,
-					},
 				},
 			],
 		},
 		{
 			label: 'वाजसनेयी संहिता (शुक्ल यजुः — माध्यन्दिन)',
-			translations: { en: 'Vājasaneyi saṃhitā (Śukla yajur — Mādhyandina)' },
+			translations: { 'sa-Latn': 'Vājasaneyi saṃhitā (Śukla yajur — Mādhyandina)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/madhyandina-samhita/',
-				},
-				{
-					autogenerate: {
-						directory: 'samhitas/shukla-yajur/madhyandina-samhita',
-						collapsed: true,
-					},
 				},
 			],
 		},
 		{
 			label: 'तैत्तिरीय संहिता (कृष्णयजुः)',
-			translations: { en: 'Taittirīya saṃhitā (Kṛṣṇayajuḥ)' },
+			translations: { 'sa-Latn': 'Taittirīya saṃhitā (Kṛṣṇayajuḥ)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/taittiriya-samhita/',
 				},
 				...taittiriyaKandaItems(),
@@ -150,12 +135,12 @@ export const samhitasSidebarGroup = {
 		},
 		{
 			label: 'मैत्रायणी संहिता (कृष्णयजुः)',
-			translations: { en: 'Maitrāyaṇī saṃhitā (Kṛṣṇayajuḥ)' },
+			translations: { 'sa-Latn': 'Maitrāyaṇī saṃhitā (Kṛṣṇayajuḥ)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/maitrayani-samhita/',
 				},
 				...maitrayaniKandaItems(),
@@ -166,16 +151,16 @@ export const samhitasSidebarGroup = {
 
 export const brahmanamSidebarGroup = {
 	label: 'ब्राह्मणाः',
-	translations: { en: 'Brāhmaṇāḥ' },
+	translations: { 'sa-Latn': 'Brāhmaṇāḥ' },
 	items: [
 		{
 			label: 'ऐतरेय ब्राह्मनम् (ऋग्वेद)',
-			translations: { en: 'Aitareya brāhmaṇam (Ṛgveda)' },
+			translations: { 'sa-Latn': 'Aitareya brāhmaṇam (Ṛgveda)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/aitareya-brahmana/',
 				},
 				...aitareyaPanchikaItems(),
@@ -183,12 +168,12 @@ export const brahmanamSidebarGroup = {
 		},
 		{
 			label: 'तैत्तिरीय ब्राह्मणम् (कृष्णयजुर्वेद)',
-			translations: { en: 'Taittirīya brāhmaṇam (Kṛṣṇayajurveda)' },
+			translations: { 'sa-Latn': 'Taittirīya brāhmaṇam (Kṛṣṇayajurveda)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/taittiriya-brahmana/',
 				},
 				...taittiriyaBrahmanaAshtakaItems(),
@@ -200,7 +185,7 @@ export const brahmanamSidebarGroup = {
 function taittiriyaAranyakaPrashnaItems() {
 	return TAITTIRIYA_ARANYAKA_PRASHNAS.map((info) => ({
 		label: getPrashnaSidebarLabel(info.prashna, 'root'),
-		translations: { en: getPrashnaSidebarLabel(info.prashna, 'iast') },
+		translations: { 'sa-Latn': getPrashnaSidebarLabel(info.prashna, 'iast') },
 		link: `/taittiriya-aranyaka/prashna-${info.prashna}/`,
 	}));
 }
@@ -208,39 +193,23 @@ function taittiriyaAranyakaPrashnaItems() {
 function aitareyaAranyakaItems() {
 	return AITAREYA_ARANYAKAS.map((aranyakaInfo) => ({
 		label: aranyakaInfo.rootLabel,
-		translations: { en: aranyakaInfo.iastLabel },
-		collapsed: true,
-		items: [
-			{
-				label: 'सूची',
-				translations: { en: 'Overview' },
-				link: `/aitareya-aranyaka/aranyaka-${aranyakaInfo.aranyaka}/`,
-			},
-			...AITAREYA_ARANYAKA_ADHYAYAS.filter(
-				(entry) => entry.aranyaka === aranyakaInfo.aranyaka
-			).map((entry) => ({
-				label: entry.rootLabel.split(', ').slice(1).join(', ') || entry.rootLabel,
-				translations: {
-					en: entry.iastLabel.split(', ').slice(1).join(', ') || entry.iastLabel,
-				},
-				link: `/aitareya-aranyaka/aranyaka-${entry.aranyaka}/adhyaya-${entry.adhyaya}/`,
-			})),
-		],
+		translations: { 'sa-Latn': aranyakaInfo.iastLabel },
+		link: `/aitareya-aranyaka/aranyaka-${aranyakaInfo.aranyaka}/`,
 	}));
 }
 
 export const aranyakamSidebarGroup = {
 	label: 'आरण्यकानि',
-	translations: { en: 'Āraṇyakāni' },
+	translations: { 'sa-Latn': 'Āraṇyakāni' },
 	items: [
 		{
 			label: 'तैत्तिरीय आरण्यकम् (कृष्णयजुर्वेद)',
-			translations: { en: 'Taittirīya āraṇyakam (Kṛṣṇayajurveda)' },
+			translations: { 'sa-Latn': 'Taittirīya āraṇyakam (Kṛṣṇayajurveda)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/taittiriya-aranyaka/',
 				},
 				...taittiriyaAranyakaPrashnaItems(),
@@ -248,12 +217,12 @@ export const aranyakamSidebarGroup = {
 		},
 		{
 			label: 'ऐतरेय आरण्यकम् (ऋग्वेद)',
-			translations: { en: 'Aitareya āraṇyakam (Ṛgveda)' },
+			translations: { 'sa-Latn': 'Aitareya āraṇyakam (Ṛgveda)' },
 			collapsed: true,
 			items: [
 				{
 					label: 'सूची',
-					translations: { en: 'Sūcī' },
+					translations: { 'sa-Latn': 'Sūcī' },
 					link: '/aitareya-aranyaka/',
 				},
 				...aitareyaAranyakaItems(),
@@ -264,74 +233,74 @@ export const aranyakamSidebarGroup = {
 
 export const upanishadsSidebarGroup = {
 	label: 'उपनिषदः',
-	translations: { en: 'Upaniṣadaḥ' },
+	translations: { 'sa-Latn': 'Upaniṣadaḥ' },
 	items: [
 		{
 			label: 'शुक्लयजुर्वेद',
-			translations: { en: 'Śuklayajurveda' },
+			translations: { 'sa-Latn': 'Śuklayajurveda' },
 			collapsed: true,
 			items: [
 				{
 					label: 'ईशावास्योपनिषद्',
-					translations: { en: 'Īśāvāsyopaniṣad' },
+					translations: { 'sa-Latn': 'Īśāvāsyopaniṣad' },
 					link: '/isha-upanishad/',
 				},
 			],
 		},
 		{
 			label: 'सामवेद',
-			translations: { en: 'Sāmaveda' },
+			translations: { 'sa-Latn': 'Sāmaveda' },
 			collapsed: true,
 			items: [
 				{
 					label: 'केनोपनिषत्',
-					translations: { en: 'Kenopaniṣad' },
+					translations: { 'sa-Latn': 'Kenopaniṣad' },
 					link: '/kena-upanishad/',
 				},
 			],
 		},
 		{
 			label: 'अथर्ववेद',
-			translations: { en: 'Atharvaveda' },
+			translations: { 'sa-Latn': 'Atharvaveda' },
 			collapsed: true,
 			items: [
 				{
 					label: 'प्रश्नोपनिषत्',
-					translations: { en: 'Praśnopaniṣat' },
+					translations: { 'sa-Latn': 'Praśnopaniṣat' },
 					link: '/prashna-upanishad/',
 				},
 			],
 		},
 		{
 			label: 'कृष्णयजुर्वेद',
-			translations: { en: 'Kṛṣṇayajurveda' },
+			translations: { 'sa-Latn': 'Kṛṣṇayajurveda' },
 			collapsed: true,
 			items: [
 				{
 					label: 'कठोपनिषत्',
-					translations: { en: 'Kaṭhopaniṣad' },
+					translations: { 'sa-Latn': 'Kaṭhopaniṣad' },
 					link: '/katha-upanishad/',
 				},
 				{
 					label: 'तैत्तिरीयोपनिषत्',
-					translations: { en: 'Taittirīyopaniṣat' },
+					translations: { 'sa-Latn': 'Taittirīyopaniṣat' },
 					link: '/taittiriya-upanishad/',
 				},
 				{
 					label: 'महानारायणोपनिषत्',
-					translations: { en: 'Mahānārāyaṇopaniṣat' },
+					translations: { 'sa-Latn': 'Mahānārāyaṇopaniṣat' },
 					link: '/mahanarayana-upanishad/',
 				},
 			],
 		},
 		{
 			label: 'ऋग्वेद',
-			translations: { en: 'Ṛgveda' },
+			translations: { 'sa-Latn': 'Ṛgveda' },
 			collapsed: true,
 			items: [
 				{
 					label: 'ऐतरेयोपनिषत्',
-					translations: { en: 'Aitareyopaniṣat' },
+					translations: { 'sa-Latn': 'Aitareyopaniṣat' },
 					link: '/aitareya-upanishad/',
 				},
 			],

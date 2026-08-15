@@ -1,11 +1,9 @@
 ---
 import SuktaPage from './SuktaPage.astro';
-import Verse from './Verse.astro';
 import CorpusJumpNav from './CorpusJumpNav.astro';
+import CorpusIndexTable from './CorpusIndexTable.astro';
 import SamhitaPageNav from './SamhitaPageNav.astro';
 import type { HomeLocale } from '../../data/home';
-import { splitMantraPadas } from '../../lib/rigveda-samhita';
-import { formatAnuvakaMarker } from '../../lib/yajurveda-samhita';
 import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
 import {
 	getMaitrayaniKandaJumpItems,
@@ -33,30 +31,27 @@ const jumpItems = getMaitrayaniKandaJumpItems(kanda, locale);
 const pageNav = getMaitrayaniKandaPageNav(kanda, locale);
 const jumpTitle = locale === 'iast' ? 'Jump to prapāṭhaka' : 'प्रपाठकम् अनुगच्छ';
 
-const sections = await Promise.all(
+const rows = await Promise.all(
 	chapters.map(async (entry) => {
 		const parsed = parseMaitrayaniPrapathaka(entry.text, {
 			kanda: entry.kanda,
 			prapathaka: entry.prapathaka,
 		});
 
-		let header = parsed.header;
-		if (locale === 'iast' && header) {
-			header = await transliterateDevanagari(header);
+		let detail = parsed.firstWord || parsed.header;
+		if (locale === 'iast' && detail) {
+			detail = await transliterateDevanagari(detail);
 		}
 
-		const verses = await Promise.all(
-			parsed.verses.map(async (verse) => ({
-				number: verse.number,
-				text: locale === 'iast' ? await transliterateDevanagari(verse.text) : verse.text,
-			}))
-		);
-
 		return {
-			kanda: entry.kanda,
-			prapathaka: entry.prapathaka,
-			header,
-			verses,
+			id: `prapathaka-${entry.prapathaka}`,
+			href: getMaitrayaniPrapathakaHref(kanda, entry.prapathaka, locale),
+			label:
+				locale === 'iast'
+					? `Prapāṭhaka ${entry.prapathaka}`
+					: `प्रपाठक ${entry.prapathaka}`,
+			detail,
+			count: parsed.verseCount,
 		};
 	})
 );
@@ -64,42 +59,12 @@ const sections = await Promise.all(
 
 <SuktaPage {locale} class="rigveda-samhita">
 	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} />
-	{
-		sections.map((section) => (
-			<section class="veda-sukta-block" id={`prapathaka-${section.prapathaka}`}>
-				<header class="veda-sukta-block__header">
-					<a
-						class="veda-sukta-block__label veda-sukta-block__label--link"
-						href={getMaitrayaniPrapathakaHref(kanda, section.prapathaka, locale)}
-					>
-						{locale === 'iast'
-							? `Prapāṭhaka ${section.prapathaka}`
-							: `प्रपाठक ${section.prapathaka}`}
-					</a>
-					{section.header && <p class="veda-sukta-block__title">{section.header}</p>}
-				</header>
-				<div class="veda-sukta-block__mantras">
-					{section.verses.map((verse) => (
-						<Verse
-							number={verse.number}
-							id={`prapathaka-${section.prapathaka}-anuvaka-${verse.number}`}
-							{locale}
-							numberPosition="end"
-							marker={formatAnuvakaMarker(
-								section.kanda,
-								section.prapathaka,
-								verse.number,
-								locale
-							)}
-						>
-							{splitMantraPadas(verse.text).map((pada) => (
-								<p>{pada}</p>
-							))}
-						</Verse>
-					))}
-				</div>
-			</section>
-		))
-	}
+	<CorpusIndexTable
+		{locale}
+		{rows}
+		labelHeader={locale === 'iast' ? 'Prapāṭhaka' : 'प्रपाठकः'}
+		detailHeader={locale === 'iast' ? 'Opening' : 'आदिः'}
+		countHeader={locale === 'iast' ? 'Anuvākas' : 'अनुवाकाः'}
+	/>
 	<SamhitaPageNav links={pageNav} {locale} />
 </SuktaPage>

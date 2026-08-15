@@ -1,14 +1,16 @@
 import { defineRouteMiddleware } from '@astrojs/starlight/route-data';
 import {
 	applySeoHead,
+	buildDocumentTitle,
 	buildSeoDescription,
 	isHomeSlug,
 	isIastSlug,
 	isNoIndexSlug,
+	SIDDHANTA_PRELOAD,
 	slugPath,
 	type SeoHeadItem,
 } from './lib/seo';
-import { getSeriesName } from './lib/structured-data';
+import { getSeriesName, getSeriesTitle } from './lib/structured-data';
 
 export const onRequest = defineRouteMiddleware((context) => {
 	const route = context.locals.starlightRoute;
@@ -23,17 +25,25 @@ export const onRequest = defineRouteMiddleware((context) => {
 	const canonicalPath = path === '' ? '/' : `/${path}/`;
 	const canonicalUrl = new URL(canonicalPath.replace(/\/+/g, '/'), site).href;
 	const isIast = isIastSlug(slug, route.locale);
+	const seriesName = getSeriesName(slug);
+	const documentTitle = buildDocumentTitle(route.entry.data.title, slug, getSeriesTitle(slug, isIast));
 	const description = buildSeoDescription(
-		route.entry.data.title,
+		documentTitle,
 		route.entry.data.description,
 		slug,
 		isIast,
-		getSeriesName(slug)
+		seriesName
 	);
 
+	const head = route.head as unknown as SeoHeadItem[];
+	if (!isIast && !head.some((item) => item.tag === 'link' && item.attrs?.href === SIDDHANTA_PRELOAD.attrs?.href)) {
+		head.push(SIDDHANTA_PRELOAD);
+	}
+
 	applySeoHead({
-		head: route.head as unknown as SeoHeadItem[],
+		head,
 		title: route.entry.data.title,
+		documentTitle,
 		description,
 		slug,
 		locale: route.locale,

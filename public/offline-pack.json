@@ -48,7 +48,7 @@
   "assets": [
     "/manifest.webmanifest",
     "/images/favicon.svg",
-    "/fonts/siddhanta.ttf",
-    "/fonts/samarkan.ttf"
+    "/fonts/siddhanta.woff2",
+    "/fonts/samarkan.woff2"
   ]
 }

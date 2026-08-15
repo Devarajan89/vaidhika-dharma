@@ -67,22 +67,23 @@ const SEGMENT_LABELS: Record<string, string> = {
 	offline: 'Offline',
 };
 
-const CREATIVE_WORK_SERIES: Array<{ test: RegExp; name: string }> = [
-	{ test: /(?:^|\/)rigveda-samhita(?:\/|$)/, name: 'Ṛgveda Śākala Saṃhitā' },
-	{ test: /(?:^|\/)kanva-samhita(?:\/|$)/, name: 'Vājasaneyi Saṃhitā (Kāṇva)' },
-	{ test: /(?:^|\/)madhyandina-samhita(?:\/|$)/, name: 'Vājasaneyi Saṃhitā (Mādhyandina)' },
-	{ test: /(?:^|\/)taittiriya-samhita(?:\/|$)/, name: 'Taittirīya Saṃhitā' },
-	{ test: /(?:^|\/)maitrayani-samhita(?:\/|$)/, name: 'Maitrāyaṇī Saṃhitā' },
-	{ test: /(?:^|\/)aitareya-brahmana(?:\/|$)/, name: 'Aitareya Brāhmaṇa' },
-	{ test: /(?:^|\/)taittiriya-brahmana(?:\/|$)/, name: 'Taittirīya Brāhmaṇa' },
-	{ test: /(?:^|\/)aitareya-aranyaka(?:\/|$)/, name: 'Aitareya Āraṇyaka' },
-	{ test: /(?:^|\/)taittiriya-aranyaka(?:\/|$)/, name: 'Taittirīya Āraṇyaka' },
-	{ test: /(?:^|\/)[\w-]+-upanishad(?:\/|$)/, name: 'Upaniṣad' },
+const CREATIVE_WORK_SERIES: Array<{ test: RegExp; name: string; nameDeva: string }> = [
+	{ test: /(?:^|\/)rigveda-samhita(?:\/|$)/, name: 'Śākala Saṃhitā (Ṛgveda)', nameDeva: 'शाकल संहिता (ऋग्वेद)' },
+	{ test: /(?:^|\/)kanva-samhita(?:\/|$)/, name: 'Vājasaneyi Saṃhitā (Kāṇva)', nameDeva: 'वाजसनेयी संहिता (काण्व)' },
+	{ test: /(?:^|\/)madhyandina-samhita(?:\/|$)/, name: 'Vājasaneyi Saṃhitā (Mādhyandina)', nameDeva: 'वाजसनेयी संहिता (माध्यन्दिन)' },
+	{ test: /(?:^|\/)taittiriya-samhita(?:\/|$)/, name: 'Taittirīya Saṃhitā', nameDeva: 'तैत्तिरीय संहिता' },
+	{ test: /(?:^|\/)maitrayani-samhita(?:\/|$)/, name: 'Maitrāyaṇī Saṃhitā', nameDeva: 'मैत्रायणी संहिता' },
+	{ test: /(?:^|\/)aitareya-brahmana(?:\/|$)/, name: 'Aitareya Brāhmaṇa', nameDeva: 'ऐतरेय ब्राह्मणम्' },
+	{ test: /(?:^|\/)taittiriya-brahmana(?:\/|$)/, name: 'Taittirīya Brāhmaṇa', nameDeva: 'तैत्तिरीय ब्राह्मणम्' },
+	{ test: /(?:^|\/)aitareya-aranyaka(?:\/|$)/, name: 'Aitareya Āraṇyaka', nameDeva: 'ऐतरेय आरण्यकम्' },
+	{ test: /(?:^|\/)taittiriya-aranyaka(?:\/|$)/, name: 'Taittirīya Āraṇyaka', nameDeva: 'तैत्तिरीय आरण्यकम्' },
+	{ test: /(?:^|\/)[\w-]+-upanishad(?:\/|$)/, name: 'Upaniṣad', nameDeva: 'उपनिषद्' },
 	{
 		test: /(?:suktam|prashnah|chamakam|laghunyasa|atharvasirsham|prarthana|pancha-rudram)(?:\/|$)/,
 		name: 'Veda Mantra Saṅgraha',
+		nameDeva: 'वेद मन्त्र सङ्ग्रहः',
 	},
-	{ test: /sandhyavandanam|brahmayagyam|samidadhanam/, name: 'Nityakarma' },
+	{ test: /sandhyavandanam|brahmayagyam|samidadhanam/, name: 'Nityakarma', nameDeva: 'नित्यकर्म' },
 ];
 
 const SITE_DESCRIPTION =
@@ -120,6 +121,13 @@ export function humanizeSegment(segment: string): string {
 export function getSeriesName(slug: string): string | null {
 	const path = slugPath(slug);
 	return CREATIVE_WORK_SERIES.find((entry) => entry.test.test(path))?.name ?? null;
+}
+
+export function getSeriesTitle(slug: string, isIast: boolean): string | null {
+	const path = slugPath(slug);
+	const series = CREATIVE_WORK_SERIES.find((entry) => entry.test.test(path));
+	if (!series) return null;
+	return isIast ? series.name : series.nameDeva;
 }
 
 export function getBreadcrumbItems(

@@ -1,14 +1,4 @@
 import type { HomeLocale } from './home';
-import { AITAREYA_PANCHIKAS } from '../../scripts/lib/aitareya-brahmana-structure.mjs';
-import { TAITTIRIYA_BRAHMANA_ASHTAKAS, getPrapathakaDisplayLabel } from '../../scripts/lib/taittiriya-brahmana-structure.mjs';
-import {
-	TAITTIRIYA_ARANYAKA_PRASHNAS,
-	getPrashnaDisplayLabel,
-} from '../../scripts/lib/taittiriya-aranyaka-structure.mjs';
-import {
-	AITAREYA_ARANYAKAS,
-	AITAREYA_ARANYAKA_ADHYAYAS,
-} from '../../scripts/lib/aitareya-aranyaka-structure.mjs';
 
 export interface CategoryBadge {
 	text: string;
@@ -22,221 +12,6 @@ export interface CategoryNode {
 	children?: CategoryNode[];
 	defaultOpen?: boolean;
 }
-
-const RIGVEDA_MANDALA_LABELS = {
-	root: [
-		'प्रथम मण्डल',
-		'द्वितीय मण्डल',
-		'तृतीय मण्डल',
-		'चतुर्थ मण्डल',
-		'पञ्चम मण्डल',
-		'षष्ठ मण्डल',
-		'सप्तम मण्डल',
-		'अष्टम मण्डल',
-		'नवम मण्डल',
-		'दशम मण्डल',
-	],
-	iast: [
-		'Prathama Maṇḍala',
-		'Dvitīya Maṇḍala',
-		'Tṛtīya Maṇḍala',
-		'Caturtha Maṇḍala',
-		'Pañcama Maṇḍala',
-		'Ṣaṣṭha Maṇḍala',
-		'Saptama Maṇḍala',
-		'Aṣṭama Maṇḍala',
-		'Navama Maṇḍala',
-		'Daśama Maṇḍala',
-	],
-} as const;
-
-function rigvedaSamhitaMandalas(locale: keyof typeof RIGVEDA_MANDALA_LABELS): CategoryNode[] {
-	const prefix = locale === 'iast' ? '/iast/rigveda-samhita' : '/rigveda-samhita';
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...RIGVEDA_MANDALA_LABELS[locale].map((label, index) => ({
-			label,
-			href: `${prefix}/mandala-${index + 1}/`,
-		})),
-	];
-}
-
-const rigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('root');
-
-const SAMHITA_ADHYAYA_COUNT = 40;
-
-function formatAdhyayaSlug(chapter: number): string {
-	return `chapter-${String(chapter).padStart(2, '0')}`;
-}
-
-function samhitaAdhyayas(samhita: 'kanva' | 'madhyandina', locale: 'root' | 'iast'): CategoryNode[] {
-	const prefix = locale === 'iast' ? `/iast/${samhita}-samhita` : `/${samhita}-samhita`;
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...Array.from({ length: SAMHITA_ADHYAYA_COUNT }, (_, index) => {
-			const adhyaya = index + 1;
-			return {
-				label: locale === 'iast' ? `Adhyāya ${adhyaya}` : `अध्याय ${adhyaya}`,
-				href: `${prefix}/${formatAdhyayaSlug(adhyaya)}/`,
-			};
-		}),
-	];
-}
-
-const madhyandinaSamhitaChapters = samhitaAdhyayas('madhyandina', 'root');
-const iastMadhyandinaSamhitaChapters = samhitaAdhyayas('madhyandina', 'iast');
-const kanvaSamhitaChapters = samhitaAdhyayas('kanva', 'root');
-const iastKanvaSamhitaChapters = samhitaAdhyayas('kanva', 'iast');
-
-const TAITTIRIYA_KANDA_LABELS = {
-	root: [
-		'प्रथम काण्ड',
-		'द्वितीय काण्ड',
-		'तृतीय काण्ड',
-		'चतुर्थ काण्ड',
-		'पञ्चम काण्ड',
-		'षष्ठ काण्ड',
-		'सप्तम काण्ड',
-	],
-	iast: [
-		'Prathama kāṇḍa',
-		'Dvitīya kāṇḍa',
-		'Tṛtīya kāṇḍa',
-		'Caturtha kāṇḍa',
-		'Pañcama kāṇḍa',
-		'Ṣaṣṭha kāṇḍa',
-		'Saptama kāṇḍa',
-	],
-} as const;
-
-function taittiriyaSamhitaChapters(locale: keyof typeof TAITTIRIYA_KANDA_LABELS): CategoryNode[] {
-	const prefix = locale === 'iast' ? '/iast/taittiriya-samhita' : '/taittiriya-samhita';
-
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...TAITTIRIYA_KANDA_LABELS[locale].map((label, index) => ({
-			label,
-			href: `${prefix}/kanda-${index + 1}/`,
-		})),
-	];
-}
-
-const taittiriyaSamhitaPrapathakas = taittiriyaSamhitaChapters('root');
-const iastTaittiriyaSamhitaPrapathakas = taittiriyaSamhitaChapters('iast');
-
-const MAITRAYANI_KANDA_LABELS = {
-	root: ['प्रथम काण्ड', 'द्वितीय काण्ड', 'तृतीय काण्ड', 'चतुर्थ काण्ड (खिल)'],
-	iast: [
-		'Prathama kāṇḍa',
-		'Dvitīya kāṇḍa',
-		'Tṛtīya kāṇḍa',
-		'Caturtha kāṇḍa (Khila)',
-	],
-} as const;
-
-function maitrayaniSamhitaChapters(locale: keyof typeof MAITRAYANI_KANDA_LABELS): CategoryNode[] {
-	const prefix = locale === 'iast' ? '/iast/maitrayani-samhita' : '/maitrayani-samhita';
-
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...MAITRAYANI_KANDA_LABELS[locale].map((label, index) => ({
-			label,
-			href: `${prefix}/kanda-${index + 1}/`,
-		})),
-	];
-}
-
-const maitrayaniSamhitaPrapathakas = maitrayaniSamhitaChapters('root');
-const iastMaitrayaniSamhitaPrapathakas = maitrayaniSamhitaChapters('iast');
-
-function aitareyaBrahmanaPanchikas(locale: 'root' | 'iast'): CategoryNode[] {
-	const prefix = locale === 'iast' ? '/iast/aitareya-brahmana' : '/aitareya-brahmana';
-
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...AITAREYA_PANCHIKAS.map((panchikaInfo) => ({
-			label: locale === 'iast' ? panchikaInfo.iastLabel : panchikaInfo.rootLabel,
-			href: `${prefix}/panchika-${panchikaInfo.panchika}/`,
-			children: Array.from({ length: panchikaInfo.adhyayaCount }, (_, index) => {
-				const adhyaya = index + 1;
-				return {
-					label: locale === 'iast' ? `Adhyāya ${adhyaya}` : `अध्याय ${adhyaya}`,
-					href: `${prefix}/panchika-${panchikaInfo.panchika}/adhyaya-${adhyaya}/`,
-				};
-			}),
-		})),
-	];
-}
-
-const aitareyaBrahmanaPanchikasRoot = aitareyaBrahmanaPanchikas('root');
-const aitareyaBrahmanaPanchikasIast = aitareyaBrahmanaPanchikas('iast');
-
-function taittiriyaBrahmanaAshtakas(locale: 'root' | 'iast'): CategoryNode[] {
-	const prefix = locale === 'iast' ? '/iast/taittiriya-brahmana' : '/taittiriya-brahmana';
-
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...TAITTIRIYA_BRAHMANA_ASHTAKAS.map((ashtakaInfo) => ({
-			label: locale === 'iast' ? ashtakaInfo.iastLabel : ashtakaInfo.rootLabel,
-			href: `${prefix}/ashtaka-${ashtakaInfo.ashtaka}/`,
-			children: Array.from({ length: ashtakaInfo.prapathakaCount }, (_, index) => {
-				const prapathaka = index + 1;
-				return {
-					label: getPrapathakaDisplayLabel(ashtakaInfo.ashtaka, prapathaka, locale),
-					href: `${prefix}/ashtaka-${ashtakaInfo.ashtaka}/prapathaka-${prapathaka}/`,
-				};
-			}),
-		})),
-	];
-}
-
-const taittiriyaBrahmanaAshtakasRoot = taittiriyaBrahmanaAshtakas('root');
-const taittiriyaBrahmanaAshtakasIast = taittiriyaBrahmanaAshtakas('iast');
-
-function taittiriyaAranyakaPrashnas(locale: 'root' | 'iast'): CategoryNode[] {
-	const prefix = locale === 'iast' ? '/iast/taittiriya-aranyaka' : '/taittiriya-aranyaka';
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...TAITTIRIYA_ARANYAKA_PRASHNAS.map((info) => ({
-			label: getPrashnaDisplayLabel(info.prashna, locale),
-			href: `${prefix}/prashna-${info.prashna}/`,
-		})),
-	];
-}
-
-const taittiriyaAranyakaPrashnasRoot = taittiriyaAranyakaPrashnas('root');
-const taittiriyaAranyakaPrashnasIast = taittiriyaAranyakaPrashnas('iast');
-
-function aitareyaAranyakaSections(locale: 'root' | 'iast'): CategoryNode[] {
-	const prefix = locale === 'iast' ? '/iast/aitareya-aranyaka' : '/aitareya-aranyaka';
-	return [
-		{ label: locale === 'iast' ? 'Saṃpūrṇa sūcī' : 'संपूर्ण सूची', href: `${prefix}/` },
-		...AITAREYA_ARANYAKAS.map((aranyakaInfo) => ({
-			label: locale === 'iast' ? aranyakaInfo.iastLabel : aranyakaInfo.rootLabel,
-			defaultOpen: false,
-			children: [
-				{
-					label: locale === 'iast' ? 'Overview' : 'सूची',
-					href: `${prefix}/aranyaka-${aranyakaInfo.aranyaka}/`,
-				},
-				...AITAREYA_ARANYAKA_ADHYAYAS.filter(
-					(entry) => entry.aranyaka === aranyakaInfo.aranyaka
-				).map((entry) => ({
-					label:
-						locale === 'iast'
-							? entry.iastLabel.split(', ').slice(1).join(', ') || entry.iastLabel
-							: entry.rootLabel.split(', ').slice(1).join(', ') || entry.rootLabel,
-					href: `${prefix}/aranyaka-${entry.aranyaka}/adhyaya-${entry.adhyaya}/`,
-				})),
-			],
-		})),
-	];
-}
-
-const aitareyaAranyakaSectionsRoot = aitareyaAranyakaSections('root');
-const aitareyaAranyakaSectionsIast = aitareyaAranyakaSections('iast');
-
-const iastRigvedaShakalaSamhitaMandalas = rigvedaSamhitaMandalas('iast');
 
 const rigvedaSuktaSangraha: CategoryNode[] = [
 	{ label: 'ब्रह्मणस्पति सूक्तम्', href: '/brahmanaspati-suktam/' },
@@ -416,61 +191,25 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			label: 'संहिताः',
 			defaultOpen: false,
 			children: [
-				{
-					label: 'शाकल संहिता (ऋग्वेद)',
-					defaultOpen: false,
-					children: rigvedaShakalaSamhitaMandalas,
-				},
-				{
-					label: 'वाजसनेयी संहिता (शुक्ल यजुर्वेद — काण्व)',
-					defaultOpen: false,
-					children: kanvaSamhitaChapters,
-				},
-				{
-					label: 'वाजसनेयी संहिता (शुक्ल यजुर्वेद — माध्यन्दिन)',
-					defaultOpen: false,
-					children: madhyandinaSamhitaChapters,
-				},
-				{
-					label: 'तैत्तिरीय संहिता (कृष्णयजुर्वेद)',
-					defaultOpen: false,
-					children: taittiriyaSamhitaPrapathakas,
-				},
-				{
-					label: 'मैत्रायणी संहिता (कृष्णयजुर्वेद)',
-					defaultOpen: false,
-					children: maitrayaniSamhitaPrapathakas,
-				},
+				{ label: 'शाकल संहिता (ऋग्वेद)', href: '/rigveda-samhita/' },
+				{ label: 'वाजसनेयी संहिता (शुक्ल यजुर्वेद — काण्व)', href: '/kanva-samhita/' },
+				{ label: 'वाजसनेयी संहिता (शुक्ल यजुर्वेद — माध्यन्दिन)', href: '/madhyandina-samhita/' },
+				{ label: 'तैत्तिरीय संहिता (कृष्णयजुर्वेद)', href: '/taittiriya-samhita/' },
+				{ label: 'मैत्रायणी संहिता (कृष्णयजुर्वेद)', href: '/maitrayani-samhita/' },
 			],
 		},
 		{
 			label: 'ब्राह्मणाः',
 			children: [
-				{
-					label: 'ऐतरेय ब्राह्मनम् (ऋग्वेद)',
-					defaultOpen: false,
-					children: aitareyaBrahmanaPanchikasRoot,
-				},
-				{
-					label: 'तैत्तिरीय ब्राह्मणम् (कृष्णयजुर्वेद)',
-					defaultOpen: false,
-					children: taittiriyaBrahmanaAshtakasRoot,
-				},
+				{ label: 'ऐतरेय ब्राह्मनम् (ऋग्वेद)', href: '/aitareya-brahmana/' },
+				{ label: 'तैत्तिरीय ब्राह्मणम् (कृष्णयजुर्वेद)', href: '/taittiriya-brahmana/' },
 			],
 		},
 		{
 			label: 'आरण्यकानि',
 			children: [
-				{
-					label: 'तैत्तिरीय आरण्यकम् (कृष्णयजुर्वेद)',
-					defaultOpen: false,
-					children: taittiriyaAranyakaPrashnasRoot,
-				},
-				{
-					label: 'ऐतरेय आरण्यकम् (ऋग्वेद)',
-					defaultOpen: false,
-					children: aitareyaAranyakaSectionsRoot,
-				},
+				{ label: 'तैत्तिरीय आरण्यकम् (कृष्णयजुर्वेद)', href: '/taittiriya-aranyaka/' },
+				{ label: 'ऐतरेय आरण्यकम् (ऋग्वेद)', href: '/aitareya-aranyaka/' },
 			],
 		},
 		{
@@ -566,61 +305,28 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			label: 'Saṃhitāḥ',
 			defaultOpen: false,
 			children: [
-				{
-					label: 'Śākala saṃhitā (Ṛgveda)',
-					defaultOpen: false,
-					children: iastRigvedaShakalaSamhitaMandalas,
-				},
-				{
-					label: 'Vājasaneyi saṃhitā (Śuklayajurveda — Kāṇva)',
-					defaultOpen: false,
-					children: iastKanvaSamhitaChapters,
-				},
+				{ label: 'Śākala saṃhitā (Ṛgveda)', href: '/iast/rigveda-samhita/' },
+				{ label: 'Vājasaneyi saṃhitā (Śuklayajurveda — Kāṇva)', href: '/iast/kanva-samhita/' },
 				{
 					label: 'Vājasaneyi saṃhitā (Śuklayajurveda — Mādhyandina)',
-					defaultOpen: false,
-					children: iastMadhyandinaSamhitaChapters,
+					href: '/iast/madhyandina-samhita/',
 				},
-				{
-					label: 'Taittirīya saṃhitā (Kṛṣṇayajurveda)',
-					defaultOpen: false,
-					children: iastTaittiriyaSamhitaPrapathakas,
-				},
-				{
-					label: 'Maitrāyaṇī saṃhitā (Kṛṣṇayajurveda)',
-					defaultOpen: false,
-					children: iastMaitrayaniSamhitaPrapathakas,
-				},
+				{ label: 'Taittirīya saṃhitā (Kṛṣṇayajurveda)', href: '/iast/taittiriya-samhita/' },
+				{ label: 'Maitrāyaṇī saṃhitā (Kṛṣṇayajurveda)', href: '/iast/maitrayani-samhita/' },
 			],
 		},
 		{
 			label: 'Brāhmaṇāḥ',
 			children: [
-				{
-					label: 'Aitareya brāhmaṇam (Ṛgveda)',
-					defaultOpen: false,
-					children: aitareyaBrahmanaPanchikasIast,
-				},
-				{
-					label: 'Taittirīya brāhmaṇam (Kṛṣṇayajurveda)',
-					defaultOpen: false,
-					children: taittiriyaBrahmanaAshtakasIast,
-				},
+				{ label: 'Aitareya brāhmaṇam (Ṛgveda)', href: '/iast/aitareya-brahmana/' },
+				{ label: 'Taittirīya brāhmaṇam (Kṛṣṇayajurveda)', href: '/iast/taittiriya-brahmana/' },
 			],
 		},
 		{
 			label: 'Āraṇyakāni',
 			children: [
-				{
-					label: 'Taittirīya āraṇyakam (Kṛṣṇayajurveda)',
-					defaultOpen: false,
-					children: taittiriyaAranyakaPrashnasIast,
-				},
-				{
-					label: 'Aitareya āraṇyakam (Ṛgveda)',
-					defaultOpen: false,
-					children: aitareyaAranyakaSectionsIast,
-				},
+				{ label: 'Taittirīya āraṇyakam (Kṛṣṇayajurveda)', href: '/iast/taittiriya-aranyaka/' },
+				{ label: 'Aitareya āraṇyakam (Ṛgveda)', href: '/iast/aitareya-aranyaka/' },
 			],
 		},
 		{
