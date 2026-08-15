@@ -1,3 +1,11 @@
+import {
+	isCollectionSlug,
+	isHomeSlug,
+	isIastSlug,
+	localeHomePath,
+	slugPath,
+} from './seo';
+
 export interface StructuredDataInput {
 	title: string;
 	description: string;
@@ -6,11 +14,13 @@ export interface StructuredDataInput {
 	siteName?: string;
 	inLanguage: string;
 	slug: string;
+	dateModified?: string;
 }
 
-interface BreadcrumbItem {
+export interface BreadcrumbNavItem {
 	name: string;
-	item: string;
+	href: string;
+	current?: boolean;
 }
 
 const SEGMENT_LABELS: Record<string, string> = {
@@ -47,6 +57,10 @@ const SEGMENT_LABELS: Record<string, string> = {
 	'purusha-suktam-rig': 'Puruṣa Sūktam (Ṛgveda)',
 	'sri-suktam': 'Śrī Sūktam',
 	'narayana-suktam': 'Nārāyaṇa Sūktam',
+	'durga-suktam': 'Durgā Sūktam',
+	'medha-suktam': 'Medhā Sūktam',
+	'vishnu-suktam': 'Viṣṇu Sūktam',
+	'ganapathy-atharvasirsham': 'Gaṇapati Atharvaśīrṣam',
 	'pancha-rudram': 'Pañca Rudram',
 	'brahmanaspati-suktam': 'Brahmaṇaspati Sūktam',
 	offline: 'Offline',
@@ -63,39 +77,38 @@ const CREATIVE_WORK_SERIES: Array<{ test: RegExp; name: string }> = [
 	{ test: /(?:^|\/)aitareya-aranyaka(?:\/|$)/, name: 'Aitareya Āraṇyaka' },
 	{ test: /(?:^|\/)taittiriya-aranyaka(?:\/|$)/, name: 'Taittirīya Āraṇyaka' },
 	{ test: /(?:^|\/)[\w-]+-upanishad(?:\/|$)/, name: 'Upaniṣad' },
-	{ test: /(?:^|\/)(?:sri-rudra|chamakam|purusha-suktam|narayana-suktam|sri-suktam|pancha-rudram|brahmanaspati)/, name: 'Veda Mantra Saṅgraha' },
+	{
+		test: /(?:suktam|prashnah|chamakam|laghunyasa|atharvasirsham|prarthana|pancha-rudram)(?:\/|$)/,
+		name: 'Veda Mantra Saṅgraha',
+	},
 	{ test: /sandhyavandanam|brahmayagyam|samidadhanam/, name: 'Nityakarma' },
 ];
 
-function humanizeSegment(segment: string): string {
+const SITE_DESCRIPTION =
+	'Vedic mantras, Rigveda and Yajurveda saṃhitās, nityakarma, and sūkta compilations with svara marks.';
+
+export function humanizeSegment(segment: string): string {
 	if (SEGMENT_LABELS[segment]) return SEGMENT_LABELS[segment];
 
-	const mandala = segment.match(/^mandala-(\d+)$/);
-	if (mandala) return `Maṇḍala ${mandala[1]}`;
+	const patterns: Array<[RegExp, string]> = [
+		[/^mandala-(\d+)$/, 'Maṇḍala'],
+		[/^kanda-(\d+)$/, 'Kāṇḍa'],
+		[/^prapathaka-(\d+)$/, 'Prapāṭhaka'],
+		[/^sukta-(\d+)$/, 'Sūkta'],
+		[/^panchika-(\d+)$/, 'Pañcikā'],
+		[/^adhyaya-(\d+)$/, 'Adhyāya'],
+		[/^prashna-(\d+)$/, 'Praśna'],
+		[/^ashtaka-(\d+)$/, 'Aṣṭaka'],
+		[/^aranyaka-(\d+)$/, 'Āraṇyaka'],
+	];
 
-	const kanda = segment.match(/^kanda-(\d+)$/);
-	if (kanda) return `Kāṇḍa ${kanda[1]}`;
+	for (const [pattern, label] of patterns) {
+		const match = segment.match(pattern);
+		if (match) return `${label} ${Number(match[1])}`;
+	}
 
-	const prapathaka = segment.match(/^prapathaka-(\d+)$/);
-	if (prapathaka) return `Prapāṭhaka ${prapathaka[1]}`;
-
-	const chapter = segment.match(/^chapter-(\d+)$/);
+	const chapter = segment.match(/^chapter-(\d+)(?:-index)?$/);
 	if (chapter) return `Adhyāya ${Number(chapter[1])}`;
-
-	const sukta = segment.match(/^sukta-(\d+)$/);
-	if (sukta) return `Sūkta ${Number(sukta[1])}`;
-
-	const panchika = segment.match(/^panchika-(\d+)$/);
-	if (panchika) return `Pañcikā ${panchika[1]}`;
-
-	const adhyaya = segment.match(/^adhyaya-(\d+)$/);
-	if (adhyaya) return `Adhyāya ${adhyaya[1]}`;
-
-	const prashna = segment.match(/^prashna-(\d+)$/);
-	if (prashna) return `Praśna ${prashna[1]}`;
-
-	const ashtaka = segment.match(/^ashtaka-(\d+)$/);
-	if (ashtaka) return `Aṣṭaka ${ashtaka[1]}`;
 
 	return segment
 		.split('-')
@@ -103,10 +116,42 @@ function humanizeSegment(segment: string): string {
 		.join(' ');
 }
 
-function slugPath(slug: string): string {
-	if (!slug || slug === 'index') return '';
-	if (slug === 'iast/index') return 'iast';
-	return slug.replace(/^\/+|\/+$/g, '');
+export function getSeriesName(slug: string): string | null {
+	const path = slugPath(slug);
+	return CREATIVE_WORK_SERIES.find((entry) => entry.test.test(path))?.name ?? null;
+}
+
+export function getBreadcrumbItems(
+	slug: string,
+	pageTitle: string,
+	siteUrl: string,
+	canonicalUrl: string,
+	siteName = 'Vaidhika Dharma'
+): BreadcrumbNavItem[] {
+	const path = slugPath(slug);
+	const iast = isIastSlug(slug);
+	const items: BreadcrumbNavItem[] = [
+		{ name: siteName, href: new URL(localeHomePath(iast), siteUrl).href },
+	];
+
+	if (!path || path === 'iast') return items;
+
+	const segments = path.split('/').filter(Boolean);
+	const start = segments[0] === 'iast' ? 1 : 0;
+	let accumulated = start === 1 ? 'iast/' : '';
+	const visible = segments.slice(start);
+
+	visible.forEach((segment, index) => {
+		accumulated += `${segment}/`;
+		const isLast = index === visible.length - 1;
+		items.push({
+			name: isLast ? pageTitle : humanizeSegment(segment),
+			href: isLast ? canonicalUrl : new URL(accumulated, siteUrl).href,
+			current: isLast,
+		});
+	});
+
+	return items;
 }
 
 export function buildBreadcrumbList(
@@ -115,22 +160,9 @@ export function buildBreadcrumbList(
 	siteUrl: string,
 	canonicalUrl: string,
 	siteName = 'Vaidhika Dharma'
-): Record<string, unknown> {
-	const path = slugPath(slug);
-	const items: BreadcrumbItem[] = [{ name: siteName, item: new URL('/', siteUrl).href }];
-
-	if (path) {
-		const segments = path.split('/').filter(Boolean);
-		let accumulated = '';
-		segments.forEach((segment, index) => {
-			accumulated += `${segment}/`;
-			const isLast = index === segments.length - 1;
-			items.push({
-				name: isLast ? pageTitle : humanizeSegment(segment),
-				item: isLast ? canonicalUrl : new URL(accumulated, siteUrl).href,
-			});
-		});
-	}
+): Record<string, unknown> | null {
+	const items = getBreadcrumbItems(slug, pageTitle, siteUrl, canonicalUrl, siteName);
+	if (items.length < 2) return null;
 
 	return {
 		'@type': 'BreadcrumbList',
@@ -138,7 +170,7 @@ export function buildBreadcrumbList(
 			'@type': 'ListItem',
 			position: index + 1,
 			name: entry.name,
-			item: entry.item,
+			item: entry.href,
 		})),
 	};
 }
@@ -153,44 +185,77 @@ export function buildCreativeWork(
 	const path = slugPath(slug);
 	if (!path || path === 'iast') return null;
 
-	const series = CREATIVE_WORK_SERIES.find((entry) => entry.test.test(path));
-	if (!series) return null;
+	const seriesName = getSeriesName(slug);
+	if (!seriesName) return null;
 
 	return {
-		'@type': 'CreativeWork',
+		'@type': isCollectionSlug(slug) ? 'CollectionPage' : 'CreativeWork',
 		name: title,
 		description,
 		url: canonicalUrl,
 		inLanguage,
 		isPartOf: {
 			'@type': 'CreativeWorkSeries',
-			name: series.name,
+			name: seriesName,
 		},
 		publisher: {
-			'@type': 'Organization',
-			name: 'Vaidhika Dharma',
-			url: 'https://vaidhikadharma.org/',
+			'@id': 'https://vaidhikadharma.org/#organization',
 		},
+	};
+}
+
+function buildOrganization(): Record<string, unknown> {
+	return {
+		'@type': 'Organization',
+		'@id': 'https://vaidhikadharma.org/#organization',
+		name: 'Vaidhika Dharma',
+		url: 'https://vaidhikadharma.org/',
+		logo: {
+			'@type': 'ImageObject',
+			url: 'https://vaidhikadharma.org/images/favicon.svg',
+		},
+		email: 'contact@vaidhikadharma.org',
+	};
+}
+
+function buildWebSite(siteUrl: string, siteName: string): Record<string, unknown> {
+	return {
+		'@type': 'WebSite',
+		'@id': `${siteUrl}#website`,
+		name: siteName,
+		url: siteUrl,
+		description: SITE_DESCRIPTION,
+		inLanguage: ['sa-Deva', 'sa-Latn'],
+		publisher: { '@id': 'https://vaidhikadharma.org/#organization' },
 	};
 }
 
 export function buildPageJsonLd(input: StructuredDataInput): Record<string, unknown> {
 	const siteName = input.siteName ?? 'Vaidhika Dharma';
+	const organization = buildOrganization();
+	const website = buildWebSite(input.siteUrl, siteName);
+	const pageType = isHomeSlug(input.slug)
+		? 'WebPage'
+		: isCollectionSlug(input.slug)
+			? 'CollectionPage'
+			: 'WebPage';
+
 	const webPage: Record<string, unknown> = {
-		'@type': 'WebPage',
+		'@type': pageType,
 		'@id': `${input.canonicalUrl}#webpage`,
 		name: input.title,
 		description: input.description,
 		url: input.canonicalUrl,
 		inLanguage: input.inLanguage,
-		isPartOf: {
-			'@type': 'WebSite',
-			name: siteName,
-			url: input.siteUrl,
-			description:
-				'Vedic mantras, Rigveda and Yajurveda saṃhitās, nityakarma, and sūkta compilations with svara marks.',
-		},
+		isPartOf: { '@id': `${input.siteUrl}#website` },
+		publisher: { '@id': 'https://vaidhikadharma.org/#organization' },
 	};
+
+	if (input.dateModified) {
+		webPage.dateModified = input.dateModified;
+	}
+
+	const graph: Record<string, unknown>[] = [organization, website, webPage];
 
 	const breadcrumb = buildBreadcrumbList(
 		input.slug,
@@ -199,10 +264,12 @@ export function buildPageJsonLd(input: StructuredDataInput): Record<string, unkn
 		input.canonicalUrl,
 		siteName
 	);
-	webPage.breadcrumb = { '@id': `${input.canonicalUrl}#breadcrumb` };
-	breadcrumb['@id'] = `${input.canonicalUrl}#breadcrumb`;
+	if (breadcrumb) {
+		breadcrumb['@id'] = `${input.canonicalUrl}#breadcrumb`;
+		webPage.breadcrumb = { '@id': `${input.canonicalUrl}#breadcrumb` };
+		graph.push(breadcrumb);
+	}
 
-	const graph: Record<string, unknown>[] = [webPage, breadcrumb];
 	const creativeWork = buildCreativeWork(
 		input.slug,
 		input.title,
@@ -210,7 +277,7 @@ export function buildPageJsonLd(input: StructuredDataInput): Record<string, unkn
 		input.canonicalUrl,
 		input.inLanguage
 	);
-	if (creativeWork) {
+	if (creativeWork && pageType !== 'CollectionPage') {
 		creativeWork['@id'] = `${input.canonicalUrl}#creativework`;
 		webPage.mainEntity = { '@id': `${input.canonicalUrl}#creativework` };
 		graph.push(creativeWork);

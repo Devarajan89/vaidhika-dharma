@@ -5,10 +5,12 @@ import Pagination from 'virtual:starlight/components/Pagination';
 import config from 'virtual:starlight/user-config';
 import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
 import DocRelatedLinks from './DocRelatedLinks.astro';
+import SiteHubLinks from './SiteHubLinks.astro';
 ---
 
 <footer class="sl-flex">
 	<DocRelatedLinks />
+	<SiteHubLinks />
 	<div class="meta sl-flex">
 		<EditLink />
 		<LastUpdated />

@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
+import { serializeSitemapItem, sitemapFilter, sitemapI18n } from './src/lib/sitemap.mjs';
 import tailwindcss from '@tailwindcss/vite';
 import {
 	samhitasSidebarGroup,
@@ -240,7 +241,9 @@ export default defineConfig({
           ],
       }),
       sitemap({
-          filter: (page) => !page.includes('/404') && !page.includes('/offline'),
+          filter: sitemapFilter,
+          i18n: sitemapI18n,
+          serialize: serializeSitemapItem,
       }),
   ],
   vite: {

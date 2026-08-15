@@ -1,18 +1,29 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
-import { buildPageJsonLd } from '../lib/structured-data';
+import { buildPageJsonLd, getSeriesName } from '../lib/structured-data';
+import {
+	buildSeoDescription,
+	isIastSlug,
+	ogImageUrl,
+	slugPath,
+} from '../lib/seo';
 
-const { entry } = Astro.locals.starlightRoute;
+const { entry, lastUpdated } = Astro.locals.starlightRoute;
 const site = Astro.site ?? new URL('https://vaidhikadharma.org');
-const slug = entry.data.slug ?? entry.id;
-const path = slug === 'index' ? '' : slug === 'iast/index' ? 'iast' : slug;
-const canonicalUrl = new URL(`${path}/`.replace(/\/+/g, '/'), site).href;
+const slug = String(entry.data.slug ?? entry.id);
+const path = slugPath(slug);
+const canonicalUrl = new URL(path === '' ? '/' : `/${path}/`.replace(/\/+/g, '/'), site).href;
 const title = entry.data.title;
-const description =
-	entry.data.description ??
-	'Vaidhika Dharma — Vedic mantras, saṃhitās, nityakarma, and sūkta saṅgraha with svara.';
-const locale = Astro.currentLocale === 'iast' ? 'en' : 'sa';
-const inLanguage = locale === 'sa' ? 'sa-Deva' : 'en';
+const isIast = isIastSlug(slug, Astro.locals.starlightRoute.locale);
+const description = buildSeoDescription(
+	title,
+	entry.data.description,
+	slug,
+	isIast,
+	getSeriesName(slug)
+);
+const inLanguage = isIast ? 'sa-Latn' : 'sa-Deva';
+const image = ogImageUrl(site.href);
 
 const jsonLd = buildPageJsonLd({
 	title,
@@ -20,28 +31,19 @@ const jsonLd = buildPageJsonLd({
 	canonicalUrl,
 	siteUrl: site.href,
 	inLanguage,
-	slug: String(slug),
+	slug,
+	dateModified: lastUpdated?.toISOString(),
 });
 ---
 
 <Default {...Astro.props} />
-<meta name="description" content={description} />
-<link rel="canonical" href={canonicalUrl} />
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta name="theme-color" content="#cb0003" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="Vaidhika Dharma" />
 <link rel="apple-touch-icon" href="/images/favicon.svg" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Vaidhika Dharma" />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:url" content={canonicalUrl} />
-<meta property="og:locale" content={locale === 'sa' ? 'sa_IN' : 'en_US'} />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
+<link rel="image_src" href={image} />
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLFCLRJNG3" is:inline></script>
 <script is:inline>

@@ -12,6 +12,24 @@ export interface SearchSynonym {
 /** Colloquial / transliteration aliases → canonical pages and Pagefind terms. */
 export const SEARCH_SYNONYMS: SearchSynonym[] = [
 	{
+		aliases: ['rudra suktam', 'rudrasuktam', 'रुद्र सूक्त'],
+		query: 'rudra suktam',
+		label: { root: 'रुद्र सूक्तम्', iast: 'Rudra Sūktam' },
+		href: { root: '/rudra-suktam/', iast: '/iast/rudra-suktam/' },
+	},
+	{
+		aliases: ['laghunyasa', 'laghu nyasa', 'rudra nyasa', 'लघुन्यास'],
+		query: 'laghunyasa',
+		label: { root: 'श्री रुद्र लघुन्यासः', iast: 'Śrī Rudra Laghunyāsaḥ' },
+		href: { root: '/sri-rudra-laghunyasa/', iast: '/iast/sri-rudra-laghunyasa/' },
+	},
+	{
+		aliases: ['atharvasirsha', 'ganapati atharvasirsha', 'ganesha atharvasirsha', 'अथर्वशीर्ष'],
+		query: 'atharvasirsha',
+		label: { root: 'गणपति अथर्वशीर्षम्', iast: 'Gaṇapati Atharvaśīrṣam' },
+		href: { root: '/ganapathy-atharvasirsham/', iast: '/iast/ganapathy-atharvasirsham/' },
+	},
+	{
 		aliases: ['rudram', 'rudra', 'rudraprashna', 'rudra prashna', 'namakam', 'श्रीरुद्र', 'रुद्रम्'],
 		query: 'rudra',
 		label: { root: 'श्री रुद्र प्रश्नः', iast: 'Śrī Rudra Praśnaḥ' },
@@ -89,6 +107,120 @@ export const SEARCH_SYNONYMS: SearchSynonym[] = [
 		label: { root: 'पञ्च रुद्रम्', iast: 'Pañca Rudram' },
 		href: { root: '/pancha-rudram/', iast: '/iast/pancha-rudram/' },
 	},
+	{
+		aliases: ['durga', 'durgasuktam', 'durga suktam', 'दुर्गासूक्त'],
+		query: 'durga',
+		label: { root: 'दुर्गा सूक्तम्', iast: 'Durgā Sūktam' },
+		href: { root: '/durga-suktam/', iast: '/iast/durga-suktam/' },
+	},
+	{
+		aliases: ['vishnu', 'vishnusuktam', 'विष्णुसूक्त'],
+		query: 'vishnu',
+		label: { root: 'विष्णु सूक्तम्', iast: 'Viṣṇu Sūktam' },
+		href: { root: '/vishnu-suktam/', iast: '/iast/vishnu-suktam/' },
+	},
+	{
+		aliases: ['medha', 'medhasuktam', 'मेधासूक्त'],
+		query: 'medha',
+		label: { root: 'मेधा सूक्तम्', iast: 'Medhā Sūktam' },
+		href: { root: '/medha-suktam/', iast: '/iast/medha-suktam/' },
+	},
+	{
+		aliases: ['navagraha', 'navagrahasuktam', 'नवग्रह'],
+		query: 'navagraha',
+		label: { root: 'नवग्रह सूक्तम्', iast: 'Navagraha Sūktam' },
+		href: { root: '/navagraha-suktam/', iast: '/iast/navagraha-suktam/' },
+	},
+	{
+		aliases: ['pavamana', 'pavamanasuktam', 'पवमान'],
+		query: 'pavamana',
+		label: { root: 'पवमान सूक्तम्', iast: 'Pavamāna Sūktam' },
+		href: { root: '/pavamana-suktam/', iast: '/iast/pavamana-suktam/' },
+	},
+	{
+		aliases: ['nasadiya', 'nasadiya suktam', 'creation hymn', 'नासदीय'],
+		query: 'nasadiya',
+		label: { root: 'नासदीय सूक्तम्', iast: 'Nāsadīya Sūktam' },
+		href: { root: '/nasadiya-suktam/', iast: '/iast/nasadiya-suktam/' },
+	},
+	{
+		aliases: ['ganesha', 'ganapati', 'ganapathy', 'गणपति', 'गणेश'],
+		query: 'ganapati',
+		label: { root: 'गणपति सूक्तम्', iast: 'Gaṇapati Sūktam' },
+		href: { root: '/ganapathy-suktam/', iast: '/iast/ganapathy-suktam/' },
+	},
+	{
+		aliases: ['yajurveda', 'yajur', 'taittiriya', 'कृष्णयजुर्वेद', 'यजुर्वेद'],
+		query: 'taittiriya',
+		label: { root: 'तैत्तिरीय संहिता', iast: 'Taittirīya Saṃhitā' },
+		href: { root: '/taittiriya-samhita/', iast: '/iast/taittiriya-samhita/' },
+	},
+	{
+		aliases: ['kanva', 'shukla yajur', 'vajasaneyi', 'काण्व'],
+		query: 'kanva',
+		label: { root: 'काण्व संहिता', iast: 'Kāṇva Saṃhitā' },
+		href: { root: '/kanva-samhita/', iast: '/iast/kanva-samhita/' },
+	},
+	{
+		aliases: ['madhyandina', 'madhyandina samhita', 'माध्यन्दिन'],
+		query: 'madhyandina',
+		label: { root: 'माध्यन्दिन संहिता', iast: 'Mādhyandina Saṃhitā' },
+		href: { root: '/madhyandina-samhita/', iast: '/iast/madhyandina-samhita/' },
+	},
+	{
+		aliases: ['kena', 'kenopanishad', 'केनोपनिषद्'],
+		query: 'kena',
+		label: { root: 'केनोपनिषत्', iast: 'Kenopaniṣad' },
+		href: { root: '/kena-upanishad/', iast: '/iast/kena-upanishad/' },
+	},
+	{
+		aliases: ['katha', 'kathopanishad', 'कठोपनिषद्'],
+		query: 'katha',
+		label: { root: 'कठोपनिषत्', iast: 'Kaṭhopaniṣad' },
+		href: { root: '/katha-upanishad/', iast: '/iast/katha-upanishad/' },
+	},
+	{
+		aliases: ['taittiriya upanishad', 'taittiriyopanishad', 'तैत्तिरीयोपनिषद्'],
+		query: 'taittiriya upanishad',
+		label: { root: 'तैत्तिरीयोपनिषत्', iast: 'Taittirīyopaniṣad' },
+		href: { root: '/taittiriya-upanishad/', iast: '/iast/taittiriya-upanishad/' },
+	},
+	{
+		aliases: ['mahanarayana', 'narayana upanishad', 'महानारायण'],
+		query: 'mahanarayana',
+		label: { root: 'महानारायणोपनिषत्', iast: 'Mahānārāyaṇa Upaniṣad' },
+		href: { root: '/mahanarayana-upanishad/', iast: '/iast/mahanarayana-upanishad/' },
+	},
+	{
+		aliases: ['aitareya brahmana', 'aitareya brahmanam', 'ऐतरेय ब्राह्मण'],
+		query: 'aitareya brahmana',
+		label: { root: 'ऐतरेय ब्राह्मणम्', iast: 'Aitareya Brāhmaṇa' },
+		href: { root: '/aitareya-brahmana/', iast: '/iast/aitareya-brahmana/' },
+	},
+	{
+		aliases: ['aitareya', 'aitareya upanishad', 'ऐतरेय'],
+		query: 'aitareya',
+		label: { root: 'ऐतरेयोपनिषद्', iast: 'Aitareyopaniṣad' },
+		href: { root: '/aitareya-upanishad/', iast: '/iast/aitareya-upanishad/' },
+	},
+	{
+		aliases: ['aswalayana', 'asvalayana', 'ashvalayana', 'आश्वलायन'],
+		query: 'aswalayana',
+		label: { root: 'आश्वलायन प्रातः सन्ध्या', iast: 'Aśvalāyana prātaḥ sandhyā' },
+		href: {
+			root: '/aswalayana-sandhyavandanam/prata/',
+			iast: '/iast/aswalayana-sandhyavandanam/prata/',
+		},
+	},
+	{
+		aliases: ['apastamba', 'apastamba sandhya', 'आपस्तम्ब'],
+		query: 'apastamba',
+		label: { root: 'आपस्तम्ब प्रातः सन्ध्या', iast: 'Āpastamba prātaḥ sandhyā' },
+		href: {
+			root: '/apastamba-sandhyavandanam/prata/',
+			iast: '/iast/apastamba-sandhyavandanam/prata/',
+		},
+	},
 ];
 
 /** Featured chips shown when the search dialog opens (empty query). */
@@ -119,6 +251,11 @@ export const SEARCH_FEATURED_HINTS: Array<{
 		alias: 'chamakam',
 		label: { root: 'चमकम्', iast: 'chamakam' },
 		href: { root: '/chamakam/', iast: '/iast/chamakam/' },
+	},
+	{
+		alias: 'isha',
+		label: { root: 'ईशावास्योपनिषद्', iast: 'īśāvāsya' },
+		href: { root: '/isha-upanishad/', iast: '/iast/isha-upanishad/' },
 	},
 ];
 

@@ -1,0 +1,47 @@
+# Vaidhika Dharma
+
+> Vedic mantras with svara, saṃhitās, nityakarma, and upaniṣads. Devanagari is the default; `/iast/` is Latin transliteration of the same pages.
+
+Site: https://vaidhikadharma.org/
+IAST: https://vaidhikadharma.org/iast/
+Sitemap: https://vaidhikadharma.org/sitemap-index.xml
+
+## Nityakarma
+
+- Aśvalāyana prātaḥ sandhyā: https://vaidhikadharma.org/aswalayana-sandhyavandanam/prata/
+- Āpastamba prātaḥ sandhyā: https://vaidhikadharma.org/apastamba-sandhyavandanam/prata/
+- Aśvalāyana brahmayajñam: https://vaidhikadharma.org/aswalayana-brahmayagyam/
+- Aśvalāyana samidādhānam: https://vaidhikadharma.org/aswalayana-samidadhanam/
+
+## Veda mantras
+
+- Śrī Rudra Praśnaḥ (Namakam): https://vaidhikadharma.org/sri-rudra-prashnah/
+- Chamakam: https://vaidhikadharma.org/chamakam/
+- Puruṣa Sūktam: https://vaidhikadharma.org/purusha-suktam/
+- Śrī Sūktam: https://vaidhikadharma.org/sri-suktam/
+- Nārāyaṇa Sūktam: https://vaidhikadharma.org/narayana-suktam/
+- Durgā Sūktam: https://vaidhikadharma.org/durga-suktam/
+
+## Saṃhitās
+
+- Ṛgveda Śākala: https://vaidhikadharma.org/rigveda-samhita/
+- Vājasaneyi Kāṇva: https://vaidhikadharma.org/kanva-samhita/
+- Vājasaneyi Mādhyandina: https://vaidhikadharma.org/madhyandina-samhita/
+- Taittirīya: https://vaidhikadharma.org/taittiriya-samhita/
+- Maitrāyaṇī: https://vaidhikadharma.org/maitrayani-samhita/
+
+## Brāhmaṇa and āraṇyaka
+
+- Aitareya Brāhmaṇa: https://vaidhikadharma.org/aitareya-brahmana/
+- Taittirīya Brāhmaṇa: https://vaidhikadharma.org/taittiriya-brahmana/
+- Aitareya Āraṇyaka: https://vaidhikadharma.org/aitareya-aranyaka/
+- Taittirīya Āraṇyaka: https://vaidhikadharma.org/taittiriya-aranyaka/
+
+## Upaniṣads
+
+- Īśāvāsyopaniṣad: https://vaidhikadharma.org/isha-upanishad/
+- Kenopaniṣad: https://vaidhikadharma.org/kena-upanishad/
+- Kaṭhopaniṣad: https://vaidhikadharma.org/katha-upanishad/
+- Taittirīyopaniṣad: https://vaidhikadharma.org/taittiriya-upanishad/
+- Mahānārāyaṇa Upaniṣad: https://vaidhikadharma.org/mahanarayana-upanishad/
+- Aitareyopaniṣad: https://vaidhikadharma.org/aitareya-upanishad/

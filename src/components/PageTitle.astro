@@ -1,4 +1,5 @@
 ---
+import Breadcrumbs from './Breadcrumbs.astro';
 import DocPageNav from './DocPageNav.astro';
 
 const PAGE_TITLE_ID = '_top';
@@ -6,6 +7,7 @@ const { entry } = Astro.locals.starlightRoute;
 const isSplash = entry.data.template === 'splash';
 ---
 
+<Breadcrumbs />
 <h1 id={PAGE_TITLE_ID}>{entry.data.title}</h1>
 {!isSplash && <DocPageNav />}
 

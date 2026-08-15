@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /offline/
+Disallow: /iast/offline/
+
+Host: https://vaidhikadharma.org
 
 Sitemap: https://vaidhikadharma.org/sitemap-index.xml

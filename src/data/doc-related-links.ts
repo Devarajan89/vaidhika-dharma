@@ -70,9 +70,29 @@ const SUkta_COLLECTIONS: Record<
 	yajusha: {
 		root: 'याजुष मन्त्र रत्नाकरम्',
 		iast: 'Yājuṣa Mantra Ratnākaram',
-		peers: ['purusha-suktam', 'narayana-suktam', 'sri-suktam', 'vishnu-suktam', 'rudra-suktam'],
+		peers: [
+			'sri-rudra-prashnah',
+			'chamakam',
+			'sri-rudra-laghunyasa',
+			'purusha-suktam',
+			'narayana-suktam',
+			'sri-suktam',
+			'durga-suktam',
+			'medha-suktam',
+			'vishnu-suktam',
+			'ganapathy-atharvasirsham',
+		],
 	},
 };
+
+const UPANISHAD_SLUGS = [
+	'isha-upanishad',
+	'kena-upanishad',
+	'katha-upanishad',
+	'taittiriya-upanishad',
+	'mahanarayana-upanishad',
+	'aitareya-upanishad',
+];
 
 function getSuktaCollectionKey(entryId: string): 'rigveda' | 'yajusha' | undefined {
 	if (/ऋग्वेद|ṛgveda|rigveda/i.test(entryId)) return 'rigveda';
@@ -163,6 +183,15 @@ export function getDocRelatedLinks(
 		return {
 			title: isIast ? 'Related mantras' : 'सम्बद्ध मन्त्राः',
 			links: defaults.slice(0, 4).map((s) => link(isIast, s, s, s, slugToTitle)),
+		};
+	}
+
+	if (UPANISHAD_SLUGS.includes(suktaSlug)) {
+		return {
+			title: isIast ? 'Other upaniṣads' : 'अन्याः उपनिषदः',
+			links: UPANISHAD_SLUGS.filter((peer) => peer !== suktaSlug).map((peer) =>
+				link(isIast, peer, peer, peer, slugToTitle)
+			),
 		};
 	}
 

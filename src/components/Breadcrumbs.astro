@@ -1,0 +1,100 @@
+---
+import { getBreadcrumbItems } from '../lib/structured-data';
+import { isHomeSlug } from '../lib/seo';
+
+const { entry } = Astro.locals.starlightRoute;
+const site = Astro.site ?? new URL('https://vaidhikadharma.org');
+const slug = String(entry.data.slug ?? entry.id);
+const path = slug === 'index' ? '' : slug === 'iast/index' ? 'iast' : slug;
+const canonicalUrl = new URL(path === '' ? '/' : `/${path}/`.replace(/\/+/g, '/'), site).href;
+
+if (isHomeSlug(slug)) {
+	return null;
+}
+
+const items = getBreadcrumbItems(slug, entry.data.title, site.href, canonicalUrl);
+if (items.length < 2) {
+	return null;
+}
+
+const navLabel = Astro.currentLocale === 'iast' ? 'Breadcrumb' : 'पथः';
+---
+
+<nav class="breadcrumbs" aria-label={navLabel}>
+	<ol>
+		{
+			items.map((item) => (
+				<li>
+					{item.current ? (
+						<span aria-current="page">{item.name}</span>
+					) : (
+						<a href={item.href}>{item.name}</a>
+					)}
+				</li>
+			))
+		}
+	</ol>
+</nav>
+
+<style>
+	.breadcrumbs {
+		margin: 0 0 0.35rem;
+		font-size: 0.8125rem;
+		line-height: 1.45;
+		color: var(--sl-color-gray-3);
+	}
+
+	.breadcrumbs ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.2rem 0;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.breadcrumbs li {
+		display: inline-flex;
+		align-items: center;
+		max-width: 100%;
+	}
+
+	.breadcrumbs li:not(:last-child)::after {
+		content: '/';
+		margin: 0 0.45rem;
+		color: var(--sl-color-gray-4);
+		pointer-events: none;
+	}
+
+	.breadcrumbs a,
+	.breadcrumbs span {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 18rem;
+	}
+
+	.breadcrumbs a {
+		color: var(--sl-color-gray-2);
+		text-decoration: none;
+	}
+
+	.breadcrumbs a:hover {
+		color: var(--sl-color-white);
+		text-decoration: underline;
+	}
+
+	.breadcrumbs [aria-current='page'] {
+		color: var(--sl-color-gray-3);
+	}
+
+	:global([data-theme='light']) .breadcrumbs a {
+		color: var(--color-gray-700);
+	}
+
+	@media print {
+		.breadcrumbs {
+			display: none;
+		}
+	}
+</style>
