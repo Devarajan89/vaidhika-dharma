@@ -4,7 +4,27 @@ dist/
 .astro/
 src/data/doc-cache.json
 public/search-index.json
-scripts/
+scripts/*
+scripts/.*
+!scripts/lib/
+scripts/lib/*
+!scripts/generate-doc-cache.mjs
+!scripts/generate-offline-pack.mjs
+!scripts/.transliterate-line-worker.mjs
+!scripts/lib/taittiriya-samhita-structure.mjs
+!scripts/lib/maitrayani-samhita-structure.mjs
+!scripts/lib/aitareya-brahmana-structure.mjs
+!scripts/lib/aitareya-aranyaka-structure.mjs
+!scripts/lib/taittiriya-brahmana-structure.mjs
+!scripts/lib/taittiriya-aranyaka-structure.mjs
+!scripts/lib/parse-taittiriya-prapathaka.mjs
+!scripts/lib/parse-maitrayani-prapathaka.mjs
+!scripts/lib/parse-yajurveda-chapter.mjs
+!scripts/lib/yajurveda-adhyaya-labels.mjs
+!scripts/lib/madhyandina-samhita-counts.mjs
+!scripts/lib/kanva-samhita-counts.mjs
+!scripts/lib/join-sanskrit-prose.mjs
+!scripts/lib/devanagari-join-sandhi.mjs
 
 # dependencies
 node_modules/
