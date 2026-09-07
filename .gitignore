@@ -3,6 +3,8 @@ dist/
 # generated types
 .astro/
 src/data/doc-cache.json
+public/search-index.json
+scripts/
 
 # dependencies
 node_modules/
@@ -24,3 +26,6 @@ pnpm-debug.log*
 # deploy keys (never commit)
 deploy_key
 deploy_key.pub
+
+.venv-pdf/
+.tmp-pdf/
