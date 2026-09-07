@@ -1,4 +1,5 @@
 import type { HomeLocale } from './home';
+import { sangrahaSearchSynonyms } from './sangraha';
 
 export interface SearchSynonym {
 	/** Latin / colloquial queries that should resolve to this entry. */
@@ -10,7 +11,7 @@ export interface SearchSynonym {
 }
 
 /** Colloquial / transliteration aliases → canonical pages and Pagefind terms. */
-export const SEARCH_SYNONYMS: SearchSynonym[] = [
+const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 	{
 		aliases: ['rudra suktam', 'rudrasuktam', 'रुद्र सूक्त'],
 		query: 'rudra suktam',
@@ -236,6 +237,17 @@ export const SEARCH_SYNONYMS: SearchSynonym[] = [
 		},
 	},
 ];
+
+function mergeSearchSynonyms(manual: SearchSynonym[], generated: SearchSynonym[]): SearchSynonym[] {
+	const seen = new Set(manual.map((entry) => entry.href.root));
+	const extra = generated.filter((entry) => !seen.has(entry.href.root));
+	return [...manual, ...extra];
+}
+
+export const SEARCH_SYNONYMS: SearchSynonym[] = mergeSearchSynonyms(
+	MANUAL_SEARCH_SYNONYMS,
+	sangrahaSearchSynonyms()
+);
 
 /** Featured chips shown when the search dialog opens (empty query). */
 export const SEARCH_FEATURED_HINTS: Array<{

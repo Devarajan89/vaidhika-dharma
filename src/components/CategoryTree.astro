@@ -117,6 +117,18 @@ const tree = categoryTrees[locale] ?? categoryTrees.root;
 		background: var(--tree-accent-hover);
 	}
 
+	:global(.tree-count) {
+		margin-inline-start: auto;
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		color: var(--sl-color-gray-3);
+		background: var(--sl-color-gray-7);
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		padding: 0.1rem 0.5rem;
+	}
+
 	:global(.tree-depth-1.tree-node--branch > .tree-branch > .tree-summary),
 	:global(.tree-depth-2.tree-node--branch > .tree-branch > .tree-summary) {
 		padding-top: 0.5rem;

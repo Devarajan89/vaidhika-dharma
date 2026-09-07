@@ -1,5 +1,5 @@
 ---
-import Icon from '../../node_modules/@astrojs/starlight/user-components/Icon.astro';
+import { Icon } from '@astrojs/starlight/components';
 import project from 'virtual:starlight/project-context';
 import { SEARCH_FEATURED_HINTS, SEARCH_SYNONYMS } from '../data/search-synonyms';
 import { resolveHomeLocale } from '../data/home';
@@ -35,9 +35,11 @@ if (project.trailingSlash === 'never') dataAttributes['data-strip-trailing-slash
 
 const shortcutsHeading = locale === 'root' ? 'शीघ्र मार्गाः' : 'Quick links';
 const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try searching';
+const resultsPage = locale === 'iast' ? '/iast/search/' : '/search/';
+const resultsPageLabel = locale === 'root' ? 'पूर्ण पृष्ठसूची' : 'Crawlable search page';
 ---
 
-<site-search class={Astro.props.class} {...dataAttributes}>
+<site-search class={Astro.props.class} data-locale={locale} {...dataAttributes}>
 	<button
 		data-open-modal
 		disabled
@@ -61,8 +63,35 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 			</button>
 			{
 				import.meta.env.DEV ? (
-					<div style="margin: auto; text-align: center; white-space: pre-line;" dir="ltr">
-						<p>{Astro.locals.t('search.devWarning')}</p>
+					<div class="search-container" data-dev-search>
+						<label class="sr-only" for="dev-site-search">
+							{Astro.locals.t('search.label')}
+						</label>
+						<input id="dev-site-search" type="search" placeholder={pagefindTranslations.placeholder} />
+						<div id="starlight__search" data-dev-hits />
+						<div class="search-shortcuts" data-search-shortcuts>
+							<p class="search-shortcuts__heading">{tryHeading}</p>
+							<ul class="search-shortcuts__chips">
+								{featuredHints.map((hint) => (
+									<li>
+										<button type="button" data-search-query={hint.alias}>
+											{hint.label}
+										</button>
+									</li>
+								))}
+							</ul>
+							<p class="search-shortcuts__heading">{shortcutsHeading}</p>
+							<ul class="search-shortcuts__links" data-synonym-links>
+								{featuredHints.map((hint) => (
+									<li>
+										<a href={hint.href}>{hint.label.split('→').pop()?.trim() ?? hint.label}</a>
+									</li>
+								))}
+							</ul>
+							<p class="search-shortcuts__index">
+								<a data-search-results-page href={resultsPage}>{resultsPageLabel}</a>
+							</p>
+						</div>
 					</div>
 				) : (
 					<div class="search-container">
@@ -86,6 +115,9 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 									</li>
 								))}
 							</ul>
+							<p class="search-shortcuts__index">
+								<a data-search-results-page href={resultsPage}>{resultsPageLabel}</a>
+							</p>
 						</div>
 					</div>
 				)
@@ -118,6 +150,8 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 <script>
 	import { pagefindUserConfig } from 'virtual:starlight/pagefind-config';
 	import { resolveSearchTerm } from '../data/search-synonyms';
+	import { groupSearchHits, searchSitePages } from '../lib/site-search';
+	import type { HomeLocale } from '../data/home';
 
 	type SynonymEntry = {
 		aliases: string[];
@@ -145,6 +179,8 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 			const dialogFrame = this.querySelector('.dialog-frame')!;
 			const shortcuts = this.querySelector<HTMLElement>('[data-search-shortcuts]');
 			const synonymLinks = this.querySelector<HTMLElement>('[data-synonym-links]');
+			const resultsPageLink = this.querySelector<HTMLAnchorElement>('[data-search-results-page]');
+			const resultsPageBase = resultsPageLink?.href ?? '';
 
 			let translations = {};
 			let synonymEntries: SynonymEntry[] = [];
@@ -193,7 +229,9 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 			};
 
 			const setSearchQuery = (query: string) => {
-				const input = this.querySelector<HTMLInputElement>('.pagefind-ui__search-input');
+				const input =
+					this.querySelector<HTMLInputElement>('.pagefind-ui__search-input') ??
+					this.querySelector<HTMLInputElement>('#dev-site-search');
 				if (!input) return;
 				input.value = query;
 				input.dispatchEvent(new Event('input', { bubbles: true }));
@@ -208,14 +246,58 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 					});
 				});
 
-				const input = this.querySelector<HTMLInputElement>('.pagefind-ui__search-input');
+				const input =
+					this.querySelector<HTMLInputElement>('.pagefind-ui__search-input') ??
+					this.querySelector<HTMLInputElement>('#dev-site-search');
 				input?.addEventListener('input', () => {
 					const value = input.value.trim();
 					if (shortcuts) shortcuts.hidden = value.length > 0 && matchSynonyms(value).length === 0;
 					if (shortcuts && value.length === 0) shortcuts.hidden = false;
 					renderSynonymLinks(value);
+					if (resultsPageLink) {
+						const url = new URL(resultsPageBase || resultsPageLink.href);
+						if (value) url.searchParams.set('q', value);
+						else url.searchParams.delete('q');
+						resultsPageLink.href = url.pathname + url.search;
+					}
 				});
 			};
+
+			if (import.meta.env.DEV) {
+				bindShortcutUi();
+				const hitsEl = this.querySelector('[data-dev-hits]');
+				const devInput = this.querySelector<HTMLInputElement>('#dev-site-search');
+				const searchLocale = (this.dataset.locale === 'iast' ? 'iast' : 'root') as HomeLocale;
+				let slugToTitle: Record<string, string> = {};
+				const indexReady = fetch('/search-index.json')
+					.then((response) => (response.ok ? response.json() : []))
+					.then((rows: Array<[string, string]>) => {
+						slugToTitle = Object.fromEntries(rows);
+					})
+					.catch(() => {});
+				const escapeHtml = (value: string) =>
+					value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+				const renderDevHits = async (query: string) => {
+					if (!hitsEl) return;
+					if (query.trim().length >= 2) await indexReady;
+					const hits = searchSitePages(query, searchLocale, slugToTitle);
+					const groups = groupSearchHits(hits, searchLocale);
+					hitsEl.innerHTML = groups
+						.map(
+							(group) =>
+								`<section class="dev-search-group"><h3>${escapeHtml(group.label)}</h3><ul>${group.hits
+									.map(
+										(hit) =>
+											`<li><a href="${escapeHtml(hit.href)}">${escapeHtml(hit.title)}</a></li>`
+									)
+									.join('')}</ul></section>`
+						)
+						.join('');
+				};
+				devInput?.addEventListener('input', () => {
+					void renderDevHits(devInput.value.trim());
+				});
+			}
 
 			let pagefindReady: Promise<void> | undefined;
 			const ensurePagefind = () => {
@@ -427,8 +509,13 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 			color: var(--sl-color-gray-3);
 		}
 
-		.search-shortcuts__heading:first-child {
-			margin-top: 0;
+		.search-shortcuts__index {
+			margin: 0.85rem 0 0;
+			font-size: 0.8125rem;
+		}
+
+		.search-shortcuts__index a {
+			color: var(--sl-color-accent);
 		}
 
 		.search-shortcuts__chips,
@@ -679,6 +766,37 @@ const tryHeading = locale === 'root' ? 'उदाहरणानि' : 'Try sear
 			background-color: var(--sl-color-black);
 			margin-top: 0;
 			padding: var(--sl-search-result-nested-pad-block) var(--sl-search-result-pad-inline-end);
+		}
+
+		#dev-site-search {
+			width: 100%;
+			padding: 0.65rem 0.75rem;
+			border: 1px solid var(--sl-color-gray-5);
+			border-radius: 0.375rem;
+			background: var(--sl-color-gray-7);
+			color: var(--sl-color-white);
+			font: inherit;
+		}
+
+		.dev-search-group h3 {
+			margin: 0.75rem 0 0.35rem;
+			font-size: 0.75rem;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: var(--sl-color-gray-3);
+		}
+
+		.dev-search-group ul {
+			margin: 0;
+			padding-left: 1.1rem;
+		}
+
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip: rect(0 0 0 0);
 		}
 	}
 </style>

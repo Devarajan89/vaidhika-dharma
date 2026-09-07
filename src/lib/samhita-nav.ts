@@ -30,11 +30,19 @@ export interface PageNavLink {
 	label: string;
 }
 
+export interface SequenceProgress {
+	current: number;
+	total: number;
+	context: string;
+}
+
 export interface SamhitaPageNavLinks {
 	prev?: PageNavLink;
 	next?: PageNavLink;
 	up?: PageNavLink;
 	index?: PageNavLink;
+	start?: PageNavLink;
+	progress?: SequenceProgress;
 }
 
 const MANDALA_COUNT = 10;
@@ -69,10 +77,22 @@ export function getRigvedaMandalaPageNav(mandala: number, locale: HomeLocale): S
 		href: `${prefix(locale)}/rigveda-samhita/`,
 		label: locale === 'iast' ? 'Saṃhitā index' : 'संहिता सूची',
 	};
+	const firstSukta = getMandalaSuktas(mandala)[0];
+	const start = firstSukta
+		? {
+				href: getRigvedaSuktaHref(mandala, firstSukta.sukta, locale),
+				label:
+					locale === 'iast'
+						? `Start from sūkta ${firstSukta.sukta}`
+						: `सूक्त ${firstSukta.sukta} तः आरभ्यताम्`,
+			}
+		: undefined;
+
 	if (mandala <= 1) {
 		return mandala < MANDALA_COUNT
 			? {
 					up,
+					start,
 					next: {
 						href: getRigvedaMandalaHref(mandala + 1, locale),
 						label:
@@ -81,11 +101,12 @@ export function getRigvedaMandalaPageNav(mandala: number, locale: HomeLocale): S
 								: `अग्रिम · मण्डल ${mandala + 1}`,
 					},
 				}
-			: { up };
+			: { up, start };
 	}
 	if (mandala >= MANDALA_COUNT) {
 		return {
 			up,
+			start,
 			prev: {
 				href: getRigvedaMandalaHref(mandala - 1, locale),
 				label:
@@ -97,6 +118,7 @@ export function getRigvedaMandalaPageNav(mandala: number, locale: HomeLocale): S
 	}
 	return {
 		up,
+		start,
 		prev: {
 			href: getRigvedaMandalaHref(mandala - 1, locale),
 			label:
@@ -146,14 +168,47 @@ export function getRigvedaSuktaPageNav(
 			href: getRigvedaSuktaHref(mandala, prevSukta, locale),
 			label: locale === 'iast' ? `Sūkta ${prevSukta}` : `सूक्त ${prevSukta}`,
 		};
+	} else if (mandala > 1) {
+		const previousMandala = getMandalaSuktas(mandala - 1);
+		const lastSukta = previousMandala[previousMandala.length - 1];
+		if (lastSukta) {
+			nav.prev = {
+				href: getRigvedaSuktaHref(mandala - 1, lastSukta.sukta, locale),
+				label:
+					locale === 'iast'
+						? `Maṇḍala ${mandala - 1} · Sūkta ${lastSukta.sukta}`
+						: `मण्डल ${mandala - 1} · सूक्त ${lastSukta.sukta}`,
+			};
+		}
 	}
+
 	if (index >= 0 && index < suktas.length - 1) {
 		const nextSukta = suktas[index + 1].sukta;
 		nav.next = {
 			href: getRigvedaSuktaHref(mandala, nextSukta, locale),
 			label: locale === 'iast' ? `Sūkta ${nextSukta}` : `सूक्त ${nextSukta}`,
 		};
+	} else if (index === suktas.length - 1 && mandala < MANDALA_COUNT) {
+		const following = getMandalaSuktas(mandala + 1)[0];
+		if (following) {
+			nav.next = {
+				href: getRigvedaSuktaHref(mandala + 1, following.sukta, locale),
+				label:
+					locale === 'iast'
+						? `Maṇḍala ${mandala + 1} · Sūkta ${following.sukta}`
+						: `मण्डल ${mandala + 1} · सूक्त ${following.sukta}`,
+			};
+		}
 	}
+
+	if (index >= 0) {
+		nav.progress = {
+			current: index + 1,
+			total: suktas.length,
+			context: locale === 'iast' ? `Maṇḍala ${mandala}` : `मण्डल ${mandala}`,
+		};
+	}
+
 	return nav;
 }
 
@@ -213,6 +268,11 @@ export function getYajurvedaAdhyayaPageNav(
 					: `अग्रिम · अध्याय ${chapter + 1}`,
 		};
 	}
+	nav.progress = {
+		current: chapter,
+		total: ADHYAYA_COUNT,
+		context: locale === 'iast' ? 'Adhyāya' : 'अध्यायः',
+	};
 	return nav;
 }
 
@@ -247,7 +307,13 @@ export function getTaittiriyaKandaPageNav(kanda: number, locale: HomeLocale): Sa
 		href: `${prefix(locale)}/taittiriya-samhita/`,
 		label: locale === 'iast' ? 'Saṃhitā index' : 'संहिता सूची',
 	};
-	const nav: SamhitaPageNavLinks = { up };
+	const nav: SamhitaPageNavLinks = {
+		up,
+		start: {
+			href: getTaittiriyaPrapathakaHref(kanda, 1, locale),
+			label: locale === 'iast' ? 'Start from prapāṭhaka 1' : 'प्रपाठक 1 तः आरभ्यताम्',
+		},
+	};
 	const kandaIndex = TAITTIRIYA_KANDAS.findIndex((entry) => entry.kanda === kanda);
 
 	if (kandaIndex > 0) {
@@ -303,13 +369,40 @@ export function getTaittiriyaPrapathakaPageNav(
 			href: getTaittiriyaPrapathakaHref(kanda, prapathaka - 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka - 1}` : `प्रपाठक ${prapathaka - 1}`,
 		};
+	} else if (kanda > 1) {
+		const previous = TAITTIRIYA_KANDAS.find((entry) => entry.kanda === kanda - 1);
+		if (previous) {
+			nav.prev = {
+				href: getTaittiriyaPrapathakaHref(kanda - 1, previous.prapathakaCount, locale),
+				label:
+					locale === 'iast'
+						? `Kāṇḍa ${kanda - 1} · Prapāṭhaka ${previous.prapathakaCount}`
+						: `काण्ड ${kanda - 1} · प्रपाठक ${previous.prapathakaCount}`,
+			};
+		}
 	}
 	if (kandaInfo && prapathaka < kandaInfo.prapathakaCount) {
 		nav.next = {
 			href: getTaittiriyaPrapathakaHref(kanda, prapathaka + 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka + 1}` : `प्रपाठक ${prapathaka + 1}`,
 		};
+	} else if (kandaInfo && prapathaka >= kandaInfo.prapathakaCount) {
+		const following = TAITTIRIYA_KANDAS.find((entry) => entry.kanda === kanda + 1);
+		if (following) {
+			nav.next = {
+				href: getTaittiriyaPrapathakaHref(kanda + 1, 1, locale),
+				label:
+					locale === 'iast'
+						? `Kāṇḍa ${kanda + 1} · Prapāṭhaka 1`
+						: `काण्ड ${kanda + 1} · प्रपाठक 1`,
+			};
+		}
 	}
+	nav.progress = {
+		current: prapathaka,
+		total: kandaInfo?.prapathakaCount ?? prapathaka,
+		context: up.label,
+	};
 	return nav;
 }
 
@@ -348,7 +441,13 @@ export function getMaitrayaniKandaPageNav(kanda: number, locale: HomeLocale): Sa
 		href: `${prefix(locale)}/maitrayani-samhita/`,
 		label: locale === 'iast' ? 'Saṃhitā index' : 'संहिता सूची',
 	};
-	const nav: SamhitaPageNavLinks = { up };
+	const nav: SamhitaPageNavLinks = {
+		up,
+		start: {
+			href: getMaitrayaniPrapathakaHref(kanda, 1, locale),
+			label: locale === 'iast' ? 'Start from prapāṭhaka 1' : 'प्रपाठक 1 तः आरभ्यताम्',
+		},
+	};
 	const kandaIndex = MAITRAYANI_KANDAS.findIndex((entry) => entry.kanda === kanda);
 
 	if (kandaIndex > 0) {
@@ -404,13 +503,40 @@ export function getMaitrayaniPrapathakaPageNav(
 			href: getMaitrayaniPrapathakaHref(kanda, prapathaka - 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka - 1}` : `प्रपाठक ${prapathaka - 1}`,
 		};
+	} else if (kanda > 1) {
+		const previous = MAITRAYANI_KANDAS.find((entry) => entry.kanda === kanda - 1);
+		if (previous) {
+			nav.prev = {
+				href: getMaitrayaniPrapathakaHref(kanda - 1, previous.prapathakaCount, locale),
+				label:
+					locale === 'iast'
+						? `Kāṇḍa ${kanda - 1} · Prapāṭhaka ${previous.prapathakaCount}`
+						: `काण्ड ${kanda - 1} · प्रपाठक ${previous.prapathakaCount}`,
+			};
+		}
 	}
 	if (kandaInfo && prapathaka < kandaInfo.prapathakaCount) {
 		nav.next = {
 			href: getMaitrayaniPrapathakaHref(kanda, prapathaka + 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka + 1}` : `प्रपाठक ${prapathaka + 1}`,
 		};
+	} else if (kandaInfo && prapathaka >= kandaInfo.prapathakaCount) {
+		const following = MAITRAYANI_KANDAS.find((entry) => entry.kanda === kanda + 1);
+		if (following) {
+			nav.next = {
+				href: getMaitrayaniPrapathakaHref(kanda + 1, 1, locale),
+				label:
+					locale === 'iast'
+						? `Kāṇḍa ${kanda + 1} · Prapāṭhaka 1`
+						: `काण्ड ${kanda + 1} · प्रपाठक 1`,
+			};
+		}
 	}
+	nav.progress = {
+		current: prapathaka,
+		total: kandaInfo?.prapathakaCount ?? prapathaka,
+		context: up.label,
+	};
 	return nav;
 }
 
@@ -445,7 +571,13 @@ export function getAitareyaPanchikaPageNav(panchika: number, locale: HomeLocale)
 		href: getAitareyaBrahmanaHref(locale),
 		label: locale === 'iast' ? 'Brāhmaṇa index' : 'ब्राह्मण सूची',
 	};
-	const nav: SamhitaPageNavLinks = { up };
+	const nav: SamhitaPageNavLinks = {
+		up,
+		start: {
+			href: getAitareyaAdhyayaHref(panchika, 1, locale),
+			label: locale === 'iast' ? 'Start from adhyāya 1' : 'अध्याय 1 तः आरभ्यताम्',
+		},
+	};
 	const panchikaIndex = AITAREYA_PANCHIKAS.findIndex((entry) => entry.panchika === panchika);
 
 	if (panchikaIndex > 0) {
@@ -495,19 +627,47 @@ export function getAitareyaAdhyayaPageNav(
 				: `पञ्चिका ${panchika}`,
 	};
 	const nav: SamhitaPageNavLinks = { up };
+	const adhyayaCount = panchikaInfo?.adhyayaCount ?? 5;
 
 	if (adhyaya > 1) {
 		nav.prev = {
 			href: getAitareyaAdhyayaHref(panchika, adhyaya - 1, locale),
 			label: locale === 'iast' ? `Adhyāya ${adhyaya - 1}` : `अध्याय ${adhyaya - 1}`,
 		};
+	} else if (panchika > 1) {
+		const previous = AITAREYA_PANCHIKAS.find((entry) => entry.panchika === panchika - 1);
+		if (previous) {
+			nav.prev = {
+				href: getAitareyaAdhyayaHref(previous.panchika, previous.adhyayaCount, locale),
+				label:
+					locale === 'iast'
+						? `Pañcikā ${previous.panchika} · Adhyāya ${previous.adhyayaCount}`
+						: `पञ्चिका ${previous.panchika} · अध्याय ${previous.adhyayaCount}`,
+			};
+		}
 	}
-	if (adhyaya < 5) {
+	if (adhyaya < adhyayaCount) {
 		nav.next = {
 			href: getAitareyaAdhyayaHref(panchika, adhyaya + 1, locale),
 			label: locale === 'iast' ? `Adhyāya ${adhyaya + 1}` : `अध्याय ${adhyaya + 1}`,
 		};
+	} else {
+		const following = AITAREYA_PANCHIKAS.find((entry) => entry.panchika === panchika + 1);
+		if (following) {
+			nav.next = {
+				href: getAitareyaAdhyayaHref(following.panchika, 1, locale),
+				label:
+					locale === 'iast'
+						? `Pañcikā ${following.panchika} · Adhyāya 1`
+						: `पञ्चिका ${following.panchika} · अध्याय 1`,
+			};
+		}
 	}
+	nav.progress = {
+		current: adhyaya,
+		total: adhyayaCount,
+		context: up.label,
+	};
 	return nav;
 }
 
@@ -550,7 +710,13 @@ export function getTaittiriyaBrahmanaAshtakaPageNav(
 		href: getTaittiriyaBrahmanaHref(locale),
 		label: locale === 'iast' ? 'Brāhmaṇa index' : 'ब्राह्मण सूची',
 	};
-	const nav: SamhitaPageNavLinks = { up };
+	const nav: SamhitaPageNavLinks = {
+		up,
+		start: {
+			href: getTaittiriyaBrahmanaPrapathakaHref(ashtaka, 1, locale),
+			label: locale === 'iast' ? 'Start from prapāṭhaka 1' : 'प्रपाठक 1 तः आरभ्यताम्',
+		},
+	};
 	const ashtakaIndex = TAITTIRIYA_BRAHMANA_ASHTAKAS.findIndex((entry) => entry.ashtaka === ashtaka);
 
 	if (ashtakaIndex > 0) {
@@ -606,13 +772,44 @@ export function getTaittiriyaBrahmanaPrapathakaPageNav(
 			href: getTaittiriyaBrahmanaPrapathakaHref(ashtaka, prapathaka - 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka - 1}` : `प्रपाठक ${prapathaka - 1}`,
 		};
+	} else if (ashtaka > 1) {
+		const previous = TAITTIRIYA_BRAHMANA_ASHTAKAS.find((entry) => entry.ashtaka === ashtaka - 1);
+		if (previous) {
+			nav.prev = {
+				href: getTaittiriyaBrahmanaPrapathakaHref(
+					previous.ashtaka,
+					previous.prapathakaCount,
+					locale
+				),
+				label:
+					locale === 'iast'
+						? `Āṣṭaka ${previous.ashtaka} · Prapāṭhaka ${previous.prapathakaCount}`
+						: `अष्टक ${previous.ashtaka} · प्रपाठक ${previous.prapathakaCount}`,
+			};
+		}
 	}
 	if (ashtakaInfo && prapathaka < ashtakaInfo.prapathakaCount) {
 		nav.next = {
 			href: getTaittiriyaBrahmanaPrapathakaHref(ashtaka, prapathaka + 1, locale),
 			label: locale === 'iast' ? `Prapāṭhaka ${prapathaka + 1}` : `प्रपाठक ${prapathaka + 1}`,
 		};
+	} else if (ashtakaInfo) {
+		const following = TAITTIRIYA_BRAHMANA_ASHTAKAS.find((entry) => entry.ashtaka === ashtaka + 1);
+		if (following) {
+			nav.next = {
+				href: getTaittiriyaBrahmanaPrapathakaHref(following.ashtaka, 1, locale),
+				label:
+					locale === 'iast'
+						? `Āṣṭaka ${following.ashtaka} · Prapāṭhaka 1`
+						: `अष्टक ${following.ashtaka} · प्रपाठक 1`,
+			};
+		}
 	}
+	nav.progress = {
+		current: prapathaka,
+		total: ashtakaInfo?.prapathakaCount ?? prapathaka,
+		context: up.label,
+	};
 	return nav;
 }
 
@@ -654,6 +851,11 @@ export function getTaittiriyaAranyakaPrashnaPageNav(
 			label: getPrashnaSidebarLabel(prashna + 1, locale),
 		};
 	}
+	nav.progress = {
+		current: prashna,
+		total: TAITTIRIYA_ARANYAKA_PRASHNAS.length,
+		context: locale === 'iast' ? 'Praśna' : 'प्रश्नः',
+	};
 	return nav;
 }
 
@@ -722,5 +924,10 @@ export function getAitareyaAranyakaAdhyayaPageNav(
 					: (nextInfo?.rootLabel.split(', ').pop() ?? `अध्याय ${next.adhyaya}`),
 		};
 	}
+	nav.progress = {
+		current: globalAdhyaya,
+		total: AITAREYA_ARANYAKA_TOTAL_ADHYAYAS,
+		context: nav.up?.label ?? (locale === 'iast' ? 'Āraṇyakam' : 'आरण्यकम्'),
+	};
 	return nav;
 }

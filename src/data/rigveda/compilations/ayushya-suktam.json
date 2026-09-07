@@ -1,0 +1,28 @@
+{
+  "id": "ayushya-suktam",
+  "sections": [
+    {
+      "header": "३ वातायन उलः। वायुः। गायत्री।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 186,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 186,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 186,
+          "verse": 3
+        }
+      ]
+    }
+  ]
+}

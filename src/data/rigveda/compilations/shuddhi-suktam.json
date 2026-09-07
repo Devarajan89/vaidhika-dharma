@@ -1,0 +1,39 @@
+{
+  "id": "shuddhi-suktam",
+  "sections": [
+    {
+      "header": "९ तिरश्चीराङ्गिरस: । इन्द्र: । अनुष्टुप् ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 8,
+          "sukta": 95,
+          "verse": 7
+        },
+        {
+          "label": 2,
+          "mandala": 8,
+          "sukta": 95,
+          "verse": 8
+        },
+        {
+          "label": 3,
+          "mandala": 8,
+          "sukta": 95,
+          "verse": 9
+        }
+      ]
+    },
+    {
+      "header": "६ सोमाहुतिर्भार्गवः। अग्निः। गायत्री।",
+      "mantras": [
+        {
+          "label": 4,
+          "mandala": 2,
+          "sukta": 7,
+          "verse": 4
+        }
+      ]
+    }
+  ]
+}

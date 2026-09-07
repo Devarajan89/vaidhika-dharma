@@ -1096,15 +1096,15 @@
       "mandala": 1,
       "sukta": 15,
       "verse": 11,
-      "text": "॥\n\nअश्वि॑ना॒ पिब॑तं॒ मधु॒ दीद्य॑ग्नी शुचिव्रता । ऋ॒तुना॑ यज्ञवाहसा",
-      "iast": "||\n\naśvi̍nā̱ piba̍ta̱ṃ madhu̱ dīdya̍gnī śucivratā | ṛ̱tunā̍ yajñavāhasā"
+      "text": "अश्वि॑ना॒ पिब॑तं॒ मधु॒ दीद्य॑ग्नी शुचिव्रता । ऋ॒तुना॑ यज्ञवाहसा",
+      "iast": "aśvi̍nā̱ piba̍ta̱ṃ madhu̱ dīdya̍gnī śucivratā | ṛ̱tunā̍ yajñavāhasā"
     },
     "1:15:12": {
       "mandala": 1,
       "sukta": 15,
       "verse": 12,
-      "text": "॥\n\nगार्ह॑पत्येन सन्त्य ऋ॒तुना॑ यज्ञ॒नीर॑सि । दे॒वान् दे॑वय॒ते य॑ज",
-      "iast": "||\n\ngārha̍patyena santya ṛ̱tunā̍ yajña̱nīra̍si | de̱vān de̍vaya̱te ya̍ja"
+      "text": "गार्ह॑पत्येन सन्त्य ऋ॒तुना॑ यज्ञ॒नीर॑सि । दे॒वान् दे॑वय॒ते य॑ज",
+      "iast": "gārha̍patyena santya ṛ̱tunā̍ yajña̱nīra̍si | de̱vān de̍vaya̱te ya̍ja"
     },
     "1:16:1": {
       "mandala": 1,
@@ -1530,15 +1530,15 @@
       "mandala": 1,
       "sukta": 22,
       "verse": 11,
-      "text": "॥\n\nअ॒भि नो॑ दे॒वीरव॑सा म॒हः शर्म॑णा नृ॒पत्नी॑: । अच्छि॑न्नपत्राः सचन्ताम्",
-      "iast": "||\n\na̱bhi no̍ de̱vīrava̍sā ma̱haḥ śarma̍ṇā nṛ̱patnī̍: | acchi̍nnapatrāḥ sacantām"
+      "text": "अ॒भि नो॑ दे॒वीरव॑सा म॒हः शर्म॑णा नृ॒पत्नी॑: । अच्छि॑न्नपत्राः सचन्ताम्",
+      "iast": "a̱bhi no̍ de̱vīrava̍sā ma̱haḥ śarma̍ṇā nṛ̱patnī̍: | acchi̍nnapatrāḥ sacantām"
     },
     "1:22:12": {
       "mandala": 1,
       "sukta": 22,
       "verse": 12,
-      "text": "॥\n\nइ॒हेन्द्रा॒णीमुप॑ ह्वये वरुणा॒नीं स्व॒स्तये॑ । अ॒ग्नायीं॒ सोम॑पीतये",
-      "iast": "||\n\ni̱hendrā̱ṇīmupa̍ hvaye varuṇā̱nīṃ sva̱staye̍ | a̱gnāyī̱ṃ soma̍pītaye"
+      "text": "इ॒हेन्द्रा॒णीमुप॑ ह्वये वरुणा॒नीं स्व॒स्तये॑ । अ॒ग्नायीं॒ सोम॑पीतये",
+      "iast": "i̱hendrā̱ṇīmupa̍ hvaye varuṇā̱nīṃ sva̱staye̍ | a̱gnāyī̱ṃ soma̍pītaye"
     },
     "1:22:13": {
       "mandala": 1,
@@ -1600,8 +1600,8 @@
       "mandala": 1,
       "sukta": 22,
       "verse": 21,
-      "text": "॥\n\nतद् विप्रा॑सो विप॒न्यवो॑ जागृ॒वांस॒: समि॑न्धते । विष्णो॒र्यत् प॑र॒मं प॒दम्",
-      "iast": "||\n\ntad viprā̍so vipa̱nyavo̍ jāgṛ̱vāṃsa̱: sami̍ndhate | viṣṇo̱ryat pa̍ra̱maṃ pa̱dam"
+      "text": "तद् विप्रा॑सो विप॒न्यवो॑ जागृ॒वांस॒: समि॑न्धते । विष्णो॒र्यत् प॑र॒मं प॒दम्",
+      "iast": "tad viprā̍so vipa̱nyavo̍ jāgṛ̱vāṃsa̱: sami̍ndhate | viṣṇo̱ryat pa̍ra̱maṃ pa̱dam"
     },
     "1:23:1": {
       "mandala": 1,
@@ -1845,15 +1845,15 @@
       "mandala": 1,
       "sukta": 24,
       "verse": 11,
-      "text": "॥\n\nतत्त्वा॑ यामि॒ ब्रह्म॑णा॒ वन्द॑मान॒स् तदा शा॑स्ते॒ यज॑मानो ह॒विर्भि॑: ।\n\nअहे॑ळमानो वरुणे॒ह बो॒ध्युरु॑शंस॒ मा न॒ आयु॒: प्र मो॑षीः",
-      "iast": "||\n\ntattvā̍ yāmi̱ brahma̍ṇā̱ vanda̍māna̱s tadā śā̍ste̱ yaja̍māno ha̱virbhi̍: |\n\nahe̍l̤amāno varuṇe̱ha bo̱dhyuru̍śaṃsa̱ mā na̱ āyu̱: pra mo̍ṣīḥ"
+      "text": "तत्त्वा॑ यामि॒ ब्रह्म॑णा॒ वन्द॑मान॒स् तदा शा॑स्ते॒ यज॑मानो ह॒विर्भि॑: ।\n\nअहे॑ळमानो वरुणे॒ह बो॒ध्युरु॑शंस॒ मा न॒ आयु॒: प्र मो॑षीः",
+      "iast": "tattvā̍ yāmi̱ brahma̍ṇā̱ vanda̍māna̱s tadā śā̍ste̱ yaja̍māno ha̱virbhi̍: |\n\nahe̍l̤amāno varuṇe̱ha bo̱dhyuru̍śaṃsa̱ mā na̱ āyu̱: pra mo̍ṣīḥ"
     },
     "1:24:12": {
       "mandala": 1,
       "sukta": 24,
       "verse": 12,
-      "text": "॥\n\nतदिन्नक्तं॒ तद् दिवा॒ मह्य॑माहु॒स् तद॒यं केतो॑ हृ॒द आ वि च॑ष्टे ।\n\nशुन॒:शेपो॒ यमह्व॑द् गृभी॒तः सो अ॒स्मान् राजा॒ वरु॑णो मुमोक्तु",
-      "iast": "||\n\ntadinnakta̱ṃ tad divā̱ mahya̍māhu̱s tada̱yaṃ keto̍ hṛ̱da ā vi ca̍ṣṭe |\n\nśuna̱:śepo̱ yamahva̍d gṛbhī̱taḥ so a̱smān rājā̱ varu̍ṇo mumoktu"
+      "text": "तदिन्नक्तं॒ तद् दिवा॒ मह्य॑माहु॒स् तद॒यं केतो॑ हृ॒द आ वि च॑ष्टे ।\n\nशुन॒:शेपो॒ यमह्व॑द् गृभी॒तः सो अ॒स्मान् राजा॒ वरु॑णो मुमोक्तु",
+      "iast": "tadinnakta̱ṃ tad divā̱ mahya̍māhu̱s tada̱yaṃ keto̍ hṛ̱da ā vi ca̍ṣṭe |\n\nśuna̱:śepo̱ yamahva̍d gṛbhī̱taḥ so a̱smān rājā̱ varu̍ṇo mumoktu"
     },
     "1:24:13": {
       "mandala": 1,
@@ -2167,15 +2167,15 @@
       "mandala": 1,
       "sukta": 27,
       "verse": 11,
-      "text": "॥\n\nस नो॑ म॒हाँ अ॑निमा॒नो धू॒मके॑तुः पुरुश्च॒न्द्रः । धि॒ये वाजा॑य हिन्वतु",
-      "iast": "||\n\nsa no̍ ma̱hām̐ a̍nimā̱no dhū̱make̍tuḥ puruśca̱ndraḥ | dhi̱ye vājā̍ya hinvatu"
+      "text": "स नो॑ म॒हाँ अ॑निमा॒नो धू॒मके॑तुः पुरुश्च॒न्द्रः । धि॒ये वाजा॑य हिन्वतु",
+      "iast": "sa no̍ ma̱hām̐ a̍nimā̱no dhū̱make̍tuḥ puruśca̱ndraḥ | dhi̱ye vājā̍ya hinvatu"
     },
     "1:27:12": {
       "mandala": 1,
       "sukta": 27,
       "verse": 12,
-      "text": "॥\n\nस रे॒वाँ इ॑व वि॒श्पति॒र्दैव्य॑: के॒तुः शृ॑णोतु नः । उ॒क्थैर॒ग्निर्बृ॒हद्भा॑नुः",
-      "iast": "||\n\nsa re̱vām̐ i̍va vi̱śpati̱rdaivya̍: ke̱tuḥ śṛ̍ṇotu naḥ | u̱kthaira̱gnirbṛ̱hadbhā̍nuḥ"
+      "text": "स रे॒वाँ इ॑व वि॒श्पति॒र्दैव्य॑: के॒तुः शृ॑णोतु नः । उ॒क्थैर॒ग्निर्बृ॒हद्भा॑नुः",
+      "iast": "sa re̱vām̐ i̍va vi̱śpati̱rdaivya̍: ke̱tuḥ śṛ̍ṇotu naḥ | u̱kthaira̱gnirbṛ̱hadbhā̍nuḥ"
     },
     "1:27:13": {
       "mandala": 1,
@@ -2377,8 +2377,8 @@
       "mandala": 1,
       "sukta": 30,
       "verse": 12,
-      "text": "॥\n\nतथा॒ तद॑स्तु सोमपा॒: सखे॑ वज्रि॒न्तथा॑ कृणु । यथा॑ त उ॒श्मसी॒ष्टये॑",
-      "iast": "||\n\ntathā̱ tada̍stu somapā̱: sakhe̍ vajri̱ntathā̍ kṛṇu | yathā̍ ta u̱śmasī̱ṣṭaye̍"
+      "text": "तथा॒ तद॑स्तु सोमपा॒: सखे॑ वज्रि॒न्तथा॑ कृणु । यथा॑ त उ॒श्मसी॒ष्टये॑",
+      "iast": "tathā̱ tada̍stu somapā̱: sakhe̍ vajri̱ntathā̍ kṛṇu | yathā̍ ta u̱śmasī̱ṣṭaye̍"
     },
     "1:30:13": {
       "mandala": 1,
@@ -5353,7 +5353,7 @@
       "sukta": 68,
       "verse": 7,
       "text": "६॥\n\nहोता॒ निष॑त्तो॒, मनो॒रप॑त्ये॒ स चि॒न्न्वा॑सां॒, पती॑ रयी॒णाम्",
-      "iast": "6||\n\nhotā̱ niṣa̍tto̱, mano̱rapa̍tye̱ sa ci̱nnvā̍sā̱ṃ, patī̍ rayī̱ṇām"
+      "iast": "6hotā̱ niṣa̍tto̱, mano̱rapa̍tye̱ sa ci̱nnvā̍sā̱ṃ, patī̍ rayī̱ṇām"
     },
     "1:68:4": {
       "mandala": 1,
@@ -5367,7 +5367,7 @@
       "sukta": 68,
       "verse": 9,
       "text": "८॥\n\nपि॒तुर्न पु॒त्राः, क्रतुं॑ जुषन्त॒ श्रोष॒न् ये अ॑स्य॒, शासं॑ तु॒रास॑:",
-      "iast": "8||\n\npi̱turna pu̱trāḥ, kratu̍ṃ juṣanta̱ śroṣa̱n ye a̍sya̱, śāsa̍ṃ tu̱rāsa̍:"
+      "iast": "8pi̱turna pu̱trāḥ, kratu̍ṃ juṣanta̱ śroṣa̱n ye a̍sya̱, śāsa̍ṃ tu̱rāsa̍:"
     },
     "1:69:1": {
       "mandala": 1,
@@ -5409,7 +5409,7 @@
       "sukta": 69,
       "verse": 7,
       "text": "६॥\n\nनकि॑ष्ट ए॒ता, व्र॒ता मि॑नन्ति॒ नृभ्यो॒ यदे॒भ्यः, श्रु॒ष्टिं च॒कर्थ॑",
-      "iast": "6||\n\nnaki̍ṣṭa e̱tā, vra̱tā mi̍nanti̱ nṛbhyo̱ yade̱bhyaḥ, śru̱ṣṭiṃ ca̱kartha̍"
+      "iast": "6naki̍ṣṭa e̱tā, vra̱tā mi̍nanti̱ nṛbhyo̱ yade̱bhyaḥ, śru̱ṣṭiṃ ca̱kartha̍"
     },
     "1:69:4": {
       "mandala": 1,
@@ -5423,7 +5423,7 @@
       "sukta": 69,
       "verse": 9,
       "text": "८॥\n\nउ॒षो न जा॒रो, वि॒भावो॒स्रः संज्ञा॑तरूप॒श्चिके॑तदस्मै",
-      "iast": "8||\n\nu̱ṣo na jā̱ro, vi̱bhāvo̱sraḥ saṃjñā̍tarūpa̱ścike̍tadasmai"
+      "iast": "8u̱ṣo na jā̱ro, vi̱bhāvo̱sraḥ saṃjñā̍tarūpa̱ścike̍tadasmai"
     },
     "1:70:1": {
       "mandala": 1,
@@ -5465,7 +5465,7 @@
       "sukta": 70,
       "verse": 7,
       "text": "६॥\n\nवर्धा॒न्यं पू॒र्वीः, क्ष॒पो विरू॑पाः स्था॒तुश्च॒ रथ॑मृ॒तप्र॑वीतम्",
-      "iast": "6||\n\nvardhā̱nyaṃ pū̱rvīḥ, kṣa̱po virū̍pāḥ sthā̱tuśca̱ ratha̍mṛ̱tapra̍vītam"
+      "iast": "6vardhā̱nyaṃ pū̱rvīḥ, kṣa̱po virū̍pāḥ sthā̱tuśca̱ ratha̍mṛ̱tapra̍vītam"
     },
     "1:70:4": {
       "mandala": 1,
@@ -5479,14 +5479,14 @@
       "sukta": 70,
       "verse": 9,
       "text": "८॥\n\nगोषु॒ प्रश॑स्तिं॒, वने॑षु धिषे॒ भर॑न्त॒ विश्वे॑, ब॒लिं स्व॑र्णः",
-      "iast": "8||\n\ngoṣu̱ praśa̍sti̱ṃ, vane̍ṣu dhiṣe̱ bhara̍nta̱ viśve̍, ba̱liṃ sva̍rṇaḥ"
+      "iast": "8goṣu̱ praśa̍sti̱ṃ, vane̍ṣu dhiṣe̱ bhara̍nta̱ viśve̍, ba̱liṃ sva̍rṇaḥ"
     },
     "1:70:6": {
       "mandala": 1,
       "sukta": 70,
       "verse": 6,
       "text": "१०॥\n\nसा॒धुर्न गृ॒ध्नुरस्ते॑व॒ शूरो॒ याते॑व भी॒मस्त्वे॒षः स॒मत्सु॑",
-      "iast": "10||\n\nsā̱dhurna gṛ̱dhnuraste̍va̱ śūro̱ yāte̍va bhī̱mastve̱ṣaḥ sa̱matsu̍"
+      "iast": "10sā̱dhurna gṛ̱dhnuraste̍va̱ śūro̱ yāte̍va bhī̱mastve̱ṣaḥ sa̱matsu̍"
     },
     "1:71:1": {
       "mandala": 1,
@@ -7537,7 +7537,7 @@
       "sukta": 100,
       "verse": 12,
       "text": "स जा॒मिभि॒र्यत् स॒मजा॑ति मी॒ह्ले ऽजा॑मिभिर्वा पुरुहू॒त एवै॑: ।\n\nअ॒पां तो॒कस्य॒ तन॑यस्य जे॒षे म॒रुत्वा॑न् नो भव॒त्विन्द्र॑ ऊ॒ती ॥\n\nस व॑ज्र॒भृद् द॑स्यु॒हा भी॒म उ॒ग्रः स॒हस्र॑चेताः श॒तनी॑थ॒ ऋभ्वा॑ ।\n\nच॒म्री॒षो न शव॑सा॒ पाञ्च॑जन्यो म॒रुत्वा॑न् नो भव॒त्विन्द्र॑ ऊ॒ती",
-      "iast": "sa jā̱mibhi̱ryat sa̱majā̍ti mī̱hle 'jā̍mibhirvā puruhū̱ta evai̍: |\n\na̱pāṃ to̱kasya̱ tana̍yasya je̱ṣe ma̱rutvā̍n no bhava̱tvindra̍ ū̱tī ||\n\nsa va̍jra̱bhṛd da̍syu̱hā bhī̱ma u̱graḥ sa̱hasra̍cetāḥ śa̱tanī̍tha̱ ṛbhvā̍ |\n\nca̱mrī̱ṣo na śava̍sā̱ pāñca̍janyo ma̱rutvā̍n no bhava̱tvindra̍ ū̱tī"
+      "iast": "sa jā̱mibhi̱ryat sa̱majā̍ti mī̱hle 'jā̍mibhirvā puruhū̱ta evai̍: |\n\na̱pāṃ to̱kasya̱ tana̍yasya je̱ṣe ma̱rutvā̍n no bhava̱tvindra̍ ū̱tī sa va̍jra̱bhṛd da̍syu̱hā bhī̱ma u̱graḥ sa̱hasra̍cetāḥ śa̱tanī̍tha̱ ṛbhvā̍ |\n\nca̱mrī̱ṣo na śava̍sā̱ pāñca̍janyo ma̱rutvā̍n no bhava̱tvindra̍ ū̱tī"
     },
     "1:100:13": {
       "mandala": 1,
@@ -10365,7 +10365,7 @@
       "sukta": 136,
       "verse": 5,
       "text": "अ॒यं मि॒त्राय॒ वरु॑णाय॒ शंत॑म॒: सोमो॑ भूत्वव॒पाने॒ष्वाभ॑गो दे॒वो दे॒वेष्वाभ॑गः ।\n\nतं दे॒वासो॑ जुषेरत॒ विश्वे॑ अ॒द्य स॒जोष॑सः ।\n\nतथा॑ राजाना करथो॒ यदीम॑ह॒ ऋता॑वाना॒ यदीम॑हे ॥\n\nयो मि॒त्राय॒ वरु॑णा॒यावि॑ध॒ज्जनो॑ऽन॒र्वाणं॒ तं परि॑ पातो॒ अंह॑सो दा॒श्वांसं॒ मर्त॒मंह॑सः ।\n\nतम॑र्य॒माभि र॑क्षत्यृजू॒यन्त॒मनु॑ व्र॒तम् ।\n\nउ॒क्थैर्य ए॑नोः परि॒भूष॑ति व्र॒तं स्तोमै॑रा॒भूष॑ति व्र॒तम्",
-      "iast": "a̱yaṃ mi̱trāya̱ varu̍ṇāya̱ śaṃta̍ma̱: somo̍ bhūtvava̱pāne̱ṣvābha̍go de̱vo de̱veṣvābha̍gaḥ |\n\ntaṃ de̱vāso̍ juṣerata̱ viśve̍ a̱dya sa̱joṣa̍saḥ |\n\ntathā̍ rājānā karatho̱ yadīma̍ha̱ ṛtā̍vānā̱ yadīma̍he ||\n\nyo mi̱trāya̱ varu̍ṇā̱yāvi̍dha̱jjano̍'na̱rvāṇa̱ṃ taṃ pari̍ pāto̱ aṃha̍so dā̱śvāṃsa̱ṃ marta̱maṃha̍saḥ |\n\ntama̍rya̱mābhi ra̍kṣatyṛjū̱yanta̱manu̍ vra̱tam |\n\nu̱kthairya e̍noḥ pari̱bhūṣa̍ti vra̱taṃ stomai̍rā̱bhūṣa̍ti vra̱tam"
+      "iast": "a̱yaṃ mi̱trāya̱ varu̍ṇāya̱ śaṃta̍ma̱: somo̍ bhūtvava̱pāne̱ṣvābha̍go de̱vo de̱veṣvābha̍gaḥ |\n\ntaṃ de̱vāso̍ juṣerata̱ viśve̍ a̱dya sa̱joṣa̍saḥ |\n\ntathā̍ rājānā karatho̱ yadīma̍ha̱ ṛtā̍vānā̱ yadīma̍he yo mi̱trāya̱ varu̍ṇā̱yāvi̍dha̱jjano̍'na̱rvāṇa̱ṃ taṃ pari̍ pāto̱ aṃha̍so dā̱śvāṃsa̱ṃ marta̱maṃha̍saḥ |\n\ntama̍rya̱mābhi ra̍kṣatyṛjū̱yanta̱manu̍ vra̱tam |\n\nu̱kthairya e̍noḥ pari̱bhūṣa̍ti vra̱taṃ stomai̍rā̱bhūṣa̍ti vra̱tam"
     },
     "1:136:6": {
       "mandala": 1,
@@ -10477,7 +10477,7 @@
       "sukta": 139,
       "verse": 8,
       "text": "ओ षू णो॑ अग्ने शृणुहि॒ त्वमी॑ळि॒तो दे॒वेभ्यो॑ ब्रवसि य॒ज्ञिये॑भ्यो॒ राज॑भ्यो य॒ज्ञिये॑भ्यः ।\n\nयद्ध॒ त्यामङ्गि॑रोभ्यो धे॒नुं दे॑वा॒ अद॑त्तन ।\n\nवि तां दु॑ह्रे अर्य॒मा क॒र्तरी॒ सचाँ॑ ए॒ष तां वे॑द मे॒ सचा॑ ॥\n\nमो षु वो॑ अ॒स्मद॒भि तानि॒ पौंस्या॒ सना॑ भूवन्द्यु॒म्नानि॒ मोत जा॑रिषुर॒स्मत् पु॒रोत जा॑रिषुः ।\n\nयद् व॑श्चि॒त्रं यु॒गेयु॑गे॒ नव्यं॒ घोषा॒दम॑र्त्यम् ।\n\nअ॒स्मासु॒ तन्म॑रुतो॒ यच्च॑ दु॒ष्टरं॑ दिधृ॒ता यच्च॑ दु॒ष्टर॑म्",
-      "iast": "o ṣū ṇo̍ agne śṛṇuhi̱ tvamī̍l̤i̱to de̱vebhyo̍ bravasi ya̱jñiye̍bhyo̱ rāja̍bhyo ya̱jñiye̍bhyaḥ |\n\nyaddha̱ tyāmaṅgi̍robhyo dhe̱nuṃ de̍vā̱ ada̍ttana |\n\nvi tāṃ du̍hre arya̱mā ka̱rtarī̱ sacā̍m̐ e̱ṣa tāṃ ve̍da me̱ sacā̍ ||\n\nmo ṣu vo̍ a̱smada̱bhi tāni̱ pauṃsyā̱ sanā̍ bhūvandyu̱mnāni̱ mota jā̍riṣura̱smat pu̱rota jā̍riṣuḥ |\n\nyad va̍ści̱traṃ yu̱geyu̍ge̱ navya̱ṃ ghoṣā̱dama̍rtyam |\n\na̱smāsu̱ tanma̍ruto̱ yacca̍ du̱ṣṭara̍ṃ didhṛ̱tā yacca̍ du̱ṣṭara̍m"
+      "iast": "o ṣū ṇo̍ agne śṛṇuhi̱ tvamī̍l̤i̱to de̱vebhyo̍ bravasi ya̱jñiye̍bhyo̱ rāja̍bhyo ya̱jñiye̍bhyaḥ |\n\nyaddha̱ tyāmaṅgi̍robhyo dhe̱nuṃ de̍vā̱ ada̍ttana |\n\nvi tāṃ du̍hre arya̱mā ka̱rtarī̱ sacā̍m̐ e̱ṣa tāṃ ve̍da me̱ sacā̍ mo ṣu vo̍ a̱smada̱bhi tāni̱ pauṃsyā̱ sanā̍ bhūvandyu̱mnāni̱ mota jā̍riṣura̱smat pu̱rota jā̍riṣuḥ |\n\nyad va̍ści̱traṃ yu̱geyu̍ge̱ navya̱ṃ ghoṣā̱dama̍rtyam |\n\na̱smāsu̱ tanma̍ruto̱ yacca̍ du̱ṣṭara̍ṃ didhṛ̱tā yacca̍ du̱ṣṭara̍m"
     },
     "1:139:9": {
       "mandala": 1,
@@ -11849,14 +11849,14 @@
       "sukta": 164,
       "verse": 3,
       "text": "८॥\n\nऋ॒चो अ॒क्षरे॑ पर॒मे व्यो॑म॒न् यस्मि॑न् दे॒वा अधि॒ विश्वे॑ निषे॒दुः ।\n\nयस्तन्न वेद॒ किमृ॒चा क॑रिष्यति॒ य इत् तद् वि॒दुस्त इ॒मे समा॑सते",
-      "iast": "8||\n\nṛ̱co a̱kṣare̍ para̱me vyo̍ma̱n yasmi̍n de̱vā adhi̱ viśve̍ niṣe̱duḥ |\n\nyastanna veda̱ kimṛ̱cā ka̍riṣyati̱ ya it tad vi̱dusta i̱me samā̍sate"
+      "iast": "8ṛ̱co a̱kṣare̍ para̱me vyo̍ma̱n yasmi̍n de̱vā adhi̱ viśve̍ niṣe̱duḥ |\n\nyastanna veda̱ kimṛ̱cā ka̍riṣyati̱ ya it tad vi̱dusta i̱me samā̍sate"
     },
     "1:164:4": {
       "mandala": 1,
       "sukta": 164,
       "verse": 4,
       "text": "८॥\n\nयस्ते॒ स्तन॑: शश॒यो यो म॑यो॒भूर्येन॒ विश्वा॒ पुष्य॑सि॒ वार्या॑णि ।\n\nयो र॑त्न॒धा व॑सु॒विद् यः सु॒दत्र॒: सर॑स्वति॒ तमि॒ह धात॑वे कः",
-      "iast": "8||\n\nyaste̱ stana̍: śaśa̱yo yo ma̍yo̱bhūryena̱ viśvā̱ puṣya̍si̱ vāryā̍ṇi |\n\nyo ra̍tna̱dhā va̍su̱vid yaḥ su̱datra̱: sara̍svati̱ tami̱ha dhāta̍ve kaḥ"
+      "iast": "8yaste̱ stana̍: śaśa̱yo yo ma̍yo̱bhūryena̱ viśvā̱ puṣya̍si̱ vāryā̍ṇi |\n\nyo ra̍tna̱dhā va̍su̱vid yaḥ su̱datra̱: sara̍svati̱ tami̱ha dhāta̍ve kaḥ"
     },
     "1:164:5": {
       "mandala": 1,
@@ -13039,7 +13039,7 @@
       "sukta": 181,
       "verse": 6,
       "text": "प्र वां॑ निचे॒रुः क॑कु॒हो वशाँ॒ अनु॑ पि॒शङ्ग॑रूप॒: सद॑नानि गम्याः ।\n\nहरी॑ अ॒न्यस्य॑ पी॒पय॑न्त॒ वाजै॑र्म॒थ्रा रजां॑स्यश्विना॒ वि घोषै॑: ॥\n\n५प्र वां॑ श॒रद्वा॑न् वृष॒भो न नि॒ष्षाट् पू॒र्वीरिष॑श्चरति॒ मध्व॑ इ॒ष्णन् ।\n\nएवै॑र॒न्यस्य॑ पी॒पय॑न्त॒ वाजै॒र्वेष॑न्तीरू॒र्ध्वा न॒द्यो॑ न॒ आगु॑:",
-      "iast": "pra vā̍ṃ nice̱ruḥ ka̍ku̱ho vaśā̱m̐ anu̍ pi̱śaṅga̍rūpa̱: sada̍nāni gamyāḥ |\n\nharī̍ a̱nyasya̍ pī̱paya̍nta̱ vājai̍rma̱thrā rajā̍ṃsyaśvinā̱ vi ghoṣai̍: ||\n\n5pra vā̍ṃ śa̱radvā̍n vṛṣa̱bho na ni̱ṣṣāṭ pū̱rvīriṣa̍ścarati̱ madhva̍ i̱ṣṇan |\n\nevai̍ra̱nyasya̍ pī̱paya̍nta̱ vājai̱rveṣa̍ntīrū̱rdhvā na̱dyo̍ na̱ āgu̍:"
+      "iast": "pra vā̍ṃ nice̱ruḥ ka̍ku̱ho vaśā̱m̐ anu̍ pi̱śaṅga̍rūpa̱: sada̍nāni gamyāḥ |\n\nharī̍ a̱nyasya̍ pī̱paya̍nta̱ vājai̍rma̱thrā rajā̍ṃsyaśvinā̱ vi ghoṣai̍: 5pra vā̍ṃ śa̱radvā̍n vṛṣa̱bho na ni̱ṣṣāṭ pū̱rvīriṣa̍ścarati̱ madhva̍ i̱ṣṇan |\n\nevai̍ra̱nyasya̍ pī̱paya̍nta̱ vājai̱rveṣa̍ntīrū̱rdhvā na̱dyo̍ na̱ āgu̍:"
     },
     "1:181:7": {
       "mandala": 1,
@@ -16224,7 +16224,7 @@
       "sukta": 35,
       "verse": 8,
       "text": "स्व आ दमे॑ सु॒दुघा॒ यस्य॑ धे॒नुः स्व॒धां पी॑पाय सु॒भ्वन्न॑मत्ति ।\n\nसो अ॒पां नपा॑दू॒र्जय॑न्न॒प्स्व१न्तर्व॑सु॒देया॑य विध॒ते वि भा॑ति ७॥\n\nयो अ॒प्स्वा शुचि॑ना॒ दैव्ये॑न ऋ॒तावाज॑स्र उर्वि॒या वि॒भाति॑ ।\n\nव॒या इद॒न्या भुव॑नान्यस्य॒ प्र जा॑यन्ते वी॒रुध॑श्च प्र॒जाभि॑:",
-      "iast": "sva ā dame̍ su̱dughā̱ yasya̍ dhe̱nuḥ sva̱dhāṃ pī̍pāya su̱bhvanna̍matti |\n\nso a̱pāṃ napā̍dū̱rjaya̍nna̱psva1ntarva̍su̱deyā̍ya vidha̱te vi bhā̍ti 7||\n\nyo a̱psvā śuci̍nā̱ daivye̍na ṛ̱tāvāja̍sra urvi̱yā vi̱bhāti̍ |\n\nva̱yā ida̱nyā bhuva̍nānyasya̱ pra jā̍yante vī̱rudha̍śca pra̱jābhi̍:"
+      "iast": "sva ā dame̍ su̱dughā̱ yasya̍ dhe̱nuḥ sva̱dhāṃ pī̍pāya su̱bhvanna̍matti |\n\nso a̱pāṃ napā̍dū̱rjaya̍nna̱psva1ntarva̍su̱deyā̍ya vidha̱te vi bhā̍ti 7yo a̱psvā śuci̍nā̱ daivye̍na ṛ̱tāvāja̍sra urvi̱yā vi̱bhāti̍ |\n\nva̱yā ida̱nyā bhuva̍nānyasya̱ pra jā̍yante vī̱rudha̍śca pra̱jābhi̍:"
     },
     "2:35:9": {
       "mandala": 2,
@@ -16797,15 +16797,15 @@
       "mandala": 3,
       "sukta": 1,
       "verse": 11,
-      "text": "॥\n\nउ॒रौ म॒हाँ अ॑निबा॒धे व॑व॒र्धाऽऽपो॑ अ॒ग्निं य॒शस॒: सं हि पू॒र्वीः ।\n\nऋ॒तस्य॒ योना॑वशय॒द् दमू॑ना जामी॒नाम॒ग्निर॒पसि॒ स्वसॄ॑णाम्",
-      "iast": "||\n\nu̱rau ma̱hām̐ a̍nibā̱dhe va̍va̱rdhā''po̍ a̱gniṃ ya̱śasa̱: saṃ hi pū̱rvīḥ |\n\nṛ̱tasya̱ yonā̍vaśaya̱d damū̍nā jāmī̱nāma̱gnira̱pasi̱ svasṝ̍ṇām"
+      "text": "उ॒रौ म॒हाँ अ॑निबा॒धे व॑व॒र्धाऽऽपो॑ अ॒ग्निं य॒शस॒: सं हि पू॒र्वीः ।\n\nऋ॒तस्य॒ योना॑वशय॒द् दमू॑ना जामी॒नाम॒ग्निर॒पसि॒ स्वसॄ॑णाम्",
+      "iast": "u̱rau ma̱hām̐ a̍nibā̱dhe va̍va̱rdhā''po̍ a̱gniṃ ya̱śasa̱: saṃ hi pū̱rvīḥ |\n\nṛ̱tasya̱ yonā̍vaśaya̱d damū̍nā jāmī̱nāma̱gnira̱pasi̱ svasṝ̍ṇām"
     },
     "3:1:12": {
       "mandala": 3,
       "sukta": 1,
       "verse": 12,
-      "text": "॥\n\nअ॒क्रो न ब॒भ्रिः स॑मि॒थे म॒हीनां॑ दिदृ॒क्षेय॑: सू॒नवे॒ भाऋ॑जीकः ।\n\nउदु॒स्रिया॒ जनि॑ता॒ यो ज॒जाना॒ऽपां गर्भो॒ नृत॑मो य॒ह्वो अ॒ग्निः",
-      "iast": "||\n\na̱kro na ba̱bhriḥ sa̍mi̱the ma̱hīnā̍ṃ didṛ̱kṣeya̍: sū̱nave̱ bhāṛ̍jīkaḥ |\n\nudu̱sriyā̱ jani̍tā̱ yo ja̱jānā̱'pāṃ garbho̱ nṛta̍mo ya̱hvo a̱gniḥ"
+      "text": "अ॒क्रो न ब॒भ्रिः स॑मि॒थे म॒हीनां॑ दिदृ॒क्षेय॑: सू॒नवे॒ भाऋ॑जीकः ।\n\nउदु॒स्रिया॒ जनि॑ता॒ यो ज॒जाना॒ऽपां गर्भो॒ नृत॑मो य॒ह्वो अ॒ग्निः",
+      "iast": "a̱kro na ba̱bhriḥ sa̍mi̱the ma̱hīnā̍ṃ didṛ̱kṣeya̍: sū̱nave̱ bhāṛ̍jīkaḥ |\n\nudu̱sriyā̱ jani̍tā̱ yo ja̱jānā̱'pāṃ garbho̱ nṛta̍mo ya̱hvo a̱gniḥ"
     },
     "3:1:13": {
       "mandala": 3,
@@ -16867,22 +16867,22 @@
       "mandala": 3,
       "sukta": 1,
       "verse": 21,
-      "text": "॥\n\nजन्म॑ञ्जन्म॒न् निहि॑तो जा॒तवे॑दा वि॒श्वामि॑त्रेभिरिध्यते॒ अज॑स्रः ।\n\nतस्य॑ व॒यं सु॑म॒तौ य॒ज्ञिय॒स्याऽपि॑ भ॒द्रे सौ॑मन॒से स्या॑म",
-      "iast": "||\n\njanma̍ñjanma̱n nihi̍to jā̱tave̍dā vi̱śvāmi̍trebhiridhyate̱ aja̍sraḥ |\n\ntasya̍ va̱yaṃ su̍ma̱tau ya̱jñiya̱syā'pi̍ bha̱dre sau̍mana̱se syā̍ma"
+      "text": "जन्म॑ञ्जन्म॒न् निहि॑तो जा॒तवे॑दा वि॒श्वामि॑त्रेभिरिध्यते॒ अज॑स्रः ।\n\nतस्य॑ व॒यं सु॑म॒तौ य॒ज्ञिय॒स्याऽपि॑ भ॒द्रे सौ॑मन॒से स्या॑म",
+      "iast": "janma̍ñjanma̱n nihi̍to jā̱tave̍dā vi̱śvāmi̍trebhiridhyate̱ aja̍sraḥ |\n\ntasya̍ va̱yaṃ su̍ma̱tau ya̱jñiya̱syā'pi̍ bha̱dre sau̍mana̱se syā̍ma"
     },
     "3:1:22": {
       "mandala": 3,
       "sukta": 1,
       "verse": 22,
-      "text": "॥\n\nइ॒मं य॒ज्ञं स॑हसाव॒न् त्वं नो॑ देव॒त्रा धे॑हि सुक्रतो॒ ररा॑णः ।\n\nप्र यं॑सि होतर्बृह॒तीरिषो॒ नोऽग्ने॒ महि॒ द्रवि॑ण॒मा य॑जस्व",
-      "iast": "||\n\ni̱maṃ ya̱jñaṃ sa̍hasāva̱n tvaṃ no̍ deva̱trā dhe̍hi sukrato̱ rarā̍ṇaḥ |\n\npra ya̍ṃsi hotarbṛha̱tīriṣo̱ no'gne̱ mahi̱ dravi̍ṇa̱mā ya̍jasva"
+      "text": "इ॒मं य॒ज्ञं स॑हसाव॒न् त्वं नो॑ देव॒त्रा धे॑हि सुक्रतो॒ ररा॑णः ।\n\nप्र यं॑सि होतर्बृह॒तीरिषो॒ नोऽग्ने॒ महि॒ द्रवि॑ण॒मा य॑जस्व",
+      "iast": "i̱maṃ ya̱jñaṃ sa̍hasāva̱n tvaṃ no̍ deva̱trā dhe̍hi sukrato̱ rarā̍ṇaḥ |\n\npra ya̍ṃsi hotarbṛha̱tīriṣo̱ no'gne̱ mahi̱ dravi̍ṇa̱mā ya̍jasva"
     },
     "3:1:23": {
       "mandala": 3,
       "sukta": 1,
       "verse": 23,
-      "text": "॥\n\nइळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावा ऽग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
-      "iast": "||\n\nil̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvā 'gne̱ sā te̍ suma̱tirbhū̍tva̱sme"
+      "text": "इळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावा ऽग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
+      "iast": "il̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvā 'gne̱ sā te̍ suma̱tirbhū̍tva̱sme"
     },
     "3:2:1": {
       "mandala": 3,
@@ -16958,15 +16958,15 @@
       "mandala": 3,
       "sukta": 2,
       "verse": 11,
-      "text": "॥\n\nस जि॑न्वते ज॒ठरे॑षु प्रजज्ञि॒वान् वृषा॑ चि॒त्रेषु॒ नान॑द॒न्न सिं॒हः ।\n\nवै॒श्वा॒न॒रः पृ॑थु॒पाजा॒ अम॑र्त्यो॒ वसु॒ रत्ना॒ दय॑मानो॒ वि दा॒शुषे॑",
-      "iast": "||\n\nsa ji̍nvate ja̱ṭhare̍ṣu prajajñi̱vān vṛṣā̍ ci̱treṣu̱ nāna̍da̱nna si̱ṃhaḥ |\n\nvai̱śvā̱na̱raḥ pṛ̍thu̱pājā̱ ama̍rtyo̱ vasu̱ ratnā̱ daya̍māno̱ vi dā̱śuṣe̍"
+      "text": "स जि॑न्वते ज॒ठरे॑षु प्रजज्ञि॒वान् वृषा॑ चि॒त्रेषु॒ नान॑द॒न्न सिं॒हः ।\n\nवै॒श्वा॒न॒रः पृ॑थु॒पाजा॒ अम॑र्त्यो॒ वसु॒ रत्ना॒ दय॑मानो॒ वि दा॒शुषे॑",
+      "iast": "sa ji̍nvate ja̱ṭhare̍ṣu prajajñi̱vān vṛṣā̍ ci̱treṣu̱ nāna̍da̱nna si̱ṃhaḥ |\n\nvai̱śvā̱na̱raḥ pṛ̍thu̱pājā̱ ama̍rtyo̱ vasu̱ ratnā̱ daya̍māno̱ vi dā̱śuṣe̍"
     },
     "3:2:12": {
       "mandala": 3,
       "sukta": 2,
       "verse": 12,
-      "text": "॥\n\nवै॒श्वा॒न॒रः प्र॒त्नथा॒ नाक॒मारु॑हद् दि॒वस्पृ॒ष्ठं भन्द॑मानः सु॒मन्म॑भिः ।\n\nस पू॑र्व॒वज्ज॒नय॑ञ्ज॒न्तवे॒ धनं॑ समा॒नमज्मं॒ पर्ये॑ति॒ जागृ॑विः",
-      "iast": "||\n\nvai̱śvā̱na̱raḥ pra̱tnathā̱ nāka̱māru̍had di̱vaspṛ̱ṣṭhaṃ bhanda̍mānaḥ su̱manma̍bhiḥ |\n\nsa pū̍rva̱vajja̱naya̍ñja̱ntave̱ dhana̍ṃ samā̱namajma̱ṃ parye̍ti̱ jāgṛ̍viḥ"
+      "text": "वै॒श्वा॒न॒रः प्र॒त्नथा॒ नाक॒मारु॑हद् दि॒वस्पृ॒ष्ठं भन्द॑मानः सु॒मन्म॑भिः ।\n\nस पू॑र्व॒वज्ज॒नय॑ञ्ज॒न्तवे॒ धनं॑ समा॒नमज्मं॒ पर्ये॑ति॒ जागृ॑विः",
+      "iast": "vai̱śvā̱na̱raḥ pra̱tnathā̱ nāka̱māru̍had di̱vaspṛ̱ṣṭhaṃ bhanda̍mānaḥ su̱manma̍bhiḥ |\n\nsa pū̍rva̱vajja̱naya̍ñja̱ntave̱ dhana̍ṃ samā̱namajma̱ṃ parye̍ti̱ jāgṛ̍viḥ"
     },
     "3:2:13": {
       "mandala": 3,
@@ -17063,8 +17063,8 @@
       "mandala": 3,
       "sukta": 3,
       "verse": 11,
-      "text": "॥\n\nवै॒श्वा॒न॒रस्य॑ दं॒सना॑भ्यो बृ॒हदरि॑णा॒देक॑: स्वप॒स्यया॑ क॒विः ।\n\nउ॒भा पि॒तरा॑ म॒हय॑न्नजायता॒ग्निर्द्यावा॑पृथि॒वी भूरि॑रेतसा",
-      "iast": "||\n\nvai̱śvā̱na̱rasya̍ da̱ṃsanā̍bhyo bṛ̱hadari̍ṇā̱deka̍: svapa̱syayā̍ ka̱viḥ |\n\nu̱bhā pi̱tarā̍ ma̱haya̍nnajāyatā̱gnirdyāvā̍pṛthi̱vī bhūri̍retasā"
+      "text": "वै॒श्वा॒न॒रस्य॑ दं॒सना॑भ्यो बृ॒हदरि॑णा॒देक॑: स्वप॒स्यया॑ क॒विः ।\n\nउ॒भा पि॒तरा॑ म॒हय॑न्नजायता॒ग्निर्द्यावा॑पृथि॒वी भूरि॑रेतसा",
+      "iast": "vai̱śvā̱na̱rasya̍ da̱ṃsanā̍bhyo bṛ̱hadari̍ṇā̱deka̍: svapa̱syayā̍ ka̱viḥ |\n\nu̱bhā pi̱tarā̍ ma̱haya̍nnajāyatā̱gnirdyāvā̍pṛthi̱vī bhūri̍retasā"
     },
     "3:4:1": {
       "mandala": 3,
@@ -17217,8 +17217,8 @@
       "mandala": 3,
       "sukta": 5,
       "verse": 11,
-      "text": "॥\n\nइळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावा ऽग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
-      "iast": "||\n\nil̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvā 'gne̱ sā te̍ suma̱tirbhū̍tva̱sme"
+      "text": "इळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावा ऽग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
+      "iast": "il̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvā 'gne̱ sā te̍ suma̱tirbhū̍tva̱sme"
     },
     "3:6:1": {
       "mandala": 3,
@@ -17294,8 +17294,8 @@
       "mandala": 3,
       "sukta": 6,
       "verse": 11,
-      "text": "॥\n\nइळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावा ऽग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
-      "iast": "||\n\nil̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvā 'gne̱ sā te̍ suma̱tirbhū̍tva̱sme"
+      "text": "इळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावा ऽग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
+      "iast": "il̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvā 'gne̱ sā te̍ suma̱tirbhū̍tva̱sme"
     },
     "3:7:1": {
       "mandala": 3,
@@ -17371,8 +17371,8 @@
       "mandala": 3,
       "sukta": 7,
       "verse": 11,
-      "text": "॥\n\nइळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावाग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
-      "iast": "||\n\nil̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvāgne̱ sā te̍ suma̱tirbhū̍tva̱sme"
+      "text": "इळा॑मग्ने पुरु॒दंसं॑ स॒निं गोः श॑श्वत्त॒मं हव॑मानाय साध ।\n\nस्यान्न॑: सू॒नुस्तन॑यो वि॒जावाग्ने॒ सा ते॑ सुम॒तिर्भू॑त्व॒स्मे",
+      "iast": "il̤ā̍magne puru̱daṃsa̍ṃ sa̱niṃ goḥ śa̍śvatta̱maṃ hava̍mānāya sādha |\n\nsyānna̍: sū̱nustana̍yo vi̱jāvāgne̱ sā te̍ suma̱tirbhū̍tva̱sme"
     },
     "3:8:1": {
       "mandala": 3,
@@ -17448,8 +17448,8 @@
       "mandala": 3,
       "sukta": 8,
       "verse": 11,
-      "text": "॥\n\nवन॑स्पते श॒तव॑ल्शो॒ वि रो॑ह स॒हस्र॑वल्शा॒ वि व॒यं रु॑हेम ।\n\nयं त्वाम॒यं स्वधि॑ति॒स्तेज॑मानः प्रणि॒नाय॑ मह॒ते सौभ॑गाय",
-      "iast": "||\n\nvana̍spate śa̱tava̍lśo̱ vi ro̍ha sa̱hasra̍valśā̱ vi va̱yaṃ ru̍hema |\n\nyaṃ tvāma̱yaṃ svadhi̍ti̱steja̍mānaḥ praṇi̱nāya̍ maha̱te saubha̍gāya"
+      "text": "वन॑स्पते श॒तव॑ल्शो॒ वि रो॑ह स॒हस्र॑वल्शा॒ वि व॒यं रु॑हेम ।\n\nयं त्वाम॒यं स्वधि॑ति॒स्तेज॑मानः प्रणि॒नाय॑ मह॒ते सौभ॑गाय",
+      "iast": "vana̍spate śa̱tava̍lśo̱ vi ro̍ha sa̱hasra̍valśā̱ vi va̱yaṃ ru̍hema |\n\nyaṃ tvāma̱yaṃ svadhi̍ti̱steja̍mānaḥ praṇi̱nāya̍ maha̱te saubha̍gāya"
     },
     "3:9:1": {
       "mandala": 3,
@@ -17749,8 +17749,8 @@
       "mandala": 3,
       "sukta": 13,
       "verse": 7,
-      "text": "॥\n\nनू नो॑ रास्व स॒हस्र॑वत् तो॒कव॑त्पुष्टि॒मद् वसु॑ ।\n\nद्यु॒मद॑ग्ने सु॒वीर्यं॒ वर्षि॑ष्ठ॒मनु॑पक्षितम्",
-      "iast": "||\n\nnū no̍ rāsva sa̱hasra̍vat to̱kava̍tpuṣṭi̱mad vasu̍ |\n\ndyu̱mada̍gne su̱vīrya̱ṃ varṣi̍ṣṭha̱manu̍pakṣitam"
+      "text": "नू नो॑ रास्व स॒हस्र॑वत् तो॒कव॑त्पुष्टि॒मद् वसु॑ ।\n\nद्यु॒मद॑ग्ने सु॒वीर्यं॒ वर्षि॑ष्ठ॒मनु॑पक्षितम्",
+      "iast": "nū no̍ rāsva sa̱hasra̍vat to̱kava̍tpuṣṭi̱mad vasu̍ |\n\ndyu̱mada̍gne su̱vīrya̱ṃ varṣi̍ṣṭha̱manu̍pakṣitam"
     },
     "3:14:1": {
       "mandala": 3,
@@ -17770,36 +17770,36 @@
       "mandala": 3,
       "sukta": 14,
       "verse": 3,
-      "text": "॥\n\nद्रव॑तां त उ॒षसा॑ वा॒जय॑न्ती॒ अग्ने॒ वात॑स्य प॒थ्या॑भि॒रच्छ॑ ।\n\nयत् सी॑म॒ञ्जन्ति॑ पू॒र्व्यं ह॒विर्भि॒रा व॒न्धुरे॑व तस्थतुर्दुरो॒णे",
-      "iast": "||\n\ndrava̍tāṃ ta u̱ṣasā̍ vā̱jaya̍ntī̱ agne̱ vāta̍sya pa̱thyā̍bhi̱raccha̍ |\n\nyat sī̍ma̱ñjanti̍ pū̱rvyaṃ ha̱virbhi̱rā va̱ndhure̍va tasthaturduro̱ṇe"
+      "text": "द्रव॑तां त उ॒षसा॑ वा॒जय॑न्ती॒ अग्ने॒ वात॑स्य प॒थ्या॑भि॒रच्छ॑ ।\n\nयत् सी॑म॒ञ्जन्ति॑ पू॒र्व्यं ह॒विर्भि॒रा व॒न्धुरे॑व तस्थतुर्दुरो॒णे",
+      "iast": "drava̍tāṃ ta u̱ṣasā̍ vā̱jaya̍ntī̱ agne̱ vāta̍sya pa̱thyā̍bhi̱raccha̍ |\n\nyat sī̍ma̱ñjanti̍ pū̱rvyaṃ ha̱virbhi̱rā va̱ndhure̍va tasthaturduro̱ṇe"
     },
     "3:14:4": {
       "mandala": 3,
       "sukta": 14,
       "verse": 4,
-      "text": "॥\n\nमि॒त्रश्च॒ तुभ्यं॒ वरु॑णः सह॒स्वोऽग्ने॒ विश्वे॑ म॒रुत॑: सु॒म्नम॑र्चन् ।\n\nयच्छो॒चिषा॑ सहसस्पुत्र॒ तिष्ठा॑ अ॒भि क्षि॒तीः प्र॒थय॒न् त्सूर्यो॒ नॄन्",
-      "iast": "||\n\nmi̱traśca̱ tubhya̱ṃ varu̍ṇaḥ saha̱svo'gne̱ viśve̍ ma̱ruta̍: su̱mnama̍rcan |\n\nyaccho̱ciṣā̍ sahasasputra̱ tiṣṭhā̍ a̱bhi kṣi̱tīḥ pra̱thaya̱n tsūryo̱ nṝn"
+      "text": "मि॒त्रश्च॒ तुभ्यं॒ वरु॑णः सह॒स्वोऽग्ने॒ विश्वे॑ म॒रुत॑: सु॒म्नम॑र्चन् ।\n\nयच्छो॒चिषा॑ सहसस्पुत्र॒ तिष्ठा॑ अ॒भि क्षि॒तीः प्र॒थय॒न् त्सूर्यो॒ नॄन्",
+      "iast": "mi̱traśca̱ tubhya̱ṃ varu̍ṇaḥ saha̱svo'gne̱ viśve̍ ma̱ruta̍: su̱mnama̍rcan |\n\nyaccho̱ciṣā̍ sahasasputra̱ tiṣṭhā̍ a̱bhi kṣi̱tīḥ pra̱thaya̱n tsūryo̱ nṝn"
     },
     "3:14:5": {
       "mandala": 3,
       "sukta": 14,
       "verse": 5,
-      "text": "॥\n\nव॒यं ते॑ अ॒द्य र॑रि॒मा हि काम॑मुत्ता॒नह॑स्ता॒ नम॑सोप॒सद्य॑ ।\n\nयजि॑ष्ठेन॒ मन॑सा यक्षि दे॒वानस्रे॑धता॒ मन्म॑ना॒ विप्रो॑ अग्ने",
-      "iast": "||\n\nva̱yaṃ te̍ a̱dya ra̍ri̱mā hi kāma̍muttā̱naha̍stā̱ nama̍sopa̱sadya̍ |\n\nyaji̍ṣṭhena̱ mana̍sā yakṣi de̱vānasre̍dhatā̱ manma̍nā̱ vipro̍ agne"
+      "text": "व॒यं ते॑ अ॒द्य र॑रि॒मा हि काम॑मुत्ता॒नह॑स्ता॒ नम॑सोप॒सद्य॑ ।\n\nयजि॑ष्ठेन॒ मन॑सा यक्षि दे॒वानस्रे॑धता॒ मन्म॑ना॒ विप्रो॑ अग्ने",
+      "iast": "va̱yaṃ te̍ a̱dya ra̍ri̱mā hi kāma̍muttā̱naha̍stā̱ nama̍sopa̱sadya̍ |\n\nyaji̍ṣṭhena̱ mana̍sā yakṣi de̱vānasre̍dhatā̱ manma̍nā̱ vipro̍ agne"
     },
     "3:14:6": {
       "mandala": 3,
       "sukta": 14,
       "verse": 6,
-      "text": "॥\n\nत्वद्धि पु॑त्र सहसो॒ वि पू॒र्वीर्दे॒वस्य॒ यन्त्यू॒तयो॒ वि वाजा॑: ।\n\nत्वं दे॑हि सह॒स्रिणं॑ र॒यिं नो॑ऽद्रो॒घेण॒ वच॑सा स॒त्यम॑ग्ने",
-      "iast": "||\n\ntvaddhi pu̍tra sahaso̱ vi pū̱rvīrde̱vasya̱ yantyū̱tayo̱ vi vājā̍: |\n\ntvaṃ de̍hi saha̱sriṇa̍ṃ ra̱yiṃ no̍'dro̱gheṇa̱ vaca̍sā sa̱tyama̍gne"
+      "text": "त्वद्धि पु॑त्र सहसो॒ वि पू॒र्वीर्दे॒वस्य॒ यन्त्यू॒तयो॒ वि वाजा॑: ।\n\nत्वं दे॑हि सह॒स्रिणं॑ र॒यिं नो॑ऽद्रो॒घेण॒ वच॑सा स॒त्यम॑ग्ने",
+      "iast": "tvaddhi pu̍tra sahaso̱ vi pū̱rvīrde̱vasya̱ yantyū̱tayo̱ vi vājā̍: |\n\ntvaṃ de̍hi saha̱sriṇa̍ṃ ra̱yiṃ no̍'dro̱gheṇa̱ vaca̍sā sa̱tyama̍gne"
     },
     "3:14:7": {
       "mandala": 3,
       "sukta": 14,
       "verse": 7,
-      "text": "॥\n\nतुभ्यं॑ दक्ष कविक्रतो॒ यानी॒मा देव॒ मर्ता॑सो अध्व॒रे अक॑र्म ।\n\nत्वं विश्व॑स्य सु॒रथ॑स्य बोधि॒ सर्वं॒ तद॑ग्ने अमृत स्वदे॒ह",
-      "iast": "||\n\ntubhya̍ṃ dakṣa kavikrato̱ yānī̱mā deva̱ martā̍so adhva̱re aka̍rma |\n\ntvaṃ viśva̍sya su̱ratha̍sya bodhi̱ sarva̱ṃ tada̍gne amṛta svade̱ha"
+      "text": "तुभ्यं॑ दक्ष कविक्रतो॒ यानी॒मा देव॒ मर्ता॑सो अध्व॒रे अक॑र्म ।\n\nत्वं विश्व॑स्य सु॒रथ॑स्य बोधि॒ सर्वं॒ तद॑ग्ने अमृत स्वदे॒ह",
+      "iast": "tubhya̍ṃ dakṣa kavikrato̱ yānī̱mā deva̱ martā̍so adhva̱re aka̍rma |\n\ntvaṃ viśva̍sya su̱ratha̍sya bodhi̱ sarva̱ṃ tada̍gne amṛta svade̱ha"
     },
     "3:15:1": {
       "mandala": 3,
@@ -18344,15 +18344,15 @@
       "mandala": 3,
       "sukta": 27,
       "verse": 11,
-      "text": "॥\n\nअ॒ग्निं य॒न्तुर॑म॒प्तुर॑मृ॒तस्य॒ योगे॑ व॒नुष॑: । विप्रा॒ वाजै॒: समि॑न्धते",
-      "iast": "||\n\na̱gniṃ ya̱ntura̍ma̱ptura̍mṛ̱tasya̱ yoge̍ va̱nuṣa̍: | viprā̱ vājai̱: sami̍ndhate"
+      "text": "अ॒ग्निं य॒न्तुर॑म॒प्तुर॑मृ॒तस्य॒ योगे॑ व॒नुष॑: । विप्रा॒ वाजै॒: समि॑न्धते",
+      "iast": "a̱gniṃ ya̱ntura̍ma̱ptura̍mṛ̱tasya̱ yoge̍ va̱nuṣa̍: | viprā̱ vājai̱: sami̍ndhate"
     },
     "3:27:12": {
       "mandala": 3,
       "sukta": 27,
       "verse": 12,
-      "text": "॥\n\nऊ॒र्जो नपा॑तमध्व॒रे दी॑दि॒वांस॒मुप॒ द्यवि॑ । अ॒ग्निमी॑ळे क॒विक्र॑तुम्",
-      "iast": "||\n\nū̱rjo napā̍tamadhva̱re dī̍di̱vāṃsa̱mupa̱ dyavi̍ | a̱gnimī̍l̤e ka̱vikra̍tum"
+      "text": "ऊ॒र्जो नपा॑तमध्व॒रे दी॑दि॒वांस॒मुप॒ द्यवि॑ । अ॒ग्निमी॑ळे क॒विक्र॑तुम्",
+      "iast": "ū̱rjo napā̍tamadhva̱re dī̍di̱vāṃsa̱mupa̱ dyavi̍ | a̱gnimī̍l̤e ka̱vikra̍tum"
     },
     "3:27:13": {
       "mandala": 3,
@@ -18491,15 +18491,15 @@
       "mandala": 3,
       "sukta": 29,
       "verse": 11,
-      "text": "॥\n\nतनू॒नपा॑दुच्यते॒ गर्भ॑ आसु॒रो नरा॒शंसो॑ भवति॒ यद् वि॒जाय॑ते ।\n\nमा॒त॒रिश्वा॒ यदमि॑मीत मा॒तरि॒ वात॑स्य॒ सर्गो॑ अभव॒त् सरी॑मणि",
-      "iast": "||\n\ntanū̱napā̍ducyate̱ garbha̍ āsu̱ro narā̱śaṃso̍ bhavati̱ yad vi̱jāya̍te |\n\nmā̱ta̱riśvā̱ yadami̍mīta mā̱tari̱ vāta̍sya̱ sargo̍ abhava̱t sarī̍maṇi"
+      "text": "तनू॒नपा॑दुच्यते॒ गर्भ॑ आसु॒रो नरा॒शंसो॑ भवति॒ यद् वि॒जाय॑ते ।\n\nमा॒त॒रिश्वा॒ यदमि॑मीत मा॒तरि॒ वात॑स्य॒ सर्गो॑ अभव॒त् सरी॑मणि",
+      "iast": "tanū̱napā̍ducyate̱ garbha̍ āsu̱ro narā̱śaṃso̍ bhavati̱ yad vi̱jāya̍te |\n\nmā̱ta̱riśvā̱ yadami̍mīta mā̱tari̱ vāta̍sya̱ sargo̍ abhava̱t sarī̍maṇi"
     },
     "3:29:12": {
       "mandala": 3,
       "sukta": 29,
       "verse": 12,
-      "text": "॥\n\nसु॒नि॒र्मथा॒ निर्म॑थितः सुनि॒धा निहि॑तः क॒विः ।\n\nअग्ने॑ स्वध्व॒रा कृ॑णु दे॒वान् दे॑वय॒ते य॑ज",
-      "iast": "||\n\nsu̱ni̱rmathā̱ nirma̍thitaḥ suni̱dhā nihi̍taḥ ka̱viḥ |\n\nagne̍ svadhva̱rā kṛ̍ṇu de̱vān de̍vaya̱te ya̍ja"
+      "text": "सु॒नि॒र्मथा॒ निर्म॑थितः सुनि॒धा निहि॑तः क॒विः ।\n\nअग्ने॑ स्वध्व॒रा कृ॑णु दे॒वान् दे॑वय॒ते य॑ज",
+      "iast": "su̱ni̱rmathā̱ nirma̍thitaḥ suni̱dhā nihi̍taḥ ka̱viḥ |\n\nagne̍ svadhva̱rā kṛ̍ṇu de̱vān de̍vaya̱te ya̍ja"
     },
     "3:29:13": {
       "mandala": 3,
@@ -18603,15 +18603,15 @@
       "mandala": 3,
       "sukta": 30,
       "verse": 11,
-      "text": "॥\n\nएको॒ द्वे वसु॑मती समी॒ची इन्द्र॒ आ प॑प्रौ पृथि॒वीमु॒त द्याम् ।\n\nउ॒तान्तरि॑क्षाद॒भि न॑: समी॒क इ॒षो र॒थीः स॒युज॑: शूर॒ वाजा॑न्",
-      "iast": "||\n\neko̱ dve vasu̍matī samī̱cī indra̱ ā pa̍prau pṛthi̱vīmu̱ta dyām |\n\nu̱tāntari̍kṣāda̱bhi na̍: samī̱ka i̱ṣo ra̱thīḥ sa̱yuja̍: śūra̱ vājā̍n"
+      "text": "एको॒ द्वे वसु॑मती समी॒ची इन्द्र॒ आ प॑प्रौ पृथि॒वीमु॒त द्याम् ।\n\nउ॒तान्तरि॑क्षाद॒भि न॑: समी॒क इ॒षो र॒थीः स॒युज॑: शूर॒ वाजा॑न्",
+      "iast": "eko̱ dve vasu̍matī samī̱cī indra̱ ā pa̍prau pṛthi̱vīmu̱ta dyām |\n\nu̱tāntari̍kṣāda̱bhi na̍: samī̱ka i̱ṣo ra̱thīḥ sa̱yuja̍: śūra̱ vājā̍n"
     },
     "3:30:12": {
       "mandala": 3,
       "sukta": 30,
       "verse": 12,
-      "text": "॥\n\nदिश॒: सूर्यो॒ न मि॑नाति॒ प्रदि॑ष्टा दि॒वेदि॑वे॒ हर्य॑श्वप्रसूताः ।\n\nसं यदान॒ळध्व॑न॒ आदिदश्वै॑र्वि॒मोच॑नं कृणुते॒ तत्त्व॑स्य",
-      "iast": "||\n\ndiśa̱: sūryo̱ na mi̍nāti̱ pradi̍ṣṭā di̱vedi̍ve̱ harya̍śvaprasūtāḥ |\n\nsaṃ yadāna̱l̤adhva̍na̱ ādidaśvai̍rvi̱moca̍naṃ kṛṇute̱ tattva̍sya"
+      "text": "दिश॒: सूर्यो॒ न मि॑नाति॒ प्रदि॑ष्टा दि॒वेदि॑वे॒ हर्य॑श्वप्रसूताः ।\n\nसं यदान॒ळध्व॑न॒ आदिदश्वै॑र्वि॒मोच॑नं कृणुते॒ तत्त्व॑स्य",
+      "iast": "diśa̱: sūryo̱ na mi̍nāti̱ pradi̍ṣṭā di̱vedi̍ve̱ harya̍śvaprasūtāḥ |\n\nsaṃ yadāna̱l̤adhva̍na̱ ādidaśvai̍rvi̱moca̍naṃ kṛṇute̱ tattva̍sya"
     },
     "3:30:13": {
       "mandala": 3,
@@ -18673,15 +18673,15 @@
       "mandala": 3,
       "sukta": 30,
       "verse": 21,
-      "text": "॥\n\nआ नो॑ गो॒त्रा द॑र्दृहि गोपते॒ गाः सम॒स्मभ्यं॑ स॒नयो॑ यन्तु॒ वाजा॑: ।\n\nदि॒वक्षा॑ असि वृषभ स॒त्यशु॑ष्मो॒ऽस्मभ्यं॒ सु म॑घवन् बोधि गो॒दाः",
-      "iast": "||\n\nā no̍ go̱trā da̍rdṛhi gopate̱ gāḥ sama̱smabhya̍ṃ sa̱nayo̍ yantu̱ vājā̍: |\n\ndi̱vakṣā̍ asi vṛṣabha sa̱tyaśu̍ṣmo̱'smabhya̱ṃ su ma̍ghavan bodhi go̱dāḥ"
+      "text": "आ नो॑ गो॒त्रा द॑र्दृहि गोपते॒ गाः सम॒स्मभ्यं॑ स॒नयो॑ यन्तु॒ वाजा॑: ।\n\nदि॒वक्षा॑ असि वृषभ स॒त्यशु॑ष्मो॒ऽस्मभ्यं॒ सु म॑घवन् बोधि गो॒दाः",
+      "iast": "ā no̍ go̱trā da̍rdṛhi gopate̱ gāḥ sama̱smabhya̍ṃ sa̱nayo̍ yantu̱ vājā̍: |\n\ndi̱vakṣā̍ asi vṛṣabha sa̱tyaśu̍ṣmo̱'smabhya̱ṃ su ma̍ghavan bodhi go̱dāḥ"
     },
     "3:30:22": {
       "mandala": 3,
       "sukta": 30,
       "verse": 22,
-      "text": "॥\n\nशु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन् भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
-      "iast": "||\n\nśu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱smin bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
+      "text": "शु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन् भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
+      "iast": "śu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱smin bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
     },
     "3:31:1": {
       "mandala": 3,
@@ -18757,15 +18757,15 @@
       "mandala": 3,
       "sukta": 31,
       "verse": 11,
-      "text": "॥\n\nस जा॒तेभि॑र्वृत्र॒हा सेदु॑ ह॒व्यैरुदु॒स्रिया॑ असृज॒दिन्द्रो॑ अ॒र्कैः ।\n\nउ॒रू॒च्य॑स्मै घृ॒तव॒द् भर॑न्ती॒ मधु॒ स्वाद्म॑ दुदुहे॒ जेन्या॒ गौः",
-      "iast": "||\n\nsa jā̱tebhi̍rvṛtra̱hā sedu̍ ha̱vyairudu̱sriyā̍ asṛja̱dindro̍ a̱rkaiḥ |\n\nu̱rū̱cya̍smai ghṛ̱tava̱d bhara̍ntī̱ madhu̱ svādma̍ duduhe̱ jenyā̱ gauḥ"
+      "text": "स जा॒तेभि॑र्वृत्र॒हा सेदु॑ ह॒व्यैरुदु॒स्रिया॑ असृज॒दिन्द्रो॑ अ॒र्कैः ।\n\nउ॒रू॒च्य॑स्मै घृ॒तव॒द् भर॑न्ती॒ मधु॒ स्वाद्म॑ दुदुहे॒ जेन्या॒ गौः",
+      "iast": "sa jā̱tebhi̍rvṛtra̱hā sedu̍ ha̱vyairudu̱sriyā̍ asṛja̱dindro̍ a̱rkaiḥ |\n\nu̱rū̱cya̍smai ghṛ̱tava̱d bhara̍ntī̱ madhu̱ svādma̍ duduhe̱ jenyā̱ gauḥ"
     },
     "3:31:12": {
       "mandala": 3,
       "sukta": 31,
       "verse": 12,
-      "text": "॥\n\nपि॒त्रे चि॑च्चक्रु॒: सद॑नं॒ सम॑स्मै॒ महि॒ त्विषी॑मत् सु॒कृतो॒ वि हि ख्यन् ।\n\nवि॒ष्क॒भ्नन्त॒: स्कम्भ॑नेना॒ जनि॑त्री॒ आसी॑ना ऊ॒र्ध्वं र॑भ॒सं वि मि॑न्वन्",
-      "iast": "||\n\npi̱tre ci̍ccakru̱: sada̍na̱ṃ sama̍smai̱ mahi̱ tviṣī̍mat su̱kṛto̱ vi hi khyan |\n\nvi̱ṣka̱bhnanta̱: skambha̍nenā̱ jani̍trī̱ āsī̍nā ū̱rdhvaṃ ra̍bha̱saṃ vi mi̍nvan"
+      "text": "पि॒त्रे चि॑च्चक्रु॒: सद॑नं॒ सम॑स्मै॒ महि॒ त्विषी॑मत् सु॒कृतो॒ वि हि ख्यन् ।\n\nवि॒ष्क॒भ्नन्त॒: स्कम्भ॑नेना॒ जनि॑त्री॒ आसी॑ना ऊ॒र्ध्वं र॑भ॒सं वि मि॑न्वन्",
+      "iast": "pi̱tre ci̍ccakru̱: sada̍na̱ṃ sama̍smai̱ mahi̱ tviṣī̍mat su̱kṛto̱ vi hi khyan |\n\nvi̱ṣka̱bhnanta̱: skambha̍nenā̱ jani̍trī̱ āsī̍nā ū̱rdhvaṃ ra̍bha̱saṃ vi mi̍nvan"
     },
     "3:31:13": {
       "mandala": 3,
@@ -18827,15 +18827,15 @@
       "mandala": 3,
       "sukta": 31,
       "verse": 21,
-      "text": "॥\n\nअदे॑दिष्ट वृत्र॒हा गोप॑ति॒र्गा अ॒न्तः कृ॒ष्णाँ अ॑रु॒षैर्धाम॑भिर्गात् ।\n\nप्र सू॒नृता॑ दि॒शमा॑न ऋ॒तेन॒ दुर॑श्च॒ विश्वा॑ अवृणो॒दप॒ स्वाः",
-      "iast": "||\n\nade̍diṣṭa vṛtra̱hā gopa̍ti̱rgā a̱ntaḥ kṛ̱ṣṇām̐ a̍ru̱ṣairdhāma̍bhirgāt |\n\npra sū̱nṛtā̍ di̱śamā̍na ṛ̱tena̱ dura̍śca̱ viśvā̍ avṛṇo̱dapa̱ svāḥ"
+      "text": "अदे॑दिष्ट वृत्र॒हा गोप॑ति॒र्गा अ॒न्तः कृ॒ष्णाँ अ॑रु॒षैर्धाम॑भिर्गात् ।\n\nप्र सू॒नृता॑ दि॒शमा॑न ऋ॒तेन॒ दुर॑श्च॒ विश्वा॑ अवृणो॒दप॒ स्वाः",
+      "iast": "ade̍diṣṭa vṛtra̱hā gopa̍ti̱rgā a̱ntaḥ kṛ̱ṣṇām̐ a̍ru̱ṣairdhāma̍bhirgāt |\n\npra sū̱nṛtā̍ di̱śamā̍na ṛ̱tena̱ dura̍śca̱ viśvā̍ avṛṇo̱dapa̱ svāḥ"
     },
     "3:31:22": {
       "mandala": 3,
       "sukta": 31,
       "verse": 22,
-      "text": "॥\n\nशु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन्भ भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
-      "iast": "||\n\nśu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱sminbha bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
+      "text": "शु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन्भ भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
+      "iast": "śu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱sminbha bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
     },
     "3:32:1": {
       "mandala": 3,
@@ -18863,7 +18863,7 @@
       "sukta": 32,
       "verse": 6,
       "text": "त इन्न्व॑स्य॒ मधु॑मद् विविप्र॒ इन्द्र॑स्य॒ शर्धो॑ म॒रुतो॒ य आस॑न् ।\n\nयेभि॑र्वृ॒त्रस्ये॑षि॒तो वि॒वेदा॑म॒र्मणो॒ मन्य॑मानस्य॒ मर्म॑ ४॥\n\nम॒नु॒ष्वदि॑न्द्र॒ सव॑नं जुषा॒णः पिबा॒ सोमं॒ शश्व॑ते वी॒र्या॑य ।\n\nस आ व॑वृत्स्व हर्यश्व य॒ज्ञैः स॑र॒ण्युभि॑र॒पो अर्णा॑ सिसर्षि ५॥\n\nत्वम॒पो यद्ध॑ वृ॒त्रं ज॑घ॒न्वाँ अत्याँ॑ इव॒ प्रासृ॑ज॒: सर्त॒वाजौ ।\n\nशया॑नमिन्द्र॒ चर॑ता व॒धेन॑ वव्रि॒वांसं॒ परि॑ दे॒वीरदे॑वम्",
-      "iast": "ta innva̍sya̱ madhu̍mad vivipra̱ indra̍sya̱ śardho̍ ma̱ruto̱ ya āsa̍n |\n\nyebhi̍rvṛ̱trasye̍ṣi̱to vi̱vedā̍ma̱rmaṇo̱ manya̍mānasya̱ marma̍ 4||\n\nma̱nu̱ṣvadi̍ndra̱ sava̍naṃ juṣā̱ṇaḥ pibā̱ soma̱ṃ śaśva̍te vī̱ryā̍ya |\n\nsa ā va̍vṛtsva haryaśva ya̱jñaiḥ sa̍ra̱ṇyubhi̍ra̱po arṇā̍ sisarṣi 5||\n\ntvama̱po yaddha̍ vṛ̱traṃ ja̍gha̱nvām̐ atyā̍m̐ iva̱ prāsṛ̍ja̱: sarta̱vājau |\n\nśayā̍namindra̱ cara̍tā va̱dhena̍ vavri̱vāṃsa̱ṃ pari̍ de̱vīrade̍vam"
+      "iast": "ta innva̍sya̱ madhu̍mad vivipra̱ indra̍sya̱ śardho̍ ma̱ruto̱ ya āsa̍n |\n\nyebhi̍rvṛ̱trasye̍ṣi̱to vi̱vedā̍ma̱rmaṇo̱ manya̍mānasya̱ marma̍ 4ma̱nu̱ṣvadi̍ndra̱ sava̍naṃ juṣā̱ṇaḥ pibā̱ soma̱ṃ śaśva̍te vī̱ryā̍ya |\n\nsa ā va̍vṛtsva haryaśva ya̱jñaiḥ sa̍ra̱ṇyubhi̍ra̱po arṇā̍ sisarṣi 5tvama̱po yaddha̍ vṛ̱traṃ ja̍gha̱nvām̐ atyā̍m̐ iva̱ prāsṛ̍ja̱: sarta̱vājau |\n\nśayā̍namindra̱ cara̍tā va̱dhena̍ vavri̱vāṃsa̱ṃ pari̍ de̱vīrade̍vam"
     },
     "3:32:7": {
       "mandala": 3,
@@ -18897,15 +18897,15 @@
       "mandala": 3,
       "sukta": 32,
       "verse": 11,
-      "text": "॥\n\nअह॒न्नहिं॑ परि॒शया॑न॒मर्ण॑ ओजा॒यमा॑नं तुविजात॒ तव्या॑न् ।\n\nन ते॑ महि॒त्वमनु॑ भू॒दध॒ द्यौर्यद॒न्यया॑ स्फि॒ग्या॒३ क्षामव॑स्थाः",
-      "iast": "||\n\naha̱nnahi̍ṃ pari̱śayā̍na̱marṇa̍ ojā̱yamā̍naṃ tuvijāta̱ tavyā̍n |\n\nna te̍ mahi̱tvamanu̍ bhū̱dadha̱ dyauryada̱nyayā̍ sphi̱gyā̱3 kṣāmava̍sthāḥ"
+      "text": "अह॒न्नहिं॑ परि॒शया॑न॒मर्ण॑ ओजा॒यमा॑नं तुविजात॒ तव्या॑न् ।\n\nन ते॑ महि॒त्वमनु॑ भू॒दध॒ द्यौर्यद॒न्यया॑ स्फि॒ग्या॒३ क्षामव॑स्थाः",
+      "iast": "aha̱nnahi̍ṃ pari̱śayā̍na̱marṇa̍ ojā̱yamā̍naṃ tuvijāta̱ tavyā̍n |\n\nna te̍ mahi̱tvamanu̍ bhū̱dadha̱ dyauryada̱nyayā̍ sphi̱gyā̱3 kṣāmava̍sthāḥ"
     },
     "3:32:12": {
       "mandala": 3,
       "sukta": 32,
       "verse": 12,
-      "text": "॥\n\nय॒ज्ञो हि त॑ इन्द्र॒ वर्ध॑नो॒ भूदु॒त प्रि॒यः सु॒तसो॑मो मि॒येध॑: ।\n\nय॒ज्ञेन॑ य॒ज्ञम॑व य॒ज्ञिय॒: सन् य॒ज्ञस्ते॒ वज्र॑महि॒हत्य॑ आवत्",
-      "iast": "||\n\nya̱jño hi ta̍ indra̱ vardha̍no̱ bhūdu̱ta pri̱yaḥ su̱taso̍mo mi̱yedha̍: |\n\nya̱jñena̍ ya̱jñama̍va ya̱jñiya̱: san ya̱jñaste̱ vajra̍mahi̱hatya̍ āvat"
+      "text": "य॒ज्ञो हि त॑ इन्द्र॒ वर्ध॑नो॒ भूदु॒त प्रि॒यः सु॒तसो॑मो मि॒येध॑: ।\n\nय॒ज्ञेन॑ य॒ज्ञम॑व य॒ज्ञिय॒: सन् य॒ज्ञस्ते॒ वज्र॑महि॒हत्य॑ आवत्",
+      "iast": "ya̱jño hi ta̍ indra̱ vardha̍no̱ bhūdu̱ta pri̱yaḥ su̱taso̍mo mi̱yedha̍: |\n\nya̱jñena̍ ya̱jñama̍va ya̱jñiya̱: san ya̱jñaste̱ vajra̍mahi̱hatya̍ āvat"
     },
     "3:32:13": {
       "mandala": 3,
@@ -19016,15 +19016,15 @@
       "mandala": 3,
       "sukta": 33,
       "verse": 11,
-      "text": "॥\n\nयद॒ङ्ग त्वा॑ भर॒ताः सं॒तरे॑युर्ग॒व्यन् ग्राम॑ इषि॒त इन्द्र॑जूतः ।\n\nअर्षा॒दह॑ प्रस॒वः सर्ग॑तक्त॒ आ वो॑ वृणे सुम॒तिं य॒ज्ञिया॑नाम्",
-      "iast": "||\n\nyada̱ṅga tvā̍ bhara̱tāḥ sa̱ṃtare̍yurga̱vyan grāma̍ iṣi̱ta indra̍jūtaḥ |\n\narṣā̱daha̍ prasa̱vaḥ sarga̍takta̱ ā vo̍ vṛṇe suma̱tiṃ ya̱jñiyā̍nām"
+      "text": "यद॒ङ्ग त्वा॑ भर॒ताः सं॒तरे॑युर्ग॒व्यन् ग्राम॑ इषि॒त इन्द्र॑जूतः ।\n\nअर्षा॒दह॑ प्रस॒वः सर्ग॑तक्त॒ आ वो॑ वृणे सुम॒तिं य॒ज्ञिया॑नाम्",
+      "iast": "yada̱ṅga tvā̍ bhara̱tāḥ sa̱ṃtare̍yurga̱vyan grāma̍ iṣi̱ta indra̍jūtaḥ |\n\narṣā̱daha̍ prasa̱vaḥ sarga̍takta̱ ā vo̍ vṛṇe suma̱tiṃ ya̱jñiyā̍nām"
     },
     "3:33:12": {
       "mandala": 3,
       "sukta": 33,
       "verse": 12,
-      "text": "॥\n\nअता॑रिषुर्भर॒ता ग॒व्यव॒: समभ॑क्त॒ विप्र॑: सुम॒तिं न॒दीना॑म् ।\n\nप्र पि॑न्वध्वमि॒षय॑न्तीः सु॒राधा॒ आ व॒क्षणा॑: पृ॒णध्वं॑ या॒त शीभ॑म्",
-      "iast": "||\n\natā̍riṣurbhara̱tā ga̱vyava̱: samabha̍kta̱ vipra̍: suma̱tiṃ na̱dīnā̍m |\n\npra pi̍nvadhvami̱ṣaya̍ntīḥ su̱rādhā̱ ā va̱kṣaṇā̍: pṛ̱ṇadhva̍ṃ yā̱ta śībha̍m"
+      "text": "अता॑रिषुर्भर॒ता ग॒व्यव॒: समभ॑क्त॒ विप्र॑: सुम॒तिं न॒दीना॑म् ।\n\nप्र पि॑न्वध्वमि॒षय॑न्तीः सु॒राधा॒ आ व॒क्षणा॑: पृ॒णध्वं॑ या॒त शीभ॑म्",
+      "iast": "atā̍riṣurbhara̱tā ga̱vyava̱: samabha̍kta̱ vipra̍: suma̱tiṃ na̱dīnā̍m |\n\npra pi̍nvadhvami̱ṣaya̍ntīḥ su̱rādhā̱ ā va̱kṣaṇā̍: pṛ̱ṇadhva̍ṃ yā̱ta śībha̍m"
     },
     "3:33:13": {
       "mandala": 3,
@@ -19107,8 +19107,8 @@
       "mandala": 3,
       "sukta": 34,
       "verse": 11,
-      "text": "॥\n\nशु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन् भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
-      "iast": "||\n\nśu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱smin bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
+      "text": "शु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन् भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
+      "iast": "śu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱smin bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
     },
     "3:35:1": {
       "mandala": 3,
@@ -19184,8 +19184,8 @@
       "mandala": 3,
       "sukta": 35,
       "verse": 11,
-      "text": "॥\n\nशु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन् भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
-      "iast": "||\n\nśu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱smin bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
+      "text": "शु॒नं हु॑वेम म॒घवा॑न॒मिन्द्र॑म॒स्मिन् भरे॒ नृत॑मं॒ वाज॑सातौ ।\n\nशृ॒ण्वन्त॑मु॒ग्रमू॒तये॑ स॒मत्सु॒ घ्नन्तं॑ वृ॒त्राणि॑ सं॒जितं॒ धना॑नाम्",
+      "iast": "śu̱naṃ hu̍vema ma̱ghavā̍na̱mindra̍ma̱smin bhare̱ nṛta̍ma̱ṃ vāja̍sātau |\n\nśṛ̱ṇvanta̍mu̱gramū̱taye̍ sa̱matsu̱ ghnanta̍ṃ vṛ̱trāṇi̍ sa̱ṃjita̱ṃ dhanā̍nām"
     },
     "3:36:1": {
       "mandala": 3,
@@ -19338,8 +19338,8 @@
       "mandala": 3,
       "sukta": 37,
       "verse": 11,
-      "text": "॥\n\nअ॒र्वा॒वतो॑ न॒ आ ग॒ह्यथो॑ शक्र परा॒वत॑: ।\n\nउ॒ लो॒को यस्ते॑ अद्रिव॒ इन्द्रे॒ह तत॒ आ ग॑हि",
-      "iast": "||\n\na̱rvā̱vato̍ na̱ ā ga̱hyatho̍ śakra parā̱vata̍: |\n\nu̱ lo̱ko yaste̍ adriva̱ indre̱ha tata̱ ā ga̍hi"
+      "text": "अ॒र्वा॒वतो॑ न॒ आ ग॒ह्यथो॑ शक्र परा॒वत॑: ।\n\nउ॒ लो॒को यस्ते॑ अद्रिव॒ इन्द्रे॒ह तत॒ आ ग॑हि",
+      "iast": "a̱rvā̱vato̍ na̱ ā ga̱hyatho̍ śakra parā̱vata̍: |\n\nu̱ lo̱ko yaste̍ adriva̱ indre̱ha tata̱ ā ga̍hi"
     },
     "3:38:1": {
       "mandala": 3,
@@ -19605,7 +19605,7 @@
       "sukta": 42,
       "verse": 2,
       "text": "उप॑ नः सु॒तमा ग॑हि॒ सोम॑मिन्द्र॒ गवा॑शिरम् । हरि॑भ्यां॒ यस्ते॑ अस्म॒युः ॥ १॥\n\nतमि॑न्द्र॒ मद॒मा ग॑हि बर्हि॒:ष्ठां ग्राव॑भिः सु॒तम् । कु॒विन्न्व॑स्य तृ॒प्णव॑:",
-      "iast": "upa̍ naḥ su̱tamā ga̍hi̱ soma̍mindra̱ gavā̍śiram | hari̍bhyā̱ṃ yaste̍ asma̱yuḥ || 1||\n\ntami̍ndra̱ mada̱mā ga̍hi barhi̱:ṣṭhāṃ grāva̍bhiḥ su̱tam | ku̱vinnva̍sya tṛ̱pṇava̍:"
+      "iast": "upa̍ naḥ su̱tamā ga̍hi̱ soma̍mindra̱ gavā̍śiram | hari̍bhyā̱ṃ yaste̍ asma̱yuḥ || 1tami̍ndra̱ mada̱mā ga̍hi barhi̱:ṣṭhāṃ grāva̍bhiḥ su̱tam | ku̱vinnva̍sya tṛ̱pṇava̍:"
     },
     "3:42:3": {
       "mandala": 3,
@@ -20031,15 +20031,15 @@
       "mandala": 3,
       "sukta": 51,
       "verse": 11,
-      "text": "॥\n\nयस्ते॒ अनु॑ स्व॒धामस॑त्सु॒ते नि य॑च्छ त॒न्व॑म् । स त्वा॑ ममत्तु सो॒म्यम्",
-      "iast": "||\n\nyaste̱ anu̍ sva̱dhāmasa̍tsu̱te ni ya̍ccha ta̱nva̍m | sa tvā̍ mamattu so̱myam"
+      "text": "यस्ते॒ अनु॑ स्व॒धामस॑त्सु॒ते नि य॑च्छ त॒न्व॑म् । स त्वा॑ ममत्तु सो॒म्यम्",
+      "iast": "yaste̱ anu̍ sva̱dhāmasa̍tsu̱te ni ya̍ccha ta̱nva̍m | sa tvā̍ mamattu so̱myam"
     },
     "3:51:12": {
       "mandala": 3,
       "sukta": 51,
       "verse": 12,
-      "text": "॥\n\nप्र ते॑ अश्नोतु कु॒क्ष्योः प्रेन्द्र॒ ब्रह्म॑णा॒ शिर॑: । प्र बा॒हू शू॑र॒ राध॑से",
-      "iast": "||\n\npra te̍ aśnotu ku̱kṣyoḥ prendra̱ brahma̍ṇā̱ śira̍: | pra bā̱hū śū̍ra̱ rādha̍se"
+      "text": "प्र ते॑ अश्नोतु कु॒क्ष्योः प्रेन्द्र॒ ब्रह्म॑णा॒ शिर॑: । प्र बा॒हू शू॑र॒ राध॑से",
+      "iast": "pra te̍ aśnotu ku̱kṣyoḥ prendra̱ brahma̍ṇā̱ śira̍: | pra bā̱hū śū̍ra̱ rādha̍se"
     },
     "3:52:1": {
       "mandala": 3,
@@ -20164,15 +20164,15 @@
       "mandala": 3,
       "sukta": 53,
       "verse": 11,
-      "text": "॥\n\nउप॒ प्रेत॑ कुशिकाश्चे॒तय॑ध्व॒मश्वं॑ रा॒ये प्र मु॑ञ्चता सु॒दास॑: ।\n\nराजा॑ वृ॒त्रं ज॑ङ्घन॒त् प्रागपा॒गुद॒गथा॑ यजाते॒ वर॒ आ पृ॑थि॒व्याः",
-      "iast": "||\n\nupa̱ preta̍ kuśikāśce̱taya̍dhva̱maśva̍ṃ rā̱ye pra mu̍ñcatā su̱dāsa̍: |\n\nrājā̍ vṛ̱traṃ ja̍ṅghana̱t prāgapā̱guda̱gathā̍ yajāte̱ vara̱ ā pṛ̍thi̱vyāḥ"
+      "text": "उप॒ प्रेत॑ कुशिकाश्चे॒तय॑ध्व॒मश्वं॑ रा॒ये प्र मु॑ञ्चता सु॒दास॑: ।\n\nराजा॑ वृ॒त्रं ज॑ङ्घन॒त् प्रागपा॒गुद॒गथा॑ यजाते॒ वर॒ आ पृ॑थि॒व्याः",
+      "iast": "upa̱ preta̍ kuśikāśce̱taya̍dhva̱maśva̍ṃ rā̱ye pra mu̍ñcatā su̱dāsa̍: |\n\nrājā̍ vṛ̱traṃ ja̍ṅghana̱t prāgapā̱guda̱gathā̍ yajāte̱ vara̱ ā pṛ̍thi̱vyāḥ"
     },
     "3:53:12": {
       "mandala": 3,
       "sukta": 53,
       "verse": 12,
-      "text": "॥\n\nय इ॒मे रोद॑सी उ॒भे अ॒हमिन्द्र॒मतु॑ष्टवम् ।\n\nवि॒श्वामि॑त्रस्य रक्षति॒ ब्रह्मे॒दं भार॑तं॒ जन॑म्",
-      "iast": "||\n\nya i̱me roda̍sī u̱bhe a̱hamindra̱matu̍ṣṭavam |\n\nvi̱śvāmi̍trasya rakṣati̱ brahme̱daṃ bhāra̍ta̱ṃ jana̍m"
+      "text": "य इ॒मे रोद॑सी उ॒भे अ॒हमिन्द्र॒मतु॑ष्टवम् ।\n\nवि॒श्वामि॑त्रस्य रक्षति॒ ब्रह्मे॒दं भार॑तं॒ जन॑म्",
+      "iast": "ya i̱me roda̍sī u̱bhe a̱hamindra̱matu̍ṣṭavam |\n\nvi̱śvāmi̍trasya rakṣati̱ brahme̱daṃ bhāra̍ta̱ṃ jana̍m"
     },
     "3:53:13": {
       "mandala": 3,
@@ -20234,22 +20234,22 @@
       "mandala": 3,
       "sukta": 53,
       "verse": 21,
-      "text": "॥\n\nइन्द्रो॒तिभि॑र्बहु॒लाभि॑र्नो अ॒द्य या॑च्छ्रे॒ष्ठाभि॑र्मघवञ्छूर जिन्व ।\n\nयो नो॒ द्वेष्ट्यध॑र॒: सस्प॑दीष्ट॒ यमु॑ द्वि॒ष्मस्तमु॑ प्रा॒णो ज॑हातु",
-      "iast": "||\n\nindro̱tibhi̍rbahu̱lābhi̍rno a̱dya yā̍cchre̱ṣṭhābhi̍rmaghavañchūra jinva |\n\nyo no̱ dveṣṭyadha̍ra̱: saspa̍dīṣṭa̱ yamu̍ dvi̱ṣmastamu̍ prā̱ṇo ja̍hātu"
+      "text": "इन्द्रो॒तिभि॑र्बहु॒लाभि॑र्नो अ॒द्य या॑च्छ्रे॒ष्ठाभि॑र्मघवञ्छूर जिन्व ।\n\nयो नो॒ द्वेष्ट्यध॑र॒: सस्प॑दीष्ट॒ यमु॑ द्वि॒ष्मस्तमु॑ प्रा॒णो ज॑हातु",
+      "iast": "indro̱tibhi̍rbahu̱lābhi̍rno a̱dya yā̍cchre̱ṣṭhābhi̍rmaghavañchūra jinva |\n\nyo no̱ dveṣṭyadha̍ra̱: saspa̍dīṣṭa̱ yamu̍ dvi̱ṣmastamu̍ prā̱ṇo ja̍hātu"
     },
     "3:53:22": {
       "mandala": 3,
       "sukta": 53,
       "verse": 22,
-      "text": "॥\n\nप॒र॒शुं चि॒द् वि त॑पति शिम्ब॒लं चि॒द् वि वृ॑श्चति ।\n\nउ॒खा चि॑दिन्द्र॒ येष॑न्ती॒ प्रय॑स्ता॒ फेन॑मस्यति",
-      "iast": "||\n\npa̱ra̱śuṃ ci̱d vi ta̍pati śimba̱laṃ ci̱d vi vṛ̍ścati |\n\nu̱khā ci̍dindra̱ yeṣa̍ntī̱ praya̍stā̱ phena̍masyati"
+      "text": "प॒र॒शुं चि॒द् वि त॑पति शिम्ब॒लं चि॒द् वि वृ॑श्चति ।\n\nउ॒खा चि॑दिन्द्र॒ येष॑न्ती॒ प्रय॑स्ता॒ फेन॑मस्यति",
+      "iast": "pa̱ra̱śuṃ ci̱d vi ta̍pati śimba̱laṃ ci̱d vi vṛ̍ścati |\n\nu̱khā ci̍dindra̱ yeṣa̍ntī̱ praya̍stā̱ phena̍masyati"
     },
     "3:53:23": {
       "mandala": 3,
       "sukta": 53,
       "verse": 23,
-      "text": "॥\n\nन साय॑कस्य चिकिते जनासो लो॒धं न॑यन्ति॒ पशु॒ मन्य॑मानाः ।\n\nनावा॑जिनं वा॒जिना॑ हासयन्ति॒ न ग॑र्द॒भं पु॒रो अश्वा॑न्नयन्ति",
-      "iast": "||\n\nna sāya̍kasya cikite janāso lo̱dhaṃ na̍yanti̱ paśu̱ manya̍mānāḥ |\n\nnāvā̍jinaṃ vā̱jinā̍ hāsayanti̱ na ga̍rda̱bhaṃ pu̱ro aśvā̍nnayanti"
+      "text": "न साय॑कस्य चिकिते जनासो लो॒धं न॑यन्ति॒ पशु॒ मन्य॑मानाः ।\n\nनावा॑जिनं वा॒जिना॑ हासयन्ति॒ न ग॑र्द॒भं पु॒रो अश्वा॑न्नयन्ति",
+      "iast": "na sāya̍kasya cikite janāso lo̱dhaṃ na̍yanti̱ paśu̱ manya̍mānāḥ |\n\nnāvā̍jinaṃ vā̱jinā̍ hāsayanti̱ na ga̍rda̱bhaṃ pu̱ro aśvā̍nnayanti"
     },
     "3:53:24": {
       "mandala": 3,
@@ -20332,15 +20332,15 @@
       "mandala": 3,
       "sukta": 54,
       "verse": 11,
-      "text": "॥\n\nहिर॑ण्यपाणिः सवि॒ता सु॑जि॒ह्वस्त्रिरा दि॒वो वि॒दथे॒ पत्य॑मानः ।\n\nदे॒वेषु॑ च सवित॒: श्लोक॒मश्रे॒राद॒स्मभ्य॒मा सु॑व स॒र्वता॑तिम्",
-      "iast": "||\n\nhira̍ṇyapāṇiḥ savi̱tā su̍ji̱hvastrirā di̱vo vi̱dathe̱ patya̍mānaḥ |\n\nde̱veṣu̍ ca savita̱: śloka̱maśre̱rāda̱smabhya̱mā su̍va sa̱rvatā̍tim"
+      "text": "हिर॑ण्यपाणिः सवि॒ता सु॑जि॒ह्वस्त्रिरा दि॒वो वि॒दथे॒ पत्य॑मानः ।\n\nदे॒वेषु॑ च सवित॒: श्लोक॒मश्रे॒राद॒स्मभ्य॒मा सु॑व स॒र्वता॑तिम्",
+      "iast": "hira̍ṇyapāṇiḥ savi̱tā su̍ji̱hvastrirā di̱vo vi̱dathe̱ patya̍mānaḥ |\n\nde̱veṣu̍ ca savita̱: śloka̱maśre̱rāda̱smabhya̱mā su̍va sa̱rvatā̍tim"
     },
     "3:54:12": {
       "mandala": 3,
       "sukta": 54,
       "verse": 12,
-      "text": "॥\n\nसु॒कृत् सु॒पा॒णिः स्ववाँ॑ ऋ॒तावा॑ दे॒वस्त्वष्टाव॑से॒ तानि॑ नो धात् ।\n\nपू॒ष॒ण्वन्त॑ ऋभवो मादयध्वमू॒र्ध्वग्रा॑वाणो अध्व॒रम॑तष्ट",
-      "iast": "||\n\nsu̱kṛt su̱pā̱ṇiḥ svavā̍m̐ ṛ̱tāvā̍ de̱vastvaṣṭāva̍se̱ tāni̍ no dhāt |\n\npū̱ṣa̱ṇvanta̍ ṛbhavo mādayadhvamū̱rdhvagrā̍vāṇo adhva̱rama̍taṣṭa"
+      "text": "सु॒कृत् सु॒पा॒णिः स्ववाँ॑ ऋ॒तावा॑ दे॒वस्त्वष्टाव॑से॒ तानि॑ नो धात् ।\n\nपू॒ष॒ण्वन्त॑ ऋभवो मादयध्वमू॒र्ध्वग्रा॑वाणो अध्व॒रम॑तष्ट",
+      "iast": "su̱kṛt su̱pā̱ṇiḥ svavā̍m̐ ṛ̱tāvā̍ de̱vastvaṣṭāva̍se̱ tāni̍ no dhāt |\n\npū̱ṣa̱ṇvanta̍ ṛbhavo mādayadhvamū̱rdhvagrā̍vāṇo adhva̱rama̍taṣṭa"
     },
     "3:54:13": {
       "mandala": 3,
@@ -20402,15 +20402,15 @@
       "mandala": 3,
       "sukta": 54,
       "verse": 21,
-      "text": "॥\n\nसदा॑ सु॒गः पि॑तु॒माँ अ॑स्तु॒ पन्था॒ मध्वा॑ देवा॒ ओष॑धी॒: सं पि॑पृक्त ।\n\nभगो॑ मे अग्ने स॒ख्ये न मृ॑ध्या॒ उद् रा॒यो अ॑श्यां॒ सद॑नं पुरु॒क्षोः",
-      "iast": "||\n\nsadā̍ su̱gaḥ pi̍tu̱mām̐ a̍stu̱ panthā̱ madhvā̍ devā̱ oṣa̍dhī̱: saṃ pi̍pṛkta |\n\nbhago̍ me agne sa̱khye na mṛ̍dhyā̱ ud rā̱yo a̍śyā̱ṃ sada̍naṃ puru̱kṣoḥ"
+      "text": "सदा॑ सु॒गः पि॑तु॒माँ अ॑स्तु॒ पन्था॒ मध्वा॑ देवा॒ ओष॑धी॒: सं पि॑पृक्त ।\n\nभगो॑ मे अग्ने स॒ख्ये न मृ॑ध्या॒ उद् रा॒यो अ॑श्यां॒ सद॑नं पुरु॒क्षोः",
+      "iast": "sadā̍ su̱gaḥ pi̍tu̱mām̐ a̍stu̱ panthā̱ madhvā̍ devā̱ oṣa̍dhī̱: saṃ pi̍pṛkta |\n\nbhago̍ me agne sa̱khye na mṛ̍dhyā̱ ud rā̱yo a̍śyā̱ṃ sada̍naṃ puru̱kṣoḥ"
     },
     "3:54:22": {
       "mandala": 3,
       "sukta": 54,
       "verse": 22,
-      "text": "॥\n\nस्वद॑स्व ह॒व्या समिषो॑ दिदीह्यस्म॒द्र्य१क् सं मि॑मीहि॒ श्रवां॑सि ।\n\nविश्वाँ॑ अग्ने पृ॒त्सु ताञ्जे॑षि॒ शत्रू॒नहा॒ विश्वा॑ सु॒मना॑ दीदिही नः",
-      "iast": "||\n\nsvada̍sva ha̱vyā samiṣo̍ didīhyasma̱drya1k saṃ mi̍mīhi̱ śravā̍ṃsi |\n\nviśvā̍m̐ agne pṛ̱tsu tāñje̍ṣi̱ śatrū̱nahā̱ viśvā̍ su̱manā̍ dīdihī naḥ"
+      "text": "स्वद॑स्व ह॒व्या समिषो॑ दिदीह्यस्म॒द्र्य१क् सं मि॑मीहि॒ श्रवां॑सि ।\n\nविश्वाँ॑ अग्ने पृ॒त्सु ताञ्जे॑षि॒ शत्रू॒नहा॒ विश्वा॑ सु॒मना॑ दीदिही नः",
+      "iast": "svada̍sva ha̱vyā samiṣo̍ didīhyasma̱drya1k saṃ mi̍mīhi̱ śravā̍ṃsi |\n\nviśvā̍m̐ agne pṛ̱tsu tāñje̍ṣi̱ śatrū̱nahā̱ viśvā̍ su̱manā̍ dīdihī naḥ"
     },
     "3:55:1": {
       "mandala": 3,
@@ -20486,15 +20486,15 @@
       "mandala": 3,
       "sukta": 55,
       "verse": 11,
-      "text": "॥\n\nनाना॑ चक्राते य॒म्या॒३वपूं॑षि॒ तयो॑र॒न्यद् रोच॑ते कृ॒ष्णम॒न्यत् ।\n\nश्यावी॑ च॒ यदरु॑षी च॒ स्वसा॑रौ म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
-      "iast": "||\n\nnānā̍ cakrāte ya̱myā̱3vapū̍ṃṣi̱ tayo̍ra̱nyad roca̍te kṛ̱ṣṇama̱nyat |\n\nśyāvī̍ ca̱ yadaru̍ṣī ca̱ svasā̍rau ma̱had de̱vānā̍masura̱tvameka̍m"
+      "text": "नाना॑ चक्राते य॒म्या॒३वपूं॑षि॒ तयो॑र॒न्यद् रोच॑ते कृ॒ष्णम॒न्यत् ।\n\nश्यावी॑ च॒ यदरु॑षी च॒ स्वसा॑रौ म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
+      "iast": "nānā̍ cakrāte ya̱myā̱3vapū̍ṃṣi̱ tayo̍ra̱nyad roca̍te kṛ̱ṣṇama̱nyat |\n\nśyāvī̍ ca̱ yadaru̍ṣī ca̱ svasā̍rau ma̱had de̱vānā̍masura̱tvameka̍m"
     },
     "3:55:12": {
       "mandala": 3,
       "sukta": 55,
       "verse": 12,
-      "text": "॥\n\nमा॒ता च॒ यत्र॑ दुहि॒ता च॑ धे॒नू स॑ब॒र्दुघे॑ धा॒पये॑ते समी॒ची ।\n\nऋ॒तस्य॒ ते सद॑सीळे अ॒न्तर्म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
-      "iast": "||\n\nmā̱tā ca̱ yatra̍ duhi̱tā ca̍ dhe̱nū sa̍ba̱rdughe̍ dhā̱paye̍te samī̱cī |\n\nṛ̱tasya̱ te sada̍sīl̤e a̱ntarma̱had de̱vānā̍masura̱tvameka̍m"
+      "text": "मा॒ता च॒ यत्र॑ दुहि॒ता च॑ धे॒नू स॑ब॒र्दुघे॑ धा॒पये॑ते समी॒ची ।\n\nऋ॒तस्य॒ ते सद॑सीळे अ॒न्तर्म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
+      "iast": "mā̱tā ca̱ yatra̍ duhi̱tā ca̍ dhe̱nū sa̍ba̱rdughe̍ dhā̱paye̍te samī̱cī |\n\nṛ̱tasya̱ te sada̍sīl̤e a̱ntarma̱had de̱vānā̍masura̱tvameka̍m"
     },
     "3:55:13": {
       "mandala": 3,
@@ -20556,15 +20556,15 @@
       "mandala": 3,
       "sukta": 55,
       "verse": 21,
-      "text": "॥\n\nइ॒मां च॑ नः पृथि॒वीं वि॒श्वधा॑या॒ उप॑ क्षेति हि॒तमि॑त्रो॒ न राजा॑ ।\n\nपु॒र॒:सद॑: शर्म॒सदो॒ न वी॒रा म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
-      "iast": "||\n\ni̱māṃ ca̍ naḥ pṛthi̱vīṃ vi̱śvadhā̍yā̱ upa̍ kṣeti hi̱tami̍tro̱ na rājā̍ |\n\npu̱ra̱:sada̍: śarma̱sado̱ na vī̱rā ma̱had de̱vānā̍masura̱tvameka̍m"
+      "text": "इ॒मां च॑ नः पृथि॒वीं वि॒श्वधा॑या॒ उप॑ क्षेति हि॒तमि॑त्रो॒ न राजा॑ ।\n\nपु॒र॒:सद॑: शर्म॒सदो॒ न वी॒रा म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
+      "iast": "i̱māṃ ca̍ naḥ pṛthi̱vīṃ vi̱śvadhā̍yā̱ upa̍ kṣeti hi̱tami̍tro̱ na rājā̍ |\n\npu̱ra̱:sada̍: śarma̱sado̱ na vī̱rā ma̱had de̱vānā̍masura̱tvameka̍m"
     },
     "3:55:22": {
       "mandala": 3,
       "sukta": 55,
       "verse": 22,
-      "text": "॥\n\nनि॒ष्षिध्व॑रीस्त॒ ओष॑धीरु॒तापो॑ र॒यिं त॑ इन्द्र पृथि॒वी बि॑भर्ति ।\n\nसखा॑यस्ते वाम॒भाज॑: स्याम म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
-      "iast": "||\n\nni̱ṣṣidhva̍rīsta̱ oṣa̍dhīru̱tāpo̍ ra̱yiṃ ta̍ indra pṛthi̱vī bi̍bharti |\n\nsakhā̍yaste vāma̱bhāja̍: syāma ma̱had de̱vānā̍masura̱tvameka̍m"
+      "text": "नि॒ष्षिध्व॑रीस्त॒ ओष॑धीरु॒तापो॑ र॒यिं त॑ इन्द्र पृथि॒वी बि॑भर्ति ।\n\nसखा॑यस्ते वाम॒भाज॑: स्याम म॒हद् दे॒वाना॑मसुर॒त्वमेक॑म्",
+      "iast": "ni̱ṣṣidhva̍rīsta̱ oṣa̍dhīru̱tāpo̍ ra̱yiṃ ta̍ indra pṛthi̱vī bi̍bharti |\n\nsakhā̍yaste vāma̱bhāja̍: syāma ma̱had de̱vānā̍masura̱tvameka̍m"
     },
     "3:56:1": {
       "mandala": 3,
@@ -20962,15 +20962,15 @@
       "mandala": 3,
       "sukta": 62,
       "verse": 11,
-      "text": "॥\n\nदे॒वस्य॑ सवि॒तुर्व॒यं वा॑ज॒यन्त॒: पुरं॑ध्या । भग॑स्य रा॒तिमी॑महे",
-      "iast": "||\n\nde̱vasya̍ savi̱turva̱yaṃ vā̍ja̱yanta̱: pura̍ṃdhyā | bhaga̍sya rā̱timī̍mahe"
+      "text": "दे॒वस्य॑ सवि॒तुर्व॒यं वा॑ज॒यन्त॒: पुरं॑ध्या । भग॑स्य रा॒तिमी॑महे",
+      "iast": "de̱vasya̍ savi̱turva̱yaṃ vā̍ja̱yanta̱: pura̍ṃdhyā | bhaga̍sya rā̱timī̍mahe"
     },
     "3:62:12": {
       "mandala": 3,
       "sukta": 62,
       "verse": 12,
-      "text": "॥\n\nदे॒वं नर॑: सवि॒तारं॒ विप्रा॑ य॒ज्ञैः सु॑वृ॒क्तिभि॑: । न॒म॒स्यन्ति॑ धि॒येषि॒ताः",
-      "iast": "||\n\nde̱vaṃ nara̍: savi̱tāra̱ṃ viprā̍ ya̱jñaiḥ su̍vṛ̱ktibhi̍: | na̱ma̱syanti̍ dhi̱yeṣi̱tāḥ"
+      "text": "दे॒वं नर॑: सवि॒तारं॒ विप्रा॑ य॒ज्ञैः सु॑वृ॒क्तिभि॑: । न॒म॒स्यन्ति॑ धि॒येषि॒ताः",
+      "iast": "de̱vaṃ nara̍: savi̱tāra̱ṃ viprā̍ ya̱jñaiḥ su̍vṛ̱ktibhi̍: | na̱ma̱syanti̍ dhi̱yeṣi̱tāḥ"
     },
     "3:62:13": {
       "mandala": 3,
@@ -21368,15 +21368,15 @@
       "mandala": 4,
       "sukta": 3,
       "verse": 11,
-      "text": "॥\n\nऋ॒तेनाद्रिं॒ व्य॑सन् भि॒दन्त॒: समङ्गि॑रसो नवन्त॒ गोभि॑: ।\n\nशु॒नं नर॒: परि॑ षदन्नु॒षास॑मा॒विः स्व॑रभवज्जा॒ते अ॒ग्नौ",
-      "iast": "||\n\nṛ̱tenādri̱ṃ vya̍san bhi̱danta̱: samaṅgi̍raso navanta̱ gobhi̍: |\n\nśu̱naṃ nara̱: pari̍ ṣadannu̱ṣāsa̍mā̱viḥ sva̍rabhavajjā̱te a̱gnau"
+      "text": "ऋ॒तेनाद्रिं॒ व्य॑सन् भि॒दन्त॒: समङ्गि॑रसो नवन्त॒ गोभि॑: ।\n\nशु॒नं नर॒: परि॑ षदन्नु॒षास॑मा॒विः स्व॑रभवज्जा॒ते अ॒ग्नौ",
+      "iast": "ṛ̱tenādri̱ṃ vya̍san bhi̱danta̱: samaṅgi̍raso navanta̱ gobhi̍: |\n\nśu̱naṃ nara̱: pari̍ ṣadannu̱ṣāsa̍mā̱viḥ sva̍rabhavajjā̱te a̱gnau"
     },
     "4:3:12": {
       "mandala": 4,
       "sukta": 3,
       "verse": 12,
-      "text": "॥\n\nऋ॒तेन॑ दे॒वीर॒मृता॒ अमृ॑क्ता॒ अर्णो॑भि॒रापो॒ मधु॑मद्भिरग्ने ।\n\nवा॒जी न सर्गे॑षु प्रस्तुभा॒नः प्र सद॒मित् स्रवि॑तवे दधन्युः",
-      "iast": "||\n\nṛ̱tena̍ de̱vīra̱mṛtā̱ amṛ̍ktā̱ arṇo̍bhi̱rāpo̱ madhu̍madbhiragne |\n\nvā̱jī na sarge̍ṣu prastubhā̱naḥ pra sada̱mit sravi̍tave dadhanyuḥ"
+      "text": "ऋ॒तेन॑ दे॒वीर॒मृता॒ अमृ॑क्ता॒ अर्णो॑भि॒रापो॒ मधु॑मद्भिरग्ने ।\n\nवा॒जी न सर्गे॑षु प्रस्तुभा॒नः प्र सद॒मित् स्रवि॑तवे दधन्युः",
+      "iast": "ṛ̱tena̍ de̱vīra̱mṛtā̱ amṛ̍ktā̱ arṇo̍bhi̱rāpo̱ madhu̍madbhiragne |\n\nvā̱jī na sarge̍ṣu prastubhā̱naḥ pra sada̱mit sravi̍tave dadhanyuḥ"
     },
     "4:3:13": {
       "mandala": 4,
@@ -21480,15 +21480,15 @@
       "mandala": 4,
       "sukta": 4,
       "verse": 11,
-      "text": "॥\n\nम॒हो रु॑जामि ब॒न्धुता॒ वचो॑भि॒स्तन्मा॑ पि॒तुर्गोत॑मा॒दन्वि॑याय ।\n\nत्वं नो॑ अ॒स्य वच॑सश्चिकिद्धि॒ होत॑र्यविष्ठ सुक्रतो॒ दमू॑नाः",
-      "iast": "||\n\nma̱ho ru̍jāmi ba̱ndhutā̱ vaco̍bhi̱stanmā̍ pi̱turgota̍mā̱danvi̍yāya |\n\ntvaṃ no̍ a̱sya vaca̍saścikiddhi̱ hota̍ryaviṣṭha sukrato̱ damū̍nāḥ"
+      "text": "म॒हो रु॑जामि ब॒न्धुता॒ वचो॑भि॒स्तन्मा॑ पि॒तुर्गोत॑मा॒दन्वि॑याय ।\n\nत्वं नो॑ अ॒स्य वच॑सश्चिकिद्धि॒ होत॑र्यविष्ठ सुक्रतो॒ दमू॑नाः",
+      "iast": "ma̱ho ru̍jāmi ba̱ndhutā̱ vaco̍bhi̱stanmā̍ pi̱turgota̍mā̱danvi̍yāya |\n\ntvaṃ no̍ a̱sya vaca̍saścikiddhi̱ hota̍ryaviṣṭha sukrato̱ damū̍nāḥ"
     },
     "4:4:12": {
       "mandala": 4,
       "sukta": 4,
       "verse": 12,
-      "text": "॥\n\nअस्व॑प्नजस्त॒रण॑यः सु॒शेवा॒ अत॑न्द्रासोऽवृ॒का अश्र॑मिष्ठाः ।\n\nते पा॒यव॑: स॒ध्र्य॑ञ्चो नि॒षद्याग्ने॒ तव॑ नः पान्त्वमूर",
-      "iast": "||\n\nasva̍pnajasta̱raṇa̍yaḥ su̱śevā̱ ata̍ndrāso'vṛ̱kā aśra̍miṣṭhāḥ |\n\nte pā̱yava̍: sa̱dhrya̍ñco ni̱ṣadyāgne̱ tava̍ naḥ pāntvamūra"
+      "text": "अस्व॑प्नजस्त॒रण॑यः सु॒शेवा॒ अत॑न्द्रासोऽवृ॒का अश्र॑मिष्ठाः ।\n\nते पा॒यव॑: स॒ध्र्य॑ञ्चो नि॒षद्याग्ने॒ तव॑ नः पान्त्वमूर",
+      "iast": "asva̍pnajasta̱raṇa̍yaḥ su̱śevā̱ ata̍ndrāso'vṛ̱kā aśra̍miṣṭhāḥ |\n\nte pā̱yava̍: sa̱dhrya̍ñco ni̱ṣadyāgne̱ tava̍ naḥ pāntvamūra"
     },
     "4:4:13": {
       "mandala": 4,
@@ -21585,15 +21585,15 @@
       "mandala": 4,
       "sukta": 5,
       "verse": 11,
-      "text": "॥\n\nऋ॒तं वो॑चे॒ नम॑सा पृ॒च्छ्यमा॑न॒स्तवा॒शसा॑ जातवेदो॒ यदी॒दम् ।\n\nत्वम॒स्य क्ष॑यसि॒ यद्ध॒ विश्वं॑ दि॒वि यदु॒ द्रवि॑णं॒ यत् पृ॑थि॒व्याम्",
-      "iast": "||\n\nṛ̱taṃ vo̍ce̱ nama̍sā pṛ̱cchyamā̍na̱stavā̱śasā̍ jātavedo̱ yadī̱dam |\n\ntvama̱sya kṣa̍yasi̱ yaddha̱ viśva̍ṃ di̱vi yadu̱ dravi̍ṇa̱ṃ yat pṛ̍thi̱vyām"
+      "text": "ऋ॒तं वो॑चे॒ नम॑सा पृ॒च्छ्यमा॑न॒स्तवा॒शसा॑ जातवेदो॒ यदी॒दम् ।\n\nत्वम॒स्य क्ष॑यसि॒ यद्ध॒ विश्वं॑ दि॒वि यदु॒ द्रवि॑णं॒ यत् पृ॑थि॒व्याम्",
+      "iast": "ṛ̱taṃ vo̍ce̱ nama̍sā pṛ̱cchyamā̍na̱stavā̱śasā̍ jātavedo̱ yadī̱dam |\n\ntvama̱sya kṣa̍yasi̱ yaddha̱ viśva̍ṃ di̱vi yadu̱ dravi̍ṇa̱ṃ yat pṛ̍thi̱vyām"
     },
     "4:5:12": {
       "mandala": 4,
       "sukta": 5,
       "verse": 12,
-      "text": "॥\n\nकिं नो॑ अ॒स्य द्रवि॑णं॒ कद्ध॒ रत्नं॒ वि नो॑ वोचो जातवेदश्चिकि॒त्वान् ।\n\nगुहाध्व॑नः पर॒मं यन्नो॑ अ॒स्य रेकु॑ प॒दं न नि॑दा॒ना अग॑न्म",
-      "iast": "||\n\nkiṃ no̍ a̱sya dravi̍ṇa̱ṃ kaddha̱ ratna̱ṃ vi no̍ voco jātavedaściki̱tvān |\n\nguhādhva̍naḥ para̱maṃ yanno̍ a̱sya reku̍ pa̱daṃ na ni̍dā̱nā aga̍nma"
+      "text": "किं नो॑ अ॒स्य द्रवि॑णं॒ कद्ध॒ रत्नं॒ वि नो॑ वोचो जातवेदश्चिकि॒त्वान् ।\n\nगुहाध्व॑नः पर॒मं यन्नो॑ अ॒स्य रेकु॑ प॒दं न नि॑दा॒ना अग॑न्म",
+      "iast": "kiṃ no̍ a̱sya dravi̍ṇa̱ṃ kaddha̱ ratna̱ṃ vi no̍ voco jātavedaściki̱tvān |\n\nguhādhva̍naḥ para̱maṃ yanno̍ a̱sya reku̍ pa̱daṃ na ni̍dā̱nā aga̍nma"
     },
     "4:5:13": {
       "mandala": 4,
@@ -21690,8 +21690,8 @@
       "mandala": 4,
       "sukta": 6,
       "verse": 11,
-      "text": "॥\n\nअका॑रि॒ ब्रह्म॑ समिधान॒ तुभ्यं॒ शंसा॑त्यु॒क्थं यज॑ते॒ व्यू॑ धाः ।\n\nहोता॑रम॒ग्निं मनु॑षो॒ नि षे॑दुर्नम॒स्यन्त॑ उ॒शिज॒: शंस॑मा॒योः",
-      "iast": "||\n\nakā̍ri̱ brahma̍ samidhāna̱ tubhya̱ṃ śaṃsā̍tyu̱kthaṃ yaja̍te̱ vyū̍ dhāḥ |\n\nhotā̍rama̱gniṃ manu̍ṣo̱ ni ṣe̍durnama̱syanta̍ u̱śija̱: śaṃsa̍mā̱yoḥ"
+      "text": "अका॑रि॒ ब्रह्म॑ समिधान॒ तुभ्यं॒ शंसा॑त्यु॒क्थं यज॑ते॒ व्यू॑ धाः ।\n\nहोता॑रम॒ग्निं मनु॑षो॒ नि षे॑दुर्नम॒स्यन्त॑ उ॒शिज॒: शंस॑मा॒योः",
+      "iast": "akā̍ri̱ brahma̍ samidhāna̱ tubhya̱ṃ śaṃsā̍tyu̱kthaṃ yaja̍te̱ vyū̍ dhāḥ |\n\nhotā̍rama̱gniṃ manu̍ṣo̱ ni ṣe̍durnama̱syanta̍ u̱śija̱: śaṃsa̍mā̱yoḥ"
     },
     "4:7:1": {
       "mandala": 4,
@@ -21767,8 +21767,8 @@
       "mandala": 4,
       "sukta": 7,
       "verse": 11,
-      "text": "॥\n\nतृ॒षु यदन्ना॑ तृ॒षुणा॑ व॒वक्ष॑ तृ॒षुं दू॒तं कृ॑णुते य॒ह्वो अ॒ग्निः ।\n\nवात॑स्य मे॒ळिं स॑चते नि॒जूर्व॑न्ना॒शुं न वा॑जयते हि॒न्वे अर्वा॑",
-      "iast": "||\n\ntṛ̱ṣu yadannā̍ tṛ̱ṣuṇā̍ va̱vakṣa̍ tṛ̱ṣuṃ dū̱taṃ kṛ̍ṇute ya̱hvo a̱gniḥ |\n\nvāta̍sya me̱l̤iṃ sa̍cate ni̱jūrva̍nnā̱śuṃ na vā̍jayate hi̱nve arvā̍"
+      "text": "तृ॒षु यदन्ना॑ तृ॒षुणा॑ व॒वक्ष॑ तृ॒षुं दू॒तं कृ॑णुते य॒ह्वो अ॒ग्निः ।\n\nवात॑स्य मे॒ळिं स॑चते नि॒जूर्व॑न्ना॒शुं न वा॑जयते हि॒न्वे अर्वा॑",
+      "iast": "tṛ̱ṣu yadannā̍ tṛ̱ṣuṇā̍ va̱vakṣa̍ tṛ̱ṣuṃ dū̱taṃ kṛ̍ṇute ya̱hvo a̱gniḥ |\n\nvāta̍sya me̱l̤iṃ sa̍cate ni̱jūrva̍nnā̱śuṃ na vā̍jayate hi̱nve arvā̍"
     },
     "4:8:1": {
       "mandala": 4,
@@ -26590,15 +26590,15 @@
       "mandala": 5,
       "sukta": 29,
       "verse": 11,
-      "text": "॥\n\nस्तोमा॑सस्त्वा॒ गौरि॑वीतेरवर्ध॒न्नर॑न्धयो वैदथि॒नाय॒ पिप्रु॑म् ।\n\nआ त्वामृ॒जिश्वा॑ स॒ख्याय॑ चक्रे॒ पच॑न् प॒क्तीरपि॑ब॒: सोम॑मस्य",
-      "iast": "||\n\nstomā̍sastvā̱ gauri̍vīteravardha̱nnara̍ndhayo vaidathi̱nāya̱ pipru̍m |\n\nā tvāmṛ̱jiśvā̍ sa̱khyāya̍ cakre̱ paca̍n pa̱ktīrapi̍ba̱: soma̍masya"
+      "text": "स्तोमा॑सस्त्वा॒ गौरि॑वीतेरवर्ध॒न्नर॑न्धयो वैदथि॒नाय॒ पिप्रु॑म् ।\n\nआ त्वामृ॒जिश्वा॑ स॒ख्याय॑ चक्रे॒ पच॑न् प॒क्तीरपि॑ब॒: सोम॑मस्य",
+      "iast": "stomā̍sastvā̱ gauri̍vīteravardha̱nnara̍ndhayo vaidathi̱nāya̱ pipru̍m |\n\nā tvāmṛ̱jiśvā̍ sa̱khyāya̍ cakre̱ paca̍n pa̱ktīrapi̍ba̱: soma̍masya"
     },
     "5:29:12": {
       "mandala": 5,
       "sukta": 29,
       "verse": 12,
-      "text": "॥\n\nनव॑ग्वासः सु॒तसो॑मास॒ इन्द्रं॒ दश॑ग्वासो अ॒भ्य॑र्चन्त्य॒र्कैः ।\n\nगव्यं॑ चिदू॒र्वम॑पि॒धान॑वन्तं॒ तं चि॒न्नर॑: शशमा॒ना अप॑ व्रन्",
-      "iast": "||\n\nnava̍gvāsaḥ su̱taso̍māsa̱ indra̱ṃ daśa̍gvāso a̱bhya̍rcantya̱rkaiḥ |\n\ngavya̍ṃ cidū̱rvama̍pi̱dhāna̍vanta̱ṃ taṃ ci̱nnara̍: śaśamā̱nā apa̍ vran"
+      "text": "नव॑ग्वासः सु॒तसो॑मास॒ इन्द्रं॒ दश॑ग्वासो अ॒भ्य॑र्चन्त्य॒र्कैः ।\n\nगव्यं॑ चिदू॒र्वम॑पि॒धान॑वन्तं॒ तं चि॒न्नर॑: शशमा॒ना अप॑ व्रन्",
+      "iast": "nava̍gvāsaḥ su̱taso̍māsa̱ indra̱ṃ daśa̍gvāso a̱bhya̍rcantya̱rkaiḥ |\n\ngavya̍ṃ cidū̱rvama̍pi̱dhāna̍vanta̱ṃ taṃ ci̱nnara̍: śaśamā̱nā apa̍ vran"
     },
     "5:29:13": {
       "mandala": 5,
@@ -26695,15 +26695,15 @@
       "mandala": 5,
       "sukta": 30,
       "verse": 11,
-      "text": "॥\n\nयदीं॒ सोमा॑ ब॒भ्रुधू॑ता॒ अम॑न्द॒न्नरो॑रवीद् वृष॒भः साद॑नेषु ।\n\nपु॒रं॒द॒रः प॑पि॒वाँ इन्द्रो॑ अस्य॒ पुन॒र्गवा॑मददादु॒स्रिया॑णाम्",
-      "iast": "||\n\nyadī̱ṃ somā̍ ba̱bhrudhū̍tā̱ ama̍nda̱nnaro̍ravīd vṛṣa̱bhaḥ sāda̍neṣu |\n\npu̱ra̱ṃda̱raḥ pa̍pi̱vām̐ indro̍ asya̱ puna̱rgavā̍madadādu̱sriyā̍ṇām"
+      "text": "यदीं॒ सोमा॑ ब॒भ्रुधू॑ता॒ अम॑न्द॒न्नरो॑रवीद् वृष॒भः साद॑नेषु ।\n\nपु॒रं॒द॒रः प॑पि॒वाँ इन्द्रो॑ अस्य॒ पुन॒र्गवा॑मददादु॒स्रिया॑णाम्",
+      "iast": "yadī̱ṃ somā̍ ba̱bhrudhū̍tā̱ ama̍nda̱nnaro̍ravīd vṛṣa̱bhaḥ sāda̍neṣu |\n\npu̱ra̱ṃda̱raḥ pa̍pi̱vām̐ indro̍ asya̱ puna̱rgavā̍madadādu̱sriyā̍ṇām"
     },
     "5:30:12": {
       "mandala": 5,
       "sukta": 30,
       "verse": 12,
-      "text": "॥\n\nभ॒द्रमि॒दं रु॒शमा॑ अग्ने अक्र॒न् गवां॑ च॒त्वारि॒ दद॑तः स॒हस्रा॑ ।\n\nऋ॒णं॒च॒यस्य॒ प्रय॑ता म॒घानि॒ प्रत्य॑ग्रभीष्म॒ नृत॑मस्य नृ॒णाम्",
-      "iast": "||\n\nbha̱drami̱daṃ ru̱śamā̍ agne akra̱n gavā̍ṃ ca̱tvāri̱ dada̍taḥ sa̱hasrā̍ |\n\nṛ̱ṇa̱ṃca̱yasya̱ praya̍tā ma̱ghāni̱ pratya̍grabhīṣma̱ nṛta̍masya nṛ̱ṇām"
+      "text": "भ॒द्रमि॒दं रु॒शमा॑ अग्ने अक्र॒न् गवां॑ च॒त्वारि॒ दद॑तः स॒हस्रा॑ ।\n\nऋ॒णं॒च॒यस्य॒ प्रय॑ता म॒घानि॒ प्रत्य॑ग्रभीष्म॒ नृत॑मस्य नृ॒णाम्",
+      "iast": "bha̱drami̱daṃ ru̱śamā̍ agne akra̱n gavā̍ṃ ca̱tvāri̱ dada̍taḥ sa̱hasrā̍ |\n\nṛ̱ṇa̱ṃca̱yasya̱ praya̍tā ma̱ghāni̱ pratya̍grabhīṣma̱ nṛta̍masya nṛ̱ṇām"
     },
     "5:30:13": {
       "mandala": 5,
@@ -26800,15 +26800,15 @@
       "mandala": 5,
       "sukta": 31,
       "verse": 11,
-      "text": "॥\n\nसूर॑श्चि॒द् रथं॒ परि॑तक्म्यायां॒ पूर्वं॑ कर॒दुप॑रं जूजु॒वांस॑म् ।\n\nभर॑च्च॒क्रमेत॑श॒: सं रि॑णाति पु॒रो दध॑त् सनिष्यति॒ क्रतुं॑ नः",
-      "iast": "||\n\nsūra̍ści̱d ratha̱ṃ pari̍takmyāyā̱ṃ pūrva̍ṃ kara̱dupa̍raṃ jūju̱vāṃsa̍m |\n\nbhara̍cca̱krameta̍śa̱: saṃ ri̍ṇāti pu̱ro dadha̍t saniṣyati̱ kratu̍ṃ naḥ"
+      "text": "सूर॑श्चि॒द् रथं॒ परि॑तक्म्यायां॒ पूर्वं॑ कर॒दुप॑रं जूजु॒वांस॑म् ।\n\nभर॑च्च॒क्रमेत॑श॒: सं रि॑णाति पु॒रो दध॑त् सनिष्यति॒ क्रतुं॑ नः",
+      "iast": "sūra̍ści̱d ratha̱ṃ pari̍takmyāyā̱ṃ pūrva̍ṃ kara̱dupa̍raṃ jūju̱vāṃsa̍m |\n\nbhara̍cca̱krameta̍śa̱: saṃ ri̍ṇāti pu̱ro dadha̍t saniṣyati̱ kratu̍ṃ naḥ"
     },
     "5:31:12": {
       "mandala": 5,
       "sukta": 31,
       "verse": 12,
-      "text": "॥\n\nआयं ज॑ना अभि॒चक्षे॑ जगा॒मेन्द्र॒: सखा॑यं सु॒तसो॑ममि॒च्छन् ।\n\nवद॒न् ग्रावाव॒ वेदिं॑ भ्रियाते॒ यस्य॑ जी॒रम॑ध्व॒र्यव॒श्चर॑न्ति",
-      "iast": "||\n\nāyaṃ ja̍nā abhi̱cakṣe̍ jagā̱mendra̱: sakhā̍yaṃ su̱taso̍mami̱cchan |\n\nvada̱n grāvāva̱ vedi̍ṃ bhriyāte̱ yasya̍ jī̱rama̍dhva̱ryava̱ścara̍nti"
+      "text": "आयं ज॑ना अभि॒चक्षे॑ जगा॒मेन्द्र॒: सखा॑यं सु॒तसो॑ममि॒च्छन् ।\n\nवद॒न् ग्रावाव॒ वेदिं॑ भ्रियाते॒ यस्य॑ जी॒रम॑ध्व॒र्यव॒श्चर॑न्ति",
+      "iast": "āyaṃ ja̍nā abhi̱cakṣe̍ jagā̱mendra̱: sakhā̍yaṃ su̱taso̍mami̱cchan |\n\nvada̱n grāvāva̱ vedi̍ṃ bhriyāte̱ yasya̍ jī̱rama̍dhva̱ryava̱ścara̍nti"
     },
     "5:31:13": {
       "mandala": 5,
@@ -27137,7 +27137,7 @@
       "sukta": 37,
       "verse": 2,
       "text": "सं भा॒नुना॑ यतते॒ सूर्य॑स्या॒ऽऽजुह्वा॑नो घृ॒तपृ॑ष्ठ॒: स्वञ्चा॑: ।\n\nतस्मा॒ अमृ॑ध्रा उ॒षसो॒ व्यु॑च्छा॒न् य इन्द्रा॑य सु॒नवा॒मेत्याह॑ ॥ १॥\n\nसमि॑द्धाग्निर्वनवत् स्ती॒र्णब॑र्हिर्यु॒क्तग्रा॑वा सु॒तसो॑मो जराते ।\n\nग्रावा॑णो॒ यस्ये॑षि॒रं वद॒न्त्यय॑दध्व॒र्युर्ह॒विषाव॒ सिन्धु॑म्",
-      "iast": "saṃ bhā̱nunā̍ yatate̱ sūrya̍syā̱''juhvā̍no ghṛ̱tapṛ̍ṣṭha̱: svañcā̍: |\n\ntasmā̱ amṛ̍dhrā u̱ṣaso̱ vyu̍cchā̱n ya indrā̍ya su̱navā̱metyāha̍ || 1||\n\nsami̍ddhāgnirvanavat stī̱rṇaba̍rhiryu̱ktagrā̍vā su̱taso̍mo jarāte |\n\ngrāvā̍ṇo̱ yasye̍ṣi̱raṃ vada̱ntyaya̍dadhva̱ryurha̱viṣāva̱ sindhu̍m"
+      "iast": "saṃ bhā̱nunā̍ yatate̱ sūrya̍syā̱''juhvā̍no ghṛ̱tapṛ̍ṣṭha̱: svañcā̍: |\n\ntasmā̱ amṛ̍dhrā u̱ṣaso̱ vyu̍cchā̱n ya indrā̍ya su̱navā̱metyāha̍ || 1sami̍ddhāgnirvanavat stī̱rṇaba̍rhiryu̱ktagrā̍vā su̱taso̍mo jarāte |\n\ngrāvā̍ṇo̱ yasye̍ṣi̱raṃ vada̱ntyaya̍dadhva̱ryurha̱viṣāva̱ sindhu̍m"
     },
     "5:37:3": {
       "mandala": 5,
@@ -27367,15 +27367,15 @@
       "mandala": 5,
       "sukta": 41,
       "verse": 11,
-      "text": "॥\n\nक॒था म॒हे रु॒द्रिया॑य ब्रवाम॒ कद्रा॒ये चि॑कि॒तुषे॒ भगा॑य ।\n\nआप॒ ओष॑धीरु॒त नो॑ऽवन्तु॒ द्यौर्वना॑ गि॒रयो॑ वृ॒क्षके॑शाः",
-      "iast": "||\n\nka̱thā ma̱he ru̱driyā̍ya bravāma̱ kadrā̱ye ci̍ki̱tuṣe̱ bhagā̍ya |\n\nāpa̱ oṣa̍dhīru̱ta no̍'vantu̱ dyaurvanā̍ gi̱rayo̍ vṛ̱kṣake̍śāḥ"
+      "text": "क॒था म॒हे रु॒द्रिया॑य ब्रवाम॒ कद्रा॒ये चि॑कि॒तुषे॒ भगा॑य ।\n\nआप॒ ओष॑धीरु॒त नो॑ऽवन्तु॒ द्यौर्वना॑ गि॒रयो॑ वृ॒क्षके॑शाः",
+      "iast": "ka̱thā ma̱he ru̱driyā̍ya bravāma̱ kadrā̱ye ci̍ki̱tuṣe̱ bhagā̍ya |\n\nāpa̱ oṣa̍dhīru̱ta no̍'vantu̱ dyaurvanā̍ gi̱rayo̍ vṛ̱kṣake̍śāḥ"
     },
     "5:41:12": {
       "mandala": 5,
       "sukta": 41,
       "verse": 12,
-      "text": "॥\n\nशृ॒णोतु॑ न ऊ॒र्जां पति॒र्गिर॒: स नभ॒स्तरी॑याँ इषि॒रः परि॑ज्मा ।\n\nशृ॒ण्वन्त्वाप॒: पुरो॒ न शु॒भ्राः परि॒ स्रुचो॑ बबृहा॒णस्याद्रे॑:",
-      "iast": "||\n\nśṛ̱ṇotu̍ na ū̱rjāṃ pati̱rgira̱: sa nabha̱starī̍yām̐ iṣi̱raḥ pari̍jmā |\n\nśṛ̱ṇvantvāpa̱: puro̱ na śu̱bhrāḥ pari̱ sruco̍ babṛhā̱ṇasyādre̍:"
+      "text": "शृ॒णोतु॑ न ऊ॒र्जां पति॒र्गिर॒: स नभ॒स्तरी॑याँ इषि॒रः परि॑ज्मा ।\n\nशृ॒ण्वन्त्वाप॒: पुरो॒ न शु॒भ्राः परि॒ स्रुचो॑ बबृहा॒णस्याद्रे॑:",
+      "iast": "śṛ̱ṇotu̍ na ū̱rjāṃ pati̱rgira̱: sa nabha̱starī̍yām̐ iṣi̱raḥ pari̍jmā |\n\nśṛ̱ṇvantvāpa̱: puro̱ na śu̱bhrāḥ pari̱ sruco̍ babṛhā̱ṇasyādre̍:"
     },
     "5:41:13": {
       "mandala": 5,
@@ -27507,15 +27507,15 @@
       "mandala": 5,
       "sukta": 42,
       "verse": 11,
-      "text": "॥\n\nतमु॑ ष्टुहि॒ यः स्वि॒षुः सु॒धन्वा॒ यो विश्व॑स्य॒ क्षय॑ति भेष॒जस्य॑ ।\n\nयक्ष्वा॑ म॒हे सौ॑मन॒साय॑ रु॒द्रं नमो॑भिर्दे॒वमसु॑रं दुवस्य",
-      "iast": "||\n\ntamu̍ ṣṭuhi̱ yaḥ svi̱ṣuḥ su̱dhanvā̱ yo viśva̍sya̱ kṣaya̍ti bheṣa̱jasya̍ |\n\nyakṣvā̍ ma̱he sau̍mana̱sāya̍ ru̱draṃ namo̍bhirde̱vamasu̍raṃ duvasya"
+      "text": "तमु॑ ष्टुहि॒ यः स्वि॒षुः सु॒धन्वा॒ यो विश्व॑स्य॒ क्षय॑ति भेष॒जस्य॑ ।\n\nयक्ष्वा॑ म॒हे सौ॑मन॒साय॑ रु॒द्रं नमो॑भिर्दे॒वमसु॑रं दुवस्य",
+      "iast": "tamu̍ ṣṭuhi̱ yaḥ svi̱ṣuḥ su̱dhanvā̱ yo viśva̍sya̱ kṣaya̍ti bheṣa̱jasya̍ |\n\nyakṣvā̍ ma̱he sau̍mana̱sāya̍ ru̱draṃ namo̍bhirde̱vamasu̍raṃ duvasya"
     },
     "5:42:12": {
       "mandala": 5,
       "sukta": 42,
       "verse": 12,
-      "text": "॥\n\nदमू॑नसो अ॒पसो॒ ये सु॒हस्ता॒ वृष्ण॒: पत्नी॑र्न॒द्यो॑ विभ्वत॒ष्टाः ।\n\nसर॑स्वती बृहद्दि॒वोत रा॒का द॑श॒स्यन्ती॑र्वरिवस्यन्तु शु॒भ्राः",
-      "iast": "||\n\ndamū̍naso a̱paso̱ ye su̱hastā̱ vṛṣṇa̱: patnī̍rna̱dyo̍ vibhvata̱ṣṭāḥ |\n\nsara̍svatī bṛhaddi̱vota rā̱kā da̍śa̱syantī̍rvarivasyantu śu̱bhrāḥ"
+      "text": "दमू॑नसो अ॒पसो॒ ये सु॒हस्ता॒ वृष्ण॒: पत्नी॑र्न॒द्यो॑ विभ्वत॒ष्टाः ।\n\nसर॑स्वती बृहद्दि॒वोत रा॒का द॑श॒स्यन्ती॑र्वरिवस्यन्तु शु॒भ्राः",
+      "iast": "damū̍naso a̱paso̱ ye su̱hastā̱ vṛṣṇa̱: patnī̍rna̱dyo̍ vibhvata̱ṣṭāḥ |\n\nsara̍svatī bṛhaddi̱vota rā̱kā da̍śa̱syantī̍rvarivasyantu śu̱bhrāḥ"
     },
     "5:42:13": {
       "mandala": 5,
@@ -27633,15 +27633,15 @@
       "mandala": 5,
       "sukta": 43,
       "verse": 11,
-      "text": "॥\n\nआ नो॑ दि॒वो बृ॑ह॒तः पर्व॑ता॒दा सर॑स्वती यज॒ता ग॑न्तु य॒ज्ञम् ।\n\nहवं॑ दे॒वी जु॑जुषा॒णा घृ॒ताची॑ श॒ग्मां नो॒ वाच॑मुश॒ती शृ॑णोतु",
-      "iast": "||\n\nā no̍ di̱vo bṛ̍ha̱taḥ parva̍tā̱dā sara̍svatī yaja̱tā ga̍ntu ya̱jñam |\n\nhava̍ṃ de̱vī ju̍juṣā̱ṇā ghṛ̱tācī̍ śa̱gmāṃ no̱ vāca̍muśa̱tī śṛ̍ṇotu"
+      "text": "आ नो॑ दि॒वो बृ॑ह॒तः पर्व॑ता॒दा सर॑स्वती यज॒ता ग॑न्तु य॒ज्ञम् ।\n\nहवं॑ दे॒वी जु॑जुषा॒णा घृ॒ताची॑ श॒ग्मां नो॒ वाच॑मुश॒ती शृ॑णोतु",
+      "iast": "ā no̍ di̱vo bṛ̍ha̱taḥ parva̍tā̱dā sara̍svatī yaja̱tā ga̍ntu ya̱jñam |\n\nhava̍ṃ de̱vī ju̍juṣā̱ṇā ghṛ̱tācī̍ śa̱gmāṃ no̱ vāca̍muśa̱tī śṛ̍ṇotu"
     },
     "5:43:12": {
       "mandala": 5,
       "sukta": 43,
       "verse": 12,
-      "text": "॥\n\nआ वे॒धसं॒ नील॑पृष्ठं बृ॒हन्तं॒ बृह॒स्पतिं॒ सद॑ने सादयध्वम् ।\n\nसा॒दद्यो॑निं॒ दम॒ आ दी॑दि॒वांसं॒ हिर॑ण्यवर्णमरु॒षं स॑पेम",
-      "iast": "||\n\nā ve̱dhasa̱ṃ nīla̍pṛṣṭhaṃ bṛ̱hanta̱ṃ bṛha̱spati̱ṃ sada̍ne sādayadhvam |\n\nsā̱dadyo̍ni̱ṃ dama̱ ā dī̍di̱vāṃsa̱ṃ hira̍ṇyavarṇamaru̱ṣaṃ sa̍pema"
+      "text": "आ वे॒धसं॒ नील॑पृष्ठं बृ॒हन्तं॒ बृह॒स्पतिं॒ सद॑ने सादयध्वम् ।\n\nसा॒दद्यो॑निं॒ दम॒ आ दी॑दि॒वांसं॒ हिर॑ण्यवर्णमरु॒षं स॑पेम",
+      "iast": "ā ve̱dhasa̱ṃ nīla̍pṛṣṭhaṃ bṛ̱hanta̱ṃ bṛha̱spati̱ṃ sada̍ne sādayadhvam |\n\nsā̱dadyo̍ni̱ṃ dama̱ ā dī̍di̱vāṃsa̱ṃ hira̍ṇyavarṇamaru̱ṣaṃ sa̍pema"
     },
     "5:43:13": {
       "mandala": 5,
@@ -27752,15 +27752,15 @@
       "mandala": 5,
       "sukta": 44,
       "verse": 11,
-      "text": "॥\n\nश्ये॒न आ॑सा॒मदि॑तिः क॒क्ष्यो॒३ मदो॑ वि॒श्ववा॑रस्य यज॒तस्य॑ मा॒यिन॑: ।\n\nसम॒न्यम॑न्यमर्थय॒न्त्येत॑वे वि॒दुर्वि॒षाणं॑ परि॒पान॒मन्ति॒ ते",
-      "iast": "||\n\nśye̱na ā̍sā̱madi̍tiḥ ka̱kṣyo̱3 mado̍ vi̱śvavā̍rasya yaja̱tasya̍ mā̱yina̍: |\n\nsama̱nyama̍nyamarthaya̱ntyeta̍ve vi̱durvi̱ṣāṇa̍ṃ pari̱pāna̱manti̱ te"
+      "text": "श्ये॒न आ॑सा॒मदि॑तिः क॒क्ष्यो॒३ मदो॑ वि॒श्ववा॑रस्य यज॒तस्य॑ मा॒यिन॑: ।\n\nसम॒न्यम॑न्यमर्थय॒न्त्येत॑वे वि॒दुर्वि॒षाणं॑ परि॒पान॒मन्ति॒ ते",
+      "iast": "śye̱na ā̍sā̱madi̍tiḥ ka̱kṣyo̱3 mado̍ vi̱śvavā̍rasya yaja̱tasya̍ mā̱yina̍: |\n\nsama̱nyama̍nyamarthaya̱ntyeta̍ve vi̱durvi̱ṣāṇa̍ṃ pari̱pāna̱manti̱ te"
     },
     "5:44:12": {
       "mandala": 5,
       "sukta": 44,
       "verse": 12,
-      "text": "॥\n\nस॒दा॒पृ॒णो य॑ज॒तो वि द्विषो॑ वधीद् बाहुवृ॒क्तः श्रु॑त॒वित् तर्यो॑ व॒: सचा॑ ।\n\nउ॒भा स वरा॒ प्रत्ये॑ति॒ भाति॑ च॒ यदीं॑ ग॒णं भज॑ते सुप्र॒याव॑भिः",
-      "iast": "||\n\nsa̱dā̱pṛ̱ṇo ya̍ja̱to vi dviṣo̍ vadhīd bāhuvṛ̱ktaḥ śru̍ta̱vit taryo̍ va̱: sacā̍ |\n\nu̱bhā sa varā̱ pratye̍ti̱ bhāti̍ ca̱ yadī̍ṃ ga̱ṇaṃ bhaja̍te supra̱yāva̍bhiḥ"
+      "text": "स॒दा॒पृ॒णो य॑ज॒तो वि द्विषो॑ वधीद् बाहुवृ॒क्तः श्रु॑त॒वित् तर्यो॑ व॒: सचा॑ ।\n\nउ॒भा स वरा॒ प्रत्ये॑ति॒ भाति॑ च॒ यदीं॑ ग॒णं भज॑ते सुप्र॒याव॑भिः",
+      "iast": "sa̱dā̱pṛ̱ṇo ya̍ja̱to vi dviṣo̍ vadhīd bāhuvṛ̱ktaḥ śru̍ta̱vit taryo̍ va̱: sacā̍ |\n\nu̱bhā sa varā̱ pratye̍ti̱ bhāti̍ ca̱ yadī̍ṃ ga̱ṇaṃ bhaja̍te supra̱yāva̍bhiḥ"
     },
     "5:44:13": {
       "mandala": 5,
@@ -28144,15 +28144,15 @@
       "mandala": 5,
       "sukta": 51,
       "verse": 11,
-      "text": "॥\n\nस्व॒स्ति नो॑ मिमीताम॒श्विना॒ भग॑: स्व॒स्ति दे॒व्यदि॑तिरन॒र्वण॑: ।\n\nस्व॒स्ति पू॒षा असु॑रो दधातु नः स्व॒स्ति द्यावा॑पृथि॒वी सु॑चे॒तुना॑",
-      "iast": "||\n\nsva̱sti no̍ mimītāma̱śvinā̱ bhaga̍: sva̱sti de̱vyadi̍tirana̱rvaṇa̍: |\n\nsva̱sti pū̱ṣā asu̍ro dadhātu naḥ sva̱sti dyāvā̍pṛthi̱vī su̍ce̱tunā̍"
+      "text": "स्व॒स्ति नो॑ मिमीताम॒श्विना॒ भग॑: स्व॒स्ति दे॒व्यदि॑तिरन॒र्वण॑: ।\n\nस्व॒स्ति पू॒षा असु॑रो दधातु नः स्व॒स्ति द्यावा॑पृथि॒वी सु॑चे॒तुना॑",
+      "iast": "sva̱sti no̍ mimītāma̱śvinā̱ bhaga̍: sva̱sti de̱vyadi̍tirana̱rvaṇa̍: |\n\nsva̱sti pū̱ṣā asu̍ro dadhātu naḥ sva̱sti dyāvā̍pṛthi̱vī su̍ce̱tunā̍"
     },
     "5:51:12": {
       "mandala": 5,
       "sukta": 51,
       "verse": 12,
-      "text": "॥\n\nस्व॒स्तये॑ वा॒युमुप॑ ब्रवामहै॒ सोमं॑ स्व॒स्ति भुव॑नस्य॒ यस्पति॑: ।\n\nबृह॒स्पतिं॒ सर्व॑गणं स्व॒स्तये॑ स्व॒स्तय॑ आदि॒त्यासो॑ भवन्तु नः",
-      "iast": "||\n\nsva̱staye̍ vā̱yumupa̍ bravāmahai̱ soma̍ṃ sva̱sti bhuva̍nasya̱ yaspati̍: |\n\nbṛha̱spati̱ṃ sarva̍gaṇaṃ sva̱staye̍ sva̱staya̍ ādi̱tyāso̍ bhavantu naḥ"
+      "text": "स्व॒स्तये॑ वा॒युमुप॑ ब्रवामहै॒ सोमं॑ स्व॒स्ति भुव॑नस्य॒ यस्पति॑: ।\n\nबृह॒स्पतिं॒ सर्व॑गणं स्व॒स्तये॑ स्व॒स्तय॑ आदि॒त्यासो॑ भवन्तु नः",
+      "iast": "sva̱staye̍ vā̱yumupa̍ bravāmahai̱ soma̍ṃ sva̱sti bhuva̍nasya̱ yaspati̍: |\n\nbṛha̱spati̱ṃ sarva̍gaṇaṃ sva̱staye̍ sva̱staya̍ ādi̱tyāso̍ bhavantu naḥ"
     },
     "5:51:13": {
       "mandala": 5,
@@ -28368,15 +28368,15 @@
       "mandala": 5,
       "sukta": 53,
       "verse": 11,
-      "text": "॥\n\nशर्धं॑शर्धं व एषां॒ व्रातं॑व्रातं ग॒णंग॑णं सुश॒स्तिभि॑: ।\n\nअनु॑ क्रामेम धी॒तिभि॑:",
-      "iast": "||\n\nśardha̍ṃśardhaṃ va eṣā̱ṃ vrāta̍ṃvrātaṃ ga̱ṇaṃga̍ṇaṃ suśa̱stibhi̍: |\n\nanu̍ krāmema dhī̱tibhi̍:"
+      "text": "शर्धं॑शर्धं व एषां॒ व्रातं॑व्रातं ग॒णंग॑णं सुश॒स्तिभि॑: ।\n\nअनु॑ क्रामेम धी॒तिभि॑:",
+      "iast": "śardha̍ṃśardhaṃ va eṣā̱ṃ vrāta̍ṃvrātaṃ ga̱ṇaṃga̍ṇaṃ suśa̱stibhi̍: |\n\nanu̍ krāmema dhī̱tibhi̍:"
     },
     "5:53:12": {
       "mandala": 5,
       "sukta": 53,
       "verse": 12,
-      "text": "॥\n\nकस्मा॑ अ॒द्य सुजा॑ताय रा॒तह॑व्याय॒ प्र य॑युः । ए॒ना यामे॑न म॒रुत॑:",
-      "iast": "||\n\nkasmā̍ a̱dya sujā̍tāya rā̱taha̍vyāya̱ pra ya̍yuḥ | e̱nā yāme̍na ma̱ruta̍:"
+      "text": "कस्मा॑ अ॒द्य सुजा॑ताय रा॒तह॑व्याय॒ प्र य॑युः । ए॒ना यामे॑न म॒रुत॑:",
+      "iast": "kasmā̍ a̱dya sujā̍tāya rā̱taha̍vyāya̱ pra ya̍yuḥ | e̱nā yāme̍na ma̱ruta̍:"
     },
     "5:53:13": {
       "mandala": 5,
@@ -28942,15 +28942,15 @@
       "mandala": 5,
       "sukta": 61,
       "verse": 11,
-      "text": "॥\n\nय ईं॒ वह॑न्त आ॒शुभि॒: पिब॑न्तो मदि॒रं मधु॑ । अत्र॒ श्रवां॑सि दधिरे",
-      "iast": "||\n\nya ī̱ṃ vaha̍nta ā̱śubhi̱: piba̍nto madi̱raṃ madhu̍ | atra̱ śravā̍ṃsi dadhire"
+      "text": "य ईं॒ वह॑न्त आ॒शुभि॒: पिब॑न्तो मदि॒रं मधु॑ । अत्र॒ श्रवां॑सि दधिरे",
+      "iast": "ya ī̱ṃ vaha̍nta ā̱śubhi̱: piba̍nto madi̱raṃ madhu̍ | atra̱ śravā̍ṃsi dadhire"
     },
     "5:61:12": {
       "mandala": 5,
       "sukta": 61,
       "verse": 12,
-      "text": "॥\n\nयेषां॑ श्रि॒याधि॒ रोद॑सी वि॒भ्राज॑न्ते॒ रथे॒ष्वा । दि॒वि रु॒क्म इ॑वो॒परि॑",
-      "iast": "||\n\nyeṣā̍ṃ śri̱yādhi̱ roda̍sī vi̱bhrāja̍nte̱ rathe̱ṣvā | di̱vi ru̱kma i̍vo̱pari̍"
+      "text": "येषां॑ श्रि॒याधि॒ रोद॑सी वि॒भ्राज॑न्ते॒ रथे॒ष्वा । दि॒वि रु॒क्म इ॑वो॒परि॑",
+      "iast": "yeṣā̍ṃ śri̱yādhi̱ roda̍sī vi̱bhrāja̍nte̱ rathe̱ṣvā | di̱vi ru̱kma i̍vo̱pari̍"
     },
     "5:61:13": {
       "mandala": 5,
@@ -34255,8 +34255,8 @@
       "mandala": 6,
       "sukta": 54,
       "verse": 2,
-      "text": "॥\n\nसमु॑ पू॒ष्णा ग॑मेमहि॒ यो गृ॒हाँ अ॑भि॒शास॑ति । इ॒म ए॒वेति॑ च॒ ब्रव॑त्",
-      "iast": "||\n\nsamu̍ pū̱ṣṇā ga̍memahi̱ yo gṛ̱hām̐ a̍bhi̱śāsa̍ti | i̱ma e̱veti̍ ca̱ brava̍t"
+      "text": "समु॑ पू॒ष्णा ग॑मेमहि॒ यो गृ॒हाँ अ॑भि॒शास॑ति । इ॒म ए॒वेति॑ च॒ ब्रव॑त्",
+      "iast": "samu̍ pū̱ṣṇā ga̍memahi̱ yo gṛ̱hām̐ a̍bhi̱śāsa̍ti | i̱ma e̱veti̍ ca̱ brava̍t"
     },
     "6:54:3": {
       "mandala": 6,
@@ -41570,36 +41570,36 @@
       "mandala": 8,
       "sukta": 1,
       "verse": 25,
-      "text": "॥\n\nआ त्वा॒ रथे॑ हिर॒ण्यये॒ हरी॑ म॒यूर॑शेप्या । शि॒ति॒पृ॒ष्ठा व॑हतां॒ मध्वो॒ अन्ध॑सो वि॒वक्ष॑णस्य पी॒तये॑",
-      "iast": "||\n\nā tvā̱ rathe̍ hira̱ṇyaye̱ harī̍ ma̱yūra̍śepyā | śi̱ti̱pṛ̱ṣṭhā va̍hatā̱ṃ madhvo̱ andha̍so vi̱vakṣa̍ṇasya pī̱taye̍"
+      "text": "आ त्वा॒ रथे॑ हिर॒ण्यये॒ हरी॑ म॒यूर॑शेप्या । शि॒ति॒पृ॒ष्ठा व॑हतां॒ मध्वो॒ अन्ध॑सो वि॒वक्ष॑णस्य पी॒तये॑",
+      "iast": "ā tvā̱ rathe̍ hira̱ṇyaye̱ harī̍ ma̱yūra̍śepyā | śi̱ti̱pṛ̱ṣṭhā va̍hatā̱ṃ madhvo̱ andha̍so vi̱vakṣa̍ṇasya pī̱taye̍"
     },
     "8:1:26": {
       "mandala": 8,
       "sukta": 1,
       "verse": 26,
-      "text": "॥\n\nपिबा॒ त्व१स्य गि॑र्वणः सु॒तस्य॑ पूर्व॒पा इ॑व । परि॑ष्कृतस्य र॒सिन॑ इ॒यमा॑सु॒तिश्चारु॒र्मदा॑य पत्यते",
-      "iast": "||\n\npibā̱ tva1sya gi̍rvaṇaḥ su̱tasya̍ pūrva̱pā i̍va | pari̍ṣkṛtasya ra̱sina̍ i̱yamā̍su̱tiścāru̱rmadā̍ya patyate"
+      "text": "पिबा॒ त्व१स्य गि॑र्वणः सु॒तस्य॑ पूर्व॒पा इ॑व । परि॑ष्कृतस्य र॒सिन॑ इ॒यमा॑सु॒तिश्चारु॒र्मदा॑य पत्यते",
+      "iast": "pibā̱ tva1sya gi̍rvaṇaḥ su̱tasya̍ pūrva̱pā i̍va | pari̍ṣkṛtasya ra̱sina̍ i̱yamā̍su̱tiścāru̱rmadā̍ya patyate"
     },
     "8:1:27": {
       "mandala": 8,
       "sukta": 1,
       "verse": 27,
-      "text": "॥\n\nय एको॒ अस्ति॑ दं॒सना॑ म॒हाँ उ॒ग्रो अ॒भि व्र॒तैः । गम॒त्स शि॒प्री न स यो॑ष॒दा ग॑म॒द्धवं॒ न परि॑ वर्जति",
-      "iast": "||\n\nya eko̱ asti̍ da̱ṃsanā̍ ma̱hām̐ u̱gro a̱bhi vra̱taiḥ | gama̱tsa śi̱prī na sa yo̍ṣa̱dā ga̍ma̱ddhava̱ṃ na pari̍ varjati"
+      "text": "य एको॒ अस्ति॑ दं॒सना॑ म॒हाँ उ॒ग्रो अ॒भि व्र॒तैः । गम॒त्स शि॒प्री न स यो॑ष॒दा ग॑म॒द्धवं॒ न परि॑ वर्जति",
+      "iast": "ya eko̱ asti̍ da̱ṃsanā̍ ma̱hām̐ u̱gro a̱bhi vra̱taiḥ | gama̱tsa śi̱prī na sa yo̍ṣa̱dā ga̍ma̱ddhava̱ṃ na pari̍ varjati"
     },
     "8:1:28": {
       "mandala": 8,
       "sukta": 1,
       "verse": 28,
-      "text": "॥\n\nत्वं पुरं॑ चरि॒ष्ण्वं॑ व॒धैः शुष्ण॑स्य॒ सं पि॑णक् । त्वं भा अनु॑ चरो॒ अध॑ द्वि॒ता यदि॑न्द्र॒ हव्यो॒ भुव॑:",
-      "iast": "||\n\ntvaṃ pura̍ṃ cari̱ṣṇva̍ṃ va̱dhaiḥ śuṣṇa̍sya̱ saṃ pi̍ṇak | tvaṃ bhā anu̍ caro̱ adha̍ dvi̱tā yadi̍ndra̱ havyo̱ bhuva̍:"
+      "text": "त्वं पुरं॑ चरि॒ष्ण्वं॑ व॒धैः शुष्ण॑स्य॒ सं पि॑णक् । त्वं भा अनु॑ चरो॒ अध॑ द्वि॒ता यदि॑न्द्र॒ हव्यो॒ भुव॑:",
+      "iast": "tvaṃ pura̍ṃ cari̱ṣṇva̍ṃ va̱dhaiḥ śuṣṇa̍sya̱ saṃ pi̍ṇak | tvaṃ bhā anu̍ caro̱ adha̍ dvi̱tā yadi̍ndra̱ havyo̱ bhuva̍:"
     },
     "8:1:29": {
       "mandala": 8,
       "sukta": 1,
       "verse": 29,
-      "text": "॥\n\nमम॑ त्वा॒ सूर॒ उदि॑ते॒ मम॑ म॒ध्यंदि॑ने दि॒वः । मम॑ प्रपि॒त्वे अ॑पिशर्व॒रे व॑स॒वा स्तोमा॑सो अवृत्सत",
-      "iast": "||\n\nmama̍ tvā̱ sūra̱ udi̍te̱ mama̍ ma̱dhyaṃdi̍ne di̱vaḥ | mama̍ prapi̱tve a̍piśarva̱re va̍sa̱vā stomā̍so avṛtsata"
+      "text": "मम॑ त्वा॒ सूर॒ उदि॑ते॒ मम॑ म॒ध्यंदि॑ने दि॒वः । मम॑ प्रपि॒त्वे अ॑पिशर्व॒रे व॑स॒वा स्तोमा॑सो अवृत्सत",
+      "iast": "mama̍ tvā̱ sūra̱ udi̍te̱ mama̍ ma̱dhyaṃdi̍ne di̱vaḥ | mama̍ prapi̱tve a̍piśarva̱re va̍sa̱vā stomā̍so avṛtsata"
     },
     "8:1:30": {
       "mandala": 8,
@@ -42480,8 +42480,8 @@
       "mandala": 8,
       "sukta": 5,
       "verse": 38,
-      "text": "॥\n\nयो मे॒ हिर॑ण्यसंदृशो॒ दश॒ राज्ञो॒ अमं॑हत । अ॒ध॒स्प॒दा इच्चै॒द्यस्य॑ कृ॒ष्टय॑श्चर्म॒म्ना अ॒भितो॒ जना॑:",
-      "iast": "||\n\nyo me̱ hira̍ṇyasaṃdṛśo̱ daśa̱ rājño̱ ama̍ṃhata | a̱dha̱spa̱dā iccai̱dyasya̍ kṛ̱ṣṭaya̍ścarma̱mnā a̱bhito̱ janā̍:"
+      "text": "यो मे॒ हिर॑ण्यसंदृशो॒ दश॒ राज्ञो॒ अमं॑हत । अ॒ध॒स्प॒दा इच्चै॒द्यस्य॑ कृ॒ष्टय॑श्चर्म॒म्ना अ॒भितो॒ जना॑:",
+      "iast": "yo me̱ hira̍ṇyasaṃdṛśo̱ daśa̱ rājño̱ ama̍ṃhata | a̱dha̱spa̱dā iccai̱dyasya̍ kṛ̱ṣṭaya̍ścarma̱mnā a̱bhito̱ janā̍:"
     },
     "8:5:39": {
       "mandala": 8,
@@ -54114,8 +54114,8 @@
       "mandala": 9,
       "sukta": 15,
       "verse": 2,
-      "text": "॥\n\nए॒ष पु॒रू धि॑यायते बृह॒ते दे॒वता॑तये । यत्रा॒मृता॑स॒ आस॑ते",
-      "iast": "||\n\ne̱ṣa pu̱rū dhi̍yāyate bṛha̱te de̱vatā̍taye | yatrā̱mṛtā̍sa̱ āsa̍te"
+      "text": "ए॒ष पु॒रू धि॑यायते बृह॒ते दे॒वता॑तये । यत्रा॒मृता॑स॒ आस॑ते",
+      "iast": "e̱ṣa pu̱rū dhi̍yāyate bṛha̱te de̱vatā̍taye | yatrā̱mṛtā̍sa̱ āsa̍te"
     },
     "9:15:3": {
       "mandala": 9,
@@ -55927,8 +55927,8 @@
       "mandala": 9,
       "sukta": 59,
       "verse": 2,
-      "text": "॥\n\nपव॑स्वा॒द्भ्यो अदा॑भ्य॒: पव॒स्वौष॑धीभ्यः । पव॑स्व धि॒षणा॑भ्यः",
-      "iast": "||\n\npava̍svā̱dbhyo adā̍bhya̱: pava̱svauṣa̍dhībhyaḥ | pava̍sva dhi̱ṣaṇā̍bhyaḥ"
+      "text": "पव॑स्वा॒द्भ्यो अदा॑भ्य॒: पव॒स्वौष॑धीभ्यः । पव॑स्व धि॒षणा॑भ्यः",
+      "iast": "pava̍svā̱dbhyo adā̍bhya̱: pava̱svauṣa̍dhībhyaḥ | pava̍sva dhi̱ṣaṇā̍bhyaḥ"
     },
     "9:59:3": {
       "mandala": 9,

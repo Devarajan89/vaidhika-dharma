@@ -3,6 +3,7 @@ import type { HomeLocale } from '../../data/home';
 import Verse from './Verse.astro';
 import {
 	getSamhitaVerseHref,
+	getVerseRecord,
 	samhitaLinkLabel,
 	samhitaRefCode,
 	splitMantraPadas,
@@ -15,13 +16,22 @@ interface Props {
 	verse?: number;
 	label: number;
 	text?: string;
+	altText?: string;
 	verseRecord?: VerseRecord;
 	locale?: HomeLocale;
 }
 
-const { mandala, sukta, verse, label, text, verseRecord, locale = 'root' } = Astro.props;
-const displayText = text ?? verseRecord?.text ?? '';
+const { mandala, sukta, verse, label, text, altText, verseRecord, locale = 'root' } = Astro.props;
+const record =
+	verseRecord ??
+	(mandala !== undefined && sukta !== undefined && verse !== undefined
+		? getVerseRecord(mandala, sukta, verse)
+		: undefined);
+const displayText = text ?? record?.text ?? '';
+const resolvedAlt =
+	altText ?? (locale === 'iast' ? record?.text : record?.iast);
 const padas = splitMantraPadas(displayText);
+const altPadas = resolvedAlt && resolvedAlt !== displayText ? splitMantraPadas(resolvedAlt) : [];
 const hasSamhitaRef =
 	mandala !== undefined && sukta !== undefined && verse !== undefined;
 const samhitaHref = hasSamhitaRef
@@ -36,7 +46,7 @@ const samhitaAriaLabel = hasSamhitaRef
 const lastPadaIndex = padas.length - 1;
 ---
 
-<Verse number={hasSamhitaRef ? undefined : label} locale={locale} numberPosition="end">
+<Verse id={`verse-${label}`} number={hasSamhitaRef ? undefined : label} locale={locale} numberPosition="end">
 	{
 		padas.map((pada, index) => (
 			<p>
@@ -52,4 +62,11 @@ const lastPadaIndex = padas.length - 1;
 			</p>
 		))
 	}
+	{altPadas.length > 0 && (
+		<div class="veda-mantra__alt" slot="alt">
+			{altPadas.map((pada) => (
+				<p>{pada}</p>
+			))}
+		</div>
+	)}
 </Verse>

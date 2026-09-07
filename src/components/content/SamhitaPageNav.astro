@@ -8,14 +8,29 @@ interface Props {
 }
 
 const { links, locale = 'root' } = Astro.props;
-const { prev, next, up, index } = links;
+const { prev, next, up, index, start, progress } = links;
 
-if (!prev && !next && !up && !index) {
+if (!prev && !next && !up && !index && !start) {
 	return null;
 }
+
+const isIast = locale === 'iast';
+const prevDir = isIast ? 'Previous' : 'पूर्व';
+const nextDir = isIast ? 'Next' : 'अग्रिम';
+const seqLabel = isIast ? 'Sequence' : 'क्रमः';
+const shortcutHint = isIast ? 'n / p' : 'n / p';
 ---
 
-<nav class="samhita-page-nav" aria-label={locale === 'iast' ? 'Saṃhitā navigation' : 'संहिता नेविगेशन'}>
+<nav class="samhita-page-nav" aria-label={isIast ? 'Saṃhitā navigation' : 'संहिता नेविगेशन'}>
+	{
+		start && (
+			<p class="samhita-page-nav__start">
+				<a class="samhita-page-nav__start-link" href={start.href}>
+					{start.label}
+				</a>
+			</p>
+		)
+	}
 	<div class="samhita-page-nav__secondary">
 		{
 			up && (
@@ -35,10 +50,8 @@ if (!prev && !next && !up && !index) {
 	<div class="samhita-page-nav__row">
 		{
 			prev ? (
-				<a class="samhita-page-nav__link samhita-page-nav__link--prev" href={prev.href}>
-					<span class="samhita-page-nav__dir">
-						{locale === 'iast' ? 'Previous' : 'पूर्व'}
-					</span>
+				<a class="samhita-page-nav__link samhita-page-nav__link--prev" href={prev.href} data-seq="prev">
+					<span class="samhita-page-nav__dir">{prevDir}</span>
 					<span class="samhita-page-nav__label">{prev.label}</span>
 				</a>
 			) : (
@@ -47,10 +60,8 @@ if (!prev && !next && !up && !index) {
 		}
 		{
 			next ? (
-				<a class="samhita-page-nav__link samhita-page-nav__link--next" href={next.href}>
-					<span class="samhita-page-nav__dir">
-						{locale === 'iast' ? 'Next' : 'अग्रिम'}
-					</span>
+				<a class="samhita-page-nav__link samhita-page-nav__link--next" href={next.href} data-seq="next">
+					<span class="samhita-page-nav__dir">{nextDir}</span>
 					<span class="samhita-page-nav__label">{next.label}</span>
 				</a>
 			) : (
@@ -60,6 +71,89 @@ if (!prev && !next && !up && !index) {
 	</div>
 </nav>
 
+{
+	(prev || next || progress) && (
+		<nav class="corpus-seq-bar" aria-label={seqLabel} data-corpus-seq>
+			{prev ? (
+				<a class="corpus-seq-bar__btn" href={prev.href} data-seq="prev" aria-label={`${prevDir}: ${prev.label}`}>
+					← {prevDir}
+				</a>
+			) : (
+				<span class="corpus-seq-bar__btn is-disabled" aria-hidden="true">
+					← {prevDir}
+				</span>
+			)}
+			<span class="corpus-seq-bar__progress">
+				{progress
+					? `${progress.context} · ${progress.current} / ${progress.total}`
+					: shortcutHint}
+			</span>
+			{next ? (
+				<a class="corpus-seq-bar__btn corpus-seq-bar__btn--next" href={next.href} data-seq="next" aria-label={`${nextDir}: ${next.label}`}>
+					{nextDir} →
+				</a>
+			) : (
+				<span class="corpus-seq-bar__btn is-disabled" aria-hidden="true">
+					{nextDir} →
+				</span>
+			)}
+		</nav>
+	)
+}
+
+<script>
+	let sequenceAbort: AbortController | undefined;
+
+	function bindCorpusSequence() {
+		sequenceAbort?.abort();
+		sequenceAbort = new AbortController();
+		const { signal } = sequenceAbort;
+
+		const go = (direction: 'prev' | 'next') => {
+			const link = document.querySelector<HTMLAnchorElement>(`a[data-seq="${direction}"]`);
+			if (!link) return;
+			window.location.assign(link.pathname);
+		};
+
+		document.querySelectorAll<HTMLAnchorElement>('a[data-seq]').forEach((link) => {
+			link.addEventListener(
+				'click',
+				(event) => {
+					event.preventDefault();
+					window.location.assign(link.pathname);
+				},
+				{ signal }
+			);
+		});
+
+		window.addEventListener(
+			'keydown',
+			(event: KeyboardEvent) => {
+				if (event.metaKey || event.ctrlKey || event.altKey) return;
+				const target = event.target;
+				if (
+					target instanceof HTMLElement &&
+					(target.closest('input, textarea, select, [contenteditable="true"]') ||
+						target.isContentEditable)
+				) {
+					return;
+				}
+				if (event.key === 'n' || event.key === 'j') {
+					event.preventDefault();
+					go('next');
+				} else if (event.key === 'p' || event.key === 'k') {
+					event.preventDefault();
+					go('prev');
+				}
+			},
+			{ signal }
+		);
+	}
+
+	bindCorpusSequence();
+	document.addEventListener('astro:page-load', bindCorpusSequence);
+</script>
+
 <style>
 	.samhita-page-nav {
 		margin: 2rem 0 0;
@@ -68,6 +162,20 @@ if (!prev && !next && !up && !index) {
 		display: flex;
 		flex-direction: column;
 		gap: 0.85rem;
+	}
+
+	.samhita-page-nav__start {
+		margin: 0;
+	}
+
+	.samhita-page-nav__start-link {
+		display: inline-flex;
+		padding: 0.55rem 0.95rem;
+		border-radius: 0.5rem;
+		background: var(--sl-color-accent);
+		color: var(--sl-color-white);
+		text-decoration: none;
+		font-weight: 600;
 	}
 
 	.samhita-page-nav__secondary {
@@ -131,6 +239,55 @@ if (!prev && !next && !up && !index) {
 		font-weight: 400;
 	}
 
+	.corpus-seq-bar {
+		position: fixed;
+		left: 50%;
+		bottom: calc(0.85rem + var(--reader-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+		transform: translateX(-50%);
+		z-index: 39;
+		display: flex;
+		align-items: center;
+		gap: 0.45rem;
+		padding: 0.35rem 0.45rem;
+		width: max-content;
+		max-width: calc(100vw - 1.5rem);
+		background: color-mix(in srgb, var(--sl-color-bg) 90%, var(--sl-color-gray-6));
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		box-shadow: 0 8px 24px color-mix(in srgb, var(--sl-color-black) 16%, transparent);
+		backdrop-filter: blur(10px);
+	}
+
+	.corpus-seq-bar__btn {
+		padding: 0.35rem 0.7rem;
+		border-radius: 999px;
+		text-decoration: none;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+		white-space: nowrap;
+	}
+
+	.corpus-seq-bar__btn:hover {
+		color: var(--sl-color-white);
+		background: color-mix(in srgb, var(--sl-color-accent) 22%, transparent);
+	}
+
+	.corpus-seq-bar__btn.is-disabled {
+		opacity: 0.35;
+	}
+
+	.corpus-seq-bar__progress {
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--sl-color-gray-3);
+		padding: 0 0.35rem;
+		white-space: nowrap;
+		max-width: 14rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 	@media (max-width: 40rem) {
 		.samhita-page-nav__row {
 			grid-template-columns: 1fr;
@@ -143,7 +300,8 @@ if (!prev && !next && !up && !index) {
 	}
 
 	@media print {
-		.samhita-page-nav {
+		.samhita-page-nav,
+		.corpus-seq-bar {
 			display: none;
 		}
 	}

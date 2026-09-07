@@ -1,7 +1,11 @@
+import { getUniqueSeoDescription } from '../data/seo-page-copy';
+
 export const SITE_ORIGIN = 'https://vaidhikadharma.org';
 export const OG_IMAGE_PATH = '/images/og-default.jpg';
+export const SITE_LOGO_PATH = '/images/logo-512.png';
 export const OG_IMAGE_WIDTH = 1200;
 export const OG_IMAGE_HEIGHT = 630;
+export const SITE_LOGO_SIZE = 512;
 
 export interface SeoHeadItem {
 	tag: string;
@@ -64,7 +68,26 @@ export function isHomeSlug(slug: string): boolean {
 }
 
 export function isNoIndexSlug(slug: string): boolean {
-	return /(^|\/)offline$/.test(slugPath(slug));
+	const path = slugPath(slug);
+	return (
+		/(^|\/)offline$/.test(path) ||
+		/(^|\/)404$/.test(path) ||
+		path.split('/').includes('_archive')
+	);
+}
+
+export function isSearchSlug(slug: string): boolean {
+	return /(^|\/)search$/.test(slugPath(slug));
+}
+
+export function defaultLocaleUrl(slug: string, siteUrl: string): string {
+	const path = slugPath(slug);
+	if (path === 'iast') return new URL('/', siteUrl).href;
+	if (path.startsWith('iast/')) {
+		const stripped = path.slice('iast/'.length);
+		return new URL(stripped ? `/${stripped}/` : '/', siteUrl).href;
+	}
+	return new URL(path === '' ? '/' : `/${path}/`, siteUrl).href;
 }
 
 export function isIastSlug(slug: string, locale?: string): boolean {
@@ -103,6 +126,9 @@ export function buildSeoDescription(
 	isIast: boolean,
 	seriesName?: string | null
 ): string {
+	const unique = getUniqueSeoDescription(slug);
+	if (unique) return truncateMeta(unique);
+
 	const script = isIast
 		? 'IAST transliteration with Vedic svara'
 		: 'Devanagari with Vedic svara';
@@ -191,6 +217,7 @@ export function applySeoHead(state: SeoHeadState): void {
 	upsertMeta(head, 'property', 'og:title', documentTitle);
 	upsertMeta(head, 'property', 'og:type', state.isHome ? 'website' : 'article');
 	upsertMeta(head, 'property', 'og:url', state.canonicalUrl);
+	upsertMeta(head, 'property', 'og:site_name', SITE_TITLE);
 	upsertMeta(head, 'property', 'og:locale', ogLocale);
 	upsertMeta(head, 'property', 'og:locale:alternate', ogLocaleAlternate);
 	upsertMeta(head, 'property', 'og:image', image);
@@ -213,4 +240,18 @@ export function applySeoHead(state: SeoHeadState): void {
 	}
 
 	patchHreflang(head);
+	upsertHreflang(head, 'x-default', defaultLocaleUrl(state.slug, state.siteUrl));
+}
+
+function upsertHreflang(head: SeoHeadItem[], hreflang: string, href: string): void {
+	const entry: SeoHeadItem = {
+		tag: 'link',
+		attrs: { rel: 'alternate', hreflang, href },
+	};
+	const index = head.findIndex(
+		(item) =>
+			item.tag === 'link' && item.attrs?.rel === 'alternate' && item.attrs?.hreflang === hreflang
+	);
+	if (index >= 0) head[index] = entry;
+	else head.push(entry);
 }

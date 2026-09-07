@@ -1,0 +1,28 @@
+{
+  "id": "sarpa-suktam-rig",
+  "sections": [
+    {
+      "header": "३ सार्पराज्ञी। आत्मा,सूर्यो वा। गायत्री।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 189,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 189,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 189,
+          "verse": 3
+        }
+      ]
+    }
+  ]
+}

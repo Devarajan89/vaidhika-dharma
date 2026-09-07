@@ -1,0 +1,28 @@
+{
+  "id": "maya-suktam",
+  "sections": [
+    {
+      "header": "३ पतंगः प्राजापत्यः। मायाभेदः। त्रिष्टुप्। १ जगती।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 177,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 177,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 177,
+          "verse": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+---
+import { getSeoIntro } from '../data/seo-page-copy';
+import { isHomeSlug, isSearchSlug, slugPath } from '../lib/seo';
+import { resolveHomeLocale } from '../data/home';
+
+const { entry } = Astro.locals.starlightRoute;
+const slug = String(entry.data.slug ?? entry.id);
+const locale = resolveHomeLocale(Astro.locals.starlightRoute.locale);
+const intro = getSeoIntro(slug, locale);
+const onSearchPage = /\/search\/?$/.test(Astro.url.pathname);
+
+if (
+	!intro ||
+	onSearchPage ||
+	isHomeSlug(slug) ||
+	isSearchSlug(slug) ||
+	entry.data.template === 'splash'
+) {
+	return;
+}
+
+const path = slugPath(slug).replace(/^iast\//, '');
+const iastHref = path ? `/iast/${path}/` : '/iast/';
+const rootHref = path ? `/${path}/` : '/';
+const switchLabel = locale === 'iast' ? 'Devanagari' : 'IAST';
+const switchHref = locale === 'iast' ? rootHref : iastHref;
+---
+
+<p class="seo-intro">
+	{intro}
+	{' '}
+	<a href={switchHref}>{switchLabel}</a>
+</p>
+
+<style>
+	.seo-intro {
+		max-width: 42rem;
+		margin: 0.35rem 0 1.25rem;
+		font-size: 0.95rem;
+		line-height: 1.55;
+		color: var(--sl-color-gray-2);
+	}
+
+	.seo-intro a {
+		color: var(--sl-color-accent);
+	}
+
+	@media print {
+		.seo-intro {
+			display: none;
+		}
+	}
+</style>

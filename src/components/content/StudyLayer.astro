@@ -1,0 +1,89 @@
+---
+import type { HomeLocale } from '../../data/home';
+
+interface StudyRow {
+	label: string;
+	value?: string | null;
+	html?: string | null;
+}
+
+interface Props {
+	locale?: HomeLocale;
+	rows: StudyRow[];
+}
+
+const { locale = 'root', rows } = Astro.props;
+const visible = rows.filter((row) => Boolean(row.value || row.html));
+if (!visible.length) return;
+const title = locale === 'iast' ? 'Study' : 'अध्ययनम्';
+---
+
+<details class="study-layer">
+	<summary>{title}</summary>
+	<dl class="study-layer__list">
+		{
+			visible.map((row) => (
+				<div class="study-layer__row">
+					<dt>{row.label}</dt>
+					<dd set:html={row.html ?? undefined}>{row.html ? undefined : row.value}</dd>
+				</div>
+			))
+		}
+	</dl>
+</details>
+
+<style>
+	.study-layer {
+		margin: 0 0 1.5rem;
+		padding: 0.65rem 0.9rem;
+		border: 1px dashed var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		background: color-mix(in srgb, var(--sl-color-gray-7) 70%, transparent);
+	}
+
+	.study-layer summary {
+		cursor: pointer;
+		font-size: 0.8125rem;
+		font-weight: 600;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: var(--sl-color-gray-3);
+	}
+
+	.study-layer__list {
+		margin: 0.75rem 0 0;
+	}
+
+	.study-layer__row + .study-layer__row {
+		margin-top: 0.65rem;
+	}
+
+	.study-layer dt {
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--sl-color-gray-3);
+		margin: 0 0 0.15rem;
+	}
+
+	.study-layer dd {
+		margin: 0;
+		font-size: 0.9375rem;
+		line-height: 1.55;
+		color: var(--sl-color-gray-1);
+	}
+
+	.study-layer dd :global(a) {
+		color: var(--sl-color-accent);
+	}
+
+	.study-layer dd :global(ul) {
+		margin: 0;
+		padding-inline-start: 1.1rem;
+	}
+
+	@media print {
+		.study-layer {
+			display: none;
+		}
+	}
+</style>

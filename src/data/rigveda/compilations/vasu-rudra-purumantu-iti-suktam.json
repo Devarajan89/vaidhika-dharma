@@ -1,0 +1,46 @@
+{
+  "id": "vasu-rudra-purumantu-iti-suktam",
+  "sections": [
+    {
+      "header": "६ दीर्घतमा औचथ्यः। अश्विनौ।त्रिष्टुप्, ६ अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 158,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 158,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 158,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 158,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 158,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 158,
+          "verse": 6
+        }
+      ]
+    }
+  ]
+}

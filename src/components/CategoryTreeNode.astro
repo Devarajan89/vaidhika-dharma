@@ -1,5 +1,6 @@
 ---
 import type { CategoryNode } from '../data/categories';
+import { countCategoryLeaves } from '../data/categories';
 
 interface Props {
 	node: CategoryNode;
@@ -8,6 +9,7 @@ interface Props {
 
 const { node, depth = 0 } = Astro.props;
 const hasChildren = node.children && node.children.length > 0;
+const leafCount = hasChildren ? countCategoryLeaves(node) : 0;
 ---
 
 <li
@@ -25,6 +27,9 @@ const hasChildren = node.children && node.children.length > 0;
 			<details class="tree-branch" open={node.defaultOpen}>
 				<summary class="tree-summary">
 					<span class="tree-label">{node.label}</span>
+					{depth === 0 && leafCount > 0 && (
+						<span class="tree-count">{leafCount}</span>
+					)}
 				</summary>
 				<ul class="tree-children">
 					{node.children!.map((child) => (

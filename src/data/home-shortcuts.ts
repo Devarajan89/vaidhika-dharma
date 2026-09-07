@@ -1,9 +1,34 @@
 import type { HomeLocale } from './home';
+import type { SandhyaSlot, ShakhaId } from '../lib/reader-prefs';
 
 export interface HomeShortcut {
 	label: Record<HomeLocale, string>;
 	href: Record<HomeLocale, string>;
 	group: 'ritual' | 'mantra' | 'text';
+}
+
+const SLOT_LABEL: Record<SandhyaSlot, Record<HomeLocale, string>> = {
+	prata: { root: 'प्रातः सन्ध्या', iast: 'Prātaḥ sandhyā' },
+	madhyahnika: { root: 'माध्यान्हिकम्', iast: 'Mādhyāhnikam' },
+	sayam: { root: 'सायं सन्ध्या', iast: 'Sāyam sandhyā' },
+};
+
+export function sandhyaPracticeHref(
+	locale: HomeLocale,
+	shakha: ShakhaId,
+	slot: SandhyaSlot
+): string {
+	const prefix = locale === 'iast' ? '/iast' : '';
+	return `${prefix}/${shakha}-sandhyavandanam/${slot}/`;
+}
+
+export function getTodayPractice(locale: HomeLocale, slot: SandhyaSlot, shakha: ShakhaId = 'aswalayana') {
+	return {
+		label: SLOT_LABEL[slot][locale],
+		href: sandhyaPracticeHref(locale, shakha, slot),
+		slot,
+		shakha,
+	};
 }
 
 export const HOME_SHORTCUTS: HomeShortcut[] = [

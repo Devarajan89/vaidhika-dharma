@@ -1,7 +1,9 @@
 ---
 import type { HomeLocale } from '../data/home';
 import { getHomeContent } from '../data/home';
-import { getHomeShortcuts } from '../data/home-shortcuts';
+import { getHomeShortcuts, getTodayPractice } from '../data/home-shortcuts';
+import { getSandhyaTimeSlot } from '../lib/reader-prefs';
+import docCache from '../data/doc-cache.json';
 
 interface Props {
 	locale: HomeLocale;
@@ -10,19 +12,122 @@ interface Props {
 const { locale } = Astro.props;
 const { shortcutsHeading } = getHomeContent(locale);
 const shortcuts = getHomeShortcuts(locale);
+const slot = getSandhyaTimeSlot();
+const today = getTodayPractice(locale, slot);
+const prefix = locale === 'iast' ? '/iast' : '';
+const offlineHref = `${prefix}/offline/`;
+const offlineLabel = 'Use without network';
+const nowLabel = 'Now';
+const practiceEyebrow = 'Today’s practice';
+const continueFallback = (docCache.recentByLocale[locale] ?? [])[0];
+const fallbackHref = continueFallback
+	? `/${continueFallback.slug ?? continueFallback.id}/`
+	: '';
+const fallbackTitle = continueFallback?.title ?? '';
+const fallbackLabel = 'Recent';
 ---
 
-<section class="home-shortcuts" aria-labelledby="home-shortcuts-heading">
+<section class="home-shortcuts" aria-labelledby="home-shortcuts-heading" data-home-shortcuts data-locale={locale}>
 	<h2 id="home-shortcuts-heading" class="home-shortcuts__heading">{shortcutsHeading}</h2>
+	<p class="home-continue" data-home-continue hidden={!continueFallback}>
+		<a href={fallbackHref} data-continue-fallback={continueFallback ? 'true' : undefined}>
+			{continueFallback ? `${fallbackLabel} · ${fallbackTitle}` : ''}
+		</a>
+	</p>
+	<a
+		class="home-practice"
+		data-home-practice
+		href={today.href}
+		data-slot={today.slot}
+	>
+		<span class="home-practice__eyebrow">{practiceEyebrow} · {nowLabel}</span>
+		<span class="home-practice__title" data-home-practice-title>{today.label}</span>
+	</a>
+	<div class="home-shakha" role="group" aria-label="Śākhā">
+		<button type="button" data-shakha="aswalayana" aria-pressed="true">
+			{locale === 'iast' ? 'Aśvalāyana' : 'आश्वलायन'}
+		</button>
+		<button type="button" data-shakha="apastamba" aria-pressed="false">
+			{locale === 'iast' ? 'Āpastamba' : 'आपस्तम्ब'}
+		</button>
+	</div>
 	<ul class="home-shortcuts__list">
 		{
 			shortcuts.map((item) => (
 				<li>
-					<a class="home-shortcuts__link" href={item.href} data-group={item.group}>
+					<a
+						class="home-shortcuts__link"
+						href={item.href}
+						data-group={item.group}
+						data-shortcut-id={item.href}
+					>
 						{item.label}
 					</a>
 				</li>
 			))
 		}
 	</ul>
+	<p class="home-offline">
+		<a href={offlineHref}>{offlineLabel}</a>
+	</p>
 </section>
+
+<script>
+	import { READER_KEYS, getSandhyaTimeSlot, type ResumeEntry, type ShakhaId } from '../lib/reader-prefs';
+	import { getTodayPractice } from '../data/home-shortcuts';
+
+	const root = document.querySelector<HTMLElement>('[data-home-shortcuts]');
+	if (root) {
+		const locale = root.dataset.locale === 'iast' ? 'iast' : 'root';
+
+		const shakha = (localStorage.getItem(READER_KEYS.shakha) as ShakhaId) || 'aswalayana';
+		const applyShakha = (next: ShakhaId) => {
+			localStorage.setItem(READER_KEYS.shakha, next);
+			root.querySelectorAll<HTMLButtonElement>('[data-shakha]').forEach((button) => {
+				button.setAttribute('aria-pressed', String(button.dataset.shakha === next));
+			});
+			root.querySelectorAll<HTMLAnchorElement>('.home-shortcuts__link').forEach((link) => {
+				if (link.dataset.group !== 'ritual') return;
+				link.href = link.href.replace(/\/(aswalayana|apastamba)-/, `/${next}-`);
+			});
+			const practice = root.querySelector<HTMLAnchorElement>('[data-home-practice]');
+			const title = root.querySelector('[data-home-practice-title]');
+			if (practice) {
+				const slot = getSandhyaTimeSlot();
+				const today = getTodayPractice(locale, slot, next);
+				practice.href = today.href;
+				practice.dataset.slot = today.slot;
+				if (title) title.textContent = today.label;
+			}
+		};
+		applyShakha(shakha);
+		root.querySelectorAll<HTMLButtonElement>('[data-shakha]').forEach((button) => {
+			button.addEventListener('click', () => applyShakha(button.dataset.shakha as ShakhaId));
+		});
+
+		const timeSlot = getSandhyaTimeSlot();
+		root.querySelectorAll<HTMLAnchorElement>('.home-shortcuts__link').forEach((link) => {
+			if (link.pathname.includes(`/${timeSlot}/`)) {
+				link.dataset.currentTime = 'true';
+			}
+		});
+
+		try {
+			const raw = localStorage.getItem(READER_KEYS.resume);
+			if (raw) {
+				const resume = JSON.parse(raw) as ResumeEntry;
+				const box = root.querySelector<HTMLElement>('[data-home-continue]');
+				const anchor = box?.querySelector('a');
+				if (box && anchor && resume.href) {
+					const label = 'Continue';
+					anchor.href = resume.href;
+					anchor.textContent = `${label} · ${resume.title}`;
+					anchor.removeAttribute('data-continue-fallback');
+					box.hidden = false;
+				}
+			}
+		} catch {
+			/* ignore */
+		}
+	}
+</script>

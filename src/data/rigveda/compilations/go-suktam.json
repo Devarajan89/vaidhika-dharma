@@ -1,0 +1,58 @@
+{
+  "id": "go-suktam",
+  "sections": [
+    {
+      "header": "८ बार्हस्पत्यो भरद्वाज: । गाव:; २, ८  इन्द्रो गावो वा । त्रिष्टुप् , २ – ४ जगती, ८ अनुष्टुप् ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 6,
+          "sukta": 28,
+          "verse": 8
+        }
+      ]
+    }
+  ]
+}

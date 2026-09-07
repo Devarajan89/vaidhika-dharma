@@ -1,0 +1,758 @@
+[
+  {
+    "order": 1,
+    "id": "ganapathy-suktam",
+    "rootTitle": "गणपतिसूक्तम्",
+    "iastTitle": "Gaṇapatisūktam",
+    "bookPage": 1
+  },
+  {
+    "order": 2,
+    "id": "brahmanaspati-suktam",
+    "rootTitle": "ब्रह्मणस्पतिसूक्तम्",
+    "iastTitle": "Brahmaṇaspatisūktam",
+    "bookPage": 2
+  },
+  {
+    "order": 3,
+    "id": "swasti-suktam",
+    "rootTitle": "स्वस्तिसूक्तम्",
+    "iastTitle": "Svastisūktam",
+    "bookPage": 10
+  },
+  {
+    "order": 4,
+    "id": "a-no-bhadrauh-suktam",
+    "rootTitle": "आनोभद्रसूक्तम्",
+    "iastTitle": "Ānobhadrasūktam",
+    "bookPage": 11
+  },
+  {
+    "order": 5,
+    "id": "shamvati-suktam",
+    "rootTitle": "शंवतीसूक्तम्",
+    "iastTitle": "Śaṃvatīsūktam",
+    "bookPage": 12
+  },
+  {
+    "order": 6,
+    "id": "mangala-suktam",
+    "rootTitle": "मङ्गलसूक्तम्",
+    "iastTitle": "Maṅgalasūktam",
+    "bookPage": 15
+  },
+  {
+    "order": 7,
+    "id": "purusha-suktam-rig",
+    "rootTitle": "पुरुषसूक्तम्",
+    "iastTitle": "Puruṣasūktam",
+    "bookPage": 16
+  },
+  {
+    "order": 8,
+    "id": "vishnu-suktam-rig",
+    "rootTitle": "विष्णुसूक्तम्",
+    "iastTitle": "Viṣṇusūktam",
+    "bookPage": 18
+  },
+  {
+    "order": 9,
+    "id": "vamana-suktam",
+    "rootTitle": "वामनसूक्तम्",
+    "iastTitle": "Vāmanasūktam",
+    "bookPage": 23
+  },
+  {
+    "order": 10,
+    "id": "rudra-suktam-rig",
+    "rootTitle": "रुद्रसूक्तम्",
+    "iastTitle": "Rudrasūktam",
+    "bookPage": 29
+  },
+  {
+    "order": 11,
+    "id": "hiranyagarbha-suktam",
+    "rootTitle": "हिरण्यगर्भसूक्तम्",
+    "iastTitle": "Hiraṇyagarbhasūktam",
+    "bookPage": 35
+  },
+  {
+    "order": 12,
+    "id": "saura-suktam",
+    "rootTitle": "सौरसूक्तम्",
+    "iastTitle": "Saurasūktam",
+    "bookPage": 36
+  },
+  {
+    "order": 13,
+    "id": "sarasvati-suktam",
+    "rootTitle": "सरस्वतीसूक्तम्",
+    "iastTitle": "Sarasvatīsūktam",
+    "bookPage": 43
+  },
+  {
+    "order": 14,
+    "id": "sri-suktam-rig",
+    "rootTitle": "श्रीसूक्तम्",
+    "iastTitle": "Śrīsūktam",
+    "bookPage": 48
+  },
+  {
+    "order": 15,
+    "id": "phala-shruti-1",
+    "rootTitle": "फलश्रुतिः",
+    "iastTitle": "Phalaśrutiḥ",
+    "bookPage": 50
+  },
+  {
+    "order": 16,
+    "id": "devi-suktam",
+    "rootTitle": "देवीसूक्तम्",
+    "iastTitle": "Devīsūktam",
+    "bookPage": 51
+  },
+  {
+    "order": 17,
+    "id": "jnana-suktam",
+    "rootTitle": "ज्ञानसूक्तम्",
+    "iastTitle": "Jñānasūktam",
+    "bookPage": 52
+  },
+  {
+    "order": 18,
+    "id": "ratri-suktam",
+    "rootTitle": "रात्रीसूक्तम्",
+    "iastTitle": "Rātrīsūktam",
+    "bookPage": 54
+  },
+  {
+    "order": 19,
+    "id": "shraddha-suktam",
+    "rootTitle": "श्रद्धासूक्तम्",
+    "iastTitle": "Śraddhāsūktam",
+    "bookPage": 57
+  },
+  {
+    "order": 20,
+    "id": "medha-suktam-rig",
+    "rootTitle": "मेधासूक्तम्",
+    "iastTitle": "Medhāsūktam",
+    "bookPage": 58
+  },
+  {
+    "order": 21,
+    "id": "vak-suktam-rig",
+    "rootTitle": "वाक्सूक्तम्",
+    "iastTitle": "Vāksūktam",
+    "bookPage": 59
+  },
+  {
+    "order": 22,
+    "id": "shachi-suktam",
+    "rootTitle": "शचीसूक्तम्",
+    "iastTitle": "Śacīsūktam",
+    "bookPage": 60
+  },
+  {
+    "order": 23,
+    "id": "keshi-suktam",
+    "rootTitle": "केशीसूक्तम्",
+    "iastTitle": "Keśīsūktam",
+    "bookPage": 61
+  },
+  {
+    "order": 24,
+    "id": "pratah-suktam",
+    "rootTitle": "प्रातःसूक्तम्",
+    "iastTitle": "Prātaḥsūktam",
+    "bookPage": 62
+  },
+  {
+    "order": 25,
+    "id": "kumara-suktam",
+    "rootTitle": "कुमारसूक्तम्",
+    "iastTitle": "Kumārasūktam",
+    "bookPage": 63
+  },
+  {
+    "order": 26,
+    "id": "sarpa-suktam-rig",
+    "rootTitle": "सर्पसूक्तम्",
+    "iastTitle": "Sarpasūktam",
+    "bookPage": 65
+  },
+  {
+    "order": 27,
+    "id": "tarkshya-suktam",
+    "rootTitle": "तार्क्ष्यसूक्तम्",
+    "iastTitle": "Tārkṣyasūktam",
+    "bookPage": 67
+  },
+  {
+    "order": 28,
+    "id": "go-suktam",
+    "rootTitle": "गोसूक्तम्",
+    "iastTitle": "Gosūktam",
+    "bookPage": 69
+  },
+  {
+    "order": 29,
+    "id": "vastu-suktam",
+    "rootTitle": "वास्तुसूक्तम्",
+    "iastTitle": "Vāstusūktam",
+    "bookPage": 69
+  },
+  {
+    "order": 30,
+    "id": "indra-suktam",
+    "rootTitle": "इन्द्रसूक्तम्",
+    "iastTitle": "Indrasūktam",
+    "bookPage": 70
+  },
+  {
+    "order": 31,
+    "id": "agni-suktam",
+    "rootTitle": "अग्निसूक्तम्",
+    "iastTitle": "Agnisūktam",
+    "bookPage": 71
+  },
+  {
+    "order": 32,
+    "id": "agnimile-iti-suktam",
+    "rootTitle": "अग्निमीळे इति सूक्तम्",
+    "iastTitle": "Agnimīḷe iti sūktam",
+    "bookPage": 72
+  },
+  {
+    "order": 33,
+    "id": "agne-naya-iti-suktam",
+    "rootTitle": "अग्ने नयेति सूक्तम्",
+    "iastTitle": "Agne nayeti sūktam",
+    "bookPage": 73
+  },
+  {
+    "order": 34,
+    "id": "abhyupasthana-suktam",
+    "rootTitle": "अभ्युपस्थानसूक्तम्",
+    "iastTitle": "Abhyupasthānasūktam",
+    "bookPage": 74
+  },
+  {
+    "order": 35,
+    "id": "ayushya-suktam",
+    "rootTitle": "आयुष्यसूक्तम्",
+    "iastTitle": "Āyuṣyasūktam",
+    "bookPage": 75
+  },
+  {
+    "order": 36,
+    "id": "astidam-adhimanthanam-iti-suktam",
+    "rootTitle": "अस्तीदमधिमन्थनमिति सूक्तम्",
+    "iastTitle": "Astīdamadhimanthanamiti sūktam",
+    "bookPage": 77
+  },
+  {
+    "order": 37,
+    "id": "tvamagne-prathama-iti-suktam",
+    "rootTitle": "त्वमग्ने प्रथम इति सूक्तम्",
+    "iastTitle": "Tvamagne prathama iti sūktam",
+    "bookPage": 79
+  },
+  {
+    "order": 38,
+    "id": "tvamagne-dyubhir-iti-suktam",
+    "rootTitle": "त्वमग्ने द्युभिरिति सूक्तम्",
+    "iastTitle": "Tvamagne dyubhiriti sūktam",
+    "bookPage": 81
+  },
+  {
+    "order": 39,
+    "id": "yama-suktam",
+    "rootTitle": "यमसूक्तम्",
+    "iastTitle": "Yamasūktam",
+    "bookPage": 83
+  },
+  {
+    "order": 40,
+    "id": "nirriti-suktam",
+    "rootTitle": "निर्ऋतिसूक्तम्",
+    "iastTitle": "Nirṛtisūktam",
+    "bookPage": 85
+  },
+  {
+    "order": 41,
+    "id": "varuna-suktam",
+    "rootTitle": "वरुणसूक्तम्",
+    "iastTitle": "Varuṇasūktam",
+    "bookPage": 85
+  },
+  {
+    "order": 42,
+    "id": "vayu-suktam",
+    "rootTitle": "वायुसूक्तम्",
+    "iastTitle": "Vāyusūktam",
+    "bookPage": 93
+  },
+  {
+    "order": 43,
+    "id": "soma-suktam",
+    "rootTitle": "सोमसूक्तम्",
+    "iastTitle": "Somasūktam",
+    "bookPage": 94
+  },
+  {
+    "order": 44,
+    "id": "vata-suktam",
+    "rootTitle": "वातसूक्तम्",
+    "iastTitle": "Vātasūktam",
+    "bookPage": 96
+  },
+  {
+    "order": 45,
+    "id": "marut-suktam",
+    "rootTitle": "मरुत्सूक्तम्",
+    "iastTitle": "Marutsūktam",
+    "bookPage": 96
+  },
+  {
+    "order": 46,
+    "id": "shuddhi-suktam",
+    "rootTitle": "शुद्धिसूक्तम्",
+    "iastTitle": "Śuddhisūktam",
+    "bookPage": 98
+  },
+  {
+    "order": 47,
+    "id": "apa-nah-shoshucadati-suktam",
+    "rootTitle": "अप नः शोशुचदति सूक्तम्",
+    "iastTitle": "Apa naḥ śośucadati sūktam",
+    "bookPage": 99
+  },
+  {
+    "order": 48,
+    "id": "vari-suktam",
+    "rootTitle": "वारिसूक्तम्",
+    "iastTitle": "Vārisūktam",
+    "bookPage": 100
+  },
+  {
+    "order": 49,
+    "id": "nadi-stuti-suktam",
+    "rootTitle": "नदीस्तुतिसूक्तम्",
+    "iastTitle": "Nadīstutisūktam",
+    "bookPage": 102
+  },
+  {
+    "order": 50,
+    "id": "parjanya-suktam",
+    "rootTitle": "पर्जन्यसूक्तम्",
+    "iastTitle": "Parjanyasūktam",
+    "bookPage": 104
+  },
+  {
+    "order": 51,
+    "id": "gharma-suktam",
+    "rootTitle": "घर्मसूक्तम्",
+    "iastTitle": "Gharmasūktam",
+    "bookPage": 109
+  },
+  {
+    "order": 52,
+    "id": "balittha-suktam",
+    "rootTitle": "बळित्थासूक्तम्",
+    "iastTitle": "Baḷitthāsūktam",
+    "bookPage": 110
+  },
+  {
+    "order": 53,
+    "id": "prithivi-suktam",
+    "rootTitle": "पृथिवीसूक्तम्",
+    "iastTitle": "Pṛthivīsūktam",
+    "bookPage": 111
+  },
+  {
+    "order": 54,
+    "id": "kshetrapati-suktam",
+    "rootTitle": "क्षेत्रपतिसूक्तम्",
+    "iastTitle": "Kṣetrapatisūktam",
+    "bookPage": 112
+  },
+  {
+    "order": 55,
+    "id": "oshadhi-suktam",
+    "rootTitle": "ओषधिसूक्तम्",
+    "iastTitle": "Oṣadhisūktam",
+    "bookPage": 113
+  },
+  {
+    "order": 56,
+    "id": "surya-savitr-suktam",
+    "rootTitle": "सूर्यासवित्रीसूक्तम्",
+    "iastTitle": "Sūryāsavitrīsūktam",
+    "bookPage": 115
+  },
+  {
+    "order": 57,
+    "id": "ye-yajnena-iti-suktam",
+    "rootTitle": "ये यज्ञेनेति सूक्तम्",
+    "iastTitle": "Ye yajñeneti sūktam",
+    "bookPage": 122
+  },
+  {
+    "order": 58,
+    "id": "te-avadan-iti-suktam",
+    "rootTitle": "तेऽवदन्निति सूक्तम्",
+    "iastTitle": "Te'vadanniti sūktam",
+    "bookPage": 123
+  },
+  {
+    "order": 59,
+    "id": "sapatni-badhana-suktam",
+    "rootTitle": "सपत्नीबाधनसूक्तम्",
+    "iastTitle": "Sapatnībādhanasūktam",
+    "bookPage": 124
+  },
+  {
+    "order": 60,
+    "id": "alakshmi-nashana-suktam",
+    "rootTitle": "अलक्ष्मीनाशनसूक्तम्",
+    "iastTitle": "Alakṣmīnāśanasūktam",
+    "bookPage": 125
+  },
+  {
+    "order": 61,
+    "id": "rajayakshma-nashana-suktam",
+    "rootTitle": "राजयक्ष्मनाशनसूक्तम्",
+    "iastTitle": "Rājayakṣmanāśanasūktam",
+    "bookPage": 126
+  },
+  {
+    "order": 62,
+    "id": "yakshma-nashana-suktam",
+    "rootTitle": "यक्ष्मनाशनसूक्तम्",
+    "iastTitle": "Yakṣmanāśanasūktam",
+    "bookPage": 126
+  },
+  {
+    "order": 63,
+    "id": "dusvapna-nashana-suktam",
+    "rootTitle": "दुस्वप्ननाशनसूक्तम्",
+    "iastTitle": "Dusvapnanāśanasūktam",
+    "bookPage": 127
+  },
+  {
+    "order": 64,
+    "id": "sapatna-nashana-suktam",
+    "rootTitle": "सपत्ननाशनसूक्तम्",
+    "iastTitle": "Sapatnanāśanasūktam",
+    "bookPage": 129
+  },
+  {
+    "order": 65,
+    "id": "manyu-suktam",
+    "rootTitle": "मन्युसूक्तम्",
+    "iastTitle": "Manyusūktam",
+    "bookPage": 129
+  },
+  {
+    "order": 66,
+    "id": "mrityu-suktam",
+    "rootTitle": "मृत्युसूक्तम्",
+    "iastTitle": "Mṛtyusūktam",
+    "bookPage": 131
+  },
+  {
+    "order": 67,
+    "id": "visha-hara-suktam",
+    "rootTitle": "विषहरसूक्तम्",
+    "iastTitle": "Viṣaharasūktam",
+    "bookPage": 132
+  },
+  {
+    "order": 68,
+    "id": "sarpa-visha-hara-suktam",
+    "rootTitle": "सर्पविषहरसूक्तम्",
+    "iastTitle": "Sarpaviṣaharasūktam",
+    "bookPage": 134
+  },
+  {
+    "order": 69,
+    "id": "rakshoghna-suktam",
+    "rootTitle": "रक्षोघ्नसूक्तम्",
+    "iastTitle": "Rakṣoghnasūktam",
+    "bookPage": 135
+  },
+  {
+    "order": 70,
+    "id": "paitrika-suktam",
+    "rootTitle": "पैतृकं सूक्तम्",
+    "iastTitle": "Paitṛkaṃ sūktam",
+    "bookPage": 144
+  },
+  {
+    "order": 71,
+    "id": "anna-suktam",
+    "rootTitle": "अन्नसूक्तम्",
+    "iastTitle": "Annasūktam",
+    "bookPage": 146
+  },
+  {
+    "order": 72,
+    "id": "na-tam-amho-suktam",
+    "rootTitle": "नतमंहोसूक्तम्",
+    "iastTitle": "Natamaṃhosūktam",
+    "bookPage": 152
+  },
+  {
+    "order": 73,
+    "id": "vaishvadeva-suktam",
+    "rootTitle": "वैश्वदेवसूक्तम्",
+    "iastTitle": "Vaiśvadevasūktam",
+    "bookPage": 153
+  },
+  {
+    "order": 74,
+    "id": "ghrita-stuti-suktam",
+    "rootTitle": "घृतस्तुतिसूक्तम्",
+    "iastTitle": "Ghṛtastutisūktam",
+    "bookPage": 155
+  },
+  {
+    "order": 75,
+    "id": "nasadiya-suktam",
+    "rootTitle": "नासदासीदिति सूक्तम्",
+    "iastTitle": "Nāsadāsīditi sūktam",
+    "bookPage": 156
+  },
+  {
+    "order": 76,
+    "id": "aranya-suktam",
+    "rootTitle": "अरण्यसूक्तम्",
+    "iastTitle": "Araṇyasūktam",
+    "bookPage": 157
+  },
+  {
+    "order": 77,
+    "id": "iti-va-iti-suktam",
+    "rootTitle": "इति वा इतिसूक्तम्",
+    "iastTitle": "Iti vā itisūktam",
+    "bookPage": 158
+  },
+  {
+    "order": 78,
+    "id": "mana-avartana-suktam",
+    "rootTitle": "मन आवर्तनसूक्तम्",
+    "iastTitle": "Mana āvartanasūktam",
+    "bookPage": 159
+  },
+  {
+    "order": 79,
+    "id": "maya-suktam",
+    "rootTitle": "मायासूक्तम्",
+    "iastTitle": "Māyāsūktam",
+    "bookPage": 160
+  },
+  {
+    "order": 80,
+    "id": "hiranya-suktam",
+    "rootTitle": "हिरण्यसूक्तम्",
+    "iastTitle": "Hiraṇyasūktam",
+    "bookPage": 161
+  },
+  {
+    "order": 81,
+    "id": "dakshina-suktam",
+    "rootTitle": "दक्षिणासूक्तम्",
+    "iastTitle": "Dakṣiṇāsūktam",
+    "bookPage": 162
+  },
+  {
+    "order": 82,
+    "id": "indram-mitram-iti-suktam",
+    "rootTitle": "इन्द्रं मित्रमिति सूक्तम्",
+    "iastTitle": "Indraṃ mitramiti sūktam",
+    "bookPage": 164
+  },
+  {
+    "order": 83,
+    "id": "apratiratha-suktam",
+    "rootTitle": "अप्रतिरथसूक्तम्",
+    "iastTitle": "Apratirathasūktam",
+    "bookPage": 165
+  },
+  {
+    "order": 84,
+    "id": "vijaya-prada-suktam",
+    "rootTitle": "विजयप्रदसूक्तम्",
+    "iastTitle": "Vijayapradasūktam",
+    "bookPage": 166
+  },
+  {
+    "order": 85,
+    "id": "raja-suktam",
+    "rootTitle": "राजसूक्तम्",
+    "iastTitle": "Rājasūktam",
+    "bookPage": 169
+  },
+  {
+    "order": 86,
+    "id": "vishvakarma-suktam",
+    "rootTitle": "विश्वकर्मसूक्तम्",
+    "iastTitle": "Viśvakarmasūktam",
+    "bookPage": 170
+  },
+  {
+    "order": 87,
+    "id": "rati-suktam",
+    "rootTitle": "रतिसूक्तम्",
+    "iastTitle": "Ratisūktam",
+    "bookPage": 172
+  },
+  {
+    "order": 88,
+    "id": "yama-yami-suktam",
+    "rootTitle": "यमयमीसूक्तम्",
+    "iastTitle": "Yamayamīsūktam",
+    "bookPage": 173
+  },
+  {
+    "order": 89,
+    "id": "tantu-veshtana-suktam",
+    "rootTitle": "तन्तुवेष्टनसूक्तम्",
+    "iastTitle": "Tantuveṣṭanasūktam",
+    "bookPage": 175
+  },
+  {
+    "order": 90,
+    "id": "surya-vaishvanara-suktam",
+    "rootTitle": "सूर्यवैश्वानरसूक्तम्",
+    "iastTitle": "Sūryavaiśvānarasūktam",
+    "bookPage": 176
+  },
+  {
+    "order": 91,
+    "id": "vasu-rudra-purumantu-iti-suktam",
+    "rootTitle": "वसुरूद्रा पुरुमन्तू इति सूक्तम्",
+    "iastTitle": "Vasurūdrā purumantū iti sūktam",
+    "bookPage": 178
+  },
+  {
+    "order": 92,
+    "id": "kanya-shva-ravayati-iti-suktam",
+    "rootTitle": "कन्याश्वारवायतीतिसूक्तम्",
+    "iastTitle": "Kanyāśvāravāyatīti sūktam",
+    "bookPage": 179
+  },
+  {
+    "order": 93,
+    "id": "pavitram-te-iti-suktam",
+    "rootTitle": "पवित्रं ते इति सूक्तम्",
+    "iastTitle": "Pavitraṃ te iti sūktam",
+    "bookPage": 180
+  },
+  {
+    "order": 94,
+    "id": "pavamana-suktam-rig",
+    "rootTitle": "पवमानसूक्तम्",
+    "iastTitle": "Pavamānasūktam",
+    "bookPage": 181
+  },
+  {
+    "order": 95,
+    "id": "phala-shruti-2",
+    "rootTitle": "फलश्रुतिः",
+    "iastTitle": "Phalaśrutiḥ",
+    "bookPage": 221
+  },
+  {
+    "order": 96,
+    "id": "samsam-id-yuvase-iti-suktam",
+    "rootTitle": "संसमिद्युवस इति सूक्तम्",
+    "iastTitle": "Saṃsamidyuvasa iti sūktam",
+    "bookPage": 223
+  },
+  {
+    "order": 97,
+    "id": "uta-deva-avahitam-iti-suktam",
+    "rootTitle": "उतदेवा अवहितमिति सूक्तम्",
+    "iastTitle": "Utadevā avahitamiti sūktam",
+    "bookPage": 224
+  },
+  {
+    "order": 98,
+    "id": "nakshatra-suktam",
+    "rootTitle": "नक्षत्रसूक्तम् (शौनकीय प्रमाणः)",
+    "iastTitle": "Nakṣatrasūktam (Śaunakīya pramāṇaḥ)",
+    "bookPage": 225
+  },
+  {
+    "id": "nakshatra-suktam-dwi-rcah",
+    "rootTitle": "नक्षत्रसूक्तम् (द्वि ऋचः)",
+    "iastTitle": "Nakṣatrasūktam (dvi ṛcaḥ)",
+    "bookPage": 225,
+    "order": 99
+  },
+  {
+    "order": 100,
+    "id": "navagraha-suktam-rig",
+    "rootTitle": "नवग्रहसूक्तम्",
+    "iastTitle": "Navagrahasūktam",
+    "bookPage": 232
+  },
+  {
+    "order": 101,
+    "id": "deva-richah",
+    "rootTitle": "देव ऋचः",
+    "iastTitle": "Deva ṛcaḥ",
+    "bookPage": 236
+  },
+  {
+    "order": 102,
+    "id": "saubhagya-richah",
+    "rootTitle": "सौभाग्यऋचः",
+    "iastTitle": "Saubhāgyaṛcaḥ",
+    "bookPage": 241
+  },
+  {
+    "order": 103,
+    "id": "ayur-richah",
+    "rootTitle": "आयुर्ऋचः",
+    "iastTitle": "Āyurṛcaḥ",
+    "bookPage": 242
+  },
+  {
+    "order": 104,
+    "id": "svasti-richah",
+    "rootTitle": "स्वस्ति ऋचः",
+    "iastTitle": "Svasti ṛcaḥ",
+    "bookPage": 246
+  },
+  {
+    "order": 105,
+    "id": "ritu-sadgunya-mantrah",
+    "rootTitle": "ऋतुसाद्गुण्य-ऋतुसंरक्षकदेवतामन्त्राः",
+    "iastTitle": "Ṛtusādguṇya-ṛtusaṃrakṣakadevatāmantrāḥ",
+    "bookPage": 247
+  },
+  {
+    "order": 106,
+    "id": "sapta-rishi-mantrah",
+    "rootTitle": "सप्तऋषिमन्त्राः",
+    "iastTitle": "Saptaṛṣimantrāḥ",
+    "bookPage": 249
+  },
+  {
+    "order": 107,
+    "id": "mandala-adyanta-mantrah",
+    "rootTitle": "मण्डलाद्यन्तमन्त्राः",
+    "iastTitle": "Maṇḍalādyantamantrāḥ",
+    "bookPage": 251
+  },
+  {
+    "order": 108,
+    "id": "shanti-mantrah",
+    "rootTitle": "शान्ति मन्त्राः",
+    "iastTitle": "Śānti mantrāḥ",
+    "bookPage": 254
+  }
+]

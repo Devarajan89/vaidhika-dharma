@@ -7,7 +7,30 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-const { searchHint } = getHomeContent(locale);
+const { searchHint, searchPlaceholder, searchSubmit } = getHomeContent(locale);
+const action = locale === 'iast' ? '/iast/search/' : '/search/';
+const chips = [
+	{ q: 'rudram', label: locale === 'iast' ? 'rudram' : 'रुद्रम्' },
+	{ q: 'sandhya', label: locale === 'iast' ? 'sandhyā' : 'सन्ध्या' },
+	{ q: 'purusha', label: locale === 'iast' ? 'puruṣa' : 'पुरुष' },
+	{ q: 'ganapati', label: locale === 'iast' ? 'ganapati' : 'गणपति' },
+];
 ---
 
-<p class="home-search-hint">{searchHint}</p>
+<div class="home-search">
+	<form class="home-search__form" method="get" action={action}>
+		<label class="sr-only" for="home-search-q">{searchPlaceholder}</label>
+		<input id="home-search-q" type="search" name="q" placeholder={searchPlaceholder} />
+		<button type="submit">{searchSubmit}</button>
+	</form>
+	<p class="home-search__hint">{searchHint}</p>
+	<ul class="home-search__chips">
+		{
+			chips.map((chip) => (
+				<li>
+					<a href={`${action}?q=${encodeURIComponent(chip.q)}`}>{chip.label}</a>
+				</li>
+			))
+		}
+	</ul>
+</div>

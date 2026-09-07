@@ -1,0 +1,76 @@
+{
+  "id": "anna-suktam",
+  "sections": [
+    {
+      "header": "११ अगस्त्यो मैत्रावरुणिः । अन्नं। १अनुष्टुब्गर्भा उष्णिक्, ३, ५-७, ११ अनुष्टुप्,११ बृहती वा, २, ४, ८-१० गायत्री।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 1,
+          "sukta": 187,
+          "verse": 11
+        }
+      ]
+    }
+  ]
+}

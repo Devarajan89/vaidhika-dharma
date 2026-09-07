@@ -5,22 +5,22 @@
       "header": "३ मैत्रावरुणिर्वसिष्ठ:। वास्तोष्पति:। त्रिष्टुप् ।",
       "mantras": [
         {
+          "label": 1,
           "mandala": 7,
           "sukta": 54,
-          "verse": 1,
-          "label": 1
+          "verse": 1
         },
         {
+          "label": 2,
           "mandala": 7,
           "sukta": 54,
-          "verse": 2,
-          "label": 2
+          "verse": 2
         },
         {
+          "label": 3,
           "mandala": 7,
           "sukta": 54,
-          "verse": 3,
-          "label": 3
+          "verse": 3
         }
       ]
     }

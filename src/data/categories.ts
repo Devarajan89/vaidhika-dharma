@@ -1,4 +1,5 @@
 import type { HomeLocale } from './home';
+import { sangrahaCategoryNodes } from './sangraha';
 
 export interface CategoryBadge {
 	text: string;
@@ -13,27 +14,12 @@ export interface CategoryNode {
 	defaultOpen?: boolean;
 }
 
-const rigvedaSuktaSangraha: CategoryNode[] = [
-	{ label: 'ब्रह्मणस्पति सूक्तम्', href: '/brahmanaspati-suktam/' },
-	{ label: 'गणपति सूक्तम्', href: '/ganapathy-suktam/' },
-	{ label: 'पञ्च रुद्रम्', href: '/pancha-rudram/' },
-	{ label: 'स्वस्ति सूक्तम्', href: '/swasti-suktam/' },
-	{ label: 'आ नो भद्राः सूक्तम्', href: '/a-no-bhadrauh-suktam/' },
-	{ label: 'औषधि सूक्तम्', href: '/oshadhi-suktam/' },
-	{ label: 'कुमार सूक्तम्', href: '/kumara-suktam/' },
-	{ label: 'देवी सूक्तम्', href: '/devi-suktam/' },
-	{ label: 'नासदीय सूक्तम्', href: '/nasadiya-suktam/' },
-	{ label: 'पितृ सूक्तम्', href: '/pitri-suktam/' },
-	{ label: 'पुरुष सूक्तम् (ऋग्वेद)', href: '/purusha-suktam-rig/' },
-	{ label: 'भाग्य (भग) सूक्तम्', href: '/bhaga-suktam/' },
-	{ label: 'मन्यु सूक्तम्', href: '/manyu-suktam/' },
-	{ label: 'रात्रि सूक्तम्', href: '/ratri-suktam/' },
-	{ label: 'वास्तु सूक्तम्', href: '/vastu-suktam/' },
-	{ label: 'श्रद्धा सूक्तम्', href: '/shraddha-suktam/' },
-	{ label: 'सरस्वती सूक्तम्', href: '/sarasvati-suktam/' },
-	{ label: 'संज्ञान सूक्तम्', href: '/samjnana-suktam/' },
-	{ label: 'हिरण्यगर्भ सूक्तम्', href: '/hiranyagarbha-suktam/' },
-];
+export function countCategoryLeaves(node: CategoryNode): number {
+	if (!node.children?.length) return node.href ? 1 : 0;
+	return node.children.reduce((sum, child) => sum + countCategoryLeaves(child), 0);
+}
+
+const rigvedaSuktaSangraha: CategoryNode[] = sangrahaCategoryNodes('root');
 
 const yajushaMantraRatnakaram: CategoryNode[] = [
 	{ label: 'भाग्य सूक्तम्', href: '/bhagya-suktam/' },
@@ -59,27 +45,7 @@ const yajushaMantraRatnakaram: CategoryNode[] = [
 	{ label: 'विष्णु सूक्तम्', href: '/vishnu-suktam/' },
 ];
 
-const iastRigvedaSuktaSangraha: CategoryNode[] = [
-	{ label: 'Brahmaṇaspati Sūktam', href: '/iast/brahmanaspati-suktam/' },
-	{ label: 'Gaṇapati Sūktam', href: '/iast/ganapathy-suktam/' },
-	{ label: 'Pañca Rudram', href: '/iast/pancha-rudram/' },
-	{ label: 'Svasti Sūktam', href: '/iast/swasti-suktam/' },
-	{ label: 'Ā no bhadrāḥ Sūktam', href: '/iast/a-no-bhadrauh-suktam/' },
-	{ label: 'Auṣadhi Sūktam', href: '/iast/oshadhi-suktam/' },
-	{ label: 'Kumāra Sūktam', href: '/iast/kumara-suktam/' },
-	{ label: 'Devī Sūktam', href: '/iast/devi-suktam/' },
-	{ label: 'Nāsadīya Sūktam', href: '/iast/nasadiya-suktam/' },
-	{ label: 'Pitṛ Sūktam', href: '/iast/pitri-suktam/' },
-	{ label: 'Puruṣa Sūktam (Ṛgveda)', href: '/iast/purusha-suktam-rig/' },
-	{ label: 'Bhāgya (Bhaga) Sūktam', href: '/iast/bhaga-suktam/' },
-	{ label: 'Manyu Sūktam', href: '/iast/manyu-suktam/' },
-	{ label: 'Rātri Sūktam', href: '/iast/ratri-suktam/' },
-	{ label: 'Vāstu Sūktam', href: '/iast/vastu-suktam/' },
-	{ label: 'Śraddhā Sūktam', href: '/iast/shraddha-suktam/' },
-	{ label: 'Sarasvatī Sūktam', href: '/iast/sarasvati-suktam/' },
-	{ label: 'Saṃjñāna Sūktam', href: '/iast/samjnana-suktam/' },
-	{ label: 'Hiraṇyagarbha Sūktam', href: '/iast/hiranyagarbha-suktam/' },
-];
+const iastRigvedaSuktaSangraha: CategoryNode[] = sangrahaCategoryNodes('iast');
 
 const iastYajushaMantraRatnakaram: CategoryNode[] = [
 	{ label: 'Bhāgya Sūktam', href: '/iast/bhagya-suktam/' },
@@ -147,17 +113,17 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 				},
 				{
 					label: 'सन्ध्यावन्दनम्​',
-					defaultOpen: true,
+					defaultOpen: false,
 					children: [
 						{
 							label: 'आश्वलायन (ऋग्वेद)',
-							defaultOpen: true,
-							children: sandhyaTimeLinks.root.aswalayana,
+							defaultOpen: false,
+							children: [...sandhyaTimeLinks.root.aswalayana],
 						},
 						{
 							label: 'आपस्तम्ब (कृष्ण यजुर्वेद)',
 							defaultOpen: false,
-							children: sandhyaTimeLinks.root.apastamba,
+							children: [...sandhyaTimeLinks.root.apastamba],
 						},
 					],
 				},
@@ -173,7 +139,7 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		},
 		{
 			label: 'वेद मन्त्राः',
-			defaultOpen: true,
+			defaultOpen: false,
 			children: [
 				{
 					label: 'ऋग्वेद सूक्त संग्रह​:',
@@ -189,7 +155,7 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		},
 		{
 			label: 'संहिताः',
-			defaultOpen: false,
+			defaultOpen: true,
 			children: [
 				{ label: 'शाकल संहिता (ऋग्वेद)', href: '/rigveda-samhita/' },
 				{ label: 'वाजसनेयी संहिता (शुक्ल यजुर्वेद — काण्व)', href: '/kanva-samhita/' },
@@ -261,17 +227,17 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 				},
 				{
 					label: 'Sandhyāvandanam',
-					defaultOpen: true,
+					defaultOpen: false,
 					children: [
 						{
 							label: 'Aśvalāyana (Ṛgveda)',
-							defaultOpen: true,
-							children: sandhyaTimeLinks.iast.aswalayana,
+							defaultOpen: false,
+							children: [...sandhyaTimeLinks.iast.aswalayana],
 						},
 						{
 							label: 'Āpastamba (Kṛṣṇa Yajurveda)',
 							defaultOpen: false,
-							children: sandhyaTimeLinks.iast.apastamba,
+							children: [...sandhyaTimeLinks.iast.apastamba],
 						},
 					],
 				},
@@ -303,7 +269,7 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 		},
 		{
 			label: 'Saṃhitāḥ',
-			defaultOpen: false,
+			defaultOpen: true,
 			children: [
 				{ label: 'Śākala saṃhitā (Ṛgveda)', href: '/iast/rigveda-samhita/' },
 				{ label: 'Vājasaneyi saṃhitā (Śuklayajurveda — Kāṇva)', href: '/iast/kanva-samhita/' },
@@ -363,5 +329,4 @@ export const categoryTrees: Record<HomeLocale, CategoryNode[]> = {
 			],
 		},
 	],
-	ta: [],
 };

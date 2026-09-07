@@ -1,0 +1,64 @@
+{
+  "id": "vaishvadeva-suktam",
+  "sections": [
+    {
+      "header": "९ विहव्य आंगिरसः। विश्वेदेवाः। त्रिष्टुप् , ९ जगती।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 128,
+          "verse": 9
+        }
+      ]
+    }
+  ]
+}

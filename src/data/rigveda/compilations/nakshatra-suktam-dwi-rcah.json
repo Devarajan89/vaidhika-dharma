@@ -1,0 +1,477 @@
+{
+  "id": "nakshatra-suktam-dwi-rcah",
+  "sections": [
+    {
+      "header": "अश्विनी ॥ पौर आत्रेयः । अश्विनौ । अनुष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 5,
+          "sukta": 73,
+          "verse": 9,
+          "label": 1
+        },
+        {
+          "mandala": 5,
+          "sukta": 73,
+          "verse": 10,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "भरणी ॥ वैवस्वतो यमः । यमः । अनुष्टुप्, २ बृहती ।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 14,
+          "verse": 14,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 14,
+          "verse": 15,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "कृत्तिका ॥ ऋषभो वैश्वामित्रः । अग्निः । अनुष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 3,
+          "sukta": 13,
+          "verse": 6,
+          "label": 1
+        },
+        {
+          "mandala": 3,
+          "sukta": 13,
+          "verse": 7,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "रोहिणी ॥ वामदेवः । ब्रह्मा । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 4,
+          "sukta": 50,
+          "verse": 8,
+          "label": 1
+        },
+        {
+          "mandala": 4,
+          "sukta": 50,
+          "verse": 9,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "मृगशिरस् ॥ गोतमो राहूगणः । सोमः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 1,
+          "sukta": 91,
+          "verse": 19,
+          "label": 1
+        },
+        {
+          "mandala": 1,
+          "sukta": 91,
+          "verse": 20,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "आर्द्रा ॥ कुत्स आङ्गिरसः । रुद्रः । जगती ।",
+      "mantras": [
+        {
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 2,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "पुनर्वसू ॥ अदितिर्दाक्षायणिः । अदितिः । अनुष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 72,
+          "verse": 4,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 72,
+          "verse": 5,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "पुष्यम् ॥ वामदेवो गौतमः । बृहस्पतिः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 4,
+          "sukta": 50,
+          "verse": 6,
+          "label": 1
+        },
+        {
+          "mandala": 4,
+          "sukta": 50,
+          "verse": 7,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "आश्लेषा ॥",
+      "mantras": [
+        {
+          "label": 1,
+          "text": "स॒र्पः॑ स॒र्पो अ॑ज॒ग॒रः स॒र्पिर॑विषो म॒हान् । तस्य॑ स॒र्पात्सिन्ध॑वस्तस्य॑ गा॒धम॑शीमहि ॥ १ ॥"
+        },
+        {
+          "label": 2,
+          "text": "का॒ळि॒को नाम॑ स॒र्पो न॑वनागसहस्रब॒ळः । यमु॒नह्र॒दे ह॑ सो जातो॒३ यो ना॑रायणवा॒हनः ॥ २ ॥"
+        }
+      ]
+    },
+    {
+      "header": "मघा ॥ शङ्खो यामायनः । पितरः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 12,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 15,
+          "verse": 13,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "पूर्वफल्गुनी ॥ मैत्रावरुणिर्वसिष्ठः । भगः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 7,
+          "sukta": 41,
+          "verse": 4,
+          "label": 1
+        },
+        {
+          "mandala": 7,
+          "sukta": 41,
+          "verse": 5,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "उत्तरफल्गुनी ॥ आत्रेयो वसुश्रुतः । अर्यमा । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 5,
+          "sukta": 3,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 5,
+          "sukta": 3,
+          "verse": 2,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "हस्तम् ॥ सौर्योऽभितपा । सूर्यः । १ जगती, २ त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 37,
+          "verse": 10,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 37,
+          "verse": 11,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "चित्रा ॥ वसिष्ठः । विश्वेदेवाः । १ द्विपदा विराट्, २ त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 7,
+          "sukta": 34,
+          "verse": 21,
+          "label": 1
+        },
+        {
+          "mandala": 7,
+          "sukta": 34,
+          "verse": 22,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "स्वाती ॥ वामदेवो गौतमः । १ वायुः, २ इन्द्रवायू । अनुष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 4,
+          "sukta": 47,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 4,
+          "sukta": 47,
+          "verse": 2,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "विशाखा ॥ बार्हस्पत्यो भरद्वाजः । इन्द्राग्नी । १ बृहती, २ अनुष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 6,
+          "sukta": 59,
+          "verse": 6,
+          "label": 1
+        },
+        {
+          "mandala": 6,
+          "sukta": 59,
+          "verse": 7,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "अनूराधा ॥ विश्वामित्रः । मित्रः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 3,
+          "sukta": 59,
+          "verse": 4,
+          "label": 1
+        },
+        {
+          "mandala": 3,
+          "sukta": 59,
+          "verse": 5,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "ज्येष्ठा ॥ बार्हस्पत्यो भरद्वाजः । इन्द्रः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 6,
+          "sukta": 17,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 6,
+          "sukta": 17,
+          "verse": 2,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "मूलम् ॥ बन्धुः श्रुतबन्धुर्विप्रबन्धुर्गौपायनाः । निर्ऋतिः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 2,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "पूर्वाषाढा ॥ त्रिशिरास्त्वाष्ट्रः , सिन्धुद्वीप आम्बरीषो वा । आपः । अनुष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 9,
+          "verse": 8,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 9,
+          "verse": 9,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "उत्तराषाढा ॥ प्रतिप्रभ आत्रेयः । विश्वेदेवाः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 5,
+          "sukta": 49,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 5,
+          "sukta": 49,
+          "verse": 2,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "श्रवणा ॥ दीर्घतमा औचथ्यः । विष्णुः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 3,
+          "label": 1
+        },
+        {
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 4,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "धनिष्ठा ॥ गौरिवीतिः शाक्त्यः । इन्द्रः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 10,
+          "sukta": 73,
+          "verse": 1,
+          "label": 1
+        },
+        {
+          "mandala": 10,
+          "sukta": 73,
+          "verse": 2,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "(वामदेवो गौतमः । अग्निः । त्रिष्टुप् ।)",
+      "mantras": [
+        {
+          "mandala": 4,
+          "sukta": 12,
+          "verse": 6,
+          "label": 3
+        }
+      ]
+    },
+    {
+      "header": "शतभिषक् ॥ आजीगर्तिः शुनःशेपः सकृत्रिमो वैश्वामित्रो देवरातः । वरुणः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 1,
+          "sukta": 24,
+          "verse": 14,
+          "label": 1
+        },
+        {
+          "mandala": 1,
+          "sukta": 24,
+          "verse": 15,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "पूर्वाभाद्रा ॥ ऋजिश्वा भारद्वाजः । विश्वेदेवाः । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 6,
+          "sukta": 50,
+          "verse": 14,
+          "label": 1
+        },
+        {
+          "mandala": 6,
+          "sukta": 50,
+          "verse": 15,
+          "label": 2
+        }
+      ]
+    },
+    {
+      "header": "उत्तराभाद्रा ॥ मैत्रावरुणिर्वसिष्ठः । विश्वेदेवाः , २ अहिः , ३ अहिर्बुध्न्यः । द्विपदा विराट् ।",
+      "mantras": [
+        {
+          "mandala": 7,
+          "sukta": 34,
+          "verse": 15,
+          "label": 1
+        },
+        {
+          "mandala": 7,
+          "sukta": 34,
+          "verse": 16,
+          "label": 2
+        },
+        {
+          "mandala": 7,
+          "sukta": 34,
+          "verse": 17,
+          "label": 3
+        }
+      ]
+    },
+    {
+      "header": "रेवती ॥ बार्हस्पत्यो भरद्वाजः । पूषा । त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "mandala": 6,
+          "sukta": 58,
+          "verse": 3,
+          "label": 1
+        },
+        {
+          "mandala": 6,
+          "sukta": 58,
+          "verse": 4,
+          "label": 2
+        }
+      ]
+    }
+  ]
+}

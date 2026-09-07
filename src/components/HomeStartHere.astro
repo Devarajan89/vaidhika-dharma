@@ -1,0 +1,45 @@
+---
+import type { HomeLocale } from '../data/home';
+
+interface Props {
+	locale: HomeLocale;
+}
+
+const { locale } = Astro.props;
+const prefix = locale === 'iast' ? '/iast' : '';
+const heading = locale === 'iast' ? 'Start here' : 'आरभ्यताम्';
+const paths = [
+	{
+		title: locale === 'iast' ? 'Daily' : 'नित्यकर्म',
+		body:
+			locale === 'iast' ? 'Sandhyā by time of day and śākhā.' : 'कालानुसारं सन्ध्या शाखा च।',
+		href: `${prefix}/aswalayana-sandhyavandanam/prata/`,
+	},
+	{
+		title: locale === 'iast' ? 'Recite' : 'पारायणम्',
+		body: locale === 'iast' ? 'Rudram, Chamakam, Puruṣa sūktam.' : 'रुद्रम्, चमकम्, पुरुष सूक्तम्।',
+		href: `${prefix}/sri-rudra-prashnah/`,
+	},
+	{
+		title: locale === 'iast' ? 'Study' : 'स्वाध्यायः',
+		body: locale === 'iast' ? 'Ṛgveda saṃhitā and upaniṣads.' : 'ऋग्वेद संहिता उपनिषदश्च।',
+		href: `${prefix}/rigveda-samhita/`,
+	},
+];
+---
+
+<section class="home-start" aria-labelledby="home-start-heading">
+	<h2 id="home-start-heading" class="home-start__heading">{heading}</h2>
+	<ul class="home-start__list">
+		{
+			paths.map((path) => (
+				<li>
+					<a href={path.href}>
+						<span class="home-start__title">{path.title}</span>
+						<span class="home-start__body">{path.body}</span>
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</section>

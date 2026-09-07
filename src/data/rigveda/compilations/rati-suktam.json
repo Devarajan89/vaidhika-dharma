@@ -1,0 +1,46 @@
+{
+  "id": "rati-suktam",
+  "sections": [
+    {
+      "header": "(६) १-२ लोपामुद्रा, ३-४ अगस्त्यो मैत्रावरुणिः, ५-६ अगस्त्यशिष्यो ब्रह्मचारी। रतिः। त्रिष्टुप्, ५ बृहती।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 179,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 179,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 179,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 179,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 179,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 179,
+          "verse": 6
+        }
+      ]
+    }
+  ]
+}

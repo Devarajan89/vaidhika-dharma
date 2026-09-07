@@ -1,0 +1,88 @@
+{
+  "id": "saura-suktam",
+  "sections": [
+    {
+      "header": "१३ प्रस्कण्वः काण्वः। सूर्यः (११-१३ रोगघ्न्य उपनिषदः, १३ अन्त्योऽर्धर्चः द्विषद् घ्नश्च)। गायत्री, १०-१३ अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 11
+        },
+        {
+          "label": 12,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 12
+        },
+        {
+          "label": 13,
+          "mandala": 1,
+          "sukta": 50,
+          "verse": 13
+        }
+      ]
+    }
+  ]
+}

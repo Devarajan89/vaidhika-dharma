@@ -1,0 +1,81 @@
+{
+  "id": "indra-suktam",
+  "sections": [
+    {
+      "header": "६ गृत्समद (आङ्गिरसः शौनहोत्रः पश्चाद्) भार्गवः शौनकः। इन्द्रः। जगती, ६ त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 2,
+          "sukta": 21,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 2,
+          "sukta": 21,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 2,
+          "sukta": 21,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 2,
+          "sukta": 21,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 2,
+          "sukta": 21,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 2,
+          "sukta": 21,
+          "verse": 6
+        }
+      ]
+    },
+    {
+      "header": "५ शासो भारद्वाजः। इन्द्रः। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 152,
+          "verse": 1
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 152,
+          "verse": 2
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 152,
+          "verse": 3
+        },
+        {
+          "label": 10,
+          "mandala": 10,
+          "sukta": 152,
+          "verse": 4
+        },
+        {
+          "label": 11,
+          "mandala": 10,
+          "sukta": 152,
+          "verse": 5
+        }
+      ]
+    }
+  ]
+}

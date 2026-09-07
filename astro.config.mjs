@@ -13,6 +13,7 @@ import {
 import { chapterToKandaPrapathaka, TAITTIRIYA_TOTAL_PRAPATHAKAS } from './scripts/lib/taittiriya-samhita-structure.mjs';
 import { MAITRAYANI_TOTAL_PRAPATHAKAS, chapterToKandaPrapathaka as maitrayaniChapterToKandaPrapathaka } from './scripts/lib/maitrayani-samhita-structure.mjs';
 import { AITAREYA_PANCHIKAS } from './scripts/lib/aitareya-brahmana-structure.mjs';
+import { forceLightHtml } from './src/integrations/force-light-html.mjs';
 
 const rigvedaMandalaRedirects = Object.fromEntries(
   Array.from({ length: 10 }, (_, index) => {
@@ -133,22 +134,16 @@ export default defineConfig({
   },
 
   integrations: [
+      forceLightHtml(),
       starlight({
           title: 'Vaidhika Dharma',
           description:
               'Vedic mantras with svara, Rigveda and Yajurveda saṃhitās, nityakarma rituals, and Ṛgveda sūkta saṅgraha — Vaidhika Dharma.',
           favicon: '/images/favicon.svg',
           logo: {
-              light: './src/assets/logo-light.svg',
-              dark: './src/assets/logo-dark.svg'
+              src: './src/assets/logo-light.svg',
+              alt: 'Vaidhika Dharma',
           },
-          social: [
-              {
-                  icon: 'facebook',
-                  label: 'Facebook',
-                  href: '/'
-              }
-          ],
           components: {
               Head: './src/components/Head.astro',
               Hero: './src/components/Hero.astro',
@@ -157,6 +152,10 @@ export default defineConfig({
               PageTitle: './src/components/PageTitle.astro',
               Footer: './src/components/Footer.astro',
               Search: './src/components/Search.astro',
+              Header: './src/components/Header.astro',
+              MobileMenuFooter: './src/components/MobileMenuFooter.astro',
+              ThemeSelect: './src/components/ThemeSelect.astro',
+              ThemeProvider: './src/components/ThemeProvider.astro',
           },
           routeMiddleware: './src/route-middleware.ts',
           defaultLocale: 'root',

@@ -1,8 +1,8 @@
 /**
  * URLs precached for temple / travel offline use.
- * Kept as a single source; `scripts/generate-offline-pack.mjs` writes public/offline-pack.json.
+ * `scripts/generate-offline-pack.mjs` writes public/offline-pack.json.
  */
-export const OFFLINE_PACK_URLS = [
+export const OFFLINE_PACK_DAILY = [
 	'/',
 	'/iast/',
 	'/offline/',
@@ -27,29 +27,67 @@ export const OFFLINE_PACK_URLS = [
 	'/iast/apastamba-brahmayagyam/',
 	'/iast/aswalayana-samidadhanam/',
 	'/iast/apastamba-samidadhanam/',
+	'/isha-upanishad/',
+	'/iast/isha-upanishad/',
+] as const;
+
+export const OFFLINE_PACK_RUDRA = [
 	'/sri-rudra-prashnah/',
 	'/chamakam/',
-	'/purusha-suktam/',
-	'/sri-suktam/',
-	'/narayana-suktam/',
+	'/sri-rudra-laghunyasa/',
 	'/pancha-rudram/',
-	'/isha-upanishad/',
-	'/rigveda-samhita/',
-	'/rigveda-samhita/mandala-1/',
+	'/rudra-suktam/',
+	'/rudra-suktam-rig/',
 	'/iast/sri-rudra-prashnah/',
 	'/iast/chamakam/',
-	'/iast/purusha-suktam/',
-	'/iast/sri-suktam/',
-	'/iast/narayana-suktam/',
+	'/iast/sri-rudra-laghunyasa/',
 	'/iast/pancha-rudram/',
-	'/iast/isha-upanishad/',
-	'/iast/rigveda-samhita/',
-	'/iast/rigveda-samhita/mandala-1/',
+	'/iast/rudra-suktam/',
+	'/iast/rudra-suktam-rig/',
 ] as const;
+
+export const OFFLINE_PACK_SANGRAHA = [
+	'/ganapathy-suktam/',
+	'/brahmanaspati-suktam/',
+	'/swasti-suktam/',
+	'/purusha-suktam/',
+	'/purusha-suktam-rig/',
+	'/sri-suktam/',
+	'/sri-suktam-rig/',
+	'/narayana-suktam/',
+	'/nasadiya-suktam/',
+	'/devi-suktam/',
+	'/hiranyagarbha-suktam/',
+	'/iast/ganapathy-suktam/',
+	'/iast/brahmanaspati-suktam/',
+	'/iast/swasti-suktam/',
+	'/iast/purusha-suktam/',
+	'/iast/purusha-suktam-rig/',
+	'/iast/sri-suktam/',
+	'/iast/sri-suktam-rig/',
+	'/iast/narayana-suktam/',
+	'/iast/nasadiya-suktam/',
+	'/iast/devi-suktam/',
+	'/iast/hiranyagarbha-suktam/',
+] as const;
+
+/** Default install cache (daily pack). */
+export const OFFLINE_PACK_URLS = OFFLINE_PACK_DAILY;
 
 export const OFFLINE_ASSET_URLS = [
 	'/manifest.webmanifest',
 	'/images/favicon.svg',
 	'/fonts/siddhanta.woff2',
 	'/fonts/samarkan.woff2',
+	'/fonts/NotoSerifTamil.woff2',
+	'/fonts/TiroTamil.woff2',
+	'/fonts/TiroTelugu.woff2',
+	'/fonts/TiroKannada.woff2',
+	'/fonts/NotoSerifMalayalam.woff2',
+	'/fonts/TiroDevanagariMarathi.woff2',
+	'/fonts/NotoSerifGujarati.woff2',
+	'/fonts/TiroBangla.woff2',
+	'/fonts/NotoSerifOriya.woff2',
+	'/fonts/NotoSerifGrantha.woff2',
+	'/vendor/inditrans.wasm',
 ] as const;

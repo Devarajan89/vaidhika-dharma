@@ -17,7 +17,17 @@ const quote = getQuoteOfDay(locale);
 		<blockquote>
 			<p>{quote.text}</p>
 			<p class="quote-meaning">{quote.meaning}</p>
-			<footer>— {quote.source}</footer>
+			<footer>
+				{
+					quote.href ? (
+						<>
+							— <a href={quote.href}>{quote.source}</a>
+						</>
+					) : (
+						<>— {quote.source}</>
+					)
+				}
+			</footer>
 		</blockquote>
 	</Card>
 </div>
@@ -47,5 +57,14 @@ const quote = getQuoteOfDay(locale);
 		font-style: normal;
 		font-size: 0.8125rem;
 		color: var(--sl-color-gray-3);
+	}
+
+	.quote-card footer a {
+		color: var(--sl-color-accent);
+		text-decoration: none;
+	}
+
+	.quote-card footer a:hover {
+		text-decoration: underline;
 	}
 </style>

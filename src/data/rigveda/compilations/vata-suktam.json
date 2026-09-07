@@ -1,0 +1,34 @@
+{
+  "id": "vata-suktam",
+  "sections": [
+    {
+      "header": "४ अनिलो वातायनः। वायुः। त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 168,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 168,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 168,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 168,
+          "verse": 4
+        }
+      ]
+    }
+  ]
+}

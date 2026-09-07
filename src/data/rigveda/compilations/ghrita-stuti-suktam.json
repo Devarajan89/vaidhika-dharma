@@ -1,0 +1,76 @@
+{
+  "id": "ghrita-stuti-suktam",
+  "sections": [
+    {
+      "header": "११ वामदेवो गौतमः। अग्निः, सूर्यो वाऽऽपो वा गावो वा घृतस्तुतिर्वा। त्रिष्टुप्, ११ जगती।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 4,
+          "sukta": 58,
+          "verse": 11
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "sapatna-nashana-suktam",
+  "sections": [
+    {
+      "header": "५ ऋषभो वैराजः, ऋषभः शाक्वरो वा। सपत्न्घ्नम्। अनुष्टुप् , ५ महापंक्तिः।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 166,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 166,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 166,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 166,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 166,
+          "verse": 5
+        }
+      ]
+    }
+  ]
+}

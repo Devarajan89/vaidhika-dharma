@@ -1,0 +1,28 @@
+{
+  "id": "prithivi-suktam",
+  "sections": [
+    {
+      "header": "३ भौमोऽत्रिः। पृथिवी। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 5,
+          "sukta": 84,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 5,
+          "sukta": 84,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 5,
+          "sukta": 84,
+          "verse": 3
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 ---
-import Aside from '../../node_modules/@astrojs/starlight/user-components/Aside.astro';
+import { Aside } from '@astrojs/starlight/components';
 import type { HomeLocale } from '../data/home';
 
 interface Props {
@@ -19,7 +19,7 @@ const copy = {
 	},
 } as const;
 
-const { title, body } = copy[locale === 'ta' ? 'iast' : locale];
+const { title, body } = copy[locale === 'iast' ? 'iast' : 'root'];
 ---
 
 <Aside type="caution" {title}>

@@ -44,6 +44,9 @@ const marker =
 			)
 		}
 	</div>
+	<div class="veda-mantra__alt">
+		<slot name="alt" />
+	</div>
 </div>
 
 <style>
@@ -90,6 +93,20 @@ const marker =
 
 	.veda-mantra__marker {
 		display: inline;
+	}
+
+	.veda-mantra__alt {
+		display: none;
+	}
+
+	.veda-mantra__alt :global(p) {
+		display: inline;
+		margin: 0;
+	}
+
+	.veda-mantra__alt :global(p:not(:last-of-type))::after {
+		content: '\a';
+		white-space: pre;
 	}
 
 	@media print {

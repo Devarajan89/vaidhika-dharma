@@ -1,0 +1,111 @@
+---
+import type { HomeLocale } from '../data/home';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const isIast = locale === 'iast';
+const copy = isIast
+	? {
+			intro:
+				'Cache daily rituals on first visit. Add Rudra or saṅgraha packs when you have a network, then practice without one.',
+			daily: 'Daily nityakarma',
+			rudra: 'Rudra pack',
+			sangraha: 'Saṅgraha pack',
+			pin: 'Pin this page',
+			done: 'Saved for offline',
+			fail: 'Could not cache (are you online?)',
+			home: 'Return home',
+		}
+	: {
+			intro:
+				'प्रथमदर्शने नित्यकर्म पृष्ठानि निधीयन्ते । जालसहिते रुद्रं सङ्ग्रहं वा योजयतु, ततः विना जालेन अभ्यासः ।',
+			daily: 'नित्यकर्म',
+			rudra: 'रुद्र सञ्चयः',
+			sangraha: 'सङ्ग्रह सञ्चयः',
+			pin: 'इदं पृष्ठं रक्षतु',
+			done: 'अन्तर्जालं विना सिद्धम्',
+			fail: 'न रक्षितम् (जालं पश्यतु)',
+			home: 'गृहम्',
+		};
+---
+
+<section
+	class="offline-page"
+	data-offline-packs
+	data-done={copy.done}
+	data-fail={copy.fail}
+>
+	<p>{copy.intro}</p>
+	<div class="offline-packs">
+		<button type="button" data-pack="daily">{copy.daily}</button>
+		<button type="button" data-pack="rudra">{copy.rudra}</button>
+		<button type="button" data-pack="sangraha">{copy.sangraha}</button>
+		<button type="button" data-pack="pin">{copy.pin}</button>
+	</div>
+	<p class="offline-packs__status" data-pack-status hidden></p>
+	<ul>
+		<li>
+			<a href={isIast ? '/iast/aswalayana-sandhyavandanam/prata/' : '/aswalayana-sandhyavandanam/prata/'}>
+				{isIast ? 'Aśvalāyana prātaḥ sandhyā' : 'आश्वलायन प्रातः सन्ध्या'}
+			</a>
+		</li>
+		<li>
+			<a href={isIast ? '/iast/sri-rudra-prashnah/' : '/sri-rudra-prashnah/'}>
+				{isIast ? 'Śrī Rudra Praśnaḥ' : 'श्री रुद्र प्रश्नः'}
+			</a>
+		</li>
+		<li>
+			<a href={isIast ? '/iast/ganapathy-suktam/' : '/ganapathy-suktam/'}>
+				{isIast ? 'Gaṇapatisūktam' : 'गणपतिसूक्तम्'}
+			</a>
+		</li>
+	</ul>
+	<p><a href={isIast ? '/iast/' : '/'}>{copy.home}</a></p>
+</section>
+
+<script>
+	const root = document.querySelector<HTMLElement>('[data-offline-packs]');
+	if (root) {
+		const status = root.querySelector<HTMLElement>('[data-pack-status]');
+		const setStatus = (text: string) => {
+			if (!status) return;
+			status.hidden = false;
+			status.textContent = text;
+		};
+
+		const cacheUrls = async (urls: string[]) => {
+			const registration = await navigator.serviceWorker?.ready;
+			if (!registration?.active) throw new Error('no sw');
+			await new Promise<void>((resolve, reject) => {
+				const channel = new MessageChannel();
+				channel.port1.onmessage = () => resolve();
+				registration.active?.postMessage({ type: 'CACHE_URLS', urls }, [channel.port2]);
+				setTimeout(() => reject(new Error('timeout')), 60000);
+			});
+		};
+
+		root.querySelectorAll<HTMLButtonElement>('[data-pack]').forEach((button) => {
+			button.addEventListener('click', async () => {
+				const pack = button.dataset.pack;
+				setStatus('…');
+				try {
+					if (pack === 'pin') {
+						const path = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`;
+						await cacheUrls([path]);
+					} else {
+						const response = await fetch('/offline-pack.json', { cache: 'no-cache' });
+						const data = await response.json();
+						const urls = data.packs?.[pack as string] ?? data.urls ?? [];
+						await cacheUrls(urls);
+					}
+					setStatus(root.dataset.done ?? 'Saved');
+				} catch {
+					setStatus(root.dataset.fail ?? 'Failed');
+				}
+			});
+		});
+	}
+</script>

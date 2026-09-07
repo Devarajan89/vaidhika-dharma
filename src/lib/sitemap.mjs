@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const HUB_RE =
-	/\/(?:rigveda-samhita|kanva-samhita|madhyandina-samhita|taittiriya-samhita|maitrayani-samhita|aitareya-brahmana|taittiriya-brahmana|aitareya-aranyaka|taittiriya-aranyaka|[\w-]+-upanishad|[\w-]+-suktam|sri-rudra-prashnah|chamakam|aswalayana-[\w/-]+|apastamba-[\w/-]+)\/?$/;
+	/\/(?:search|rigveda-samhita|kanva-samhita|madhyandina-samhita|taittiriya-samhita|maitrayani-samhita|aitareya-brahmana|taittiriya-brahmana|aitareya-aranyaka|taittiriya-aranyaka|[\w-]+-upanishad|[\w-]+-suktam|sri-rudra-prashnah|chamakam|aswalayana-[\w/-]+|apastamba-[\w/-]+)\/?$/;
 
 const DOCS_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '../content/docs');
 
@@ -16,7 +16,11 @@ export const sitemapI18n = {
 };
 
 export function sitemapFilter(page) {
-	return !page.includes('/404') && !page.includes('/offline');
+	return (
+		!page.includes('/404') &&
+		!page.includes('/offline') &&
+		!page.includes('/_archive')
+	);
 }
 
 /**
@@ -80,6 +84,7 @@ function walkDocs(dir, relative = '') {
 	const files = [];
 
 	for (const entry of entries) {
+		if (entry.name.startsWith('_')) continue;
 		const rel = relative ? `${relative}/${entry.name}` : entry.name;
 		const full = path.join(dir, entry.name);
 		if (entry.isDirectory()) {
@@ -124,7 +129,9 @@ export function serializeSitemapItem(item) {
 		return undefined;
 	}
 
-	if (urlPath.includes('/offline') || urlPath.includes('/404')) return undefined;
+	if (urlPath.includes('/offline') || urlPath.includes('/404') || urlPath.includes('/_archive')) {
+		return undefined;
+	}
 
 	const depth = urlPath.split('/').filter(Boolean).length;
 	const isHome = urlPath === '/' || urlPath === '/iast/';

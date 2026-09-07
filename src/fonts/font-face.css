@@ -18,12 +18,83 @@
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+A8E0-A8FF, U+A830-A83F;
 }
 
-/* Tamil font — woff2 only, downloaded only when Tamil chars appear on page */
+/* Tamil fallback (subset) */
 @font-face {
   font-family: 'NotoSerifTamil';
   src: url('/fonts/NotoSerifTamil.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC;
+}
+
+@font-face {
+  font-family: 'Tiro Tamil';
+  src: url('/fonts/TiroTamil.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiro Telugu';
+  src: url('/fonts/TiroTelugu.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiro Kannada';
+  src: url('/fonts/TiroKannada.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Malayalam';
+  src: url('/fonts/NotoSerifMalayalam.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiro Devanagari Marathi';
+  src: url('/fonts/TiroDevanagariMarathi.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Gujarati';
+  src: url('/fonts/NotoSerifGujarati.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiro Bangla';
+  src: url('/fonts/TiroBangla.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Oriya';
+  src: url('/fonts/NotoSerifOriya.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif Grantha';
+  src: url('/fonts/NotoSerifGrantha.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }

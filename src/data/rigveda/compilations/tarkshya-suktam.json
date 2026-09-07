@@ -1,0 +1,28 @@
+{
+  "id": "tarkshya-suktam",
+  "sections": [
+    {
+      "header": "३ अरिष्टनेमिस्तार्क्ष्यः। तार्क्ष्यः। त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 178,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 178,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 178,
+          "verse": 3
+        }
+      ]
+    }
+  ]
+}

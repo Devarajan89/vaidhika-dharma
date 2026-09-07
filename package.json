@@ -49,21 +49,27 @@
     "fetch:taittiriya-aranyaka": "node scripts/fetch-taittiriya-aranyaka-data.mjs",
     "generate:taittiriya-aranyaka": "node scripts/generate-taittiriya-aranyaka-indexes.mjs",
     "fetch:upanishads": "node scripts/fetch-upanishad-data.mjs",
+    "generate:offline-pack": "node scripts/generate-offline-pack.mjs",
+    "validate:rigveda-compilations": "node scripts/validate-rigveda-compilations.mjs",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
-    "@astrojs/starlight": "^0.41.0",
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/starlight": "^0.42.0",
     "@astrojs/starlight-tailwind": "^5.0.0",
-    "@tailwindcss/vite": "^4.3.0",
-    "astro": "^7.0.3",
-    "astro-font": "^1.1.0",
-    "sharp": "^0.34.5"
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.1",
+    "astro-font": "^1.2.0",
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@vm75/inditrans": "^0.7.0",
-    "autoprefixer": "^10.5.0",
-    "postcss": "^8.5.15",
-    "tailwindcss": "^4.3.0"
+    "autoprefixer": "^10.5.5",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true,
+    "esbuild@0.28.2": true
   }
 }

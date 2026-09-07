@@ -1,0 +1,46 @@
+{
+  "id": "sapatni-badhana-suktam",
+  "sections": [
+    {
+      "header": "६ इन्द्राणी।सपत्नीबाधनम् (उपनिषत्) । अनुष्टुप् , ६ पंक्तिः।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 145,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 145,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 145,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 145,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 145,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 145,
+          "verse": 6
+        }
+      ]
+    }
+  ]
+}

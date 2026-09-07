@@ -1,0 +1,81 @@
+{
+  "id": "raja-suktam",
+  "sections": [
+    {
+      "header": "६ ध्रुव आंगिरसः। राजा। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 173,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 173,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 173,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 173,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 173,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 173,
+          "verse": 6
+        }
+      ]
+    },
+    {
+      "header": "५ अभीवर्त आंगिरसः। राजा। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 174,
+          "verse": 1
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 174,
+          "verse": 2
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 174,
+          "verse": 3
+        },
+        {
+          "label": 10,
+          "mandala": 10,
+          "sukta": 174,
+          "verse": 4
+        },
+        {
+          "label": 11,
+          "mandala": 10,
+          "sukta": 174,
+          "verse": 5
+        }
+      ]
+    }
+  ]
+}

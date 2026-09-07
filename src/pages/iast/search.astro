@@ -1,0 +1,16 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import SiteSearchPage from '../../components/SiteSearchPage.astro';
+---
+
+<StarlightPage
+	frontmatter={{
+		title: 'Search',
+		description:
+			'Search Vaidhika Dharma for Vedic mantras, sandhyāvandanam, sūktas, saṃhitās, and upaniṣads.',
+		tableOfContents: false,
+		lastUpdated: new Date('2026-09-07'),
+	}}
+>
+	<SiteSearchPage />
+</StarlightPage>

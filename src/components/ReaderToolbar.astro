@@ -1,0 +1,400 @@
+---
+import type { HomeLocale } from '../data/home';
+import { INDIC_SCRIPTS } from '../data/indic-scripts';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const isIast = locale === 'iast';
+
+const labels = {
+	size: 'Type size',
+	chant: 'Chant',
+	chanting: 'Chanting',
+	print: 'Print',
+	smaller: 'Smaller type',
+	larger: 'Larger type',
+	script: 'Script',
+};
+---
+
+<reader-toolbar class="reader-toolbar" data-locale={locale} data-chant-label={labels.chant} data-chanting-label={labels.chanting}>
+	<div class="reader-toolbar__group" role="group" aria-label={labels.size}>
+		<button type="button" data-reader-size-dec aria-label={labels.smaller}>A−</button>
+		<span data-reader-size-label aria-live="polite">MD</span>
+		<button type="button" data-reader-size-inc aria-label={labels.larger}>A+</button>
+	</div>
+	<span class="reader-toolbar__rule" aria-hidden="true"></span>
+	<button type="button" class="reader-toolbar__chant" data-reader-chant aria-pressed="false">
+		<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+			<path d="M12 3a9 9 0 0 0-9 9v7a2 2 0 0 0 2 2h2v-8H5v-1a7 7 0 0 1 14 0v1h-2v8h2a2 2 0 0 0 2-2v-7a9 9 0 0 0-9-9Z" />
+		</svg>
+		<span data-reader-chant-label>{labels.chant}</span>
+	</button>
+	{
+		!isIast && (
+			<>
+				<span class="reader-toolbar__rule" aria-hidden="true"></span>
+				<label class="reader-toolbar__script">
+					<span class="sr-only">{labels.script}</span>
+					<select
+						data-reader-script
+						aria-label={labels.script}
+						title="Reading script. Svara may be approximate outside Devanagari, Marathi, and Grantha."
+					>
+						{INDIC_SCRIPTS.map((script) => (
+							<option value={script.id}>{script.label}</option>
+						))}
+					</select>
+				</label>
+			</>
+		)
+	}
+	<span class="reader-toolbar__rule" aria-hidden="true"></span>
+	<button type="button" class="reader-toolbar__icon" data-reader-print aria-label={labels.print} title={labels.print}>
+		<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+			<path d="M6 9V3h12v6h2a2 2 0 0 1 2 2v7h-4v4H8v-4H4v-7a2 2 0 0 1 2-2Zm2-4v4h8V5H8Zm8 12v2H8v-2h8Zm2-3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+		</svg>
+	</button>
+</reader-toolbar>
+
+<script>
+	import { MANTRA_SIZES, READER_KEYS, isPracticePath, type MantraSize } from '../lib/reader-prefs';
+	import { isIndicScriptId, type IndicScriptId } from '../data/indic-scripts';
+	import { applyIndicScript } from '../lib/indic-script-convert';
+
+	class ReaderToolbar extends HTMLElement {
+		private size: MantraSize = 'md';
+		private wakeLock: WakeLockSentinel | null = null;
+		private layoutObserver?: ResizeObserver;
+		private onKey = (event: KeyboardEvent) => this.handleKey(event);
+
+		connectedCallback() {
+			this.size = this.readSize();
+			this.applySize();
+			this.applyFlag('chanting', READER_KEYS.chanting, '[data-reader-chant]');
+			this.syncSizeLabel();
+			this.syncChantLabel();
+			this.saveResume();
+			void this.initScript();
+			this.observeHeight();
+
+			this.querySelector('[data-reader-size-dec]')?.addEventListener('click', () => this.shiftSize(-1));
+			this.querySelector('[data-reader-size-inc]')?.addEventListener('click', () => this.shiftSize(1));
+			this.querySelector('[data-reader-chant]')?.addEventListener('click', () => this.toggleChant());
+			this.querySelector('[data-reader-print]')?.addEventListener('click', () => window.print());
+			this.querySelector('[data-reader-script]')?.addEventListener('change', (event) => {
+				const value = (event.target as HTMLSelectElement).value;
+				if (isIndicScriptId(value)) void this.setScript(value);
+			});
+			window.addEventListener('keydown', this.onKey);
+		}
+
+		disconnectedCallback() {
+			void this.releaseWakeLock();
+			window.removeEventListener('keydown', this.onKey);
+			this.layoutObserver?.disconnect();
+			document.documentElement.style.removeProperty('--reader-bar-height');
+		}
+
+		private observeHeight() {
+			const publish = () => {
+				document.documentElement.style.setProperty('--reader-bar-height', `${this.offsetHeight}px`);
+			};
+			publish();
+			this.layoutObserver = new ResizeObserver(publish);
+			this.layoutObserver.observe(this);
+		}
+
+		private handleKey(event: KeyboardEvent) {
+			if (event.key !== 'Escape') return;
+			if (event.target instanceof HTMLElement && ['INPUT', 'SELECT', 'TEXTAREA'].includes(event.target.tagName)) {
+				return;
+			}
+			if (document.documentElement.dataset.chanting === 'true') this.toggleChant();
+		}
+
+		private readSize(): MantraSize {
+			const stored = localStorage.getItem(READER_KEYS.mantraSize);
+			return MANTRA_SIZES.includes(stored as MantraSize) ? (stored as MantraSize) : 'md';
+		}
+
+		private applySize() {
+			document.documentElement.dataset.mantraSize = this.size;
+			localStorage.setItem(READER_KEYS.mantraSize, this.size);
+		}
+
+		private syncSizeLabel() {
+			const label = this.querySelector('[data-reader-size-label]');
+			if (label) label.textContent = this.size.toUpperCase();
+			const index = MANTRA_SIZES.indexOf(this.size);
+			this.querySelector('[data-reader-size-dec]')?.toggleAttribute('disabled', index <= 0);
+			this.querySelector('[data-reader-size-inc]')?.toggleAttribute('disabled', index >= MANTRA_SIZES.length - 1);
+		}
+
+		private shiftSize(delta: number) {
+			const index = MANTRA_SIZES.indexOf(this.size);
+			this.size = MANTRA_SIZES[Math.max(0, Math.min(MANTRA_SIZES.length - 1, index + delta))] ?? 'md';
+			this.applySize();
+			this.syncSizeLabel();
+		}
+
+		private applyFlag(dataKey: 'chanting', storageKey: string, selector: string) {
+			const on = localStorage.getItem(storageKey) === 'true';
+			document.documentElement.dataset[dataKey] = on ? 'true' : 'false';
+			this.querySelector(selector)?.setAttribute('aria-pressed', String(on));
+			if (dataKey === 'chanting' && on) void this.requestWakeLock();
+		}
+
+		private toggleFlag(dataKey: 'chanting', storageKey: string, selector: string) {
+			const next = document.documentElement.dataset[dataKey] !== 'true';
+			document.documentElement.dataset[dataKey] = next ? 'true' : 'false';
+			localStorage.setItem(storageKey, String(next));
+			this.querySelector(selector)?.setAttribute('aria-pressed', String(next));
+			return next;
+		}
+
+		private syncChantLabel() {
+			const on = document.documentElement.dataset.chanting === 'true';
+			const label = this.querySelector('[data-reader-chant-label]');
+			if (label) {
+				label.textContent = on ? (this.dataset.chantingLabel ?? 'Chanting') : (this.dataset.chantLabel ?? 'Chant');
+			}
+		}
+
+		private toggleChant() {
+			const next = this.toggleFlag('chanting', READER_KEYS.chanting, '[data-reader-chant]');
+			this.syncChantLabel();
+			if (next) void this.requestWakeLock();
+			else void this.releaseWakeLock();
+		}
+
+		private async initScript() {
+			const select = this.querySelector<HTMLSelectElement>('[data-reader-script]');
+			if (!select) {
+				document.documentElement.dataset.indicReady = 'true';
+				return;
+			}
+			const stored = localStorage.getItem(READER_KEYS.indicScript);
+			const script: IndicScriptId = isIndicScriptId(stored) ? stored : 'devanagari';
+			select.value = script;
+			await this.setScript(script);
+		}
+
+		private async setScript(script: IndicScriptId) {
+			localStorage.setItem(READER_KEYS.indicScript, script);
+			document.documentElement.dataset.indicScript = script;
+			this.classList.add('is-busy');
+			try {
+				await applyIndicScript(script);
+			} catch {
+				document.documentElement.dataset.indicReady = 'true';
+			} finally {
+				this.classList.remove('is-busy');
+			}
+		}
+
+		private async requestWakeLock() {
+			try {
+				this.wakeLock = (await navigator.wakeLock?.request('screen')) ?? null;
+			} catch {
+				this.wakeLock = null;
+			}
+		}
+
+		private async releaseWakeLock() {
+			try {
+				await this.wakeLock?.release();
+			} catch {
+				/* ignore */
+			}
+			this.wakeLock = null;
+		}
+
+		private saveResume() {
+			if (!isPracticePath(location.pathname)) return;
+			const title = document.querySelector('h1')?.textContent?.trim() ?? document.title;
+			localStorage.setItem(
+				READER_KEYS.resume,
+				JSON.stringify({ href: location.pathname, title, at: Date.now() })
+			);
+		}
+	}
+
+	if (!customElements.get('reader-toolbar')) {
+		customElements.define('reader-toolbar', ReaderToolbar);
+	}
+</script>
+
+<style>
+	.reader-toolbar {
+		position: fixed;
+		left: 50%;
+		bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+		transform: translateX(-50%);
+		z-index: 40;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.15rem 0.2rem;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		padding: 0.28rem 0.4rem;
+		width: max-content;
+		max-width: calc(100vw - 1.25rem);
+		background: color-mix(in srgb, var(--sl-color-bg) 92%, var(--sl-color-gray-6));
+		border: 1px solid color-mix(in srgb, var(--sl-color-gray-5) 80%, var(--sl-color-accent));
+		border-radius: 999px;
+		box-shadow:
+			0 10px 28px color-mix(in srgb, var(--sl-color-black) 20%, transparent),
+			0 0 0 1px color-mix(in srgb, var(--sl-color-white) 6%, transparent) inset;
+		backdrop-filter: blur(14px);
+	}
+
+	.reader-toolbar.is-busy {
+		opacity: 0.72;
+		pointer-events: none;
+	}
+
+	.reader-toolbar__group {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.05rem;
+		padding: 0 0.1rem;
+	}
+
+	.reader-toolbar__rule {
+		width: 1px;
+		height: 1.15rem;
+		margin: 0 0.2rem;
+		background: var(--sl-color-gray-5);
+		opacity: 0.85;
+	}
+
+	.reader-toolbar button,
+	.reader-toolbar span,
+	.reader-toolbar select {
+		font: inherit;
+		font-size: 0.78rem;
+		font-weight: 650;
+		letter-spacing: 0.01em;
+		line-height: 1.2;
+		border: 0;
+		background: transparent;
+		color: var(--sl-color-gray-2);
+	}
+
+	.reader-toolbar button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		padding: 0.4rem 0.65rem;
+		border-radius: 999px;
+		cursor: pointer;
+	}
+
+	.reader-toolbar button:hover:not(:disabled),
+	.reader-toolbar button[aria-pressed='true'] {
+		color: var(--sl-color-white);
+		background: color-mix(in srgb, var(--sl-color-accent) 26%, transparent);
+	}
+
+	.reader-toolbar button:focus-visible,
+	.reader-toolbar select:focus-visible {
+		outline: 2px solid var(--sl-color-accent);
+		outline-offset: 1px;
+	}
+
+	.reader-toolbar button:disabled {
+		opacity: 0.35;
+		cursor: default;
+	}
+
+	.reader-toolbar [data-reader-size-label] {
+		min-width: 1.6rem;
+		text-align: center;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		color: var(--sl-color-gray-3);
+	}
+
+	.reader-toolbar__chant[aria-pressed='true'] {
+		color: var(--sl-color-white);
+	}
+
+	.reader-toolbar__icon {
+		padding: 0.4rem 0.55rem;
+	}
+
+	.reader-toolbar__script {
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+	}
+
+	.reader-toolbar select {
+		appearance: none;
+		min-width: 7.4rem;
+		max-width: 9.5rem;
+		padding: 0.4rem 1.45rem 0.4rem 0.7rem;
+		border-radius: 999px;
+		cursor: pointer;
+		background: color-mix(in srgb, var(--sl-color-gray-6) 35%, transparent);
+	}
+
+	.reader-toolbar__script::after {
+		content: '';
+		position: absolute;
+		right: 0.55rem;
+		width: 0.4rem;
+		height: 0.4rem;
+		pointer-events: none;
+		border-right: 1.5px solid var(--sl-color-gray-3);
+		border-bottom: 1.5px solid var(--sl-color-gray-3);
+		transform: rotate(45deg) translateY(-0.12rem);
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	@media (max-width: 40rem) {
+		.reader-toolbar {
+			gap: 0.1rem;
+			padding: 0.24rem 0.32rem;
+		}
+
+		.reader-toolbar button {
+			padding: 0.38rem 0.5rem;
+		}
+
+		.reader-toolbar select {
+			min-width: 6.6rem;
+		}
+
+		.reader-toolbar__chant [data-reader-chant-label] {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+		}
+	}
+
+	@media print {
+		.reader-toolbar {
+			display: none !important;
+		}
+	}
+</style>

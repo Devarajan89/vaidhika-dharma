@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import DraftContentNotice from 'virtual:starlight/components/DraftContentNotice';
-import LinkButton from '../../node_modules/@astrojs/starlight/user-components/LinkButton.astro';
+import { LinkButton } from '@astrojs/starlight/components';
 import { getHeroContent, resolveHomeLocale } from '../data/home';
 import Breadcrumbs from './Breadcrumbs.astro';
 
@@ -15,8 +15,11 @@ const frontmatterHero = data.hero ?? {};
 
 const title = isSplash ? localeHero.title : (frontmatterHero.title ?? data.title);
 const tagline = isSplash ? localeHero.tagline : frontmatterHero.tagline;
+const gloss = isSplash ? localeHero.gloss : undefined;
 const actions = isSplash ? localeHero.actions : (frontmatterHero.actions ?? []);
 const image = frontmatterHero.image;
+const heroImageAlt =
+	isSplash ? 'Śrī Śaṅkarācārya' : image && 'alt' in image && image.alt ? String(image.alt) : '';
 
 let darkImage: ImageMetadata | undefined;
 let lightImage: ImageMetadata | undefined;
@@ -46,7 +49,7 @@ if (image) {
 				loading="eager"
 				decoding="async"
 				fetchpriority="high"
-				alt={image?.alt || ''}
+				alt={heroImageAlt}
 				class:list={['hero-image', { 'light:sl-hidden': Boolean(lightImage) }]}
 			/>
 		)
@@ -62,7 +65,7 @@ if (image) {
 				loading="eager"
 				decoding="async"
 				fetchpriority="high"
-				alt={image?.alt || ''}
+				alt={heroImageAlt}
 				class="hero-image dark:sl-hidden"
 			/>
 		)
@@ -73,6 +76,7 @@ if (image) {
 			<h1 id={PAGE_TITLE_ID} data-page-title set:html={title} />
 			{data.draft && <DraftContentNotice />}
 			{tagline && <div class="tagline" set:html={tagline} />}
+			{gloss && <p class="hero-gloss">{gloss}</p>}
 		</div>
 		{
 			actions.length > 0 && (
@@ -108,17 +112,19 @@ if (image) {
 		.hero > .hero-html {
 			object-fit: contain;
 			width: auto;
-			max-width: min(100%, 20rem);
+			max-width: min(100%, 14rem);
 			max-height: none;
 			height: auto;
 			margin-inline: auto;
 			align-self: center;
+			order: 2;
 		}
 
 		.stack {
 			flex-direction: column;
-			gap: clamp(1.5rem, calc(1.5rem + 1vw), 2rem);
+			gap: clamp(1.25rem, calc(1rem + 1vw), 2rem);
 			text-align: center;
+			order: 1;
 		}
 
 		.copy {
@@ -144,6 +150,13 @@ if (image) {
 			color: var(--sl-color-gray-3);
 		}
 
+		.hero-gloss {
+			margin: 0;
+			font-size: var(--sl-text-sm);
+			line-height: 1.55;
+			color: var(--sl-color-gray-2);
+		}
+
 		.actions {
 			gap: 1rem 2rem;
 			flex-wrap: wrap;
@@ -154,7 +167,7 @@ if (image) {
 			.hero {
 				grid-template-columns: 7fr 4fr;
 				gap: 3%;
-				padding-block: clamp(2.5rem, calc(1rem + 10vmin), 10rem);
+				padding-block: clamp(2rem, calc(1rem + 8vmin), 8rem);
 			}
 
 			.hero-image,
@@ -167,6 +180,7 @@ if (image) {
 
 			.stack {
 				text-align: start;
+				order: 0;
 			}
 
 			.copy {

@@ -1,0 +1,70 @@
+{
+  "id": "hiranya-suktam",
+  "sections": [
+    {
+      "header": "११ हिरण्यस्तूप आङ्गिरसः। १ (पादानां क्रमेण) अग्निः, मित्रावरुणौ, रात्रिः, सविता च। २-११ सविता। त्रिष्टुप्, १, ९ जगती।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 6
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 7
+        },
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 8
+        },
+        {
+          "label": 8,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 9
+        },
+        {
+          "label": 9,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 10
+        },
+        {
+          "label": 10,
+          "mandala": 1,
+          "sukta": 35,
+          "verse": 11
+        }
+      ]
+    }
+  ]
+}

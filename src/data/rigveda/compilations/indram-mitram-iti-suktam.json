@@ -1,0 +1,52 @@
+{
+  "id": "indram-mitram-iti-suktam",
+  "sections": [
+    {
+      "header": "७ कुत्स आङ्गिरसः। विश्वे देवाः। जगती, ७ त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 106,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 106,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 106,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 106,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 106,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 106,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 106,
+          "verse": 7
+        }
+      ]
+    }
+  ]
+}

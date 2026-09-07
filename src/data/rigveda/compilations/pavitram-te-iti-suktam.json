@@ -1,0 +1,40 @@
+{
+  "id": "pavitram-te-iti-suktam",
+  "sections": [
+    {
+      "header": "५ पवित्र आङ्गिरस: । पवमान: सोम: ।जगती  ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 9,
+          "sukta": 83,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 9,
+          "sukta": 83,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 9,
+          "sukta": 83,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 9,
+          "sukta": 83,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 9,
+          "sukta": 83,
+          "verse": 5
+        }
+      ]
+    }
+  ]
+}

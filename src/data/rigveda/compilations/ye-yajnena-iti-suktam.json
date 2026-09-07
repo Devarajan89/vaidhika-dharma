@@ -1,0 +1,76 @@
+{
+  "id": "ye-yajnena-iti-suktam",
+  "sections": [
+    {
+      "header": "११ नाभानेदिष्ठो  मानवः। विश्वे देवाः, १-६ अंगिरसो वा, ८-११ सावर्णेदानम्। जगती, ५,८,९ अनुष्टुप् प्रगाथ: =(६ बृहती, ७ सतोबृहती ) १० गायत्री, ११ त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 10,
+          "sukta": 62,
+          "verse": 11
+        }
+      ]
+    }
+  ]
+}

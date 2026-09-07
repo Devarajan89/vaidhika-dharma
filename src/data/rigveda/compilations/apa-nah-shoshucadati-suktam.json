@@ -1,0 +1,58 @@
+{
+  "id": "apa-nah-shoshucadati-suktam",
+  "sections": [
+    {
+      "header": "८ कुत्स आङ्गिरसः। अग्निः, शुचिरग्निर्वा। गायत्री।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 1,
+          "sukta": 97,
+          "verse": 8
+        }
+      ]
+    }
+  ]
+}

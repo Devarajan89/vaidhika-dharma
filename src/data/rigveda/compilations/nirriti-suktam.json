@@ -1,0 +1,70 @@
+{
+  "id": "nirriti-suktam",
+  "sections": [
+    {
+      "header": "१० बन्धु श्रुतबन्धुर्विप्रबन्धुर्गौपायनाः।१-३ निर्ऋतिः,४ निर्ऋतिः सोमश्च, ५-६असुनीतिः, ७ पृथिवी-द्वयन्तरिक्ष-सोम-पूष-पथ्या-स्वस्तयः,८-१० द्यावापृथिवी, १० (पूर्वार्धस्य) इन्द्र- द्यावापृथिव्यः। त्रिष्टुप् , ८ पंक्तिः,९ महापंक्तिः, १० पंक्त्युत्तरा।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 10,
+          "sukta": 59,
+          "verse": 10
+        }
+      ]
+    }
+  ]
+}

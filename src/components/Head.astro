@@ -40,10 +40,11 @@ const jsonLd = buildPageJsonLd({
 <Default {...Astro.props} />
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta name="theme-color" content="#cb0003" />
+<meta name="color-scheme" content="light" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-title" content="Vaidhika Dharma" />
-<link rel="apple-touch-icon" href="/images/favicon.svg" />
+<link rel="apple-touch-icon" href="/images/logo-512.png" />
 <link rel="image_src" href={image} />
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLFCLRJNG3" is:inline></script>
@@ -54,6 +55,19 @@ const jsonLd = buildPageJsonLd({
 	}
 	gtag('js', new Date());
 	gtag('config', 'G-FLFCLRJNG3');
+</script>
+<script is:inline>
+	try {
+		var size = localStorage.getItem('vaidhika-mantra-size');
+		if (size) document.documentElement.dataset.mantraSize = size;
+		if (localStorage.getItem('vaidhika-chanting') === 'true') {
+			document.documentElement.dataset.chanting = 'true';
+		}
+		var script = localStorage.getItem('vaidhika-indic-script');
+		if (script && script !== 'devanagari') {
+			document.documentElement.dataset.indicScript = script;
+		}
+	} catch (e) {}
 </script>
 <script is:inline>
 	if ('serviceWorker' in navigator) {

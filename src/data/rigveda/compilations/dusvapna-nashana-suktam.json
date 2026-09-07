@@ -1,0 +1,40 @@
+{
+  "id": "dusvapna-nashana-suktam",
+  "sections": [
+    {
+      "header": "५ प्रचेता आंगिरसः। दु:स्वप्ननाशनम्। अनुष्टुप् , ३ त्रिष्टुप्, ५ पंक्तिः।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 164,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 164,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 164,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 164,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 164,
+          "verse": 5
+        }
+      ]
+    }
+  ]
+}

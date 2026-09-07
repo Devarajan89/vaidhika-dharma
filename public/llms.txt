@@ -4,6 +4,7 @@
 
 Site: https://vaidhikadharma.org/
 IAST: https://vaidhikadharma.org/iast/
+Search: https://vaidhikadharma.org/search/
 Sitemap: https://vaidhikadharma.org/sitemap-index.xml
 
 ## Nityakarma

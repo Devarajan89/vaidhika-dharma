@@ -1,0 +1,376 @@
+{
+  "id": "rudra-suktam-rig",
+  "sections": [
+    {
+      "header": "९ कण्वो घौरः। रुद्रः, मित्रावरुणौ च, ७-९ सोमः। गायत्री, ९ अनुष्टप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 1,
+          "sukta": 43,
+          "verse": 9
+        }
+      ]
+    },
+    {
+      "header": "११ कुत्स आङ्गिरसः। रुद्रः। जगती, १०-११ त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 1,
+          "sukta": 114,
+          "verse": 11
+        }
+      ]
+    },
+    {
+      "header": "१५ गृत्समद (आङ्गिरसः शौनहोत्रः पश्चाद्) भार्गवः शौनकः। रुद्रः। त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 11
+        },
+        {
+          "label": 12,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 12
+        },
+        {
+          "label": 13,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 13
+        },
+        {
+          "label": 14,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 14
+        },
+        {
+          "label": 15,
+          "mandala": 2,
+          "sukta": 33,
+          "verse": 15
+        }
+      ]
+    },
+    {
+      "header": "४ मैत्रावरुणिर्वसिष्ठ:।रूद्र:। जगती, ४ त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 7,
+          "sukta": 46,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 7,
+          "sukta": 46,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 7,
+          "sukta": 46,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 7,
+          "sukta": 46,
+          "verse": 4
+        }
+      ]
+    },
+    {
+      "header": "४ बार्हस्पत्यो भरद्वाज: । सोमारुद्रौ। त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 6,
+          "sukta": 74,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 6,
+          "sukta": 74,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 6,
+          "sukta": 74,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 6,
+          "sukta": 74,
+          "verse": 4
+        }
+      ]
+    },
+    {
+      "header": "१२   प्रगाथ: काण्व:। इन्द्र:, १२ देवा: । गायत्री ; १,४-५,७ अनुष्टुप् ; १२ त्रिष्टुप् ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 8,
+          "sukta": 63,
+          "verse": 12
+        }
+      ]
+    },
+    {
+      "header": "१६ गृत्समद(आङ्गिरसः शौनहोत्रः पश्चाद्) भार्गवः शौनकः। अग्निः।जगती।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 2,
+          "sukta": 1,
+          "verse": 6
+        }
+      ]
+    },
+    {
+      "header": "१६ वामदेवो गौतमः। अग्निः, १ रुद्रः। त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 4,
+          "sukta": 3,
+          "verse": 1
+        }
+      ]
+    },
+    {
+      "header": "१२ वसुश्रुत आत्रेयः। अग्निः, ३ मरुद्रुद्रविष्णवः। त्रिष्टुप्, १ विराट्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 5,
+          "sukta": 3,
+          "verse": 3
+        }
+      ]
+    },
+    {
+      "header": "१५ ऋजिश्वा भारद्वाज: । विश्वे देवा: ।त्रिष्टुप् , १५ शक्वरी ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 6,
+          "sukta": 49,
+          "verse": 10
+        }
+      ]
+    },
+    {
+      "header": "१८ भौमोऽत्रिः। विश्वे देवाः, ११ रुद्रः। त्रिष्टुप्, १७ एकपदा विराट्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 5,
+          "sukta": 42,
+          "verse": 11
+        }
+      ]
+    },
+    {
+      "header": "१२ बन्धु: श्रुतबन्धुर्विप्रबन्धुर्गौपायनाः,६ अगस्त्यस्वसा एषां माता ऋषिका। १-४,६ असमातिः, ५ इन्द्रः,७-११ जीवः,१२ हस्तः।अनुष्टुप्,१-५ गायत्री, ८-९ पंक्तिः।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 60,
+          "verse": 12
+        }
+      ]
+    },
+    {
+      "header": "१२ मैत्रावरुणिर्वसिष्ठ:। १-११ मरुत:, १२ रूद्र: ( मृत्युविमोचिनी ऋक् ) । प्रगाथ: = ( विषमा बृहती, समा सतोबृहती ), ७-८, ९-११ गायत्री, १२ अनुष्टुप्  ।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 7,
+          "sukta": 59,
+          "verse": 12
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "vamana-suktam",
+  "sections": [
+    {
+      "header": "६ दीर्घतमा औचथ्यः। विष्णुः। त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 1,
+          "sukta": 154,
+          "verse": 6
+        }
+      ]
+    },
+    {
+      "header": "२१ मेधातिथिः काण्वः। १-४ अश्विनौ, ५-८ सविता, ९-१० अग्निः, ११ देव्यः, १२ इन्द्राणी वरुणान्यग्नाय्यः, १३-१४ द्यावापृथिव्यौ, १५ पृथिवी, १६ विष्णुर्देवा वा, १७-२१ विष्णुः। गायत्री।",
+      "mantras": [
+        {
+          "label": 7,
+          "mandala": 1,
+          "sukta": 22,
+          "verse": 16
+        },
+        {
+          "label": 8,
+          "mandala": 1,
+          "sukta": 22,
+          "verse": 17
+        },
+        {
+          "label": 9,
+          "mandala": 1,
+          "sukta": 22,
+          "verse": 18
+        },
+        {
+          "label": 10,
+          "mandala": 1,
+          "sukta": 22,
+          "verse": 19
+        },
+        {
+          "label": 11,
+          "mandala": 1,
+          "sukta": 22,
+          "verse": 20
+        },
+        {
+          "label": 12,
+          "mandala": 1,
+          "sukta": 22,
+          "verse": 21
+        }
+      ]
+    }
+  ]
+}

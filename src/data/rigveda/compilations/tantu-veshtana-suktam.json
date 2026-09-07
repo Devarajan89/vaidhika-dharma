@@ -1,0 +1,69 @@
+{
+  "id": "tantu-veshtana-suktam",
+  "sections": [
+    {
+      "header": "१२ मधुच्छन्दा वैश्वामित्रः। इन्द्रः। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 1,
+          "sukta": 10,
+          "verse": 12
+        }
+      ]
+    },
+    {
+      "header": "१४ अर्बुदः काद्रवेयः सर्पः। ग्रावाणः। जगती, ५, ७, १४ त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 7
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 8
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 9
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 10
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 11
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 12
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 13
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 94,
+          "verse": 14
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "yakshma-nashana-suktam",
+  "sections": [
+    {
+      "header": "६ विवृहा काश्यपः। यक्ष्मनाशनम्। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 163,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 163,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 163,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 163,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 163,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 163,
+          "verse": 6
+        }
+      ]
+    }
+  ]
+}

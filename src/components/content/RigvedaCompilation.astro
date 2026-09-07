@@ -1,13 +1,18 @@
 ---
 import SuktaPage from './SuktaPage.astro';
 import RigvedaMantra from './RigvedaMantra.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import StudyLayer from './StudyLayer.astro';
 import type { HomeLocale } from '../../data/home';
 import {
 	getVerseRecord,
+	samhitaRefCode,
 	type CompilationMap,
 	type CompilationMantraRef,
 } from '../../lib/rigveda-corpus';
+import { uniqueCrossCompilationLinks } from '../../lib/rigveda-compilation-index';
 import { transliterateDevanagariMap } from '../../lib/rigveda-transliterate';
+import type { JumpNavItem } from '../../lib/samhita-nav';
 
 interface Props {
 	id: string;
@@ -81,12 +86,75 @@ function resolveSectionHeader(sectionIndex: number, header: string | null): stri
 	}
 	return header;
 }
+
+const jumpItems: JumpNavItem[] = [];
+for (const [sectionIndex, section] of compilation.sections.entries()) {
+	if (section.header) {
+		jumpItems.push({
+			id: `compilation-section-${sectionIndex}`,
+			label: String(sectionIndex + 1),
+		});
+	}
+	for (const mantra of section.mantras) {
+		jumpItems.push({
+			id: `verse-${mantra.label}`,
+			label: String(mantra.label),
+		});
+	}
+}
+
+const citationLinks = compilation.sections.flatMap((section) =>
+	section.mantras
+		.filter((mantra) => mantra.mandala && mantra.sukta && mantra.verse)
+		.map((mantra) => {
+			const code = samhitaRefCode(mantra.mandala!, mantra.sukta!, mantra.verse!);
+			const href =
+				locale === 'iast'
+					? `/iast/rigveda-samhita/mandala-${mantra.mandala}/sukta-${mantra.sukta}/#mantra-${mantra.verse}`
+					: `/rigveda-samhita/mandala-${mantra.mandala}/sukta-${mantra.sukta}/#mantra-${mantra.verse}`;
+			return `<li><a href="${href}">${code}</a></li>`;
+		})
+);
+const uniqueCitations = [...new Set(citationLinks)];
+const crossLinks = uniqueCrossCompilationLinks({ ...compilation, id }, locale);
+const anukramani = compilation.sections
+	.map((section, index) => resolveSectionHeader(index, section.header))
+	.filter(Boolean)
+	.join(' · ');
+
+const studyRows = [
+	{
+		label: locale === 'iast' ? 'Anukramaṇī' : 'अनुक्रमणिका',
+		value: anukramani || null,
+	},
+	{
+		label: locale === 'iast' ? 'Saṃhitā citations' : 'संहिता निर्देशाः',
+		html: uniqueCitations.length ? `<ul>${uniqueCitations.join('')}</ul>` : null,
+	},
+	{
+		label: locale === 'iast' ? 'Also in this saṅgraha' : 'अन्यत्र सङ्ग्रहे',
+		html: crossLinks.length
+			? `<ul>${crossLinks.map((link) => `<li><a href="${link.href}">${link.label}</a></li>`).join('')}</ul>`
+			: null,
+	},
+	{
+		label: locale === 'iast' ? 'Source' : 'मूलम्',
+		value:
+			locale === 'iast'
+				? 'Ṛgveda Śākala saṃhitā (linked ṛcs). Learn svara from a guru.'
+				: 'ऋग्वेद शाकल संहिता (सम्बद्धा ऋचः)। स्वरः गुरोः समीपे एव।',
+	},
+];
+
+const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
 ---
 
 <SuktaPage locale={locale}>
+	<StudyLayer locale={locale} rows={studyRows} />
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={8} />
 	{
 		compilation.sections.map((section, sectionIndex) => (
-			<section class="veda-compilation-section">
+			<section class="veda-compilation-section" id={`compilation-section-${sectionIndex}`}>
 				{section.header && (
 					<header class="veda-compilation-section__header">
 						<p class="veda-compilation-section__title">

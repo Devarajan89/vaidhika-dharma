@@ -10,6 +10,9 @@
 /pagefind/*
   Cache-Control: public, max-age=86400
 
+/search-index.json
+  Cache-Control: public, max-age=86400
+
 /sw.js
   Cache-Control: public, max-age=0, must-revalidate
   Service-Worker-Allowed: /

@@ -29,6 +29,7 @@
 
 /* ── Readability: global typography ───────────────────────────── */
 :root {
+  color-scheme: light;
   --sl-font: var(--font-latin);
   --font-sanskrit: 'Siddhanta', 'Noto Serif Devanagari', 'Arial Unicode MS', serif;
   --sl-text-base: 1.0625rem;
@@ -368,12 +369,36 @@ a.site-title {
   border-bottom: 1px solid var(--sl-color-gray-5);
 }
 
+.home-header__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .home-salutation {
-  margin: 0 0 1rem;
+  margin: 0;
   font-size: 1.375rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   color: var(--sl-color-accent);
+}
+
+.home-script-switch {
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+.home-script-switch a {
+  color: var(--sl-color-gray-3);
+  text-decoration: none;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+.home-script-switch a:hover {
+  color: var(--sl-color-accent);
+  border-color: var(--sl-color-accent);
 }
 
 .home-intro {
@@ -388,31 +413,106 @@ a.site-title {
 }
 
 .home-search-hint {
+  display: none;
+}
+
+.home-search {
+  margin-top: 1rem;
+}
+
+.home-search__form {
   display: flex;
-  align-items: flex-start;
   gap: 0.5rem;
-  margin-top: 1rem !important;
-  padding: 0.75rem 1rem;
-  font-size: 0.9375rem;
-  line-height: 1.55;
-  color: var(--sl-color-gray-3);
-  background: var(--sl-color-gray-7);
+}
+
+.home-search__form input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.75rem;
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 0.5rem;
+  background: var(--sl-color-gray-7);
+  color: var(--sl-color-white);
+  font: inherit;
 }
 
-:root[data-theme='light'] .home-search-hint {
+.home-search__form button {
+  padding: 0.55rem 0.9rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--sl-color-accent);
+  color: var(--sl-color-white);
+  font: inherit;
+  cursor: pointer;
+}
+
+.home-search__hint {
+  margin: 0.55rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--sl-color-gray-3);
+}
+
+.home-search__chips {
+  --home-pill-height: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0.4rem;
+  margin: 0.65rem 0 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+}
+
+.home-search__chips li {
+  display: flex;
+  min-width: 0;
+}
+
+.home-search__chips a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--home-pill-height);
+  min-height: var(--home-pill-height);
+  padding: 0 0.45rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  color: var(--sl-color-gray-2);
+  text-decoration: none;
+}
+
+.home-search__chips a:hover {
+  border-color: var(--sl-color-accent);
+  color: var(--sl-color-accent);
+}
+
+:root[data-theme='light'] .home-search__form input,
+:root[data-theme='light'] .home-start__list a {
   background: var(--color-gray-100);
   border-color: var(--color-gray-300);
-  color: var(--color-gray-700);
+  color: var(--color-gray-900);
 }
 
-.home-search-hint::before {
-  content: '⌕';
-  flex-shrink: 0;
-  font-size: 1.125rem;
-  line-height: 1.2;
-  color: var(--sl-color-accent);
+:root[data-theme='light'] .home-start__title,
+:root[data-theme='light'] .home-practice__title {
+  color: var(--color-gray-900);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
 
 .home-shortcuts {
@@ -421,6 +521,11 @@ a.site-title {
   border-bottom: 1px solid var(--sl-color-gray-5);
 }
 
+.home-start {
+  margin: 0 0 1.75rem;
+}
+
+.home-start__heading,
 .home-shortcuts__heading {
   margin: 0 0 0.875rem;
   font-size: 1.375rem;
@@ -429,6 +534,78 @@ a.site-title {
   color: var(--sl-color-white);
 }
 
+.home-start__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-start__list a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 100%;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  background: var(--sl-color-gray-6);
+}
+
+.home-start__list a:hover {
+  border-color: var(--sl-color-accent);
+}
+
+.home-start__title {
+  font-weight: 600;
+  color: var(--sl-color-white);
+}
+
+.home-start__body {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--sl-color-gray-3);
+}
+
+.home-practice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0 0 0.95rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--sl-color-accent) 45%, var(--sl-color-gray-5));
+  border-radius: 0.75rem;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+}
+
+.home-practice__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sl-color-gray-3);
+}
+
+.home-practice__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--sl-color-white);
+}
+
+.home-offline {
+  margin: 0.85rem 0 0;
+  font-size: 0.8125rem;
+}
+
+.home-offline a {
+  color: var(--sl-color-gray-3);
+}
+
+:root[data-theme='light'] .home-start__heading,
 :root[data-theme='light'] .home-shortcuts__heading {
   color: var(--color-gray-900);
 }
@@ -466,12 +643,18 @@ a.site-title {
 }
 
 .home-browse__heading {
-  margin: 0 0 1.125rem;
+  margin: 0 0 0.4rem;
   font-size: 1.375rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   text-transform: none;
   color: var(--sl-color-white);
+}
+
+.home-browse__blurb {
+  margin: 0 0 1.125rem;
+  font-size: 0.875rem;
+  color: var(--sl-color-gray-3);
 }
 
 :root[data-theme='light'] .home-browse__heading {
@@ -528,6 +711,14 @@ a.site-title {
 
   .home-salutation {
     font-size: 1.25rem;
+  }
+
+  .home-start__list {
+    grid-template-columns: 1fr;
+  }
+
+  .home-search__form {
+    flex-direction: column;
   }
 }
 
@@ -631,8 +822,195 @@ body {
   }
 }
 
+.home-shortcuts__link[data-current-time='true'] {
+  color: var(--sl-color-accent);
+  border-color: var(--sl-color-accent);
+  font-weight: 600;
+}
+
+.home-continue {
+  margin: 0 0 0.85rem;
+  font-size: 0.9375rem;
+}
+
+.home-continue a {
+  color: var(--sl-color-accent);
+}
+
+.home-shakha {
+  --home-pill-height: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0.4rem;
+  margin: 0 0 0.85rem;
+  line-height: 1;
+}
+
+.home-shakha button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--home-pill-height);
+  min-height: var(--home-pill-height);
+  margin: 0;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--sl-color-gray-5);
+  background: transparent;
+  color: var(--sl-color-gray-2);
+  font: inherit;
+  font-size: 0.8125rem;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.home-shakha button[aria-pressed='true'] {
+  border-color: var(--sl-color-accent);
+  color: var(--sl-color-white);
+  background: color-mix(in srgb, var(--sl-color-accent) 18%, transparent);
+}
+
+.offline-packs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.offline-packs button {
+  font: inherit;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.375rem;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-7);
+  color: var(--sl-color-gray-1);
+  cursor: pointer;
+}
+
+html {
+  padding-bottom: calc(1.25rem + var(--reader-bar-height, 3.25rem) + env(safe-area-inset-bottom, 0px));
+}
+
+html[data-mantra-size='sm'] {
+  --sl-mantra-size: 1.125rem;
+  --sl-mantra-line-height: 1.65;
+}
+
+html[data-mantra-size='md'] {
+  --sl-mantra-size: 1.3125rem;
+}
+
+html[data-mantra-size='lg'] {
+  --sl-mantra-size: 1.55rem;
+  --sl-mantra-line-height: 1.85;
+}
+
+html[data-mantra-size='xl'] {
+  --sl-mantra-size: 1.8rem;
+  --sl-mantra-line-height: 1.9;
+}
+
+html[data-chanting='true'] .header,
+html[data-chanting='true'] #starlight__sidebar,
+html[data-chanting='true'] .sidebar-pane,
+html[data-chanting='true'] .right-sidebar-container,
+html[data-chanting='true'] .right-sidebar,
+html[data-chanting='true'] .home-browse,
+html[data-chanting='true'] .home-start,
+html[data-chanting='true'] .side-column,
+html[data-chanting='true'] .breadcrumbs,
+html[data-chanting='true'] .site-hub-links,
+html[data-chanting='true'] .sl-banner {
+  display: none !important;
+}
+
+html[data-indic-script='tamil'] .veda-mantra,
+html[data-indic-script='tamil'] .veda-corpus,
+html[data-indic-script='tamil'] .ritual-page-shell,
+html[data-indic-script='tamil'] .sl-markdown-content {
+  font-family: 'Tiro Tamil', 'NotoSerifTamil', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
+html[data-indic-script='telugu'] .veda-mantra,
+html[data-indic-script='telugu'] .veda-corpus,
+html[data-indic-script='telugu'] .ritual-page-shell,
+html[data-indic-script='telugu'] .sl-markdown-content {
+  font-family: 'Tiro Telugu', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
+html[data-indic-script='kannada'] .veda-mantra,
+html[data-indic-script='kannada'] .veda-corpus,
+html[data-indic-script='kannada'] .ritual-page-shell,
+html[data-indic-script='kannada'] .sl-markdown-content {
+  font-family: 'Tiro Kannada', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
+html[data-indic-script='malayalam'] .veda-mantra,
+html[data-indic-script='malayalam'] .veda-corpus,
+html[data-indic-script='malayalam'] .ritual-page-shell,
+html[data-indic-script='malayalam'] .sl-markdown-content {
+  font-family: 'Noto Serif Malayalam', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
+html[data-indic-script='marathi'] .veda-mantra,
+html[data-indic-script='marathi'] .veda-corpus,
+html[data-indic-script='marathi'] .ritual-page-shell,
+html[data-indic-script='marathi'] .sl-markdown-content {
+  font-family: 'Tiro Devanagari Marathi', 'Siddhanta', sans-serif, var(--font-latin);
+}
+
+html[data-indic-script='gujarati'] .veda-mantra,
+html[data-indic-script='gujarati'] .veda-corpus,
+html[data-indic-script='gujarati'] .ritual-page-shell,
+html[data-indic-script='gujarati'] .sl-markdown-content {
+  font-family: 'Noto Serif Gujarati', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
+html[data-indic-script='bengali'] .veda-mantra,
+html[data-indic-script='bengali'] .veda-corpus,
+html[data-indic-script='bengali'] .ritual-page-shell,
+html[data-indic-script='bengali'] .sl-markdown-content {
+  font-family: 'Tiro Bangla', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
+html[data-indic-script='odia'] .veda-mantra,
+html[data-indic-script='odia'] .veda-corpus,
+html[data-indic-script='odia'] .ritual-page-shell,
+html[data-indic-script='odia'] .sl-markdown-content {
+  font-family: 'Noto Serif Oriya', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
+html[data-indic-script='grantha'] .veda-mantra,
+html[data-indic-script='grantha'] .veda-corpus,
+html[data-indic-script='grantha'] .ritual-page-shell,
+html[data-indic-script='grantha'] .sl-markdown-content {
+  font-family: 'Noto Serif Grantha', sans-serif, 'Siddhanta', var(--font-latin);
+}
+
 /* ── Print: ritual & mantra pages ─────────────────────────────── */
 @media print {
+  #starlight__sidebar,
+  .right-sidebar-panel,
+  header.header,
+  .doc-page-nav__locale,
+  .sl-banner,
+  footer,
+  .reader-toolbar,
+  .home-shakha,
+  .study-layer,
+  html {
+    padding-bottom: 0;
+  }
+
   #starlight__sidebar,
   .right-sidebar-panel,
   header.header,
@@ -652,18 +1030,26 @@ body {
   }
 
   .sl-markdown-content blockquote,
-  .sl-markdown-content p:has(br):not(:has(> em:only-child)) {
+  .sl-markdown-content p:has(br):not(:has(> em:only-child)),
+  .veda-mantra {
     font-size: 12pt;
     line-height: 1.85;
   }
 
+  .veda-compilation-section,
+  .veda-mantra,
   .ritual-step,
   :global(.achamanam) {
     break-inside: avoid;
   }
 
-  .sl-markdown-content h5 {
+  .sl-markdown-content h5,
+  .veda-compilation-section__header {
     break-after: avoid;
     margin-top: 1.25rem;
+  }
+
+  .veda-mantra__alt {
+    display: none !important;
   }
 }

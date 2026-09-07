@@ -3,6 +3,7 @@ import SuktaPage from './SuktaPage.astro';
 import Verse from './Verse.astro';
 import CorpusJumpNav from './CorpusJumpNav.astro';
 import SamhitaPageNav from './SamhitaPageNav.astro';
+import StudyLayer from './StudyLayer.astro';
 import type { HomeLocale } from '../../data/home';
 import { getSuktaRecord, getSuktaVerses } from '../../lib/rigveda-corpus';
 import {
@@ -45,9 +46,24 @@ for (const record of mantraRecords) {
 if (locale === 'iast') {
 	header = suktaRecord.headerIast ?? (await transliterateDevanagari(header));
 }
+
+const studyRows = [
+	{
+		label: locale === 'iast' ? 'Anukramaṇī' : 'अनुक्रमणिका',
+		value: header || null,
+	},
+	{
+		label: locale === 'iast' ? 'Source' : 'मूलम्',
+		value:
+			locale === 'iast'
+				? `Ṛgveda Śākala · Maṇḍala ${mandala}, Sūkta ${sukta}`
+				: `ऋग्वेद शाकल · मण्डल ${mandala}, सूक्त ${sukta}`,
+	},
+];
 ---
 
 <SuktaPage locale={locale} class="rigveda-samhita">
+	<StudyLayer locale={locale} rows={studyRows} />
 	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={2} />
 	<header class="veda-sukta-block__header veda-sukta-block__header--single">
 		<span class="veda-sukta-block__label">
@@ -67,6 +83,13 @@ if (locale === 'iast') {
 					{splitMantraPadas(mantraTexts[record.verse]).map((pada) => (
 						<p>{pada}</p>
 					))}
+					{(locale === 'iast' ? record.text : record.iast) && (
+						<div slot="alt">
+							{splitMantraPadas((locale === 'iast' ? record.text : record.iast) ?? '').map((pada) => (
+								<p>{pada}</p>
+							))}
+						</div>
+					)}
 				</Verse>
 			))
 		}

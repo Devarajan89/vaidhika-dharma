@@ -2,9 +2,14 @@ import {
 	isCollectionSlug,
 	isHomeSlug,
 	isIastSlug,
+	isSearchSlug,
 	localeHomePath,
+	SITE_LOGO_PATH,
+	SITE_LOGO_SIZE,
+	SITE_ORIGIN,
 	slugPath,
 } from './seo';
+import { sangrahaSegmentLabels } from '../data/sangraha';
 
 export interface StructuredDataInput {
 	title: string;
@@ -24,6 +29,7 @@ export interface BreadcrumbNavItem {
 }
 
 const SEGMENT_LABELS: Record<string, string> = {
+	...sangrahaSegmentLabels(),
 	iast: 'IAST',
 	nityakarma: 'Nityakarma',
 	'aswalayana-sandhyavandanam': 'Aśvalāyana Sandhyāvandanam',
@@ -65,6 +71,7 @@ const SEGMENT_LABELS: Record<string, string> = {
 	'pancha-rudram': 'Pañca Rudram',
 	'brahmanaspati-suktam': 'Brahmaṇaspati Sūktam',
 	offline: 'Offline',
+	search: 'Search',
 };
 
 const CREATIVE_WORK_SERIES: Array<{ test: RegExp; name: string; nameDeva: string }> = [
@@ -221,7 +228,9 @@ function buildOrganization(): Record<string, unknown> {
 		url: 'https://vaidhikadharma.org/',
 		logo: {
 			'@type': 'ImageObject',
-			url: 'https://vaidhikadharma.org/images/favicon.svg',
+			url: `${SITE_ORIGIN}${SITE_LOGO_PATH}`,
+			width: SITE_LOGO_SIZE,
+			height: SITE_LOGO_SIZE,
 		},
 		email: 'contact@vaidhikadharma.org',
 	};
@@ -236,6 +245,14 @@ function buildWebSite(siteUrl: string, siteName: string): Record<string, unknown
 		description: SITE_DESCRIPTION,
 		inLanguage: ['sa-Deva', 'sa-Latn'],
 		publisher: { '@id': 'https://vaidhikadharma.org/#organization' },
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: {
+				'@type': 'EntryPoint',
+				urlTemplate: `${SITE_ORIGIN}/search/?q={search_term_string}`,
+			},
+			'query-input': 'required name=search_term_string',
+		},
 	};
 }
 
@@ -245,7 +262,9 @@ export function buildPageJsonLd(input: StructuredDataInput): Record<string, unkn
 	const website = buildWebSite(input.siteUrl, siteName);
 	const pageType = isHomeSlug(input.slug)
 		? 'WebPage'
-		: isCollectionSlug(input.slug)
+		: isSearchSlug(input.slug)
+			? 'SearchResultsPage'
+			: isCollectionSlug(input.slug)
 			? 'CollectionPage'
 			: 'WebPage';
 

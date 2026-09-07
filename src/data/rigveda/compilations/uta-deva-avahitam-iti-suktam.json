@@ -1,0 +1,52 @@
+{
+  "id": "uta-deva-avahitam-iti-suktam",
+  "sections": [
+    {
+      "header": "७,१ भरद्वाज:, २ कश्यपः, ३ गौतमः, ४ अत्रिः, ५ विश्वामित्रः, ६ जमदग्निः, ७ वसिष्ठः। विश्वेदेवाः। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 137,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 137,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 137,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 137,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 137,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 137,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 137,
+          "verse": 7
+        }
+      ]
+    }
+  ]
+}

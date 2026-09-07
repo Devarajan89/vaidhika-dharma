@@ -22,9 +22,19 @@ const isIast = locale === 'iast';
 const labelCol = labelHeader ?? (isIast ? 'Section' : 'अनुभागः');
 const detailCol = detailHeader ?? (isIast ? 'Opening' : 'आदिः');
 const countCol = countHeader ?? (isIast ? 'Mantras' : 'मन्त्राः');
+const startHref = rows[0]?.href;
+const startLabel = isIast ? 'Start recitation' : 'पाठः आरभ्यताम्';
+const continueLabel = isIast ? 'Continue recitation' : 'पाठं अनुवर्तताम्';
 ---
 
 <div class="corpus-index">
+	{
+		startHref && (
+			<p class="corpus-index__start" data-corpus-start data-start-href={startHref} data-continue-label={continueLabel}>
+				<a href={startHref}>{startLabel}</a>
+			</p>
+		)
+	}
 	<table class="corpus-index__table">
 		<thead>
 			<tr>
@@ -49,10 +59,49 @@ const countCol = countHeader ?? (isIast ? 'Mantras' : 'मन्त्राः'
 	</table>
 </div>
 
+<script>
+	import { READER_KEYS, type ResumeEntry } from '../../lib/reader-prefs';
+
+	const root = document.querySelector<HTMLElement>('[data-corpus-start]');
+	if (root) {
+		const link = root.querySelector('a');
+		try {
+			const raw = localStorage.getItem(READER_KEYS.resume);
+			if (raw && link) {
+				const resume = JSON.parse(raw) as ResumeEntry;
+				const path = new URL(resume.href, location.origin).pathname;
+				const matches = [...document.querySelectorAll<HTMLAnchorElement>('.corpus-index__table tbody a')].some(
+					(rowLink) => rowLink.pathname === path
+				);
+				if (matches) {
+					link.href = path;
+					link.textContent = root.dataset.continueLabel ?? link.textContent;
+				}
+			}
+		} catch {
+			/* ignore */
+		}
+	}
+</script>
+
 <style>
 	.corpus-index {
 		margin: 0 0 2rem;
 		overflow-x: auto;
+	}
+
+	.corpus-index__start {
+		margin: 0 0 1rem;
+	}
+
+	.corpus-index__start a {
+		display: inline-flex;
+		padding: 0.55rem 0.95rem;
+		border-radius: 0.5rem;
+		background: var(--sl-color-accent);
+		color: var(--sl-color-white);
+		text-decoration: none;
+		font-weight: 600;
 	}
 
 	.corpus-index__table {

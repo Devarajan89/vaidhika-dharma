@@ -1,0 +1,40 @@
+{
+  "id": "alakshmi-nashana-suktam",
+  "sections": [
+    {
+      "header": "५ शिरिम्बिठो भारद्वाजः। अलक्ष्मीघ्नम् , २-३ ब्रह्मणस्पतिः, ५ विश्वेदेवाः। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 155,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 155,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 155,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 155,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 155,
+          "verse": 5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "mrityu-suktam",
+  "sections": [
+    {
+      "header": "१४ संकुसुको यामायनः। १-४ मृत्युः,५ धाता, ६ त्वष्टा,७-१४ पितृमेधः,१४ प्रजापतिर्वा। त्रिष्टुप् , ११ प्रस्तारपंक्तिः, १३ जगती १४ अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 11
+        },
+        {
+          "label": 12,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 12
+        },
+        {
+          "label": 13,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 13
+        },
+        {
+          "label": 14,
+          "mandala": 10,
+          "sukta": 18,
+          "verse": 14
+        }
+      ]
+    }
+  ]
+}

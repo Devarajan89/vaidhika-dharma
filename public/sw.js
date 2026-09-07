@@ -1,5 +1,5 @@
 /* Vaidhika Dharma offline pack — nityakarma + favorite texts */
-const CACHE_NAME = 'vd-offline-v1';
+const CACHE_NAME = 'vd-offline-v2';
 const FALLBACK_URL = '/offline/';
 
 self.addEventListener('install', (event) => {
@@ -49,6 +49,28 @@ async function putInCache(request, response) {
 	await cache.put(request, response.clone());
 }
 
+self.addEventListener('message', (event) => {
+	const data = event.data;
+	if (!data || data.type !== 'CACHE_URLS' || !Array.isArray(data.urls)) return;
+	event.waitUntil(
+		(async () => {
+			const cache = await caches.open(CACHE_NAME);
+			await Promise.all(
+				data.urls.map(async (url) => {
+					try {
+						await cache.add(url);
+					} catch {
+						/* skip missing routes */
+					}
+				})
+			);
+			if (event.ports && event.ports[0]) {
+				event.ports[0].postMessage({ ok: true });
+			}
+		})()
+	);
+});
+
 self.addEventListener('fetch', (event) => {
 	const { request } = event;
 	if (request.method !== 'GET') return;
@@ -74,6 +96,7 @@ self.addEventListener('fetch', (event) => {
 
 	if (
 		url.pathname.startsWith('/fonts/') ||
+		url.pathname.startsWith('/vendor/') ||
 		url.pathname.startsWith('/images/') ||
 		url.pathname.startsWith('/_astro/') ||
 		url.pathname === '/manifest.webmanifest' ||

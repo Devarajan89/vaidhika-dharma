@@ -1,0 +1,58 @@
+{
+  "id": "kshetrapati-suktam",
+  "sections": [
+    {
+      "header": "८ वामदेवो गौतमः। १-३  क्षेत्रपतिः, ४ शुनः, ५, ८ शुनासीरौ, ६-७ सीता। अनुष्टुप्, ५ पुर उष्णिक्, २, ३, ८ त्रिष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 4,
+          "sukta": 57,
+          "verse": 8
+        }
+      ]
+    }
+  ]
+}

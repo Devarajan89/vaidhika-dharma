@@ -1,0 +1,82 @@
+{
+  "id": "mana-avartana-suktam",
+  "sections": [
+    {
+      "header": "१२ बन्धु: श्रुतबन्धुर्विप्रबन्धुर्गौपायनाः।मन आवर्तनम्। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 7
+        },
+        {
+          "label": 8,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 8
+        },
+        {
+          "label": 9,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 9
+        },
+        {
+          "label": 10,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 10
+        },
+        {
+          "label": 11,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 11
+        },
+        {
+          "label": 12,
+          "mandala": 10,
+          "sukta": 58,
+          "verse": 12
+        }
+      ]
+    }
+  ]
+}

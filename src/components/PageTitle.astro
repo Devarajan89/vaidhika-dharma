@@ -1,6 +1,9 @@
 ---
 import Breadcrumbs from './Breadcrumbs.astro';
 import DocPageNav from './DocPageNav.astro';
+import SeoIntro from './SeoIntro.astro';
+import ReaderToolbar from './ReaderToolbar.astro';
+import { resolveHomeLocale } from '../data/home';
 
 const PAGE_TITLE_ID = '_top';
 const { entry } = Astro.locals.starlightRoute;
@@ -9,7 +12,9 @@ const isSplash = entry.data.template === 'splash';
 
 <Breadcrumbs />
 <h1 id={PAGE_TITLE_ID}>{entry.data.title}</h1>
+<SeoIntro />
 {!isSplash && <DocPageNav />}
+<ReaderToolbar locale={resolveHomeLocale(Astro.locals.starlightRoute.locale)} />
 
 <style>
 	@layer starlight.core {

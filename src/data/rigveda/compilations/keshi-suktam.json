@@ -1,0 +1,52 @@
+{
+  "id": "keshi-suktam",
+  "sections": [
+    {
+      "header": "१ जूतिः, २ वातजूतिः, ३ विप्रजूतिः, ४ वृषाणकः, ५ करिक्रतः, ६ एतशः ७ ऋष्यश्रृंगः (एते वातरशना मुनयः)। केशिनः = अग्नि-सूर्य-वायवः। अनुष्टुप्।",
+      "mantras": [
+        {
+          "label": 1,
+          "mandala": 10,
+          "sukta": 136,
+          "verse": 1
+        },
+        {
+          "label": 2,
+          "mandala": 10,
+          "sukta": 136,
+          "verse": 2
+        },
+        {
+          "label": 3,
+          "mandala": 10,
+          "sukta": 136,
+          "verse": 3
+        },
+        {
+          "label": 4,
+          "mandala": 10,
+          "sukta": 136,
+          "verse": 4
+        },
+        {
+          "label": 5,
+          "mandala": 10,
+          "sukta": 136,
+          "verse": 5
+        },
+        {
+          "label": 6,
+          "mandala": 10,
+          "sukta": 136,
+          "verse": 6
+        },
+        {
+          "label": 7,
+          "mandala": 10,
+          "sukta": 136,
+          "verse": 7
+        }
+      ]
+    }
+  ]
+}

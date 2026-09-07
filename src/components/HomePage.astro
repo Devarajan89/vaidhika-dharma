@@ -3,6 +3,7 @@ import CategoryTree from './CategoryTree.astro';
 import HomeSearchHint from './HomeSearchHint.astro';
 import HomeShortcuts from './HomeShortcuts.astro';
 import HomeSidebar from './HomeSidebar.astro';
+import HomeStartHere from './HomeStartHere.astro';
 import {
 	getHomeContent,
 	getSalutation,
@@ -18,23 +19,35 @@ interface Props {
 const routeLocale = resolveHomeLocale(Astro.locals.starlightRoute.locale);
 const locale = Astro.props.locale ?? routeLocale;
 const salutation = Astro.props.salutation ?? getSalutation(locale);
-const { intro, browseHeading } = getHomeContent(locale);
+const { intro, browseHeading, browseBlurb } = getHomeContent(locale);
+const otherLocale = locale === 'iast' ? 'root' : 'iast';
+const switchHref = otherLocale === 'iast' ? '/iast/' : '/';
+const switchLabel = otherLocale === 'iast' ? 'IAST' : 'देवनागरी';
 ---
 
 <div class="main-container">
 	<div class="content-column">
 		<header class="home-header">
-			<p class="home-salutation">{salutation}</p>
+			<div class="home-header__top">
+				<p class="home-salutation">{salutation}</p>
+				<p class="home-script-switch">
+					<a href={switchHref} hreflang={otherLocale === 'iast' ? 'sa-Latn' : 'sa-Deva'}>
+						{switchLabel}
+					</a>
+				</p>
+			</div>
 			<div class="home-intro">
 				<p>{intro}</p>
 				<HomeSearchHint locale={locale} />
 			</div>
 		</header>
 
+		<HomeStartHere locale={locale} />
 		<HomeShortcuts locale={locale} />
 
 		<section class="home-browse" aria-labelledby="home-browse-heading">
 			<h2 id="home-browse-heading" class="home-browse__heading">{browseHeading}</h2>
+			<p class="home-browse__blurb">{browseBlurb}</p>
 			<CategoryTree locale={locale} />
 		</section>
 	</div>
