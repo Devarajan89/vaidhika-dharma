@@ -1,6 +1,6 @@
 import { INDIC_SCRIPTS, type IndicScriptId } from '../data/indic-scripts';
 import { devanagariToGrantha } from './devanagari-to-grantha';
-import { getInditrans, transliterateDevanagariRuns } from './inditrans-browser';
+import { getInditrans, toAsciiDigits, transliterateDevanagariRuns } from './inditrans-browser';
 
 const ROOT_SELECTORS = '.veda-corpus__body, .ritual-page-shell__content, .sl-markdown-content';
 const SKIP_CLOSEST =
@@ -60,7 +60,7 @@ export async function applyIndicScript(scriptId: IndicScriptId) {
 		if (option.engine === 'grantha') {
 			for (const root of roots) {
 				walkTextNodes(root, (node) => {
-					node.nodeValue = devanagariToGrantha(node.nodeValue ?? '');
+					node.nodeValue = toAsciiDigits(devanagariToGrantha(node.nodeValue ?? ''));
 				});
 			}
 			return;

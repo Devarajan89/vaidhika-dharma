@@ -17,8 +17,10 @@ if (!prev && !next && !up && !index && !start) {
 const isIast = locale === 'iast';
 const prevDir = isIast ? 'Previous' : 'पूर्व';
 const nextDir = isIast ? 'Next' : 'अग्रिम';
-const seqLabel = isIast ? 'Sequence' : 'क्रमः';
-const shortcutHint = isIast ? 'n / p' : 'n / p';
+const seqPrev = 'Previous';
+const seqNext = 'Next';
+const seqLabel = 'Sequence';
+const shortcutHint = 'n / p';
 ---
 
 <nav class="samhita-page-nav" aria-label={isIast ? 'Saṃhitā navigation' : 'संहिता नेविगेशन'}>
@@ -75,12 +77,12 @@ const shortcutHint = isIast ? 'n / p' : 'n / p';
 	(prev || next || progress) && (
 		<nav class="corpus-seq-bar" aria-label={seqLabel} data-corpus-seq>
 			{prev ? (
-				<a class="corpus-seq-bar__btn" href={prev.href} data-seq="prev" aria-label={`${prevDir}: ${prev.label}`}>
-					← {prevDir}
+				<a class="corpus-seq-bar__btn" href={prev.href} data-seq="prev" aria-label={`${seqPrev}: ${prev.label}`}>
+					← {seqPrev}
 				</a>
 			) : (
 				<span class="corpus-seq-bar__btn is-disabled" aria-hidden="true">
-					← {prevDir}
+					← {seqPrev}
 				</span>
 			)}
 			<span class="corpus-seq-bar__progress">
@@ -89,12 +91,12 @@ const shortcutHint = isIast ? 'n / p' : 'n / p';
 					: shortcutHint}
 			</span>
 			{next ? (
-				<a class="corpus-seq-bar__btn corpus-seq-bar__btn--next" href={next.href} data-seq="next" aria-label={`${nextDir}: ${next.label}`}>
-					{nextDir} →
+				<a class="corpus-seq-bar__btn corpus-seq-bar__btn--next" href={next.href} data-seq="next" aria-label={`${seqNext}: ${next.label}`}>
+					{seqNext} →
 				</a>
 			) : (
 				<span class="corpus-seq-bar__btn is-disabled" aria-hidden="true">
-					{nextDir} →
+					{seqNext} →
 				</span>
 			)}
 		</nav>

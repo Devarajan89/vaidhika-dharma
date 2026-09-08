@@ -1,4 +1,5 @@
 import type { HomeLocale } from './home';
+import { getCorpusSeoIntro } from '../lib/corpus-seo';
 import { SEARCH_SYNONYMS } from './search-synonyms';
 
 export interface PageSeoCopy {
@@ -16,10 +17,10 @@ function pageKey(slug: string): string {
 const PAGE_SEO: Record<string, PageSeoCopy> = {
 	'aswalayana-sandhyavandanam/prata': {
 		description:
-			'Aśvalāyana prātaḥ sandhyāvandanam (morning sandhya, Gayatri) with Vedic svara — Vaidhika Dharma.',
+			'Aśvalāyana prātaḥ sandhyāvandanam (morning sandhya, Gayatri japa) with Vedic svara — step-by-step — Vaidhika Dharma.',
 		intro: {
-			root: 'Āśvalāyana morning sandhyāvandanam (prātaḥ sandhyā, Gāyatrī japa) with svara. Also spelled aswalayana / ashvalayana sandhyavandanam.',
-			iast: 'Āśvalāyana morning sandhyāvandanam (prātaḥ sandhyā, Gāyatrī japa) with Vedic svara. Common searches: aswalayana sandhya, ashvalayana sandhyavandanam.',
+			root: 'Āśvalāyana morning sandhyāvandanam (prātaḥ sandhyā, Gāyatrī japa) with svara. Also spelled aswalayana / ashvalayana sandhyavandanam. Midday and evening sandhyā linked below.',
+			iast: 'Āśvalāyana morning sandhyāvandanam (prātaḥ sandhyā, Gāyatrī japa) with Vedic svara. Common searches: aswalayana sandhya, ashvalayana sandhyavandanam, gayatri.',
 		},
 	},
 	'aswalayana-sandhyavandanam/madhyahnika': {
@@ -40,10 +41,10 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 	},
 	'apastamba-sandhyavandanam/prata': {
 		description:
-			'Āpastamba prātaḥ sandhyāvandanam (morning sandhya, Gayatri) with Vedic svara — Vaidhika Dharma.',
+			'Āpastamba prātaḥ sandhyāvandanam (morning sandhya, Gayatri) Krishna Yajurveda tradition with Vedic svara — Vaidhika Dharma.',
 		intro: {
-			root: 'Āpastamba morning sandhyāvandanam (prātaḥ sandhyā) with svara. Search terms: apastamba sandhya, āpastamba sandhyavandanam.',
-			iast: 'Āpastamba morning sandhyāvandanam (prātaḥ sandhyā, Gāyatrī) with Vedic svara.',
+			root: 'Āpastamba morning sandhyāvandanam (prātaḥ sandhyā) with svara. Search terms: apastamba sandhya, āpastamba sandhyavandanam. Compare Aśvalāyana sandhyā if your śākhā differs.',
+			iast: 'Āpastamba morning sandhyāvandanam (prātaḥ sandhyā, Gāyatrī) with Vedic svara. For Ṛgveda tradition see Aśvalāyana sandhyā.',
 		},
 	},
 	'apastamba-sandhyavandanam/madhyahnika': {
@@ -96,33 +97,34 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 	},
 	'sri-rudra-prashnah': {
 		description:
-			'Śrī Rudra Praśnaḥ (Namakam, Rudram, Rudraprashna) from the Yajurveda with Vedic svara — Vaidhika Dharma.',
+			'Śrī Rudra Praśnaḥ (Namakam, Rudram, Rudraprashna, Sri Rudram) Yajurveda text with Vedic svara — free online — Vaidhika Dharma.',
 		intro: {
-			root: 'Śrī Rudra Praśnaḥ — Namakam / Rudram / Rudraprashna with svara. Also searched as rudram, śrīrudram.',
-			iast: 'Śrī Rudra Praśnaḥ (Namakam, Rudram, Rudraprashna) with Vedic svara from the Yajurveda.',
+			root: 'Śrī Rudra Praśnaḥ — Namakam / Rudram / Rudraprashna with svara. Also searched as rudram, śrīrudram, namakam. Related: Laghunyāsa, Chamakam.',
+			iast: 'Śrī Rudra Praśnaḥ (Namakam, Rudram, Rudraprashna) with Vedic svara from the Yajurveda. Also called Sri Rudram. See Laghunyāsa and Chamakam.',
 		},
 	},
 	'sri-rudra-laghunyasa': {
 		description:
-			'Śrī Rudra Laghunyāsaḥ (laghu nyasa, rudra nyasa) with Vedic svara — Vaidhika Dharma.',
+			'Śrī Rudra Laghunyāsaḥ (laghu nyasa, rudra nyasa) recited before Rudram, with Vedic svara — Vaidhika Dharma.',
 		intro: {
-			root: 'Śrī Rudra Laghunyāsaḥ (laghunyasa, rudra nyāsa) recited before Rudram.',
+			root: 'Śrī Rudra Laghunyāsaḥ (laghunyasa, rudra nyāsa) recited before Rudram. Continue to Śrī Rudra Praśnaḥ / Namakam.',
 			iast: 'Śrī Rudra Laghunyāsaḥ (laghu nyāsa, rudra nyāsa) recited before Rudram, with Vedic svara.',
 		},
 	},
 	chamakam: {
-		description: 'Chamakam (Camakam) from the Yajurveda with Vedic svara — Vaidhika Dharma.',
+		description:
+			'Chamakam (Camakam) Yajurveda text after Rudram / Namakam, with Vedic svara — free online — Vaidhika Dharma.',
 		intro: {
-			root: 'Chamakam (Camakam) follows Namakam in Śrī Rudra recitation, with svara.',
+			root: 'Chamakam (Camakam) follows Namakam in Śrī Rudra recitation, with svara. Pair with Rudram and Laghunyāsa.',
 			iast: 'Chamakam (Camakam) follows Namakam in the Śrī Rudra recitation, with Vedic svara.',
 		},
 	},
 	'purusha-suktam': {
 		description:
-			'Puruṣa Sūktam (Purusha Sukta, Purusa Suktam) with Vedic svara — Vaidhika Dharma.',
+			'Puruṣa Sūktam (Purusha Sukta, Purusa Suktam) with Vedic svara — free online chant text — Vaidhika Dharma.',
 		intro: {
-			root: 'Puruṣa Sūktam (Purusha Sukta) with svara. Ṛgveda compilation: Puruṣa Sūktam (Ṛgveda).',
-			iast: 'Puruṣa Sūktam (Purusha Sukta, Purusa Suktam) with Vedic svara. See also the Ṛgveda compilation page.',
+			root: 'Puruṣa Sūktam (Purusha Sukta) with svara. Also see the Ṛgveda compilation (RV 10.90) and Nārāyaṇa / Śrī sūktas.',
+			iast: 'Puruṣa Sūktam (Purusha Sukta, Purusa Suktam) with Vedic svara. See also the Ṛgveda compilation page (RV 10.90).',
 		},
 	},
 	'sri-suktam': {
@@ -162,10 +164,10 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 	},
 	'ganapathy-atharvasirsham': {
 		description:
-			'Gaṇapati Atharvaśīrṣam (Ganesha Atharvashirsha, Atharvasirsha) with Vedic svara — Vaidhika Dharma.',
+			'Gaṇapati Atharvaśīrṣam (Ganesha Atharvashirsha, Ganapati Atharvasirsha) with Vedic svara — free online — Vaidhika Dharma.',
 		intro: {
-			root: 'Gaṇapati Atharvaśīrṣam (Ganesha Atharvashirsha, Atharvasirsha) with svara.',
-			iast: 'Gaṇapati Atharvaśīrṣam (Ganesha Atharvashirsha, Atharvasirsha) with Vedic svara.',
+			root: 'Gaṇapati Atharvaśīrṣam (Ganesha Atharvashirsha, Atharvasirsha) with svara. Also see Gaṇapati Sūktam from the Ṛgveda.',
+			iast: 'Gaṇapati Atharvaśīrṣam (Ganesha Atharvashirsha, Atharvasirsha) with Vedic svara. Related: Gaṇapati Sūktam.',
 		},
 	},
 	'pancha-rudram': {
@@ -318,10 +320,10 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 	},
 	'nasadiya-suktam': {
 		description:
-			'Nāsadīya Sūktam (Nasadiya Suktam, Rigveda creation hymn 10.129) with Vedic svara — Vaidhika Dharma.',
+			'Nāsadīya Sūktam (Nasadiya Sukta, Rigveda 10.129 creation hymn) with Vedic svara — free online — Vaidhika Dharma.',
 		intro: {
-			root: 'Nāsadīya Sūktam (Nasadiya Suktam, Ṛgveda 10.129 creation hymn) with svara.',
-			iast: 'Nāsadīya Sūktam (Nasadiya Suktam, Ṛgveda 10.129 creation hymn) with Vedic svara.',
+			root: 'Nāsadīya Sūktam (Nasadiya Suktam, Ṛgveda 10.129 creation hymn) with svara. Saṃhitā page: RV 10.129.',
+			iast: 'Nāsadīya Sūktam (Nasadiya Suktam, Ṛgveda 10.129 creation hymn) with Vedic svara. Open RV 10.129 in the Śākala Saṃhitā for the source hymn.',
 		},
 	},
 	'medha-suktam-rig': {
@@ -361,10 +363,10 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 	},
 	'rigveda-samhita': {
 		description:
-			'Ṛgveda Śākala Saṃhitā (Rigveda, Rgveda) with Vedic svara, maṇḍala and sūkta index — Vaidhika Dharma.',
+			'Ṛgveda Śākala Saṃhitā (Rigveda, Rgveda) with Vedic svara — browse maṇḍala and sūkta; search RV 1.1.1 — Vaidhika Dharma.',
 		intro: {
-			root: 'Ṛgveda Śākala Saṃhitā (Rigveda, Rgveda) with svara — browse maṇḍalas and sūktas.',
-			iast: 'Ṛgveda Śākala Saṃhitā (Rigveda, Rgveda) with Vedic svara — browse maṇḍalas and sūktas.',
+			root: 'Ṛgveda Śākala Saṃhitā (Rigveda, Rgveda) with svara — browse maṇḍalas and sūktas. Tip: search RV 10.90.1 or RV 1.1.1.',
+			iast: 'Ṛgveda Śākala Saṃhitā (Rigveda, Rgveda) with Vedic svara — browse maṇḍalas and sūktas. Tip: search RV 10.90.1 or RV 1.1.1.',
 		},
 	},
 	'kanva-samhita': {
@@ -385,10 +387,10 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 	},
 	'taittiriya-samhita': {
 		description:
-			'Taittirīya Saṃhitā (Krishna Yajurveda, Taittiriya Samhita) with Vedic svara — Vaidhika Dharma.',
+			'Taittirīya Saṃhitā (Krishna Yajurveda, Taittiriya Samhita) with Vedic svara — search TS 1.1.1 — Vaidhika Dharma.',
 		intro: {
-			root: 'Taittirīya Saṃhitā (Kṛṣṇa Yajurveda, Taittiriya) with svara — kāṇḍa and prapāṭhaka index.',
-			iast: 'Taittirīya Saṃhitā (Kṛṣṇa Yajurveda, Taittiriya Samhita) with Vedic svara.',
+			root: 'Taittirīya Saṃhitā (Kṛṣṇa Yajurveda, Taittiriya) with svara — kāṇḍa and prapāṭhaka index. Tip: search TS 1.1.1. Related: Śrī Rudram.',
+			iast: 'Taittirīya Saṃhitā (Kṛṣṇa Yajurveda, Taittiriya Samhita) with Vedic svara. Tip: search TS 1.1.1. Related: Śrī Rudra Praśnaḥ.',
 		},
 	},
 	'maitrayani-samhita': {
@@ -428,10 +430,11 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 		},
 	},
 	'isha-upanishad': {
-		description: 'Īśāvāsyopaniṣad (Isha Upanishad, Isavasya) with Vedic svara — Vaidhika Dharma.',
+		description:
+			'Īśāvāsyopaniṣad (Isha Upanishad, Isavasya Upanishad) with Vedic svara — free Sanskrit text — Vaidhika Dharma.',
 		intro: {
-			root: 'Īśāvāsyopaniṣad (Isha / Isavasya Upanishad) with svara.',
-			iast: 'Īśāvāsyopaniṣad (Isha Upanishad, Īśāvāsya) with Vedic svara.',
+			root: 'Īśāvāsyopaniṣad (Isha / Isavasya Upanishad) with svara. Browse other principal upaniṣads from the related links.',
+			iast: 'Īśāvāsyopaniṣad (Isha Upanishad, Īśāvāsya) with Vedic svara. Related: Kena, Kaṭha, and other upaniṣads.',
 		},
 	},
 	'kena-upanishad': {
@@ -478,10 +481,10 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 	},
 	search: {
 		description:
-			'Search Vaidhika Dharma for Vedic mantras, sandhyāvandanam, sūktas, saṃhitās, and upaniṣads.',
+			'Search Vaidhika Dharma for Vedic mantras, sandhyāvandanam, Rudram, sūktas, saṃhitās (RV / TS), and upaniṣads.',
 		intro: {
-			root: 'Search mantras and rituals by common names (rudram, sandhyā, puruṣa, ganapati). Results are ordinary links Google can crawl.',
-			iast: 'Search mantras and rituals by common names (rudram, sandhyā, puruṣa, ganapati). Results are ordinary links Google can crawl.',
+			root: 'Search mantras and rituals by common names (rudram, sandhyā, puruṣa, ganapati) or citations (RV 10.90.1, TS 1.1.1). Results are ordinary links Google can crawl.',
+			iast: 'Search mantras and rituals by common names (rudram, sandhyā, puruṣa, ganapati) or citations (RV 10.90.1, TS 1.1.1). Results are ordinary links Google can crawl.',
 		},
 	},
 };
@@ -518,8 +521,9 @@ export function getUniqueSeoDescription(slug: string): string | null {
 	return getPageSeoCopy(slug)?.description ?? null;
 }
 
-export function getSeoIntro(slug: string, locale: HomeLocale): string | null {
+export function getSeoIntro(slug: string, locale: HomeLocale, pageTitle?: string): string | null {
 	const copy = getPageSeoCopy(slug);
-	if (!copy) return null;
-	return copy.intro[locale];
+	if (copy) return copy.intro[locale];
+	if (pageTitle) return getCorpusSeoIntro(slug, pageTitle, locale);
+	return getCorpusSeoIntro(slug, '', locale);
 }

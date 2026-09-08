@@ -1,4 +1,5 @@
 import { getUniqueSeoDescription } from '../data/seo-page-copy';
+import { getCorpusOgAlt, getCorpusSeoDescription } from './corpus-seo';
 
 export const SITE_ORIGIN = 'https://vaidhikadharma.org';
 export const OG_IMAGE_PATH = '/images/og-default.jpg';
@@ -25,6 +26,7 @@ export interface SeoHeadState {
 	isHome: boolean;
 	noindex: boolean;
 	documentTitle?: string;
+	ogImageAlt?: string;
 }
 
 const GENERIC_DESCRIPTION =
@@ -129,6 +131,9 @@ export function buildSeoDescription(
 	const unique = getUniqueSeoDescription(slug);
 	if (unique) return truncateMeta(unique);
 
+	const corpus = getCorpusSeoDescription(slug, title, isIast);
+	if (corpus) return truncateMeta(corpus);
+
 	const script = isIast
 		? 'IAST transliteration with Vedic svara'
 		: 'Devanagari with Vedic svara';
@@ -144,6 +149,18 @@ export function buildSeoDescription(
 		parts.push(seriesName);
 	}
 	return truncateMeta(`${parts.join(' — ')}. ${script}.`);
+}
+
+export function buildOgImageAlt(
+	slug: string,
+	title: string,
+	isIast: boolean,
+	documentTitle?: string
+): string {
+	const corpusAlt = getCorpusOgAlt(slug, title, isIast);
+	if (corpusAlt) return `${corpusAlt} — Vedic mantras with svara`;
+	const label = documentTitle ?? title;
+	return `${label} — Vaidhika Dharma`;
 }
 
 function titleAlreadyHasSeries(title: string, series: string): boolean {
@@ -225,11 +242,17 @@ export function applySeoHead(state: SeoHeadState): void {
 	upsertMeta(head, 'property', 'og:image:type', 'image/jpeg');
 	upsertMeta(head, 'property', 'og:image:width', String(OG_IMAGE_WIDTH));
 	upsertMeta(head, 'property', 'og:image:height', String(OG_IMAGE_HEIGHT));
-	upsertMeta(head, 'property', 'og:image:alt', 'Vaidhika Dharma — Vedic mantras and nityakarma');
+	upsertMeta(
+		head,
+		'property',
+		'og:image:alt',
+		state.ogImageAlt ?? 'Vaidhika Dharma — Vedic mantras and nityakarma'
+	);
 	upsertMeta(head, 'name', 'twitter:card', 'summary_large_image');
 	upsertMeta(head, 'name', 'twitter:title', documentTitle);
 	upsertMeta(head, 'name', 'twitter:description', description);
 	upsertMeta(head, 'name', 'twitter:image', image);
+	upsertMeta(head, 'name', 'twitter:image:alt', state.ogImageAlt ?? documentTitle);
 	upsertMeta(head, 'name', 'robots', robots);
 	upsertMeta(head, 'name', 'googlebot', robots);
 

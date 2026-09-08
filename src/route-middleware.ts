@@ -2,6 +2,7 @@ import { defineRouteMiddleware } from '@astrojs/starlight/route-data';
 import {
 	applySeoHead,
 	buildDocumentTitle,
+	buildOgImageAlt,
 	buildSeoDescription,
 	isHomeSlug,
 	isIastSlug,
@@ -52,5 +53,6 @@ export const onRequest = defineRouteMiddleware((context) => {
 		lastUpdated: route.lastUpdated,
 		isHome: isHomeSlug(slug),
 		noindex: isNoIndexSlug(slug),
+		ogImageAlt: buildOgImageAlt(slug, route.entry.data.title, isIast, documentTitle),
 	});
 });

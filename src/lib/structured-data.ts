@@ -10,6 +10,7 @@ import {
 	slugPath,
 } from './seo';
 import { sangrahaSegmentLabels } from '../data/sangraha';
+import { buildFaqJsonLd, getPageFaq, getSandhyaHowTo } from '../data/seo-faq';
 
 export interface StructuredDataInput {
 	title: string;
@@ -309,6 +310,19 @@ export function buildPageJsonLd(input: StructuredDataInput): Record<string, unkn
 		creativeWork['@id'] = `${input.canonicalUrl}#creativework`;
 		webPage.mainEntity = { '@id': `${input.canonicalUrl}#creativework` };
 		graph.push(creativeWork);
+	}
+
+	const faqItems = getPageFaq(input.slug);
+	if (faqItems?.length) {
+		const faq = buildFaqJsonLd(faqItems);
+		faq['@id'] = `${input.canonicalUrl}#faq`;
+		graph.push(faq);
+	}
+
+	const howTo = getSandhyaHowTo(input.slug, input.canonicalUrl);
+	if (howTo) {
+		howTo['@id'] = `${input.canonicalUrl}#howto`;
+		graph.push(howTo);
 	}
 
 	return {

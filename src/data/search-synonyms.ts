@@ -31,37 +31,47 @@ const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 		href: { root: '/ganapathy-atharvasirsham/', iast: '/iast/ganapathy-atharvasirsham/' },
 	},
 	{
-		aliases: ['rudram', 'rudra', 'rudraprashna', 'rudra prashna', 'namakam', 'श्रीरुद्र', 'रुद्रम्'],
+		aliases: ['rudram', 'rudra', 'rudraprashna', 'rudra prashna', 'namakam', 'sri rudram', 'shri rudram', 'श्रीरुद्र', 'रुद्रम्', 'नमकाम्'],
 		query: 'rudra',
 		label: { root: 'श्री रुद्र प्रश्नः', iast: 'Śrī Rudra Praśnaḥ' },
 		href: { root: '/sri-rudra-prashnah/', iast: '/iast/sri-rudra-prashnah/' },
 	},
 	{
-		aliases: ['chamakam', 'chamaka', 'चमकम्'],
+		aliases: ['chamakam', 'chamaka', 'camakam', 'चमकम्', 'चमक'],
 		query: 'chamakam',
 		label: { root: 'चमकम्', iast: 'Chamakam' },
 		href: { root: '/chamakam/', iast: '/iast/chamakam/' },
 	},
 	{
-		aliases: ['purusha', 'purushasuktam', 'purusa', 'पुरुषसूक्त'],
+		aliases: ['purusha', 'purushasuktam', 'purusa', 'purusha sukta', 'पुरुषसूक्त', 'पुरुष सूक्त'],
 		query: 'purusha',
 		label: { root: 'पुरुष सूक्तम्', iast: 'Puruṣa Sūktam' },
 		href: { root: '/purusha-suktam/', iast: '/iast/purusha-suktam/' },
 	},
 	{
-		aliases: ['srisuktam', 'sri suktam', 'shrisuktam', 'श्रीसूक्त'],
+		aliases: ['srisuktam', 'sri suktam', 'shrisuktam', 'shri suktam', 'श्रीसूक्त', 'श्री सूक्त'],
 		query: 'sri suktam',
 		label: { root: 'श्री सूक्तम्', iast: 'Śrī Sūktam' },
 		href: { root: '/sri-suktam/', iast: '/iast/sri-suktam/' },
 	},
 	{
-		aliases: ['narayana', 'narayanasuktam', 'नारायणसूक्त'],
+		aliases: ['narayana', 'narayanasuktam', 'narayana suktam', 'नारायणसूक्त', 'नारायण सूक्त'],
 		query: 'narayana',
 		label: { root: 'नारायण सूक्तम्', iast: 'Nārāyaṇa Sūktam' },
 		href: { root: '/narayana-suktam/', iast: '/iast/narayana-suktam/' },
 	},
 	{
-		aliases: ['sandhya', 'sandhyavandanam', 'sandhyavandana', 'सन्ध्या', 'सन्ध्यावन्दनम्'],
+		aliases: [
+			'sandhya',
+			'sandhyavandanam',
+			'sandhyavandana',
+			'sandhya vandanam',
+			'sandyavandanam',
+			'morning sandhya',
+			'सन्ध्या',
+			'सन्ध्यावन्दनम्',
+			'संध्या',
+		],
 		query: 'sandhya',
 		label: { root: 'आश्वलायन प्रातः सन्ध्या', iast: 'Aśvalāyana prātaḥ sandhyā' },
 		href: {
@@ -70,7 +80,7 @@ const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 		},
 	},
 	{
-		aliases: ['gayatri', 'gayathri', 'गायत्री'],
+		aliases: ['gayatri', 'gayathri', 'gayatri mantra', 'gayatri japam', 'गायत्री', 'गायत्रीमन्त्र'],
 		query: 'gayatri',
 		label: { root: 'आश्वलायन प्रातः सन्ध्या', iast: 'Aśvalāyana prātaḥ sandhyā' },
 		href: {
@@ -79,25 +89,25 @@ const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 		},
 	},
 	{
-		aliases: ['brahmayajna', 'brahmayagyam', 'ब्रह्मयज्ञ'],
+		aliases: ['brahmayajna', 'brahmayagyam', 'brahma yajna', 'brahmayagna', 'ब्रह्मयज्ञ'],
 		query: 'brahmayaj',
 		label: { root: 'आश्वलायन ब्रह्मयज्ञम्', iast: 'Aśvalāyana brahmayajñam' },
 		href: { root: '/aswalayana-brahmayagyam/', iast: '/iast/aswalayana-brahmayagyam/' },
 	},
 	{
-		aliases: ['samidadhanam', 'samidhadhana', 'समिदाधान'],
+		aliases: ['samidadhanam', 'samidhadhana', 'samidha dhanam', 'समिदाधान', 'समिधाधान'],
 		query: 'samidadhanam',
 		label: { root: 'आश्वलायन समिदाधानम्', iast: 'Aśvalāyana samidādhānam' },
 		href: { root: '/aswalayana-samidadhanam/', iast: '/iast/aswalayana-samidadhanam/' },
 	},
 	{
-		aliases: ['rigveda', 'rgveda', 'rik', 'ऋग्वेद'],
+		aliases: ['rigveda', 'rgveda', 'rik', 'rig ved', 'rig-veda', 'ऋग्वेद'],
 		query: 'rigveda',
 		label: { root: 'ऋग्वेद संहिता', iast: 'Ṛgveda Saṃhitā' },
 		href: { root: '/rigveda-samhita/', iast: '/iast/rigveda-samhita/' },
 	},
 	{
-		aliases: ['isha', 'isavasya', 'ishavasya', 'ईश', 'ईशावास्य'],
+		aliases: ['isha', 'isavasya', 'ishavasya', 'isa upanishad', 'isha upanishad', 'ईश', 'ईशावास्य'],
 		query: 'isha',
 		label: { root: 'ईशावास्योपनिषद्', iast: 'Īśāvāsyopaniṣad' },
 		href: { root: '/isha-upanishad/', iast: '/iast/isha-upanishad/' },
@@ -219,7 +229,7 @@ const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 		href: { root: '/aitareya-upanishad/', iast: '/iast/aitareya-upanishad/' },
 	},
 	{
-		aliases: ['aswalayana', 'asvalayana', 'ashvalayana', 'आश्वलायन'],
+		aliases: ['aswalayana', 'asvalayana', 'ashvalayana', 'ashwalayana', 'aswalayan', 'आश्वलायन'],
 		query: 'aswalayana',
 		label: { root: 'आश्वलायन प्रातः सन्ध्या', iast: 'Aśvalāyana prātaḥ sandhyā' },
 		href: {
@@ -228,13 +238,43 @@ const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 		},
 	},
 	{
-		aliases: ['apastamba', 'apastamba sandhya', 'आपस्तम्ब'],
+		aliases: ['apastamba', 'apastamba sandhya', 'aapastamba', 'आपस्तम्ब'],
 		query: 'apastamba',
 		label: { root: 'आपस्तम्ब प्रातः सन्ध्या', iast: 'Āpastamba prātaḥ sandhyā' },
 		href: {
 			root: '/apastamba-sandhyavandanam/prata/',
 			iast: '/iast/apastamba-sandhyavandanam/prata/',
 		},
+	},
+	{
+		aliases: ['agni suktam', 'agnisuktam', 'agni sukta', 'अग्निसूक्त', 'अग्नि सूक्त'],
+		query: 'agni suktam',
+		label: { root: 'अग्निसूक्तम्', iast: 'Agni Sūktam' },
+		href: { root: '/agni-suktam/', iast: '/iast/agni-suktam/' },
+	},
+	{
+		aliases: ['hiranyagarbha', 'hiranyagarbha suktam', 'हिरण्यगर्भ'],
+		query: 'hiranyagarbha',
+		label: { root: 'हिरण्यगर्भ सूक्तम्', iast: 'Hiraṇyagarbha Sūktam' },
+		href: { root: '/hiranyagarbha-suktam/', iast: '/iast/hiranyagarbha-suktam/' },
+	},
+	{
+		aliases: ['devi suktam', 'devisuktam', 'vak suktam', 'ambhrini', 'देवीसूक्त', 'वाक्सूक्त'],
+		query: 'devi suktam',
+		label: { root: 'देवी सूक्तम्', iast: 'Devī Sūktam' },
+		href: { root: '/devi-suktam/', iast: '/iast/devi-suktam/' },
+	},
+	{
+		aliases: ['maitrayani', 'maitrayaniya', 'maitrayani samhita', 'मैत्रायणी'],
+		query: 'maitrayani',
+		label: { root: 'मैत्रायणी संहिता', iast: 'Maitrāyaṇī Saṃhitā' },
+		href: { root: '/maitrayani-samhita/', iast: '/iast/maitrayani-samhita/' },
+	},
+	{
+		aliases: ['upanishad', 'upanishads', 'upanishads list', 'उपनिषद्', 'उपनिषदः'],
+		query: 'upanishad',
+		label: { root: 'ईशावास्योपनिषद्', iast: 'Īśāvāsyopaniṣad' },
+		href: { root: '/isha-upanishad/', iast: '/iast/isha-upanishad/' },
 	},
 ];
 
@@ -279,9 +319,20 @@ export const SEARCH_FEATURED_HINTS: Array<{
 		href: { root: '/chamakam/', iast: '/iast/chamakam/' },
 	},
 	{
-		alias: 'isha',
-		label: { root: 'ईशावास्योपनिषद्', iast: 'īśāvāsya' },
-		href: { root: '/isha-upanishad/', iast: '/iast/isha-upanishad/' },
+		alias: 'gayatri',
+		label: { root: 'गायत्री → सन्ध्या', iast: 'gāyatrī → sandhyā' },
+		href: {
+			root: '/aswalayana-sandhyavandanam/prata/',
+			iast: '/iast/aswalayana-sandhyavandanam/prata/',
+		},
+	},
+	{
+		alias: 'RV 10.90.1',
+		label: { root: 'RV 10.90.1', iast: 'RV 10.90.1' },
+		href: {
+			root: '/rigveda-samhita/mandala-10/sukta-90/#mantra-1',
+			iast: '/iast/rigveda-samhita/mandala-10/sukta-90/#mantra-1',
+		},
 	},
 ];
 

@@ -3,6 +3,7 @@ import Default from '@astrojs/starlight/components/Head.astro';
 import { buildPageJsonLd, getSeriesName, getSeriesTitle } from '../lib/structured-data';
 import {
 	buildDocumentTitle,
+	buildOgImageAlt,
 	buildSeoDescription,
 	isIastSlug,
 	ogImageUrl,
@@ -25,6 +26,7 @@ const description = buildSeoDescription(
 );
 const inLanguage = isIast ? 'sa-Latn' : 'sa-Deva';
 const image = ogImageUrl(site.href);
+const ogImageAlt = buildOgImageAlt(slug, entry.data.title, isIast, title);
 
 const jsonLd = buildPageJsonLd({
 	title,
@@ -46,6 +48,7 @@ const jsonLd = buildPageJsonLd({
 <meta name="apple-mobile-web-app-title" content="Vaidhika Dharma" />
 <link rel="apple-touch-icon" href="/images/logo-512.png" />
 <link rel="image_src" href={image} />
+<meta property="og:image:alt" content={ogImageAlt} />
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLFCLRJNG3" is:inline></script>
 <script is:inline>

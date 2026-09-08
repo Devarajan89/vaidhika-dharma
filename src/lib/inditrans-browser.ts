@@ -68,22 +68,42 @@ export async function getInditrans(): Promise<InditransBrowser> {
 	return loading;
 }
 
+/** Keep Western digits; never map ०–९ (or other Indic digits) into the target script. */
+const INDIC_DIGIT = /[\u0966-\u096F\u09E6-\u09EF\u0AE6-\u0AEF\u0B66-\u0B6F\u0BE6-\u0BEF\u0C66-\u0C6F\u0CE6-\u0CEF\u0D66-\u0D6F]/g;
+
+export function toAsciiDigits(text: string): string {
+	return text.replace(INDIC_DIGIT, (ch) => {
+		const cp = ch.codePointAt(0)!;
+		if (cp >= 0x0966 && cp <= 0x096f) return String(cp - 0x0966);
+		if (cp >= 0x09e6 && cp <= 0x09ef) return String(cp - 0x09e6);
+		if (cp >= 0x0ae6 && cp <= 0x0aef) return String(cp - 0x0ae6);
+		if (cp >= 0x0b66 && cp <= 0x0b6f) return String(cp - 0x0b66);
+		if (cp >= 0x0be6 && cp <= 0x0bef) return String(cp - 0x0be6);
+		if (cp >= 0x0c66 && cp <= 0x0c6f) return String(cp - 0x0c66);
+		if (cp >= 0x0ce6 && cp <= 0x0cef) return String(cp - 0x0ce6);
+		if (cp >= 0x0d66 && cp <= 0x0d6f) return String(cp - 0x0d66);
+		return ch;
+	});
+}
+
 export function transliterateDevanagariRuns(
 	engineInstance: InditransBrowser,
 	text: string,
 	to: string
 ): string {
 	const options = to === 'tamil' ? TAMIL_SUPERSCRIPT : 0;
+	// Digits stay ASCII so inditrans / Aksharamukha-style mapping cannot rewrite them.
+	const source = toAsciiDigits(text);
 	const pattern = /[\u0900-\u097F\u1CD0-\u1CFF\uA8E0-\uA8FF]+/g;
 	let cursor = 0;
 	let out = '';
-	for (const match of text.matchAll(pattern)) {
-		out += text.slice(cursor, match.index);
+	for (const match of source.matchAll(pattern)) {
+		out += source.slice(cursor, match.index);
 		const run = match[0];
 		for (let i = 0; i < run.length; i += CHUNK) {
 			out += engineInstance.transliterate(run.slice(i, i + CHUNK), 'devanagari', to, options);
 		}
 		cursor = (match.index ?? 0) + run.length;
 	}
-	return out + text.slice(cursor);
+	return toAsciiDigits(out + source.slice(cursor));
 }

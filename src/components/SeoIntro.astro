@@ -6,7 +6,7 @@ import { resolveHomeLocale } from '../data/home';
 const { entry } = Astro.locals.starlightRoute;
 const slug = String(entry.data.slug ?? entry.id);
 const locale = resolveHomeLocale(Astro.locals.starlightRoute.locale);
-const intro = getSeoIntro(slug, locale);
+const intro = getSeoIntro(slug, locale, entry.data.title);
 const onSearchPage = /\/search\/?$/.test(Astro.url.pathname);
 
 if (
