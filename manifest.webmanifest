@@ -1,0 +1,25 @@
+{
+  "name": "Vaidhika Dharma",
+  "short_name": "Vaidhika",
+  "description": "Vedic nityakarma, mantras, and saṃhitās — available offline for daily practice.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fff5e5",
+  "theme_color": "#cb0003",
+  "lang": "sa",
+  "icons": [
+    {
+      "src": "/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
