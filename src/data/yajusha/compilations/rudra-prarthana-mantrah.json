@@ -1,0 +1,17 @@
+{
+  "id": "rudra-prarthana-mantrah",
+  "sections": [
+    {
+      "header": "नमस्ते रुद्र मन्यवे",
+      "blocks": [
+        {
+          "ts": {
+            "kanda": 4,
+            "prapathaka": 5,
+            "anuvaka": 1
+          }
+        }
+      ]
+    }
+  ]
+}

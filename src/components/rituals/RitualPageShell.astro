@@ -1,5 +1,6 @@
 ---
 import type { HomeLocale } from '../../data/home';
+import { getUiCopy } from '../../data/ui-copy';
 
 interface Props {
 	locale?: HomeLocale;
@@ -7,13 +8,19 @@ interface Props {
 
 const { locale = 'root' } = Astro.props;
 const isIast = locale === 'iast' || locale === 'ta';
+const copy = getUiCopy(locale === 'iast' ? 'iast' : 'root');
 
 const toggleLabels = isIast
 	? { show: 'Show instructions', hide: 'Mantras only' }
 	: { show: 'विधि दर्शय', hide: 'मन्त्र मात्रम्' };
 ---
 
-<ritual-page-shell class="ritual-page-shell" data-locale={locale}>
+<ritual-page-shell class="ritual-page-shell notranslate" data-locale={locale} data-next-label={copy.nextStep} translate="no">
+	<p class="ritual-source" data-ritual-source hidden></p>
+	<div class="ritual-step-chip" data-ritual-step-chip hidden>
+		<span data-ritual-step-current></span>
+		<button type="button" data-ritual-step-next>{copy.nextStep}</button>
+	</div>
 	<div class="ritual-page-shell__toolbar">
 		<button
 			type="button"
@@ -31,21 +38,89 @@ const toggleLabels = isIast
 </ritual-page-shell>
 
 <script>
+	import { RITUAL_STEP_LABELS, ritualSourceLine, ritualStepKey } from '../../data/sandhya-steps';
+	import type { HomeLocale } from '../../data/home';
+
 	class RitualPageShell extends HTMLElement {
 		private toggle?: HTMLButtonElement;
+		private observer?: IntersectionObserver;
 		private storageKey = 'vaidhika-ritual-compact';
 
 		connectedCallback() {
 			this.toggle = this.querySelector('.ritual-compact-toggle') ?? undefined;
-			if (!this.toggle) return;
+			if (this.toggle) {
+				const saved = localStorage.getItem(this.storageKey) === 'true';
+				this.setCompact(saved);
+				this.toggle.addEventListener('click', () => {
+					const next = !this.classList.contains('is-compact');
+					this.setCompact(next);
+					localStorage.setItem(this.storageKey, String(next));
+				});
+			}
+			this.bindSource();
+			this.bindSteps();
+		}
 
-			const saved = localStorage.getItem(this.storageKey) === 'true';
-			this.setCompact(saved);
+		disconnectedCallback() {
+			this.observer?.disconnect();
+		}
 
-			this.toggle.addEventListener('click', () => {
-				const next = !this.classList.contains('is-compact');
-				this.setCompact(next);
-				localStorage.setItem(this.storageKey, String(next));
+		private locale(): HomeLocale {
+			return this.dataset.locale === 'iast' ? 'iast' : 'root';
+		}
+
+		private bindSource() {
+			const line = ritualSourceLine(location.pathname, this.locale());
+			const el = this.querySelector<HTMLElement>('[data-ritual-source]');
+			if (!el || !line) return;
+			el.textContent = line;
+			el.hidden = false;
+		}
+
+		private bindSteps() {
+			const steps = [...this.querySelectorAll<HTMLElement>('.ritual-step')].filter((el) =>
+				ritualStepKey(el)
+			);
+			const chip = this.querySelector<HTMLElement>('[data-ritual-step-chip]');
+			const current = this.querySelector('[data-ritual-step-current]');
+			const nextBtn = this.querySelector<HTMLButtonElement>('[data-ritual-step-next]');
+			if (!chip || !current || steps.length < 2) return;
+
+			const locale = this.locale();
+			let active = 0;
+			const labelFor = (el: HTMLElement) => {
+				const key = ritualStepKey(el);
+				return key ? RITUAL_STEP_LABELS[key]?.[locale] ?? key : '';
+			};
+
+			const show = (index: number) => {
+				active = Math.max(0, Math.min(steps.length - 1, index));
+				current.textContent = labelFor(steps[active]!);
+				const next = steps[active + 1];
+				if (nextBtn) {
+					nextBtn.hidden = !next;
+					if (next) nextBtn.textContent = `${this.dataset.nextLabel ?? 'Next'} · ${labelFor(next)}`;
+				}
+				chip.hidden = false;
+			};
+
+			this.observer = new IntersectionObserver(
+				(entries) => {
+					const visible = entries
+						.filter((entry) => entry.isIntersecting)
+						.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+					if (!visible) return;
+					const index = steps.indexOf(visible.target as HTMLElement);
+					if (index >= 0) show(index);
+				},
+				{ rootMargin: '-20% 0px -55% 0px', threshold: [0.15, 0.4, 0.7] }
+			);
+			for (const step of steps) this.observer.observe(step);
+			show(0);
+
+			nextBtn?.addEventListener('click', () => {
+				const next = steps[active + 1];
+				next?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			});
 		}
 
@@ -67,6 +142,52 @@ const toggleLabels = isIast
 <style>
 	.ritual-page-shell {
 		display: block;
+	}
+
+	.ritual-source {
+		margin: 0 0 0.85rem;
+		font-size: 0.8125rem;
+		line-height: 1.45;
+		color: var(--sl-color-gray-3);
+	}
+
+	.ritual-step-chip {
+		position: sticky;
+		top: calc(var(--sl-nav-height, 3.5rem) + 0.35rem);
+		z-index: 6;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		margin: 0 0 1rem;
+		padding: 0.45rem 0.75rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		background: color-mix(in srgb, var(--sl-color-bg) 92%, var(--sl-color-gray-6));
+		backdrop-filter: blur(10px);
+	}
+
+	.ritual-step-chip [data-ritual-step-current] {
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--sl-color-white);
+	}
+
+	.ritual-step-chip button {
+		padding: 0.2rem 0.65rem;
+		border: 0;
+		border-radius: 999px;
+		font: inherit;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--sl-color-gray-2);
+		background: transparent;
+		cursor: pointer;
+	}
+
+	.ritual-step-chip button:hover {
+		color: var(--sl-color-white);
+		background: color-mix(in srgb, var(--sl-color-accent) 22%, transparent);
 	}
 
 	.ritual-page-shell__toolbar {
@@ -94,10 +215,15 @@ const toggleLabels = isIast
 		border-color: var(--sl-color-accent);
 	}
 
-	:global([data-theme='light']) .ritual-compact-toggle {
+	:global([data-theme='light']) .ritual-compact-toggle,
+	:global([data-theme='light']) .ritual-step-chip {
 		background: var(--color-gray-100);
 		color: var(--color-gray-700);
 		border-color: var(--color-gray-300);
+	}
+
+	:global([data-theme='light']) .ritual-step-chip [data-ritual-step-current] {
+		color: var(--color-gray-900);
 	}
 
 	:global(.ritual-page-shell.is-compact .ritual-instruction),
@@ -107,7 +233,8 @@ const toggleLabels = isIast
 	}
 
 	@media print {
-		.ritual-page-shell__toolbar {
+		.ritual-page-shell__toolbar,
+		.ritual-step-chip {
 			display: none;
 		}
 	}

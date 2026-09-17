@@ -1,14 +1,16 @@
 ---
 import SuktaPage from './SuktaPage.astro';
 import Verse from './Verse.astro';
+import MantraPadas from './MantraPadas.astro';
 import CorpusJumpNav from './CorpusJumpNav.astro';
 import type { HomeLocale } from '../../data/home';
 import { splitMantraPadas } from '../../lib/rigveda-samhita';
 import { formatMantraMarker } from '../../lib/rigveda-samhita';
-import { transliterateDevanagari } from '../../lib/rigveda-transliterate';
+import { transliterateDevanagariMany } from '../../lib/rigveda-transliterate';
 import {
 	getUpanishadCorpus,
 	getUpanishadMantraJumpItems,
+	upanishadCite,
 	type UpanishadId,
 } from '../../lib/upanishad-corpus';
 
@@ -24,27 +26,44 @@ const blockLabel = blockLabelOverride ?? corpus.title ?? id;
 const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
 const jumpItems = getUpanishadMantraJumpItems(corpus.sections);
 
-let openingShanti = corpus.openingShanti;
-if (locale === 'iast' && openingShanti) {
-	openingShanti = await transliterateDevanagari(openingShanti);
-}
+const iastMeta =
+	locale === 'iast'
+		? await transliterateDevanagariMany([
+				corpus.openingShanti ?? '',
+				...corpus.sections.map((section) => section.label),
+			])
+		: [];
 
-const sections = [];
-for (const section of corpus.sections) {
-	const label =
-		locale === 'iast' ? await transliterateDevanagari(section.label) : section.label;
-	const verses = [];
-	for (const verse of section.verses) {
-		verses.push({
+const missingVerseIast =
+	locale === 'iast'
+		? await transliterateDevanagariMany(
+				corpus.sections.flatMap((section) =>
+					section.verses.filter((verse) => !verse.textIast).map((verse) => verse.text)
+				)
+			)
+		: [];
+
+let iastIndex = 0;
+let missingIndex = 0;
+const openingShanti = locale === 'iast' ? iastMeta[iastIndex++] || null : corpus.openingShanti;
+const openingPadas = openingShanti ? splitMantraPadas(openingShanti) : [];
+
+const sections = corpus.sections.map((section) => {
+	const label = locale === 'iast' ? iastMeta[iastIndex++] : section.label;
+	const verses = section.verses.map((verse) => {
+		const text =
+			locale === 'iast' ? (verse.textIast ?? missingVerseIast[missingIndex++]) : verse.text;
+		const alt = locale === 'iast' ? verse.text : (verse.textIast ?? undefined);
+		return {
 			number: verse.number,
-			text:
-				locale === 'iast'
-					? (verse.textIast ?? (await transliterateDevanagari(verse.text)))
-					: verse.text,
-		});
-	}
-	sections.push({ ...section, label, verses });
-}
+			cite: upanishadCite(id, section.type, verse.number),
+			marker: formatMantraMarker(verse.number, locale),
+			padas: splitMantraPadas(text),
+			altPadas: alt ? splitMantraPadas(alt) : [],
+		};
+	});
+	return { type: section.type, label, verses };
+});
 ---
 
 <SuktaPage {locale} class="rigveda-samhita veda-corpus">
@@ -53,11 +72,9 @@ for (const section of corpus.sections) {
 		<span class="veda-sukta-block__label">{blockLabel}</span>
 	</header>
 	{
-		openingShanti && (
+		openingPadas.length > 0 && (
 			<section class="upanishad-shanti">
-				{splitMantraPadas(openingShanti).map((pada) => (
-					<p>{pada}</p>
-				))}
+				<MantraPadas padas={openingPadas} />
 			</section>
 		)
 	}
@@ -72,14 +89,16 @@ for (const section of corpus.sections) {
 					{section.verses.map((verse) => (
 						<Verse
 							number={verse.number}
-							id={`mantra-${sectionIndex + 1}-${verse.number}`}
-							{locale}
+							id={'mantra-' + (sectionIndex + 1) + '-' + verse.number}
+							locale={locale}
 							numberPosition="end"
-							marker={formatMantraMarker(verse.number, locale)}
+							marker={verse.marker}
+							cite={verse.cite}
 						>
-							{splitMantraPadas(verse.text).map((pada) => (
-								<p>{pada}</p>
-							))}
+							<MantraPadas padas={verse.padas} />
+							<div slot="alt">
+								<MantraPadas padas={verse.altPadas} />
+							</div>
 						</Verse>
 					))}
 				</div>

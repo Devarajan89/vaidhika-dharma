@@ -1,0 +1,9 @@
+---
+interface Props {
+	padas: string[];
+}
+
+const { padas } = Astro.props;
+---
+
+{padas.map((pada) => <p>{pada}</p>)}

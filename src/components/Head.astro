@@ -42,6 +42,7 @@ const jsonLd = buildPageJsonLd({
 <Default {...Astro.props} />
 <link rel="manifest" href="/manifest.webmanifest" />
 <meta name="theme-color" content="#cb0003" />
+{!isIast && <meta name="google" content="notranslate" />}
 <meta name="color-scheme" content="light" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -66,6 +67,9 @@ const jsonLd = buildPageJsonLd({
 		if (localStorage.getItem('vaidhika-chanting') === 'true') {
 			document.documentElement.dataset.chanting = 'true';
 		}
+		if (localStorage.getItem('vaidhika-script-view') === 'alt') {
+			document.documentElement.dataset.scriptView = 'alt';
+		}
 		var script = localStorage.getItem('vaidhika-indic-script');
 		if (script && script !== 'devanagari') {
 			document.documentElement.dataset.indicScript = script;
@@ -74,8 +78,17 @@ const jsonLd = buildPageJsonLd({
 </script>
 <script is:inline>
 	if ('serviceWorker' in navigator) {
-		window.addEventListener('load', () => {
-			navigator.serviceWorker.register('/sw.js').catch(() => {});
+		navigator.serviceWorker.getRegistrations().then(function (regs) {
+			regs.forEach(function (reg) {
+				reg.unregister();
+			});
+		});
+	}
+	if (window.caches) {
+		caches.keys().then(function (keys) {
+			keys.forEach(function (key) {
+				caches.delete(key);
+			});
 		});
 	}
 </script>

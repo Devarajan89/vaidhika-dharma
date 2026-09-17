@@ -150,7 +150,7 @@ const resultsPageLabel = locale === 'root' ? 'पूर्ण पृष्ठस
 <script>
 	import { pagefindUserConfig } from 'virtual:starlight/pagefind-config';
 	import { resolveSearchTerm } from '../data/search-synonyms';
-	import { groupSearchHits, searchSitePages } from '../lib/site-search';
+	import { groupSearchHits, searchSitePages, searchVerseRows, type VerseSearchRow } from '../lib/site-search';
 	import type { HomeLocale } from '../data/home';
 
 	type SynonymEntry = {
@@ -269,18 +269,28 @@ const resultsPageLabel = locale === 'root' ? 'पूर्ण पृष्ठस
 				const devInput = this.querySelector<HTMLInputElement>('#dev-site-search');
 				const searchLocale = (this.dataset.locale === 'iast' ? 'iast' : 'root') as HomeLocale;
 				let slugToTitle: Record<string, string> = {};
+				let verseRows: VerseSearchRow[] = [];
 				const indexReady = fetch('/search-index.json')
 					.then((response) => (response.ok ? response.json() : []))
 					.then((rows: Array<[string, string]>) => {
 						slugToTitle = Object.fromEntries(rows);
 					})
 					.catch(() => {});
+				const verseReady = fetch('/verse-search-index.json')
+					.then((response) => (response.ok ? response.json() : []))
+					.then((rows: VerseSearchRow[]) => {
+						verseRows = Array.isArray(rows) ? rows : [];
+					})
+					.catch(() => {});
 				const escapeHtml = (value: string) =>
 					value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 				const renderDevHits = async (query: string) => {
 					if (!hitsEl) return;
-					if (query.trim().length >= 2) await indexReady;
-					const hits = searchSitePages(query, searchLocale, slugToTitle);
+					if (query.trim().length >= 2) await Promise.all([indexReady, verseReady]);
+					const pageHits = searchSitePages(query, searchLocale, slugToTitle);
+					const verseHits = searchVerseRows(query, searchLocale, verseRows);
+					const seen = new Set(pageHits.map((hit) => hit.href));
+					const hits = [...pageHits, ...verseHits.filter((hit) => !seen.has(hit.href))];
 					const groups = groupSearchHits(hits, searchLocale);
 					hitsEl.innerHTML = groups
 						.map(

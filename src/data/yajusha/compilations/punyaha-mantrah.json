@@ -1,0 +1,28 @@
+{
+  "id": "punyaha-mantrah",
+  "sections": [
+    {
+      "header": "तै॰ब्रा॰ १.५.५",
+      "blocks": [
+        {
+          "tb": {
+            "ashtaka": 1,
+            "prapathaka": 5,
+            "anuvaka": 5
+          }
+        }
+      ]
+    },
+    {
+      "header": "तै॰आ॰ १.१",
+      "blocks": [
+        {
+          "ta": {
+            "prashna": 1,
+            "anuvaka": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "prakshipani-bhagantarani",
+  "sourceNote": "अनुबन्धः — अवशिष्टभागानां स्वरतः पाठः तैत्तिरीयसंहिताब्राह्मणारण्यकेषु द्रष्टव्यः। अत्र मन्त्रकल्पना नास्ति।",
+  "corpusLinks": [
+    {
+      "rootLabel": "तैत्तिरीय संहिता",
+      "iastLabel": "Taittirīya saṃhitā",
+      "slug": "taittiriya-samhita"
+    },
+    {
+      "rootLabel": "तैत्तिरीय ब्राह्मणम्",
+      "iastLabel": "Taittirīya brāhmaṇam",
+      "slug": "taittiriya-brahmana"
+    },
+    {
+      "rootLabel": "तैत्तिरीय आरण्यकम्",
+      "iastLabel": "Taittirīya āraṇyakam",
+      "slug": "taittiriya-aranyaka"
+    }
+  ],
+  "sections": []
+}

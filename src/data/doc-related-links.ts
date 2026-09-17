@@ -1,3 +1,6 @@
+import { getCrossSakhaPeer } from './cross-sakha';
+import { yajushaPeerSlugs } from './yajusha';
+
 export interface RelatedLink {
 	label: string;
 	href: string;
@@ -70,18 +73,7 @@ const SUkta_COLLECTIONS: Record<
 	yajusha: {
 		root: 'याजुष मन्त्र रत्नाकरम्',
 		iast: 'Yājuṣa Mantra Ratnākaram',
-		peers: [
-			'sri-rudra-prashnah',
-			'chamakam',
-			'sri-rudra-laghunyasa',
-			'purusha-suktam',
-			'narayana-suktam',
-			'sri-suktam',
-			'durga-suktam',
-			'medha-suktam',
-			'vishnu-suktam',
-			'ganapathy-atharvasirsham',
-		],
+		peers: yajushaPeerSlugs(),
 	},
 };
 
@@ -90,9 +82,15 @@ const UPANISHAD_SLUGS = [
 	'kena-upanishad',
 	'katha-upanishad',
 	'prashna-upanishad',
+	'mundaka-upanishad',
+	'mandukya-upanishad',
 	'taittiriya-upanishad',
-	'mahanarayana-upanishad',
 	'aitareya-upanishad',
+	'chandogya-upanishad',
+	'brihadaranyaka-upanishad',
+	'svetasvatara-upanishad',
+	'kaivalya-upanishad',
+	'mahanarayana-upanishad',
 ];
 
 function getSuktaCollectionKey(entryId: string): 'rigveda' | 'yajusha' | undefined {
@@ -164,13 +162,23 @@ export function getDocRelatedLinks(
 	}
 
 	const suktaSlug = slug.replace(/^iast\//, '');
+	const peer = getCrossSakhaPeer(suktaSlug, isIast ? 'iast' : 'root');
+	const peerLink = peer
+		? {
+				href: peer.href,
+				label: isIast
+					? `${peer.side === 'yajur' ? 'Yajurveda' : 'Ṛgveda'} · ${peer.label}`
+					: `${peer.side === 'yajur' ? 'यजुर्वेद' : 'ऋग्वेद'} · ${peer.label}`,
+			}
+		: undefined;
 	const collectionKey = getSuktaCollectionKey(entry.id);
 
 	if (collectionKey) {
 		const meta = SUkta_COLLECTIONS[collectionKey];
 		const links = meta.peers
-			.filter((peer) => peer !== suktaSlug)
-			.map((peer) => link(isIast, peer, peer, peer, slugToTitle));
+			.filter((item) => item !== suktaSlug)
+			.map((item) => link(isIast, item, item, item, slugToTitle));
+		if (peerLink) links.unshift(peerLink);
 		return {
 			title: isIast ? `More from ${meta.iast}` : `${meta.root} — अन्य सूक्तानि`,
 			links,
@@ -186,9 +194,11 @@ export function getDocRelatedLinks(
 			'narayana-suktam',
 			'sri-suktam',
 		].filter((s) => s !== suktaSlug);
+		const links = defaults.slice(0, 5).map((s) => link(isIast, s, s, s, slugToTitle));
+		if (peerLink) links.unshift(peerLink);
 		return {
 			title: isIast ? 'Related mantras' : 'सम्बद्ध मन्त्राः',
-			links: defaults.slice(0, 5).map((s) => link(isIast, s, s, s, slugToTitle)),
+			links,
 		};
 	}
 

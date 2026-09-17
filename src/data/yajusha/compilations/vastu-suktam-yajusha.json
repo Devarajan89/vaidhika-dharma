@@ -1,0 +1,31 @@
+{
+  "id": "vastu-suktam-yajusha",
+  "sections": [
+    {
+      "header": "ऋ॰सं॰ ७.५४",
+      "blocks": [
+        {
+          "rv": {
+            "mandala": 7,
+            "sukta": 54,
+            "verse": 1
+          }
+        },
+        {
+          "rv": {
+            "mandala": 7,
+            "sukta": 54,
+            "verse": 2
+          }
+        },
+        {
+          "rv": {
+            "mandala": 7,
+            "sukta": 54,
+            "verse": 3
+          }
+        }
+      ]
+    }
+  ]
+}

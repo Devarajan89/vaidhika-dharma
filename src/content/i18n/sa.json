@@ -1,9 +1,17 @@
 {
-  "page.lastUpdated": "Last Updated",
-  "page.editLink": "Edit this page",
-  "themeSelect.dark": "Dark",
-  "themeSelect.light": "Light",
-  "themeSelect.auto": "Auto",
-  "tableOfContents.onThisPage": "On this page",
-  "search.label": "Search"
+  "skipLink.label": "मुख्यं गम्यताम्",
+  "page.lastUpdated": "अन्तिमपरिष्कारः",
+  "page.editLink": "पृष्ठं सम्पाद्यताम्",
+  "page.previousLink": "पूर्वम्",
+  "page.nextLink": "अग्रिमम्",
+  "themeSelect.dark": "तमः",
+  "themeSelect.light": "प्रकाशः",
+  "themeSelect.auto": "स्वयम्",
+  "tableOfContents.onThisPage": "अस्मिन् पृष्ठे",
+  "tableOfContents.overview": "सारः",
+  "search.label": "अन्वेषणम्",
+  "search.cancelLabel": "निरस्यताम्",
+  "menuButton.accessibleLabel": "मेनू",
+  "sidebarNav.accessibleLabel": "मुख्यम्",
+  "404.text": "पृष्ठं न प्राप्तम्। मार्गं परीक्ष्यताम् अथवा अन्वेषणं प्रयतस्व।"
 }

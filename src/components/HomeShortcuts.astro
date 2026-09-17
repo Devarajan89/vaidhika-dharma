@@ -1,6 +1,7 @@
 ---
 import type { HomeLocale } from '../data/home';
 import { getHomeContent } from '../data/home';
+import { getUiCopy } from '../data/ui-copy';
 import { getHomeShortcuts, getTodayPractice } from '../data/home-shortcuts';
 import { getSandhyaTimeSlot } from '../lib/reader-prefs';
 import docCache from '../data/doc-cache.json';
@@ -11,27 +12,29 @@ interface Props {
 
 const { locale } = Astro.props;
 const { shortcutsHeading } = getHomeContent(locale);
+const copy = getUiCopy(locale);
 const shortcuts = getHomeShortcuts(locale);
 const slot = getSandhyaTimeSlot();
 const today = getTodayPractice(locale, slot);
-const prefix = locale === 'iast' ? '/iast' : '';
-const offlineHref = `${prefix}/offline/`;
-const offlineLabel = 'Use without network';
-const nowLabel = 'Now';
-const practiceEyebrow = 'Today’s practice';
 const continueFallback = (docCache.recentByLocale[locale] ?? [])[0];
 const fallbackHref = continueFallback
 	? `/${continueFallback.slug ?? continueFallback.id}/`
 	: '';
 const fallbackTitle = continueFallback?.title ?? '';
-const fallbackLabel = 'Recent';
 ---
 
-<section class="home-shortcuts" aria-labelledby="home-shortcuts-heading" data-home-shortcuts data-locale={locale}>
+<section
+	class="home-shortcuts"
+	aria-labelledby="home-shortcuts-heading"
+	data-home-shortcuts
+	data-locale={locale}
+	data-continue-label={copy.continueLabel}
+	data-recent-label={copy.recent}
+>
 	<h2 id="home-shortcuts-heading" class="home-shortcuts__heading">{shortcutsHeading}</h2>
 	<p class="home-continue" data-home-continue hidden={!continueFallback}>
 		<a href={fallbackHref} data-continue-fallback={continueFallback ? 'true' : undefined}>
-			{continueFallback ? `${fallbackLabel} · ${fallbackTitle}` : ''}
+			{continueFallback ? `${copy.recent} · ${fallbackTitle}` : ''}
 		</a>
 	</p>
 	<a
@@ -40,10 +43,10 @@ const fallbackLabel = 'Recent';
 		href={today.href}
 		data-slot={today.slot}
 	>
-		<span class="home-practice__eyebrow">{practiceEyebrow} · {nowLabel}</span>
+		<span class="home-practice__eyebrow">{copy.todayPractice} · {copy.now}</span>
 		<span class="home-practice__title" data-home-practice-title>{today.label}</span>
 	</a>
-	<div class="home-shakha" role="group" aria-label="Śākhā">
+	<div class="home-shakha" role="group" aria-label={locale === 'iast' ? 'Śākhā' : 'शाखा'}>
 		<button type="button" data-shakha="aswalayana" aria-pressed="true">
 			{locale === 'iast' ? 'Aśvalāyana' : 'आश्वलायन'}
 		</button>
@@ -67,18 +70,24 @@ const fallbackLabel = 'Recent';
 			))
 		}
 	</ul>
-	<p class="home-offline">
-		<a href={offlineHref}>{offlineLabel}</a>
-	</p>
+	<section class="home-history" data-home-recent hidden>
+		<h3>{copy.recentlyViewed}</h3>
+		<ul></ul>
+	</section>
+	<section class="home-history" data-home-bookmarks hidden>
+		<h3>{copy.bookmarks}</h3>
+		<ul></ul>
+	</section>
 </section>
 
 <script>
-	import { READER_KEYS, getSandhyaTimeSlot, type ResumeEntry, type ShakhaId } from '../lib/reader-prefs';
+	import { READER_KEYS, getSandhyaTimeSlot, readBookmarks, readRecent, type ResumeEntry, type ShakhaId } from '../lib/reader-prefs';
 	import { getTodayPractice } from '../data/home-shortcuts';
 
 	const root = document.querySelector<HTMLElement>('[data-home-shortcuts]');
 	if (root) {
 		const locale = root.dataset.locale === 'iast' ? 'iast' : 'root';
+		const continueLabel = root.dataset.continueLabel ?? 'Continue';
 
 		const shakha = (localStorage.getItem(READER_KEYS.shakha) as ShakhaId) || 'aswalayana';
 		const applyShakha = (next: ShakhaId) => {
@@ -112,20 +121,39 @@ const fallbackLabel = 'Recent';
 			}
 		});
 
-		try {
-			const raw = localStorage.getItem(READER_KEYS.resume);
-			if (raw) {
-				const resume = JSON.parse(raw) as ResumeEntry;
-				const box = root.querySelector<HTMLElement>('[data-home-continue]');
-				const anchor = box?.querySelector('a');
-				if (box && anchor && resume.href) {
-					const label = 'Continue';
-					anchor.href = resume.href;
-					anchor.textContent = `${label} · ${resume.title}`;
-					anchor.removeAttribute('data-continue-fallback');
-					box.hidden = false;
-				}
+		const fillList = (selector: string, entries: ResumeEntry[]) => {
+			const box = root.querySelector<HTMLElement>(selector);
+			const list = box?.querySelector('ul');
+			if (!box || !list) return;
+			list.replaceChildren();
+			const seen = new Set<string>();
+			for (const entry of entries) {
+				if (!entry.href || seen.has(entry.href)) continue;
+				seen.add(entry.href);
+				const item = document.createElement('li');
+				const anchor = document.createElement('a');
+				anchor.href = entry.href;
+				anchor.textContent = entry.title;
+				item.append(anchor);
+				list.append(item);
 			}
+			box.hidden = list.children.length === 0;
+		};
+
+		try {
+			const recent = readRecent();
+			const resumeRaw = localStorage.getItem(READER_KEYS.resume);
+			const resume = resumeRaw ? (JSON.parse(resumeRaw) as ResumeEntry) : recent[0];
+			const box = root.querySelector<HTMLElement>('[data-home-continue]');
+			const anchor = box?.querySelector('a');
+			if (box && anchor && resume?.href) {
+				anchor.href = resume.href;
+				anchor.textContent = `${continueLabel} · ${resume.title}`;
+				anchor.removeAttribute('data-continue-fallback');
+				box.hidden = false;
+			}
+			fillList('[data-home-recent]', recent.slice(resume?.href ? 1 : 0));
+			fillList('[data-home-bookmarks]', readBookmarks());
 		} catch {
 			/* ignore */
 		}

@@ -1,0 +1,31 @@
+{
+  "id": "kalasha-abhimantranam",
+  "sections": [
+    {
+      "header": "तै॰सं॰ ४.१.५ / आपः",
+      "blocks": [
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 9,
+            "verse": 1
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 9,
+            "verse": 2
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 9,
+            "verse": 3
+          }
+        }
+      ]
+    }
+  ]
+}

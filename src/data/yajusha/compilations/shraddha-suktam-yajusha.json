@@ -1,0 +1,45 @@
+{
+  "id": "shraddha-suktam-yajusha",
+  "sections": [
+    {
+      "header": "ऋ॰सं॰ १०.१५१",
+      "blocks": [
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 151,
+            "verse": 1
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 151,
+            "verse": 2
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 151,
+            "verse": 3
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 151,
+            "verse": 4
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 151,
+            "verse": 5
+          }
+        }
+      ]
+    }
+  ]
+}

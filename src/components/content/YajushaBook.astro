@@ -1,0 +1,52 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import CorpusIndexTable from './CorpusIndexTable.astro';
+import SamhitaPageNav from './SamhitaPageNav.astro';
+import type { HomeLocale } from '../../data/home';
+import {
+	YAJUSHA_KHANDAS,
+	getYajushaBookPageNav,
+	yajushaKhandaEntries,
+	yajushaKhandaHref,
+} from '../../data/yajusha';
+
+interface Props {
+	locale?: HomeLocale;
+}
+
+const { locale = 'root' } = Astro.props;
+const pageNav = getYajushaBookPageNav(locale);
+const jumpItems = YAJUSHA_KHANDAS.map((khanda, index) => ({
+	id: khanda.id,
+	label: String(index + 1),
+	href: yajushaKhandaHref(khanda.id, locale),
+}));
+const rows = YAJUSHA_KHANDAS.map((khanda) => {
+	const entries = yajushaKhandaEntries(khanda.id);
+	return {
+		id: khanda.id,
+		href: yajushaKhandaHref(khanda.id, locale),
+		label: locale === 'iast' ? khanda.iastTitle : khanda.rootTitle,
+		detail: entries[0]
+			? locale === 'iast'
+				? entries[0].iastTitle
+				: entries[0].rootTitle
+			: undefined,
+		count: entries.length,
+	};
+});
+const jumpTitle = locale === 'iast' ? 'Jump to khaṇḍa' : 'खण्डम् अनुगच्छ';
+---
+
+<SuktaPage {locale}>
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={2} />
+	<CorpusIndexTable
+		{locale}
+		{rows}
+		labelHeader={locale === 'iast' ? 'Khaṇḍa' : 'खण्डः'}
+		detailHeader={locale === 'iast' ? 'Opening' : 'आदिः'}
+		countHeader={locale === 'iast' ? 'Headings' : 'शीर्षकाः'}
+	/>
+	<SamhitaPageNav links={pageNav} {locale} />
+</SuktaPage>

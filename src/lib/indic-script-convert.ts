@@ -4,7 +4,7 @@ import { getInditrans, toAsciiDigits, transliterateDevanagariRuns } from './indi
 
 const ROOT_SELECTORS = '.veda-corpus__body, .ritual-page-shell__content, .sl-markdown-content';
 const SKIP_CLOSEST =
-	'.study-layer, .veda-mantra__alt, .veda-mantra__num, .veda-mantra__marker, .rigveda-mantra__ref-marker, aside, nav, button, select, code, pre, .reader-toolbar, .corpus-seq-bar, .doc-page-nav, .breadcrumbs';
+	'.study-layer, .veda-mantra__alt, .veda-mantra__num, .veda-mantra__marker, .veda-mantra__copy, .rigveda-mantra__ref-marker, aside, nav, button, select, code, pre, .reader-toolbar, .corpus-seq-bar, .doc-page-nav, .breadcrumbs, .ritual-step-chip, .ritual-source';
 
 const origHtml = new WeakMap<HTMLElement, string>();
 
@@ -74,6 +74,22 @@ export async function applyIndicScript(scriptId: IndicScriptId) {
 					node.nodeValue = transliterateDevanagariRuns(engine, node.nodeValue ?? '', target);
 				});
 			}
+		}
+	} finally {
+		document.documentElement.dataset.indicReady = 'true';
+	}
+}
+
+export async function applyIastTransliteration() {
+	document.documentElement.dataset.indicScript = 'iast';
+	const roots = convertRoots();
+	for (const root of roots) restoreRoot(root);
+	try {
+		const engine = await getInditrans();
+		for (const root of roots) {
+			walkTextNodes(root, (node) => {
+				node.nodeValue = transliterateDevanagariRuns(engine, node.nodeValue ?? '', 'iast');
+			});
 		}
 	} finally {
 		document.documentElement.dataset.indicReady = 'true';

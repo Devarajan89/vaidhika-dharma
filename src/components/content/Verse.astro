@@ -1,5 +1,6 @@
 ---
 import type { HomeLocale } from '../../data/home';
+import { getUiCopy } from '../../data/ui-copy';
 import { formatMantraMarker } from '../../lib/rigveda-samhita';
 
 interface Props {
@@ -8,9 +9,10 @@ interface Props {
 	locale?: HomeLocale;
 	numberPosition?: 'start' | 'end';
 	marker?: string;
+	cite?: string;
 }
 
-const { number, id, locale = 'root', numberPosition = 'end', marker: markerOverride } = Astro.props;
+const { number, id, locale = 'root', numberPosition = 'end', marker: markerOverride, cite } = Astro.props;
 const mantraId =
 	id ?? (number !== undefined ? `verse-${number}` : undefined);
 const isIast = locale === 'iast' || locale === 'ta';
@@ -23,9 +25,10 @@ const mantraLabel =
 const marker =
 	markerOverride ??
 	(number !== undefined ? formatMantraMarker(Number(number), locale) : undefined);
+const copy = getUiCopy(locale === 'iast' ? 'iast' : 'root');
 ---
 
-<div class="veda-mantra" id={mantraId}>
+<div class="veda-mantra notranslate" id={mantraId} translate="no" data-cite={cite}>
 	{
 		number !== undefined && numberPosition === 'start' && (
 			<span class="veda-mantra__num" aria-label={mantraLabel}>
@@ -47,7 +50,43 @@ const marker =
 	<div class="veda-mantra__alt">
 		<slot name="alt" />
 	</div>
+	{
+		(cite || mantraId) && (
+			<button type="button" class="veda-mantra__copy" data-mantra-copy data-copied={copy.copied} aria-label={copy.copyCite} title={copy.copyCite}>
+				{copy.copyCite}
+			</button>
+		)
+	}
 </div>
+
+<script>
+	if (!document.documentElement.dataset.copyCiteBound) {
+		document.documentElement.dataset.copyCiteBound = 'true';
+		document.addEventListener('click', async (event) => {
+			const target = event.target;
+			const button = target instanceof Element ? target.closest('[data-mantra-copy]') : null;
+			if (!(button instanceof HTMLButtonElement)) return;
+			const mantra = button.closest('.veda-mantra');
+			const cite =
+				(mantra instanceof HTMLElement ? mantra.dataset.cite : undefined) ||
+				document.querySelector('h1')?.textContent?.trim() ||
+				document.title.split('|')[0]?.trim();
+			if (!cite) return;
+			const hash = mantra?.id ? `#${mantra.id}` : '';
+			const text = `${cite}\n${location.origin}${location.pathname}${hash}`;
+			try {
+				await navigator.clipboard.writeText(text);
+				const original = button.textContent;
+				button.textContent = button.dataset.copied ?? 'Copied';
+				window.setTimeout(() => {
+					button.textContent = original;
+				}, 1600);
+			} catch {
+				/* ignore */
+			}
+		});
+	}
+</script>
 
 <style>
 	.veda-mantra {
@@ -78,6 +117,7 @@ const marker =
 		font-weight: 600;
 		color: var(--veda-accent, var(--sl-color-accent));
 		white-space: nowrap;
+		display: inline;
 	}
 
 	.veda-mantra__text :global(p) {
@@ -89,10 +129,6 @@ const marker =
 	.veda-mantra__text :global(p:not(:last-of-type))::after {
 		content: '\a';
 		white-space: pre;
-	}
-
-	.veda-mantra__marker {
-		display: inline;
 	}
 
 	.veda-mantra__alt {
@@ -109,11 +145,33 @@ const marker =
 		white-space: pre;
 	}
 
+	.veda-mantra__copy {
+		display: inline-block;
+		margin: 0.65rem 0 0;
+		padding: 0;
+		border: 0;
+		background: transparent;
+		font: inherit;
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		color: var(--sl-color-gray-3);
+		cursor: pointer;
+	}
+
+	.veda-mantra__copy:hover {
+		color: var(--veda-accent, var(--sl-color-accent));
+	}
+
 	@media print {
 		.veda-mantra {
 			break-inside: avoid;
 			box-shadow: none;
 			border-color: #ccc;
+		}
+
+		.veda-mantra__copy {
+			display: none;
 		}
 	}
 </style>

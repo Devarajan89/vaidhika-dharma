@@ -1,0 +1,226 @@
+---
+import SuktaPage from './SuktaPage.astro';
+import Verse from './Verse.astro';
+import YajushaBookNav from './YajushaBookNav.astro';
+import StudyLayer from './StudyLayer.astro';
+import CorpusJumpNav from './CorpusJumpNav.astro';
+import type { HomeLocale } from '../../data/home';
+import { transliterateDevanagariMap } from '../../lib/rigveda-transliterate';
+import { getVerseRecord } from '../../lib/rigveda-corpus';
+import { getTaittiriyaAnuvaka } from '../../lib/taittiriya-corpus';
+import { getTaittiriyaBrahmanaAnuvakaText } from '../../lib/taittiriya-brahmana-corpus';
+import { getTaittiriyaAranyakaAnuvakaText } from '../../lib/taittiriya-aranyaka-corpus';
+import { splitMantraPadas } from '../../lib/rigveda-samhita';
+import {
+	uniqueYajushaCrossLinks,
+	yajushaRelatedLinks,
+	yajushaSourceCite,
+	type YajushaCompilationMap,
+	type YajushaSourceBlock,
+} from '../../lib/yajusha-sources';
+import type { JumpNavItem } from '../../lib/samhita-nav';
+
+interface Props {
+	id: string;
+	locale?: HomeLocale;
+}
+
+const { id, locale = 'root' } = Astro.props;
+
+const compilationModules = import.meta.glob<{ default: YajushaCompilationMap }>(
+	'../../data/yajusha/compilations/*.json',
+	{ eager: true }
+);
+const compilation = compilationModules[`../../data/yajusha/compilations/${id}.json`]?.default;
+
+if (!compilation) {
+	throw new Error(`Unknown Yajusha compilation: ${id}`);
+}
+
+function resolveBlock(block: YajushaSourceBlock): string | undefined {
+	if (block.text) return block.text;
+	if (block.rv) {
+		return getVerseRecord(block.rv.mandala, block.rv.sukta, block.rv.verse)?.text;
+	}
+	if (block.ts) {
+		return getTaittiriyaAnuvaka(block.ts.kanda, block.ts.prapathaka, block.ts.anuvaka);
+	}
+	if (block.tb) {
+		return getTaittiriyaBrahmanaAnuvakaText(
+			block.tb.ashtaka,
+			block.tb.prapathaka,
+			block.tb.anuvaka,
+			'root'
+		);
+	}
+	if (block.ta) {
+		return getTaittiriyaAranyakaAnuvakaText(block.ta.prashna, block.ta.anuvaka, 'root');
+	}
+	return undefined;
+}
+
+const textsToTransliterate: Record<string, string> = {};
+if (locale === 'iast') {
+	for (const [sectionIndex, section] of (compilation.sections ?? []).entries()) {
+		if (section.header) textsToTransliterate[`header:${sectionIndex}`] = section.header;
+		for (const [blockIndex, block] of section.blocks.entries()) {
+			const text = resolveBlock(block);
+			if (text) textsToTransliterate[`block:${sectionIndex}:${blockIndex}`] = text;
+		}
+	}
+}
+const transliterated = locale === 'iast' ? await transliterateDevanagariMap(textsToTransliterate) : {};
+
+let verseNumber = 0;
+const resolved = [];
+const jumpItems: JumpNavItem[] = [];
+const citationItems: string[] = [];
+
+for (const [sectionIndex, section] of (compilation.sections ?? []).entries()) {
+	const header =
+		locale === 'iast'
+			? (transliterated[`header:${sectionIndex}`] ?? section.header)
+			: section.header;
+	if (header) {
+		jumpItems.push({
+			id: `compilation-section-${sectionIndex}`,
+			label: String(sectionIndex + 1),
+		});
+	}
+	const verses = [];
+	for (const [blockIndex, block] of section.blocks.entries()) {
+		const sourceText = resolveBlock(block);
+		if (!sourceText) continue;
+		verseNumber += 1;
+		const text =
+			locale === 'iast'
+				? (transliterated[`block:${sectionIndex}:${blockIndex}`] ?? sourceText)
+				: sourceText;
+		const cite = yajushaSourceCite(block, locale);
+		if (cite) citationItems.push(`<li><a href="${cite.href}">${cite.code}</a></li>`);
+		jumpItems.push({ id: `verse-${verseNumber}`, label: String(verseNumber) });
+		verses.push({
+			number: verseNumber,
+			text,
+			cite,
+		});
+	}
+	resolved.push({ header, verses, sectionIndex });
+}
+
+const visible = resolved.filter((section) => section.verses.length > 0);
+const uniqueCitations = [...new Set(citationItems)];
+const crossLinks = uniqueYajushaCrossLinks(compilation, locale);
+const relatedLinks = yajushaRelatedLinks(compilation.related, locale);
+const corpusLinks = (compilation.corpusLinks ?? []).map((link) => ({
+	href: `${locale === 'iast' ? '/iast' : ''}/${link.slug}/`,
+	label: locale === 'iast' ? link.iastLabel : link.rootLabel,
+}));
+const anukramani = resolved
+	.map((section) => section.header)
+	.filter(Boolean)
+	.join(' · ');
+
+const studyRows = [
+	{
+		label: locale === 'iast' ? 'Anukramaṇī' : 'अनुक्रमणिका',
+		value: anukramani || null,
+	},
+	{
+		label: locale === 'iast' ? 'Saṃhitā citations' : 'संहिता निर्देशाः',
+		html: uniqueCitations.length ? `<ul>${uniqueCitations.join('')}</ul>` : null,
+	},
+	{
+		label: locale === 'iast' ? 'Also in this book' : 'अन्यत्र ग्रन्थे',
+		html: crossLinks.length
+			? `<ul>${crossLinks.map((link) => `<li><a href="${link.href}">${link.label}</a></li>`).join('')}</ul>`
+			: null,
+	},
+	{
+		label: locale === 'iast' ? 'Related' : 'सम्बद्धम्',
+		html: relatedLinks.length
+			? `<ul>${relatedLinks.map((link) => `<li><a href="${link.href}">${link.label}</a></li>`).join('')}</ul>`
+			: null,
+	},
+	{
+		label: locale === 'iast' ? 'Source' : 'मूलम्',
+		value:
+			compilation.sourceNote ??
+			(locale === 'iast'
+				? 'Taittirīya / Ṛgveda corpus, as compiled in Yājuṣa Mantra Ratnākaram. Learn svara from a guru.'
+				: 'तैत्तिरीय-ऋग्वेदपाठः याजुषमन्त्ररत्नाकरानुसारेण। स्वरः गुरोः समीपे एव।'),
+	},
+];
+
+const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
+---
+
+<YajushaBookNav {id} {locale} />
+<SuktaPage {locale}>
+	<StudyLayer {locale} rows={studyRows} />
+	<CorpusJumpNav items={jumpItems} {locale} title={jumpTitle} minItems={8} />
+	{
+		visible.length === 0 && corpusLinks.length === 0 && (
+			<p>
+				{locale === 'iast'
+					? 'Source text for this heading is linked from the Taittirīya corpus.'
+					: 'अस्य शीर्षस्य मूलपाठः तैत्तिरीयग्रन्थेषु द्रष्टव्यः।'}
+			</p>
+		)
+	}
+	{
+		corpusLinks.length > 0 && (
+			<ul class="yajusha-corpus-links">
+				{corpusLinks.map((link) => (
+					<li>
+						<a href={link.href}>{link.label}</a>
+					</li>
+				))}
+			</ul>
+		)
+	}
+	{
+		visible.map((section) => (
+			<section class="veda-compilation-section" id={`compilation-section-${section.sectionIndex}`}>
+				{section.header && (
+					<header class="veda-compilation-section__header">
+						<p class="veda-compilation-section__title">{section.header}</p>
+					</header>
+				)}
+				<div class="veda-compilation-section__mantras">
+					{section.verses.map((verse) => {
+						const padas = splitMantraPadas(verse.text);
+						const last = padas.length - 1;
+						return (
+							<Verse number={verse.number} locale={locale} cite={verse.cite?.code}>
+								{padas.map((pada, padaIndex) => (
+									<p>
+										{pada}
+										{padaIndex === last && verse.cite && (
+											<span class="rigveda-mantra__ref-marker">
+												{' '}
+												॥<a href={verse.cite.href}>{verse.cite.code}</a>॥
+											</span>
+										)}
+									</p>
+								))}
+							</Verse>
+						);
+					})}
+				</div>
+			</section>
+		))
+	}
+</SuktaPage>
+
+<style>
+	.yajusha-corpus-links {
+		margin: 0 0 1.5rem;
+		padding-left: 1.25rem;
+		line-height: 1.7;
+	}
+
+	.yajusha-corpus-links a {
+		color: var(--sl-color-accent);
+	}
+</style>

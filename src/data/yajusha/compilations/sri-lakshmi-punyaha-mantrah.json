@@ -1,0 +1,57 @@
+{
+  "id": "sri-lakshmi-punyaha-mantrah",
+  "sections": [
+    {
+      "header": "आपो हि ष्ठा",
+      "blocks": [
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 9,
+            "verse": 1
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 9,
+            "verse": 2
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 9,
+            "verse": 3
+          }
+        }
+      ]
+    },
+    {
+      "header": "अघमर्षणम्",
+      "blocks": [
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 190,
+            "verse": 1
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 190,
+            "verse": 2
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 190,
+            "verse": 3
+          }
+        }
+      ]
+    }
+  ]
+}

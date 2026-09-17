@@ -4,12 +4,12 @@ dist/
 .astro/
 src/data/doc-cache.json
 public/search-index.json
+public/verse-search-index.json
 scripts/*
 scripts/.*
 !scripts/lib/
 scripts/lib/*
 !scripts/generate-doc-cache.mjs
-!scripts/generate-offline-pack.mjs
 !scripts/.transliterate-line-worker.mjs
 !scripts/lib/taittiriya-samhita-structure.mjs
 !scripts/lib/maitrayani-samhita-structure.mjs

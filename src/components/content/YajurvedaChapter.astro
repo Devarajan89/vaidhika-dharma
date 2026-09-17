@@ -47,13 +47,14 @@ if (!entry) {
 const parsed = parseYajurvedaChapter(entry.text, { expectedVerses: expectedCount });
 let header = parsed.header;
 
-/** @type {{ number: number; text: string }[]} */
+/** @type {{ number: number; text: string; alt?: string }[]} */
 const verses = [];
 
 for (const verse of parsed.verses) {
 	verses.push({
 		number: verse.number,
 		text: locale === 'iast' ? await transliterateDevanagari(verse.text) : verse.text,
+		alt: locale === 'iast' ? verse.text : undefined,
 	});
 }
 
@@ -82,10 +83,18 @@ const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम�
 					{locale}
 					numberPosition="end"
 					marker={formatChapterMantraMarker(chapter, verse.number, locale)}
+					cite={(tradition === 'kanva' ? 'VS-K ' : 'VS-M ') + chapter + '.' + verse.number}
 				>
 					{splitMantraPadas(verse.text).map((pada) => (
 						<p>{pada}</p>
 					))}
+					{verse.alt && (
+						<div slot="alt">
+							{splitMantraPadas(verse.alt).map((pada) => (
+								<p>{pada}</p>
+							))}
+						</div>
+					)}
 				</Verse>
 			))
 		}

@@ -10,6 +10,7 @@
 
 .ritual-step {
 	margin: 0;
+	scroll-margin-top: calc(var(--sl-nav-height, 3.5rem) + 3.25rem);
 }
 
 .ritual-step h5 {
@@ -40,6 +41,34 @@
 .ritual-step .ritual-table-wrap table {
 	margin: 0;
 	min-width: 16rem;
+}
+
+@media (max-width: 40rem) {
+	.ritual-step .ritual-table-wrap table {
+		min-width: 0;
+	}
+
+	.ritual-step table:not(:has(thead)) {
+		display: block;
+		width: 100%;
+	}
+
+	.ritual-step table:not(:has(thead)) tbody,
+	.ritual-step table:not(:has(thead)) tr {
+		display: block;
+		width: 100%;
+	}
+
+	.ritual-step table:not(:has(thead)) td {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		border-bottom: 0;
+	}
+
+	.ritual-step table:not(:has(thead)) tr:last-child td:last-child {
+		border-bottom: 1px solid var(--sl-color-gray-5);
+	}
 }
 
 .ritual-step blockquote {

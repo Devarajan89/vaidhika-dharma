@@ -35,13 +35,14 @@ const parsed = parseTaittiriyaPrapathaka(entry.text, {
 const { kanda, prapathaka, kandaInfo } = chapterToKandaPrapathaka(chapter);
 let header = parsed.header;
 
-/** @type {{ number: number; text: string }[]} */
+/** @type {{ number: number; text: string; alt?: string }[]} */
 const verses = [];
 
 for (const verse of parsed.verses) {
 	verses.push({
 		number: verse.number,
 		text: locale === 'iast' ? await transliterateDevanagari(verse.text) : verse.text,
+		alt: locale === 'iast' ? verse.text : undefined,
 	});
 }
 
@@ -73,10 +74,18 @@ const jumpTitle = locale === 'iast' ? 'Jump to anuvāka' : 'अनुवाक�
 					{locale}
 					numberPosition="end"
 					marker={formatAnuvakaMarker(kanda, prapathaka, verse.number, locale)}
+					cite={'TS ' + kanda + '.' + prapathaka + '.' + verse.number}
 				>
 					{splitMantraPadas(verse.text).map((pada) => (
 						<p>{pada}</p>
 					))}
+					{verse.alt && (
+						<div slot="alt">
+							{splitMantraPadas(verse.alt).map((pada) => (
+								<p>{pada}</p>
+							))}
+						</div>
+					)}
 				</Verse>
 			))
 		}

@@ -12,7 +12,7 @@ interface Props {
 const { locale = 'root', showVerseNav = false, class: className } = Astro.props;
 ---
 
-<article class:list={['veda-corpus', 'sukta-page', 'rigveda-samhita', className]}>
+<article class:list={['veda-corpus', 'sukta-page', 'rigveda-samhita', 'notranslate', className]} translate="no">
 	<RitualNote {locale} />
 	{showVerseNav && <VerseNav {locale} />}
 	<div class="veda-corpus__body">

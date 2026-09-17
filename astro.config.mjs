@@ -14,6 +14,8 @@ import { chapterToKandaPrapathaka, TAITTIRIYA_TOTAL_PRAPATHAKAS } from './script
 import { MAITRAYANI_TOTAL_PRAPATHAKAS, chapterToKandaPrapathaka as maitrayaniChapterToKandaPrapathaka } from './scripts/lib/maitrayani-samhita-structure.mjs';
 import { AITAREYA_PANCHIKAS } from './scripts/lib/aitareya-brahmana-structure.mjs';
 import { forceLightHtml } from './src/integrations/force-light-html.mjs';
+import { WHATSAPP_CHANNEL_URL, YOUTUBE_CHANNEL_URL } from './src/data/channels.ts';
+import { yajushaSidebarGroup } from './src/data/yajusha.ts';
 
 const rigvedaMandalaRedirects = Object.fromEntries(
   Array.from({ length: 10 }, (_, index) => {
@@ -115,6 +117,8 @@ export default defineConfig({
     ...aitareyaAstakaRedirects,
     '/aswalayana-sandhyavandanam': '/aswalayana-sandhyavandanam/prata',
     '/apastamba-sandhyavandanam': '/apastamba-sandhyavandanam/prata',
+    '/offline': '/',
+    '/iast/offline': '/iast',
     '/iast/aswalayana-sandhyavandanam': '/iast/aswalayana-sandhyavandanam/prata',
     '/iast/apastamba-sandhyavandanam': '/iast/apastamba-sandhyavandanam/prata',
     '/upanishads/isha-upanishad': '/isha-upanishad',
@@ -125,12 +129,20 @@ export default defineConfig({
     '/iast/upanishads/katha-upanishad': '/iast/katha-upanishad',
     '/upanishads/prashna-upanishad': '/prashna-upanishad',
     '/iast/upanishads/prashna-upanishad': '/iast/prashna-upanishad',
+    '/upanishads/mundaka-upanishad': '/mundaka-upanishad',
+    '/iast/upanishads/mundaka-upanishad': '/iast/mundaka-upanishad',
+    '/upanishads/mandukya-upanishad': '/mandukya-upanishad',
+    '/iast/upanishads/mandukya-upanishad': '/iast/mandukya-upanishad',
     '/upanishads/taittiriya-upanishad': '/taittiriya-upanishad',
     '/iast/upanishads/taittiriya-upanishad': '/iast/taittiriya-upanishad',
     '/upanishads/mahanarayana-upanishad': '/mahanarayana-upanishad',
     '/iast/upanishads/mahanarayana-upanishad': '/iast/mahanarayana-upanishad',
     '/upanishads/aitareya-upanishad': '/aitareya-upanishad',
     '/iast/upanishads/aitareya-upanishad': '/iast/aitareya-upanishad',
+    '/upanishads/chandogya-upanishad': '/chandogya-upanishad',
+    '/iast/upanishads/chandogya-upanishad': '/iast/chandogya-upanishad',
+    '/upanishads/brihadaranyaka-upanishad': '/brihadaranyaka-upanishad',
+    '/iast/upanishads/brihadaranyaka-upanishad': '/iast/brihadaranyaka-upanishad',
   },
 
   integrations: [
@@ -144,6 +156,10 @@ export default defineConfig({
               src: './src/assets/logo-light.svg',
               alt: 'Vaidhika Dharma',
           },
+          social: [
+              { icon: 'youtube', label: 'YouTube', href: YOUTUBE_CHANNEL_URL },
+              { icon: 'whatsApp', label: 'WhatsApp', href: WHATSAPP_CHANNEL_URL },
+          ],
           components: {
               Head: './src/components/Head.astro',
               Hero: './src/components/Hero.astro',
@@ -153,6 +169,7 @@ export default defineConfig({
               Footer: './src/components/Footer.astro',
               Search: './src/components/Search.astro',
               Header: './src/components/Header.astro',
+              SocialIcons: './src/components/SocialIcons.astro',
               MobileMenuFooter: './src/components/MobileMenuFooter.astro',
               ThemeSelect: './src/components/ThemeSelect.astro',
               ThemeProvider: './src/components/ThemeProvider.astro',
@@ -195,6 +212,7 @@ export default defineConfig({
                               directory: 'vedamantras',
                           },
                       },
+                      yajushaSidebarGroup(),
                   ],
               },
               {

@@ -1,6 +1,7 @@
 ---
 import type { HomeLocale } from '../../data/home';
 import type { SamhitaPageNavLinks } from '../../lib/samhita-nav';
+import { getUiCopy } from '../../data/ui-copy';
 
 interface Props {
 	links: SamhitaPageNavLinks;
@@ -15,11 +16,12 @@ if (!prev && !next && !up && !index && !start) {
 }
 
 const isIast = locale === 'iast';
+const copy = getUiCopy(locale);
 const prevDir = isIast ? 'Previous' : 'पूर्व';
 const nextDir = isIast ? 'Next' : 'अग्रिम';
-const seqPrev = 'Previous';
-const seqNext = 'Next';
-const seqLabel = 'Sequence';
+const seqPrev = copy.seqPrev;
+const seqNext = copy.seqNext;
+const seqLabel = copy.sequence;
 const shortcutHint = 'n / p';
 ---
 

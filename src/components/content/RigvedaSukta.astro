@@ -1,6 +1,7 @@
 ---
 import SuktaPage from './SuktaPage.astro';
 import Verse from './Verse.astro';
+import MantraPadas from './MantraPadas.astro';
 import CorpusJumpNav from './CorpusJumpNav.astro';
 import SamhitaPageNav from './SamhitaPageNav.astro';
 import StudyLayer from './StudyLayer.astro';
@@ -32,8 +33,7 @@ const jumpItems = getRigvedaSuktaMantraJumpItems(mandala, sukta, locale);
 const pageNav = getRigvedaSuktaPageNav(mandala, sukta, locale);
 const jumpTitle = locale === 'iast' ? 'Jump to mantra' : 'मन्त्रम् अनुगच्छ';
 
-/** @type {Record<number, string>} */
-const mantraTexts = {};
+const mantraTexts: Record<number, string> = {};
 
 for (const record of mantraRecords) {
 	if (locale === 'iast') {
@@ -60,6 +60,16 @@ const studyRows = [
 				: `ऋग्वेद शाकल · मण्डल ${mandala}, सूक्त ${sukta}`,
 	},
 ];
+
+const renderedVerses = mantraRecords.map((record) => {
+	const altSource = locale === 'iast' ? record.text : record.iast;
+	return {
+		number: record.verse,
+		cite: 'RV ' + mandala + '.' + sukta + '.' + record.verse,
+		padas: splitMantraPadas(mantraTexts[record.verse]),
+		altPadas: altSource ? splitMantraPadas(altSource) : [],
+	};
+});
 ---
 
 <SuktaPage locale={locale} class="rigveda-samhita">
@@ -73,23 +83,18 @@ const studyRows = [
 	</header>
 	<div class="veda-sukta-block__mantras">
 		{
-			mantraRecords.map((record) => (
+			renderedVerses.map((verse) => (
 				<Verse
-					number={record.verse}
-					id={`mantra-${record.verse}`}
+					number={verse.number}
+					id={'mantra-' + verse.number}
 					locale={locale}
 					numberPosition="end"
+					cite={verse.cite}
 				>
-					{splitMantraPadas(mantraTexts[record.verse]).map((pada) => (
-						<p>{pada}</p>
-					))}
-					{(locale === 'iast' ? record.text : record.iast) && (
-						<div slot="alt">
-							{splitMantraPadas((locale === 'iast' ? record.text : record.iast) ?? '').map((pada) => (
-								<p>{pada}</p>
-							))}
-						</div>
-					)}
+					<MantraPadas padas={verse.padas} />
+					<div slot="alt">
+						<MantraPadas padas={verse.altPadas} />
+					</div>
 				</Verse>
 			))
 		}

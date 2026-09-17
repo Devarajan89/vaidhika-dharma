@@ -9,7 +9,9 @@ import {
 	SITE_ORIGIN,
 	slugPath,
 } from './seo';
+import { CHANNEL_SAME_AS } from '../data/channels';
 import { sangrahaSegmentLabels } from '../data/sangraha';
+import { yajushaSegmentLabels } from '../data/yajusha';
 import { buildFaqJsonLd, getPageFaq, getSandhyaHowTo } from '../data/seo-faq';
 
 export interface StructuredDataInput {
@@ -31,6 +33,7 @@ export interface BreadcrumbNavItem {
 
 const SEGMENT_LABELS: Record<string, string> = {
 	...sangrahaSegmentLabels(),
+	...yajushaSegmentLabels(),
 	iast: 'IAST',
 	nityakarma: 'Nityakarma',
 	'aswalayana-sandhyavandanam': 'Aśvalāyana Sandhyāvandanam',
@@ -55,9 +58,13 @@ const SEGMENT_LABELS: Record<string, string> = {
 	'kena-upanishad': 'Kenopaniṣad',
 	'katha-upanishad': 'Kaṭhopaniṣad',
 	'prashna-upanishad': 'Praśnopaniṣad',
+	'mundaka-upanishad': 'Muṇḍakopaniṣad',
+	'mandukya-upanishad': 'Māṇḍūkyopaniṣad',
 	'taittiriya-upanishad': 'Taittirīyopaniṣad',
-	'mahanarayana-upanishad': 'Mahānārāyaṇa Upaniṣad',
 	'aitareya-upanishad': 'Aitareyopaniṣad',
+	'chandogya-upanishad': 'Chāndogyopaniṣad',
+	'brihadaranyaka-upanishad': 'Bṛhadāraṇyakopaniṣad',
+	'mahanarayana-upanishad': 'Mahānārāyaṇa Upaniṣad',
 	'sri-rudra-prashnah': 'Śrī Rudra Praśnaḥ',
 	'sri-rudra-laghunyasa': 'Śrī Rudra Laghunyāsaḥ',
 	chamakam: 'Chamakam',
@@ -71,7 +78,6 @@ const SEGMENT_LABELS: Record<string, string> = {
 	'ganapathy-atharvasirsham': 'Gaṇapati Atharvaśīrṣam',
 	'pancha-rudram': 'Pañca Rudram',
 	'brahmanaspati-suktam': 'Brahmaṇaspati Sūktam',
-	offline: 'Offline',
 	search: 'Search',
 };
 
@@ -234,6 +240,7 @@ function buildOrganization(): Record<string, unknown> {
 			height: SITE_LOGO_SIZE,
 		},
 		email: 'contact@vaidhikadharma.org',
+		sameAs: [...CHANNEL_SAME_AS],
 	};
 }
 

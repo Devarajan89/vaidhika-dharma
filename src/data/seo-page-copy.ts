@@ -119,6 +119,14 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 			iast: 'Chamakam (Camakam) follows Namakam in the Śrī Rudra recitation, with Vedic svara.',
 		},
 	},
+	'yajusha-mantra-ratnakaram': {
+		description:
+			'Yājuṣa Mantra Ratnākaram — Taittirīya Yajurveda mantra collection in twelve khaṇḍas, with svara — Vaidhika Dharma.',
+		intro: {
+			root: 'Yājuṣa Mantra Ratnākaram — याजुष मन्त्र रत्नाकरम् in twelve khaṇḍas. Taittirīya and Ṛgveda mantras with svara, in book order.',
+			iast: 'Yājuṣa Mantra Ratnākaram — Taittirīya Yajurveda compilation in twelve khaṇḍas, with Vedic svara, in book order.',
+		},
+	},
 	'purusha-suktam': {
 		description:
 			'Puruṣa Sūktam (Purusha Sukta, Purusa Suktam) with Vedic svara — free online chant text — Vaidhika Dharma.',
@@ -458,6 +466,20 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 			iast: 'Praśnopaniṣad (Prashna Upanishad, Prasna, Pippalāda) with Vedic svara.',
 		},
 	},
+	'mundaka-upanishad': {
+		description: 'Muṇḍakopaniṣad (Mundaka Upanishad) with Vedic svara — Vaidhika Dharma.',
+		intro: {
+			root: 'Muṇḍakopaniṣad (Mundaka Upanishad) with svara. Three muṇḍakas on parā and aparā vidyā.',
+			iast: 'Muṇḍakopaniṣad (Mundaka Upanishad) with Vedic svara. Three muṇḍakas on parā and aparā vidyā.',
+		},
+	},
+	'mandukya-upanishad': {
+		description: 'Māṇḍūkyopaniṣad (Mandukya Upanishad) with Vedic svara — Vaidhika Dharma.',
+		intro: {
+			root: 'Māṇḍūkyopaniṣad (Mandukya Upanishad) with svara. Twelve mantras on oṃ and the four pādas of the self.',
+			iast: 'Māṇḍūkyopaniṣad (Mandukya Upanishad) with Vedic svara. Twelve mantras on oṃ and the four pādas of the self.',
+		},
+	},
 	'taittiriya-upanishad': {
 		description: 'Taittirīyopaniṣad (Taittiriya Upanishad) with Vedic svara — Vaidhika Dharma.',
 		intro: {
@@ -465,18 +487,46 @@ const PAGE_SEO: Record<string, PageSeoCopy> = {
 			iast: 'Taittirīyopaniṣad (Taittiriya Upanishad) with Vedic svara.',
 		},
 	},
-	'mahanarayana-upanishad': {
-		description: 'Mahānārāyaṇa Upaniṣad (Mahanarayana, Narayana Upanishad) with Vedic svara — Vaidhika Dharma.',
-		intro: {
-			root: 'Mahānārāyaṇa Upaniṣad (Mahanarayana Upanishad) with svara.',
-			iast: 'Mahānārāyaṇa Upaniṣad (Mahanarayana, Nārāyaṇa Upanishad) with Vedic svara.',
-		},
-	},
 	'aitareya-upanishad': {
 		description: 'Aitareyopaniṣad (Aitareya Upanishad) with Vedic svara — Vaidhika Dharma.',
 		intro: {
 			root: 'Aitareyopaniṣad (Aitareya Upanishad) with svara.',
 			iast: 'Aitareyopaniṣad (Aitareya Upanishad) with Vedic svara.',
+		},
+	},
+	'chandogya-upanishad': {
+		description: 'Chāndogyopaniṣad (Chandogya Upanishad) — Vaidhika Dharma.',
+		intro: {
+			root: 'Chāndogyopaniṣad (Chandogya Upanishad). Eight adhyāyas of the Sāmaveda.',
+			iast: 'Chāndogyopaniṣad (Chandogya Upanishad). Eight adhyāyas of the Sāmaveda.',
+		},
+	},
+	'brihadaranyaka-upanishad': {
+		description: 'Bṛhadāraṇyakopaniṣad (Brihadaranyaka Upanishad, Kāṇva) — Vaidhika Dharma.',
+		intro: {
+			root: 'Bṛhadāraṇyakopaniṣad (Brihadaranyaka Upanishad) of the Kāṇva recension.',
+			iast: 'Bṛhadāraṇyakopaniṣad (Brihadaranyaka Upanishad) of the Kāṇva recension.',
+		},
+	},
+	'svetasvatara-upanishad': {
+		description: 'Śvetāśvataropaniṣad (Svetasvatara Upanishad) — Vaidhika Dharma.',
+		intro: {
+			root: 'Śvetāśvataropaniṣad (Svetasvatara Upanishad). Six adhyāyas of the Kṛṣṇa Yajurveda.',
+			iast: 'Śvetāśvataropaniṣad (Svetasvatara Upanishad). Six adhyāyas of the Kṛṣṇa Yajurveda.',
+		},
+	},
+	'kaivalya-upanishad': {
+		description: 'Kaivalyopaniṣad (Kaivalya Upanishad) — Vaidhika Dharma.',
+		intro: {
+			root: 'Kaivalyopaniṣad (Kaivalya Upanishad). Two khaṇḍas of the Kṛṣṇa Yajurveda.',
+			iast: 'Kaivalyopaniṣad (Kaivalya Upanishad). Two khaṇḍas of the Kṛṣṇa Yajurveda.',
+		},
+	},
+	'mahanarayana-upanishad': {
+		description: 'Mahānārāyaṇa Upaniṣad (Mahanarayana, Narayana Upanishad) with Vedic svara — Vaidhika Dharma.',
+		intro: {
+			root: 'Mahānārāyaṇa Upaniṣad (Mahanarayana Upanishad) with svara.',
+			iast: 'Mahānārāyaṇa Upaniṣad (Mahanarayana, Nārāyaṇa Upanishad) with Vedic svara.',
 		},
 	},
 	search: {

@@ -1,0 +1,2797 @@
+{
+  "khandas": [
+    {
+      "id": "vikirna",
+      "rootTitle": "विकीर्णमन्त्राः",
+      "iastTitle": "Vikīrṇamantrāḥ",
+      "bookPage": 1
+    },
+    {
+      "id": "homadi",
+      "rootTitle": "होमादिमन्त्राः",
+      "iastTitle": "Homādimantrāḥ",
+      "bookPage": 101
+    },
+    {
+      "id": "mahanarayana",
+      "rootTitle": "महानारायणम्",
+      "iastTitle": "Mahānārāyaṇam",
+      "bookPage": 201
+    },
+    {
+      "id": "udakashanti",
+      "rootTitle": "उदकशान्तिः",
+      "iastTitle": "Udakaśāntiḥ",
+      "bookPage": 301
+    },
+    {
+      "id": "mahanyasa",
+      "rootTitle": "महान्यासादयः",
+      "iastTitle": "Mahānyāsādayaḥ",
+      "bookPage": 401
+    },
+    {
+      "id": "taittiriya-upanishad",
+      "rootTitle": "तैत्तिरीयोपनिषत्",
+      "iastTitle": "Taittirīyopaniṣat",
+      "bookPage": 501
+    },
+    {
+      "id": "mantra-prashna-1",
+      "rootTitle": "मन्त्रप्रश्नः १",
+      "iastTitle": "Mantrapraśnaḥ 1",
+      "bookPage": 601
+    },
+    {
+      "id": "mantra-prashna-2",
+      "rootTitle": "मन्त्रप्रश्नः २",
+      "iastTitle": "Mantrapraśnaḥ 2",
+      "bookPage": 618
+    },
+    {
+      "id": "abhisheka",
+      "rootTitle": "अभिषेकमन्त्राः",
+      "iastTitle": "Abhiṣekamantrāḥ",
+      "bookPage": 701
+    },
+    {
+      "id": "laghu-prayoga",
+      "rootTitle": "लघुप्रयोगदर्शनी",
+      "iastTitle": "Laghuprayogadarsanī",
+      "bookPage": 1001
+    },
+    {
+      "id": "prayoga",
+      "rootTitle": "प्रयोगखण्डः",
+      "iastTitle": "Prayogakhaṇḍaḥ",
+      "bookPage": 1007
+    },
+    {
+      "id": "anubandha",
+      "rootTitle": "अनुबन्धः",
+      "iastTitle": "Anubandhaḥ",
+      "bookPage": 1066
+    }
+  ],
+  "entries": [
+    {
+      "order": 1,
+      "id": "ganesha-prarthana",
+      "rootTitle": "गणेश प्रार्थना",
+      "iastTitle": "Gaṇeśa Prārthanā",
+      "khanda": "vikirna",
+      "bookPage": 1
+    },
+    {
+      "order": 2,
+      "id": "saraswathi-prarthana",
+      "rootTitle": "सरस्वती प्रार्थना",
+      "iastTitle": "Sarasvatī Prārthanā",
+      "khanda": "vikirna",
+      "bookPage": 1
+    },
+    {
+      "order": 3,
+      "id": "vedadayah",
+      "rootTitle": "वेदादयः",
+      "iastTitle": "Vedādayaḥ",
+      "khanda": "vikirna",
+      "bookPage": 1
+    },
+    {
+      "order": 4,
+      "id": "taittiriya-samhitadih",
+      "rootTitle": "तैत्तिरीयसंहितादिः",
+      "iastTitle": "Taittirīyasaṃhitādiḥ",
+      "khanda": "vikirna",
+      "bookPage": 2,
+      "target": "taittiriya-samhita/kanda-1/prapathaka-1"
+    },
+    {
+      "order": 5,
+      "id": "ganapathy-atharvasirsham",
+      "rootTitle": "गणपति अथर्वशीर्षम्",
+      "iastTitle": "Gaṇapati Atharvaśīrṣam",
+      "khanda": "vikirna",
+      "bookPage": 3
+    },
+    {
+      "order": 6,
+      "id": "vipra-prashamsa",
+      "rootTitle": "विप्रप्रशंसा",
+      "iastTitle": "Viprapraśaṃsā",
+      "khanda": "vikirna",
+      "bookPage": 5
+    },
+    {
+      "order": 7,
+      "id": "samucchita-prarthana",
+      "rootTitle": "समुच्चितप्रार्थना",
+      "iastTitle": "Samuccitaprārthanā",
+      "khanda": "vikirna",
+      "bookPage": 6
+    },
+    {
+      "order": 8,
+      "id": "swasti-suktam-yajusha",
+      "rootTitle": "स्वस्तिसूक्तम् (ऋ॰)",
+      "iastTitle": "Svastisūktam (Ṛ.)",
+      "khanda": "vikirna",
+      "bookPage": 7,
+      "target": "swasti-suktam"
+    },
+    {
+      "order": 9,
+      "id": "sri-lakshmi-punyaha-mantrah",
+      "rootTitle": "श्रीलक्ष्मीपुण्याहमन्त्राः",
+      "iastTitle": "Śrīlakṣmīpuṇyāhamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 8
+    },
+    {
+      "order": 10,
+      "id": "punyaha-mantrah",
+      "rootTitle": "पुण्याहमन्त्राः",
+      "iastTitle": "Puṇyāhamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 9
+    },
+    {
+      "order": 11,
+      "id": "pratisara-bandhanam",
+      "rootTitle": "प्रतिसरबन्धनमन्त्रः",
+      "iastTitle": "Pratisarabandhanamantraḥ",
+      "khanda": "vikirna",
+      "bookPage": 10
+    },
+    {
+      "order": 12,
+      "id": "ullekhanam-mantrah",
+      "rootTitle": "उल्लेखनमन्त्राः",
+      "iastTitle": "Ullekhanamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 10
+    },
+    {
+      "order": 13,
+      "id": "suvarna-gharma-suktam",
+      "rootTitle": "सुवर्णघर्मसूक्तम्",
+      "iastTitle": "Suvarṇagharmasūktam",
+      "khanda": "vikirna",
+      "bookPage": 11,
+      "target": "gharma-suktam"
+    },
+    {
+      "order": 14,
+      "id": "purusha-suktam",
+      "rootTitle": "पुरुषसूक्तम्",
+      "iastTitle": "Puruṣasūktam",
+      "khanda": "vikirna",
+      "bookPage": 14
+    },
+    {
+      "order": 15,
+      "id": "uttara-narayanam",
+      "rootTitle": "उत्तरनारायणम्",
+      "iastTitle": "Uttaranārāyaṇam",
+      "khanda": "vikirna",
+      "bookPage": 14,
+      "target": "purusha-suktam"
+    },
+    {
+      "order": 16,
+      "id": "brahma-suktam",
+      "rootTitle": "ब्रह्मसूक्तम्",
+      "iastTitle": "Brahmasūktam",
+      "khanda": "vikirna",
+      "bookPage": 15
+    },
+    {
+      "order": 17,
+      "id": "vishnu-suktam",
+      "rootTitle": "विष्णुसूक्तम्",
+      "iastTitle": "Viṣṇusūktam",
+      "khanda": "vikirna",
+      "bookPage": 15
+    },
+    {
+      "order": 18,
+      "id": "vishnu-suktam-rig-yajusha",
+      "rootTitle": "विष्णुसूक्तम् (ऋ॰)",
+      "iastTitle": "Viṣṇusūktam (Ṛ.)",
+      "khanda": "vikirna",
+      "bookPage": 16,
+      "target": "vishnu-suktam-rig"
+    },
+    {
+      "order": 19,
+      "id": "rudra-suktam",
+      "rootTitle": "रुद्रसूक्तम्",
+      "iastTitle": "Rudrasūktam",
+      "khanda": "vikirna",
+      "bookPage": 17
+    },
+    {
+      "order": 20,
+      "id": "sri-suktam",
+      "rootTitle": "श्रीसूक्तम्",
+      "iastTitle": "Śrīsūktam",
+      "khanda": "vikirna",
+      "bookPage": 17
+    },
+    {
+      "order": 21,
+      "id": "sri-suktam-shesha",
+      "rootTitle": "श्रीसूक्तशेषः",
+      "iastTitle": "Śrīsūktaśeṣaḥ",
+      "khanda": "vikirna",
+      "bookPage": 18,
+      "target": "sri-suktam"
+    },
+    {
+      "order": 22,
+      "id": "bhu-suktam",
+      "rootTitle": "भूसूक्तम्",
+      "iastTitle": "Bhūsūktam",
+      "khanda": "vikirna",
+      "bookPage": 19
+    },
+    {
+      "order": 23,
+      "id": "bhu-suktam-shikhalam",
+      "rootTitle": "भूसूक्तशिखलम्",
+      "iastTitle": "Bhūsūktaśikhalam",
+      "khanda": "vikirna",
+      "bookPage": 20,
+      "target": "bhu-suktam"
+    },
+    {
+      "order": 24,
+      "id": "nila-suktam",
+      "rootTitle": "नीलासूक्तम्",
+      "iastTitle": "Nīlāsūktam",
+      "khanda": "vikirna",
+      "bookPage": 21
+    },
+    {
+      "order": 25,
+      "id": "narayana-upanishat-yajusha",
+      "rootTitle": "नारायणोपनिषत्",
+      "iastTitle": "Nārāyaṇopaniṣat",
+      "khanda": "vikirna",
+      "bookPage": 21,
+      "target": "mahanarayana-upanishad"
+    },
+    {
+      "order": 26,
+      "id": "hiranyagarbha-suktam-yajusha",
+      "rootTitle": "हिरण्यगर्भसूक्तम्",
+      "iastTitle": "Hiraṇyagarbhasūktam",
+      "khanda": "vikirna",
+      "bookPage": 23,
+      "target": "hiranyagarbha-suktam"
+    },
+    {
+      "order": 27,
+      "id": "saura-suktam-yajusha",
+      "rootTitle": "सौरसूक्तम् (परि॰)",
+      "iastTitle": "Saura sūktam (pari.)",
+      "khanda": "vikirna",
+      "bookPage": 24,
+      "target": "saura-suktam"
+    },
+    {
+      "order": 28,
+      "id": "aditya-mantrah",
+      "rootTitle": "आदित्यमन्त्राः",
+      "iastTitle": "Ādityamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 25
+    },
+    {
+      "order": 29,
+      "id": "navagraha-suktam",
+      "rootTitle": "नवग्रहमन्त्राः",
+      "iastTitle": "Navagrahamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 25
+    },
+    {
+      "order": 30,
+      "id": "dikpala-mantrah",
+      "rootTitle": "दिक्पालकमन्त्राः",
+      "iastTitle": "Dikpālakamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 28
+    },
+    {
+      "order": 31,
+      "id": "durgashtadasha-devata",
+      "rootTitle": "दुर्गाष्टादशदेवतामन्त्राः",
+      "iastTitle": "Durgāṣṭādaśadevatāmantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 29
+    },
+    {
+      "order": 32,
+      "id": "brahma-yajna-mantrah",
+      "rootTitle": "ब्रह्मयज्ञमन्त्राः",
+      "iastTitle": "Brahmayajñamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 30,
+      "target": "apastamba-brahmayagyam"
+    },
+    {
+      "order": 33,
+      "id": "kshipra-sandhya-mantrah",
+      "rootTitle": "क्षिप्रसन्ध्यावन्दनमन्त्राः (परि॰)",
+      "iastTitle": "Kṣiprasandhyāvandana (pari.)",
+      "khanda": "vikirna",
+      "bookPage": 30,
+      "target": "apastamba-sandhyavandanam/prata"
+    },
+    {
+      "order": 34,
+      "id": "darsha-purnamasa-mantrah",
+      "rootTitle": "दर्शपूर्णमासमन्त्राः (परि॰)",
+      "iastTitle": "Darśapūrṇamāsamantrāḥ (pari.)",
+      "khanda": "vikirna",
+      "bookPage": 31,
+      "target": "taittiriya-samhita/kanda-1/prapathaka-1"
+    },
+    {
+      "order": 35,
+      "id": "griha-pravesha-japa",
+      "rootTitle": "गृहप्रवेशजपमन्त्राः (परि॰)",
+      "iastTitle": "Gṛhapraveśajapamantrāḥ (pari.)",
+      "khanda": "vikirna",
+      "bookPage": 32
+    },
+    {
+      "order": 36,
+      "id": "mrityu-suktam-harim",
+      "rootTitle": "मृत्युसूक्तम् (हरिं हरन्तम्)",
+      "iastTitle": "Mṛtyusūktam (hariṃ harantam)",
+      "khanda": "vikirna",
+      "bookPage": 36,
+      "target": "mrityu-suktam"
+    },
+    {
+      "order": 37,
+      "id": "mrityu-suktam-sarveshu",
+      "rootTitle": "मृत्युसूक्तम् (सर्वेषु वा)",
+      "iastTitle": "Mṛtyusūktam (sarveṣu vā)",
+      "khanda": "vikirna",
+      "bookPage": 37
+    },
+    {
+      "order": 38,
+      "id": "tadidampadam",
+      "rootTitle": "तदिदम्पदम्",
+      "iastTitle": "Tadidampadam",
+      "khanda": "vikirna",
+      "bookPage": 38
+    },
+    {
+      "order": 39,
+      "id": "rajayakshma-suktam-yajusha",
+      "rootTitle": "राजयक्ष्मसूक्तम् (ऋ॰)",
+      "iastTitle": "Rājayakṣmasūktam (Ṛ.)",
+      "khanda": "vikirna",
+      "bookPage": 38,
+      "target": "rajayakshma-nashana-suktam"
+    },
+    {
+      "order": 40,
+      "id": "upachara-mantrah",
+      "rootTitle": "उपचारमन्त्राः",
+      "iastTitle": "Upacāramantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 39
+    },
+    {
+      "order": 41,
+      "id": "asana-abhimantranam",
+      "rootTitle": "आसनाभिमन्त्रणम्",
+      "iastTitle": "Āsanābhimantraṇam",
+      "khanda": "vikirna",
+      "bookPage": 39
+    },
+    {
+      "order": 42,
+      "id": "ghanta-abhimantranam",
+      "rootTitle": "घण्टाभिमन्त्रणम्",
+      "iastTitle": "Ghaṇṭābhimantraṇam",
+      "khanda": "vikirna",
+      "bookPage": 39
+    },
+    {
+      "order": 43,
+      "id": "kalasha-sthapana-shlokah",
+      "rootTitle": "कलशस्थापनश्लोकाः",
+      "iastTitle": "Kalaśasthāpanaślokāḥ",
+      "khanda": "vikirna",
+      "bookPage": 40
+    },
+    {
+      "order": 44,
+      "id": "kalasha-abhimantranam",
+      "rootTitle": "कलशाभिमन्त्रणम्",
+      "iastTitle": "Kalaśābhimantraṇam",
+      "khanda": "vikirna",
+      "bookPage": 40
+    },
+    {
+      "order": 45,
+      "id": "shankha-abhimantranam",
+      "rootTitle": "शङ्खाभिमन्त्रणम्",
+      "iastTitle": "Śaṅkhābhimantraṇam",
+      "khanda": "vikirna",
+      "bookPage": 41
+    },
+    {
+      "order": 46,
+      "id": "atma-puja",
+      "rootTitle": "आत्मपूजा",
+      "iastTitle": "Ātmapūjā",
+      "khanda": "vikirna",
+      "bookPage": 41
+    },
+    {
+      "order": 47,
+      "id": "sadharana-nyasa",
+      "rootTitle": "साधारणन्यासः",
+      "iastTitle": "Sādhāraṇanyāsaḥ",
+      "khanda": "vikirna",
+      "bookPage": 42,
+      "target": "sri-rudra-laghunyasa"
+    },
+    {
+      "order": 48,
+      "id": "avahanam",
+      "rootTitle": "आवाहनम्",
+      "iastTitle": "Āvāhanam",
+      "khanda": "vikirna",
+      "bookPage": 42
+    },
+    {
+      "order": 49,
+      "id": "prana-abhimantranam",
+      "rootTitle": "प्राणाभिमन्त्रणम्",
+      "iastTitle": "Prāṇābhimantraṇam",
+      "khanda": "vikirna",
+      "bookPage": 42
+    },
+    {
+      "order": 50,
+      "id": "panchamrita-abhishechanam",
+      "rootTitle": "पञ्चामृताभिषेचनमन्त्राः",
+      "iastTitle": "Pañcāmṛtābhiṣecanamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 43
+    },
+    {
+      "order": 51,
+      "id": "visrita-abhishechanam",
+      "rootTitle": "विसृताभिषेचनमन्त्राः",
+      "iastTitle": "Visṛtābhiṣecanamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 44
+    },
+    {
+      "order": 52,
+      "id": "vastra-samarpanam",
+      "rootTitle": "वस्त्रादिसमर्पणमन्त्राः",
+      "iastTitle": "Vastrādisamarpaṇamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 45
+    },
+    {
+      "order": 53,
+      "id": "diparadhana-1",
+      "rootTitle": "दीपाराधनमन्त्राः १",
+      "iastTitle": "Dīpārādhanamantrāḥ 1",
+      "khanda": "vikirna",
+      "bookPage": 48
+    },
+    {
+      "order": 54,
+      "id": "diparadhana-2",
+      "rootTitle": "दीपाराधनमन्त्राः २",
+      "iastTitle": "Dīpārādhanamantrāḥ 2",
+      "khanda": "vikirna",
+      "bookPage": 49
+    },
+    {
+      "order": 55,
+      "id": "diparadhana-3",
+      "rootTitle": "दीपाराधनमन्त्राः ३",
+      "iastTitle": "Dīpārādhanamantrāḥ 3",
+      "khanda": "vikirna",
+      "bookPage": 50
+    },
+    {
+      "order": 56,
+      "id": "diparadhana-4",
+      "rootTitle": "दीपाराधनमन्त्राः ४",
+      "iastTitle": "Dīpārādhanamantrāḥ 4",
+      "khanda": "vikirna",
+      "bookPage": 51
+    },
+    {
+      "order": 57,
+      "id": "mantra-pushpam",
+      "rootTitle": "मन्त्रपुष्पम्",
+      "iastTitle": "Mantrapuṣpam",
+      "khanda": "vikirna",
+      "bookPage": 52
+    },
+    {
+      "order": 58,
+      "id": "oshadhi-suktam-yajusha",
+      "rootTitle": "ओषधिसूक्तम्",
+      "iastTitle": "Oṣadhisūktam",
+      "khanda": "vikirna",
+      "bookPage": 53,
+      "target": "oshadhi-suktam"
+    },
+    {
+      "order": 59,
+      "id": "bija-vapanam",
+      "rootTitle": "बीजवपनमन्त्राः",
+      "iastTitle": "Bījavapanamantrāḥ",
+      "khanda": "vikirna",
+      "bookPage": 55
+    },
+    {
+      "order": 60,
+      "id": "karna-vedhanam",
+      "rootTitle": "कर्णवेधनमन्त्राः (परि॰)",
+      "iastTitle": "Karṇavedhanamantrāḥ (pari.)",
+      "khanda": "vikirna",
+      "bookPage": 56
+    },
+    {
+      "order": 61,
+      "id": "vedadhyayana-vratam",
+      "rootTitle": "वेदाध्ययनव्रतमन्त्राः (परि॰)",
+      "iastTitle": "Vedādhyayanavratamantrāḥ (pari.)",
+      "khanda": "vikirna",
+      "bookPage": 56,
+      "target": "apastamba-brahmayagyam"
+    },
+    {
+      "order": 62,
+      "id": "agni-prarthana",
+      "rootTitle": "अग्निप्रार्थना",
+      "iastTitle": "Agniprārthanā",
+      "khanda": "homadi",
+      "bookPage": 101
+    },
+    {
+      "order": 63,
+      "id": "jayadayah",
+      "rootTitle": "जयादयः",
+      "iastTitle": "Jayādayaḥ",
+      "khanda": "homadi",
+      "bookPage": 102
+    },
+    {
+      "order": 64,
+      "id": "abhyatanah-mulam",
+      "rootTitle": "अभ्यातानाः (मूलम्)",
+      "iastTitle": "Abhyātānāḥ (mūlam)",
+      "khanda": "homadi",
+      "bookPage": 102
+    },
+    {
+      "order": 65,
+      "id": "abhyatanah-sanusvara",
+      "rootTitle": "अभ्यातानाः (सानुष्वाराः)",
+      "iastTitle": "Abhyātānāḥ (sānuṣvārāḥ)",
+      "khanda": "homadi",
+      "bookPage": 103,
+      "target": "abhyatanah-mulam"
+    },
+    {
+      "order": 66,
+      "id": "rashtrabhrtah-apastamba",
+      "rootTitle": "राष्ट्रभृतः (आपस्तम्बीयः)",
+      "iastTitle": "Rāṣṭrabhṛtaḥ (Āpastambīyaḥ)",
+      "khanda": "homadi",
+      "bookPage": 104
+    },
+    {
+      "order": 67,
+      "id": "yadasya-karmani",
+      "rootTitle": "यदस्य कर्मणि इत्यादयः",
+      "iastTitle": "Yadasya karmaṇi ityādayaḥ",
+      "khanda": "homadi",
+      "bookPage": 105
+    },
+    {
+      "order": 68,
+      "id": "vasordhara-mantrah",
+      "rootTitle": "वसोर्धारामन्त्राः",
+      "iastTitle": "Vasordhārāmantrāḥ",
+      "khanda": "homadi",
+      "bookPage": 106
+    },
+    {
+      "order": 69,
+      "id": "purnahuti-mantrah",
+      "rootTitle": "पूर्णाहुतिमन्त्राः",
+      "iastTitle": "Pūrṇāhutimantrāḥ",
+      "khanda": "homadi",
+      "bookPage": 106
+    },
+    {
+      "order": 70,
+      "id": "agni-suktam-yajusha",
+      "rootTitle": "अग्निसूक्तम्",
+      "iastTitle": "Agnisūktam",
+      "khanda": "homadi",
+      "bookPage": 107,
+      "target": "agni-suktam"
+    },
+    {
+      "order": 71,
+      "id": "brahmavarchasa-anuvaka",
+      "rootTitle": "ब्रह्मवर्चसानुवाकः",
+      "iastTitle": "Brahmavarcasānuvākaḥ",
+      "khanda": "homadi",
+      "bookPage": 107
+    },
+    {
+      "order": 72,
+      "id": "kushmanda-mantrah",
+      "rootTitle": "कूष्माण्डमन्त्राः",
+      "iastTitle": "Kūṣmāṇḍamantrāḥ",
+      "khanda": "homadi",
+      "bookPage": 108
+    },
+    {
+      "order": 73,
+      "id": "kushmanda-bodhayana",
+      "rootTitle": "कूष्माण्डमन्त्राः (बोधायनोक्ताः)",
+      "iastTitle": "Kūṣmāṇḍamantrāḥ (Bodhāyanoktāḥ)",
+      "khanda": "homadi",
+      "bookPage": 112,
+      "target": "kushmanda-mantrah"
+    },
+    {
+      "order": 74,
+      "id": "kushmanda-upasthana",
+      "rootTitle": "कूष्माण्डोपस्थानमन्त्राः",
+      "iastTitle": "Kūṣmāṇḍopasthānamantrāḥ",
+      "khanda": "homadi",
+      "bookPage": 113
+    },
+    {
+      "order": 75,
+      "id": "vaishvanaro-na-utya",
+      "rootTitle": "वैश्वानरो न ऊत्या",
+      "iastTitle": "Vaiśvānaro na ūtyā",
+      "khanda": "homadi",
+      "bookPage": 114
+    },
+    {
+      "order": 76,
+      "id": "samudra-jyeshtha",
+      "rootTitle": "समुद्रज्येष्ठा (ऋ॰)",
+      "iastTitle": "Samudrajyeṣṭhā (Ṛ.)",
+      "khanda": "homadi",
+      "bookPage": 115
+    },
+    {
+      "order": 77,
+      "id": "rakshoghna-suktam-yajusha",
+      "rootTitle": "रक्षोघ्नसूक्तम् (ऋ॰)",
+      "iastTitle": "Rakṣoghnasūktam (Ṛ.)",
+      "khanda": "homadi",
+      "bookPage": 116,
+      "target": "rakshoghna-suktam"
+    },
+    {
+      "order": 78,
+      "id": "ratri-suktam-yajusha",
+      "rootTitle": "रात्रीसूक्तम् (ऋ॰)",
+      "iastTitle": "Rātrīsūktam (Ṛ.)",
+      "khanda": "homadi",
+      "bookPage": 116,
+      "target": "ratri-suktam"
+    },
+    {
+      "order": 79,
+      "id": "ya-sugandha",
+      "rootTitle": "या सुगन्धा",
+      "iastTitle": "Yā sugandhā",
+      "khanda": "homadi",
+      "bookPage": 117
+    },
+    {
+      "order": 80,
+      "id": "yah-prachih",
+      "rootTitle": "याः प्राचीः",
+      "iastTitle": "Yāḥ prācīḥ",
+      "khanda": "homadi",
+      "bookPage": 117
+    },
+    {
+      "order": 81,
+      "id": "dig-upasthana",
+      "rootTitle": "दिगुपस्थानमन्त्राः",
+      "iastTitle": "Digupasthānamantrāḥ",
+      "khanda": "homadi",
+      "bookPage": 118
+    },
+    {
+      "order": 82,
+      "id": "shanti-panchakam",
+      "rootTitle": "शान्तिपञ्चकम्",
+      "iastTitle": "Śāntipañcakam",
+      "khanda": "homadi",
+      "bookPage": 118
+    },
+    {
+      "order": 83,
+      "id": "ghosha-shantih",
+      "rootTitle": "घोषशान्तिः",
+      "iastTitle": "Ghoṣaśāntiḥ",
+      "khanda": "homadi",
+      "bookPage": 120
+    },
+    {
+      "order": 84,
+      "id": "samrajya-suktam",
+      "rootTitle": "साम्राज्यसूक्तम्",
+      "iastTitle": "Sāmrājyasūktam",
+      "khanda": "homadi",
+      "bookPage": 123
+    },
+    {
+      "order": 85,
+      "id": "kamya-japya-mantrah",
+      "rootTitle": "काम्यजप्यमन्त्राः",
+      "iastTitle": "Kāmyajapyamantrāḥ",
+      "khanda": "homadi",
+      "bookPage": 125
+    },
+    {
+      "order": 86,
+      "id": "ashir-mantrah",
+      "rootTitle": "आशीर्मन्त्राः",
+      "iastTitle": "Āśīrmantrāḥ",
+      "khanda": "homadi",
+      "bookPage": 127
+    },
+    {
+      "order": 87,
+      "id": "ekamatya-suktam",
+      "rootTitle": "एकमत्यसूक्तम् (ऋ॰)",
+      "iastTitle": "Ekamatya sūktam (Ṛ.)",
+      "khanda": "homadi",
+      "bookPage": 128
+    },
+    {
+      "order": 88,
+      "id": "ambhasya-pare",
+      "rootTitle": "अम्भस्य पारे",
+      "iastTitle": "Ambhasya pāre",
+      "khanda": "mahanarayana",
+      "bookPage": 201,
+      "target": "mahanarayana-upanishad#section-1"
+    },
+    {
+      "order": 89,
+      "id": "sarva-deva-gayatryah",
+      "rootTitle": "सर्वदेवगायत्र्यः",
+      "iastTitle": "Sarvadevagāyatryaḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 203,
+      "target": "mahanarayana-upanishad#section-2"
+    },
+    {
+      "order": 90,
+      "id": "durva-suktam",
+      "rootTitle": "दूर्वासूक्तम्",
+      "iastTitle": "Dūrvāsūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 203,
+      "target": "mahanarayana-upanishad#section-3"
+    },
+    {
+      "order": 91,
+      "id": "mrittika-suktam",
+      "rootTitle": "मृत्तिकासूक्तम्",
+      "iastTitle": "Mṛttikāsūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 204,
+      "target": "mahanarayana-upanishad#section-4"
+    },
+    {
+      "order": 92,
+      "id": "shatru-jaya-mantrah",
+      "rootTitle": "शत्रुजयमन्त्राः",
+      "iastTitle": "Śatrujayamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 204,
+      "target": "mahanarayana-upanishad#section-5"
+    },
+    {
+      "order": 93,
+      "id": "aghamarshana-suktam",
+      "rootTitle": "अघमर्षणसूक्तम्",
+      "iastTitle": "Aghamarṣaṇasūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 205,
+      "target": "mahanarayana-upanishad#section-6"
+    },
+    {
+      "order": 94,
+      "id": "durga-suktam",
+      "rootTitle": "दुर्गासूक्तम्",
+      "iastTitle": "Durgāsūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 207
+    },
+    {
+      "order": 95,
+      "id": "vyahriti-homa",
+      "rootTitle": "व्याहृतिहोममन्त्राः",
+      "iastTitle": "Vyāhṛtihomamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 207,
+      "target": "mahanarayana-upanishad#section-8"
+    },
+    {
+      "order": 96,
+      "id": "jnana-prapti-homa",
+      "rootTitle": "ज्ञानप्राप्त्यर्थहोममन्त्राः",
+      "iastTitle": "Jñānaprāptyarthahomamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 208,
+      "target": "mahanarayana-upanishad#section-9"
+    },
+    {
+      "order": 97,
+      "id": "veda-vismaranaya-japa",
+      "rootTitle": "वेदादिस्मरणाय जपमन्त्राः",
+      "iastTitle": "Vedādismaraṇāya japamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 208,
+      "target": "mahanarayana-upanishad#section-10"
+    },
+    {
+      "order": 98,
+      "id": "tapah-prashamsa",
+      "rootTitle": "तपः प्रशंसा",
+      "iastTitle": "Tapaḥ praśaṃsā",
+      "khanda": "mahanarayana",
+      "bookPage": 209,
+      "target": "mahanarayana-upanishad#section-11"
+    },
+    {
+      "order": 99,
+      "id": "dahara-vidya",
+      "rootTitle": "दहरविद्या",
+      "iastTitle": "Daharavidyā",
+      "khanda": "mahanarayana",
+      "bookPage": 209,
+      "target": "mahanarayana-upanishad#section-13"
+    },
+    {
+      "order": 100,
+      "id": "ghrita-suktam-mn",
+      "rootTitle": "घृतसूक्तम्",
+      "iastTitle": "Ghṛtasūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 210,
+      "target": "ghrita-stuti-suktam"
+    },
+    {
+      "order": 101,
+      "id": "sannyasa-suktam",
+      "rootTitle": "संन्याससूक्तम्",
+      "iastTitle": "Saṃnyāsasūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 210,
+      "target": "mahanarayana-upanishad#section-15"
+    },
+    {
+      "order": 102,
+      "id": "narayana-suktam",
+      "rootTitle": "नारायणसूक्तम्",
+      "iastTitle": "Nārāyaṇasūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 211
+    },
+    {
+      "order": 103,
+      "id": "aditya-upasana",
+      "rootTitle": "आदित्योपासनमन्त्राः",
+      "iastTitle": "Ādityopāsanamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 212,
+      "target": "mahanarayana-upanishad#section-17"
+    },
+    {
+      "order": 104,
+      "id": "shiva-upasana",
+      "rootTitle": "शिवोपासनमन्त्राः",
+      "iastTitle": "Śivopāsanamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 212,
+      "target": "mahanarayana-upanishad#section-19"
+    },
+    {
+      "order": 105,
+      "id": "vrksha-vishesha",
+      "rootTitle": "वृक्षविशेषस्याभिधानम्",
+      "iastTitle": "Vṛkṣaviśeṣasyābhidhānam",
+      "khanda": "mahanarayana",
+      "bookPage": 214,
+      "target": "mahanarayana-upanishad#section-27"
+    },
+    {
+      "order": 106,
+      "id": "bhu-devata-karma",
+      "rootTitle": "भूदेवताकर्मः",
+      "iastTitle": "Bhūdevatākarmaḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 214,
+      "target": "mahanarayana-upanishad#section-28"
+    },
+    {
+      "order": 107,
+      "id": "sandhya-vandana-mantrah-mn",
+      "rootTitle": "सन्ध्यावन्दनमन्त्राः",
+      "iastTitle": "Sandhyāvandana mantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 214,
+      "target": "apastamba-sandhyavandanam/prata"
+    },
+    {
+      "order": 108,
+      "id": "trisuparnam",
+      "rootTitle": "त्रिसुपर्णम्",
+      "iastTitle": "Trisuparṇam",
+      "khanda": "mahanarayana",
+      "bookPage": 216,
+      "target": "mahanarayana-upanishad#section-34"
+    },
+    {
+      "order": 109,
+      "id": "medha-suktam",
+      "rootTitle": "मेधासूक्तम्",
+      "iastTitle": "Medhāsūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 217
+    },
+    {
+      "order": 110,
+      "id": "mrityu-suktam-mn",
+      "rootTitle": "मृत्युसूक्तम्",
+      "iastTitle": "Mṛtyusūktam",
+      "khanda": "mahanarayana",
+      "bookPage": 218,
+      "target": "mahanarayana-upanishad#section-35"
+    },
+    {
+      "order": 111,
+      "id": "papa-nivarakah",
+      "rootTitle": "पापनिवारका मन्त्राः",
+      "iastTitle": "Pāpanivārakā mantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 219,
+      "target": "mahanarayana-upanishad#section-38"
+    },
+    {
+      "order": 112,
+      "id": "kamo-akarshit",
+      "rootTitle": "कामोऽकार्षीत् मन्युरकार्षीत्",
+      "iastTitle": "Kāmo'kārṣīt manyurakārṣīt",
+      "khanda": "mahanarayana",
+      "bookPage": 220,
+      "target": "mahanarayana-upanishad#section-41"
+    },
+    {
+      "order": 113,
+      "id": "viraja-homa",
+      "rootTitle": "विरजाहोममन्त्राः",
+      "iastTitle": "Virajāhomamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 220,
+      "target": "mahanarayana-upanishad#section-42"
+    },
+    {
+      "order": 114,
+      "id": "vaishvadeva-mantrah",
+      "rootTitle": "वैश्वदेवमन्त्राः",
+      "iastTitle": "Vaiśvadevamantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 222,
+      "target": "mahanarayana-upanishad#section-43"
+    },
+    {
+      "order": 115,
+      "id": "pranahuti-mantrah",
+      "rootTitle": "प्राणाहुतिमन्त्राः",
+      "iastTitle": "Prāṇāhutimantrāḥ",
+      "khanda": "mahanarayana",
+      "bookPage": 223,
+      "target": "mahanarayana-upanishad#section-44"
+    },
+    {
+      "order": 116,
+      "id": "avayava-svasthata",
+      "rootTitle": "अवयवस्वस्थताप्रार्थना",
+      "iastTitle": "Avayavasvasthatāprārthanā",
+      "khanda": "mahanarayana",
+      "bookPage": 224,
+      "target": "mahanarayana-upanishad#section-47"
+    },
+    {
+      "order": 117,
+      "id": "udaka-kalasha-sthapana",
+      "rootTitle": "कलशस्थापनश्लोकाः",
+      "iastTitle": "Kalaśasthāpanaślokāḥ",
+      "khanda": "udakashanti",
+      "bookPage": 301,
+      "target": "kalasha-sthapana-shlokah"
+    },
+    {
+      "order": 118,
+      "id": "udaka-kalasha-mantrah",
+      "rootTitle": "कलशस्थापनमन्त्राः",
+      "iastTitle": "Kalaśasthāpanamantrāḥ",
+      "khanda": "udakashanti",
+      "bookPage": 302,
+      "target": "kalasha-abhimantranam"
+    },
+    {
+      "order": 119,
+      "id": "udaka-vedadayah",
+      "rootTitle": "वेदादयः",
+      "iastTitle": "Vedādayaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 304,
+      "target": "vedadayah"
+    },
+    {
+      "order": 120,
+      "id": "rakshoghnam",
+      "rootTitle": "राक्षोघ्नम्",
+      "iastTitle": "Rākṣoghnam",
+      "khanda": "udakashanti",
+      "bookPage": 304,
+      "target": "rakshoghna-suktam"
+    },
+    {
+      "order": 121,
+      "id": "indram-vo-vishvatah",
+      "rootTitle": "इन्द्रं वो विश्वतस्परि",
+      "iastTitle": "Indraṃ vo viśvataspari",
+      "khanda": "udakashanti",
+      "bookPage": 306
+    },
+    {
+      "order": 122,
+      "id": "yata-indra-svastida",
+      "rootTitle": "यत इन्द्र, स्वस्तिदा",
+      "iastTitle": "Yata indra, svastidā",
+      "khanda": "udakashanti",
+      "bookPage": 307
+    },
+    {
+      "order": 123,
+      "id": "mahanindrah-sajosha",
+      "rootTitle": "महानिन्द्रः, सजोषा",
+      "iastTitle": "Mahānindraḥ, sajoṣā",
+      "khanda": "udakashanti",
+      "bookPage": 308
+    },
+    {
+      "order": 124,
+      "id": "ye-devah-purahsadah",
+      "rootTitle": "ये देवाः पुरःसदः",
+      "iastTitle": "Ye devāḥ puraḥsadaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 308
+    },
+    {
+      "order": 125,
+      "id": "agnir-ayushman",
+      "rootTitle": "अग्निरायुष्मान्",
+      "iastTitle": "Agnirāyuṣmān",
+      "khanda": "udakashanti",
+      "bookPage": 309
+    },
+    {
+      "order": 126,
+      "id": "ya-vam-indravaruna",
+      "rootTitle": "या वामिन्द्रावरुणा",
+      "iastTitle": "Yā vāmindrāvaruṇā",
+      "khanda": "udakashanti",
+      "bookPage": 310
+    },
+    {
+      "order": 127,
+      "id": "abhyam",
+      "rootTitle": "आभ्यम्",
+      "iastTitle": "Ābhyam",
+      "khanda": "udakashanti",
+      "bookPage": 311
+    },
+    {
+      "order": 128,
+      "id": "rashtrabhrtah-udaka",
+      "rootTitle": "राष्ट्रभृतः",
+      "iastTitle": "Rāṣṭrabhṛtaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 311,
+      "target": "rashtrabhrtah-apastamba"
+    },
+    {
+      "order": 129,
+      "id": "sarpa-suktam",
+      "rootTitle": "सर्पसूक्तम्",
+      "iastTitle": "Sarpasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 314
+    },
+    {
+      "order": 130,
+      "id": "pancha-chodah",
+      "rootTitle": "पञ्चचोडाः",
+      "iastTitle": "Pañcacoḍāḥ",
+      "khanda": "udakashanti",
+      "bookPage": 314
+    },
+    {
+      "order": 131,
+      "id": "apratiratham-udaka",
+      "rootTitle": "अप्रतिरथम् (परि॰)",
+      "iastTitle": "Apratiratham (pari.)",
+      "khanda": "udakashanti",
+      "bookPage": 316,
+      "target": "apratiratha-suktam"
+    },
+    {
+      "order": 132,
+      "id": "sham-ca-me",
+      "rootTitle": "शं च मे मयश्च मे",
+      "iastTitle": "Śaṃ ca me mayaśca me",
+      "khanda": "udakashanti",
+      "bookPage": 318,
+      "target": "chamakam"
+    },
+    {
+      "order": 133,
+      "id": "vihavyam",
+      "rootTitle": "विहव्यम्",
+      "iastTitle": "Vihavyam",
+      "khanda": "udakashanti",
+      "bookPage": 318
+    },
+    {
+      "order": 134,
+      "id": "mrigaram",
+      "rootTitle": "मृगारम्",
+      "iastTitle": "Mṛgāram",
+      "khanda": "udakashanti",
+      "bookPage": 319
+    },
+    {
+      "order": 135,
+      "id": "sarpahutayah",
+      "rootTitle": "सर्पाहुतयः",
+      "iastTitle": "Sarpāhutayaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 321
+    },
+    {
+      "order": 136,
+      "id": "gandharvahutayah",
+      "rootTitle": "गन्धर्वाहुतयः",
+      "iastTitle": "Gandharvāhutayaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 323
+    },
+    {
+      "order": 137,
+      "id": "anyanayah",
+      "rootTitle": "अन्यानयः",
+      "iastTitle": "Anyānayaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 324
+    },
+    {
+      "order": 138,
+      "id": "bhutam-bhavyam",
+      "rootTitle": "भूतं भव्यं भविष्यत्",
+      "iastTitle": "Bhūtaṃ bhavyaṃ bhaviṣyat",
+      "khanda": "udakashanti",
+      "bookPage": 325
+    },
+    {
+      "order": 139,
+      "id": "atharva-shirasah",
+      "rootTitle": "अथर्वशिरसः",
+      "iastTitle": "Atharvaśirasaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 325,
+      "target": "ganapathy-atharvasirsham"
+    },
+    {
+      "order": 140,
+      "id": "pratyangirasam",
+      "rootTitle": "प्रत्यङ्गिरसम्",
+      "iastTitle": "Pratyaṅgirasam",
+      "khanda": "udakashanti",
+      "bookPage": 326
+    },
+    {
+      "order": 141,
+      "id": "prano-rakshati",
+      "rootTitle": "प्राणो रक्षति",
+      "iastTitle": "Prāṇo rakṣati",
+      "khanda": "udakashanti",
+      "bookPage": 327
+    },
+    {
+      "order": 142,
+      "id": "simhe-vyaghra",
+      "rootTitle": "सिंहे व्याघ्र उत",
+      "iastTitle": "Siṃhe vyāghra uta",
+      "khanda": "udakashanti",
+      "bookPage": 328
+    },
+    {
+      "order": 143,
+      "id": "aham-asmi-prathamaja",
+      "rootTitle": "अहमस्मि प्रथमजा",
+      "iastTitle": "Ahamasmi prathamajā",
+      "khanda": "udakashanti",
+      "bookPage": 330
+    },
+    {
+      "order": 144,
+      "id": "vak-suktam",
+      "rootTitle": "वाक्सूक्तम्",
+      "iastTitle": "Vāksūktam",
+      "khanda": "udakashanti",
+      "bookPage": 331
+    },
+    {
+      "order": 145,
+      "id": "shraddha-suktam-yajusha",
+      "rootTitle": "श्रद्धासूक्तम्",
+      "iastTitle": "Śraddhāsūktam",
+      "khanda": "udakashanti",
+      "bookPage": 331
+    },
+    {
+      "order": 146,
+      "id": "brahma-suktam-udaka",
+      "rootTitle": "ब्रह्मसूक्तम्",
+      "iastTitle": "Brahmasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 332,
+      "target": "brahma-suktam"
+    },
+    {
+      "order": 147,
+      "id": "go-suktam-yajusha",
+      "rootTitle": "गोसूक्तम्",
+      "iastTitle": "Gosūktam",
+      "khanda": "udakashanti",
+      "bookPage": 333,
+      "target": "go-suktam"
+    },
+    {
+      "order": 148,
+      "id": "ta-surya-candramasa",
+      "rootTitle": "ता सूर्या चन्द्रमसा",
+      "iastTitle": "Tā sūryā candramasā",
+      "khanda": "udakashanti",
+      "bookPage": 334
+    },
+    {
+      "order": 149,
+      "id": "nasadiya-suktam-yajusha",
+      "rootTitle": "नासदीयसूक्तम्",
+      "iastTitle": "Nāsadīyasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 335,
+      "target": "nasadiya-suktam"
+    },
+    {
+      "order": 150,
+      "id": "bhagya-suktam",
+      "rootTitle": "भाग्यसूक्तम्",
+      "iastTitle": "Bhāgyasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 336
+    },
+    {
+      "order": 151,
+      "id": "nakshatra-suktam-yajusha",
+      "rootTitle": "नक्षत्रसूक्तम्",
+      "iastTitle": "Nakṣatrasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 337,
+      "target": "nakshatra-suktam"
+    },
+    {
+      "order": 152,
+      "id": "navo-navo-bhavati",
+      "rootTitle": "नवोनवो भवति",
+      "iastTitle": "Navonavo bhavati",
+      "khanda": "udakashanti",
+      "bookPage": 345
+    },
+    {
+      "order": 153,
+      "id": "surabhimatih",
+      "rootTitle": "सुरभिमतीः, अजिह्वाः",
+      "iastTitle": "Surabhimatīḥ, ajihvāḥ",
+      "khanda": "udakashanti",
+      "bookPage": 348
+    },
+    {
+      "order": 154,
+      "id": "varuna-suktam-yajusha",
+      "rootTitle": "वरुणसूक्तम्",
+      "iastTitle": "Varuṇasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 348,
+      "target": "varuna-suktam"
+    },
+    {
+      "order": 155,
+      "id": "hiranyavarniyah",
+      "rootTitle": "हिरण्यवर्णीयाः",
+      "iastTitle": "Hiraṇyavarṇīyāḥ",
+      "khanda": "udakashanti",
+      "bookPage": 349
+    },
+    {
+      "order": 156,
+      "id": "pavamana-suktam",
+      "rootTitle": "पवमानसूक्तम्",
+      "iastTitle": "Pavamānasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 350
+    },
+    {
+      "order": 157,
+      "id": "vyahriti-adayah",
+      "rootTitle": "व्याहृत्यादयः",
+      "iastTitle": "Vyāhṛtyādayaḥ",
+      "khanda": "udakashanti",
+      "bookPage": 351
+    },
+    {
+      "order": 158,
+      "id": "ayushya-suktam-yajusha",
+      "rootTitle": "आयुष्यसूक्तम्",
+      "iastTitle": "Āyuṣyasūktam",
+      "khanda": "udakashanti",
+      "bookPage": 351,
+      "target": "ayushya-suktam"
+    },
+    {
+      "order": 159,
+      "id": "paridhaniya",
+      "rootTitle": "परिधानीया",
+      "iastTitle": "Paridhānīyā",
+      "khanda": "udakashanti",
+      "bookPage": 352
+    },
+    {
+      "order": 160,
+      "id": "prokshana-mantrah",
+      "rootTitle": "प्रोक्षणमन्त्राः",
+      "iastTitle": "Prokṣaṇamantrāḥ",
+      "khanda": "udakashanti",
+      "bookPage": 353
+    },
+    {
+      "order": 161,
+      "id": "prashana-mantrah",
+      "rootTitle": "प्राशनमन्त्राः",
+      "iastTitle": "Prāśanamantrāḥ",
+      "khanda": "udakashanti",
+      "bookPage": 354
+    },
+    {
+      "order": 162,
+      "id": "ravana-panchakshara",
+      "rootTitle": "रावणोक्ता पञ्चाक्षरप्रार्थना",
+      "iastTitle": "Rāvaṇoktā pañcākṣaraprārthanā",
+      "khanda": "mahanyasa",
+      "bookPage": 401
+    },
+    {
+      "order": 163,
+      "id": "ravana-panchamukha",
+      "rootTitle": "रावणोक्ता पञ्चमुखप्रार्थना",
+      "iastTitle": "Rāvaṇoktā pañcamukhaprārthanā",
+      "khanda": "mahanyasa",
+      "bookPage": 402
+    },
+    {
+      "order": 164,
+      "id": "shikha-prathama-nyasa",
+      "rootTitle": "शिखा आदिः प्रथमो न्यासः",
+      "iastTitle": "Śikhādiḥ prathamo nyāsaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 404,
+      "target": "sri-rudra-laghunyasa"
+    },
+    {
+      "order": 165,
+      "id": "dashakshari-dvitiya-nyasa",
+      "rootTitle": "दशाक्षरी द्वितीयो न्यासः",
+      "iastTitle": "Daśākṣarī dvitīyo nyāsaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 409,
+      "target": "sri-rudra-laghunyasa"
+    },
+    {
+      "order": 166,
+      "id": "pada-trtiya-nyasa",
+      "rootTitle": "पादादितृतीयो न्यासः",
+      "iastTitle": "Pādāditṛtīyo nyāsaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 409,
+      "target": "sri-rudra-laghunyasa"
+    },
+    {
+      "order": 167,
+      "id": "hamsa-gayatri",
+      "rootTitle": "हंसगायत्री",
+      "iastTitle": "Haṃsagāyatrī",
+      "khanda": "mahanyasa",
+      "bookPage": 410
+    },
+    {
+      "order": 168,
+      "id": "dikpala-pratika",
+      "rootTitle": "दिक्पालकमन्त्रप्रतीकाः",
+      "iastTitle": "Dikpālakamantrapratīkāḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 411,
+      "target": "dikpala-mantrah"
+    },
+    {
+      "order": 169,
+      "id": "raudradi-karanam",
+      "rootTitle": "रौद्रादिकरणम् (सानुष्वारम्)",
+      "iastTitle": "Raudrādikaraṇam (sānuṣvāram)",
+      "khanda": "mahanyasa",
+      "bookPage": 412,
+      "target": "sri-rudra-prashnah"
+    },
+    {
+      "order": 170,
+      "id": "guhyadi-shat-nyasa",
+      "rootTitle": "गुह्यादिषट्स्थो न्यासः",
+      "iastTitle": "Guhyādiṣaṭstho nyāsaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 413,
+      "target": "sri-rudra-laghunyasa"
+    },
+    {
+      "order": 171,
+      "id": "atma-raksha",
+      "rootTitle": "आत्मरक्षा",
+      "iastTitle": "Ātmarakṣā",
+      "khanda": "mahanyasa",
+      "bookPage": 414
+    },
+    {
+      "order": 172,
+      "id": "shiva-sankalpah",
+      "rootTitle": "शिवसंकल्पः",
+      "iastTitle": "Śivasaṅkalpaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 415
+    },
+    {
+      "order": 173,
+      "id": "purusha-suktam-nyasa",
+      "rootTitle": "पुरुषसूक्तम्",
+      "iastTitle": "Puruṣasūktam",
+      "khanda": "mahanyasa",
+      "bookPage": 420,
+      "target": "purusha-suktam"
+    },
+    {
+      "order": 174,
+      "id": "uttara-narayanam-nyasa",
+      "rootTitle": "उत्तरनारायणम्",
+      "iastTitle": "Uttaranārāyaṇam",
+      "khanda": "mahanyasa",
+      "bookPage": 422,
+      "target": "purusha-suktam"
+    },
+    {
+      "order": 175,
+      "id": "apratiratham-nyasa",
+      "rootTitle": "अप्रतिरथम्",
+      "iastTitle": "Apratiratham",
+      "khanda": "mahanyasa",
+      "bookPage": 422,
+      "target": "apratiratha-suktam"
+    },
+    {
+      "order": 176,
+      "id": "prati-purusham-samhita",
+      "rootTitle": "प्रति पुरुषम् (सं॰)",
+      "iastTitle": "Prati puruṣam (saṃ.)",
+      "khanda": "mahanyasa",
+      "bookPage": 423,
+      "target": "taittiriya-samhita/kanda-3/prapathaka-1"
+    },
+    {
+      "order": 177,
+      "id": "prati-purusham-brahmana",
+      "rootTitle": "प्रति पुरुषम् (ब्रा॰)",
+      "iastTitle": "Prati puruṣam (brā.)",
+      "khanda": "mahanyasa",
+      "bookPage": 423,
+      "target": "taittiriya-brahmana/ashtaka-2"
+    },
+    {
+      "order": 178,
+      "id": "shatarudriyam-samhita",
+      "rootTitle": "शतरुद्रियम् (सं॰)",
+      "iastTitle": "Śatarudriyam (saṃ.)",
+      "khanda": "mahanyasa",
+      "bookPage": 425,
+      "target": "sri-rudra-prashnah"
+    },
+    {
+      "order": 179,
+      "id": "shatarudriyam-brahmana",
+      "rootTitle": "शतरुद्रियम् (ब्रा॰)",
+      "iastTitle": "Śatarudriyam (brā.)",
+      "khanda": "mahanyasa",
+      "bookPage": 427,
+      "target": "taittiriya-brahmana/ashtaka-3"
+    },
+    {
+      "order": 180,
+      "id": "panchaksharam",
+      "rootTitle": "पञ्चाक्षरम्",
+      "iastTitle": "Pañcākṣaram",
+      "khanda": "mahanyasa",
+      "bookPage": 428,
+      "target": "ravana-panchakshara"
+    },
+    {
+      "order": 181,
+      "id": "ashtaksharam",
+      "rootTitle": "अष्टाक्षरम्",
+      "iastTitle": "Aṣṭākṣaram",
+      "khanda": "mahanyasa",
+      "bookPage": 428
+    },
+    {
+      "order": 182,
+      "id": "sri-rudra-laghunyasa",
+      "rootTitle": "लघुशिवन्यासः",
+      "iastTitle": "Laghuśivanyāsaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 430
+    },
+    {
+      "order": 183,
+      "id": "sadharana-nyasa-mahanyasa",
+      "rootTitle": "साधारणन्यासः",
+      "iastTitle": "Sādhāraṇanyāsaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 430,
+      "target": "sri-rudra-laghunyasa"
+    },
+    {
+      "order": 184,
+      "id": "dhyanam-rudra",
+      "rootTitle": "ध्यानम्",
+      "iastTitle": "Dhyānam",
+      "khanda": "mahanyasa",
+      "bookPage": 431
+    },
+    {
+      "order": 185,
+      "id": "samkshipta-puja",
+      "rootTitle": "संक्षिप्तपूजा",
+      "iastTitle": "Saṃkṣiptapūjā",
+      "khanda": "mahanyasa",
+      "bookPage": 432
+    },
+    {
+      "order": 186,
+      "id": "rudra-prashna-nyasa",
+      "rootTitle": "रुद्रप्रश्नन्यासः",
+      "iastTitle": "Rudrapraśnanyāsaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 435,
+      "target": "sri-rudra-laghunyasa"
+    },
+    {
+      "order": 187,
+      "id": "sri-rudra-prashnah",
+      "rootTitle": "रुद्रप्रश्नः",
+      "iastTitle": "Rudrapraśnaḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 435
+    },
+    {
+      "order": 188,
+      "id": "rudram-sanusvara",
+      "rootTitle": "सानुष्वारः",
+      "iastTitle": "Sānuṣvāraḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 442,
+      "target": "sri-rudra-prashnah"
+    },
+    {
+      "order": 189,
+      "id": "rudra-prarthana-mantrah",
+      "rootTitle": "रुद्रप्रार्थनमन्त्राः",
+      "iastTitle": "Rudraprārthanamantrāḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 443
+    },
+    {
+      "order": 190,
+      "id": "chamakam",
+      "rootTitle": "चमकम्",
+      "iastTitle": "Camakam",
+      "khanda": "mahanyasa",
+      "bookPage": 445
+    },
+    {
+      "order": 191,
+      "id": "rudra-trishati",
+      "rootTitle": "रुद्रत्रिशतिः",
+      "iastTitle": "Rudratriśatiḥ",
+      "khanda": "mahanyasa",
+      "bookPage": 449
+    },
+    {
+      "order": 192,
+      "id": "shiksha-valli",
+      "rootTitle": "शीक्षावल्ली",
+      "iastTitle": "Śīkṣāvallī",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 501,
+      "target": "taittiriya-upanishad#siksha-valli"
+    },
+    {
+      "order": 193,
+      "id": "samhitopasana",
+      "rootTitle": "संहितोपासना",
+      "iastTitle": "Saṃhitopāsanā",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 501,
+      "target": "taittiriya-upanishad#siksha-valli"
+    },
+    {
+      "order": 194,
+      "id": "japa-homa-mantrah-tu",
+      "rootTitle": "जपहोममन्त्राः",
+      "iastTitle": "Japahomamantrāḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 502,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 195,
+      "id": "vyahriti-atma-rudra-upasana",
+      "rootTitle": "व्याहृत्यात्मरुद्रोपासना",
+      "iastTitle": "Vyāhṛtyātmarudropāsanā",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 503,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 196,
+      "id": "maha-rudra-upasana",
+      "rootTitle": "महारुद्रोपासन स्थानादि",
+      "iastTitle": "Mahārudropāsana sthānādi",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 504,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 197,
+      "id": "brahmanah-pashupena",
+      "rootTitle": "ब्रह्मणः पाशुपेणोपासनम्",
+      "iastTitle": "Brahmaṇaḥ pāśupenopāsanam",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 504,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 198,
+      "id": "omkara-upasanam",
+      "rootTitle": "ओंकारोपासनम्",
+      "iastTitle": "Oṃkāropāsanam",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 504,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 199,
+      "id": "karmanam-purushartha",
+      "rootTitle": "कर्मणां पुरुषार्थसाधनत्वम्",
+      "iastTitle": "Karmaṇāṃ puruṣārthasādhanatvam",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 505,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 200,
+      "id": "trishankor-asishah",
+      "rootTitle": "त्रिशङ्कोरार्शिषः",
+      "iastTitle": "Triśaṅkorāśiṣaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 505,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 201,
+      "id": "vidyotpatti",
+      "rootTitle": "विद्योत्पत्तिरर्थमनुष्टेयकर्माणि",
+      "iastTitle": "Vidyotpattirarthamanuṣṭeyakarmāṇi",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 505,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 202,
+      "id": "brahmananda-valli",
+      "rootTitle": "ब्रह्मानन्दवल्ली",
+      "iastTitle": "Brahmānandavallī",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 507,
+      "target": "taittiriya-upanishad#brahmananda-valli"
+    },
+    {
+      "order": 203,
+      "id": "upanishat-prarambhah",
+      "rootTitle": "उपनिषत्प्रारम्भः",
+      "iastTitle": "Upaniṣatprārambhaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 507,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 204,
+      "id": "annamaya-prakashah",
+      "rootTitle": "अन्नमयात्मप्रकाशः श्लोकः",
+      "iastTitle": "Annamayātmaprakāśaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 507,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 205,
+      "id": "pranamaya-prakashah",
+      "rootTitle": "प्राणमयात्मप्रकाशः श्लोकः",
+      "iastTitle": "Prāṇamayātmaprakāśaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 508,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 206,
+      "id": "manomaya-prakashah",
+      "rootTitle": "मनोमयात्मप्रकाशः श्लोकः",
+      "iastTitle": "Manomayātmaprakāśaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 508,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 207,
+      "id": "vijnanamaya-prakashah",
+      "rootTitle": "विज्ञानमयात्मप्रकाशः श्लोकः",
+      "iastTitle": "Vijñānamayātmaprakāśaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 509,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 208,
+      "id": "brahmasti",
+      "rootTitle": "ब्रह्मास्ति",
+      "iastTitle": "Brahmāsti",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 509,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 209,
+      "id": "asti-brahma",
+      "rootTitle": "अस्ति ब्रह्म",
+      "iastTitle": "Asti brahma",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 510,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 210,
+      "id": "bhaya-hetuh",
+      "rootTitle": "भयहेतुः",
+      "iastTitle": "Bhayahetuḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 510,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 211,
+      "id": "brahmananda-mimamsa",
+      "rootTitle": "ब्रह्मानन्दमीमांसा",
+      "iastTitle": "Brahmānandamīmāṃsā",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 510,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 212,
+      "id": "bhrigu-valli",
+      "rootTitle": "भृगुवल्ली",
+      "iastTitle": "Bhṛguvallī",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 512,
+      "target": "taittiriya-upanishad#bhrigu-valli"
+    },
+    {
+      "order": 213,
+      "id": "bhrigor-upasattih",
+      "rootTitle": "भृगोरुपसत्तिः",
+      "iastTitle": "Bhṛgorupasattiḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 512,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 214,
+      "id": "pitr-varuna-syottaram",
+      "rootTitle": "पितृर्वरुणस्योत्तरम्",
+      "iastTitle": "Pitṛrvaruṇasyottaram",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 512,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 215,
+      "id": "bhrigor-brahma-pratipatti",
+      "rootTitle": "भृगोर्ब्रह्मप्रतिपत्तिक्रमः",
+      "iastTitle": "Bhṛgorbrahmapratipattikramaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 513,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 216,
+      "id": "anna-ninda-nishedhah",
+      "rootTitle": "अन्ननिन्दानिषेधः",
+      "iastTitle": "Annanindāniṣedhaḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 514,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 217,
+      "id": "brahma-upasana-prakara",
+      "rootTitle": "ब्रह्मोपासनप्रकाराः",
+      "iastTitle": "Brahmopāsanaprakārāḥ",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 515,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 218,
+      "id": "atma-jnasya-krtakrtyata",
+      "rootTitle": "आत्मज्ञस्य कृतकृत्यता",
+      "iastTitle": "Ātmajñasya kṛtakṛtyatā",
+      "khanda": "taittiriya-upanishad",
+      "bookPage": 516,
+      "target": "taittiriya-upanishad"
+    },
+    {
+      "order": 219,
+      "id": "vivaha-vara-preshanam",
+      "rootTitle": "विवाहे वरप्रेषणादयः",
+      "iastTitle": "Vivāhe varapreṣaṇādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 601
+    },
+    {
+      "order": 220,
+      "id": "vivaha-snanadayah",
+      "rootTitle": "विवाहे स्नानादयः",
+      "iastTitle": "Vivāhe snānādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 602
+    },
+    {
+      "order": 221,
+      "id": "vivaha-agni-bhaga",
+      "rootTitle": "विवाहे अग्निभागान्ते अभिमन्त्रणम्",
+      "iastTitle": "Vivāhe agnibhāgānte abhimantraṇam",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 602
+    },
+    {
+      "order": 222,
+      "id": "vivaha-pradhana-ahuti",
+      "rootTitle": "विवाहे प्रधानाहुतिमन्त्राः",
+      "iastTitle": "Vivāhe pradhānāhutimantrāḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 603
+    },
+    {
+      "order": 223,
+      "id": "vivaha-ashma-sthapana",
+      "rootTitle": "विवाहे अश्मास्थापनादयः",
+      "iastTitle": "Vivāhe aśmāsthāpanādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 605
+    },
+    {
+      "order": 224,
+      "id": "vivaha-prayana-ratha",
+      "rootTitle": "विवाहे प्रयाणकाले रथस्योत्तम्भनम्",
+      "iastTitle": "Vivāhe prayāṇakāle rathasyottambhanam",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 606
+    },
+    {
+      "order": 225,
+      "id": "vivaha-tirtha-vyati",
+      "rootTitle": "विवाहे तीर्थादिव्यक्तिजपादयः",
+      "iastTitle": "Vivāhe tīrthādivyaktijapādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 607
+    },
+    {
+      "order": 226,
+      "id": "vivaha-carma-staranam",
+      "rootTitle": "विवाहे चर्मास्तरणादयः",
+      "iastTitle": "Vivāhe carmāstaraṇādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 608
+    },
+    {
+      "order": 227,
+      "id": "vivaha-carmopaveshana",
+      "rootTitle": "विवाहे चर्मोपवेशनादयः",
+      "iastTitle": "Vivāhe carmopaveśanādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 609
+    },
+    {
+      "order": 228,
+      "id": "vivaha-danda-utthapana",
+      "rootTitle": "विवाहे दण्डोत्थापनमन्त्रादयः",
+      "iastTitle": "Vivāhe daṇḍotthāpanamantrādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 610
+    },
+    {
+      "order": 229,
+      "id": "vivaha-anyonya-samikshana",
+      "rootTitle": "विवाहे वधूवरयोरन्योन्यसमीक्षणादयः",
+      "iastTitle": "Vivāhe vadhūvarayoranyonyasamīkṣaṇādayaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 611
+    },
+    {
+      "order": 230,
+      "id": "garbhadhana-samaveshana",
+      "rootTitle": "गर्भाधाने समावेशनजपः",
+      "iastTitle": "Garbhādhāne samāveśanajapaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 611
+    },
+    {
+      "order": 231,
+      "id": "garbhadhana-rtu-samaveshah",
+      "rootTitle": "गर्भाधाने ऋतुसमावेशः",
+      "iastTitle": "Garbhādhāne ṛtusamāveśaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 612
+    },
+    {
+      "order": 232,
+      "id": "arthapravya-parikshana",
+      "rootTitle": "अर्थप्रावस्य परिष्वपरिकासने जपः",
+      "iastTitle": "Arthaprāvasya pariṣvaparikāsane japaḥ",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 613
+    },
+    {
+      "order": 233,
+      "id": "chitriyasya-vanaspateh",
+      "rootTitle": "चित्रियस्य वनस्पतेरभिमन्त्रणम्",
+      "iastTitle": "Citriyasya vanaspaterabhimantraṇam",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 613
+    },
+    {
+      "order": 234,
+      "id": "shakrdghate-upasthanam",
+      "rootTitle": "शकृद्घतेरुपस्थानम्",
+      "iastTitle": "Śakṛdghaterupasthānam",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 613
+    },
+    {
+      "order": 235,
+      "id": "simha-vatasya",
+      "rootTitle": "सिंहवातस्याभिमन्त्रणम्",
+      "iastTitle": "Siṃhavātasyābhimantraṇam",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 614
+    },
+    {
+      "order": 236,
+      "id": "shakuner-abhimantranam",
+      "rootTitle": "शकुनेरभिमन्त्रणम्",
+      "iastTitle": "Śakunerabhimantraṇam",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 614
+    },
+    {
+      "order": 237,
+      "id": "bhagya-suktam-mp1",
+      "rootTitle": "भाग्यसूक्तम्",
+      "iastTitle": "Bhāgyasūktam",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 614,
+      "target": "bhagya-suktam"
+    },
+    {
+      "order": 238,
+      "id": "patny-vashikaranam",
+      "rootTitle": "पत्न्युवशीकरणं कर्म",
+      "iastTitle": "Patnyuvaśīkaraṇaṃ karma",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 615
+    },
+    {
+      "order": 239,
+      "id": "sapatni-badhanam",
+      "rootTitle": "सपत्नीबाधनं कर्म",
+      "iastTitle": "Sapatnībādhanaṃ karma",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 615,
+      "target": "sapatni-badhana-suktam"
+    },
+    {
+      "order": 240,
+      "id": "vaidhavya-yakshma-haram",
+      "rootTitle": "वैधव्य यक्ष्मादिहरं कर्म",
+      "iastTitle": "Vaidhavya yakṣmādiharaṃ karma",
+      "khanda": "mantra-prashna-1",
+      "bookPage": 616,
+      "target": "yakshma-nashana-suktam"
+    },
+    {
+      "order": 241,
+      "id": "upanayane-kshura-karma",
+      "rootTitle": "उपनयने क्षुरकर्म",
+      "iastTitle": "Upanayane kṣurakarma",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 618
+    },
+    {
+      "order": 242,
+      "id": "upanayane-samidadhana-ashma",
+      "rootTitle": "उपनयने समिदाधानाश्मास्थापने",
+      "iastTitle": "Upanayane samidādhānāśmāsthāpane",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 618,
+      "target": "apastamba-samidadhanam"
+    },
+    {
+      "order": 243,
+      "id": "upanayane-vasah-paridhanam",
+      "rootTitle": "उपनयने वासःपरिधानम्",
+      "iastTitle": "Upanayane vāsaḥparidhānam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 619
+    },
+    {
+      "order": 244,
+      "id": "upanayane-maunji-janam",
+      "rootTitle": "उपनयने मौञ्जीजन्मन्त्राः",
+      "iastTitle": "Upanayane mauñjījanmantrāḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 619
+    },
+    {
+      "order": 245,
+      "id": "upanayanam",
+      "rootTitle": "उपनयनम्",
+      "iastTitle": "Upanayanam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 620
+    },
+    {
+      "order": 246,
+      "id": "upanayane-homa",
+      "rootTitle": "उपनयने होममन्त्राः",
+      "iastTitle": "Upanayane homamantrāḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 621
+    },
+    {
+      "order": 247,
+      "id": "upanayane-savitri",
+      "rootTitle": "उपनयने सावित्री",
+      "iastTitle": "Upanayane sāvitrī",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 621
+    },
+    {
+      "order": 248,
+      "id": "upanayane-danda-dana",
+      "rootTitle": "उपनयने दण्डदानादयः",
+      "iastTitle": "Upanayane daṇḍadānādayaḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 622
+    },
+    {
+      "order": 249,
+      "id": "upanayane-samidadhanam",
+      "rootTitle": "उपनयने समिदाधानम्",
+      "iastTitle": "Upanayane samidādhānam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 623,
+      "target": "apastamba-samidadhanam"
+    },
+    {
+      "order": 250,
+      "id": "upanayane-samshasanadi",
+      "rootTitle": "उपनयने संशासनादि",
+      "iastTitle": "Upanayane saṃśāsanādi",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 624
+    },
+    {
+      "order": 251,
+      "id": "samavartana-mantrah",
+      "rootTitle": "समावर्तनमन्त्राः",
+      "iastTitle": "Samāvartanamantrāḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 624
+    },
+    {
+      "order": 252,
+      "id": "madhuparka-mantrah",
+      "rootTitle": "मधुपर्कर्मन्त्राः",
+      "iastTitle": "Madhuparkamantrāḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 626
+    },
+    {
+      "order": 253,
+      "id": "simantonnayanam",
+      "rootTitle": "सीमन्तोन्नयनम्",
+      "iastTitle": "Sīmantonnayanam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 627
+    },
+    {
+      "order": 254,
+      "id": "pumsavanam",
+      "rootTitle": "पुंसवनम्",
+      "iastTitle": "Puṃsavanam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 628
+    },
+    {
+      "order": 255,
+      "id": "kshipram-savanam",
+      "rootTitle": "क्षिप्रंसवनम्",
+      "iastTitle": "Kṣipraṃsavanam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 628
+    },
+    {
+      "order": 256,
+      "id": "jarayuna-avakshipatane",
+      "rootTitle": "जरायुणाऽवाक्षिपतने यजुर्भामवोक्षणम्",
+      "iastTitle": "Jarāyuṇā'vākṣipatane yajurbhāmavokṣaṇam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 629
+    },
+    {
+      "order": 257,
+      "id": "jatakarma",
+      "rootTitle": "जातकर्म",
+      "iastTitle": "Jātakarma",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 629
+    },
+    {
+      "order": 258,
+      "id": "jatakarmani-prasavadeh",
+      "rootTitle": "जातकर्मणि प्रसवादेत्य कार्यम्",
+      "iastTitle": "Jātakarmaṇi prasavādetya kāryam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 632
+    },
+    {
+      "order": 259,
+      "id": "annaprashanam",
+      "rootTitle": "अन्नप्राशनम्",
+      "iastTitle": "Annaprāśanam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 633
+    },
+    {
+      "order": 260,
+      "id": "caulam",
+      "rootTitle": "चौलम्",
+      "iastTitle": "Caulam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 633
+    },
+    {
+      "order": 261,
+      "id": "grha-nirmana-praveshau",
+      "rootTitle": "गृहनिर्माणप्रवेशौ",
+      "iastTitle": "Gṛhanirmāṇapraveśau",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 633
+    },
+    {
+      "order": 262,
+      "id": "vastu-suktam-yajusha",
+      "rootTitle": "वास्तुसूक्तम्",
+      "iastTitle": "Vāstusūktam",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 634
+    },
+    {
+      "order": 263,
+      "id": "graha-grhitasya",
+      "rootTitle": "ग्रहगृहीतस्याभिमन्त्रणादयः",
+      "iastTitle": "Grahagṛhītasyābhimantraṇādayaḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 635,
+      "target": "navagraha-suktam"
+    },
+    {
+      "order": 264,
+      "id": "agrayanadayah",
+      "rootTitle": "आग्रयणादयः",
+      "iastTitle": "Āgrayaṇādayaḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 637
+    },
+    {
+      "order": 265,
+      "id": "ishana-balih",
+      "rootTitle": "ईशानबलिः",
+      "iastTitle": "Īśānabaliḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 638
+    },
+    {
+      "order": 266,
+      "id": "masi-shraddham",
+      "rootTitle": "मासिश्राद्धम्",
+      "iastTitle": "Māsiśrāddham",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 639
+    },
+    {
+      "order": 267,
+      "id": "ashtakadayah",
+      "rootTitle": "अष्टकादयः",
+      "iastTitle": "Aṣṭakādayaḥ",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 641
+    },
+    {
+      "order": 268,
+      "id": "vividha-karmani",
+      "rootTitle": "विविधकर्माणि",
+      "iastTitle": "Vividhakarmāṇi",
+      "khanda": "mantra-prashna-2",
+      "bookPage": 642
+    },
+    {
+      "order": 269,
+      "id": "rakshohano-valagahanah",
+      "rootTitle": "रक्षोहाणो वलगहनः",
+      "iastTitle": "Rakṣohāṇo valagahanaḥ",
+      "khanda": "abhisheka",
+      "bookPage": 701
+    },
+    {
+      "order": 270,
+      "id": "somaya-pitr-mate",
+      "rootTitle": "सोमाय पितृमते",
+      "iastTitle": "Somāya pitṛmate",
+      "khanda": "abhisheka",
+      "bookPage": 701
+    },
+    {
+      "order": 271,
+      "id": "ushantastva-havamahe",
+      "rootTitle": "उशन्तस्त्वा हवामह उशन्तः",
+      "iastTitle": "Uśantastvā havāmaha uśantaḥ",
+      "khanda": "abhisheka",
+      "bookPage": 702
+    },
+    {
+      "order": 272,
+      "id": "bhakshair-hi-ma-visha",
+      "rootTitle": "भक्षैर्हि मा विश",
+      "iastTitle": "Bhakṣairhi mā viśa",
+      "khanda": "abhisheka",
+      "bookPage": 704
+    },
+    {
+      "order": 273,
+      "id": "srva-asi-dharuna",
+      "rootTitle": "स्रुवाऽसि धरुणाऽस्तृता",
+      "iastTitle": "Sruvā'si dharuṇā'stṛtā",
+      "khanda": "abhisheka",
+      "bookPage": 706
+    },
+    {
+      "order": 274,
+      "id": "yaste-agne-samidhah",
+      "rootTitle": "यास्ते अग्ने समिधः",
+      "iastTitle": "Yāste agne samidhaḥ",
+      "khanda": "abhisheka",
+      "bookPage": 708
+    },
+    {
+      "order": 275,
+      "id": "ashuh-shishano",
+      "rootTitle": "आशुः शिशानो",
+      "iastTitle": "Āśuḥ śiśāno",
+      "khanda": "abhisheka",
+      "bookPage": 709
+    },
+    {
+      "order": 276,
+      "id": "udenam-uttaram",
+      "rootTitle": "उदेनमुत्तरां नयेति",
+      "iastTitle": "Udenamuttarāṃ nayeti",
+      "khanda": "abhisheka",
+      "bookPage": 709
+    },
+    {
+      "order": 277,
+      "id": "agna-udadhe-ya-ta-ishuh",
+      "rootTitle": "अग्न उदधे या त इषुः",
+      "iastTitle": "Agna udadhe yā ta iṣuḥ",
+      "khanda": "abhisheka",
+      "bookPage": 710
+    },
+    {
+      "order": 278,
+      "id": "shiro-va-etad",
+      "rootTitle": "शिरो वा एतद्विद्यस्य",
+      "iastTitle": "Śiro vā etadvidyasya",
+      "khanda": "abhisheka",
+      "bookPage": 712
+    },
+    {
+      "order": 279,
+      "id": "asavadito-asmin-loke",
+      "rootTitle": "असावादितोऽस्मिन् लोके",
+      "iastTitle": "Asāvādito'smin loke",
+      "khanda": "abhisheka",
+      "bookPage": 713
+    },
+    {
+      "order": 280,
+      "id": "samtativa-ete-grahah",
+      "rootTitle": "संततिवा एते ग्रहाः",
+      "iastTitle": "Saṃtativā ete grahāḥ",
+      "khanda": "abhisheka",
+      "bookPage": 715
+    },
+    {
+      "order": 281,
+      "id": "ekavimsha-esha",
+      "rootTitle": "एकविंश एष भवति",
+      "iastTitle": "Ekaviṃśa eṣa bhavati",
+      "khanda": "abhisheka",
+      "bookPage": 716
+    },
+    {
+      "order": 282,
+      "id": "apratishtham-va-ete",
+      "rootTitle": "अप्रतिष्ठां वा एते गच्छन्ति",
+      "iastTitle": "Apratiṣṭhāṃ vā ete gacchanti",
+      "khanda": "abhisheka",
+      "bookPage": 717
+    },
+    {
+      "order": 283,
+      "id": "prajapatih-prajah-srshtva",
+      "rootTitle": "प्रजापतिः प्रजाः सृष्ट्वा",
+      "iastTitle": "Prajāpatiḥ prajāḥ sṛṣṭvā",
+      "khanda": "abhisheka",
+      "bookPage": 718
+    },
+    {
+      "order": 284,
+      "id": "indro-vrtram-hatva",
+      "rootTitle": "इन्द्रो वृत्रं हत्वा (परि॰)",
+      "iastTitle": "Indro vṛtraṃ hatvā (pari.)",
+      "khanda": "abhisheka",
+      "bookPage": 719
+    },
+    {
+      "order": 285,
+      "id": "vaishvadevena-vai",
+      "rootTitle": "वैश्वेदेवेन वै प्रजापतिः",
+      "iastTitle": "Vaiśvedevena vai prajāpatiḥ",
+      "khanda": "abhisheka",
+      "bookPage": 722
+    },
+    {
+      "order": 286,
+      "id": "agnaye-devebhyah",
+      "rootTitle": "अग्नये देवेभ्यः",
+      "iastTitle": "Agnaye devebhyaḥ",
+      "khanda": "abhisheka",
+      "bookPage": 724
+    },
+    {
+      "order": 287,
+      "id": "ushantastva-havamahe-2",
+      "rootTitle": "उशन्तस्त्वा हवामहे",
+      "iastTitle": "Uśantastvā havāmahe",
+      "khanda": "abhisheka",
+      "bookPage": 726
+    },
+    {
+      "order": 288,
+      "id": "ayam-vava-yah-pavate",
+      "rootTitle": "अयं वाव यः पवते",
+      "iastTitle": "Ayaṃ vāva yaḥ pavate",
+      "khanda": "abhisheka",
+      "bookPage": 727
+    },
+    {
+      "order": 289,
+      "id": "ushan-ha-vai",
+      "rootTitle": "उशन् ह वै",
+      "iastTitle": "Uśan ha vai",
+      "khanda": "abhisheka",
+      "bookPage": 728
+    },
+    {
+      "order": 290,
+      "id": "tam-haitam-eke",
+      "rootTitle": "तं हैतमेके",
+      "iastTitle": "Taṃ haitameke",
+      "khanda": "abhisheka",
+      "bookPage": 730
+    },
+    {
+      "order": 291,
+      "id": "yam-prathamam-ishtakam",
+      "rootTitle": "यां प्रथमामिष्टकाम्",
+      "iastTitle": "Yāṃ prathamāmiṣṭakām",
+      "khanda": "abhisheka",
+      "bookPage": 732
+    },
+    {
+      "order": 292,
+      "id": "rcam-praci-mahati",
+      "rootTitle": "ऋचां प्राची महती दिगुच्यते",
+      "iastTitle": "Ṛcāṃ prācī mahatī digucyate",
+      "khanda": "abhisheka",
+      "bookPage": 733
+    },
+    {
+      "order": 293,
+      "id": "sandhya-sutrani",
+      "rootTitle": "सन्ध्यावन्दनसूत्राणि",
+      "iastTitle": "Sandhyāvandanasūtrāṇi",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1001,
+      "target": "apastamba-sandhyavandanam/prata"
+    },
+    {
+      "order": 294,
+      "id": "samidadhana-sutrani",
+      "rootTitle": "समिदाधानसूत्राणि",
+      "iastTitle": "Samidādhānasūtrāṇi",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1002,
+      "target": "apastamba-samidadhanam"
+    },
+    {
+      "order": 295,
+      "id": "sthalipaka-sutrani",
+      "rootTitle": "स्थालीपाकसूत्राणि",
+      "iastTitle": "Sthālīpākasūtrāṇi",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1002
+    },
+    {
+      "order": 296,
+      "id": "aupasana-sutrani",
+      "rootTitle": "औपासनसूत्राणि",
+      "iastTitle": "Aupāsanasūtrāṇi",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1002
+    },
+    {
+      "order": 297,
+      "id": "punyahavacanam-prayoga",
+      "rootTitle": "पुण्याहवाचनम्",
+      "iastTitle": "Puṇyāhavācanam",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1003,
+      "target": "punyaha-mantrah"
+    },
+    {
+      "order": 298,
+      "id": "pratisara-bandhah-prayoga",
+      "rootTitle": "प्रतिसरबन्धः",
+      "iastTitle": "Pratisarabandhaḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1003,
+      "target": "pratisara-bandhanam"
+    },
+    {
+      "order": 299,
+      "id": "prathama-artava-shantih",
+      "rootTitle": "प्रथमातर्वशान्तिः",
+      "iastTitle": "Prathamārtavaśāntiḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1003
+    },
+    {
+      "order": 300,
+      "id": "griha-pravesha-vastu-shantih",
+      "rootTitle": "गृहप्रवेशवास्तुशान्तिः",
+      "iastTitle": "Gṛhapraveśavāstuśāntiḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1004,
+      "target": "vastu-suktam"
+    },
+    {
+      "order": 301,
+      "id": "rakshoghna-homah",
+      "rootTitle": "राक्षोघ्नहोमः",
+      "iastTitle": "Rākṣoghna homaḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1004,
+      "target": "rakshoghna-suktam"
+    },
+    {
+      "order": 302,
+      "id": "gana-homah",
+      "rootTitle": "गणहोमः",
+      "iastTitle": "Gaṇahomaḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1004,
+      "target": "ganesha-prarthana"
+    },
+    {
+      "order": 303,
+      "id": "mrityunjaya-homah",
+      "rootTitle": "मृत्युञ्जयहोमः",
+      "iastTitle": "Mṛtyuñjaya homaḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1005,
+      "target": "mrityu-suktam"
+    },
+    {
+      "order": 304,
+      "id": "shatabhishekah",
+      "rootTitle": "शताभिषेकः",
+      "iastTitle": "Śatābhiṣekaḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1005,
+      "target": "panchamrita-abhishechanam"
+    },
+    {
+      "order": 305,
+      "id": "udgratha-shantih",
+      "rootTitle": "उद्ग्रथशान्तिः",
+      "iastTitle": "Udgrathaśāntiḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1005
+    },
+    {
+      "order": 306,
+      "id": "bhima-ratha-shantih",
+      "rootTitle": "भीमरथशान्तिः",
+      "iastTitle": "Bhīmarathaśāntiḥ",
+      "khanda": "laghu-prayoga",
+      "bookPage": 1005
+    },
+    {
+      "order": 307,
+      "id": "pratisara-bandhah-prayoga-khanda",
+      "rootTitle": "प्रतिसरबन्धः",
+      "iastTitle": "Pratisarabandhaḥ",
+      "khanda": "prayoga",
+      "bookPage": 1008,
+      "target": "pratisara-bandhanam"
+    },
+    {
+      "order": 308,
+      "id": "ankurapanam",
+      "rootTitle": "अङ्कुरापणम्",
+      "iastTitle": "Aṅkurārpaṇam",
+      "khanda": "prayoga",
+      "bookPage": 1012,
+      "target": "bija-vapanam"
+    },
+    {
+      "order": 309,
+      "id": "agni-mukham",
+      "rootTitle": "अग्निमुखम्",
+      "iastTitle": "Agnimukham",
+      "khanda": "prayoga",
+      "bookPage": 1017,
+      "target": "agni-prarthana"
+    },
+    {
+      "order": 310,
+      "id": "prathama-artava-shantih-prayoga",
+      "rootTitle": "प्रथमातर्वशान्तिः",
+      "iastTitle": "Prathamārtavaśāntiḥ",
+      "khanda": "prayoga",
+      "bookPage": 1024,
+      "target": "prathama-artava-shantih"
+    },
+    {
+      "order": 311,
+      "id": "garbhadhanam-prayoga",
+      "rootTitle": "गर्भाधानम्",
+      "iastTitle": "Garbhādhānam",
+      "khanda": "prayoga",
+      "bookPage": 1028,
+      "target": "garbhadhana-samaveshana"
+    },
+    {
+      "order": 312,
+      "id": "pumsavanam-prayoga",
+      "rootTitle": "पुंसवनम्",
+      "iastTitle": "Puṃsavanam",
+      "khanda": "prayoga",
+      "bookPage": 1030,
+      "target": "pumsavanam"
+    },
+    {
+      "order": 313,
+      "id": "simantonnayanam-prayoga",
+      "rootTitle": "सीमन्तोन्नयनम्",
+      "iastTitle": "Sīmantonnayanam",
+      "khanda": "prayoga",
+      "bookPage": 1033,
+      "target": "simantonnayanam"
+    },
+    {
+      "order": 314,
+      "id": "kshipram-savanam-prayoga",
+      "rootTitle": "क्षिप्रंसवनम्",
+      "iastTitle": "Kṣipraṃsavanam",
+      "khanda": "prayoga",
+      "bookPage": 1036,
+      "target": "kshipram-savanam"
+    },
+    {
+      "order": 315,
+      "id": "jatakarma-prayoga",
+      "rootTitle": "जातकर्म",
+      "iastTitle": "Jātakarma",
+      "khanda": "prayoga",
+      "bookPage": 1037,
+      "target": "jatakarma"
+    },
+    {
+      "order": 316,
+      "id": "namakaranam",
+      "rootTitle": "नामकरणम्",
+      "iastTitle": "Nāmakaraṇam",
+      "khanda": "prayoga",
+      "bookPage": 1041
+    },
+    {
+      "order": 317,
+      "id": "nishkramanam",
+      "rootTitle": "निष्क्रमणम्",
+      "iastTitle": "Niṣkramaṇam",
+      "khanda": "prayoga",
+      "bookPage": 1043
+    },
+    {
+      "order": 318,
+      "id": "karna-vedhanam-prayoga",
+      "rootTitle": "कर्णवेधनम्",
+      "iastTitle": "Karṇavedhanam",
+      "khanda": "prayoga",
+      "bookPage": 1044,
+      "target": "karna-vedhanam"
+    },
+    {
+      "order": 319,
+      "id": "annaprashanam-prayoga",
+      "rootTitle": "अन्नप्राशनम्",
+      "iastTitle": "Annaprāśanam",
+      "khanda": "prayoga",
+      "bookPage": 1046,
+      "target": "annaprashanam"
+    },
+    {
+      "order": 320,
+      "id": "caulam-prayoga",
+      "rootTitle": "चौलम्",
+      "iastTitle": "Caulam",
+      "khanda": "prayoga",
+      "bookPage": 1048,
+      "target": "caulam"
+    },
+    {
+      "order": 321,
+      "id": "aksharabhyasah",
+      "rootTitle": "अक्षराभ्यासः",
+      "iastTitle": "Akṣarābhyāsaḥ",
+      "khanda": "prayoga",
+      "bookPage": 1051
+    },
+    {
+      "order": 322,
+      "id": "upanayanam-prayoga",
+      "rootTitle": "उपनयनम्",
+      "iastTitle": "Upanayanam",
+      "khanda": "prayoga",
+      "bookPage": 1052,
+      "target": "upanayanam"
+    },
+    {
+      "order": 323,
+      "id": "prakshipani-bhagantarani",
+      "rootTitle": "प्रक्षिप्यानि भागान्तराणि (आन्तानि)",
+      "iastTitle": "Prakṣipyāni bhāgāntarāṇi (āntāni)",
+      "khanda": "anubandha",
+      "bookPage": 1066
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import type { HomeLocale } from './home';
 import { sangrahaSearchSynonyms } from './sangraha';
+import { yajushaSearchSynonyms } from './yajusha';
 
 export interface SearchSynonym {
 	/** Latin / colloquial queries that should resolve to this entry. */
@@ -205,16 +206,29 @@ const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 		href: { root: '/prashna-upanishad/', iast: '/iast/prashna-upanishad/' },
 	},
 	{
+		aliases: ['mundaka', 'mundakopanishad', 'mundaka upanishad', 'मुण्डक', 'मुण्डकोपनिषत्'],
+		query: 'mundaka',
+		label: { root: 'मुण्डकोपनिषत्', iast: 'Muṇḍakopaniṣad' },
+		href: { root: '/mundaka-upanishad/', iast: '/iast/mundaka-upanishad/' },
+	},
+	{
+		aliases: [
+			'mandukya',
+			'maandukya',
+			'mandukyopanishad',
+			'mandukya upanishad',
+			'माण्डूक्य',
+			'माण्डूक्योपनिषत्',
+		],
+		query: 'mandukya',
+		label: { root: 'माण्डूक्योपनिषत्', iast: 'Māṇḍūkyopaniṣad' },
+		href: { root: '/mandukya-upanishad/', iast: '/iast/mandukya-upanishad/' },
+	},
+	{
 		aliases: ['taittiriya upanishad', 'taittiriyopanishad', 'तैत्तिरीयोपनिषद्'],
 		query: 'taittiriya upanishad',
 		label: { root: 'तैत्तिरीयोपनिषत्', iast: 'Taittirīyopaniṣad' },
 		href: { root: '/taittiriya-upanishad/', iast: '/iast/taittiriya-upanishad/' },
-	},
-	{
-		aliases: ['mahanarayana', 'narayana upanishad', 'महानारायण'],
-		query: 'mahanarayana',
-		label: { root: 'महानारायणोपनिषत्', iast: 'Mahānārāyaṇa Upaniṣad' },
-		href: { root: '/mahanarayana-upanishad/', iast: '/iast/mahanarayana-upanishad/' },
 	},
 	{
 		aliases: ['aitareya brahmana', 'aitareya brahmanam', 'ऐतरेय ब्राह्मण'],
@@ -227,6 +241,57 @@ const MANUAL_SEARCH_SYNONYMS: SearchSynonym[] = [
 		query: 'aitareya',
 		label: { root: 'ऐतरेयोपनिषद्', iast: 'Aitareyopaniṣad' },
 		href: { root: '/aitareya-upanishad/', iast: '/iast/aitareya-upanishad/' },
+	},
+	{
+		aliases: [
+			'chandogya',
+			'chandogyopanishad',
+			'chandogya upanishad',
+			'chhandogya',
+			'छान्दोग्य',
+			'छान्दोग्योपनिषत्',
+		],
+		query: 'chandogya',
+		label: { root: 'छान्दोग्योपनिषत्', iast: 'Chāndogyopaniṣad' },
+		href: { root: '/chandogya-upanishad/', iast: '/iast/chandogya-upanishad/' },
+	},
+	{
+		aliases: [
+			'brihadaranyaka',
+			'brihadaranyakopanishad',
+			'brihadaranyaka upanishad',
+			'brhadaranyaka',
+			'बृहदारण्यक',
+			'बृहदारण्यकोपनिषत्',
+		],
+		query: 'brihadaranyaka',
+		label: { root: 'बृहदारण्यकोपनिषत्', iast: 'Bṛhadāraṇyakopaniṣad' },
+		href: { root: '/brihadaranyaka-upanishad/', iast: '/iast/brihadaranyaka-upanishad/' },
+	},
+	{
+		aliases: [
+			'svetasvatara',
+			'svetasvataropanishad',
+			'svetasvatara upanishad',
+			'shvetashvatara',
+			'श्वेताश्वतर',
+			'श्वेताश्वतरोपनिषत्',
+		],
+		query: 'svetasvatara',
+		label: { root: 'श्वेताश्वतरोपनिषत्', iast: 'Śvetāśvataropaniṣad' },
+		href: { root: '/svetasvatara-upanishad/', iast: '/iast/svetasvatara-upanishad/' },
+	},
+	{
+		aliases: ['kaivalya', 'kaivalyopanishad', 'kaivalya upanishad', 'कैवल्य', 'कैवल्योपनिषत्'],
+		query: 'kaivalya',
+		label: { root: 'कैवल्योपनिषत्', iast: 'Kaivalyopaniṣad' },
+		href: { root: '/kaivalya-upanishad/', iast: '/iast/kaivalya-upanishad/' },
+	},
+	{
+		aliases: ['mahanarayana', 'narayana upanishad', 'महानारायण'],
+		query: 'mahanarayana',
+		label: { root: 'महानारायणोपनिषत्', iast: 'Mahānārāyaṇa Upaniṣad' },
+		href: { root: '/mahanarayana-upanishad/', iast: '/iast/mahanarayana-upanishad/' },
 	},
 	{
 		aliases: ['aswalayana', 'asvalayana', 'ashvalayana', 'ashwalayana', 'aswalayan', 'आश्वलायन'],
@@ -286,7 +351,7 @@ function mergeSearchSynonyms(manual: SearchSynonym[], generated: SearchSynonym[]
 
 export const SEARCH_SYNONYMS: SearchSynonym[] = mergeSearchSynonyms(
 	MANUAL_SEARCH_SYNONYMS,
-	sangrahaSearchSynonyms()
+	[...sangrahaSearchSynonyms(), ...yajushaSearchSynonyms()]
 );
 
 /** Featured chips shown when the search dialog opens (empty query). */

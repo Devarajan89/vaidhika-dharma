@@ -1,7 +1,7 @@
 {
   "name": "Vaidhika Dharma",
   "short_name": "Vaidhika",
-  "description": "Vedic nityakarma, mantras, and saṃhitās — available offline for daily practice.",
+  "description": "Vedic nityakarma, mantras, and saṃhitās for daily practice.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

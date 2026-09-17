@@ -49,6 +49,75 @@ export async function transliterateDevanagari(text: string): Promise<string> {
 	return transliterateSync(text);
 }
 
+const BATCH_SEP = '\n\u241E\n';
+
+function transliterateStdin(text: string): Promise<string> {
+	return new Promise((resolve, reject) => {
+		const child = spawn(process.execPath, [LINE_WORKER], {
+			stdio: ['pipe', 'pipe', 'pipe'],
+		});
+
+		let stdout = '';
+		let stderr = '';
+		child.stdout.on('data', (chunk) => {
+			stdout += chunk;
+		});
+		child.stderr.on('data', (chunk) => {
+			stderr += chunk;
+		});
+		child.on('error', reject);
+		child.on('close', (code) => {
+			if (code === 0) {
+				resolve(stdout);
+				return;
+			}
+			reject(new Error(stderr || 'transliteration failed'));
+		});
+		child.stdin.end(text, 'utf8');
+	});
+}
+
+export async function transliterateDevanagariMany(texts: string[]): Promise<string[]> {
+	if (texts.length === 0) return [];
+	if (texts.length === 1) {
+		return [await transliterateDevanagari(texts[0])];
+	}
+
+	const maxChars = 6000;
+	const out: string[] = [];
+	let batch: string[] = [];
+	let batchChars = 0;
+
+	const flush = async () => {
+		if (batch.length === 0) return;
+		if (batch.length === 1) {
+			out.push(await transliterateStdin(batch[0]));
+		} else {
+			const result = await transliterateStdin(batch.join(BATCH_SEP));
+			const parts = result.split(BATCH_SEP);
+			if (parts.length === batch.length) {
+				out.push(...parts);
+			} else {
+				for (const text of batch) {
+					out.push(await transliterateStdin(text));
+				}
+			}
+		}
+		batch = [];
+		batchChars = 0;
+	};
+
+	for (const text of texts) {
+		if (batch.length > 0 && batchChars + text.length > maxChars) {
+			await flush();
+		}
+		batch.push(text);
+		batchChars += text.length;
+	}
+	await flush();
+	return out;
+}
+
 export async function transliterateDevanagariMap(
 	texts: Record<string, string>
 ): Promise<Record<string, string>> {

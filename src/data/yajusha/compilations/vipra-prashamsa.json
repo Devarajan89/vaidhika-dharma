@@ -1,0 +1,28 @@
+{
+  "id": "vipra-prashamsa",
+  "sections": [
+    {
+      "header": "तै॰ब्रा॰ १.४.४",
+      "blocks": [
+        {
+          "tb": {
+            "ashtaka": 1,
+            "prapathaka": 4,
+            "anuvaka": 4
+          }
+        }
+      ]
+    },
+    {
+      "header": "तै॰आ॰ २.१५",
+      "blocks": [
+        {
+          "ta": {
+            "prashna": 2,
+            "anuvaka": 15
+          }
+        }
+      ]
+    }
+  ]
+}

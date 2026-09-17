@@ -1,0 +1,38 @@
+{
+  "id": "samudra-jyeshtha",
+  "sections": [
+    {
+      "header": "ऋ॰सं॰ ७.४९.१",
+      "blocks": [
+        {
+          "rv": {
+            "mandala": 7,
+            "sukta": 49,
+            "verse": 1
+          }
+        },
+        {
+          "rv": {
+            "mandala": 7,
+            "sukta": 49,
+            "verse": 2
+          }
+        },
+        {
+          "rv": {
+            "mandala": 7,
+            "sukta": 49,
+            "verse": 3
+          }
+        },
+        {
+          "rv": {
+            "mandala": 7,
+            "sukta": 49,
+            "verse": 4
+          }
+        }
+      ]
+    }
+  ]
+}

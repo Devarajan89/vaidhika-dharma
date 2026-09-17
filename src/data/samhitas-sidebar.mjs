@@ -236,74 +236,69 @@ export const upanishadsSidebarGroup = {
 	translations: { 'sa-Latn': 'Upaniṣadaḥ' },
 	items: [
 		{
-			label: 'शुक्लयजुर्वेद',
-			translations: { 'sa-Latn': 'Śuklayajurveda' },
-			collapsed: true,
-			items: [
-				{
-					label: 'ईशावास्योपनिषद्',
-					translations: { 'sa-Latn': 'Īśāvāsyopaniṣad' },
-					link: '/isha-upanishad/',
-				},
-			],
+			label: 'ईशावास्योपनिषद्',
+			translations: { 'sa-Latn': 'Īśāvāsyopaniṣad' },
+			link: '/isha-upanishad/',
 		},
 		{
-			label: 'सामवेद',
-			translations: { 'sa-Latn': 'Sāmaveda' },
-			collapsed: true,
-			items: [
-				{
-					label: 'केनोपनिषत्',
-					translations: { 'sa-Latn': 'Kenopaniṣad' },
-					link: '/kena-upanishad/',
-				},
-			],
+			label: 'केनोपनिषत्',
+			translations: { 'sa-Latn': 'Kenopaniṣad' },
+			link: '/kena-upanishad/',
 		},
 		{
-			label: 'अथर्ववेद',
-			translations: { 'sa-Latn': 'Atharvaveda' },
-			collapsed: true,
-			items: [
-				{
-					label: 'प्रश्नोपनिषत्',
-					translations: { 'sa-Latn': 'Praśnopaniṣat' },
-					link: '/prashna-upanishad/',
-				},
-			],
+			label: 'कठोपनिषत्',
+			translations: { 'sa-Latn': 'Kaṭhopaniṣad' },
+			link: '/katha-upanishad/',
 		},
 		{
-			label: 'कृष्णयजुर्वेद',
-			translations: { 'sa-Latn': 'Kṛṣṇayajurveda' },
-			collapsed: true,
-			items: [
-				{
-					label: 'कठोपनिषत्',
-					translations: { 'sa-Latn': 'Kaṭhopaniṣad' },
-					link: '/katha-upanishad/',
-				},
-				{
-					label: 'तैत्तिरीयोपनिषत्',
-					translations: { 'sa-Latn': 'Taittirīyopaniṣat' },
-					link: '/taittiriya-upanishad/',
-				},
-				{
-					label: 'महानारायणोपनिषत्',
-					translations: { 'sa-Latn': 'Mahānārāyaṇopaniṣat' },
-					link: '/mahanarayana-upanishad/',
-				},
-			],
+			label: 'प्रश्नोपनिषत्',
+			translations: { 'sa-Latn': 'Praśnopaniṣat' },
+			link: '/prashna-upanishad/',
 		},
 		{
-			label: 'ऋग्वेद',
-			translations: { 'sa-Latn': 'Ṛgveda' },
-			collapsed: true,
-			items: [
-				{
-					label: 'ऐतरेयोपनिषत्',
-					translations: { 'sa-Latn': 'Aitareyopaniṣat' },
-					link: '/aitareya-upanishad/',
-				},
-			],
+			label: 'मुण्डकोपनिषत्',
+			translations: { 'sa-Latn': 'Muṇḍakopaniṣat' },
+			link: '/mundaka-upanishad/',
+		},
+		{
+			label: 'माण्डूक्योपनिषत्',
+			translations: { 'sa-Latn': 'Māṇḍūkyopaniṣat' },
+			link: '/mandukya-upanishad/',
+		},
+		{
+			label: 'तैत्तिरीयोपनिषत्',
+			translations: { 'sa-Latn': 'Taittirīyopaniṣat' },
+			link: '/taittiriya-upanishad/',
+		},
+		{
+			label: 'ऐतरेयोपनिषत्',
+			translations: { 'sa-Latn': 'Aitareyopaniṣat' },
+			link: '/aitareya-upanishad/',
+		},
+		{
+			label: 'छान्दोग्योपनिषत्',
+			translations: { 'sa-Latn': 'Chāndogyopaniṣat' },
+			link: '/chandogya-upanishad/',
+		},
+		{
+			label: 'बृहदारण्यकोपनिषत्',
+			translations: { 'sa-Latn': 'Bṛhadāraṇyakopaniṣat' },
+			link: '/brihadaranyaka-upanishad/',
+		},
+		{
+			label: 'श्वेताश्वतरोपनिषत्',
+			translations: { 'sa-Latn': 'Śvetāśvataropaniṣat' },
+			link: '/svetasvatara-upanishad/',
+		},
+		{
+			label: 'कैवल्योपनिषत्',
+			translations: { 'sa-Latn': 'Kaivalyopaniṣat' },
+			link: '/kaivalya-upanishad/',
+		},
+		{
+			label: 'महानारायणोपनिषत्',
+			translations: { 'sa-Latn': 'Mahānārāyaṇopaniṣat' },
+			link: '/mahanarayana-upanishad/',
 		},
 	],
 };

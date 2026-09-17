@@ -1,0 +1,17 @@
+{
+  "id": "dig-upasthana",
+  "sections": [
+    {
+      "header": "तै॰सं॰ ५.५.१०",
+      "blocks": [
+        {
+          "ts": {
+            "kanda": 5,
+            "prapathaka": 5,
+            "anuvaka": 10
+          }
+        }
+      ]
+    }
+  ]
+}

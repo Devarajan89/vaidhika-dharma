@@ -95,7 +95,7 @@ export function getSamhitaVerseHref(
 	verse: number,
 	locale: HomeLocale = 'root'
 ): string {
-	return `${getSamhitaSuktaHref(mandala, sukta, locale)}#verse-${verse}`;
+	return `${getSamhitaSuktaHref(mandala, sukta, locale)}#mantra-${verse}`;
 }
 
 export function splitMantraPadas(text: string): string[] {

@@ -1,6 +1,7 @@
 ---
 import type { HomeLocale } from '../data/home';
 import { INDIC_SCRIPTS } from '../data/indic-scripts';
+import { getUiCopy } from '../data/ui-copy';
 
 interface Props {
 	locale?: HomeLocale;
@@ -8,20 +9,20 @@ interface Props {
 
 const { locale = 'root' } = Astro.props;
 const isIast = locale === 'iast';
-
-const labels = {
-	size: 'Type size',
-	chant: 'Chant',
-	chanting: 'Chanting',
-	print: 'Print',
-	smaller: 'Smaller type',
-	larger: 'Larger type',
-	script: 'Script',
-};
+const labels = getUiCopy(locale);
 ---
 
-<reader-toolbar class="reader-toolbar" data-locale={locale} data-chant-label={labels.chant} data-chanting-label={labels.chanting}>
-	<div class="reader-toolbar__group" role="group" aria-label={labels.size}>
+<reader-toolbar
+	class="reader-toolbar"
+	data-locale={locale}
+	data-chant-label={labels.chant}
+	data-chanting-label={labels.chanting}
+	data-iast-label={labels.iastToggle}
+	data-deva-label={labels.devaToggle}
+	data-bookmark-label={labels.bookmark}
+	data-bookmarked-label={labels.bookmarked}
+>
+	<div class="reader-toolbar__group" role="group" aria-label={labels.typeSize}>
 		<button type="button" data-reader-size-dec aria-label={labels.smaller}>A−</button>
 		<span data-reader-size-label aria-live="polite">MD</span>
 		<button type="button" data-reader-size-inc aria-label={labels.larger}>A+</button>
@@ -33,6 +34,10 @@ const labels = {
 		</svg>
 		<span data-reader-chant-label>{labels.chant}</span>
 	</button>
+	<span class="reader-toolbar__rule" aria-hidden="true"></span>
+	<button type="button" class="reader-toolbar__script-view" data-reader-script-view aria-pressed="false">
+		<span data-reader-script-view-label>{isIast ? labels.devaToggle : labels.iastToggle}</span>
+	</button>
 	{
 		!isIast && (
 			<>
@@ -42,7 +47,7 @@ const labels = {
 					<select
 						data-reader-script
 						aria-label={labels.script}
-						title="Reading script. Svara may be approximate outside Devanagari, Marathi, and Grantha."
+						title={labels.scriptTitle}
 					>
 						{INDIC_SCRIPTS.map((script) => (
 							<option value={script.id}>{script.label}</option>
@@ -53,6 +58,11 @@ const labels = {
 		)
 	}
 	<span class="reader-toolbar__rule" aria-hidden="true"></span>
+	<button type="button" class="reader-toolbar__icon" data-reader-bookmark aria-pressed="false" aria-label={labels.bookmark} title={labels.bookmark}>
+		<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+			<path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z" />
+		</svg>
+	</button>
 	<button type="button" class="reader-toolbar__icon" data-reader-print aria-label={labels.print} title={labels.print}>
 		<svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
 			<path d="M6 9V3h12v6h2a2 2 0 0 1 2 2v7h-4v4H8v-4H4v-7a2 2 0 0 1 2-2Zm2-4v4h8V5H8Zm8 12v2H8v-2h8Zm2-3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
@@ -61,15 +71,16 @@ const labels = {
 </reader-toolbar>
 
 <script>
-	import { MANTRA_SIZES, READER_KEYS, isPracticePath, type MantraSize } from '../lib/reader-prefs';
+	import { MANTRA_SIZES, READER_KEYS, isBookmarked, isPracticePath, pushRecent, toggleBookmark, type MantraSize, type ScriptView } from '../lib/reader-prefs';
 	import { isIndicScriptId, type IndicScriptId } from '../data/indic-scripts';
-	import { applyIndicScript } from '../lib/indic-script-convert';
+	import { applyIastTransliteration, applyIndicScript } from '../lib/indic-script-convert';
 
 	class ReaderToolbar extends HTMLElement {
 		private size: MantraSize = 'md';
 		private wakeLock: WakeLockSentinel | null = null;
 		private layoutObserver?: ResizeObserver;
 		private onKey = (event: KeyboardEvent) => this.handleKey(event);
+		private onViewport = () => this.syncViewportInset();
 
 		connectedCallback() {
 			this.size = this.readSize();
@@ -78,25 +89,37 @@ const labels = {
 			this.syncSizeLabel();
 			this.syncChantLabel();
 			this.saveResume();
+			this.syncBookmark();
+			this.initScriptView();
 			void this.initScript();
 			this.observeHeight();
+			this.syncViewportInset();
 
 			this.querySelector('[data-reader-size-dec]')?.addEventListener('click', () => this.shiftSize(-1));
 			this.querySelector('[data-reader-size-inc]')?.addEventListener('click', () => this.shiftSize(1));
 			this.querySelector('[data-reader-chant]')?.addEventListener('click', () => this.toggleChant());
 			this.querySelector('[data-reader-print]')?.addEventListener('click', () => window.print());
+			this.querySelector('[data-reader-bookmark]')?.addEventListener('click', () => this.togglePin());
+			this.querySelector('[data-reader-script-view]')?.addEventListener('click', () => void this.toggleScriptView());
 			this.querySelector('[data-reader-script]')?.addEventListener('change', (event) => {
 				const value = (event.target as HTMLSelectElement).value;
 				if (isIndicScriptId(value)) void this.setScript(value);
 			});
 			window.addEventListener('keydown', this.onKey);
+			window.addEventListener('resize', this.onViewport);
+			window.visualViewport?.addEventListener('resize', this.onViewport);
+			window.visualViewport?.addEventListener('scroll', this.onViewport);
 		}
 
 		disconnectedCallback() {
 			void this.releaseWakeLock();
 			window.removeEventListener('keydown', this.onKey);
+			window.removeEventListener('resize', this.onViewport);
+			window.visualViewport?.removeEventListener('resize', this.onViewport);
+			window.visualViewport?.removeEventListener('scroll', this.onViewport);
 			this.layoutObserver?.disconnect();
 			document.documentElement.style.removeProperty('--reader-bar-height');
+			document.documentElement.style.removeProperty('--reader-vv-inset');
 		}
 
 		private observeHeight() {
@@ -106,6 +129,14 @@ const labels = {
 			publish();
 			this.layoutObserver = new ResizeObserver(publish);
 			this.layoutObserver.observe(this);
+		}
+
+		private syncViewportInset() {
+			const viewport = window.visualViewport;
+			const inset = viewport
+				? Math.max(0, window.innerHeight - viewport.height - viewport.offsetTop)
+				: 0;
+			document.documentElement.style.setProperty('--reader-vv-inset', `${inset}px`);
 		}
 
 		private handleKey(event: KeyboardEvent) {
@@ -216,10 +247,82 @@ const labels = {
 		private saveResume() {
 			if (!isPracticePath(location.pathname)) return;
 			const title = document.querySelector('h1')?.textContent?.trim() ?? document.title;
-			localStorage.setItem(
-				READER_KEYS.resume,
-				JSON.stringify({ href: location.pathname, title, at: Date.now() })
-			);
+			pushRecent({ href: location.pathname, title, at: Date.now() });
+		}
+
+		private currentEntry() {
+			const title = document.querySelector('h1')?.textContent?.trim() ?? document.title;
+			return { href: location.pathname, title, at: Date.now() };
+		}
+
+		private syncBookmark() {
+			const button = this.querySelector<HTMLButtonElement>('[data-reader-bookmark]');
+			if (!button) return;
+			const on = isBookmarked(location.pathname);
+			button.setAttribute('aria-pressed', String(on));
+			const label = on ? (this.dataset.bookmarkedLabel ?? 'Pinned') : (this.dataset.bookmarkLabel ?? 'Pin');
+			button.setAttribute('aria-label', label);
+			button.title = label;
+		}
+
+		private togglePin() {
+			toggleBookmark(this.currentEntry());
+			this.syncBookmark();
+		}
+
+		private hasMantraAlt(): boolean {
+			return [...document.querySelectorAll('.veda-mantra__alt')].some((node) => node.textContent?.trim());
+		}
+
+		private initScriptView() {
+			const button = this.querySelector<HTMLButtonElement>('[data-reader-script-view]');
+			if (this.dataset.locale === 'iast' && !this.hasMantraAlt()) {
+				button?.setAttribute('hidden', '');
+				button?.previousElementSibling?.setAttribute('hidden', '');
+				return;
+			}
+			const stored = localStorage.getItem(READER_KEYS.scriptView) as ScriptView | null;
+			if (stored === 'alt') void this.setScriptView('alt', false);
+			else this.syncScriptViewLabel('primary');
+		}
+
+		private async setScriptView(view: ScriptView, persist = true) {
+			if (persist) localStorage.setItem(READER_KEYS.scriptView, view);
+			document.documentElement.dataset.scriptView = view;
+			this.syncScriptViewLabel(view);
+			if (this.hasMantraAlt()) return;
+			if (view === 'alt') {
+				this.classList.add('is-busy');
+				try {
+					await applyIastTransliteration();
+				} finally {
+					this.classList.remove('is-busy');
+				}
+				return;
+			}
+			const select = this.querySelector<HTMLSelectElement>('[data-reader-script]');
+			const script = select && isIndicScriptId(select.value) ? select.value : 'devanagari';
+			await this.setScript(script);
+		}
+
+		private syncScriptViewLabel(view: ScriptView) {
+			const button = this.querySelector('[data-reader-script-view]');
+			const label = this.querySelector('[data-reader-script-view-label]');
+			const isIastPage = this.dataset.locale === 'iast';
+			const showingAlt = view === 'alt';
+			button?.setAttribute('aria-pressed', String(showingAlt));
+			if (label) {
+				if (isIastPage) {
+					label.textContent = showingAlt ? (this.dataset.iastLabel ?? 'IAST') : (this.dataset.devaLabel ?? 'Devanagari');
+				} else {
+					label.textContent = showingAlt ? (this.dataset.devaLabel ?? 'Devanagari') : (this.dataset.iastLabel ?? 'IAST');
+				}
+			}
+		}
+
+		private async toggleScriptView() {
+			const next: ScriptView = document.documentElement.dataset.scriptView === 'alt' ? 'primary' : 'alt';
+			await this.setScriptView(next);
 		}
 	}
 
@@ -232,7 +335,7 @@ const labels = {
 	.reader-toolbar {
 		position: fixed;
 		left: 50%;
-		bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+		bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px) + var(--reader-vv-inset, 0px));
 		transform: translateX(-50%);
 		z-index: 40;
 		display: flex;
@@ -299,6 +402,10 @@ const labels = {
 	.reader-toolbar button[aria-pressed='true'] {
 		color: var(--sl-color-white);
 		background: color-mix(in srgb, var(--sl-color-accent) 26%, transparent);
+	}
+
+	.reader-toolbar [hidden] {
+		display: none !important;
 	}
 
 	.reader-toolbar button:focus-visible,

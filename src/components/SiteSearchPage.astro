@@ -1,40 +1,81 @@
 ---
-import { featuredSearchHits, groupSearchHits, searchSitePages, type SiteSearchHit } from '../lib/site-search';
+import {
+	SEARCH_FILTERS,
+	SEARCH_GROUP_LABELS,
+	featuredSearchHits,
+	groupSearchHits,
+	isSearchFilter,
+	searchSitePages,
+	type SearchHitGroup,
+	type SiteSearchHit,
+} from '../lib/site-search';
 import { resolveHomeLocale } from '../data/home';
 import { getSeoIntro } from '../data/seo-page-copy';
+import { getUiCopy } from '../data/ui-copy';
 import { SEARCH_SYNONYMS } from '../data/search-synonyms';
 
 const locale = resolveHomeLocale(Astro.locals.starlightRoute.locale);
 const query = Astro.url.searchParams.get('q')?.trim() ?? '';
+const filterParam = Astro.url.searchParams.get('g');
+const filter = isSearchFilter(filterParam) ? filterParam : 'all';
+const copy = getUiCopy(locale);
 const synonymTitles = Object.fromEntries(
 	SEARCH_SYNONYMS.flatMap((entry) => [
 		[entry.href.root.replace(/^\/|\/$/g, ''), entry.label.root],
 		[entry.href.iast.replace(/^\/|\/$/g, ''), entry.label.iast],
 	])
 );
+
 const hits: SiteSearchHit[] = query
 	? searchSitePages(query, locale, synonymTitles)
 	: featuredSearchHits(locale);
-const groups = groupSearchHits(hits, locale);
+const groups = groupSearchHits(hits, locale, filter);
 const intro = getSeoIntro(locale === 'iast' ? 'iast/search' : 'search', locale);
 const headingEmpty = locale === 'iast' ? 'Popular pages' : 'प्रमुख पृष्ठाः';
 const headingQueryPrefix = locale === 'iast' ? 'Results for' : 'अन्वेषणम्';
 const empty =
 	locale === 'iast'
-		? 'No matching pages. Try rudram, RV 10.90.1, TS 1.1.1, or puruṣa.'
-		: 'न प्राप्तम् । rudram, RV 10.90.1, TS 1.1.1, puruṣa इति प्रयतस्व ।';
+		? 'No matching pages. Try rudram, RV 10.90.1, TS 1.1.1, or a remembered pāda.'
+		: 'न प्राप्तम् । rudram, RV 10.90.1, TS 1.1.1, अथवा मन्त्रपाठः प्रयतस्व ।';
 const searchAction = locale === 'iast' ? '/iast/search/' : '/search/';
 const placeholder = locale === 'iast' ? 'Search mantras, RV 10.90.1, TS 1.1.1' : 'मन्त्रान्, RV 10.90.1, TS 1.1.1 च अन्विष्यताम्';
 const submitLabel = locale === 'iast' ? 'Search' : 'अन्विष्यताम्';
+const filterLabels: Record<(typeof SEARCH_FILTERS)[number], string> = {
+	all: copy.filterAll,
+	ritual: SEARCH_GROUP_LABELS[locale].ritual,
+	mantra: SEARCH_GROUP_LABELS[locale].mantra,
+	samhita: SEARCH_GROUP_LABELS[locale].samhita,
+	brahmana: SEARCH_GROUP_LABELS[locale].brahmana,
+	aranyaka: SEARCH_GROUP_LABELS[locale].aranyaka,
+	upanishad: SEARCH_GROUP_LABELS[locale].upanishad,
+};
 ---
 
-<section class="site-search-page" data-locale={locale} data-search-action={searchAction}>
+<section class="site-search-page" data-locale={locale} data-search-action={searchAction} data-search-filter={filter}>
 	{intro && <p class="site-search-page__intro">{intro}</p>}
 	<form class="site-search-page__form" method="get" action={searchAction}>
 		<label class="sr-only" for="site-search-q">{placeholder}</label>
 		<input id="site-search-q" type="search" name="q" value={query} placeholder={placeholder} />
+		{filter !== 'all' && <input type="hidden" name="g" value={filter} data-search-filter-input />}
 		<button type="submit">{submitLabel}</button>
 	</form>
+	<div class="site-search-page__filters" role="group" aria-label={copy.filterAll}>
+		{
+			SEARCH_FILTERS.map((id) => (
+				<a
+					href={
+						id === 'all'
+							? `${searchAction}${query ? `?q=${encodeURIComponent(query)}` : ''}`
+							: `${searchAction}?${query ? `q=${encodeURIComponent(query)}&` : ''}g=${id}`
+					}
+					data-filter={id}
+					aria-current={filter === id ? 'true' : undefined}
+				>
+					{filterLabels[id]}
+				</a>
+			))
+		}
+	</div>
 	<h2 data-search-heading>{query ? `${headingQueryPrefix} “${query}”` : headingEmpty}</h2>
 	<div data-search-hits>
 		{
@@ -57,7 +98,15 @@ const submitLabel = locale === 'iast' ? 'Search' : 'अन्विष्यत�
 </section>
 
 <script>
-	import { featuredSearchHits, groupSearchHits, searchSitePages } from '../lib/site-search';
+	import {
+		featuredSearchHits,
+		groupSearchHits,
+		isSearchFilter,
+		searchSitePages,
+		searchVerseRows,
+		type SearchHitGroup,
+		type VerseSearchRow,
+	} from '../lib/site-search';
 	import type { HomeLocale } from '../data/home';
 
 	const root = document.querySelector<HTMLElement>('.site-search-page');
@@ -71,10 +120,17 @@ const submitLabel = locale === 'iast' ? 'Search' : 'अन्विष्यत�
 		const headingQueryPrefix = locale === 'iast' ? 'Results for' : 'अन्वेषणम्';
 
 		let slugToTitle: Record<string, string> = {};
+		let verseRows: VerseSearchRow[] = [];
 		const indexReady = fetch('/search-index.json')
 			.then((response) => (response.ok ? response.json() : []))
 			.then((rows: Array<[string, string]>) => {
 				slugToTitle = Object.fromEntries(rows);
+			})
+			.catch(() => {});
+		const verseReady = fetch('/verse-search-index.json')
+			.then((response) => (response.ok ? response.json() : []))
+			.then((rows: VerseSearchRow[]) => {
+				verseRows = Array.isArray(rows) ? rows : [];
 			})
 			.catch(() => {});
 
@@ -84,11 +140,20 @@ const submitLabel = locale === 'iast' ? 'Search' : 'अन्विष्यत�
 				.replace(/</g, '&lt;')
 				.replace(/"/g, '&quot;');
 
+		const currentFilter = (): SearchHitGroup | 'all' => {
+			const value = new URLSearchParams(window.location.search).get('g');
+			return isSearchFilter(value) ? value : 'all';
+		};
+
 		const render = (query: string) => {
-			const hits = query
+			const filter = currentFilter();
+			const pageHits = query
 				? searchSitePages(query, locale, slugToTitle)
 				: featuredSearchHits(locale);
-			const groups = groupSearchHits(hits, locale);
+			const verseHits = query ? searchVerseRows(query, locale, verseRows) : [];
+			const seen = new Set(pageHits.map((hit) => hit.href));
+			const hits = [...pageHits, ...verseHits.filter((hit) => !seen.has(hit.href))];
+			const groups = groupSearchHits(hits, locale, filter);
 			if (heading) {
 				heading.textContent = query ? `${headingQueryPrefix} “${query}”` : headingEmpty;
 			}
@@ -106,12 +171,16 @@ const submitLabel = locale === 'iast' ? 'Search' : 'अन्विष्यत�
 					.join('');
 			}
 			if (emptyEl instanceof HTMLElement) emptyEl.hidden = hits.length > 0;
+			root.querySelectorAll<HTMLAnchorElement>('[data-filter]').forEach((link) => {
+				link.toggleAttribute('aria-current', link.dataset.filter === filter);
+			});
 		};
 
 		const applyUrlQuery = async () => {
-			const query = new URLSearchParams(window.location.search).get('q')?.trim() ?? '';
+			const params = new URLSearchParams(window.location.search);
+			const query = params.get('q')?.trim() ?? '';
 			if (input && query) input.value = query;
-			if (query) await indexReady;
+			if (query) await Promise.all([indexReady, verseReady]);
 			render(query);
 		};
 
@@ -133,7 +202,7 @@ const submitLabel = locale === 'iast' ? 'Search' : 'अन्विष्यत�
 	.site-search-page__form {
 		display: flex;
 		gap: 0.5rem;
-		margin: 0 0 1.5rem;
+		margin: 0 0 0.85rem;
 	}
 
 	.site-search-page__form input {
@@ -152,6 +221,28 @@ const submitLabel = locale === 'iast' ? 'Search' : 'अन्विष्यत�
 		background: var(--sl-color-accent);
 		color: var(--sl-color-white);
 		cursor: pointer;
+	}
+
+	.site-search-page__filters {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin: 0 0 1.25rem;
+	}
+
+	.site-search-page__filters a {
+		padding: 0.28rem 0.7rem;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 999px;
+		font-size: 0.8125rem;
+		text-decoration: none;
+		color: var(--sl-color-gray-2);
+	}
+
+	.site-search-page__filters a[aria-current='true'] {
+		color: var(--sl-color-white);
+		border-color: var(--sl-color-accent);
+		background: color-mix(in srgb, var(--sl-color-accent) 22%, transparent);
 	}
 
 	.site-search-page__group h3 {

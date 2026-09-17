@@ -135,7 +135,7 @@ function main() {
 
 	const searchIndex = Object.entries(slugToTitle).filter(([slug]) => {
 		if (!slug || slug.includes('_archive')) return false;
-		if (/(^|\/)(?:offline|search)$/.test(slug)) return false;
+		if (/(^|\/)search$/.test(slug)) return false;
 		return true;
 	});
 	fs.writeFileSync(
@@ -144,7 +144,39 @@ function main() {
 		'utf8'
 	);
 
+	writeVerseSearchIndex();
+
 	console.log(`Generated doc cache: ${Object.keys(slugToTitle).length} slugs, ${docs.length} dated docs`);
+}
+
+function normalizeVerse(value) {
+	return value
+		.trim()
+		.toLowerCase()
+		.normalize('NFKD')
+		.replace(/[\u0300-\u036f]/g, '')
+		.replace(/[\u0951-\u0954\u1CD0-\u1CFF\uA8E0-\uA8FF]/g, '')
+		.replace(/[^\p{L}\p{N}\s]+/gu, ' ')
+		.replace(/\s+/g, ' ');
+}
+
+function writeVerseSearchIndex() {
+	const verseIndexPath = path.join(ROOT, 'src/data/rigveda/verse-index.json');
+	if (!fs.existsSync(verseIndexPath)) return;
+	const verseIndex = JSON.parse(fs.readFileSync(verseIndexPath, 'utf8'));
+	const rows = Object.values(verseIndex.verses ?? {}).map((verse) => [
+		verse.mandala,
+		verse.sukta,
+		verse.verse,
+		normalizeVerse(verse.text ?? ''),
+		normalizeVerse(verse.iast ?? ''),
+	]);
+	fs.writeFileSync(
+		path.join(ROOT, 'public/verse-search-index.json'),
+		JSON.stringify(rows),
+		'utf8'
+	);
+	console.log(`Generated verse search index: ${rows.length} ṛcs`);
 }
 
 main();

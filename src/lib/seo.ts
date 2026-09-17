@@ -72,7 +72,6 @@ export function isHomeSlug(slug: string): boolean {
 export function isNoIndexSlug(slug: string): boolean {
 	const path = slugPath(slug);
 	return (
-		/(^|\/)offline$/.test(path) ||
 		/(^|\/)404$/.test(path) ||
 		path.split('/').includes('_archive')
 	);

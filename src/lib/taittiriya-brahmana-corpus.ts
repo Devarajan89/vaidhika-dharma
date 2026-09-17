@@ -47,4 +47,17 @@ export function getTaittiriyaBrahmanaPrapathakaByAshtaka(
 	return getTaittiriyaBrahmanaPrapathaka(ashtakaPrapathakaToGlobal(ashtaka, prapathaka));
 }
 
+export function getTaittiriyaBrahmanaAnuvakaText(
+	ashtaka: number,
+	prapathaka: number,
+	anuvaka: number,
+	locale: 'root' | 'iast' = 'root'
+): string | undefined {
+	const entry = getTaittiriyaBrahmanaPrapathakaByAshtaka(ashtaka, prapathaka);
+	const block = entry?.anuvakas.find((item) => item.anuvaka === anuvaka);
+	if (!block) return undefined;
+	const lines = block.verses.flatMap((verse) => (locale === 'iast' ? verse.linesIast : verse.lines));
+	return lines.join('\n') || undefined;
+}
+
 export { TAITTIRIYA_BRAHMANA_ASHTAKAS, ashtakaPrapathakaToGlobal };

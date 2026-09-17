@@ -29,7 +29,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:4321](http://localhost:4321). `npm run dev` regenerates the doc cache and offline pack, then starts Astro.
+Open [http://localhost:4321](http://localhost:4321). `npm run dev` regenerates the doc cache, then starts Astro.
 
 ```bash
 npm run build     # production build (runs the same generators via prebuild)
@@ -43,16 +43,15 @@ npm run preview   # preview the built site
 | `src/content/docs/` | Pages (Devanagari). IAST mirrors live under `src/content/docs/iast/` |
 | `src/data/` | Saṃhitā JSON, Ṛgveda verse index, compilation maps, search synonyms |
 | `src/data/rigveda/compilations/` | Sūkta-saṅgraha assemblies; thin MDX wrappers import `RigvedaCompilation` |
-| `src/components/` | Reader UI, search, offline packs, verse/sukta renderers |
+| `src/components/` | Reader UI, search, verse/sukta renderers |
 | `scripts/` | Fetch, generate, transliterate, and validate content |
-| `public/` | Service worker, offline pack, headers, `llms.txt` |
+| `public/` | Headers, `llms.txt`, site icons |
 
 Starlight locales: `root` (`lang: sa`, Devanagari) and `iast` (`lang: sa-Latn`).
 
 ## Reader features
 
 - Site search (`/search/`, `/iast/search/`) plus mantra-reference lookups (for example `RV 10.90.1`, `TS 1.1.1`).
-- Offline packs at [`/offline/`](https://vaidhikadharma.org/offline/) — daily nityakarma, Rudra, and saṅgraha sets, plus a service worker.
 - Devanagari / IAST switch on matching slugs.
 
 ## Content scripts
@@ -60,7 +59,6 @@ Starlight locales: `root` (`lang: sa`, Devanagari) and `iast` (`lang: sa-Latn`).
 Most generate or fetch steps are idempotent and write into `src/content/docs/` and `src/data/`. Common ones:
 
 ```bash
-npm run generate:offline-pack
 npm run validate:rigveda-compilations
 npm run build:rigveda-verse-index
 npm run build:rigveda-compilation-maps

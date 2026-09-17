@@ -33,4 +33,16 @@ export function getTaittiriyaAranyakaTextPrashnas(): TaittiriyaAranyakaPrashnaEn
 	return [...corpus].sort((a, b) => a.prashna - b.prashna);
 }
 
+export function getTaittiriyaAranyakaAnuvakaText(
+	prashna: number,
+	anuvaka: number,
+	locale: 'root' | 'iast' = 'root'
+): string | undefined {
+	const entry = getTaittiriyaAranyakaPrashna(prashna);
+	const block = entry?.anuvakas.find((item) => item.anuvaka === anuvaka);
+	if (!block) return undefined;
+	const lines = block.verses.flatMap((verse) => (locale === 'iast' ? verse.linesIast : verse.lines));
+	return lines.join('\n') || undefined;
+}
+
 export { TAITTIRIYA_ARANYAKA_PRASHNAS, getPrashnaInfo };

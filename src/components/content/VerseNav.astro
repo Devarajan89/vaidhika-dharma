@@ -20,7 +20,7 @@ const label = isIast ? 'Jump to verse' : 'श्लोकान् अनुग�
 	function buildVerseNav() {
 		for (const nav of document.querySelectorAll<HTMLElement>('.verse-nav')) {
 			const min = Number(nav.dataset.minVerses ?? 8);
-			const verses = document.querySelectorAll<HTMLElement>('[id^="verse-"]');
+			const verses = document.querySelectorAll<HTMLElement>('[id^="verse-"], [id^="mantra-"], [id^="anuvaka-"]');
 			if (verses.length < min) continue;
 
 			const list = nav.querySelector('.verse-nav__list');

@@ -11,6 +11,7 @@ import {
 	type CompilationMantraRef,
 } from '../../lib/rigveda-corpus';
 import { uniqueCrossCompilationLinks } from '../../lib/rigveda-compilation-index';
+import { getCrossSakhaPeer, crossSakhaStudyLabel } from '../../data/cross-sakha';
 import { transliterateDevanagariMap } from '../../lib/rigveda-transliterate';
 import type { JumpNavItem } from '../../lib/samhita-nav';
 
@@ -117,6 +118,7 @@ const citationLinks = compilation.sections.flatMap((section) =>
 );
 const uniqueCitations = [...new Set(citationLinks)];
 const crossLinks = uniqueCrossCompilationLinks({ ...compilation, id }, locale);
+const sakhaPeer = getCrossSakhaPeer(id, locale);
 const anukramani = compilation.sections
 	.map((section, index) => resolveSectionHeader(index, section.header))
 	.filter(Boolean)
@@ -136,6 +138,10 @@ const studyRows = [
 		html: crossLinks.length
 			? `<ul>${crossLinks.map((link) => `<li><a href="${link.href}">${link.label}</a></li>`).join('')}</ul>`
 			: null,
+	},
+	{
+		label: sakhaPeer ? crossSakhaStudyLabel(locale, sakhaPeer.side) : '',
+		html: sakhaPeer ? `<a href="${sakhaPeer.href}">${sakhaPeer.label}</a>` : null,
 	},
 	{
 		label: locale === 'iast' ? 'Source' : 'मूलम्',

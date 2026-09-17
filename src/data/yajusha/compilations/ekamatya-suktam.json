@@ -1,0 +1,38 @@
+{
+  "id": "ekamatya-suktam",
+  "sections": [
+    {
+      "header": "ऋ॰सं॰ १०.१९१",
+      "blocks": [
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 191,
+            "verse": 1
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 191,
+            "verse": 2
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 191,
+            "verse": 3
+          }
+        },
+        {
+          "rv": {
+            "mandala": 10,
+            "sukta": 191,
+            "verse": 4
+          }
+        }
+      ]
+    }
+  ]
+}

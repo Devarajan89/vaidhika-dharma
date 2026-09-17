@@ -18,7 +18,6 @@ export const sitemapI18n = {
 export function sitemapFilter(page) {
 	return (
 		!page.includes('/404') &&
-		!page.includes('/offline') &&
 		!page.includes('/_archive')
 	);
 }
@@ -129,7 +128,7 @@ export function serializeSitemapItem(item) {
 		return undefined;
 	}
 
-	if (urlPath.includes('/offline') || urlPath.includes('/404') || urlPath.includes('/_archive')) {
+	if (urlPath.includes('/404') || urlPath.includes('/_archive')) {
 		return undefined;
 	}
 

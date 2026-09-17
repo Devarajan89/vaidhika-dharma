@@ -49,7 +49,7 @@ export const heroContentByLocale: Record<HomeLocale, HomeHero> = {
 		title: 'वेदोऽखिलो धर्ममूलं',
 		tagline:
 			'नारायणं पद्मभुवं वशिष्ठं शक्तिं च तत्पुत्र पराशरं च व्यासं शुकं गौडपदं महान्तं गोविन्दयोगीन्द्रं अथास्य शिष्यम् ।<br /> श्री शंकराचार्यं अथास्य पद्मपादं च हस्तामलकं च शिष्यम् तं तोटकं वार्त्तिककारमन्यान् अस्मद् गुरून् सन्ततमानतोऽस्मि ॥',
-		gloss: 'The Veda is the root of all dharma — daily practice, recitation, and study.',
+		gloss: 'वेदोऽखिलो धर्ममूलम् — नित्यकर्म, पारायणम्, स्वाध्यायश्च।',
 		actions: [
 			{
 				text: 'नित्यकर्म',
@@ -97,23 +97,22 @@ export const heroContentByLocale: Record<HomeLocale, HomeHero> = {
 
 export const homeContentByLocale: Record<HomeLocale, HomeContent> = {
 	root: {
-		searchHint:
-			'Search mantras and rituals — try rudram, RV 10.90.1, TS 1.1.1, or puruṣa.',
+		searchHint: 'मन्त्रान् कर्म च अन्विष्यताम् — rudram, RV 10.90.1, TS 1.1.1, puruṣa।',
 		searchPlaceholder: 'मन्त्रान् कर्म च अन्विष्यताम्',
 		searchSubmit: 'अन्विष्यताम्',
 		intro:
-			'Vaidhika Dharma guides Vedic living — nityakarma (daily practice), dharma (right conduct), and svādhyāya (study of the śāstras). Mantras are shown in Devanagari; switch to IAST for Latin transliteration.',
-		browseHeading: 'Browse',
+			'वैदिकधर्मः नित्यकर्म, धर्मं, स्वाध्यायं च दर्शयति। मन्त्राः देवनागर्यां लिखिताः; IAST इत्यत्र लिप्यन्तरम्।',
+		browseHeading: 'विषयसूची',
 		browseBlurb: 'नित्यकर्म · मन्त्राः · संहिताः · उपनिषदः',
-		shortcutsHeading: 'Daily practice',
-		aboutTitle: 'About',
+		shortcutsHeading: 'नित्यकर्म',
+		aboutTitle: 'परिचयः',
 		aboutBody: [
-			'Vaidhika Dharma is dedicated to preserving and sharing the path of Vedic life — daily rituals (nityakarma), ethical conduct (dharma), and scriptural study (svādhyāya).',
-			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer. Key nityakarma pages also work offline after the first visit.',
+			'वैदिकधर्मः नित्यकर्म, धर्मं, स्वाध्यायं च रक्षति प्रकाशयति च।',
+			'देवनागरी IAST च विद्यते। गुरुपरम्परायाः रूपेण पठ्यताम्।',
 		],
-		quoteTitle: 'Daily verse',
-		recentTitle: 'Recent updates',
-		recentEmpty: 'No updates today.',
+		quoteTitle: 'दैनिकं वचनम्',
+		recentTitle: 'नवीनाः अद्यतनाः',
+		recentEmpty: 'अद्य न किञ्चित्।',
 	},
 	iast: {
 		searchHint:
@@ -128,7 +127,7 @@ export const homeContentByLocale: Record<HomeLocale, HomeContent> = {
 		aboutTitle: 'About',
 		aboutBody: [
 			'Vaidhika Dharma is dedicated to preserving and sharing the path of Vedic life — daily rituals (nityakarma), ethical conduct (dharma), and scriptural study (svādhyāya).',
-			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer. Key nityakarma pages also work offline after the first visit.',
+			'Content is available in Devanagari and IAST so practitioners can follow their guru-paramparā in the form they prefer.',
 		],
 		quoteTitle: 'Daily verse',
 		recentTitle: 'Recent updates',
@@ -143,6 +142,11 @@ const QUOTE_SOURCE_HREFS: Array<{ test: RegExp; href: Record<HomeLocale, string>
 	{ test: /ईश|Īśa/, href: { root: '/isha-upanishad/', iast: '/iast/isha-upanishad/' } },
 	{ test: /कठ|Kaṭha/, href: { root: '/katha-upanishad/', iast: '/iast/katha-upanishad/' } },
 	{ test: /केन|Kena/, href: { root: '/kena-upanishad/', iast: '/iast/kena-upanishad/' } },
+	{ test: /मुण्डक|Muṇḍaka/, href: { root: '/mundaka-upanishad/', iast: '/iast/mundaka-upanishad/' } },
+	{
+		test: /माण्डूक्य|Māṇḍūkya/,
+		href: { root: '/mandukya-upanishad/', iast: '/iast/mandukya-upanishad/' },
+	},
 	{
 		test: /तैत्तिरीय|Taittirīya/,
 		href: { root: '/taittiriya-upanishad/', iast: '/iast/taittiriya-upanishad/' },
@@ -150,6 +154,22 @@ const QUOTE_SOURCE_HREFS: Array<{ test: RegExp; href: Record<HomeLocale, string>
 	{
 		test: /ऐतरेय|Aitareya/,
 		href: { root: '/aitareya-upanishad/', iast: '/iast/aitareya-upanishad/' },
+	},
+	{
+		test: /छान्दोग्य|Chāndogya/,
+		href: { root: '/chandogya-upanishad/', iast: '/iast/chandogya-upanishad/' },
+	},
+	{
+		test: /बृहदारण्यक|Bṛhadāraṇyaka/,
+		href: { root: '/brihadaranyaka-upanishad/', iast: '/iast/brihadaranyaka-upanishad/' },
+	},
+	{
+		test: /श्वेताश्वतर|Śvetāśvatara/,
+		href: { root: '/svetasvatara-upanishad/', iast: '/iast/svetasvatara-upanishad/' },
+	},
+	{
+		test: /कैवल्य|Kaivalya/,
+		href: { root: '/kaivalya-upanishad/', iast: '/iast/kaivalya-upanishad/' },
 	},
 ];
 

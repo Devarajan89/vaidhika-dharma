@@ -1,0 +1,15 @@
+---
+import SamhitaPageNav from './SamhitaPageNav.astro';
+import type { HomeLocale } from '../../data/home';
+import { getYajushaPageNav } from '../../data/yajusha';
+
+interface Props {
+	id: string;
+	locale?: HomeLocale;
+}
+
+const { id, locale = 'root' } = Astro.props;
+const links = getYajushaPageNav(id, locale);
+---
+
+<SamhitaPageNav {links} {locale} />

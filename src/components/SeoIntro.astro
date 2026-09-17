@@ -1,6 +1,6 @@
 ---
 import { getSeoIntro } from '../data/seo-page-copy';
-import { isHomeSlug, isSearchSlug, slugPath } from '../lib/seo';
+import { isHomeSlug, isSearchSlug } from '../lib/seo';
 import { resolveHomeLocale } from '../data/home';
 
 const { entry } = Astro.locals.starlightRoute;
@@ -18,19 +18,9 @@ if (
 ) {
 	return;
 }
-
-const path = slugPath(slug).replace(/^iast\//, '');
-const iastHref = path ? `/iast/${path}/` : '/iast/';
-const rootHref = path ? `/${path}/` : '/';
-const switchLabel = locale === 'iast' ? 'Devanagari' : 'IAST';
-const switchHref = locale === 'iast' ? rootHref : iastHref;
 ---
 
-<p class="seo-intro">
-	{intro}
-	{' '}
-	<a href={switchHref}>{switchLabel}</a>
-</p>
+<p class="seo-intro">{intro}</p>
 
 <style>
 	.seo-intro {
@@ -39,10 +29,6 @@ const switchHref = locale === 'iast' ? rootHref : iastHref;
 		font-size: 0.95rem;
 		line-height: 1.55;
 		color: var(--sl-color-gray-2);
-	}
-
-	.seo-intro a {
-		color: var(--sl-color-accent);
 	}
 
 	@media print {

@@ -46,7 +46,7 @@ const samhitaAriaLabel = hasSamhitaRef
 const lastPadaIndex = padas.length - 1;
 ---
 
-<Verse id={`verse-${label}`} number={hasSamhitaRef ? undefined : label} locale={locale} numberPosition="end">
+<Verse id={`verse-${label}`} number={hasSamhitaRef ? undefined : label} locale={locale} numberPosition="end" cite={samhitaRef ? 'RV ' + samhitaRef : undefined}>
 	{
 		padas.map((pada, index) => (
 			<p>
